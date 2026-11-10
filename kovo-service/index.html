@@ -1,0 +1,1734 @@
+<!DOCTYPE html>
+<html lang="sk" class="dark scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KOVO SERVICE s.r.o. | Univerzálna kovovýroba a zámočníctvo Pezinok</title>
+  <meta name="description" content="Profesionálna kovovýroba, zákazkové zámočníctvo a povrchové úpravy kovov v Pezinku a okolí. Brány, nerezové zábradlia, schody, markízy a výroba na mieru.">
+  <meta name="keywords" content="kovovýroba pezinok, zámočníctvo, brány na mieru, posuvné brány, nerezové zábradlie, schody, markízy, kovo service, zváranie, zinkovanie, komaxit">
+  <meta name="author" content="KOVO SERVICE s.r.o.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="KOVO SERVICE s.r.o. | Kovovýroba a zámočníctvo na mieru">
+  <meta property="og:description" content="Brány, nerezové a kované zábradlia, schody, prístrešky a priemyselné konštrukcie. Špičková kvalita a poctivé remeslo z Pezinka.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.kovo-service.sk/">
+
+  <!-- Google Fonts: Plus Jakarta Sans & Space Grotesk -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#fff7ed',
+              100: '#ffedd5',
+              200: '#fed7aa',
+              300: '#fdba74',
+              400: '#fb923c',
+              500: '#f97316', // industrial forge orange
+              600: '#ea580c',
+              700: '#c2410c',
+              800: '#9a3412',
+              900: '#7c2d12',
+            },
+            steel: {
+              50: '#f8fafc',
+              100: '#f1f5f9',
+              200: '#e2e8f0',
+              300: '#cbd5e1',
+              400: '#94a3b8',
+              500: '#64748b',
+              600: '#475569',
+              700: '#334155',
+              800: '#1e293b',
+              850: '#172033',
+              900: '#0f172a',
+              950: '#070b14',
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Space Grotesk"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0f172a;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #334155;
+      border-radius: 5px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #ea580c;
+    }
+
+    /* Subtle grid background for industrial feel */
+    .bg-grid-dark {
+      background-size: 32px 32px;
+      background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+    }
+    .bg-grid-light {
+      background-size: 32px 32px;
+      background-image: 
+        linear-gradient(to right, rgba(15, 23, 42, 0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(15, 23, 42, 0.05) 1px, transparent 1px);
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100 font-sans antialiased transition-colors duration-200">
+
+  <!-- TOP ANNOUNCEMENT & QUICK CONTACT BAR -->
+  <aside aria-label="Rýchle kontakty" class="bg-slate-100 dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 text-xs text-slate-600 dark:text-slate-400 py-2 px-4 sm:px-6 relative z-50">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3">
+      <div class="flex items-center space-x-4 flex-wrap">
+        <span class="inline-flex items-center gap-1.5 text-brand-600 dark:text-brand-400 font-semibold">
+          <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+          <span data-i18n="top_bar_status">Zákazková výroba v prevádzke • Dielňa Pezinok</span>
+        </span>
+        <span class="hidden md:inline-flex items-center gap-1 text-slate-500 dark:text-slate-400">
+          <i data-lucide="map-pin" class="w-3.5 h-3.5 text-brand-500"></i>
+          <span>Šenkvická cesta 11, 902 01 Pezinok</span>
+        </span>
+      </div>
+
+      <div class="flex items-center space-x-4 sm:space-x-5">
+        <a href="tel:+421905764251" class="hover:text-brand-600 dark:hover:text-brand-400 flex items-center gap-1.5 transition-colors font-medium">
+          <i data-lucide="phone-call" class="w-3.5 h-3.5 text-brand-500"></i>
+          <span>Kovovýroba: <strong class="text-slate-900 dark:text-white">+421 905 764 251</strong></span>
+        </a>
+        <a href="mailto:kovo-service@kovo-service.sk" class="hidden sm:flex hover:text-brand-600 dark:hover:text-brand-400 items-center gap-1.5 transition-colors">
+          <i data-lucide="mail" class="w-3.5 h-3.5 text-brand-500"></i>
+          <span>kovo-service@kovo-service.sk</span>
+        </a>
+        <div class="flex items-center gap-2 pl-2 border-l border-slate-300 dark:border-slate-700">
+          <!-- Language Selector -->
+          <button id="lang-btn" onclick="toggleLanguage()" class="px-2 py-0.5 rounded bg-white dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-200 font-semibold text-xs flex items-center gap-1 border border-slate-300 dark:border-slate-700 transition">
+            <span id="lang-flag">🇸🇰</span>
+            <span id="lang-code">SK</span>
+          </button>
+          <!-- Theme Switcher -->
+          <button id="theme-btn" onclick="toggleTheme()" class="p-1 rounded bg-white dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 transition border border-slate-300 dark:border-slate-700" title="Prepnúť Svetlý / Tmavý režim">
+            <i data-lucide="sun" id="theme-icon" class="w-3.5 h-3.5"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- MAIN NAVIGATION HEADER -->
+  <header class="sticky top-0 z-40 bg-white/95 dark:bg-slate-950/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800/80 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- BRAND LOGO -->
+        <a href="#uvod" class="flex items-center gap-3 group">
+          <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-brand-500 via-brand-600 to-amber-600 flex items-center justify-center shadow-lg shadow-brand-500/20 group-hover:scale-105 transition-transform duration-300">
+            <i data-lucide="hammer" class="w-6 h-6 text-white stroke-[2.2]"></i>
+          </div>
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="text-xl sm:text-2xl font-extrabold tracking-tight font-display text-slate-900 dark:text-white group-hover:text-brand-500 transition-colors">KOVO SERVICE</span>
+              <span class="text-xs px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-brand-600 dark:text-brand-400 font-bold border border-slate-200 dark:border-slate-700">s.r.o.</span>
+            </div>
+            <p class="text-[11px] sm:text-xs text-slate-500 dark:text-slate-400 tracking-wider uppercase font-semibold" data-i18n="nav_tagline">Univerzálna kovovýroba & zámočníctvo</p>
+          </div>
+        </a>
+
+        <!-- DESKTOP NAV LINKS -->
+        <nav class="hidden lg:flex items-center space-x-1 xl:space-x-2">
+          <a href="#o-nas" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800/60 transition" data-i18n="nav_about">O nás</a>
+          <a href="#vyrobky" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800/60 transition" data-i18n="nav_products">Výrobky</a>
+          <a href="#sluzby" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800/60 transition" data-i18n="nav_services">Povrchové úpravy</a>
+          <a href="#konfigurator" class="px-3 py-2 rounded-lg text-sm font-bold text-brand-600 dark:text-brand-400 hover:bg-brand-50 dark:hover:bg-brand-950/30 transition flex items-center gap-1.5">
+            <i data-lucide="calculator" class="w-4 h-4"></i>
+            <span data-i18n="nav_calculator">Kalkulačka ceny</span>
+          </a>
+          <a href="#katalogy" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800/60 transition" data-i18n="nav_catalogs">Katalógy PDF</a>
+          <a href="#uctovnictvo" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800/40 transition" data-i18n="nav_accounting">Účtovníctvo</a>
+          <a href="#kontakt" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800/60 transition" data-i18n="nav_contact">Kontakt</a>
+        </nav>
+
+        <!-- CTA BUTTONS -->
+        <div class="hidden sm:flex items-center gap-3">
+          <a href="#konfigurator" class="relative inline-flex items-center justify-center px-4 py-2.5 text-sm font-bold text-white bg-gradient-to-r from-brand-600 to-brand-500 rounded-xl shadow-lg shadow-brand-600/30 hover:shadow-brand-600/50 hover:from-brand-500 hover:to-brand-400 transform hover:-translate-y-0.5 transition-all duration-200">
+            <i data-lucide="file-text" class="w-4 h-4 mr-2"></i>
+            <span data-i18n="cta_quote">Nezáväzný dopyt</span>
+          </a>
+        </div>
+
+        <!-- MOBILE HAMBURGER -->
+        <div class="flex items-center lg:hidden">
+          <button id="mobile-menu-toggle" onclick="toggleMobileMenu()" class="p-2 rounded-lg text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 focus:outline-none">
+            <i data-lucide="menu" id="hamburger-icon" class="w-6 h-6"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- MOBILE MENU ACCORDION -->
+    <div id="mobile-menu" class="hidden lg:hidden border-b border-slate-200 dark:border-slate-800 bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl px-4 pt-2 pb-6 space-y-3">
+      <a href="#o-nas" onclick="closeMobileMenu()" class="block px-3 py-2 rounded-md text-base font-medium text-slate-800 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800" data-i18n="nav_about">O nás</a>
+      <a href="#vyrobky" onclick="closeMobileMenu()" class="block px-3 py-2 rounded-md text-base font-medium text-slate-800 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800" data-i18n="nav_products">Výrobky</a>
+      <a href="#sluzby" onclick="closeMobileMenu()" class="block px-3 py-2 rounded-md text-base font-medium text-slate-800 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800" data-i18n="nav_services">Povrchové úpravy</a>
+      <a href="#konfigurator" onclick="closeMobileMenu()" class="block px-3 py-2 rounded-md text-base font-bold text-brand-600 dark:text-brand-400 hover:bg-slate-100 dark:hover:bg-slate-800 flex items-center gap-2">
+        <i data-lucide="calculator" class="w-4 h-4"></i>
+        <span data-i18n="nav_calculator">Kalkulačka ceny</span>
+      </a>
+      <a href="#katalogy" onclick="closeMobileMenu()" class="block px-3 py-2 rounded-md text-base font-medium text-slate-800 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800" data-i18n="nav_catalogs">Katalógy PDF</a>
+      <a href="#uctovnictvo" onclick="closeMobileMenu()" class="block px-3 py-2 rounded-md text-base font-medium text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800" data-i18n="nav_accounting">Účtovníctvo</a>
+      <a href="#kontakt" onclick="closeMobileMenu()" class="block px-3 py-2 rounded-md text-base font-medium text-slate-800 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800" data-i18n="nav_contact">Kontakt & Dielňa</a>
+      <div class="pt-3 border-t border-slate-200 dark:border-slate-800">
+        <a href="tel:+421905764251" class="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-brand-600 text-white font-bold text-center">
+          <i data-lucide="phone-call" class="w-4 h-4"></i>
+          <span>Volať dielňu: 0905 764 251</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section id="uvod" class="relative pt-12 pb-20 md:pt-20 md:pb-28 overflow-hidden bg-slate-50 dark:bg-slate-950 bg-grid-light dark:bg-grid-dark transition-colors">
+    <!-- Glow decorative backdrop -->
+    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-gradient-to-tr from-brand-600/20 to-amber-500/10 blur-[130px] rounded-full pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left Hero Copy -->
+        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-700/80 text-xs sm:text-sm text-slate-700 dark:text-slate-300 font-semibold shadow-sm">
+            <span class="w-2 h-2 rounded-full bg-brand-500"></span>
+            <span data-i18n="hero_badge">Kovovýroba & Zámočníctvo Pezinok • Od roku 2011</span>
+          </div>
+
+          <h1 class="text-3xl sm:text-5xl xl:text-6xl font-extrabold text-slate-900 dark:text-white tracking-tight leading-[1.15] font-display">
+            <span data-i18n="hero_title_1">Poctivé remeslo,</span><br>
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 via-brand-500 to-amber-500" data-i18n="hero_title_2">precízna oceľ & nerez</span><br>
+            <span class="text-slate-700 dark:text-slate-300" data-i18n="hero_title_3">vyrobené presne na mieru.</span>
+          </h1>
+
+          <p class="text-base sm:text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto lg:mx-0 leading-relaxed" data-i18n="hero_desc">
+            Vyrábame a montujeme samonosné a krídlové <strong>brány</strong>, nerezové a kované <strong>zábradlia</strong>, točené a priame <strong>schodiská</strong>, terasové markízy, bezpečnostné mreže a atypické zámočnícke konštrukcie. S kompletnou antikoróznou úpravou (zinkovanie, práškový komaxit RAL, pieskovanie) pre Pezinok, Bratislavu a okolie.
+          </p>
+
+          <!-- Action Buttons -->
+          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+            <a href="#konfigurator" class="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3.5 text-base font-bold text-white bg-brand-600 hover:bg-brand-500 rounded-xl shadow-lg shadow-brand-600/30 hover:shadow-brand-600/50 transform hover:-translate-y-0.5 transition-all">
+              <i data-lucide="calculator" class="w-5 h-5 mr-2"></i>
+              <span data-i18n="hero_cta_calc">Kalkulátor orientačnej ceny</span>
+            </a>
+            <a href="#vyrobky" class="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3.5 text-base font-semibold text-slate-800 dark:text-slate-200 bg-white dark:bg-slate-900 hover:bg-slate-100 dark:hover:bg-slate-800 border border-slate-300 dark:border-slate-700/80 rounded-xl shadow-sm transition-all">
+              <i data-lucide="images" class="w-5 h-5 mr-2 text-brand-500"></i>
+              <span data-i18n="hero_cta_gallery">Prezrieť galériu realizácií</span>
+            </a>
+          </div>
+
+          <!-- Trust Badges -->
+          <div class="pt-6 border-t border-slate-200 dark:border-slate-800/80 grid grid-cols-2 sm:grid-cols-4 gap-4 text-left">
+            <div>
+              <div class="text-2xl font-extrabold text-slate-900 dark:text-white font-display">15+</div>
+              <div class="text-xs text-slate-500 dark:text-slate-400 font-medium" data-i18n="hero_stat_1">Rokov praxe v odbore</div>
+            </div>
+            <div>
+              <div class="text-2xl font-extrabold text-brand-600 dark:text-brand-400 font-display">1 200+</div>
+              <div class="text-xs text-slate-500 dark:text-slate-400 font-medium" data-i18n="hero_stat_2">Zhotovených výrobkov</div>
+            </div>
+            <div>
+              <div class="text-2xl font-extrabold text-slate-900 dark:text-white font-display">100%</div>
+              <div class="text-xs text-slate-500 dark:text-slate-400 font-medium" data-i18n="hero_stat_3">Zákazková výroba</div>
+            </div>
+            <div>
+              <div class="text-2xl font-extrabold text-amber-600 dark:text-amber-400 font-display">48h</div>
+              <div class="text-xs text-slate-500 dark:text-slate-400 font-medium" data-i18n="hero_stat_4">Rýchle zameranie</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Hero Visual Card -->
+        <div class="lg:col-span-5 relative">
+          <div class="relative mx-auto max-w-md lg:max-w-none rounded-2xl bg-white dark:bg-gradient-to-b dark:from-slate-800/90 dark:to-slate-900/90 p-2 border border-slate-200 dark:border-slate-700/60 shadow-xl dark:shadow-2xl dark:shadow-black/80">
+            <div class="relative rounded-xl overflow-hidden aspect-[4/3] bg-slate-900 group">
+              <img src="https://images.unsplash.com/photo-1504917599217-d4dc5ebe6122?auto=format&fit=crop&w=1000&q=80" alt="Zváranie a kovovýroba v dielni" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent"></div>
+              
+              <!-- Floating Pill Over Image -->
+              <div class="absolute bottom-4 left-4 right-4 p-4 rounded-xl bg-slate-900/95 backdrop-blur-md border border-slate-700/70 text-white">
+                <div class="flex items-center justify-between">
+                  <div>
+                    <span class="text-xs font-bold uppercase tracking-wider text-brand-400" data-i18n="hero_card_tag">Špičková garancia</span>
+                    <h2 class="text-sm font-bold text-white" data-i18n="hero_card_title">Žiarový zinok & Práškové lakovanie RAL</h2>
+                    <p class="text-xs text-slate-300" data-i18n="hero_card_sub">Odolnosť voči korózii až na desiatky rokov</p>
+                  </div>
+                  <div class="w-10 h-10 rounded-lg bg-brand-500/20 border border-brand-500/40 flex items-center justify-center text-brand-400">
+                    <i data-lucide="shield-check" class="w-6 h-6"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Quick Service Mini Badges -->
+            <div class="p-4 grid grid-cols-2 gap-3 bg-slate-50 dark:bg-slate-900/80 rounded-b-xl border-t border-slate-200 dark:border-slate-800">
+              <div class="flex items-center gap-2.5 text-xs font-semibold text-slate-700 dark:text-slate-300">
+                <i data-lucide="check-circle" class="w-4 h-4 text-emerald-500"></i>
+                <span data-i18n="hero_feature_1">Oceľ, železo & nerez</span>
+              </div>
+              <div class="flex items-center gap-2.5 text-xs font-semibold text-slate-700 dark:text-slate-300">
+                <i data-lucide="check-circle" class="w-4 h-4 text-emerald-500"></i>
+                <span data-i18n="hero_feature_2">Pieskovanie & Komaxit</span>
+              </div>
+              <div class="flex items-center gap-2.5 text-xs font-semibold text-slate-700 dark:text-slate-300">
+                <i data-lucide="check-circle" class="w-4 h-4 text-emerald-500"></i>
+                <span data-i18n="hero_feature_3">Montáž na kľúč</span>
+              </div>
+              <div class="flex items-center gap-2.5 text-xs font-semibold text-slate-700 dark:text-slate-300">
+                <i data-lucide="check-circle" class="w-4 h-4 text-emerald-500"></i>
+                <span data-i18n="hero_feature_4">Vlastná dielňa v Pezinku</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- O NÁS / PREČO KOVO SERVICE -->
+  <section id="o-nas" class="py-16 md:py-24 bg-white dark:bg-slate-900/60 border-y border-slate-200 dark:border-slate-800/80 relative transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="max-w-3xl mx-auto text-center space-y-4 mb-16">
+        <h2 class="text-xs font-bold uppercase tracking-widest text-brand-600 dark:text-brand-400" data-i18n="about_tag">O SPOLOČNOSTI</h2>
+        <h3 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight font-display" data-i18n="about_title">
+          Kovovýroba a zámočníctvo s dôrazom na detail
+        </h3>
+        <p class="text-slate-600 dark:text-slate-300 leading-relaxed text-sm sm:text-base" data-i18n="about_desc">
+          Spoločnosť <strong>KOVO SERVICE s.r.o.</strong> so sídlom a prevádzkou v Pezinku vznikla s cieľom poskytovať univerzálne zámočnícke a kovovýrobné práce najvyššej kvality. Naša dielňa na Šenkvickej ceste je vybavená moderným strojovým parkom pre spracovanie čiernej ocele aj ušľachtilej nerezovej ocele. Sme hrdí na poctivé remeslo a individuálny prístup ku každému zákazníkovi.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Feature 1 -->
+        <div class="p-8 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-brand-500/50 transition-all duration-300 group shadow-md dark:shadow-lg">
+          <div class="w-14 h-14 rounded-xl bg-brand-500/10 text-brand-600 dark:text-brand-400 border border-brand-500/20 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-brand-500 group-hover:text-white transition-all">
+            <i data-lucide="ruler" class="w-7 h-7"></i>
+          </div>
+          <h4 class="text-xl font-bold text-slate-900 dark:text-white mb-3" data-i18n="feat_1_title">100% Výroba na mieru</h4>
+          <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed" data-i18n="feat_1_desc">
+            Neponúkame unifikované skladové polotovary. Každá brána, zábradlie či schodisko je vyrobené na mieru vášmu priestoru po dôkladnom fyzickom zameraní naším majstrom.
+          </p>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="p-8 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-brand-500/50 transition-all duration-300 group shadow-md dark:shadow-lg">
+          <div class="w-14 h-14 rounded-xl bg-brand-500/10 text-brand-600 dark:text-brand-400 border border-brand-500/20 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-brand-500 group-hover:text-white transition-all">
+            <i data-lucide="layers" class="w-7 h-7"></i>
+          </div>
+          <h4 class="text-xl font-bold text-slate-900 dark:text-white mb-3" data-i18n="feat_2_title">Nerez, Železo & Kombinácie</h4>
+          <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed" data-i18n="feat_2_desc">
+            Pracujeme s čiernou konštrukčnou oceľou, nerezom AISI 304 a 316. Výrobky elegantne kombinujeme s masívnym drevom, bezpečnostným kaleným sklom (VSG/ESG) aj lexanom.
+          </p>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="p-8 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-brand-500/50 transition-all duration-300 group shadow-md dark:shadow-lg">
+          <div class="w-14 h-14 rounded-xl bg-brand-500/10 text-brand-600 dark:text-brand-400 border border-brand-500/20 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-brand-500 group-hover:text-white transition-all">
+            <i data-lucide="sparkles" class="w-7 h-7"></i>
+          </div>
+          <h4 class="text-xl font-bold text-slate-900 dark:text-white mb-3" data-i18n="feat_3_title">Antikorózna ochrana</h4>
+          <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed" data-i18n="feat_3_desc">
+            Žiarové zinkovanie, pieskovanie, priemyselný polyuretánový nástrek a práškové lakovanie (komaxit) v akejkoľvek RAL farbe garantujú nekompromisnú trvácnosť v exteriéri.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PRODUKTOVÉ KATEGÓRIE & PORTFÓLIO (FILTROVATEĽNÉ) -->
+  <section id="vyrobky" class="py-16 md:py-24 bg-slate-50 dark:bg-slate-950 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-widest text-brand-600 dark:text-brand-400" data-i18n="prod_tag">PORTFÓLIO PRODUKTOV</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight font-display mt-2" data-i18n="prod_title">
+            Prehľad výrobkov a fotogaléria
+          </h2>
+          <p class="text-slate-600 dark:text-slate-400 text-sm mt-1 max-w-xl" data-i18n="prod_subtitle">
+            Kliknite na kategóriu a objavte široké spektrum našich zrealizovaných prác zo železa a nerezu.
+          </p>
+        </div>
+
+        <!-- Filter tabs -->
+        <div class="flex flex-wrap gap-2" id="portfolio-filters">
+          <button onclick="filterGallery('all')" class="filter-btn active px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-brand-600 text-white shadow-md transition" data-filter="all" data-i18n="filter_all">Všetko</button>
+          <button onclick="filterGallery('brany')" class="filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-white dark:bg-slate-900 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-300 dark:border-slate-800 transition" data-filter="brany" data-i18n="filter_gates">Brány & Vstupy</button>
+          <button onclick="filterGallery('zabradlia')" class="filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-white dark:bg-slate-900 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-300 dark:border-slate-800 transition" data-filter="zabradlia" data-i18n="filter_railings">Zábradlia & Schody</button>
+          <button onclick="filterGallery('markizy')" class="filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-white dark:bg-slate-900 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-300 dark:border-slate-800 transition" data-filter="markizy" data-i18n="filter_canopies">Markízy & Mreže</button>
+          <button onclick="filterGallery('atyp')" class="filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-white dark:bg-slate-900 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-300 dark:border-slate-800 transition" data-filter="atyp" data-i18n="filter_custom">Iné výrobky na mieru</button>
+        </div>
+      </div>
+
+      <!-- GALLERY GRID -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="gallery-container">
+        
+        <!-- ITEM 1: Posuvná samonosná brána -->
+        <div class="gallery-item group relative rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 overflow-hidden hover:border-brand-500/60 transition-all duration-300 shadow-md dark:shadow-xl" data-category="brany">
+          <div class="relative aspect-[16/10] overflow-hidden bg-slate-950">
+            <img src="https://images.unsplash.com/photo-1558036117-15d82a90b9b1?auto=format&fit=crop&w=800&q=80" alt="Posuvná samonosná brána" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-80"></div>
+            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md text-xs font-bold bg-brand-600/90 text-white backdrop-blur-sm">Brána 120</span>
+            <span class="absolute top-3 right-3 px-2 py-0.5 rounded text-[11px] font-semibold bg-slate-900/90 text-slate-200 border border-slate-700">Oceľ / Komaxit</span>
+          </div>
+          <div class="p-5">
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white group-hover:text-brand-500 transition-colors">Posuvná samonosná brána</h3>
+            <p class="text-xs text-slate-600 dark:text-slate-400 mt-1 line-clamp-2">Samonosný C-profil, príprava na automatický pohon, žiarové zinkovanie a práškový vypaľovaný nástrek podľa RAL.</p>
+            <div class="mt-4 pt-3 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between text-xs">
+              <span class="text-slate-500 dark:text-slate-400 flex items-center gap-1"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-500"></i> Montáž vrátane pohonu</span>
+              <button onclick="openProductModal('Posuvná samonosná brána', 'brany', 'Samonosné posuvné brány s kvalitným C-profilom a nylonovým ozubeným hrebeňom. Nevyžadujú žiadnu vodiacu koľajnicu v prejazde, čo zaručuje bezproblémové fungovanie aj v zime pri snežení a mraze. Možnosť výplne: lamely, ťahokov, zvislé profily alebo drevo.', 'Oceľ S235 + Žiarový zinok + RAL Komaxit', 'https://images.unsplash.com/photo-1558036117-15d82a90b9b1?auto=format&fit=crop&w=1200&q=80')" class="text-brand-600 dark:text-brand-400 hover:text-brand-500 font-semibold flex items-center gap-1">
+                Detail <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- ITEM 2: Dvojkrídlová kovaná brána -->
+        <div class="gallery-item group relative rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 overflow-hidden hover:border-brand-500/60 transition-all duration-300 shadow-md dark:shadow-xl" data-category="brany">
+          <div class="relative aspect-[16/10] overflow-hidden bg-slate-950">
+            <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80" alt="Dvojkrídlová kovaná brána 104" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-80"></div>
+            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md text-xs font-bold bg-slate-800/90 text-white backdrop-blur-sm">Brána 104</span>
+            <span class="absolute top-3 right-3 px-2 py-0.5 rounded text-[11px] font-semibold bg-slate-900/90 text-slate-200 border border-slate-700">Kovaný štýl</span>
+          </div>
+          <div class="p-5">
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white group-hover:text-brand-500 transition-colors">Dvojkrídlová vchodová brána</h3>
+            <p class="text-xs text-slate-600 dark:text-slate-400 mt-1 line-clamp-2">Kované dekoratívne prvky, robustné nastaviteľné pánty, elektrický zámok a doraz s tlmičom.</p>
+            <div class="mt-4 pt-3 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between text-xs">
+              <span class="text-slate-500 dark:text-slate-400 flex items-center gap-1"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-500"></i> Masívne profily</span>
+              <button onclick="openProductModal('Dvojkrídlová vchodová brána 104', 'brany', 'Klasická dvojkrídlová brána s kovanými alebo rovnými profilmi. Dodávaná vrátane nastaviteľných pántov, stredového dorazu, zámku Fab a kľučiek. Pripravená na montáž pákových alebo lineárnych pohonov.', 'Oceľ, antikorózny základ, pozinkovanie', 'https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1200&q=80')" class="text-brand-600 dark:text-brand-400 hover:text-brand-500 font-semibold flex items-center gap-1">
+                Detail <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- ITEM 3: Nerezové schodiskové zábradlie -->
+        <div class="gallery-item group relative rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 overflow-hidden hover:border-brand-500/60 transition-all duration-300 shadow-md dark:shadow-xl" data-category="zabradlia">
+          <div class="relative aspect-[16/10] overflow-hidden bg-slate-950">
+            <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80" alt="Nerezové schodiskové zábradlie 601" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-80"></div>
+            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md text-xs font-bold bg-slate-800/90 text-white backdrop-blur-sm">Zábradlie 601</span>
+            <span class="absolute top-3 right-3 px-2 py-0.5 rounded text-[11px] font-semibold bg-brand-900/80 text-brand-200 border border-brand-700">Nerez AISI 304</span>
+          </div>
+          <div class="p-5">
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white group-hover:text-brand-500 transition-colors">Nerezové schodiskové zábradlie</h3>
+            <p class="text-xs text-slate-600 dark:text-slate-400 mt-1 line-clamp-2">Kefovaný / brúsený nerezový stĺpikový systém s vodorovnou tyčovou výplňou alebo madlom s pasovinou.</p>
+            <div class="mt-4 pt-3 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between text-xs">
+              <span class="text-slate-500 dark:text-slate-400 flex items-center gap-1"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-500"></i> Brúsený matný povrch</span>
+              <button onclick="openProductModal('Nerezové schodiskové zábradlie 601', 'zabradlia', 'Exkluzívne nerezové zábradlie pre interiéry a exteriéry. Používame potravinársky a chemicky odolný nerez AISI 304 / 316. Bez viditeľných nevzhľadných zvarov – precízne zabrúsené do jednotného zamatového lesku.', 'Nerezová oceľ AISI 304, brúsenie K320', 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80')" class="text-brand-600 dark:text-brand-400 hover:text-brand-500 font-semibold flex items-center gap-1">
+                Detail <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- ITEM 4: Točené schody so zábradlím -->
+        <div class="gallery-item group relative rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 overflow-hidden hover:border-brand-500/60 transition-all duration-300 shadow-md dark:shadow-xl" data-category="zabradlia">
+          <div class="relative aspect-[16/10] overflow-hidden bg-slate-950">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Točené schody so zábradlím" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-80"></div>
+            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md text-xs font-bold bg-slate-800/90 text-white backdrop-blur-sm">Schody 103</span>
+            <span class="absolute top-3 right-3 px-2 py-0.5 rounded text-[11px] font-semibold bg-slate-900/90 text-slate-200 border border-slate-700">Kov + Drevo</span>
+          </div>
+          <div class="p-5">
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white group-hover:text-brand-500 transition-colors">Oceľové točené schodisko</h3>
+            <p class="text-xs text-slate-600 dark:text-slate-400 mt-1 line-clamp-2">Chrbticová alebo točená nosná oceľová konštrukcia doplnená masívnymi dubovými nášľapmi a kovaným zábradlím.</p>
+            <div class="mt-4 pt-3 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between text-xs">
+              <span class="text-slate-500 dark:text-slate-400 flex items-center gap-1"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-500"></i> Statický výpočet</span>
+              <button onclick="openProductModal('Oceľové točené schodisko so zábradlím', 'zabradlia', 'Priestorovo úsporné a dizajnovo výrazné točené schody. Centrálna nosná rúra, presne laserom rezané konzoly stupňov a ohýbané madlo kopírujúce polomer točenia schodiska.', 'Oceľ, žiarový zinok / lakovanie + drevené stupne', 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80')" class="text-brand-600 dark:text-brand-400 hover:text-brand-500 font-semibold flex items-center gap-1">
+                Detail <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- ITEM 5: Nerezová markíza a strieška s lexanom -->
+        <div class="gallery-item group relative rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 overflow-hidden hover:border-brand-500/60 transition-all duration-300 shadow-md dark:shadow-xl" data-category="markizy">
+          <div class="relative aspect-[16/10] overflow-hidden bg-slate-950">
+            <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80" alt="Nerezová markíza 91" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-80"></div>
+            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md text-xs font-bold bg-slate-800/90 text-white backdrop-blur-sm">Markíza 91</span>
+            <span class="absolute top-3 right-3 px-2 py-0.5 rounded text-[11px] font-semibold bg-brand-900/80 text-brand-200 border border-brand-700">Nerez + Lexan</span>
+          </div>
+          <div class="p-5">
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white group-hover:text-brand-500 transition-colors">Vchodová nerezová markíza</h3>
+            <p class="text-xs text-slate-600 dark:text-slate-400 mt-1 line-clamp-2">Nerezové nosné tiahla, profilované ramená a prémiový polykarbonát Lexan s UV filtrom odolný voči krupobitiu.</p>
+            <div class="mt-4 pt-3 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between text-xs">
+              <span class="text-slate-500 dark:text-slate-400 flex items-center gap-1"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-500"></i> Odolné UV žiareniu</span>
+              <button onclick="openProductModal('Vchodová nerezová markíza 91', 'markizy', 'Elegantné zastrešenie vchodov rodinných domov, firemných sídiel a bytových domov. Vyrobené z masívneho nerezu s nerezovými nastaviteľnými tiahlami a odkvapovým žľabom.', 'Nerez AISI 304 + komôrkový alebo plný Lexan', 'https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1200&q=80')" class="text-brand-600 dark:text-brand-400 hover:text-brand-500 font-semibold flex items-center gap-1">
+                Detail <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- ITEM 6: Bezpečnostné mreže na okná a dvere -->
+        <div class="gallery-item group relative rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 overflow-hidden hover:border-brand-500/60 transition-all duration-300 shadow-md dark:shadow-xl" data-category="markizy">
+          <div class="relative aspect-[16/10] overflow-hidden bg-slate-950">
+            <img src="https://images.unsplash.com/photo-1509644851169-2acc08aa25b5?auto=format&fit=crop&w=800&q=80" alt="Mreža 001" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-80"></div>
+            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md text-xs font-bold bg-slate-800/90 text-white backdrop-blur-sm">Mreža 001</span>
+            <span class="absolute top-3 right-3 px-2 py-0.5 rounded text-[11px] font-semibold bg-slate-900/90 text-slate-200 border border-slate-700">Oceľ RC3 cert</span>
+          </div>
+          <div class="p-5">
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white group-hover:text-brand-500 transition-colors">Bezpečnostné okenné mreže</h3>
+            <p class="text-xs text-slate-600 dark:text-slate-400 mt-1 line-clamp-2">Pevné aj otváravé mreže do pivníc, prevádzok a na rodinné domy s vysokým stupňom mechanickej odolnosti.</p>
+            <div class="mt-4 pt-3 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between text-xs">
+              <span class="text-slate-500 dark:text-slate-400 flex items-center gap-1"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-500"></i> Plná oceľ 14x14mm</span>
+              <button onclick="openProductModal('Bezpečnostné okenné mreže 001', 'markizy', 'Pevné zámočnícke mreže z plnej oceľovej guľatiny alebo štvorhranu. Možnosť otváravého prevedenia s bezpečnostnou vložkou a viacbodovým uzamykaním.', 'Oceľ, žiarový zinok + prášková farba', 'https://images.unsplash.com/photo-1509644851169-2acc08aa25b5?auto=format&fit=crop&w=1200&q=80')" class="text-brand-600 dark:text-brand-400 hover:text-brand-500 font-semibold flex items-center gap-1">
+                Detail <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- ITEM 7: Atypické dvierka na plynomer a elektromer -->
+        <div class="gallery-item group relative rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 overflow-hidden hover:border-brand-500/60 transition-all duration-300 shadow-md dark:shadow-xl" data-category="atyp">
+          <div class="relative aspect-[16/10] overflow-hidden bg-slate-950">
+            <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80" alt="Dvierka na plynomer a elektromer" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-80"></div>
+            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md text-xs font-bold bg-slate-800/90 text-white backdrop-blur-sm">Atyp 401</span>
+            <span class="absolute top-3 right-3 px-2 py-0.5 rounded text-[11px] font-semibold bg-brand-900/80 text-brand-200 border border-brand-700">Nerez / Komaxit</span>
+          </div>
+          <div class="p-5">
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white group-hover:text-brand-500 transition-colors">Revízne dvierka plyn / elektro</h3>
+            <p class="text-xs text-slate-600 dark:text-slate-400 mt-1 line-clamp-2">Výroba dvierok na mieru do plotových múrikov a fasád s vetracími žalúziami a štandardizovaným zámkom SPP / ZSE.</p>
+            <div class="mt-4 pt-3 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between text-xs">
+              <span class="text-slate-500 dark:text-slate-400 flex items-center gap-1"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-500"></i> Norma SPP & ZSE</span>
+              <button onclick="openProductModal('Revízne dvierka na plynomer a elektromer', 'atyp', 'Presné zámočnícke dvierka na mieru pre niky plynu a elektriny. Rám z L-profilu, krídlo s vysekávanými vetracími prieduchmi a trojhranným alebo cylindrickým zámkom.', 'Pozinkovaný plech / nerezový brúsený plech', 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1200&q=80')" class="text-brand-600 dark:text-brand-400 hover:text-brand-500 font-semibold flex items-center gap-1">
+                Detail <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- ITEM 8: Boxy na smetné nádoby a technické prístrešky -->
+        <div class="gallery-item group relative rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 overflow-hidden hover:border-brand-500/60 transition-all duration-300 shadow-md dark:shadow-xl" data-category="atyp">
+          <div class="relative aspect-[16/10] overflow-hidden bg-slate-950">
+            <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=800&q=80" alt="Boxy na smetné koše a regále" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-80"></div>
+            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md text-xs font-bold bg-slate-800/90 text-white backdrop-blur-sm">Atyp 402</span>
+            <span class="absolute top-3 right-3 px-2 py-0.5 rounded text-[11px] font-semibold bg-slate-900/90 text-slate-200 border border-slate-700">Drevená výplň</span>
+          </div>
+          <div class="p-5">
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white group-hover:text-brand-500 transition-colors">Prístrešky na smetné nádoby</h3>
+            <p class="text-xs text-slate-600 dark:text-slate-400 mt-1 line-clamp-2">Estetické uzamykateľné kovové ohrady a boxy na 120L / 240L nádoby s výklopným vekom a dreveným lamelovým plášťom.</p>
+            <div class="mt-4 pt-3 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between text-xs">
+              <span class="text-slate-500 dark:text-slate-400 flex items-center gap-1"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-500"></i> Plynové vzpery</span>
+              <button onclick="openProductModal('Prístrešky a boxy na smetné nádoby', 'atyp', 'Čisté riešenie pred dom alebo firmu. Robustná žiarovo zinkovaná oceľová konštrukcia doplnená výplňou podľa vášho výberu (kovové lamely, drevo, kompozit).', 'Pozinkovaná oceľ + drevo / kompozit', 'https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=1200&q=80')" class="text-brand-600 dark:text-brand-400 hover:text-brand-500 font-semibold flex items-center gap-1">
+                Detail <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- ITEM 9: Nerezové zábradlie s bezpečnostným sklom -->
+        <div class="gallery-item group relative rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 overflow-hidden hover:border-brand-500/60 transition-all duration-300 shadow-md dark:shadow-xl" data-category="zabradlia">
+          <div class="relative aspect-[16/10] overflow-hidden bg-slate-950">
+            <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=800&q=80" alt="Zábradlie výplň sklo 403" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-80"></div>
+            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md text-xs font-bold bg-slate-800/90 text-white backdrop-blur-sm">Zábradlie 403</span>
+            <span class="absolute top-3 right-3 px-2 py-0.5 rounded text-[11px] font-semibold bg-brand-900/80 text-brand-200 border border-brand-700">Nerez + Sklo</span>
+          </div>
+          <div class="p-5">
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white group-hover:text-brand-500 transition-colors">Balkónové zábradlie so sklom</h3>
+            <p class="text-xs text-slate-600 dark:text-slate-400 mt-1 line-clamp-2">Bezpečnostné vrstvené sklo VSG/ESG uchytené v certifikovaných nerezových terčoch a pätkách. Vzdušný moderný vzhľad.</p>
+            <div class="mt-4 pt-3 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between text-xs">
+              <span class="text-slate-500 dark:text-slate-400 flex items-center gap-1"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-500"></i> Kalené sklo 8+8mm</span>
+              <button onclick="openProductModal('Balkónové zábradlie so sklenenou výplňou 403', 'zabradlia', 'Luxusné zábradlie vhodné na terasy rodinných domov a moderné novostavby. Nerezová konštrukcia z profilov 40x40mm alebo guľatiny s certifikovanými držiakmi skla.', 'Nerez AISI 304 + lepené kalené sklo ESG/VSG', 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1200&q=80')" class="text-brand-600 dark:text-brand-400 hover:text-brand-500 font-semibold flex items-center gap-1">
+                Detail <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- BOTTOM CALLOUT -->
+      <div class="mt-12 p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex flex-col md:flex-row items-center justify-between gap-6 shadow-sm dark:shadow-md">
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 rounded-xl bg-brand-500/10 text-brand-600 dark:text-brand-400 border border-brand-500/20 flex items-center justify-center shrink-0">
+            <i data-lucide="download" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <h4 class="text-base font-bold text-slate-900 dark:text-white" data-i18n="cat_promo_title">Chcete vidieť kompletný katalóg našich výrobkov v PDF?</h4>
+            <p class="text-xs text-slate-600 dark:text-slate-400" data-i18n="cat_promo_sub">Stiahnite si technické katalógy s desiatkami typov brán, mreží, zábradlí a kovaných prvkov.</p>
+          </div>
+        </div>
+        <a href="#katalogy" class="px-5 py-2.5 rounded-xl bg-slate-900 dark:bg-slate-800 hover:bg-slate-800 dark:hover:bg-slate-700 text-white font-semibold text-xs tracking-wide uppercase border border-slate-700 transition shrink-0" data-i18n="cat_promo_btn">
+          Prejsť na katalógy PDF
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- INTERAKTÍVNY KONFIGURÁTOR A KALKULAČKA CENY NA MIERU -->
+  <section id="konfigurator" class="py-16 md:py-24 bg-slate-100 dark:bg-slate-900/70 border-t border-slate-200 dark:border-slate-800 relative transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="max-w-3xl mx-auto text-center space-y-3 mb-14">
+        <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-500/10 border border-brand-500/20 text-xs font-bold uppercase tracking-wider text-brand-600 dark:text-brand-400">
+          <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+          <span data-i18n="calc_badge">Interaktívny konfigurátor</span>
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight font-display" data-i18n="calc_title">
+          Vypočítajte si orientačnú cenu zákazky
+        </h2>
+        <p class="text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed" data-i18n="calc_subtitle">
+          Zvoľte typ výrobku, preferovaný materiál, rozmery a povrchovú úpravu. Náš kalkulátor okamžite vygeneruje orientačný rozpočet, ktorý môžete jedným klikom odoslať na bezplatné zameranie.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- CONFIGURATOR CONTROLS (Left 7 Cols) -->
+        <div class="lg:col-span-7 bg-white dark:bg-slate-950 p-6 sm:p-8 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-xl space-y-6">
+          
+          <!-- STEP 1: TYP VÝROBKU -->
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300 mb-3" data-i18n="calc_step1_label">
+              1. Typ výrobku / Zákazky:
+            </label>
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-2.5" id="calc-product-type">
+              <button type="button" onclick="setProductType('posuvna_brana', 220)" class="calc-type-btn p-3 rounded-xl border border-brand-500 bg-brand-50 dark:bg-brand-950/30 text-left transition text-slate-900 dark:text-white">
+                <i data-lucide="door-closed" class="w-5 h-5 text-brand-500 mb-1.5"></i>
+                <div class="font-bold text-xs">Posuvná brána</div>
+                <div class="text-[10px] text-slate-500 dark:text-slate-400">Samonosná / Koľajová</div>
+              </button>
+
+              <button type="button" onclick="setProductType('kridlova_brana', 190)" class="calc-type-btn p-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900/60 hover:border-slate-300 dark:hover:border-slate-700 text-left transition text-slate-700 dark:text-slate-300">
+                <i data-lucide="move" class="w-5 h-5 text-slate-400 mb-1.5"></i>
+                <div class="font-bold text-xs">Krídlová brána</div>
+                <div class="text-[10px] text-slate-500 dark:text-slate-400">1 alebo 2 krídla</div>
+              </button>
+
+              <button type="button" onclick="setProductType('zabradlie', 140)" class="calc-type-btn p-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900/60 hover:border-slate-300 dark:hover:border-slate-700 text-left transition text-slate-700 dark:text-slate-300">
+                <i data-lucide="shield" class="w-5 h-5 text-slate-400 mb-1.5"></i>
+                <div class="font-bold text-xs">Zábradlie</div>
+                <div class="text-[10px] text-slate-500 dark:text-slate-400">Balkón / Schody</div>
+              </button>
+
+              <button type="button" onclick="setProductType('schody', 320)" class="calc-type-btn p-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900/60 hover:border-slate-300 dark:hover:border-slate-700 text-left transition text-slate-700 dark:text-slate-300">
+                <i data-lucide="trending-up" class="w-5 h-5 text-slate-400 mb-1.5"></i>
+                <div class="font-bold text-xs">Oceľové schody</div>
+                <div class="text-[10px] text-slate-500 dark:text-slate-400">Priame / Točené</div>
+              </button>
+
+              <button type="button" onclick="setProductType('markiza', 160)" class="calc-type-btn p-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900/60 hover:border-slate-300 dark:hover:border-slate-700 text-left transition text-slate-700 dark:text-slate-300">
+                <i data-lucide="umbrella" class="w-5 h-5 text-slate-400 mb-1.5"></i>
+                <div class="font-bold text-xs">Markíza / Prístrešok</div>
+                <div class="text-[10px] text-slate-500 dark:text-slate-400">Vchod / Terasa</div>
+              </button>
+
+              <button type="button" onclick="setProductType('mreze_atyp', 130)" class="calc-type-btn p-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900/60 hover:border-slate-300 dark:hover:border-slate-700 text-left transition text-slate-700 dark:text-slate-300">
+                <i data-lucide="grid" class="w-5 h-5 text-slate-400 mb-1.5"></i>
+                <div class="font-bold text-xs">Mreže / Atyp</div>
+                <div class="text-[10px] text-slate-500 dark:text-slate-400">Bezpečnostné / Dvierka</div>
+              </button>
+            </div>
+          </div>
+
+          <!-- STEP 2: MATERIÁL A PREVEDENIE -->
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300 mb-3" data-i18n="calc_step2_label">
+              2. Materiál a konštrukčné prevedenie:
+            </label>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5" id="calc-material">
+              <label class="p-3 rounded-xl border border-brand-500 bg-brand-50/50 dark:bg-brand-950/20 flex items-center justify-between cursor-pointer transition">
+                <div class="flex items-center gap-2.5">
+                  <input type="radio" name="calc_mat" value="1.0" checked onchange="updateCalculation()" class="text-brand-500 focus:ring-0">
+                  <div>
+                    <div class="text-xs font-bold text-slate-900 dark:text-white">Konštrukčná oceľ S235</div>
+                    <div class="text-[10px] text-slate-500 dark:text-slate-400">Klasická pevná čierna oceľ</div>
+                  </div>
+                </div>
+                <span class="text-xs font-semibold text-slate-500 dark:text-slate-400">Základ</span>
+              </label>
+
+              <label class="p-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900/60 hover:border-slate-300 dark:hover:border-slate-700 flex items-center justify-between cursor-pointer transition">
+                <div class="flex items-center gap-2.5">
+                  <input type="radio" name="calc_mat" value="1.6" onchange="updateCalculation()" class="text-brand-500 focus:ring-0">
+                  <div>
+                    <div class="text-xs font-bold text-slate-900 dark:text-white">Nerezová oceľ (AISI 304)</div>
+                    <div class="text-[10px] text-slate-500 dark:text-slate-400">Brúsený potravinársky nerez</div>
+                  </div>
+                </div>
+                <span class="text-xs font-semibold text-brand-600 dark:text-brand-400">+60%</span>
+              </label>
+
+              <label class="p-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900/60 hover:border-slate-300 dark:hover:border-slate-700 flex items-center justify-between cursor-pointer transition">
+                <div class="flex items-center gap-2.5">
+                  <input type="radio" name="calc_mat" value="1.35" onchange="updateCalculation()" class="text-brand-500 focus:ring-0">
+                  <div>
+                    <div class="text-xs font-bold text-slate-900 dark:text-white">Kov + Prírodné drevo / Lamely</div>
+                    <div class="text-[10px] text-slate-500 dark:text-slate-400">Oceľový rám s drevenou výplňou</div>
+                  </div>
+                </div>
+                <span class="text-xs font-semibold text-brand-600 dark:text-brand-400">+35%</span>
+              </label>
+
+              <label class="p-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900/60 hover:border-slate-300 dark:hover:border-slate-700 flex items-center justify-between cursor-pointer transition">
+                <div class="flex items-center gap-2.5">
+                  <input type="radio" name="calc_mat" value="1.5" onchange="updateCalculation()" class="text-brand-500 focus:ring-0">
+                  <div>
+                    <div class="text-xs font-bold text-slate-900 dark:text-white">Kov + Bezpečnostné sklo VSG/ESG</div>
+                    <div class="text-[10px] text-slate-500 dark:text-slate-400">Moderné sklenené výplne</div>
+                  </div>
+                </div>
+                <span class="text-xs font-semibold text-brand-600 dark:text-brand-400">+50%</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- STEP 3: ROZMERY (SLIDER) -->
+          <div class="space-y-4">
+            <div class="flex justify-between items-center">
+              <label class="text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300" data-i18n="calc_dim_label">
+                3. Rozmery zákazky (Šírka / Dĺžka):
+              </label>
+              <span class="text-sm font-extrabold text-brand-600 dark:text-brand-400 bg-slate-100 dark:bg-slate-900 px-3 py-1 rounded-lg border border-slate-200 dark:border-slate-800" id="calc-dim-display">4.5 metra</span>
+            </div>
+            <input type="range" id="calc-dim-slider" min="1.0" max="15.0" step="0.5" value="4.5" oninput="updateCalculation()" class="w-full h-2 bg-slate-200 dark:bg-slate-800 rounded-lg appearance-none cursor-pointer accent-brand-500">
+            <div class="flex justify-between text-[11px] text-slate-500">
+              <span>1 m (Bránka / Okno)</span>
+              <span>5 m (Štandard brána)</span>
+              <span>15 m (Veľké zábradlie / plot)</span>
+            </div>
+          </div>
+
+          <!-- STEP 4: POVRCHOVÁ ÚPRAVA -->
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300 mb-3" data-i18n="calc_step4_label">
+              4. Povrchová úprava & Ochrana:
+            </label>
+            <select id="calc-finish" onchange="updateCalculation()" class="w-full bg-slate-50 dark:bg-slate-900 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white text-xs sm:text-sm rounded-xl p-3 focus:border-brand-500 focus:outline-none">
+              <option value="1.0">Základný antikorózny priemyselný náter (Bez príplatku)</option>
+              <option value="1.20" selected>Žiarové pozinkovanie v kúpeli (+20% • Najvyššia odolnosť)</option>
+              <option value="1.25">Práškové lakovanie KOMAXIT - ľubovoľný RAL odtieň (+25%)</option>
+              <option value="1.35">DUPLEX SYSTÉM: Žiarový zinok + Práškový Komaxit (+35% • Prémiová trvácnosť)</option>
+              <option value="1.15">Jemné brúsenie nerezu / Saténový finiš (Pre nerez)</option>
+            </select>
+          </div>
+
+          <!-- STEP 5: DOPLNKY -->
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300 mb-3" data-i18n="calc_step5_label">
+              5. Doplnkové služby:
+            </label>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
+              <label class="p-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900/60 flex items-center gap-2 cursor-pointer">
+                <input type="checkbox" id="calc-opt-montaz" checked onchange="updateCalculation()" class="rounded text-brand-500 focus:ring-0">
+                <span class="text-slate-800 dark:text-slate-200">Montáž na mieste vrátane kotvenia (+150 €)</span>
+              </label>
+
+              <label class="p-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900/60 flex items-center gap-2 cursor-pointer">
+                <input type="checkbox" id="calc-opt-motor" onchange="updateCalculation()" class="rounded text-brand-500 focus:ring-0">
+                <span class="text-slate-800 dark:text-slate-200">Automatický pohon s 2x DO (+420 €)</span>
+              </label>
+
+              <label class="p-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900/60 flex items-center gap-2 cursor-pointer">
+                <input type="checkbox" id="calc-opt-zameranie" checked onchange="updateCalculation()" class="rounded text-brand-500 focus:ring-0">
+                <span class="text-slate-800 dark:text-slate-200">Fyzické zameranie majstrom (0 € ZADARMO)</span>
+              </label>
+
+              <label class="p-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900/60 flex items-center gap-2 cursor-pointer">
+                <input type="checkbox" id="calc-opt-doprava" checked onchange="updateCalculation()" class="rounded text-brand-500 focus:ring-0">
+                <span class="text-slate-800 dark:text-slate-200">Dovoz Pezinok / BA kraj (+50 €)</span>
+              </label>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- CALCULATION SUMMARY CARD (Right 5 Cols) -->
+        <div class="lg:col-span-5 sticky top-28 space-y-6">
+          <div class="bg-white dark:bg-gradient-to-br dark:from-slate-900 dark:via-slate-950 dark:to-slate-900 p-6 sm:p-8 rounded-2xl border border-slate-200 dark:border-brand-500/30 shadow-xl dark:shadow-2xl dark:shadow-brand-500/10">
+            
+            <div class="flex items-center justify-between pb-4 border-b border-slate-200 dark:border-slate-800">
+              <span class="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">Orientačná kalkulácia</span>
+              <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">Aktuálne ceny 2026</span>
+            </div>
+
+            <!-- Price Output Display -->
+            <div class="py-6 text-center space-y-1">
+              <div class="text-xs text-slate-500 dark:text-slate-400 uppercase tracking-widest" data-i18n="calc_est_label">Predbežný cenový odhad</div>
+              <div class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-transparent dark:bg-clip-text dark:bg-gradient-to-r dark:from-white dark:via-brand-300 dark:to-brand-500 font-display" id="calc-total-range">
+                1 180 € – 1 420 €
+              </div>
+              <p class="text-[11px] text-slate-500 dark:text-slate-400 italic" data-i18n="calc_vat_note">Cena je orientačná vrátane DPH. Presná cena sa stanovuje po obhliadke a zameraní.</p>
+            </div>
+
+            <!-- Breakdown list -->
+            <div class="space-y-2.5 py-4 border-t border-b border-slate-200 dark:border-slate-800 text-xs">
+              <div class="flex justify-between text-slate-700 dark:text-slate-300">
+                <span class="text-slate-500 dark:text-slate-400">Zvolený typ:</span>
+                <span class="font-semibold text-slate-900 dark:text-white" id="summary-prod-name">Posuvná samonosná brána</span>
+              </div>
+              <div class="flex justify-between text-slate-700 dark:text-slate-300">
+                <span class="text-slate-500 dark:text-slate-400">Rozmer:</span>
+                <span class="font-semibold text-slate-900 dark:text-white" id="summary-prod-dim">4.5 m</span>
+              </div>
+              <div class="flex justify-between text-slate-700 dark:text-slate-300">
+                <span class="text-slate-500 dark:text-slate-400">Doba výroby:</span>
+                <span class="font-semibold text-brand-600 dark:text-brand-400">2 až 3 týždne</span>
+              </div>
+              <div class="flex justify-between text-slate-700 dark:text-slate-300">
+                <span class="text-slate-500 dark:text-slate-400">Záruka na konštrukciu:</span>
+                <span class="font-semibold text-emerald-600 dark:text-emerald-400">5 rokov</span>
+              </div>
+            </div>
+
+            <!-- Call to Action inside calculation -->
+            <div class="pt-6 space-y-3">
+              <button onclick="openInquiryModalWithCalc()" class="w-full py-3.5 px-4 rounded-xl bg-brand-600 hover:bg-brand-500 text-white font-bold text-sm tracking-wide shadow-lg shadow-brand-600/40 hover:shadow-brand-600/60 transform hover:-translate-y-0.5 transition flex items-center justify-center gap-2">
+                <i data-lucide="send" class="w-4 h-4"></i>
+                <span data-i18n="calc_submit_btn">Odoslať nezáväzný dopyt s touto konfiguráciou</span>
+              </button>
+
+              <a href="tel:+421905764251" class="w-full py-2.5 px-4 rounded-xl bg-slate-100 dark:bg-slate-800/80 hover:bg-slate-200 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white font-semibold text-xs text-center border border-slate-300 dark:border-slate-700/80 transition flex items-center justify-center gap-2">
+                <i data-lucide="phone" class="w-3.5 h-3.5 text-brand-500"></i>
+                <span>Alebo volajte priamo majstra: 0905 764 251</span>
+              </a>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SLUŽBY, ZVÁRANIE & POVRCHOVÉ ÚPRAVY (EXPERTISE) -->
+  <section id="sluzby" class="py-16 md:py-24 bg-white dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="max-w-3xl mx-auto text-center space-y-3 mb-16">
+        <span class="text-xs font-bold uppercase tracking-widest text-brand-600 dark:text-brand-400" data-i18n="services_tag">TECHNOLÓGIE A POVRCHY</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight font-display" data-i18n="services_title">
+          Komplexné zámočnícke služby pod jednou strechou
+        </h2>
+        <p class="text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed" data-i18n="services_sub">
+          Náš výrobný proces nekončí zvarením konštrukcie. Zabezpečujeme kompletné zušľachtenie a ošetrenie povrchov pre dlhoročnú odolnosť voči počasiu aj chemickým vplyvom.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Service 1 -->
+        <div class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-slate-300 dark:hover:border-slate-700 transition">
+          <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-500 flex items-center justify-center mb-5 border border-amber-500/20">
+            <i data-lucide="flame" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2" data-i18n="serv_1_title">Pieskovanie a otryskávanie</h3>
+          <p class="text-slate-600 dark:text-slate-400 text-xs leading-relaxed" data-i18n="serv_1_desc">
+            Dôkladné mechanické očistenie kovu od hrdze, starých náterov a okovín na stupeň čistoty Sa 2.5 pred aplikáciou zinku alebo farby.
+          </p>
+          <ul class="mt-4 space-y-1.5 text-[11px] text-slate-600 dark:text-slate-300 border-t border-slate-200 dark:border-slate-800/80 pt-3">
+            <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-500"></i> Očistenie do hĺbky pórov</li>
+            <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-500"></i> Ideálna adhézia náterov</li>
+          </ul>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-slate-300 dark:hover:border-slate-700 transition">
+          <div class="w-12 h-12 rounded-xl bg-blue-500/10 text-blue-500 flex items-center justify-center mb-5 border border-blue-500/20">
+            <i data-lucide="shield" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2" data-i18n="serv_2_title">Žiarové pozinkovanie</h3>
+          <p class="text-slate-600 dark:text-slate-400 text-xs leading-relaxed" data-i18n="serv_2_desc">
+            Ponorenie konštrukcie do kúpeľa roztaveného zinku pri 450 °C. Zinok vytvorí s oceľou zliatinovú vrstvu chrániacu pred hrdzou zvnútra aj zvonku.
+          </p>
+          <ul class="mt-4 space-y-1.5 text-[11px] text-slate-600 dark:text-slate-300 border-t border-slate-200 dark:border-slate-800/80 pt-3">
+            <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-500"></i> Životnosť 30 až 50 rokov</li>
+            <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-500"></i> Zaliate vnútorné dutiny</li>
+          </ul>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-slate-300 dark:hover:border-slate-700 transition">
+          <div class="w-12 h-12 rounded-xl bg-brand-500/10 text-brand-500 flex items-center justify-center mb-5 border border-brand-500/20">
+            <i data-lucide="paint-bucket" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2" data-i18n="serv_3_title">Práškový komaxit & PUR</h3>
+          <p class="text-slate-600 dark:text-slate-400 text-xs leading-relaxed" data-i18n="serv_3_desc">
+            Elektrostatické nanášanie práškovej farby a jej následné vytvrdenie v peci pri 200 °C, alebo priemyselné dvojzložkové polyuretánové striekanie.
+          </p>
+          <ul class="mt-4 space-y-1.5 text-[11px] text-slate-600 dark:text-slate-300 border-t border-slate-200 dark:border-slate-800/80 pt-3">
+            <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-500"></i> Kompletná vzorkovnica RAL</li>
+            <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-500"></i> Matné, jemne štruktúrované</li>
+          </ul>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-slate-300 dark:hover:border-slate-700 transition">
+          <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-500 flex items-center justify-center mb-5 border border-emerald-500/20">
+            <i data-lucide="sparkles" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2" data-i18n="serv_4_title">Brúsenie & Leštenie nerezu</h3>
+          <p class="text-slate-600 dark:text-slate-400 text-xs leading-relaxed" data-i18n="serv_4_desc">
+            Ručné a strojové brúsenie nerezových profilov pásmi rôznej zrnitosti (saténový finiš) alebo vysoko lesklé zrkadlové leštenie nerezových madiel.
+          </p>
+          <ul class="mt-4 space-y-1.5 text-[11px] text-slate-600 dark:text-slate-300 border-t border-slate-200 dark:border-slate-800/80 pt-3">
+            <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-500"></i> Zamatový satén K320</li>
+            <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-500"></i> Pasivácia po zváraní TIG</li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- OFICIÁLNE KATALÓGY NA STIAHNUTIE (PDF DOWNLOAD CENTER) -->
+  <section id="katalogy" class="py-16 md:py-24 bg-slate-100 dark:bg-slate-900/60 border-t border-slate-200 dark:border-slate-800 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="max-w-3xl mx-auto text-center space-y-3 mb-16">
+        <span class="text-xs font-bold uppercase tracking-widest text-brand-600 dark:text-brand-400" data-i18n="catalogs_tag">DOKUMENTY & BROŽÚRY</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight font-display" data-i18n="catalogs_title">
+          Katalógy výrobkov KOVO SERVICE na stiahnutie
+        </h2>
+        <p class="text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed" data-i18n="catalogs_sub">
+          Stiahnite si naše katalógy v PDF formáte. Nájdete v nich podrobné technické nákresy, vzory kovaných dielcov, schodísk a zábradlí.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- Catalog 1: Kompletný -->
+        <div class="p-6 rounded-2xl bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800 hover:border-brand-500/50 transition-all flex flex-col justify-between group shadow-sm dark:shadow-md">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="p-3 rounded-xl bg-red-500/10 text-red-500 border border-red-500/20">
+                <i data-lucide="file-text" class="w-6 h-6"></i>
+              </span>
+              <span class="text-xs font-mono font-bold text-slate-500 dark:text-slate-400 bg-slate-100 dark:bg-slate-900 px-2.5 py-1 rounded border border-slate-200 dark:border-slate-800">4.88 MB</span>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white group-hover:text-brand-500 transition-colors" data-i18n="cat_full_title">Kompletný katalóg výrobkov</h3>
+            <p class="text-xs text-slate-600 dark:text-slate-400 mt-2 leading-relaxed" data-i18n="cat_full_desc">
+              Univerzálny súhrnný katalóg všetkých zámočníckych a kovovýrobných prác: brány, zábradlia, balkóny, schody, markízy a mreže.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-900">
+            <a href="http://www.kovo-service.sk/Katalog Kovo-Service.pdf" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 px-4 rounded-xl bg-brand-600 hover:bg-brand-500 text-white font-semibold text-xs text-center flex items-center justify-center gap-2 transition">
+              <i data-lucide="download" class="w-4 h-4"></i>
+              <span data-i18n="cat_btn_dl">Stiahnuť PDF (4.88 MB)</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Catalog 2: Brány -->
+        <div class="p-6 rounded-2xl bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800 hover:border-brand-500/50 transition-all flex flex-col justify-between group shadow-sm dark:shadow-md">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="p-3 rounded-xl bg-red-500/10 text-red-500 border border-red-500/20">
+                <i data-lucide="file-text" class="w-6 h-6"></i>
+              </span>
+              <span class="text-xs font-mono font-bold text-slate-500 dark:text-slate-400 bg-slate-100 dark:bg-slate-900 px-2.5 py-1 rounded border border-slate-200 dark:border-slate-800">2.16 MB</span>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white group-hover:text-brand-500 transition-colors" data-i18n="cat_gates_title">Katalóg kovovýroba brán</h3>
+            <p class="text-xs text-slate-600 dark:text-slate-400 mt-2 leading-relaxed" data-i18n="cat_gates_desc">
+              Samonosné posuvné brány, krídlové vchodové brány, garážové zateplené i nezateplené brány a typové plotové dielce.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-900">
+            <a href="http://www.kovo-service.sk/Katalog1.pdf" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 px-4 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-semibold text-xs text-center flex items-center justify-center gap-2 transition">
+              <i data-lucide="download" class="w-4 h-4"></i>
+              <span data-i18n="cat_btn_dl">Stiahnuť PDF (2.16 MB)</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Catalog 3: Zábradlie a schody -->
+        <div class="p-6 rounded-2xl bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800 hover:border-brand-500/50 transition-all flex flex-col justify-between group shadow-sm dark:shadow-md">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="p-3 rounded-xl bg-red-500/10 text-red-500 border border-red-500/20">
+                <i data-lucide="file-text" class="w-6 h-6"></i>
+              </span>
+              <span class="text-xs font-mono font-bold text-slate-500 dark:text-slate-400 bg-slate-100 dark:bg-slate-900 px-2.5 py-1 rounded border border-slate-200 dark:border-slate-800">1.21 MB</span>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white group-hover:text-brand-500 transition-colors" data-i18n="cat_stairs_title">Katalóg zábradlia & schody</h3>
+            <p class="text-xs text-slate-600 dark:text-slate-400 mt-2 leading-relaxed" data-i18n="cat_stairs_desc">
+              Nerezové a oceľové balkónové zábradlia, točené schody, madlá s drevom a kombinácie s bezpečnostným kaleným sklom.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-900">
+            <a href="http://www.kovo-service.sk/Katalog2.pdf" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 px-4 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-semibold text-xs text-center flex items-center justify-center gap-2 transition">
+              <i data-lucide="download" class="w-4 h-4"></i>
+              <span data-i18n="cat_btn_dl">Stiahnuť PDF (1.21 MB)</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Catalog 4: Markízy a mreže -->
+        <div class="p-6 rounded-2xl bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800 hover:border-brand-500/50 transition-all flex flex-col justify-between group shadow-sm dark:shadow-md">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="p-3 rounded-xl bg-red-500/10 text-red-500 border border-red-500/20">
+                <i data-lucide="file-text" class="w-6 h-6"></i>
+              </span>
+              <span class="text-xs font-mono font-bold text-slate-500 dark:text-slate-400 bg-slate-100 dark:bg-slate-900 px-2.5 py-1 rounded border border-slate-200 dark:border-slate-800">412 KB</span>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white group-hover:text-brand-500 transition-colors" data-i18n="cat_canopies_title">Katalóg markízy & mreže</h3>
+            <p class="text-xs text-slate-600 dark:text-slate-400 mt-2 leading-relaxed" data-i18n="cat_canopies_desc">
+              Vchodové striešky z nerezu a lexanu, nosné markízy pre terasy, bezpečnostné mreže a ochranné sieťové výplne.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-900">
+            <a href="http://www.kovo-service.sk/Katalog3.pdf" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 px-4 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-semibold text-xs text-center flex items-center justify-center gap-2 transition">
+              <i data-lucide="download" class="w-4 h-4"></i>
+              <span data-i18n="cat_btn_dl">Stiahnuť PDF (412 KB)</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Catalog 5: Iné výrobky -->
+        <div class="p-6 rounded-2xl bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800 hover:border-brand-500/50 transition-all flex flex-col justify-between group shadow-sm dark:shadow-md">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="p-3 rounded-xl bg-red-500/10 text-red-500 border border-red-500/20">
+                <i data-lucide="file-text" class="w-6 h-6"></i>
+              </span>
+              <span class="text-xs font-mono font-bold text-slate-500 dark:text-slate-400 bg-slate-100 dark:bg-slate-900 px-2.5 py-1 rounded border border-slate-200 dark:border-slate-800">1.11 MB</span>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white group-hover:text-brand-500 transition-colors" data-i18n="cat_other_title">Katalóg atypické výrobky</h3>
+            <p class="text-xs text-slate-600 dark:text-slate-400 mt-2 leading-relaxed" data-i18n="cat_other_desc">
+              Revízne dvierka na plyn a elektrinu, kované rošty, kryty kamier, boxy na smetné nádoby a oceľové priemyselné regále.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-900">
+            <a href="http://www.kovo-service.sk/Katalog4.pdf" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 px-4 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-semibold text-xs text-center flex items-center justify-center gap-2 transition">
+              <i data-lucide="download" class="w-4 h-4"></i>
+              <span data-i18n="cat_btn_dl">Stiahnuť PDF (1.11 MB)</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- AKO PREBIEHA SPOLUPRÁCA (4 JASNÉ KROKY) -->
+  <section class="py-16 md:py-24 bg-white dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="max-w-3xl mx-auto text-center space-y-3 mb-16">
+        <span class="text-xs font-bold uppercase tracking-widest text-brand-600 dark:text-brand-400" data-i18n="process_tag">POSTUP REALIZÁCIE</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight font-display" data-i18n="process_title">
+          Od prvého nápadu až po odovzdanie na kľúč
+        </h2>
+        <p class="text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed" data-i18n="process_sub">
+          Naša spolupráca je jednoduchá, transparentná a bez skrytých poplatkov.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6 relative">
+        
+        <!-- Step 1 -->
+        <div class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-center relative shadow-sm">
+          <div class="w-12 h-12 rounded-full bg-brand-600 text-white font-bold text-lg flex items-center justify-center mx-auto mb-4 shadow-lg shadow-brand-600/30">1</div>
+          <h3 class="text-base font-bold text-slate-900 dark:text-white mb-2" data-i18n="step_1_title">Dopyt & Konzultácia</h3>
+          <p class="text-xs text-slate-600 dark:text-slate-400" data-i18n="step_1_desc">Zavoláte nám alebo pošlete online formulár so svojou predstavou a približnými rozmermi.</p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-center relative shadow-sm">
+          <div class="w-12 h-12 rounded-full bg-slate-200 dark:bg-slate-800 text-brand-600 dark:text-brand-400 border border-brand-500/30 font-bold text-lg flex items-center justify-center mx-auto mb-4">2</div>
+          <h3 class="text-base font-bold text-slate-900 dark:text-white mb-2" data-i18n="step_2_title">Presné zameranie</h3>
+          <p class="text-xs text-slate-600 dark:text-slate-400" data-i18n="step_2_desc">Náš technik príde osobne do Pezinka, Bratislavy a okolia, zameria priestor a odporučí ideálne technické riešenie.</p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-center relative shadow-sm">
+          <div class="w-12 h-12 rounded-full bg-slate-200 dark:bg-slate-800 text-brand-600 dark:text-brand-400 border border-brand-500/30 font-bold text-lg flex items-center justify-center mx-auto mb-4">3</div>
+          <h3 class="text-base font-bold text-slate-900 dark:text-white mb-2" data-i18n="step_3_title">Výroba v dielni</h3>
+          <p class="text-xs text-slate-600 dark:text-slate-400" data-i18n="step_3_desc">Zákazku precízne vyrobíme v dielni na Šenkvickej ceste, zabezpečíme zinkovanie a nanesenie práškovej farby.</p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-center relative shadow-sm">
+          <div class="w-12 h-12 rounded-full bg-emerald-600 text-white font-bold text-lg flex items-center justify-center mx-auto mb-4 shadow-lg shadow-emerald-600/30">4</div>
+          <h3 class="text-base font-bold text-slate-900 dark:text-white mb-2" data-i18n="step_4_title">Dovoz & Montáž</h3>
+          <p class="text-xs text-slate-600 dark:text-slate-400" data-i18n="step_4_desc">Kompletná odborná montáž, zapojenie pohonov, odskúšanie funkčnosti a odovzdanie záručného listu.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ÚČTOVNÍCTVO A EKONOMICKÉ SLUŽBY (DOPLNKOVÁ DIVÍZIA) -->
+  <section id="uctovnictvo" class="py-16 md:py-24 bg-slate-100 dark:bg-slate-900/40 border-t border-slate-200 dark:border-slate-800 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="bg-white dark:bg-gradient-to-r dark:from-slate-900 dark:via-slate-950 dark:to-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 p-8 sm:p-12 shadow-xl">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          
+          <div class="lg:col-span-8 space-y-4">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-xs font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400">
+              <i data-lucide="calculator" class="w-3.5 h-3.5"></i>
+              <span data-i18n="acc_badge">Ekonomická divízia spoločnosti</span>
+            </div>
+
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight font-display" data-i18n="acc_title">
+              Vedenie účtovníctva, miezd a daňové poradenstvo
+            </h2>
+
+            <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed" data-i18n="acc_desc">
+              KOVO SERVICE s.r.o. popri kovovýrobe dlhodobo poskytuje aj profesionálne ekonomické a administratívne služby pre živnostníkov, malé a stredné podniky v regióne Pezinok a Bratislava.
+            </p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+              <div class="flex items-center gap-2.5 text-xs text-slate-700 dark:text-slate-300">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-blue-500 shrink-0"></i>
+                <span data-i18n="acc_item_1">Jednoduché a podvojné účtovníctvo</span>
+              </div>
+              <div class="flex items-center gap-2.5 text-xs text-slate-700 dark:text-slate-300">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-blue-500 shrink-0"></i>
+                <span data-i18n="acc_item_2">Spracovanie miezd a personalistika</span>
+              </div>
+              <div class="flex items-center gap-2.5 text-xs text-slate-700 dark:text-slate-300">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-blue-500 shrink-0"></i>
+                <span data-i18n="acc_item_3">Daňové priznania k DPH, DPFO a DPPO</span>
+              </div>
+              <div class="flex items-center gap-2.5 text-xs text-slate-700 dark:text-slate-300">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-blue-500 shrink-0"></i>
+                <span data-i18n="acc_item_4">Daň z motorových vozidiel & RZZP</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-4 bg-slate-50 dark:bg-slate-900/90 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 space-y-4 shadow-sm">
+            <span class="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400" data-i18n="acc_contact_label">Kontaktná osoba účtovníctva</span>
+            <div class="space-y-1">
+              <h4 class="text-lg font-bold text-slate-900 dark:text-white">Martina Toráčová</h4>
+              <p class="text-xs text-slate-500 dark:text-slate-400">Správa daní a účtovná agenda</p>
+            </div>
+            
+            <div class="space-y-2 pt-2 border-t border-slate-200 dark:border-slate-800 text-xs">
+              <a href="tel:+421905381669" class="flex items-center gap-2.5 text-slate-700 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition">
+                <i data-lucide="phone" class="w-4 h-4 text-brand-500"></i>
+                <span class="font-bold text-slate-900 dark:text-white">0905 381 669</span>
+              </a>
+              <a href="mailto:kovo-service@kovo-service.sk" class="flex items-center gap-2.5 text-slate-700 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition">
+                <i data-lucide="mail" class="w-4 h-4 text-brand-500"></i>
+                <span>kovo-service@kovo-service.sk</span>
+              </a>
+            </div>
+
+            <a href="tel:+421905381669" class="w-full inline-flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold text-xs transition">
+              <i data-lucide="phone-call" class="w-3.5 h-3.5"></i>
+              <span data-i18n="acc_btn_call">Zavolať pre účtovníctvo</span>
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- KONTAKTNÉ ÚDAJE & MAPA PREVÁDZKY -->
+  <section id="kontakt" class="py-16 md:py-24 bg-white dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="max-w-3xl mx-auto text-center space-y-3 mb-16">
+        <span class="text-xs font-bold uppercase tracking-widest text-brand-600 dark:text-brand-400" data-i18n="contact_tag">KONTAKT & DIELŇA</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight font-display" data-i18n="contact_title">
+          Kde nás nájdete a ako sa spojiť
+        </h2>
+        <p class="text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed" data-i18n="contact_sub">
+          Radi vás privítame v našej zámočníckej dielni na Šenkvickej ceste v Pezinku alebo prídeme priamo k vám na zameranie.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        
+        <!-- CONTACT INFO CARDS (Left 5 Cols) -->
+        <div class="lg:col-span-5 space-y-4">
+          
+          <!-- Kovovýroba Card -->
+          <div class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-3 shadow-sm">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold uppercase tracking-wider text-brand-600 dark:text-brand-400 flex items-center gap-1.5">
+                <i data-lucide="wrench" class="w-4 h-4"></i>
+                <span data-i18n="card_workshop_tag">Dielňa a Kovovýroba</span>
+              </span>
+              <span class="text-[11px] px-2 py-0.5 rounded bg-brand-100 dark:bg-brand-950 text-brand-700 dark:text-brand-400 border border-brand-200 dark:border-brand-800 font-semibold">Realizácie & Obhliadky</span>
+            </div>
+
+            <div class="space-y-1">
+              <h3 class="text-lg font-bold text-slate-900 dark:text-white">Peter Hrachovský</h3>
+              <p class="text-xs text-slate-500 dark:text-slate-400">Vedúci výroby & zámočnícky majster</p>
+            </div>
+
+            <div class="space-y-2 pt-2 border-t border-slate-200 dark:border-slate-800 text-xs">
+              <div class="flex items-center justify-between">
+                <span class="text-slate-500 dark:text-slate-400">Mobil / WhatsApp:</span>
+                <a href="tel:+421905764251" class="font-extrabold text-slate-900 dark:text-white hover:text-brand-600 dark:hover:text-brand-400 transition text-sm">+421 905 764 251</a>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-slate-500 dark:text-slate-400">E-mail:</span>
+                <a href="mailto:kovo-service@kovo-service.sk" class="text-slate-800 dark:text-slate-200 hover:text-brand-600 dark:hover:text-brand-400 transition font-medium">kovo-service@kovo-service.sk</a>
+              </div>
+              <div class="flex items-start justify-between gap-2 pt-1">
+                <span class="text-slate-500 dark:text-slate-400">Prevádzka dielne:</span>
+                <span class="text-right text-slate-800 dark:text-slate-200 font-semibold">Šenkvická cesta 11, 902 01 Pezinok</span>
+              </div>
+            </div>
+
+            <div class="pt-2 flex gap-2">
+              <a href="tel:+421905764251" class="flex-1 py-2 rounded-xl bg-brand-600 hover:bg-brand-500 text-white font-bold text-xs text-center flex items-center justify-center gap-1.5 transition">
+                <i data-lucide="phone-call" class="w-3.5 h-3.5"></i>
+                <span>Zavolať</span>
+              </a>
+              <a href="https://wa.me/421905764251" target="_blank" rel="noopener noreferrer" class="py-2 px-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs flex items-center justify-center gap-1.5 transition">
+                <i data-lucide="message-square" class="w-3.5 h-3.5"></i>
+                <span>WhatsApp</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Company Details Card -->
+          <div class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-xs space-y-3 shadow-sm">
+            <h4 class="font-bold text-slate-900 dark:text-white text-sm" data-i18n="company_facts_title">Fakturačné a firemné údaje</h4>
+            
+            <div class="space-y-1.5 text-slate-700 dark:text-slate-300">
+              <div class="flex justify-between">
+                <span class="text-slate-500 dark:text-slate-400">Obchodné meno:</span>
+                <span class="font-semibold text-slate-900 dark:text-white">KOVO SERVICE s.r.o.</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-slate-500 dark:text-slate-400">Sídlo spoločnosti:</span>
+                <span class="text-slate-800 dark:text-white">L. Novomeského 13, 902 01 Pezinok</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-slate-500 dark:text-slate-400">IČO:</span>
+                <span class="font-mono font-semibold text-slate-900 dark:text-white">46 082 395</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-slate-500 dark:text-slate-400">DIČ:</span>
+                <span class="font-mono font-semibold text-slate-900 dark:text-white">2023227756</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-slate-500 dark:text-slate-400">Pracovná doba:</span>
+                <span class="text-emerald-600 dark:text-emerald-400 font-semibold">Po – Pia: 07:00 – 16:30</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- CONTACT FORM & INTERACTIVE MAP (Right 7 Cols) -->
+        <div class="lg:col-span-7 space-y-6">
+          
+          <!-- ONLINE INQUIRY FORM -->
+          <div class="bg-slate-50 dark:bg-slate-900 p-6 sm:p-8 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-xl">
+            <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-1" data-i18n="form_title">Rýchly dopyt / Žiadosť o zameranie</h3>
+            <p class="text-xs text-slate-500 dark:text-slate-400 mb-6" data-i18n="form_sub">Napíšte nám podrobnosti vašej požiadavky a my sa vám ozveme najneskôr do 24 hodín s návrhom riešenia.</p>
+
+            <form id="contact-form" onsubmit="handleFormSubmit(event)" class="space-y-4">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1" data-i18n="form_name">Vaše meno a priezvisko *</label>
+                  <input type="text" required placeholder="napr. Ján Novák" class="w-full bg-white dark:bg-slate-950 border border-slate-300 dark:border-slate-800 text-slate-900 dark:text-white rounded-xl px-3.5 py-2.5 text-xs sm:text-sm focus:border-brand-500 focus:outline-none">
+                </div>
+                <div>
+                  <label class="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1" data-i18n="form_phone">Telefónne číslo *</label>
+                  <input type="tel" required placeholder="napr. 0905 123 456" class="w-full bg-white dark:bg-slate-950 border border-slate-300 dark:border-slate-800 text-slate-900 dark:text-white rounded-xl px-3.5 py-2.5 text-xs sm:text-sm focus:border-brand-500 focus:outline-none">
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1" data-i18n="form_email">E-mailová adresa *</label>
+                  <input type="email" required placeholder="jan.novak@gmail.com" class="w-full bg-white dark:bg-slate-950 border border-slate-300 dark:border-slate-800 text-slate-900 dark:text-white rounded-xl px-3.5 py-2.5 text-xs sm:text-sm focus:border-brand-500 focus:outline-none">
+                </div>
+                <div>
+                  <label class="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1" data-i18n="form_locality">Miesto realizácie (Mesto / Obec)</label>
+                  <input type="text" placeholder="napr. Pezinok, Modra, Bratislava..." class="w-full bg-white dark:bg-slate-950 border border-slate-300 dark:border-slate-800 text-slate-900 dark:text-white rounded-xl px-3.5 py-2.5 text-xs sm:text-sm focus:border-brand-500 focus:outline-none">
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1" data-i18n="form_type">Kategória výrobku</label>
+                <select id="form-category-select" class="w-full bg-white dark:bg-slate-950 border border-slate-300 dark:border-slate-800 text-slate-900 dark:text-white rounded-xl px-3.5 py-2.5 text-xs sm:text-sm focus:border-brand-500 focus:outline-none">
+                  <option value="brana">Brána (samonosná, posuvná, krídlová)</option>
+                  <option value="zabradlie">Zábradlie (nerezové, kované, balkón)</option>
+                  <option value="schody">Schodisko (oceľové, točené, priame)</option>
+                  <option value="markiza">Markíza / Prístrešok</option>
+                  <option value="mreze">Bezpečnostné mreže</option>
+                  <option value="atyp">Atypická kovovýroba / Iný výrobok</option>
+                  <option value="uctovnictvo">Účtovnícke a daňové služby</option>
+                </select>
+              </div>
+
+              <div>
+                <label class="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1" data-i18n="form_message">Popis požiadavky, rozmery alebo špecifikácia *</label>
+                <textarea rows="3" required placeholder="Dobrý deň, potrebujem vyrobiť samonosnú bránu s dĺžkou 4,5 m s pohonom a zinkovaním v Pezinku..." class="w-full bg-white dark:bg-slate-950 border border-slate-300 dark:border-slate-800 text-slate-900 dark:text-white rounded-xl px-3.5 py-2.5 text-xs sm:text-sm focus:border-brand-500 focus:outline-none"></textarea>
+              </div>
+
+              <div class="flex items-center gap-2">
+                <input type="checkbox" required id="gdpr-agree" class="rounded text-brand-500 focus:ring-0">
+                <label for="gdpr-agree" class="text-[11px] text-slate-500 dark:text-slate-400">
+                  Súhlasím so spracovaním osobných údajov za účelom vypracovania cenovej ponuky.
+                </label>
+              </div>
+
+              <button type="submit" class="w-full py-3.5 px-6 rounded-xl bg-gradient-to-r from-brand-600 to-brand-500 hover:from-brand-500 hover:to-brand-400 text-white font-bold text-sm tracking-wide shadow-lg shadow-brand-600/30 transition transform hover:-translate-y-0.5 flex items-center justify-center gap-2">
+                <i data-lucide="send" class="w-4 h-4"></i>
+                <span data-i18n="form_btn_send">Odoslať nezáväzný dopyt</span>
+              </button>
+            </form>
+          </div>
+
+          <!-- MAP EMBED CARD -->
+          <div class="rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 overflow-hidden shadow-xl">
+            <div class="p-4 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between">
+              <div class="flex items-center gap-2 text-xs font-bold text-slate-900 dark:text-white">
+                <i data-lucide="map-pin" class="w-4 h-4 text-brand-500"></i>
+                <span>Poloha dielne: Šenkvická cesta 11, Pezinok</span>
+              </div>
+              <a href="https://maps.google.com/?q=Šenkvická+cesta+11,+Pezinok" target="_blank" rel="noopener noreferrer" class="text-xs text-brand-600 dark:text-brand-400 hover:text-brand-500 font-semibold flex items-center gap-1">
+                <span>Otvoriť navigáciu</span>
+                <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+              </a>
+            </div>
+            <div class="aspect-[16/8] w-full bg-slate-100 dark:bg-slate-950">
+              <iframe 
+                title="Mapa prevádzky KOVO SERVICE Pezinok"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2656.3262334812356!2d17.275811!3d48.293415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476c8c4a169b1899%3A0xc48c08efbc27fcf5!2zxaBlbmt2aWNrw6EgY2VzdGEgMTEsIDkwMiAwMSBQZXppbm9r!5e0!3m2!1ssk!2ssk!4v1715000000000!5m2!1ssk!2ssk" 
+                class="w-full h-full border-0" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-slate-900 dark:bg-slate-950 border-t border-slate-800 text-slate-400 text-xs py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        
+        <!-- Col 1: Brand -->
+        <div class="space-y-3 md:col-span-1">
+          <div class="flex items-center gap-2">
+            <div class="w-8 h-8 rounded-lg bg-brand-600 flex items-center justify-center text-white">
+              <i data-lucide="hammer" class="w-4 h-4"></i>
+            </div>
+            <span class="text-lg font-extrabold text-white font-display">KOVO SERVICE</span>
+          </div>
+          <p class="text-xs text-slate-400 leading-relaxed" data-i18n="footer_desc">
+            Univerzálna kovovýroba, zákazkové zámočníctvo a povrchové úpravy materiálov. Váš spoľahlivý partner pre brány, zábradlia a schodiská v Pezinku a okolí.
+          </p>
+        </div>
+
+        <!-- Col 2: Rýchle odkazy -->
+        <div class="space-y-2">
+          <h5 class="text-white font-bold uppercase tracking-wider text-xs" data-i18n="footer_links_title">Výrobky</h5>
+          <ul class="space-y-1.5">
+            <li><a href="#vyrobky" class="hover:text-white transition">Samonosné a krídlové brány</a></li>
+            <li><a href="#vyrobky" class="hover:text-white transition">Nerezové & kované zábradlia</a></li>
+            <li><a href="#vyrobky" class="hover:text-white transition">Točené a priame schodiská</a></li>
+            <li><a href="#vyrobky" class="hover:text-white transition">Vchodové markízy & lexan</a></li>
+            <li><a href="#vyrobky" class="hover:text-white transition">Bezpečnostné mreže</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Služby a technológie -->
+        <div class="space-y-2">
+          <h5 class="text-white font-bold uppercase tracking-wider text-xs" data-i18n="footer_tech_title">Služby a úpravy</h5>
+          <ul class="space-y-1.5">
+            <li><a href="#sluzby" class="hover:text-white transition">Žiarové pozinkovanie v kúpeli</a></li>
+            <li><a href="#sluzby" class="hover:text-white transition">Pieskovanie a otryskávanie</a></li>
+            <li><a href="#sluzby" class="hover:text-white transition">Práškový komaxit (vzorkovník RAL)</a></li>
+            <li><a href="#sluzby" class="hover:text-white transition">Brúsenie a leštenie nerezu</a></li>
+            <li><a href="#uctovnictvo" class="hover:text-white transition">Účtovnícke & daňové služby</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Kontakt -->
+        <div class="space-y-2">
+          <h5 class="text-white font-bold uppercase tracking-wider text-xs" data-i18n="footer_contact_title">Kontakt</h5>
+          <p class="text-slate-300">KOVO SERVICE s.r.o.</p>
+          <p class="text-slate-400">Prevádzka: Šenkvická cesta 11, Pezinok</p>
+          <p class="text-slate-400">Sídlo: L. Novomeského 13, Pezinok</p>
+          <p class="text-slate-300 font-semibold pt-1">Tel: +421 905 764 251</p>
+          <p class="text-slate-300">kovo-service@kovo-service.sk</p>
+        </div>
+
+      </div>
+
+      <div class="pt-8 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-slate-500">
+        <p>© 2026 KOVO SERVICE s.r.o. Všetky práva vyhradené. Univerzálna kovovýroba a zámočníctvo Pezinok.</p>
+        <div class="flex items-center space-x-4">
+          <span>IČO: 46 082 395</span>
+          <span>•</span>
+          <span>DIČ: 2023227756</span>
+          <span>•</span>
+          <a href="#uvod" class="hover:text-white">Hore ↑</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- MODAL: PRODUCT DETAIL LIGHTBOX -->
+  <div id="product-modal" class="fixed inset-0 z-50 hidden bg-slate-950/80 backdrop-blur-md flex items-center justify-center p-4">
+    <div class="relative w-full max-w-2xl bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-2xl overflow-hidden animate-in fade-in zoom-in-95 duration-200">
+      <div class="relative aspect-[16/10] bg-slate-950 overflow-hidden">
+        <img id="modal-img" src="" alt="Detail produktu" class="w-full h-full object-cover">
+        <button onclick="closeProductModal()" class="absolute top-4 right-4 p-2 rounded-full bg-slate-900/80 text-white hover:bg-brand-600 transition">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+      <div class="p-6 sm:p-8 space-y-4">
+        <div>
+          <span id="modal-category" class="text-xs font-bold uppercase tracking-wider text-brand-600 dark:text-brand-400">Kategória</span>
+          <h3 id="modal-title" class="text-2xl font-bold text-slate-900 dark:text-white mt-1">Názov výrobku</h3>
+        </div>
+        <p id="modal-desc" class="text-slate-600 dark:text-slate-300 text-xs sm:text-sm leading-relaxed">Podrobný popis výrobku a jeho vlastností.</p>
+        <div class="p-3 rounded-xl bg-slate-100 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 text-xs">
+          <span class="text-slate-500 dark:text-slate-400">Odporúčané materiály & povrch:</span>
+          <p id="modal-specs" class="font-semibold text-slate-900 dark:text-white mt-0.5">Oceľ S235, Žiarový zinok, RAL Komaxit</p>
+        </div>
+        <div class="flex gap-3 pt-2">
+          <button onclick="closeProductModal(); scrollToConfigurator()" class="flex-1 py-3 rounded-xl bg-brand-600 hover:bg-brand-500 text-white font-bold text-xs text-center transition flex items-center justify-center gap-1.5">
+            <i data-lucide="calculator" class="w-4 h-4"></i>
+            <span>Nakonfigurovať v kalkulačke</span>
+          </button>
+          <button onclick="closeProductModal()" class="py-3 px-5 rounded-xl bg-slate-200 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-300 font-semibold text-xs transition">
+            Zavrieť
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION -->
+  <div id="toast" class="fixed bottom-6 right-6 z-50 hidden max-w-md p-4 rounded-2xl bg-emerald-600 text-white shadow-2xl flex items-center gap-3 transition-all duration-300 transform translate-y-10 opacity-0">
+    <i data-lucide="check-circle" class="w-5 h-5 shrink-0"></i>
+    <div class="text-xs font-medium" id="toast-msg">Vaša správa bola úspešne odoslaná!</div>
+  </div>
+
+  <!-- SCRIPT LOGIC (CALCULATOR, FILTERING, THEME, LANGUAGE, MODALS) -->
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+
+    // CALCULATOR STATE
+    const calcState = {
+      basePrice: 220, // base per unit for posuvna brana
+      productName: 'Posuvná samonosná brána',
+      materialMultiplier: 1.0,
+      dimension: 4.5,
+      finishMultiplier: 1.20,
+      montaz: 150,
+      motor: 0,
+      zameranie: 0,
+      doprava: 50
+    };
+
+    function setProductType(type, basePrice) {
+      calcState.basePrice = basePrice;
+      const typeNames = {
+        'posuvna_brana': 'Posuvná samonosná brána',
+        'kridlova_brana': 'Dvojkrídlová brána',
+        'zabradlie': 'Zábradlie na mieru',
+        'schody': 'Oceľové schodisko',
+        'markiza': 'Vchodová markíza / prístrešok',
+        'mreze_atyp': 'Bezpečnostné mreže / atyp'
+      };
+      calcState.productName = typeNames[type] || 'Kovovýrobok na mieru';
+
+      // Update UI button states
+      document.querySelectorAll('.calc-type-btn').forEach(btn => {
+        btn.classList.remove('border-brand-500', 'bg-brand-50', 'dark:bg-brand-950/30', 'text-slate-900', 'dark:text-white');
+        btn.classList.add('border-slate-200', 'dark:border-slate-800', 'bg-slate-50', 'dark:bg-slate-900/60', 'text-slate-700', 'dark:text-slate-300');
+        const icon = btn.querySelector('svg');
+        if (icon) {
+          icon.classList.remove('text-brand-500');
+          icon.classList.add('text-slate-400');
+        }
+      });
+
+      const clickedBtn = event.currentTarget;
+      clickedBtn.classList.remove('border-slate-200', 'dark:border-slate-800', 'bg-slate-50', 'dark:bg-slate-900/60', 'text-slate-700', 'dark:text-slate-300');
+      clickedBtn.classList.add('border-brand-500', 'bg-brand-50', 'dark:bg-brand-950/30', 'text-slate-900', 'dark:text-white');
+      const clickedIcon = clickedBtn.querySelector('svg');
+      if (clickedIcon) {
+        clickedIcon.classList.remove('text-slate-400');
+        clickedIcon.classList.add('text-brand-500');
+      }
+
+      updateCalculation();
+    }
+
+    function updateCalculation() {
+      // Dimension
+      const slider = document.getElementById('calc-dim-slider');
+      calcState.dimension = parseFloat(slider.value);
+      document.getElementById('calc-dim-display').textContent = calcState.dimension + ' metra';
+
+      // Material
+      const selectedMat = document.querySelector('input[name="calc_mat"]:checked');
+      calcState.materialMultiplier = selectedMat ? parseFloat(selectedMat.value) : 1.0;
+
+      // Finish
+      const finishSelect = document.getElementById('calc-finish');
+      calcState.finishMultiplier = parseFloat(finishSelect.value);
+
+      // Options
+      calcState.montaz = document.getElementById('calc-opt-montaz').checked ? 150 : 0;
+      calcState.motor = document.getElementById('calc-opt-motor').checked ? 420 : 0;
+      calcState.doprava = document.getElementById('calc-opt-doprava').checked ? 50 : 0;
+
+      // Calculate base cost
+      const rawCost = (calcState.basePrice * calcState.dimension * calcState.materialMultiplier * calcState.finishMultiplier) 
+                      + calcState.montaz + calcState.motor + calcState.doprava;
+
+      const lowEstimate = Math.round(rawCost * 0.92 / 10) * 10;
+      const highEstimate = Math.round(rawCost * 1.08 / 10) * 10;
+
+      document.getElementById('calc-total-range').textContent = `${lowEstimate.toLocaleString('sk-SK')} € – ${highEstimate.toLocaleString('sk-SK')} €`;
+      document.getElementById('summary-prod-name').textContent = calcState.productName;
+      document.getElementById('summary-prod-dim').textContent = calcState.dimension + ' m';
+    }
+
+    // GALLERY FILTER
+    function filterGallery(category) {
+      document.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.classList.remove('active', 'bg-brand-600', 'text-white');
+        btn.classList.add('bg-white', 'dark:bg-slate-900', 'text-slate-700', 'dark:text-slate-300');
+      });
+
+      const activeBtn = document.querySelector(`[data-filter="${category}"]`);
+      if (activeBtn) {
+        activeBtn.classList.add('active', 'bg-brand-600', 'text-white');
+        activeBtn.classList.remove('bg-white', 'dark:bg-slate-900', 'text-slate-700', 'dark:text-slate-300');
+      }
+
+      const items = document.querySelectorAll('.gallery-item');
+      items.forEach(item => {
+        if (category === 'all' || item.getAttribute('data-category') === category) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    }
+
+    // MODAL LOGIC
+    function openProductModal(title, category, desc, specs, imgSrc) {
+      document.getElementById('modal-title').textContent = title;
+      document.getElementById('modal-category').textContent = category.toUpperCase();
+      document.getElementById('modal-desc').textContent = desc;
+      document.getElementById('modal-specs').textContent = specs;
+      document.getElementById('modal-img').src = imgSrc;
+      document.getElementById('product-modal').classList.remove('hidden');
+    }
+
+    function closeProductModal() {
+      document.getElementById('product-modal').classList.add('hidden');
+    }
+
+    function scrollToConfigurator() {
+      const el = document.getElementById('konfigurator');
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function openInquiryModalWithCalc() {
+      // Pre-fill contact form message with calculated specs
+      const contactSection = document.getElementById('kontakt');
+      const messageField = document.querySelector('#contact-form textarea');
+      const categorySelect = document.getElementById('form-category-select');
+
+      if (messageField) {
+        messageField.value = `Dobrý deň, žiadam o nezáväznú cenovú ponuku a zameranie pre: ${calcState.productName}.\n- Rozmer: ${calcState.dimension} m\n- Povrchová úprava podľa konfigurátora\n- Montáž: ${calcState.montaz > 0 ? 'Áno' : 'Nie'}\n- Automatický pohon: ${calcState.motor > 0 ? 'Áno' : 'Nie'}\nOdhadovaná cena z kalkulačky: ${document.getElementById('calc-total-range').textContent}`;
+      }
+
+      if (contactSection) {
+        contactSection.scrollIntoView({ behavior: 'smooth' });
+        messageField.focus();
+      }
+    }
+
+    // FORM SUBMISSION
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      showToast('Ďakujeme za Váš dopyt! Kontaktujeme Vás do 24 hodín s cenovou ponukou.');
+      e.target.reset();
+    }
+
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      const toastMsg = document.getElementById('toast-msg');
+      toastMsg.textContent = msg;
+      toast.classList.remove('hidden');
+      setTimeout(() => {
+        toast.classList.remove('translate-y-10', 'opacity-0');
+      }, 50);
+
+      setTimeout(() => {
+        toast.classList.add('translate-y-10', 'opacity-0');
+        setTimeout(() => toast.classList.add('hidden'), 300);
+      }, 4000);
+    }
+
+    // MOBILE MENU
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
+    }
+
+    function closeMobileMenu() {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.add('hidden');
+    }
+
+    // THEME SWITCHER
+    let currentTheme = localStorage.getItem('kovo_theme') || 'dark';
+    function applyTheme(theme) {
+      const root = document.documentElement;
+      const themeIcon = document.getElementById('theme-icon');
+      if (theme === 'light') {
+        root.classList.remove('dark');
+        if (themeIcon) themeIcon.setAttribute('data-lucide', 'moon');
+      } else {
+        root.classList.add('dark');
+        if (themeIcon) themeIcon.setAttribute('data-lucide', 'sun');
+      }
+      lucide.createIcons();
+      localStorage.setItem('kovo_theme', theme);
+    }
+
+    function toggleTheme() {
+      currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      applyTheme(currentTheme);
+    }
+
+    // LANGUAGE SWITCHER (SK / DE)
+    const translations = {
+      sk: {
+        top_bar_status: 'Zákazková výroba v prevádzke • Dielňa Pezinok',
+        nav_tagline: 'Univerzálna kovovýroba & zámočníctvo',
+        nav_about: 'O nás',
+        nav_products: 'Výrobky',
+        nav_services: 'Povrchové úpravy',
+        nav_calculator: 'Kalkulačka ceny',
+        nav_catalogs: 'Katalógy PDF',
+        nav_accounting: 'Účtovníctvo',
+        nav_contact: 'Kontakt',
+        cta_quote: 'Nezáväzný dopyt',
+        hero_badge: 'Kovovýroba & Zámočníctvo Pezinok • Od roku 2011',
+        hero_title_1: 'Poctivé remeslo,',
+        hero_title_2: 'precízna oceľ & nerez',
+        hero_title_3: 'vyrobené presne na mieru.',
+        hero_desc: 'Vyrábame a montujeme samonosné a krídlové brány, nerezové a kované zábradlia, točené a priame schodiská, terasové markízy, bezpečnostné mreže a atypické zámočnícke konštrukcie. S kompletnou antikoróznou úpravou (zinkovanie, práškový komaxit RAL, pieskovanie) pre Pezinok, Bratislavu a okolie.',
+        hero_cta_calc: 'Kalkulátor orientačnej ceny',
+        hero_cta_gallery: 'Prezrieť galériu realizácií',
+        hero_stat_1: 'Rokov praxe v odbore',
+        hero_stat_2: 'Zhotovených výrobkov',
+        hero_stat_3: 'Zákazková výroba',
+        hero_stat_4: 'Rýchle zameranie',
+        calc_badge: 'Interaktívny konfigurátor',
+        calc_title: 'Vypočítajte si orientačnú cenu zákazky',
+        calc_subtitle: 'Zvoľte typ výrobku, preferovaný materiál, rozmery a povrchovú úpravu. Náš kalkulátor okamžite vygeneruje orientačný rozpočet.',
+        calc_submit_btn: 'Odoslať nezáväzný dopyt s touto konfiguráciou'
+      },
+      de: {
+        top_bar_status: 'Metall- und Schlosserarbeiten im Betrieb • Werkstatt Pezinok (SK)',
+        nav_tagline: 'Universal Metall- & Schlosserarbeiten',
+        nav_about: 'Über uns',
+        nav_products: 'Produkte',
+        nav_services: 'Oberflächen',
+        nav_calculator: 'Preiskalkulator',
+        nav_catalogs: 'PDF Kataloge',
+        nav_accounting: 'Buchhaltung',
+        nav_contact: 'Kontakt',
+        cta_quote: 'Unverbindliche Anfrage',
+        hero_badge: 'Universal Metall & Schlosserarbeiten Pezinok • Seit 2011',
+        hero_title_1: 'Echtes Handwerk,',
+        hero_title_2: 'präziser Stahl & Edelstahl',
+        hero_title_3: 'exakt nach Maß gefertigt.',
+        hero_desc: 'Wir fertigen und montieren Schiebe- und Flügeltore, Edelstahl- und Schmiedegeländer, Treppen, Markisen, Sicherheitsgitter und Sonderkonstruktionen aus Metall. Mit vollständiger Oberflächenbehandlung (Feuerverzinken, Pulverbeschichtung RAL, Sandstrahlen) für Österreich, Bratislava und Umgebung.',
+        hero_cta_calc: 'Orientierungs-Kalkulator',
+        hero_cta_gallery: 'Fotogalerie ansehen',
+        hero_stat_1: 'Jahre Erfahrung',
+        hero_stat_2: 'Erfolgreiche Projekte',
+        hero_stat_3: 'Maßanfertigung',
+        hero_stat_4: 'Schnelle Vermessung',
+        calc_badge: 'Interaktiver Konfigurator',
+        calc_title: 'Berechnen Sie unverbindlich den Richtpreis',
+        calc_subtitle: 'Wählen Sie Produkttyp, Material, Abmessungen und Oberflächenschutz. Unser Konfigurator ermittelt sofort das Orientierungsbudget.',
+        calc_submit_btn: 'Unverbindliche Anfrage mit dieser Konfiguration senden'
+      }
+    };
+
+    let currentLang = 'sk';
+    function toggleLanguage() {
+      currentLang = currentLang === 'sk' ? 'de' : 'sk';
+      document.getElementById('lang-flag').textContent = currentLang === 'sk' ? '🇸🇰' : '🇦🇹';
+      document.getElementById('lang-code').textContent = currentLang.toUpperCase();
+
+      const langData = translations[currentLang];
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (langData[key]) {
+          el.textContent = langData[key];
+        }
+      });
+    }
+
+    // Apply saved theme on start
+    applyTheme(currentTheme);
+    // Initialize calculator
+    updateCalculation();
+  </script>
+</body>
+</html>
