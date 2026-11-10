@@ -1,0 +1,2175 @@
+<!DOCTYPE html>
+<html lang="sk" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Symsite Research | Ekonomika DNES & Slovak Business News TODAY</title>
+  <meta name="description" content="Denný manažérsky prehľad kľúčových udalostí zo slovenského biznisu, politiky a legislatívy. Partner The Economist Intelligence Unit od roku 1998.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230f172a'/><path d='M25 70 L45 30 L55 50 L75 30' stroke='%2338bdf8' stroke-width='10' fill='none' stroke-linecap='round' stroke-linejoin='round'/><circle cx='75' cy='30' r='6' fill='%2310b981'/></svg>">
+
+  <!-- Google Fonts: Inter & Merriweather (Prestige Editorial Look) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            serif: ['Merriweather', 'Georgia', 'serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            brand: {
+              50: '#f0f7ff',
+              100: '#e0effe',
+              200: '#bae0fd',
+              300: '#7cc7fb',
+              400: '#38a8f8',
+              500: '#0e8ce9',
+              600: '#026fc7',
+              700: '#0358a1',
+              800: '#074b85',
+              900: '#0c3f6e',
+              950: '#082849',
+            },
+            eiu: {
+              navy: '#0b192c',
+              gold: '#c29b38',
+              red: '#e11d48',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    /* Theme transition smoothing */
+    html.transition-theme,
+    html.transition-theme * {
+      transition: background-color 0.25s ease, border-color 0.25s ease, color 0.2s ease !important;
+    }
+
+    /* Custom Glassmorphism & Ticker animations */
+    @keyframes tickerSlide {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .animate-ticker {
+      display: inline-flex;
+      animation: tickerSlide 45s linear infinite;
+    }
+    .animate-ticker:hover {
+      animation-play-state: paused;
+    }
+
+    /* Custom paper shadow for briefs */
+    .paper-shadow {
+      box-shadow: 0 10px 30px -5px rgba(15, 23, 42, 0.08), 0 20px 25px -5px rgba(15, 23, 42, 0.04);
+    }
+    .dark .paper-shadow {
+      box-shadow: 0 15px 35px -5px rgba(0, 0, 0, 0.6), 0 0 1px 1px rgba(255, 255, 255, 0.06);
+    }
+  </style>
+</head>
+
+<body class="bg-slate-50 text-slate-800 dark:bg-[#070b14] dark:text-slate-100 antialiased selection:bg-brand-500 selection:text-white font-sans min-h-screen flex flex-col">
+
+  <!-- TOP ECONOMIC TICKER BAR -->
+  <div class="bg-slate-900 text-slate-300 dark:bg-black/90 dark:text-slate-400 text-xs py-2 border-b border-slate-800 overflow-hidden relative z-40 select-none">
+    <div class="max-w-7xl mx-auto px-4 flex items-center justify-between">
+      <div class="flex items-center gap-2 pr-4 bg-slate-900 dark:bg-black/90 z-10 shrink-0 border-r border-slate-800 font-medium">
+        <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+        <span class="text-slate-400 text-[11px] uppercase tracking-wider font-mono">MAKRO PULZ SK</span>
+      </div>
+      
+      <div class="overflow-hidden whitespace-nowrap flex-1 ml-4 mask-ticker">
+        <div class="animate-ticker text-[11px] font-mono flex items-center gap-8">
+          <span class="inline-flex items-center gap-1.5"><span class="text-slate-400">HDP Rast SK (2025/2026):</span> <strong class="text-emerald-400 font-bold">+2.1%</strong> <i data-lucide="trending-up" class="w-3 h-3 text-emerald-400 inline"></i></span>
+          <span class="inline-flex items-center gap-1.5"><span class="text-slate-400">Inflácia (HICP r/r):</span> <strong class="text-amber-400 font-bold">3.2%</strong> <i data-lucide="trending-up" class="w-3 h-3 text-amber-400 inline"></i></span>
+          <span class="inline-flex items-center gap-1.5"><span class="text-slate-400">Nezamestnanosť:</span> <strong class="text-emerald-400 font-bold">5.38%</strong> <i data-lucide="trending-down" class="w-3 h-3 text-emerald-400 inline"></i></span>
+          <span class="inline-flex items-center gap-1.5"><span class="text-slate-400">Priemerná nominálna mzda:</span> <strong class="text-sky-400 font-bold">1 520 €</strong></span>
+          <span class="inline-flex items-center gap-1.5"><span class="text-slate-400">Kľúčová sadzba ECB:</span> <strong class="text-slate-200 font-bold">3.25%</strong></span>
+          <span class="inline-flex items-center gap-1.5"><span class="text-slate-400">Verejný deficit / HDP:</span> <strong class="text-rose-400 font-bold">-5.8%</strong></span>
+          
+          <!-- Duplicate for seamless ticker loop -->
+          <span class="inline-flex items-center gap-1.5"><span class="text-slate-400">HDP Rast SK (2025/2026):</span> <strong class="text-emerald-400 font-bold">+2.1%</strong> <i data-lucide="trending-up" class="w-3 h-3 text-emerald-400 inline"></i></span>
+          <span class="inline-flex items-center gap-1.5"><span class="text-slate-400">Inflácia (HICP r/r):</span> <strong class="text-amber-400 font-bold">3.2%</strong> <i data-lucide="trending-up" class="w-3 h-3 text-amber-400 inline"></i></span>
+          <span class="inline-flex items-center gap-1.5"><span class="text-slate-400">Nezamestnanosť:</span> <strong class="text-emerald-400 font-bold">5.38%</strong> <i data-lucide="trending-down" class="w-3 h-3 text-emerald-400 inline"></i></span>
+          <span class="inline-flex items-center gap-1.5"><span class="text-slate-400">Priemerná nominálna mzda:</span> <strong class="text-sky-400 font-bold">1 520 €</strong></span>
+          <span class="inline-flex items-center gap-1.5"><span class="text-slate-400">Kľúčová sadzba ECB:</span> <strong class="text-slate-200 font-bold">3.25%</strong></span>
+          <span class="inline-flex items-center gap-1.5"><span class="text-slate-400">Verejný deficit / HDP:</span> <strong class="text-rose-400 font-bold">-5.8%</strong></span>
+        </div>
+      </div>
+
+      <div class="hidden md:flex items-center gap-3 pl-4 border-l border-slate-800 text-[11px] text-slate-400 shrink-0">
+        <span class="flex items-center gap-1"><i data-lucide="clock" class="w-3 h-3 text-brand-400"></i> Ranná expedícia: <strong>08:00 SEČ</strong></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVIGATION HEADER -->
+  <header class="sticky top-0 z-30 bg-white/95 dark:bg-[#070b14]/95 backdrop-blur border-b border-slate-200/80 dark:border-slate-800/80 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Logo & Heritage Badge -->
+        <a href="#" class="flex items-center gap-3 group">
+          <div class="w-11 h-11 rounded-lg bg-slate-900 dark:bg-slate-800 flex items-center justify-center text-white border border-slate-800 dark:border-slate-700 shadow-sm group-hover:border-brand-500 transition-colors">
+            <span class="font-serif font-black text-xl tracking-tight text-white">S<span class="text-brand-400">R</span></span>
+          </div>
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="text-lg font-extrabold tracking-tight text-slate-900 dark:text-white uppercase font-sans">
+                Symsite <span class="text-brand-600 dark:text-brand-400 font-semibold">Research</span>
+              </span>
+              <span class="hidden sm:inline-block px-2 py-0.5 text-[10px] uppercase font-bold tracking-wider bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 rounded border border-slate-200 dark:border-slate-700">
+                Od 1994
+              </span>
+            </div>
+            <p class="text-[11px] text-slate-500 dark:text-slate-400 tracking-normal flex items-center gap-1.5">
+              <span>Partner <strong>The Economist Intelligence Unit</strong> od 1998</span>
+            </p>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden lg:flex items-center gap-7 text-sm font-medium text-slate-700 dark:text-slate-200">
+          <a href="#produkty" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Produkty & Služby</a>
+          <a href="#ukazka" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors flex items-center gap-1.5">
+            <span>Denný briefing</span>
+            <span class="px-1.5 py-0.5 text-[10px] font-bold uppercase tracking-wider bg-emerald-100 text-emerald-800 dark:bg-emerald-950/60 dark:text-emerald-400 rounded">Live</span>
+          </a>
+          <a href="#prilohy" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">4 Mesačné prílohy</a>
+          <a href="#referencie" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Referencie</a>
+          <a href="#cennik" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Cenník</a>
+          <a href="#o-nas" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">O nás</a>
+          <a href="#kontakt" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Kontakt</a>
+        </nav>
+
+        <!-- Right Side Utility Controls: Theme, Language, CTA -->
+        <div class="flex items-center gap-3">
+          
+          <!-- Language Toggle Switcher -->
+          <div class="flex items-center bg-slate-100 dark:bg-slate-800/80 p-0.5 rounded-lg border border-slate-200 dark:border-slate-700 text-xs font-semibold">
+            <button id="lang-sk-btn" onclick="setLanguage('sk')" class="px-2.5 py-1 rounded-md transition-all shadow-sm bg-white dark:bg-slate-700 text-slate-900 dark:text-white" title="Slovenský jazyk">
+              SK
+            </button>
+            <button id="lang-en-btn" onclick="setLanguage('en')" class="px-2.5 py-1 rounded-md transition-all text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white" title="English language">
+              EN
+            </button>
+          </div>
+
+          <!-- Dark / Light Mode Toggle Button -->
+          <button id="theme-toggle-btn" onclick="toggleTheme()" class="p-2 rounded-lg text-slate-600 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white bg-slate-100 hover:bg-slate-200 dark:bg-slate-800/80 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700 transition-all" aria-label="Prepnúť tmavý/svetlý režim" title="Prepnúť režim (Svetlý / Tmavý)">
+            <!-- Sun Icon (shows in dark mode) -->
+            <i data-lucide="sun" id="theme-sun-icon" class="w-4 h-4 hidden dark:block text-amber-300"></i>
+            <!-- Moon Icon (shows in light mode) -->
+            <i data-lucide="moon" id="theme-moon-icon" class="w-4 h-4 block dark:hidden text-slate-700"></i>
+          </button>
+
+          <!-- Free Trial CTA Button -->
+          <button onclick="openTrialModal()" class="hidden sm:inline-flex items-center gap-2 px-4 py-2.5 text-xs font-bold uppercase tracking-wider text-white bg-brand-600 hover:bg-brand-700 active:scale-[0.98] rounded-lg shadow-sm hover:shadow-brand-500/25 transition-all">
+            <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+            <span data-i18n="nav.trial">Skúšobné zasielanie</span>
+          </button>
+
+          <!-- Mobile Hamburger Menu Button -->
+          <button onclick="toggleMobileMenu()" class="lg:hidden p-2 rounded-lg text-slate-700 dark:text-slate-200 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700" aria-label="Menu">
+            <i data-lucide="menu" id="mobile-menu-icon" class="w-5 h-5"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-nav" class="hidden lg:hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-[#070b14] px-4 pt-3 pb-6 space-y-3">
+      <a href="#produkty" onclick="toggleMobileMenu()" class="block py-2 text-sm font-semibold text-slate-700 dark:text-slate-200 hover:text-brand-600">Produkty & Služby</a>
+      <a href="#ukazka" onclick="toggleMobileMenu()" class="block py-2 text-sm font-semibold text-slate-700 dark:text-slate-200 hover:text-brand-600">Denný briefing (Ukážka dňa)</a>
+      <a href="#prilohy" onclick="toggleMobileMenu()" class="block py-2 text-sm font-semibold text-slate-700 dark:text-slate-200 hover:text-brand-600">4 Pravidelné prílohy</a>
+      <a href="#referencie" onclick="toggleMobileMenu()" class="block py-2 text-sm font-semibold text-slate-700 dark:text-slate-200 hover:text-brand-600">Referencie klientov</a>
+      <a href="#cennik" onclick="toggleMobileMenu()" class="block py-2 text-sm font-semibold text-slate-700 dark:text-slate-200 hover:text-brand-600">Cenník predplatného</a>
+      <a href="#o-nas" onclick="toggleMobileMenu()" class="block py-2 text-sm font-semibold text-slate-700 dark:text-slate-200 hover:text-brand-600">O Symsite Research & EIU</a>
+      <a href="#kontakt" onclick="toggleMobileMenu()" class="block py-2 text-sm font-semibold text-slate-700 dark:text-slate-200 hover:text-brand-600">Kontakt & Bankové údaje</a>
+      
+      <div class="pt-2">
+        <button onclick="toggleMobileMenu(); openTrialModal()" class="w-full py-3 text-center text-xs font-bold uppercase tracking-wider text-white bg-brand-600 hover:bg-brand-700 rounded-lg shadow-sm">
+          Aktivovať 14-dňové bezplatné zasielanie
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION: Executive Authority & Value Proposition -->
+  <section class="relative overflow-hidden pt-12 pb-20 md:pt-20 md:pb-28 border-b border-slate-200/80 dark:border-slate-800/80">
+    <!-- Background subtle radial grid glow -->
+    <div class="absolute inset-0 bg-[radial-gradient(#cbd5e1_1px,transparent_1px)] dark:bg-[radial-gradient(#1e293b_1px,transparent_1px)] [background-size:24px_24px] opacity-40 dark:opacity-25 pointer-events-none"></div>
+    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-brand-500/10 dark:bg-brand-500/15 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        
+        <!-- Left Hero Column: Copy & Value -->
+        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+          
+          <!-- Editorial Trust Badge -->
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-100 dark:bg-slate-800/90 border border-slate-200 dark:border-slate-700 text-xs font-medium text-slate-700 dark:text-slate-300">
+            <span class="w-2 h-2 rounded-full bg-brand-500"></span>
+            <span data-i18n="hero.badge">Nezávislá ekonomická analytická agentúra od roku 1994</span>
+          </div>
+
+          <!-- Main Headline -->
+          <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight leading-tight">
+            <span data-i18n="hero.title1">Aby vám nič neuniklo.</span><br>
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-sky-500 dark:from-brand-400 dark:to-cyan-400" data-i18n="hero.title2">
+              A nemuseli ste čítať nič navyše.
+            </span>
+          </h1>
+
+          <!-- Subhead -->
+          <p class="text-base sm:text-lg text-slate-600 dark:text-slate-300 font-normal leading-relaxed max-w-2xl mx-auto lg:mx-0 font-serif" data-i18n="hero.subhead">
+            Každé pracovné ráno presne o <strong>8:00</strong> dostanete do e-mailu <strong>jedinú stranu</strong> kľúčových informácií zo slovenského biznisu, hospodárskej politiky a legislatívy. Vhodný kontext, jasné fakty a prepojenia na pôvodné overené zdroje.
+          </p>
+
+          <!-- Core Value Metrics Grid -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-3 pb-2 text-left">
+            <div class="p-3 rounded-lg bg-white dark:bg-slate-800/70 border border-slate-200 dark:border-slate-700/80 shadow-xs">
+              <div class="text-2xl font-black text-slate-900 dark:text-white font-mono">30+</div>
+              <div class="text-xs text-slate-500 dark:text-slate-400 font-medium" data-i18n="hero.stat1">Rokov na trhu</div>
+            </div>
+            <div class="p-3 rounded-lg bg-white dark:bg-slate-800/70 border border-slate-200 dark:border-slate-700/80 shadow-xs">
+              <div class="text-2xl font-black text-brand-600 dark:text-brand-400 font-mono">1 strana</div>
+              <div class="text-xs text-slate-500 dark:text-slate-400 font-medium" data-i18n="hero.stat2">3 minúty čítania</div>
+            </div>
+            <div class="p-3 rounded-lg bg-white dark:bg-slate-800/70 border border-slate-200 dark:border-slate-700/80 shadow-xs">
+              <div class="text-2xl font-black text-emerald-600 dark:text-emerald-400 font-mono">4 000+</div>
+              <div class="text-xs text-slate-500 dark:text-slate-400 font-medium" data-i18n="hero.stat3">Manažérov denne</div>
+            </div>
+            <div class="p-3 rounded-lg bg-white dark:bg-slate-800/70 border border-slate-200 dark:border-slate-700/80 shadow-xs">
+              <div class="text-2xl font-black text-slate-900 dark:text-white font-mono">40%</div>
+              <div class="text-xs text-slate-500 dark:text-slate-400 font-medium" data-i18n="hero.stat4">Klientov 10+ rokov</div>
+            </div>
+          </div>
+
+          <!-- CTAs -->
+          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+            <button onclick="openTrialModal()" class="w-full sm:w-auto px-7 py-3.5 text-sm font-bold uppercase tracking-wider text-white bg-brand-600 hover:bg-brand-700 active:scale-[0.98] rounded-xl shadow-lg shadow-brand-600/25 transition-all flex items-center justify-center gap-2">
+              <i data-lucide="mail-check" class="w-4 h-4"></i>
+              <span data-i18n="hero.ctaPrimary">Vyskúšať na 14 dní bezplatne</span>
+            </button>
+            
+            <a href="#ukazka" class="w-full sm:w-auto px-6 py-3.5 text-sm font-semibold text-slate-700 dark:text-slate-200 hover:text-slate-900 dark:hover:text-white bg-white hover:bg-slate-100 dark:bg-slate-800/80 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700 rounded-xl transition-all flex items-center justify-center gap-2">
+              <i data-lucide="file-text" class="w-4 h-4 text-brand-500"></i>
+              <span data-i18n="hero.ctaSecondary">Prezrieť rannú ukážku</span>
+            </a>
+          </div>
+
+          <!-- Note under CTAs -->
+          <div class="flex items-center justify-center lg:justify-start gap-2 text-xs text-slate-500 dark:text-slate-400 pt-1">
+            <i data-lucide="check-circle" class="w-3.5 h-3.5 text-emerald-500"></i>
+            <span data-i18n="hero.noObligation">Nezáväzne. Bez nutnosti kreditnej karty. Zasielanie na ľubovoľný počet adries v tíme.</span>
+          </div>
+
+        </div>
+
+        <!-- Right Hero Column: Interactive One-Page Briefing Mockup -->
+        <div class="lg:col-span-5">
+          <div class="relative mx-auto max-w-md lg:max-w-none">
+            
+            <!-- Glow background -->
+            <div class="absolute -inset-1.5 bg-gradient-to-r from-brand-600 to-sky-500 rounded-2xl blur-lg opacity-30 dark:opacity-40"></div>
+
+            <!-- Executive Brief Sheet Mockup -->
+            <div class="relative bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 paper-shadow overflow-hidden">
+              
+              <!-- Sheet Header / Masthead -->
+              <div class="p-5 bg-slate-900 text-white border-b border-slate-800">
+                <div class="flex items-center justify-between text-xs text-slate-400 font-mono pb-2 border-b border-slate-800">
+                  <span class="flex items-center gap-1.5"><i data-lucide="calendar" class="w-3.5 h-3.5 text-brand-400"></i> Dnes, 08:00 SEČ</span>
+                  <span class="text-emerald-400 font-semibold uppercase tracking-wider text-[10px] bg-emerald-950/80 px-2 py-0.5 rounded border border-emerald-800/60">
+                    Ranné vydanie
+                  </span>
+                </div>
+                
+                <div class="pt-3 flex items-baseline justify-between">
+                  <div>
+                    <h3 class="text-xl font-serif font-bold text-white tracking-tight">EKONOMIKA DNES</h3>
+                    <p class="text-xs text-slate-400 font-sans">Denný manažérsky súhrn • Symsite Research</p>
+                  </div>
+                  <div class="text-right">
+                    <span class="text-[11px] font-mono text-brand-400 font-bold">1 STRANA</span>
+                    <p class="text-[10px] text-slate-500">Čas čítania: ~3 min</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Sheet Body News Items Preview -->
+              <div class="p-5 space-y-4 text-sm divide-y divide-slate-100 dark:divide-slate-800/80 max-h-[380px] overflow-y-auto">
+                
+                <!-- Story 1 -->
+                <div class="pt-2 first:pt-0">
+                  <div class="flex items-center gap-2 mb-1">
+                    <span class="px-1.5 py-0.5 text-[9px] font-bold uppercase tracking-wider rounded bg-brand-50 text-brand-700 dark:bg-brand-950/60 dark:text-brand-300">Makro & Dane</span>
+                    <span class="text-[11px] text-slate-400 font-mono">07:15</span>
+                  </div>
+                  <h4 class="font-bold text-slate-900 dark:text-white hover:text-brand-600 dark:hover:text-brand-400 transition-colors leading-snug">
+                    Konsolidačné opatrenia a daň z finančných transakcií: Harmonogram pre firmy
+                  </h4>
+                  <p class="text-xs text-slate-600 dark:text-slate-300 mt-1 leading-relaxed">
+                    Ministerstvo financií zverejnilo usmernenie k registrácii a odvodom novej transakčnej dane od apríla 2025. Banky pripravujú technické rozhrania.
+                  </p>
+                  <div class="mt-1.5 flex items-center justify-between text-[11px] text-slate-400">
+                    <span>Zdroj: <em>MF SR, TASR</em></span>
+                    <span class="text-brand-600 dark:text-brand-400 font-semibold cursor-pointer flex items-center gap-1">V kontexte <i data-lucide="arrow-right" class="w-3 h-3"></i></span>
+                  </div>
+                </div>
+
+                <!-- Story 2 -->
+                <div class="pt-3">
+                  <div class="flex items-center gap-2 mb-1">
+                    <span class="px-1.5 py-0.5 text-[9px] font-bold uppercase tracking-wider rounded bg-emerald-50 text-emerald-700 dark:bg-emerald-950/60 dark:text-emerald-300">Investície & M&A</span>
+                    <span class="text-[11px] text-slate-400 font-mono">06:40</span>
+                  </div>
+                  <h4 class="font-bold text-slate-900 dark:text-white leading-snug">
+                    WeRide získal povolenie na testovanie autonómnych robotaxíkov v Bratislave
+                  </h4>
+                  <p class="text-xs text-slate-600 dark:text-slate-300 mt-1 leading-relaxed">
+                    Slovensko sa stáva prvou krajinou v regióne V4, kde globálny technologický gigant otestuje flotilu vozidiel 4. úrovne autonómie.
+                  </p>
+                  <div class="mt-1.5 flex items-center justify-between text-[11px] text-slate-400">
+                    <span>Zdroj: <em>Trend, MDV SR</em></span>
+                    <span class="text-brand-600 dark:text-brand-400 font-semibold cursor-pointer flex items-center gap-1">V kontexte <i data-lucide="arrow-right" class="w-3 h-3"></i></span>
+                  </div>
+                </div>
+
+                <!-- Story 3 -->
+                <div class="pt-3">
+                  <div class="flex items-center gap-2 mb-1">
+                    <span class="px-1.5 py-0.5 text-[9px] font-bold uppercase tracking-wider rounded bg-amber-50 text-amber-700 dark:bg-amber-950/60 dark:text-amber-300">Súdne spory</span>
+                    <span class="text-[11px] text-slate-400 font-mono">06:10</span>
+                  </div>
+                  <h4 class="font-bold text-slate-900 dark:text-white leading-snug">
+                    Rozuzlenie v kauze hotela Carlton: Rozsudok Najvyššieho súdu
+                  </h4>
+                  <p class="text-xs text-slate-600 dark:text-slate-300 mt-1 leading-relaxed">
+                    Kľúčové rozhodnutie stabilizuje vlastnícke práva v ikonickom bratislavskom komplexe s dosahom na bankové záložné práva.
+                  </p>
+                </div>
+
+              </div>
+
+              <!-- Sheet Footer Banner -->
+              <div class="p-3 bg-slate-50 dark:bg-slate-800/90 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between text-xs">
+                <span class="text-slate-500 dark:text-slate-400 font-medium">Dostupné v <strong>SK</strong> aj <strong>EN</strong> verzii</span>
+                <a href="#ukazka" class="font-bold text-brand-600 dark:text-brand-400 hover:underline flex items-center gap-1">
+                  Otvoriť plnú ukážku <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+                </a>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- INSTITUTIONAL TRUST & PARTNERSHIP BANNER (The Economist Intelligence Unit) -->
+  <section class="py-10 bg-slate-100/70 dark:bg-slate-900/40 border-b border-slate-200/80 dark:border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+        
+        <div class="md:col-span-4 flex items-center gap-4">
+          <div class="w-14 h-14 rounded-xl bg-eiu-navy text-white flex items-center justify-center font-serif font-black text-2xl shadow-sm border border-slate-700 shrink-0">
+            <span class="text-eiu-red">E</span>IU
+          </div>
+          <div>
+            <h4 class="font-bold text-slate-900 dark:text-white text-sm">The Economist Intelligence Unit</h4>
+            <p class="text-xs text-slate-500 dark:text-slate-400 font-medium">Oficiálny partner pre Slovensko od roku 1998</p>
+          </div>
+        </div>
+
+        <div class="md:col-span-8 text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed border-t md:border-t-0 md:border-l border-slate-200 dark:border-slate-800 pt-4 md:pt-0 md:pl-8">
+          <p>
+            Už viac ako štvrťstoročie pripravuje <strong>Symsite Research</strong> podrobné analýzy podnikateľského prostredia Slovenska, makroekonomických výhľadov a legislatívy pre britskú analytickú skupinu <strong>The Economist Group</strong> so zreteľom na medzinárodných investorov. Rovnakú nekompromisnú analytickú hĺbku a objektívnosť prinášame v rannom servise pre slovenských manažérov.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTS & EDITIONS SECTION -->
+  <section id="produkty" class="py-20 border-b border-slate-200/80 dark:border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+        <h2 class="text-xs font-bold uppercase tracking-widest text-brand-600 dark:text-brand-400 font-mono">
+          PRODUKTOVÉ PORTFÓLIO
+        </h2>
+        <h3 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+          Dve jazykové edície. Jeden jasný cieľ.
+        </h3>
+        <p class="text-slate-600 dark:text-slate-300 text-base leading-relaxed font-serif">
+          Získajte každé ráno okamžitý náskok pred trhom a konkurenciou. Prehľadne na 1 strane bez zbytočného informačného šumu.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
+        
+        <!-- Product 1: Ekonomika DNES (SK) -->
+        <div class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-8 shadow-sm hover:shadow-md hover:border-brand-500/50 transition-all flex flex-col justify-between relative group">
+          <div class="absolute top-0 right-0 w-32 h-32 bg-brand-500/5 rounded-bl-full pointer-events-none"></div>
+
+          <div class="space-y-6">
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 text-xs font-bold uppercase tracking-wider rounded-md bg-blue-50 text-blue-700 dark:bg-blue-950/70 dark:text-blue-300 border border-blue-200 dark:border-blue-900">
+                Slovenská edícia
+              </span>
+              <span class="text-xs font-mono text-slate-400">Expedícia: 08:00 ráno</span>
+            </div>
+
+            <div>
+              <h4 class="text-2xl font-serif font-black text-slate-900 dark:text-white">Ekonomika DNES</h4>
+              <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">
+                Denný prehľad najdôležitejších udalostí zo sveta slovenského biznisu, hospodárskej politiky a legislatívy.
+              </p>
+            </div>
+
+            <div class="space-y-3 text-sm text-slate-600 dark:text-slate-300">
+              <div class="flex items-start gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5"></i>
+                <span><strong>1 strana A4 denne:</strong> Prečítate za 3 minúty pri prvej rannej káve.</span>
+              </div>
+              <div class="flex items-start gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5"></i>
+                <span><strong>Viac ako 20 monitorovaných zdrojov:</strong> Tlač, registre, weby ministerstiev, tlačové agentúry.</span>
+              </div>
+              <div class="flex items-start gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5"></i>
+                <span><strong>Dáta v súvislostiach:</strong> Pozadie udalostí s odkazmi na hlavný primárny zdroj.</span>
+              </div>
+              <div class="flex items-start gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5"></i>
+                <span><strong>Firemná multilicencia:</strong> Zasielanie na neobmedzený počet e-mailov v rámci firmy.</span>
+              </div>
+              <div class="flex items-start gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5"></i>
+                <span><strong>Vrátane 4 mesačných príloh:</strong> Legislatíva, Makro indikátory, M&A investície a prognózy.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-8 mt-6 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+            <div>
+              <div class="text-2xl font-black text-slate-900 dark:text-white font-mono">85 € <span class="text-xs font-normal text-slate-500">/ mesiac</span></div>
+              <p class="text-[11px] text-slate-400">bez 20% DPH • firemná distribúcia</p>
+            </div>
+            <button onclick="openTrialModal('Ekonomika DNES (SK)')" class="px-5 py-2.5 text-xs font-bold uppercase tracking-wider text-white bg-slate-900 hover:bg-slate-800 dark:bg-brand-600 dark:hover:bg-brand-500 rounded-lg shadow-sm transition-all">
+              Vyskúšať bezplatne
+            </button>
+          </div>
+        </div>
+
+        <!-- Product 2: Slovak Business News TODAY (EN) -->
+        <div class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-8 shadow-sm hover:shadow-md hover:border-brand-500/50 transition-all flex flex-col justify-between relative group">
+          <div class="absolute top-0 right-0 w-32 h-32 bg-amber-500/5 rounded-bl-full pointer-events-none"></div>
+
+          <div class="space-y-6">
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 text-xs font-bold uppercase tracking-wider rounded-md bg-amber-50 text-amber-700 dark:bg-amber-950/70 dark:text-amber-300 border border-amber-200 dark:border-amber-900">
+                English Edition
+              </span>
+              <span class="text-xs font-mono text-slate-400">Delivery: 08:00 AM CET</span>
+            </div>
+
+            <div>
+              <h4 class="text-2xl font-serif font-black text-slate-900 dark:text-white">Slovak Business News TODAY</h4>
+              <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">
+                Concise daily English briefing on Slovak business, markets, regulation and political landscape for global executives.
+              </p>
+            </div>
+
+            <div class="space-y-3 text-sm text-slate-600 dark:text-slate-300">
+              <div class="flex items-start gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5"></i>
+                <span><strong>Tailored for Expats & Executives:</strong> Preferred by foreign CEOs, board members and investors.</span>
+              </div>
+              <div class="flex items-start gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5"></i>
+                <span><strong>Embassies & International Chambers:</strong> Used by diplomatic missions and chambers of commerce.</span>
+              </div>
+              <div class="flex items-start gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5"></i>
+                <span><strong>First-class English Editorial:</strong> Crystal clear, professional corporate language without translation noise.</span>
+              </div>
+              <div class="flex items-start gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5"></i>
+                <span><strong>Facilitates HQ Reporting:</strong> Instant talking points for overseas parent company briefings.</span>
+              </div>
+              <div class="flex items-start gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5"></i>
+                <span><strong>Includes All 4 Analytical Supplements:</strong> Macro statistics, legislation alerts & M&A deals in English.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-8 mt-6 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+            <div>
+              <div class="text-2xl font-black text-slate-900 dark:text-white font-mono">130 € <span class="text-xs font-normal text-slate-500">/ month</span></div>
+              <p class="text-[11px] text-slate-400">excl. VAT • unlimited corporate seats</p>
+            </div>
+            <button onclick="openTrialModal('Slovak Business News TODAY (EN)')" class="px-5 py-2.5 text-xs font-bold uppercase tracking-wider text-white bg-slate-900 hover:bg-slate-800 dark:bg-brand-600 dark:hover:bg-brand-500 rounded-lg shadow-sm transition-all">
+              Start Free Trial
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- COMBINED ENTERPRISE PACKAGE BANNER -->
+      <div class="mt-8 p-6 sm:p-8 rounded-2xl bg-gradient-to-r from-slate-900 via-slate-850 to-brand-950 text-white border border-slate-800 shadow-xl flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="space-y-2 text-center md:text-left">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-500/20 text-brand-300 text-xs font-bold uppercase tracking-wider border border-brand-500/30">
+            <i data-lucide="layers" class="w-3.5 h-3.5"></i> Najobľúbenejší balík pre medzinárodné korporácie
+          </div>
+          <h4 class="text-2xl font-serif font-black text-white">Duálny balík: Ekonomika DNES + Slovak Business News TODAY</h4>
+          <p class="text-sm text-slate-300 max-w-2xl font-sans">
+            Kompletný ranný spravodajský servis v slovenskom aj anglickom jazyku pre lokálny manažment aj zahraničných členov predstavenstva.
+          </p>
+        </div>
+
+        <div class="flex flex-col sm:flex-row items-center gap-4 shrink-0">
+          <div class="text-center sm:text-right">
+            <div class="text-3xl font-black font-mono text-emerald-400">150 € <span class="text-xs font-normal text-slate-300">/ mesiac</span></div>
+            <div class="text-[11px] text-slate-400 line-through">Bežne 215 € (Úspora 65 €/mesiac)</div>
+          </div>
+          <button onclick="openTrialModal('Duálny balík SK + EN')" class="px-6 py-3.5 text-xs font-bold uppercase tracking-wider text-slate-900 bg-white hover:bg-slate-100 rounded-xl shadow-lg transition-all active:scale-[0.98]">
+            Objednať duálny test
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- LIVE INTERACTIVE BRIEFING VIEWER (Ukážka denného servisu) -->
+  <section id="ukazka" class="py-20 bg-slate-100/60 dark:bg-slate-950/40 border-b border-slate-200/80 dark:border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
+        <span class="text-xs font-bold uppercase tracking-widest text-brand-600 dark:text-brand-400 font-mono">
+          INTERAKTÍVNA UKÁŽKA
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+          Pozrite sa, ako vyzerá ranný servis na vašom stole
+        </h2>
+        <p class="text-slate-600 dark:text-slate-300 text-base font-serif">
+          Kliknite na články a prepínajte medzi slovenskou a anglickou verziou. Vyskúšajte si formát, ktorý šetrí čas stovkám generálnych riaditeľov.
+        </p>
+      </div>
+
+      <!-- Briefing Interactive Console -->
+      <div class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-xl overflow-hidden">
+        
+        <!-- Console Top Bar -->
+        <div class="p-4 sm:p-5 bg-slate-50 dark:bg-slate-850 border-b border-slate-200 dark:border-slate-800 flex flex-wrap items-center justify-between gap-4">
+          
+          <!-- Edition Switcher Tabs (SK / EN) -->
+          <div class="flex items-center gap-2 bg-slate-200/70 dark:bg-slate-800 p-1 rounded-xl text-xs font-bold">
+            <button id="brief-tab-sk" onclick="switchBriefTab('sk')" class="px-4 py-2 rounded-lg bg-white dark:bg-slate-700 text-slate-900 dark:text-white shadow-xs transition-all flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-blue-500"></span>
+              <span>Ekonomika DNES (SK)</span>
+            </button>
+            <button id="brief-tab-en" onclick="switchBriefTab('en')" class="px-4 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-all flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-amber-500"></span>
+              <span>Slovak Business News TODAY (EN)</span>
+            </button>
+          </div>
+
+          <!-- Category Filter Pills -->
+          <div class="flex items-center gap-2 overflow-x-auto text-xs font-medium">
+            <button onclick="filterBriefArticles('all')" class="brief-filter-btn px-3 py-1.5 rounded-lg bg-slate-900 text-white dark:bg-brand-600 dark:text-white text-xs font-semibold">Všetky rubriky</button>
+            <button onclick="filterBriefArticles('makro')" class="brief-filter-btn px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-600 dark:text-slate-300">Makro & Štát</button>
+            <button onclick="filterBriefArticles('biznis')" class="brief-filter-btn px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-600 dark:text-slate-300">Investície & M&A</button>
+            <button onclick="filterBriefArticles('pravo')" class="brief-filter-btn px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-600 dark:text-slate-300">Legislatíva & Právo</button>
+          </div>
+
+          <!-- Date & Status -->
+          <div class="hidden md:flex items-center gap-2 text-xs text-slate-500 dark:text-slate-400 font-mono">
+            <i data-lucide="check-check" class="w-4 h-4 text-emerald-500"></i>
+            <span>Overené analytickým tímom • Limbach</span>
+          </div>
+
+        </div>
+
+        <!-- Briefing Article Items Area (SK & EN versions dynamically bound) -->
+        <div id="briefing-articles-container" class="p-6 sm:p-8 space-y-6 divide-y divide-slate-100 dark:divide-slate-800">
+          
+          <!-- Article 1 -->
+          <article class="brief-item pt-6 first:pt-0" data-category="makro">
+            <div class="flex items-center justify-between text-xs mb-2">
+              <div class="flex items-center gap-2">
+                <span class="px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-blue-100 text-blue-800 dark:bg-blue-950 dark:text-blue-300">
+                  Hospodárska politika
+                </span>
+                <span class="text-slate-400 font-mono">07:45 ráno</span>
+              </div>
+              <span class="text-slate-400 text-xs flex items-center gap-1">
+                <i data-lucide="clock" class="w-3.5 h-3.5"></i> 1 min čítania
+              </span>
+            </div>
+            
+            <h3 class="text-lg sm:text-xl font-serif font-bold text-slate-900 dark:text-white leading-snug">
+              Konsolidačný balíček 2025: Finálne znenie pravidiel pre novú daň z finančných transakcií
+            </h3>
+            
+            <p class="text-sm text-slate-600 dark:text-slate-300 mt-2 leading-relaxed">
+              Ministerstvo financií SR zverejnilo záväzné metodické usmernenie k uplatňovaniu dane z finančných transakcií platnej od 1. apríla 2025. Podnikatelia a korporácie budú platiť sadzbu 0,40 % z každej debetnej transakcie (maximálne 40 eur na transakciu) a 0,80 % pri výbere hotovosti bez stropu. Výnimku získali vnútrofiremné prevody medzi účtami toho istého daňovníka v rámci jednej banky.
+            </p>
+
+            <!-- Analytical Context Callout -->
+            <div class="mt-3 p-3 rounded-lg bg-slate-50 dark:bg-slate-800/60 border-l-4 border-brand-500 text-xs text-slate-600 dark:text-slate-300 space-y-1">
+              <span class="font-bold text-slate-900 dark:text-white flex items-center gap-1.5">
+                <i data-lucide="lightbulb" class="w-3.5 h-3.5 text-amber-500"></i> Kontext Symsite Research:
+              </span>
+              <p>Opatrenie prinesie do štátneho rozpočtu odhadom 650 mil. eur, no pre stredné a veľké podniky znamená dodatočný fixný náklad na úrovni 0,2–0,5 % obratu v závislosti od frekvencie B2B platieb. Odporúčame revíziu cash-poolingu.</p>
+            </div>
+
+            <div class="mt-3 flex items-center justify-between text-xs text-slate-500 dark:text-slate-400">
+              <div class="flex items-center gap-2">
+                <span>Overené primárne zdroje:</span>
+                <span class="font-semibold text-slate-700 dark:text-slate-300">MF SR • Zbierka zákonov SR • Slovenská banková asociácia</span>
+              </div>
+              <span class="text-brand-600 dark:text-brand-400 hover:underline cursor-pointer flex items-center gap-1">
+                Zobraziť celý detail <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+              </span>
+            </div>
+          </article>
+
+          <!-- Article 2 -->
+          <article class="brief-item pt-6" data-category="biznis">
+            <div class="flex items-center justify-between text-xs mb-2">
+              <div class="flex items-center gap-2">
+                <span class="px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300">
+                  Technológie & Investície
+                </span>
+                <span class="text-slate-400 font-mono">07:20 ráno</span>
+              </div>
+              <span class="text-slate-400 text-xs flex items-center gap-1">
+                <i data-lucide="clock" class="w-3.5 h-3.5"></i> 1 min čítania
+              </span>
+            </div>
+            
+            <h3 class="text-lg sm:text-xl font-serif font-bold text-slate-900 dark:text-white leading-snug">
+              WeRide dostal oficiálne povolenie na skúšobnú prevádzku robotaxíka v uliciach Bratislavy
+            </h3>
+            
+            <p class="text-sm text-slate-600 dark:text-slate-300 mt-2 leading-relaxed">
+              Globálna technologická spoločnosť WeRide, líder v autonómnej jazde, získala od Ministerstva dopravy SR povolenie na testovanie autonómnych vozidiel na verejných komunikáciách v hlavnom meste. Testovacia fáza začne s bezpečnostným vodičom na sedadle spolujazdca v širšom centre Bratislavy s cieľom preveriť integráciu s mestskou mobilitou.
+            </p>
+
+            <div class="mt-3 p-3 rounded-lg bg-slate-50 dark:bg-slate-800/60 border-l-4 border-emerald-500 text-xs text-slate-600 dark:text-slate-300 space-y-1">
+              <span class="font-bold text-slate-900 dark:text-white flex items-center gap-1.5">
+                <i data-lucide="lightbulb" class="w-3.5 h-3.5 text-amber-500"></i> Kontext Symsite Research:
+              </span>
+              <p>Slovensko vysiela pozitívny signál smerom k testovaniu inovatívnych automotive technológií. Tento krok zapadá do stratégie prilákania technologických centier s vysokou pridanou hodnotou a nadväzuje na investície v automotive sektore.</p>
+            </div>
+
+            <div class="mt-3 flex items-center justify-between text-xs text-slate-500 dark:text-slate-400">
+              <div class="flex items-center gap-2">
+                <span>Overené primárne zdroje:</span>
+                <span class="font-semibold text-slate-700 dark:text-slate-300">MDV SR • Agentúra SITA • WeRide Global PR</span>
+              </div>
+              <span class="text-brand-600 dark:text-brand-400 hover:underline cursor-pointer flex items-center gap-1">
+                Zobraziť celý detail <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+              </span>
+            </div>
+          </article>
+
+          <!-- Article 3 -->
+          <article class="brief-item pt-6" data-category="pravo">
+            <div class="flex items-center justify-between text-xs mb-2">
+              <div class="flex items-center gap-2">
+                <span class="px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-rose-100 text-rose-800 dark:bg-rose-950 dark:text-rose-300">
+                  Súdne konania & Majetok
+                </span>
+                <span class="text-slate-400 font-mono">06:50 ráno</span>
+              </div>
+              <span class="text-slate-400 text-xs flex items-center gap-1">
+                <i data-lucide="clock" class="w-3.5 h-3.5"></i> 1 min čítania
+              </span>
+            </div>
+            
+            <h3 class="text-lg sm:text-xl font-serif font-bold text-slate-900 dark:text-white leading-snug">
+              Erik Mikurčík dostal vysoký trest v kauze hotela Carlton: Rozhodnutie spečatilo kontrolu nad komplexom
+            </h3>
+            
+            <p class="text-sm text-slate-600 dark:text-slate-300 mt-2 leading-relaxed">
+              Špecializovaný trestný súd uznal Erika Mikurčíka vinným v dlhoročnom spore o ovládnutie ikonického hotelového komplexu Carlton v Bratislave a uložil mu nepodmienečný trest odňatia slobody. Rozhodnutie potvrdzuje nároky partnerov z Esetu (Rudolf Hrubý a Maroš Grund) a uzatvára kľúčovú kapitolu v jednom z najsledovanejších slovenských korporátnych sporov.
+            </p>
+
+            <div class="mt-3 p-3 rounded-lg bg-slate-50 dark:bg-slate-800/60 border-l-4 border-rose-500 text-xs text-slate-600 dark:text-slate-300 space-y-1">
+              <span class="font-bold text-slate-900 dark:text-white flex items-center gap-1.5">
+                <i data-lucide="lightbulb" class="w-3.5 h-3.5 text-amber-500"></i> Kontext Symsite Research:
+              </span>
+              <p>Verdikt prináša právnu istotu pre financujúce bankové domy a otvára priestor na ďalší rozvoj a rekonštrukciu priľahlých administratívnych a obchodných plôch Carlton Savoy.</p>
+            </div>
+
+            <div class="mt-3 flex items-center justify-between text-xs text-slate-500 dark:text-slate-400">
+              <div class="flex items-center gap-2">
+                <span>Overené primárne zdroje:</span>
+                <span class="font-semibold text-slate-700 dark:text-slate-300">ŠTS Pezinok • Denník N • Obchodný vestník</span>
+              </div>
+              <span class="text-brand-600 dark:text-brand-400 hover:underline cursor-pointer flex items-center gap-1">
+                Zobraziť celý detail <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+              </span>
+            </div>
+          </article>
+
+          <!-- Article 4 -->
+          <article class="brief-item pt-6" data-category="biznis">
+            <div class="flex items-center justify-between text-xs mb-2">
+              <div class="flex items-center gap-2">
+                <span class="px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-purple-100 text-purple-800 dark:bg-purple-950 dark:text-purple-300">
+                  Mediálny trh & Telco
+                </span>
+                <span class="text-slate-400 font-mono">06:30 ráno</span>
+              </div>
+              <span class="text-slate-400 text-xs flex items-center gap-1">
+                <i data-lucide="clock" class="w-3.5 h-3.5"></i> 1 min čítania
+              </span>
+            </div>
+            
+            <h3 class="text-lg sm:text-xl font-serif font-bold text-slate-900 dark:text-white leading-snug">
+              Voyo sa stalo trhovou dvojkou na Slovensku hneď po globálnom Netflixe
+            </h3>
+            
+            <p class="text-sm text-slate-600 dark:text-slate-300 mt-2 leading-relaxed">
+              Streamovacia platforma skupiny CME (Markíza) dosiahla historický míľnik a v počte predplatiteľov na slovenskom a českom trhu predbehla HBO Max i Disney+. Rast je ťahaný lokálnou pôvodnou produkciou, exkluzívnym športovým obsahom vrátane Niké ligy a strategickými balíčkami s telekomunikačnými operátormi.
+            </p>
+          </article>
+
+        </div>
+
+        <!-- Console Footer Call to Action -->
+        <div class="p-5 bg-slate-50 dark:bg-slate-850 border-t border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div class="flex items-center gap-3">
+            <div class="w-9 h-9 rounded-full bg-emerald-100 dark:bg-emerald-950 text-emerald-600 dark:text-emerald-400 flex items-center justify-center font-bold text-sm">
+              ✓
+            </div>
+            <p class="text-xs text-slate-600 dark:text-slate-300">
+              Chcete takýto prehľad každé ráno vo vašej schránke o 8:00?
+            </p>
+          </div>
+          <button onclick="openTrialModal()" class="w-full sm:w-auto px-5 py-2.5 text-xs font-bold uppercase tracking-wider text-white bg-brand-600 hover:bg-brand-700 rounded-lg shadow-sm transition-all">
+            Získať bezplatný 14-dňový prístup
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- THE 4 REGULAR SUPPLEMENTS SHOWCASE (V cene predplatného) -->
+  <section id="prilohy" class="py-20 border-b border-slate-200/80 dark:border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+        <span class="text-xs font-bold uppercase tracking-widest text-brand-600 dark:text-brand-400 font-mono">
+          PRAVIDELNÉ ŠPECIÁLNE ANALÝZY
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+          4 Mesačné a štvrťročné prílohy v cene
+        </h2>
+        <p class="text-slate-600 dark:text-slate-300 text-base font-serif">
+          Okrem každodenného monitoringu získate bezplatne detailné analytické správy, ktoré ocenia vaši finanční riaditelia, právnici aj strategickí plánovači.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Supplement 1 -->
+        <div class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-6 flex flex-col justify-between hover:border-brand-500/60 hover:shadow-lg transition-all group">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-xl bg-blue-50 dark:bg-blue-950/70 text-blue-600 dark:text-blue-400 flex items-center justify-center group-hover:scale-110 transition-transform">
+              <i data-lucide="scale" class="w-6 h-6"></i>
+            </div>
+            
+            <div class="flex items-center justify-between text-xs font-mono text-slate-400">
+              <span class="text-brand-600 dark:text-brand-400 font-bold">1. deň v mesiaci</span>
+              <span>Mesačník</span>
+            </div>
+
+            <h3 class="text-lg font-serif font-bold text-slate-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors">
+              Nová legislatíva
+            </h3>
+
+            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+              Kompletný a komentovaný prehľad všetkých noviel zákonov a vládnych nariadení schválených vládou a parlamentom za uplynulý mesiac s dopadom na podnikateľov.
+            </p>
+          </div>
+
+          <div class="pt-6 mt-4 border-t border-slate-100 dark:border-slate-800">
+            <button onclick="openSupplementModal('legislativa')" class="text-xs font-bold text-brand-600 dark:text-brand-400 hover:underline flex items-center gap-1">
+              Prezrieť vzorovú štruktúru <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Supplement 2 -->
+        <div class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-6 flex flex-col justify-between hover:border-brand-500/60 hover:shadow-lg transition-all group">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-xl bg-emerald-50 dark:bg-emerald-950/70 text-emerald-600 dark:text-emerald-400 flex items-center justify-center group-hover:scale-110 transition-transform">
+              <i data-lucide="bar-chart-3" class="w-6 h-6"></i>
+            </div>
+            
+            <div class="flex items-center justify-between text-xs font-mono text-slate-400">
+              <span class="text-emerald-600 dark:text-emerald-400 font-bold">15. deň v mesiaci</span>
+              <span>Mesačník</span>
+            </div>
+
+            <h3 class="text-lg font-serif font-bold text-slate-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors">
+              Kľúčové indikátory
+            </h3>
+
+            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+              Syntéza všetkých čerstvých makroekonomických štatistík: HDP, priemyselná produkcia, nezamestnanosť, rast miezd, inflácia, verejné financie a zahraničný obchod.
+            </p>
+          </div>
+
+          <div class="pt-6 mt-4 border-t border-slate-100 dark:border-slate-800">
+            <button onclick="openSupplementModal('indikatory')" class="text-xs font-bold text-emerald-600 dark:text-emerald-400 hover:underline flex items-center gap-1">
+              Prezrieť vzorovú štruktúru <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Supplement 3 -->
+        <div class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-6 flex flex-col justify-between hover:border-brand-500/60 hover:shadow-lg transition-all group">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-xl bg-purple-50 dark:bg-purple-950/70 text-purple-600 dark:text-purple-400 flex items-center justify-center group-hover:scale-110 transition-transform">
+              <i data-lucide="compass" class="w-6 h-6"></i>
+            </div>
+            
+            <div class="flex items-center justify-between text-xs font-mono text-slate-400">
+              <span class="text-purple-600 dark:text-purple-400 font-bold">Kvartálne (1. deň)</span>
+              <span>Štvrťročník</span>
+            </div>
+
+            <h3 class="text-lg font-serif font-bold text-slate-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors">
+              Makroekonomický prehľad
+            </h3>
+
+            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+              Hĺbkový komentovaný súhrn hospodárskeho a politického vývoja uplynulého kvartálu, doplnený o prognózy základných parametrov potrebných na firemné plánovanie.
+            </p>
+          </div>
+
+          <div class="pt-6 mt-4 border-t border-slate-100 dark:border-slate-800">
+            <button onclick="openSupplementModal('makro')" class="text-xs font-bold text-purple-600 dark:text-purple-400 hover:underline flex items-center gap-1">
+              Prezrieť vzorovú štruktúru <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Supplement 4 -->
+        <div class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-6 flex flex-col justify-between hover:border-brand-500/60 hover:shadow-lg transition-all group">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-xl bg-amber-50 dark:bg-amber-950/70 text-amber-600 dark:text-amber-400 flex items-center justify-center group-hover:scale-110 transition-transform">
+              <i data-lucide="briefcase" class="w-6 h-6"></i>
+            </div>
+            
+            <div class="flex items-center justify-between text-xs font-mono text-slate-400">
+              <span class="text-amber-600 dark:text-amber-400 font-bold">1. deň v mesiaci</span>
+              <span>Mesačník</span>
+            </div>
+
+            <h3 class="text-lg font-serif font-bold text-slate-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors">
+              Investície a M&A zmeny
+            </h3>
+
+            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+              Evidencia a analýza všetkých významných investícií, fúzií, akvizícií a majetkových zmien v slovenských podnikoch. Ideálne pre sledovanie konkurencie a akvizičných cieľov.
+            </p>
+          </div>
+
+          <div class="pt-6 mt-4 border-t border-slate-100 dark:border-slate-800">
+            <button onclick="openSupplementModal('investicie')" class="text-xs font-bold text-amber-600 dark:text-amber-400 hover:underline flex items-center gap-1">
+              Prezrieť vzorovú štruktúru <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- METHODOLOGY & SOURCES (Prečo Symsite Research) -->
+  <section class="py-20 bg-slate-900 text-white relative overflow-hidden">
+    <div class="absolute inset-0 bg-[radial-gradient(#334155_1px,transparent_1px)] [background-size:20px_20px] opacity-25 pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <div class="lg:col-span-5 space-y-6">
+          <span class="px-3 py-1 rounded-full bg-brand-500/20 text-brand-300 text-xs font-bold uppercase tracking-wider border border-brand-500/30">
+            Naša analytická metodika
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-serif font-black tracking-tight leading-tight">
+            Máme cit pre biznis. Píšeme priamo k veci.
+          </h2>
+          <p class="text-sm sm:text-base text-slate-300 leading-relaxed font-sans">
+            Informácií je všade prebytok, no času kritický nedostatok. Našou úlohou nie je zaplaviť vás textom, ale vybrať podstatu, zasadiť ju do kontextu a ušetriť vám každé ráno hodinu čítania.
+          </p>
+
+          <div class="p-4 rounded-xl bg-slate-800/80 border border-slate-700 space-y-2">
+            <div class="text-xs text-brand-400 font-mono font-bold">AKO PRACUJEME MEDZI 05:00 A 08:00 RÁNO:</div>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Analytici začínajú o 5:00 ráno. Čítajú ranné vydania tlače, prechádzajú viac ako 20 odborných webov, vestníky, legislatívne registre aj vyjadrenia mienkotvorných ekonómov. O 8:00 máte na stole finálnu syntézu.
+            </p>
+          </div>
+        </div>
+
+        <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
+          
+          <div class="p-6 rounded-xl bg-slate-800/60 border border-slate-700/80 space-y-3">
+            <div class="w-10 h-10 rounded-lg bg-brand-500/20 text-brand-400 flex items-center justify-center">
+              <i data-lucide="target" class="w-5 h-5"></i>
+            </div>
+            <h4 class="font-bold text-white text-base">Pozadie udalostí</h4>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Neuvádzame holé fakty. Vysvetľujeme, aký majú vplyv na trh, úrokové sadzby, legislatívu a cash-flow vašej spoločnosti.
+            </p>
+          </div>
+
+          <div class="p-6 rounded-xl bg-slate-800/60 border border-slate-700/80 space-y-3">
+            <div class="w-10 h-10 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center">
+              <i data-lucide="newspaper" class="w-5 h-5"></i>
+            </div>
+            <h4 class="font-bold text-white text-base">Overené primárne zdroje</h4>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Žiadny clickbait ani neoverené špekulácie zo sociálnych sietí. Pri každej správe máte odkaz na pôvodný hodnoverný zdroj.
+            </p>
+          </div>
+
+          <div class="p-6 rounded-xl bg-slate-800/60 border border-slate-700/80 space-y-3">
+            <div class="w-10 h-10 rounded-lg bg-amber-500/20 text-amber-400 flex items-center justify-center">
+              <i data-lucide="clock" class="w-5 h-5"></i>
+            </div>
+            <h4 class="font-bold text-white text-base">Šetríme to najcennejšie: Váš čas</h4>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Výsledkom našej práce je jedna prehľadná strana formátu A4. Zvládnete ju za 3 minúty a na porade budete vždy pripravení.
+            </p>
+          </div>
+
+          <div class="p-6 rounded-xl bg-slate-800/60 border border-slate-700/80 space-y-3">
+            <div class="w-10 h-10 rounded-lg bg-purple-500/20 text-purple-400 flex items-center justify-center">
+              <i data-lucide="shield-check" class="w-5 h-5"></i>
+            </div>
+            <h4 class="font-bold text-white text-base">100% Nezávislosť</h4>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Sme financovaní výhradne našimi predplatiteľmi. Žiadna platená PR inzercia ani politická závislosť.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- VERIFIED EXECUTIVE TESTIMONIALS (Social Proof) -->
+  <section id="referencie" class="py-20 border-b border-slate-200/80 dark:border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+        <span class="text-xs font-bold uppercase tracking-widest text-brand-600 dark:text-brand-400 font-mono">
+          HLASY Z PRAXE
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+          Ako ranný prehľad pomáha manažérom
+        </h2>
+        <p class="text-slate-600 dark:text-slate-300 text-base font-serif">
+          Autentické hodnotenia z prieskumov spokojnosti klientov z bankového sektora, priemyslu a medzinárodných spoločností.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Testimonial 1 -->
+        <div class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-7 shadow-sm flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex text-amber-400 gap-1">
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+            </div>
+            
+            <blockquote class="text-sm text-slate-700 dark:text-slate-200 font-serif italic leading-relaxed">
+              „Obrovská pomoc – je to začiatok môjho dňa. Pomáha mi vysvetliť Slovensko cudzincom. Pomáha cudzincom pochopiť, čo hýbe (alebo nehýbe) Slovenskom. Vyvážený a politicky objektívny prehľad. Jednostránkový formát a prepojenia na zdroje sú vynikajúce. Angličtina je prvotriedna, jasná a jednoducho čitateľná.“
+            </blockquote>
+          </div>
+
+          <div class="pt-6 mt-6 border-t border-slate-100 dark:border-slate-800 flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-slate-200 dark:bg-slate-800 flex items-center justify-center font-bold text-slate-700 dark:text-slate-200 text-xs font-mono">
+              OR
+            </div>
+            <div>
+              <div class="text-xs font-bold text-slate-900 dark:text-white">Senior Executive</div>
+              <div class="text-[11px] text-slate-500 dark:text-slate-400">Ortac Resources Limited</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-7 shadow-sm flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex text-amber-400 gap-1">
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+            </div>
+            
+            <blockquote class="text-sm text-slate-700 dark:text-slate-200 font-serif italic leading-relaxed">
+              „Veľmi mi to pomáha, pretože mám neustále nadbehnuté pred klientami a mám v rukáve témy na rozvoj konverzácie v prvopočiatkoch. Mám každodenný rýchly prehľad o najdôležitejšom dianí a šetrí mi to to najpodstatnejšie – čas.“
+            </blockquote>
+          </div>
+
+          <div class="pt-6 mt-6 border-t border-slate-100 dark:border-slate-800 flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-300 flex items-center justify-center font-bold text-xs font-mono">
+              ČSOB
+            </div>
+            <div>
+              <div class="text-xs font-bold text-slate-900 dark:text-white">Ekonóm Korporátneho Workoutu</div>
+              <div class="text-[11px] text-slate-500 dark:text-slate-400">Československá obchodná banka</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-7 shadow-sm flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex text-amber-400 gap-1">
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+            </div>
+            
+            <blockquote class="text-sm text-slate-700 dark:text-slate-200 font-serif italic leading-relaxed">
+              „Rozprúdi pracovný deň, niekedy vzhľadom na obsah mení jeho poslanie. Uľahčuje reportovanie vedeniu v zahraničí, keďže firemným jazykom je angličtina. Presné, stručné, profesionálne spracované.“
+            </blockquote>
+          </div>
+
+          <div class="pt-6 mt-6 border-t border-slate-100 dark:border-slate-800 flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 flex items-center justify-center font-bold text-xs font-mono">
+              PR
+            </div>
+            <div>
+              <div class="text-xs font-bold text-slate-900 dark:text-white">Public Relations Specialist</div>
+              <div class="text-[11px] text-slate-500 dark:text-slate-400">Medzinárodná priemyselná skupina</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PRICING & ROI CALCULATOR SECTION -->
+  <section id="cennik" class="py-20 bg-slate-50 dark:bg-slate-950/60 border-b border-slate-200/80 dark:border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
+        <span class="text-xs font-bold uppercase tracking-widest text-brand-600 dark:text-brand-400 font-mono">
+          TRANSPARENTNÉ CENY
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+          Investícia s okamžitou návratnosťou
+        </h2>
+        <p class="text-slate-600 dark:text-slate-300 text-base font-serif">
+          Na rozdiel od iných médií neplatíte za každú stoličku. Jedno predplatné pokrýva neobmedzený počet zamestnancov vo vašej firme.
+        </p>
+
+        <!-- Billing Period Toggle -->
+        <div class="pt-4 flex items-center justify-center">
+          <div class="bg-slate-200/80 dark:bg-slate-800 p-1 rounded-xl inline-flex items-center text-xs font-semibold">
+            <button id="billing-monthly-btn" onclick="setBillingPeriod('monthly')" class="px-4 py-2 rounded-lg bg-white dark:bg-slate-700 text-slate-900 dark:text-white shadow-xs transition-all">
+              Mesačná fakturácia
+            </button>
+            <button id="billing-annual-btn" onclick="setBillingPeriod('annual')" class="px-4 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-all flex items-center gap-1.5">
+              <span>Ročná fakturácia</span>
+              <span class="px-1.5 py-0.5 rounded text-[10px] bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-400 font-bold">-15% Zľava</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pricing Cards Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+        
+        <!-- Tier 1: Ekonomika DNES -->
+        <div class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-8 flex flex-col justify-between shadow-sm hover:shadow-md transition-all">
+          <div class="space-y-6">
+            <div>
+              <span class="text-xs font-bold uppercase tracking-wider text-slate-500 font-mono">Základný slovenský servis</span>
+              <h3 class="text-2xl font-serif font-black text-slate-900 dark:text-white mt-1">Ekonomika DNES</h3>
+              <p class="text-xs text-slate-500 dark:text-slate-400 mt-2">Ideálne pre slovenské stredné a veľké podniky a domáci manažment.</p>
+            </div>
+
+            <div class="pt-2">
+              <div class="flex items-baseline gap-1">
+                <span id="price-sk" class="text-4xl font-black text-slate-900 dark:text-white font-mono">85 €</span>
+                <span class="text-xs text-slate-500">/ mesiac</span>
+              </div>
+              <p class="text-[11px] text-slate-400 mt-1">Cena bez DPH • bez viazanosti</p>
+            </div>
+
+            <ul class="space-y-2.5 text-xs text-slate-600 dark:text-slate-300">
+              <li class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-500 shrink-0"></i>
+                <span>Denný 1-stranový súhrn v slovenčine (08:00)</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-500 shrink-0"></i>
+                <span>Zasielanie na <strong>ľubovoľný počet e-mailov</strong> vo firme</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-500 shrink-0"></i>
+                <span>Príloha Nová legislatíva (1. v mesiaci)</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-500 shrink-0"></i>
+                <span>Príloha Kľúčové indikátory (15. v mesiaci)</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-500 shrink-0"></i>
+                <span>Kvartálny Makroekonomický prehľad</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-500 shrink-0"></i>
+                <span>Mesačný súhrn Investícií a M&A zmien</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="pt-8">
+            <button onclick="openTrialModal('Ekonomika DNES (SK)')" class="w-full py-3 text-xs font-bold uppercase tracking-wider text-slate-900 dark:text-white bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 rounded-xl transition-all">
+              Vyskúšať na 14 dní
+            </button>
+          </div>
+        </div>
+
+        <!-- Tier 2: Kombinovaný duálny balík (FEATURED) -->
+        <div class="bg-white dark:bg-slate-900 rounded-2xl border-2 border-brand-500 dark:border-brand-400 p-8 flex flex-col justify-between shadow-xl relative lg:-translate-y-2">
+          
+          <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-brand-600 text-white text-[11px] font-bold uppercase tracking-wider shadow-sm flex items-center gap-1">
+            <i data-lucide="zap" class="w-3.5 h-3.5 fill-current"></i> Najlepšia hodnota pre firmy
+          </div>
+
+          <div class="space-y-6">
+            <div>
+              <span class="text-xs font-bold uppercase tracking-wider text-brand-600 dark:text-brand-400 font-mono">Duálny korporátny balík</span>
+              <h3 class="text-2xl font-serif font-black text-slate-900 dark:text-white mt-1">SK + EN Full Access</h3>
+              <p class="text-xs text-slate-500 dark:text-slate-400 mt-2">Kompletné riešenie pre firmy s lokálnym i medzinárodným tímom.</p>
+            </div>
+
+            <div class="pt-2">
+              <div class="flex items-baseline gap-1">
+                <span id="price-dual" class="text-4xl font-black text-brand-600 dark:text-brand-400 font-mono">150 €</span>
+                <span class="text-xs text-slate-500">/ mesiac</span>
+              </div>
+              <p class="text-[11px] text-emerald-600 dark:text-emerald-400 font-semibold mt-1">Ušetríte 65 € mesačne oproti samostatným nákupom</p>
+            </div>
+
+            <ul class="space-y-2.5 text-xs text-slate-600 dark:text-slate-300">
+              <li class="flex items-center gap-2">
+                <i data-lucide="check-circle" class="w-4 h-4 text-brand-500 shrink-0"></i>
+                <span><strong>Ekonomika DNES</strong> (slovenská verzia, 08:00)</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i data-lucide="check-circle" class="w-4 h-4 text-brand-500 shrink-0"></i>
+                <span><strong>Slovak Business News TODAY</strong> (anglická verzia, 08:00)</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i data-lucide="check-circle" class="w-4 h-4 text-brand-500 shrink-0"></i>
+                <span><strong>Neobmedzený počet adries</strong> v celej spoločnosti</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i data-lucide="check-circle" class="w-4 h-4 text-brand-500 shrink-0"></i>
+                <span>Všetky 4 mesačné a kvartálne prílohy v <strong>SK aj EN</strong></span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i data-lucide="check-circle" class="w-4 h-4 text-brand-500 shrink-0"></i>
+                <span>Prednostné konzultácie a dopyty na analytika</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="pt-8">
+            <button onclick="openTrialModal('Duálny balík SK + EN')" class="w-full py-3.5 text-xs font-bold uppercase tracking-wider text-white bg-brand-600 hover:bg-brand-700 active:scale-[0.98] rounded-xl shadow-md shadow-brand-500/25 transition-all">
+              Aktivovať duálnu skúšku
+            </button>
+          </div>
+        </div>
+
+        <!-- Tier 3: Slovak Business News TODAY (EN) -->
+        <div class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-8 flex flex-col justify-between shadow-sm hover:shadow-md transition-all">
+          <div class="space-y-6">
+            <div>
+              <span class="text-xs font-bold uppercase tracking-wider text-slate-500 font-mono">Anglický servis</span>
+              <h3 class="text-2xl font-serif font-black text-slate-900 dark:text-white mt-1">SBN TODAY</h3>
+              <p class="text-xs text-slate-500 dark:text-slate-400 mt-2">Pre expatov, veľvyslanectvá, zahraničných konateľov a investorov.</p>
+            </div>
+
+            <div class="pt-2">
+              <div class="flex items-baseline gap-1">
+                <span id="price-en" class="text-4xl font-black text-slate-900 dark:text-white font-mono">130 €</span>
+                <span class="text-xs text-slate-500">/ mesiac</span>
+              </div>
+              <p class="text-[11px] text-slate-400 mt-1">Excl. VAT • unlimited internal recipients</p>
+            </div>
+
+            <ul class="space-y-2.5 text-xs text-slate-600 dark:text-slate-300">
+              <li class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-500 shrink-0"></i>
+                <span>Daily 1-page executive brief in pristine English (08:00)</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-500 shrink-0"></i>
+                <span>Distribution to <strong>any corporate email address</strong></span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-500 shrink-0"></i>
+                <span>Monthly New Legislation Report in English</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-500 shrink-0"></i>
+                <span>Monthly Key Economic Indicators Report</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-500 shrink-0"></i>
+                <span>Quarterly Macroeconomic Outlook & Forecasts</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-500 shrink-0"></i>
+                <span>Monthly Investments & M&A Overview</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="pt-8">
+            <button onclick="openTrialModal('Slovak Business News TODAY (EN)')" class="w-full py-3 text-xs font-bold uppercase tracking-wider text-slate-900 dark:text-white bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 rounded-xl transition-all">
+              Start 14-Day Free Trial
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- INTERACTIVE ROI / TIME-SAVINGS CALCULATOR -->
+      <div class="mt-16 max-w-4xl mx-auto p-8 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
+        <div class="text-center space-y-2 mb-8">
+          <span class="text-xs font-bold uppercase tracking-wider text-brand-600 dark:text-brand-400 font-mono">FIREMNÁ KALKULAČKA NÁVRATNOSTI</span>
+          <h4 class="text-2xl font-serif font-bold text-slate-900 dark:text-white">Koľko hodín a nákladov ušetrí Symsite Research vašej firme?</h4>
+          <p class="text-xs text-slate-500 dark:text-slate-400">Nastavte počet kľúčových manažérov vo vašej spoločnosti.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+          
+          <div class="md:col-span-6 space-y-4">
+            <div>
+              <div class="flex justify-between text-xs font-bold text-slate-700 dark:text-slate-200 mb-2">
+                <span>Počet manažérov / analytikov vo firme:</span>
+                <span id="slider-val" class="font-mono text-brand-600 dark:text-brand-400 text-sm">5 osôb</span>
+              </div>
+              <input type="range" id="manager-slider" min="1" max="50" value="5" oninput="updateRoiCalc(this.value)" class="w-full h-2 bg-slate-200 dark:bg-slate-700 rounded-lg appearance-none cursor-pointer accent-brand-600">
+              <div class="flex justify-between text-[10px] text-slate-400 mt-1">
+                <span>1 manažér</span>
+                <span>25 manažérov</span>
+                <span>50 manažérov</span>
+              </div>
+            </div>
+
+            <div class="text-xs text-slate-500 dark:text-slate-400 space-y-1">
+              <p>• Priemerná úspora na jedného manažéra: <strong>40 minút denne</strong> (prezeranie novín a webov).</p>
+              <p>• Konzervatívny odhad ceny pracovnej hodiny manažmentu: <strong>35 €/hod</strong>.</p>
+            </div>
+          </div>
+
+          <div class="md:col-span-6 grid grid-cols-2 gap-4">
+            <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-850 border border-slate-200 dark:border-slate-750 text-center">
+              <div class="text-xs text-slate-500 dark:text-slate-400 font-medium">Ušetrený čas tímu / mesiac</div>
+              <div id="calc-hours" class="text-3xl font-black text-brand-600 dark:text-brand-400 font-mono mt-1">67 hod</div>
+              <div class="text-[10px] text-slate-400 mt-0.5">produktívneho času</div>
+            </div>
+
+            <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-850 border border-slate-200 dark:border-slate-750 text-center">
+              <div class="text-xs text-slate-500 dark:text-slate-400 font-medium">Finančná hodnota úspory / rok</div>
+              <div id="calc-money" class="text-3xl font-black text-emerald-600 dark:text-emerald-400 font-mono mt-1">28 140 €</div>
+              <div class="text-[10px] text-emerald-600 dark:text-emerald-400 font-semibold mt-0.5">ROI: > 1 500%</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ABOUT SYMSITE RESEARCH & FOUNDER -->
+  <section id="o-nas" class="py-20 border-b border-slate-200/80 dark:border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <div class="lg:col-span-6 space-y-6">
+          <span class="text-xs font-bold uppercase tracking-widest text-brand-600 dark:text-brand-400 font-mono">
+            O SPOLOČNOSTI
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-serif font-black text-slate-900 dark:text-white tracking-tight leading-tight">
+            Nezávislá ekonomická analytická agentúra s tradíciou od roku 1994
+          </h2>
+
+          <div class="space-y-4 text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed font-serif">
+            <p>
+              <strong>Symsite Research spol. s r.o.</strong> bola založená v roku 1994 ako nezávislá analytická platforma. Naším poslaním je prinášať kvalitné, nefiltrované a vysoko exaktné informácie o slovenskom hospodárstve, podnikateľskom prostredí, sektorovom vývoji a bilanciách podnikov.
+            </p>
+            <p>
+              Už od roku 1998 sme oficiálnym slovenským partnerom prestížnej globálnej skupiny <strong>The Economist Intelligence Unit (EIU)</strong> so sídlom v Londýne, pre ktorú spracúvame komplexné analýzy krajiny určené pre nadnárodné inštitúcie a zahraničných investorov.
+            </p>
+            <p>
+              Od roku 2015 sme našu expertízu pretavili do ranných manažérskych prehľadov <strong>Ekonomika DNES</strong> a <strong>Slovak Business News TODAY</strong>, ktoré dnes patria k povinnej rannej výbave stoviek slovenských a zahraničných lídrov.
+            </p>
+          </div>
+
+          <div class="pt-4 grid grid-cols-2 gap-4 text-xs">
+            <div class="p-3 rounded-lg bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700">
+              <span class="text-slate-400 block font-mono">Právna forma:</span>
+              <strong class="text-slate-900 dark:text-white">Spoločnosť s ručením obmedzeným</strong>
+            </div>
+            <div class="p-3 rounded-lg bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700">
+              <span class="text-slate-400 block font-mono">Sídlo:</span>
+              <strong class="text-slate-900 dark:text-white">Limbach, Slovenská republika</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-6">
+          <div class="p-8 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-lg space-y-6">
+            
+            <div class="flex items-center gap-4">
+              <div class="w-16 h-16 rounded-full bg-slate-900 dark:bg-slate-800 text-white flex items-center justify-center font-serif font-black text-2xl border-2 border-brand-500 shadow-md shrink-0">
+                VD
+              </div>
+              <div>
+                <h4 class="text-xl font-serif font-bold text-slate-900 dark:text-white">Vladimír Dohnal</h4>
+                <p class="text-xs font-mono text-brand-600 dark:text-brand-400 font-semibold uppercase tracking-wider">Hlavný analytik a konateľ</p>
+                <p class="text-xs text-slate-400 mt-0.5">30+ rokov skúseností v makroanalýzach a kapitálovom trhu</p>
+              </div>
+            </div>
+
+            <blockquote class="text-sm text-slate-600 dark:text-slate-300 font-serif italic border-l-2 border-brand-500 pl-4 py-1 leading-relaxed">
+              „Naším cieľom nikdy nebolo vyprodukovať ďalší spravodajský portál s tisíckami nepodstatných článkov. Našou ambíciou je dať manažérovi pred začiatkom dňa do ruky jednu koncentrovanú stranu, ktorá mu umožní okamžite pochopiť súvislosti a urobiť správne rozhodnutie.“
+            </blockquote>
+
+            <div class="pt-4 border-t border-slate-100 dark:border-slate-800 space-y-2 text-xs">
+              <div class="flex items-center justify-between py-1 border-b border-slate-100 dark:border-slate-800/60">
+                <span class="text-slate-500">Priamy e-mail:</span>
+                <a href="mailto:vdohnal@symsite.sk" class="font-mono font-bold text-brand-600 dark:text-brand-400 hover:underline">vdohnal@symsite.sk</a>
+              </div>
+              <div class="flex items-center justify-between py-1 border-b border-slate-100 dark:border-slate-800/60">
+                <span class="text-slate-500">Mobil / Konzultácie:</span>
+                <a href="tel:+421905643055" class="font-mono font-bold text-slate-900 dark:text-white hover:underline">+421 905 643 055</a>
+              </div>
+              <div class="flex items-center justify-between py-1">
+                <span class="text-slate-500">Kancelária redakcie:</span>
+                <a href="mailto:businessnews@symsite.sk" class="font-mono text-slate-600 dark:text-slate-300 hover:underline">businessnews@symsite.sk</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT & CORPORATE REGISTRATION DETAILS -->
+  <section id="kontakt" class="py-20 bg-slate-50 dark:bg-slate-950/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        
+        <!-- Left: Official Corporate Data -->
+        <div class="lg:col-span-5 space-y-6">
+          <div>
+            <span class="text-xs font-bold uppercase tracking-widest text-brand-600 dark:text-brand-400 font-mono">KONTAKT & IDENTIFIKÁCIA</span>
+            <h2 class="text-3xl font-serif font-black text-slate-900 dark:text-white mt-1">Symsite Research spol. s r.o.</h2>
+            <p class="text-sm text-slate-500 dark:text-slate-400 mt-2">
+              Sme pripravení zodpovedať vaše otázky týkajúce sa predplatného, firemných multilicencií alebo individuálnych analýz na mieru.
+            </p>
+          </div>
+
+          <div class="space-y-3 text-xs sm:text-sm">
+            <div class="flex items-start gap-3 p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+              <i data-lucide="map-pin" class="w-5 h-5 text-brand-500 shrink-0 mt-0.5"></i>
+              <div>
+                <span class="font-bold text-slate-900 dark:text-white block">Sídlo spoločnosti:</span>
+                <span class="text-slate-600 dark:text-slate-300">Športová 63, 900 91 Limbach, Slovenská republika</span>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3 p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+              <i data-lucide="mail" class="w-5 h-5 text-brand-500 shrink-0 mt-0.5"></i>
+              <div>
+                <span class="font-bold text-slate-900 dark:text-white block">Elektronická pošta:</span>
+                <a href="mailto:businessnews@symsite.sk" class="text-brand-600 dark:text-brand-400 hover:underline block font-mono">businessnews@symsite.sk</a>
+                <a href="mailto:symsite@symsite.sk" class="text-slate-500 dark:text-slate-400 hover:underline block font-mono">symsite@symsite.sk</a>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3 p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+              <i data-lucide="phone" class="w-5 h-5 text-brand-500 shrink-0 mt-0.5"></i>
+              <div>
+                <span class="font-bold text-slate-900 dark:text-white block">Telefónny kontakt:</span>
+                <a href="tel:+421917517652" class="text-slate-700 dark:text-slate-200 font-mono hover:underline block">+421 917 517 652</a>
+                <a href="tel:+421905643055" class="text-slate-700 dark:text-slate-200 font-mono hover:underline block">+421 905 643 055</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Official Registry Box -->
+          <div class="p-4 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-xs font-mono space-y-1.5 text-slate-600 dark:text-slate-400">
+            <div class="flex justify-between"><span>IČO:</span> <strong class="text-slate-900 dark:text-white">35 745 479</strong></div>
+            <div class="flex justify-between"><span>DIČ:</span> <strong class="text-slate-900 dark:text-white">2020 230 102</strong></div>
+            <div class="flex justify-between"><span>IČ DPH:</span> <strong class="text-slate-900 dark:text-white">SK2020230102</strong></div>
+            <div class="flex justify-between pt-1 border-t border-slate-200 dark:border-slate-800">
+              <span>Zápis v OR:</span> 
+              <span class="text-right text-[11px]">MS Bratislava III, Oddiel: Sro, Vložka č. 17156/B</span>
+            </div>
+            <div class="flex justify-between pt-1 border-t border-slate-200 dark:border-slate-800">
+              <span>Banka:</span> 
+              <span>Tatra banka, a.s.</span>
+            </div>
+            <div class="flex justify-between">
+              <span>IBAN:</span> 
+              <strong class="text-slate-900 dark:text-white">SK61 1100 0000 0026 2902 8042</strong>
+            </div>
+            <div class="flex justify-between">
+              <span>BIC / SWIFT:</span> 
+              <strong class="text-slate-900 dark:text-white">TATRSKBX</strong>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right: Instant Contact / Free Trial Form -->
+        <div class="lg:col-span-7">
+          <div class="p-8 sm:p-10 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-md">
+            
+            <div class="mb-6 space-y-1">
+              <h3 class="text-2xl font-serif font-bold text-slate-900 dark:text-white">Napíšte nám alebo požiadajte o test</h3>
+              <p class="text-xs text-slate-500 dark:text-slate-400">Odpovedáme spravidla do 2 hodín počas pracovných dní.</p>
+            </div>
+
+            <form id="contact-form" onsubmit="handleContactSubmit(event)" class="space-y-4">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1">Meno a priezvisko *</label>
+                  <input type="text" required placeholder="Ing. Peter Novák" class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-brand-500 focus:outline-none transition-all">
+                </div>
+                <div>
+                  <label class="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1">Pracovný e-mail *</label>
+                  <input type="email" required placeholder="novak@spolocnost.sk" class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-brand-500 focus:outline-none transition-all">
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1">Názov spoločnosti *</label>
+                  <input type="text" required placeholder="Vaša firma, s.r.o. / a.s." class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-brand-500 focus:outline-none transition-all">
+                </div>
+                <div>
+                  <label class="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1">Telefónne číslo</label>
+                  <input type="tel" placeholder="+421 900 000 000" class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-brand-500 focus:outline-none transition-all">
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1">Mám záujem o produkt:</label>
+                <select class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-brand-500 focus:outline-none transition-all">
+                  <option value="dual">Kombinovaný duálny balík (SK + EN) — 14 dní bezplatne</option>
+                  <option value="sk">Ekonomika DNES (slovenská verzia) — 14 dní bezplatne</option>
+                  <option value="en">Slovak Business News TODAY (anglická verzia) — 14 dní bezplatne</option>
+                  <option value="custom">Individuálna sektorová analýza / Iný dopyt</option>
+                </select>
+              </div>
+
+              <div>
+                <label class="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1">Správa alebo zoznam e-mailových adries pre test</label>
+                <textarea rows="3" placeholder="Sem môžete uviesť doplňujúce otázky alebo e-maily kolegov, ktorí majú prehľad počas testu dostávať..." class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-brand-500 focus:outline-none transition-all"></textarea>
+              </div>
+
+              <div class="flex items-start gap-2 pt-1 text-xs text-slate-500 dark:text-slate-400">
+                <input type="checkbox" id="consent" required class="mt-0.5 rounded text-brand-600 focus:ring-brand-500">
+                <label for="consent">Súhlasím so spracovaním údajov za účelom vybavenia dopytu a zaslania skúšobného spravodajstva v súlade s GDPR.</label>
+              </div>
+
+              <button type="submit" class="w-full py-3.5 text-xs font-bold uppercase tracking-wider text-white bg-brand-600 hover:bg-brand-700 active:scale-[0.98] rounded-xl shadow-md shadow-brand-500/25 transition-all flex items-center justify-center gap-2">
+                <i data-lucide="send" class="w-4 h-4"></i>
+                <span>Odoslať dopyt / Aktivovať skúšobné zasielanie</span>
+              </button>
+
+              <div id="contact-feedback" class="hidden p-3 rounded-lg bg-emerald-50 dark:bg-emerald-950/80 border border-emerald-300 dark:border-emerald-800 text-emerald-800 dark:text-emerald-200 text-xs font-medium text-center">
+                ✓ Vaša správa bola úspešne zaznamenaná. Skúšobné zasielanie nastavíme od nasledujúceho pracovného dňa (08:00).
+              </div>
+            </form>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="mt-auto bg-slate-950 text-slate-400 text-xs border-t border-slate-800 py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 pb-10 border-b border-slate-800">
+        
+        <div class="md:col-span-5 space-y-3">
+          <div class="flex items-center gap-2 text-white font-bold text-base">
+            <span class="w-7 h-7 rounded bg-brand-600 text-white flex items-center justify-center font-serif text-sm">S</span>
+            <span>SYMSITE RESEARCH</span>
+          </div>
+          <p class="text-slate-400 text-xs leading-relaxed max-w-sm">
+            Nezávislá ekonomická analytická agentúra. Denný spravodajský a analytický servis pre lídrov slovenského a medzinárodného biznisu.
+          </p>
+          <div class="text-[11px] text-slate-500">
+            Partner <strong>The Economist Intelligence Unit</strong> od roku 1998.
+          </div>
+        </div>
+
+        <div class="md:col-span-2 space-y-2">
+          <div class="font-bold text-white uppercase text-[11px] tracking-wider font-mono">Spravodajstvo</div>
+          <ul class="space-y-1.5 text-xs">
+            <li><a href="#produkty" class="hover:text-white transition-colors">Ekonomika DNES</a></li>
+            <li><a href="#produkty" class="hover:text-white transition-colors">SBN TODAY (English)</a></li>
+            <li><a href="#ukazka" class="hover:text-white transition-colors">Ukážka ranného vydania</a></li>
+            <li><a href="#cennik" class="hover:text-white transition-colors">Cenník predplatného</a></li>
+          </ul>
+        </div>
+
+        <div class="md:col-span-2 space-y-2">
+          <div class="font-bold text-white uppercase text-[11px] tracking-wider font-mono">Prílohy</div>
+          <ul class="space-y-1.5 text-xs">
+            <li><a href="#prilohy" class="hover:text-white transition-colors">Nová legislatíva</a></li>
+            <li><a href="#prilohy" class="hover:text-white transition-colors">Kľúčové indikátory</a></li>
+            <li><a href="#prilohy" class="hover:text-white transition-colors">Makroekonomický prehľad</a></li>
+            <li><a href="#prilohy" class="hover:text-white transition-colors">Investície a majetkové zmeny</a></li>
+          </ul>
+        </div>
+
+        <div class="md:col-span-3 space-y-2">
+          <div class="font-bold text-white uppercase text-[11px] tracking-wider font-mono">Kontakt redakcie</div>
+          <p class="text-xs text-slate-400">Športová 63, 900 91 Limbach, SR</p>
+          <p class="font-mono text-xs text-brand-400">businessnews@symsite.sk</p>
+          <p class="font-mono text-xs text-slate-300">+421 917 517 652</p>
+          <p class="text-[11px] text-slate-500 pt-1">IČO: 35 745 479 • IČ DPH: SK2020230102</p>
+        </div>
+
+      </div>
+
+      <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-slate-500">
+        <div>
+          Copyright &copy; 1994 &ndash; <span id="current-year">2026</span> Symsite Research spol. s r.o. Všetky práva vyhradené.
+        </div>
+        <div class="flex items-center gap-4">
+          <a href="#o-nas" class="hover:text-slate-300">O spoločnosti</a>
+          <a href="#kontakt" class="hover:text-slate-300">Ochrana osobných údajov</a>
+          <a href="#kontakt" class="hover:text-slate-300">Všeobecné podmienky</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- MODAL: 14-DAY FREE TRIAL REGISTRATION -->
+  <div id="trial-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-black/60 backdrop-blur-xs">
+    <div class="relative w-full max-w-lg bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-2xl p-6 sm:p-8 space-y-5 animate-in fade-in zoom-in-95 duration-150">
+      
+      <button onclick="closeTrialModal()" class="absolute top-4 right-4 p-1.5 rounded-lg text-slate-400 hover:text-slate-700 dark:hover:text-white bg-slate-100 dark:bg-slate-800 transition-colors">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <div>
+        <div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-brand-50 text-brand-700 dark:bg-brand-950 dark:text-brand-300 text-[11px] font-bold uppercase tracking-wider mb-2">
+          <i data-lucide="sparkles" class="w-3.5 h-3.5"></i> Bezplatný manažérsky test
+        </div>
+        <h3 class="text-2xl font-serif font-black text-slate-900 dark:text-white">Aktivujte si 14 dní bezplatne</h3>
+        <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">
+          Začnite každé ráno o 8:00 s kľúčovým prehľadom vo vašej schránke. Žiadna platobná karta, žiadne záväzky.
+        </p>
+      </div>
+
+      <form onsubmit="handleTrialSubmit(event)" class="space-y-3.5 text-xs">
+        <div>
+          <label class="block font-semibold text-slate-700 dark:text-slate-300 mb-1">Vybraný produkt / edícia</label>
+          <select id="modal-product-select" class="w-full px-3 py-2 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white text-xs font-medium focus:ring-2 focus:ring-brand-500 focus:outline-none">
+            <option value="dual">Duálny balík (SK + EN) — Odporúčané</option>
+            <option value="sk">Ekonomika DNES (slovenská verzia)</option>
+            <option value="en">Slovak Business News TODAY (anglická verzia)</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block font-semibold text-slate-700 dark:text-slate-300 mb-1">Meno a funkcia *</label>
+          <input type="text" required placeholder="napr. Martin Horváth, CFO" class="w-full px-3 py-2 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white text-xs focus:ring-2 focus:ring-brand-500 focus:outline-none">
+        </div>
+
+        <div>
+          <label class="block font-semibold text-slate-700 dark:text-slate-300 mb-1">Firemný e-mail pre zasielanie *</label>
+          <input type="email" required placeholder="horvath@firma.sk" class="w-full px-3 py-2 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white text-xs focus:ring-2 focus:ring-brand-500 focus:outline-none">
+          <p class="text-[10px] text-slate-400 mt-0.5">Pre viac adries v tíme uveďte ďalšie e-maily oddelené čiarkou.</p>
+        </div>
+
+        <div>
+          <label class="block font-semibold text-slate-700 dark:text-slate-300 mb-1">Názov spoločnosti *</label>
+          <input type="text" required placeholder="Názov vašej firmy" class="w-full px-3 py-2 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white text-xs focus:ring-2 focus:ring-brand-500 focus:outline-none">
+        </div>
+
+        <div class="pt-2">
+          <button type="submit" class="w-full py-3 text-xs font-bold uppercase tracking-wider text-white bg-brand-600 hover:bg-brand-700 active:scale-[0.98] rounded-xl shadow-md shadow-brand-500/25 transition-all">
+            Spustiť 14-dňový bezplatný test
+          </button>
+        </div>
+
+        <div id="trial-feedback" class="hidden p-3 rounded-lg bg-emerald-50 dark:bg-emerald-950 border border-emerald-300 dark:border-emerald-800 text-emerald-800 dark:text-emerald-200 text-center font-semibold">
+          ✓ Skúšobné zasielanie bolo úspešne aktivované! Prvé ranné vydanie dostanete zajtra o 08:00.
+        </div>
+      </form>
+
+    </div>
+  </div>
+
+  <!-- MODAL: SUPPLEMENT PREVIEW DETAILS -->
+  <div id="supplement-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-black/60 backdrop-blur-xs">
+    <div class="relative w-full max-w-2xl bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-2xl p-6 sm:p-8 space-y-5 animate-in fade-in zoom-in-95 duration-150 max-h-[90vh] overflow-y-auto">
+      
+      <button onclick="closeSupplementModal()" class="absolute top-4 right-4 p-1.5 rounded-lg text-slate-400 hover:text-slate-700 dark:hover:text-white bg-slate-100 dark:bg-slate-800 transition-colors">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <div id="supplement-modal-content">
+        <!-- Dynamically injected -->
+      </div>
+
+      <div class="pt-4 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between">
+        <span class="text-xs text-slate-500">Všetky 4 prílohy sú automaticky zahrnuté v cene predplatného.</span>
+        <button onclick="closeSupplementModal(); openTrialModal()" class="px-4 py-2 text-xs font-bold uppercase tracking-wider text-white bg-brand-600 hover:bg-brand-700 rounded-lg">
+          Vyskúšať v praxi
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- SCRIPTS: Theme Toggle, Language Switch, Dynamic Calculators, Modals -->
+  <script>
+    // Initialize current year
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+
+    // 1. THEME SWITCHER (Dark & Light)
+    function initTheme() {
+      const storedTheme = localStorage.getItem('symsite_theme');
+      if (storedTheme === 'dark' || (!storedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    }
+    initTheme();
+
+    function toggleTheme() {
+      document.documentElement.classList.add('transition-theme');
+      const isDark = document.documentElement.classList.contains('dark');
+      if (isDark) {
+        document.documentElement.classList.remove('dark');
+        localStorage.setItem('symsite_theme', 'light');
+      } else {
+        document.documentElement.classList.add('dark');
+        localStorage.setItem('symsite_theme', 'dark');
+      }
+      setTimeout(() => {
+        document.documentElement.classList.remove('transition-theme');
+      }, 300);
+      if (window.lucide) { lucide.createIcons(); }
+    }
+
+    // 2. MOBILE MENU
+    function toggleMobileMenu() {
+      const nav = document.getElementById('mobile-nav');
+      nav.classList.toggle('hidden');
+    }
+
+    // 3. BILLING PERIOD TOGGLE & DYNAMIC PRICING
+    let currentBilling = 'monthly';
+    function setBillingPeriod(period) {
+      currentBilling = period;
+      const monthlyBtn = document.getElementById('billing-monthly-btn');
+      const annualBtn = document.getElementById('billing-annual-btn');
+      const priceSk = document.getElementById('price-sk');
+      const priceDual = document.getElementById('price-dual');
+      const priceEn = document.getElementById('price-en');
+
+      if (period === 'annual') {
+        monthlyBtn.className = "px-4 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-all";
+        annualBtn.className = "px-4 py-2 rounded-lg bg-white dark:bg-slate-700 text-slate-900 dark:text-white shadow-xs transition-all flex items-center gap-1.5";
+        priceSk.textContent = "72 €";
+        priceDual.textContent = "127 €";
+        priceEn.textContent = "110 €";
+      } else {
+        monthlyBtn.className = "px-4 py-2 rounded-lg bg-white dark:bg-slate-700 text-slate-900 dark:text-white shadow-xs transition-all";
+        annualBtn.className = "px-4 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-all flex items-center gap-1.5";
+        priceSk.textContent = "85 €";
+        priceDual.textContent = "150 €";
+        priceEn.textContent = "130 €";
+      }
+    }
+
+    // 4. INTERACTIVE ROI CALCULATOR
+    function updateRoiCalc(val) {
+      document.getElementById('slider-val').textContent = val + (val == 1 ? ' osoba' : (val < 5 ? ' osoby' : ' osôb'));
+      // 40 mins/day * 21 days = ~14 hours/manager/month saved
+      const hoursSavedPerMonth = Math.round(val * 13.4);
+      // Cost of manager hour ~ 35€ * 12 months
+      const annualValueSaved = Math.round(hoursSavedPerMonth * 35 * 12);
+      
+      document.getElementById('calc-hours').textContent = hoursSavedPerMonth + ' hod';
+      document.getElementById('calc-money').textContent = annualValueSaved.toLocaleString('sk-SK') + ' €';
+    }
+
+    // 5. INTERACTIVE BRIEFING VIEWER (SK / EN Switch & Category Filter)
+    let currentBriefLang = 'sk';
+    const briefArticles = {
+      sk: [
+        {
+          cat: 'makro',
+          catLabel: 'Hospodárska politika',
+          catBadge: 'bg-blue-100 text-blue-800 dark:bg-blue-950 dark:text-blue-300',
+          time: '07:45 ráno',
+          title: 'Konsolidačný balíček 2025: Finálne znenie pravidiel pre novú daň z finančných transakcií',
+          summary: 'Ministerstvo financií SR zverejnilo záväzné metodické usmernenie k uplatňovaniu dane z finančných transakcií platnej od 1. apríla 2025. Podnikatelia a korporácie budú platiť sadzbu 0,40 % z každej debetnej transakcie (maximálne 40 eur na transakciu) a 0,80 % pri výbere hotovosti bez stropu. Výnimku získali vnútrofiremné prevody medzi účtami toho istého daňovníka v rámci jednej banky.',
+          context: 'Opatrenie prinesie do štátneho rozpočtu odhadom 650 mil. eur, no pre stredné a veľké podniky znamená dodatočný fixný náklad na úrovni 0,2–0,5 % obratu v závislosti od frekvencie B2B platieb. Odporúčame revíziu cash-poolingu.',
+          sources: 'MF SR • Zbierka zákonov SR • Slovenská banková asociácia'
+        },
+        {
+          cat: 'biznis',
+          catLabel: 'Technológie & Investície',
+          catBadge: 'bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300',
+          time: '07:20 ráno',
+          title: 'WeRide dostal oficiálne povolenie na skúšobnú prevádzku robotaxíka v uliciach Bratislavy',
+          summary: 'Globálna technologická spoločnosť WeRide, líder v autonómnej jazde, získala od Ministerstva dopravy SR povolenie na testovanie autonómnych vozidiel na verejných komunikáciách v hlavnom meste. Testovacia fáza začne s bezpečnostným vodičom na sedadle spolujazdca v širšom centre Bratislavy s cieľom preveriť integráciu s mestskou mobilitou.',
+          context: 'Slovensko vysiela pozitívny signál smerom k testovaniu inovatívnych automotive technológií. Tento krok zapadá do stratégie prilákania technologických centier s vysokou pridanou hodnotou a nadväzuje na investície v automotive sektore.',
+          sources: 'MDV SR • Agentúra SITA • WeRide Global PR'
+        },
+        {
+          cat: 'pravo',
+          catLabel: 'Súdne konania & Majetok',
+          catBadge: 'bg-rose-100 text-rose-800 dark:bg-rose-950 dark:text-rose-300',
+          time: '06:50 ráno',
+          title: 'Erik Mikurčík dostal vysoký trest v kauze hotela Carlton: Rozhodnutie spečatilo kontrolu nad komplexom',
+          summary: 'Špecializovaný trestný súd uznal Erika Mikurčíka vinným v dlhoročnom spore o ovládnutie ikonického hotelového komplexu Carlton v Bratislave a uložil mu nepodmienečný trest odňatia slobody. Rozhodnutie potvrdzuje nároky partnerov z Esetu (Rudolf Hrubý a Maroš Grund) a uzatvára kľúčovú kapitolu v jednom z najsledovanejších slovenských korporátnych sporov.',
+          context: 'Verdikt prináša právnu istotu pre financujúce bankové domy a otvára priestor na ďalší rozvoj a rekonštrukciu priľahlých administratívnych a obchodných plôch Carlton Savoy.',
+          sources: 'ŠTS Pezinok • Denník N • Obchodný vestník'
+        },
+        {
+          cat: 'biznis',
+          catLabel: 'Mediálny trh & Telco',
+          catBadge: 'bg-purple-100 text-purple-800 dark:bg-purple-950 dark:text-purple-300',
+          time: '06:30 ráno',
+          title: 'Voyo sa stalo trhovou dvojkou na Slovensku hneď po globálnom Netflixe',
+          summary: 'Streamovacia platforma skupiny CME (Markíza) dosiahla historický míľnik a v počte predplatiteľov na slovenskom a českom trhu predbehla HBO Max i Disney+. Rast je ťahaný lokálnou pôvodnou produkciou, exkluzívnym športovým obsahom vrátane Niké ligy a strategickými balíčkami s telekomunikačnými operátormi.',
+          context: 'Lokálny obsah dokáže úspešne konkurovať globálnym knižniciam, ak je podporený silnou distribúciou cez telco operátorov.',
+          sources: 'CME Group • Stratégie • Mediálne.sk'
+        }
+      ],
+      en: [
+        {
+          cat: 'makro',
+          catLabel: 'Economic Policy & Taxes',
+          catBadge: 'bg-blue-100 text-blue-800 dark:bg-blue-950 dark:text-blue-300',
+          time: '07:45 AM',
+          title: 'Fiscal Consolidation: Final Guidelines Issued for Slovakia’s Financial Transaction Tax',
+          summary: 'The Ministry of Finance released official implementation rules for the upcoming Financial Transaction Tax effective April 1, 2025. Corporate entities and entrepreneurs will incur a 0.40% levy on all debit transactions (capped at €40 per transaction) and 0.80% on cash withdrawals without a cap. Internal treasury transfers between accounts belonging to the same entity within one domestic bank are fully exempt.',
+          context: 'Symsite Intelligence Take: The levy will generate approximately €650m for state coffers, representing an added operating cost of 0.2%–0.5% of turnover depending on payment volumes. CFOs should urgently optimize automated intra-group cash pooling.',
+          sources: 'Ministry of Finance • Collection of Laws • Slovak Banking Association'
+        },
+        {
+          cat: 'biznis',
+          catLabel: 'Tech & Mobility',
+          catBadge: 'bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300',
+          time: '07:20 AM',
+          title: 'WeRide Receives Official Regulatory Permit for Robotaxi Road Testing in Bratislava',
+          summary: 'Global autonomous driving leader WeRide has secured regulatory clearance from Slovakia’s Ministry of Transport to test its autonomous passenger vehicles on public roads in Bratislava. The initial phase deploys safety operators on passenger seats across central urban routes to validate vehicle-to-infrastructure communication and urban navigation.',
+          context: 'Symsite Intelligence Take: Slovakia becomes the first CEE nation to host live Level 4 autonomous fleet trials, signaling openness to next-generation automotive R&D beyond traditional vehicle assembly.',
+          sources: 'Ministry of Transport • TASR • WeRide Investor Relations'
+        },
+        {
+          cat: 'pravo',
+          catLabel: 'Corporate Litigation',
+          catBadge: 'bg-rose-100 text-rose-800 dark:bg-rose-950 dark:text-rose-300',
+          time: '06:50 AM',
+          title: 'Carlton Hotel Ownership Dispute Resolved: Former Co-owner Handed Prison Sentence',
+          summary: 'The Specialised Criminal Court found Erik Mikurčík guilty of attempted fraud in the protracted battle over ownership of Bratislava’s landmark Carlton hotel and office complex. The verdict cements control for Eset co-founders Maroš Grund and the estate of Rudolf Hrubý, ending eight years of legal uncertainty surrounding the prime real estate asset.',
+          context: 'Symsite Intelligence Take: The legal resolution unlocks refinancing options with senior lenders and clears the path for planned modernization of the prime Carlton Savoy commercial wing.',
+          sources: 'Specialised Criminal Court • Denník N • Commercial Gazette'
+        },
+        {
+          cat: 'biznis',
+          catLabel: 'Media & Streaming',
+          catBadge: 'bg-purple-100 text-purple-800 dark:bg-purple-950 dark:text-purple-300',
+          time: '06:30 AM',
+          title: 'Voyo Surpasses HBO Max and Disney+ to Claim #2 Streaming Position in Slovakia',
+          summary: 'CME Group’s domestic streaming service Voyo has outpaced international giants HBO Max and Disney+ in paid subscriber count across Slovakia and Czechia, trailing only Netflix. Growth was accelerated by proprietary local fiction drama series and exclusive top-tier domestic football coverage.',
+          context: 'Symsite Intelligence Take: Shows high resilience of locally contextualized media content when bundled synergistically with major telecommunication operators.',
+          sources: 'CME Group Reports • Trend • Market Tracking'
+        }
+      ]
+    };
+
+    function renderBriefArticles(filter = 'all') {
+      const container = document.getElementById('briefing-articles-container');
+      const list = briefArticles[currentBriefLang];
+      
+      const filtered = filter === 'all' ? list : list.filter(item => item.cat === filter);
+      
+      container.innerHTML = filtered.map(item => `
+        <article class="brief-item pt-6 first:pt-0" data-category="${item.cat}">
+          <div class="flex items-center justify-between text-xs mb-2">
+            <div class="flex items-center gap-2">
+              <span class="px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider ${item.catBadge}">
+                ${item.catLabel}
+              </span>
+              <span class="text-slate-400 font-mono">${item.time}</span>
+            </div>
+            <span class="text-slate-400 text-xs flex items-center gap-1">
+              <i data-lucide="clock" class="w-3.5 h-3.5"></i> ~1 min
+            </span>
+          </div>
+          
+          <h3 class="text-lg sm:text-xl font-serif font-bold text-slate-900 dark:text-white leading-snug">
+            ${item.title}
+          </h3>
+          
+          <p class="text-sm text-slate-600 dark:text-slate-300 mt-2 leading-relaxed">
+            ${item.summary}
+          </p>
+
+          <div class="mt-3 p-3 rounded-lg bg-slate-50 dark:bg-slate-800/60 border-l-4 border-brand-500 text-xs text-slate-600 dark:text-slate-300 space-y-1">
+            <span class="font-bold text-slate-900 dark:text-white flex items-center gap-1.5">
+              <i data-lucide="lightbulb" class="w-3.5 h-3.5 text-amber-500"></i> ${currentBriefLang === 'en' ? 'Symsite Intelligence Take:' : 'Kontext Symsite Research:'}
+            </span>
+            <p>${item.context}</p>
+          </div>
+
+          <div class="mt-3 flex items-center justify-between text-xs text-slate-500 dark:text-slate-400">
+            <div class="flex items-center gap-2">
+              <span>${currentBriefLang === 'en' ? 'Verified sources:' : 'Overené primárne zdroje:'}</span>
+              <span class="font-semibold text-slate-700 dark:text-slate-300">${item.sources}</span>
+            </div>
+            <span class="text-brand-600 dark:text-brand-400 hover:underline cursor-pointer flex items-center gap-1">
+              ${currentBriefLang === 'en' ? 'Full brief details' : 'Zobraziť celý detail'} <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+            </span>
+          </div>
+        </article>
+      `).join('');
+
+      if (window.lucide) { lucide.createIcons(); }
+    }
+
+    function switchBriefTab(lang) {
+      currentBriefLang = lang;
+      const tabSk = document.getElementById('brief-tab-sk');
+      const tabEn = document.getElementById('brief-tab-en');
+
+      if (lang === 'en') {
+        tabEn.className = "px-4 py-2 rounded-lg bg-white dark:bg-slate-700 text-slate-900 dark:text-white shadow-xs transition-all flex items-center gap-2";
+        tabSk.className = "px-4 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-all flex items-center gap-2";
+      } else {
+        tabSk.className = "px-4 py-2 rounded-lg bg-white dark:bg-slate-700 text-slate-900 dark:text-white shadow-xs transition-all flex items-center gap-2";
+        tabEn.className = "px-4 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-all flex items-center gap-2";
+      }
+      renderBriefArticles('all');
+    }
+
+    function filterBriefArticles(cat) {
+      const btns = document.querySelectorAll('.brief-filter-btn');
+      btns.forEach(btn => {
+        btn.className = "brief-filter-btn px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-600 dark:text-slate-300 text-xs";
+      });
+      event.target.className = "brief-filter-btn px-3 py-1.5 rounded-lg bg-slate-900 text-white dark:bg-brand-600 dark:text-white text-xs font-semibold";
+      renderBriefArticles(cat);
+    }
+
+    // 6. SUPPLEMENT DETAIL MODAL
+    const supplementDetails = {
+      legislativa: {
+        title: "Nová legislatíva — Mesačná príloha",
+        date: "Doručovaná 1. dňa v mesiaci",
+        content: `
+          <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-4">
+            Prehľad všetkých noviel zákonov, nariadení a smerníc, ktoré schválila Národná rada SR a vláda SR za predchádzajúci mesiac.
+          </p>
+          <div class="space-y-3 text-xs">
+            <div class="p-3 bg-slate-50 dark:bg-slate-800 rounded-lg border border-slate-200 dark:border-slate-700">
+              <strong class="text-slate-900 dark:text-white block mb-1">Obsah a štruktúra prílohy:</strong>
+              <ul class="list-disc list-inside space-y-1 text-slate-600 dark:text-slate-300">
+                <li>Stručný syntetický zoznam schválených právnych predpisov</li>
+                <li>Dátum nadobudnutia účinnosti jednotlivých ustanovení</li>
+                <li>Komentár analytika k dopadom na podnikateľské prostredie a zamestnávateľov</li>
+                <li>Priame odkazy na čiastky Zbierky zákonov SR</li>
+              </ul>
+            </div>
+            <p class="text-slate-500 dark:text-slate-400">Ideálne pre firemných právnikov, HR riaditeľov a konateľov spoločností.</p>
+          </div>
+        `
+      },
+      indikatory: {
+        title: "Kľúčové ekonomické indikátory — Mesačná príloha",
+        date: "Doručovaná 15. dňa v mesiaci",
+        content: `
+          <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-4">
+            Komplexná konsolidácia všetkých makroekonomických dát zverejnených Štatistickým úradom SR, NBS a Eurostatom.
+          </p>
+          <div class="space-y-3 text-xs">
+            <div class="p-3 bg-slate-50 dark:bg-slate-800 rounded-lg border border-slate-200 dark:border-slate-700">
+              <strong class="text-slate-900 dark:text-white block mb-1">Sledované ukazovatele:</strong>
+              <ul class="list-disc list-inside space-y-1 text-slate-600 dark:text-slate-300">
+                <li>Rast HDP a príspevok jednotlivých odvetví k tvorbe hodnôt</li>
+                <li>Miera inflácie (národná CPI aj harmonizovaná HICP)</li>
+                <li>Priemyselná a stavebná produkcia, nové objednávky</li>
+                <li>Miera evidovanej nezamestnanosti a voľné pracovné miesta</li>
+                <li>Vývoj reálnych a nominálnych miezd podľa sektorov</li>
+                <li>Bilancia zahraničného obchodu a bežného účtu platobnej bilancie</li>
+              </ul>
+            </div>
+            <p class="text-slate-500 dark:text-slate-400">Nenahraditeľný podklad pre controlling, tvorbu ročných rozpočtov a mzdové vyjednávania.</p>
+          </div>
+        `
+      },
+      makro: {
+        title: "Makroekonomický prehľad — Štvrťročná príloha",
+        date: "Doručovaná 1. dňa kalendárneho štvrťroka",
+        content: `
+          <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-4">
+            Syntéza uplynulého štvrťroka s výhľadom na ďalšie kvartály. Vychádza z metodiky používanej pri analýzach pre The Economist Intelligence Unit.
+          </p>
+          <div class="space-y-3 text-xs">
+            <div class="p-3 bg-slate-50 dark:bg-slate-800 rounded-lg border border-slate-200 dark:border-slate-700">
+              <strong class="text-slate-900 dark:text-white block mb-1">Obsah prognostického reportu:</strong>
+              <ul class="list-disc list-inside space-y-1 text-slate-600 dark:text-slate-300">
+                <li>Komentovaný súhrn politických a fiškálnych rozhodnutí s dosahom na trh</li>
+                <li>Predpoveď kľúčových parametrov (HDP, inflácia, menové kurzy, úrokové sadzby)</li>
+                <li>Analýza globálnych a európskych vplyvov (Nemecko, automotive reťazec, ceny energií)</li>
+                <li>Scenár rizík a odporúčania pre riadenie expozície voči volatilite</li>
+              </ul>
+            </div>
+          </div>
+        `
+      },
+      investicie: {
+        title: "Investície a majetkové zmeny — Mesačná príloha",
+        date: "Doručovaná 1. dňa v mesiaci",
+        content: `
+          <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-4">
+            Detailný zoznam a analýza všetkých kapitálových transakcií v podnikoch pôsobiacich na území SR.
+          </p>
+          <div class="space-y-3 text-xs">
+            <div class="p-3 bg-slate-50 dark:bg-slate-800 rounded-lg border border-slate-200 dark:border-slate-700">
+              <strong class="text-slate-900 dark:text-white block mb-1">Čo report pokrýva:</strong>
+              <ul class="list-disc list-inside space-y-1 text-slate-600 dark:text-slate-300">
+                <li>Fúzie a akvizície (M&A) v slovenskej korporátnej sfére</li>
+                <li>Ohlásené nové investície domácich aj zahraničných subjektov (greenfield & brownfield)</li>
+                <li>Zmeny akcionárskych štruktúr a vstupy strategických / finančných investorov</li>
+                <li>Štátna investičná pomoc a daňové úľavy schválené vládou</li>
+              </ul>
+            </div>
+            <p class="text-slate-500 dark:text-slate-400">Kľúčový nástroj pre M&A poradcov, investičných bankárov a rozvoj podnikania.</p>
+          </div>
+        `
+      }
+    };
+
+    function openSupplementModal(key) {
+      const data = supplementDetails[key];
+      if (!data) return;
+      const container = document.getElementById('supplement-modal-content');
+      container.innerHTML = `
+        <div class="flex items-center justify-between text-xs font-mono text-brand-600 dark:text-brand-400 mb-2">
+          <span>PRAVIDELNÁ PRÍLOHA V CENE</span>
+          <span>${data.date}</span>
+        </div>
+        <h3 class="text-2xl font-serif font-black text-slate-900 dark:text-white mb-2">${data.title}</h3>
+        ${data.content}
+      `;
+      document.getElementById('supplement-modal').classList.remove('hidden');
+    }
+
+    function closeSupplementModal() {
+      document.getElementById('supplement-modal').classList.add('hidden');
+    }
+
+    // 7. TRIAL & CONTACT MODALS
+    function openTrialModal(productName = '') {
+      const modal = document.getElementById('trial-modal');
+      const select = document.getElementById('modal-product-select');
+      if (productName.includes('English') || productName.includes('TODAY')) {
+        select.value = 'en';
+      } else if (productName.includes('DNES')) {
+        select.value = 'sk';
+      } else {
+        select.value = 'dual';
+      }
+      modal.classList.remove('hidden');
+    }
+
+    function closeTrialModal() {
+      document.getElementById('trial-modal').classList.add('hidden');
+    }
+
+    function handleTrialSubmit(e) {
+      e.preventDefault();
+      const feedback = document.getElementById('trial-feedback');
+      feedback.classList.remove('hidden');
+      setTimeout(() => {
+        closeTrialModal();
+        feedback.classList.add('hidden');
+        alert("Ďakujeme! Vaše 14-dňové bezplatné zasielanie bolo úspešne zaregistrované. Ranný briefing vám zašleme zajtra o 08:00.");
+      }, 1500);
+    }
+
+    function handleContactSubmit(e) {
+      e.preventDefault();
+      const feedback = document.getElementById('contact-feedback');
+      feedback.classList.remove('hidden');
+      setTimeout(() => {
+        e.target.reset();
+        feedback.classList.add('hidden');
+        alert("Ďakujeme! Vaša správa bola zaznamenaná. Náš tím sa vám ozve do 2 hodín.");
+      }, 2000);
+    }
+
+    // 8. MULTI-LANGUAGE SWITCHER (SK / EN)
+    const translations = {
+      sk: {
+        "nav.trial": "Skúšobné zasielanie",
+        "hero.badge": "Nezávislá ekonomická analytická agentúra od roku 1994",
+        "hero.title1": "Aby vám nič neuniklo.",
+        "hero.title2": "A nemuseli ste čítať nič navyše.",
+        "hero.subhead": "Každé pracovné ráno presne o 8:00 dostanete do e-mailu jedinú stranu kľúčových informácií zo slovenského biznisu, hospodárskej politiky a legislatívy. Vhodný kontext, jasné fakty a prepojenia na pôvodné overené zdroje.",
+        "hero.stat1": "Rokov na trhu",
+        "hero.stat2": "3 minúty čítania",
+        "hero.stat3": "Manažérov denne",
+        "hero.stat4": "Klientov 10+ rokov",
+        "hero.ctaPrimary": "Vyskúšať na 14 dní bezplatne",
+        "hero.ctaSecondary": "Prezrieť rannú ukážku",
+        "hero.noObligation": "Nezáväzne. Bez nutnosti kreditnej karty. Zasielanie na ľubovoľný počet adries v tíme."
+      },
+      en: {
+        "nav.trial": "Free 14-Day Trial",
+        "hero.badge": "Independent Economic Intelligence Agency Since 1994",
+        "hero.title1": "Never miss what matters.",
+        "hero.title2": "Never waste time on the rest.",
+        "hero.subhead": "Every business morning at 8:00 AM sharp, receive a single concise page covering vital Slovak corporate moves, macroeconomic shifts, and regulatory decisions. Pristine context, facts, and links to primary sources.",
+        "hero.stat1": "Years on the market",
+        "hero.stat2": "3 minutes read",
+        "hero.stat3": "Daily executives",
+        "hero.stat4": "Clients 10+ years",
+        "hero.ctaPrimary": "Start 14-Day Free Trial",
+        "hero.ctaSecondary": "View Morning Briefing",
+        "hero.noObligation": "No credit card required. Unlimited recipients within your corporate domain."
+      }
+    };
+
+    function setLanguage(lang) {
+      const skBtn = document.getElementById('lang-sk-btn');
+      const enBtn = document.getElementById('lang-en-btn');
+
+      if (lang === 'en') {
+        skBtn.className = "px-2.5 py-1 rounded-md transition-all text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white";
+        enBtn.className = "px-2.5 py-1 rounded-md transition-all shadow-sm bg-white dark:bg-slate-700 text-slate-900 dark:text-white";
+        document.documentElement.lang = "en";
+      } else {
+        enBtn.className = "px-2.5 py-1 rounded-md transition-all text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white";
+        skBtn.className = "px-2.5 py-1 rounded-md transition-all shadow-sm bg-white dark:bg-slate-700 text-slate-900 dark:text-white";
+        document.documentElement.lang = "sk";
+      }
+
+      const dict = translations[lang];
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (dict[key]) {
+          el.innerHTML = dict[key];
+        }
+      });
+
+      // Synchronize briefing tab if appropriate
+      if (lang === 'en') {
+        switchBriefTab('en');
+      } else {
+        switchBriefTab('sk');
+      }
+    }
+
+    // Close modals on ESC or backdrop click
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeTrialModal();
+        closeSupplementModal();
+      }
+    });
+
+    document.getElementById('trial-modal').addEventListener('click', (e) => {
+      if (e.target === document.getElementById('trial-modal')) closeTrialModal();
+    });
+    document.getElementById('supplement-modal').addEventListener('click', (e) => {
+      if (e.target === document.getElementById('supplement-modal')) closeSupplementModal();
+    });
+
+    // Initialize Lucide icons on load
+    window.addEventListener('DOMContentLoaded', () => {
+      if (window.lucide) {
+        lucide.createIcons();
+      }
+      renderBriefArticles('all');
+    });
+  </script>
+</body>
+</html>
