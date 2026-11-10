@@ -1,0 +1,752 @@
+[
+  {
+    "name": "Anemometre",
+    "level": 0,
+    "href": "https://pristroje.sk/product-category/anemometre/",
+    "count": 4
+  },
+  {
+    "name": "Bodové a čiarové lasery",
+    "level": 0,
+    "href": "https://pristroje.sk/product-category/bodove-a-ciarove-lasery/",
+    "count": 2
+  },
+  {
+    "name": "Detektory plynov",
+    "level": 0,
+    "href": "https://pristroje.sk/product-category/detektory-plynov/",
+    "count": 11
+  },
+  {
+    "name": "Diaľkomery",
+    "level": 0,
+    "href": "https://pristroje.sk/product-category/dialkomery/",
+    "count": 27
+  },
+  {
+    "name": "Diaľkomery – príslušenstvo",
+    "level": 1,
+    "href": "https://pristroje.sk/product-category/dialkomery/dialkomery-prislusenstvo/",
+    "count": 9
+  },
+  {
+    "name": "GPS",
+    "level": 1,
+    "href": "https://pristroje.sk/product-category/dialkomery/gps/",
+    "count": 2
+  },
+  {
+    "name": "Laserové diaľkomery",
+    "level": 1,
+    "href": "https://pristroje.sk/product-category/dialkomery/laserove-dialkomery/",
+    "count": 11
+  },
+  {
+    "name": "Ultrazvukové diaľkomery",
+    "level": 1,
+    "href": "https://pristroje.sk/product-category/dialkomery/ultrazvukove-dialkomery/",
+    "count": 5
+  },
+  {
+    "name": "Hladinomery",
+    "level": 0,
+    "href": "https://pristroje.sk/product-category/hladinomery/",
+    "count": 18
+  },
+  {
+    "name": "Príslušenstvo k hladinomerom",
+    "level": 1,
+    "href": "https://pristroje.sk/product-category/hladinomery/prislusenstvo-k-hladinomerom/",
+    "count": 3
+  },
+  {
+    "name": "Hlukomery",
+    "level": 0,
+    "href": "https://pristroje.sk/product-category/hlukomery/",
+    "count": 4
+  },
+  {
+    "name": "Krížové a ostatné lasery",
+    "level": 0,
+    "href": "https://pristroje.sk/product-category/krizove-a-ostatne-lasery/",
+    "count": 17
+  },
+  {
+    "name": "Krížové lasery – príslušenstvo",
+    "level": 1,
+    "href": "https://pristroje.sk/product-category/krizove-a-ostatne-lasery/krizove-lasery-prislusenstvo/",
+    "count": 9
+  },
+  {
+    "name": "Krížové lasery",
+    "level": 1,
+    "href": "https://pristroje.sk/product-category/krizove-a-ostatne-lasery/krizove-lasery/",
+    "count": 8
+  },
+  {
+    "name": "Prijímače laserového lúča – krížové lasery",
+    "level": 1,
+    "href": "https://pristroje.sk/product-category/krizove-a-ostatne-lasery/prijimace-laseroveho-luca-krizove-lasery-krizove-a-ostatne-lasery/",
+    "count": 1
+  },
+  {
+    "name": "Laty, výtyčky a trasírky",
+    "level": 0,
+    "href": "https://pristroje.sk/product-category/laty-vytycky-a-trasirky/",
+    "count": 10
+  },
+  {
+    "name": "Lokalizácia úniku vody a vzduchu",
+    "level": 0,
+    "href": "https://pristroje.sk/product-category/lokalizacia-uniku-vody-a-vzduchu/",
+    "count": 2
+  },
+  {
+    "name": "Lokalizácia úniku vody",
+    "level": 1,
+    "href": "https://pristroje.sk/product-category/lokalizacia-uniku-vody-a-vzduchu/lokalizacia-uniku-vody/",
+    "count": 1
+  },
+  {
+    "name": "Lokalizácia úniku vzduchu",
+    "level": 1,
+    "href": "https://pristroje.sk/product-category/lokalizacia-uniku-vody-a-vzduchu/lokalizacia-uniku-vzduchu/",
+    "count": 1
+  },
+  {
+    "name": "Luxmetre",
+    "level": 0,
+    "href": "https://pristroje.sk/product-category/luxmetre/",
+    "count": 5
+  },
+  {
+    "name": "Meracie kolieska",
+    "level": 0,
+    "href": "https://pristroje.sk/product-category/meracie-kolieska/",
+    "count": 3
+  },
+  {
+    "name": "Meranie fyzikálnych veličín",
+    "level": 0,
+    "href": "https://pristroje.sk/product-category/meranie-fyzikalnych-velicin/",
+    "count": 19
+  },
+  {
+    "name": "Gaussmetre",
+    "level": 1,
+    "href": "https://pristroje.sk/product-category/meranie-fyzikalnych-velicin/gaussmetre/",
+    "count": 3
+  },
+  {
+    "name": "Merače hrúbky povrchových úprav",
+    "level": 1,
+    "href": "https://pristroje.sk/product-category/meranie-fyzikalnych-velicin/merace-hrubky-povrchovych-uprav/",
+    "count": 3
+  },
+  {
+    "name": "Multimetre",
+    "level": 1,
+    "href": "https://pristroje.sk/product-category/meranie-fyzikalnych-velicin/multimetre/",
+    "count": 7
+  },
+  {
+    "name": "Ostatné",
+    "level": 1,
+    "href": "https://pristroje.sk/product-category/meranie-fyzikalnych-velicin/ostatne-meranie-fyzikalnych-velicin/",
+    "count": 7
+  },
+  {
+    "name": "Meranie odtrhu",
+    "level": 0,
+    "href": "https://pristroje.sk/product-category/meranie-odtrhu/",
+    "count": 10
+  },
+  {
+    "name": "Erichsen",
+    "level": 1,
+    "href": "https://pristroje.sk/product-category/meranie-odtrhu/erichsen/",
+    "count": 4
+  },
+  {
+    "name": "Proceq DY-2",
+    "level": 1,
+    "href": "https://pristroje.sk/product-category/meranie-odtrhu/proceq-dy-2/",
+    "count": 3
+  },
+  {
+    "name": "Metre, pásma a posuvné meradlá",
+    "level": 0,
+    "href": "https://pristroje.sk/product-category/metre-pasma-a-posuvne-meradla/",
+    "count": 44
+  },
+  {
+    "name": "Metre",
+    "level": 1,
+    "href": "https://pristroje.sk/product-category/metre-pasma-a-posuvne-meradla/metre/",
+    "count": 16
+  },
+  {
+    "name": "pásma a posuvné meradlá",
+    "level": 1,
+    "href": "https://pristroje.sk/product-category/metre-pasma-a-posuvne-meradla/pasma-a-posuvne-meradla/",
+    "count": 1
+  },
+  {
+    "name": "Pásma",
+    "level": 1,
+    "href": "https://pristroje.sk/product-category/metre-pasma-a-posuvne-meradla/pasma/",
+    "count": 19
+  },
+  {
+    "name": "Nerezové",
+    "level": 2,
+    "href": "https://pristroje.sk/product-category/metre-pasma-a-posuvne-meradla/pasma/nerezove/",
+    "count": 3
+  },
+  {
+    "name": "Oceľové lakované",
+    "level": 2,
+    "href": "https://pristroje.sk/product-category/metre-pasma-a-posuvne-meradla/pasma/ocelove-lakovane/",
+    "count": 4
+  },
+  {
+    "name": "Oceľové s polyamidovou vrstvou – ISOLAN",
+    "level": 2,
+    "href": "https://pristroje.sk/product-category/metre-pasma-a-posuvne-meradla/pasma/ocelove-s-polyamidovou-vrstvou-isolan/",
+    "count": 4
+  },
+  {
+    "name": "Plastové so sklennými vláknami – FILON",
+    "level": 2,
+    "href": "https://pristroje.sk/product-category/metre-pasma-a-posuvne-meradla/pasma/plastove-so-sklennymi-vlaknami-filon/",
+    "count": 6
+  },
+  {
+    "name": "Plastové",
+    "level": 2,
+    "href": "https://pristroje.sk/product-category/metre-pasma-a-posuvne-meradla/pasma/plastove/",
+    "count": 2
+  },
+  {
+    "name": "Posuvné meradlá",
+    "level": 1,
+    "href": "https://pristroje.sk/product-category/metre-pasma-a-posuvne-meradla/posuvne-meradla/",
+    "count": 9
+  },
+  {
+    "name": "Nivelačné prístroje",
+    "level": 0,
+    "href": "https://pristroje.sk/product-category/nivelacne-pristroje/",
+    "count": 20
+  },
+  {
+    "name": "Digitálne nivelačné prístroje",
+    "level": 1,
+    "href": "https://pristroje.sk/product-category/nivelacne-pristroje/digitalne-nivelacne-pristroje/",
+    "count": 4
+  },
+  {
+    "name": "Optické nivelačné prístroje",
+    "level": 1,
+    "href": "https://pristroje.sk/product-category/nivelacne-pristroje/opticke-nivelacne-pristroje/",
+    "count": 16
+  },
+  {
+    "name": "Zostavy optických prístrojov so statívom a latou",
+    "level": 2,
+    "href": "https://pristroje.sk/product-category/nivelacne-pristroje/opticke-nivelacne-pristroje/zostavy-optickych-pristrojov-so-stativom-a-latou/",
+    "count": 6
+  },
+  {
+    "name": "pH metre",
+    "level": 0,
+    "href": "https://pristroje.sk/product-category/ph-metre/",
+    "count": 3
+  },
+  {
+    "name": "Potrubné lasery",
+    "level": 0,
+    "href": "https://pristroje.sk/product-category/potrubne-lasery/",
+    "count": 4
+  },
+  {
+    "name": "Použité prístroje",
+    "level": 0,
+    "href": "https://pristroje.sk/product-category/pouzite-pristroje/",
+    "count": 20
+  },
+  {
+    "name": "Použité diaľkomery",
+    "level": 1,
+    "href": "https://pristroje.sk/product-category/pouzite-pristroje/pouzite-dialkomery/",
+    "count": 4
+  },
+  {
+    "name": "Použité inšpekčné kamery",
+    "level": 1,
+    "href": "https://pristroje.sk/product-category/pouzite-pristroje/pouzite-inspekcne-kamery/",
+    "count": 4
+  },
+  {
+    "name": "Použité optické nivelačné prístroje",
+    "level": 1,
+    "href": "https://pristroje.sk/product-category/pouzite-pristroje/pouzite-opticke-nivelacne-pristroje/",
+    "count": 2
+  },
+  {
+    "name": "Použité planimetre",
+    "level": 1,
+    "href": "https://pristroje.sk/product-category/pouzite-pristroje/pouzite-planimetre/",
+    "count": 1
+  },
+  {
+    "name": "Použité príslušenstvo",
+    "level": 1,
+    "href": "https://pristroje.sk/product-category/pouzite-pristroje/pouzite-prislusenstvo/",
+    "count": 3
+  },
+  {
+    "name": "Použité Schmidtove kladivká",
+    "level": 1,
+    "href": "https://pristroje.sk/product-category/pouzite-pristroje/pouzite-schmidtove-kladivka/",
+    "count": 1
+  },
+  {
+    "name": "Použité totálne stanice",
+    "level": 1,
+    "href": "https://pristroje.sk/product-category/pouzite-pristroje/pouzite-totalne-stanice/",
+    "count": 1
+  },
+  {
+    "name": "Použité vyhľadávače v zemi",
+    "level": 1,
+    "href": "https://pristroje.sk/product-category/pouzite-pristroje/pouzite-vyhladavace-v-zemi/",
+    "count": 2
+  },
+  {
+    "name": "Príslušenstvo",
+    "level": 0,
+    "href": "https://pristroje.sk/product-category/prislusenstvo-2/",
+    "count": 18
+  },
+  {
+    "name": "Ostatné meracie pomôcky",
+    "level": 1,
+    "href": "https://pristroje.sk/product-category/prislusenstvo-2/ostatne-meracie-pomocky/",
+    "count": 5
+  },
+  {
+    "name": "Ostatné príslušenstvo",
+    "level": 1,
+    "href": "https://pristroje.sk/product-category/prislusenstvo-2/ostatne-prislusenstvo/",
+    "count": 8
+  },
+  {
+    "name": "Príslušenstvo k laserom",
+    "level": 1,
+    "href": "https://pristroje.sk/product-category/prislusenstvo-2/prislusenstvo-k-laserom/",
+    "count": 1
+  },
+  {
+    "name": "Prijímače laserového lúča – rotačné lasery",
+    "level": 2,
+    "href": "https://pristroje.sk/product-category/prislusenstvo-2/prislusenstvo-k-laserom/prijimace-laseroveho-luca-rotacne-lasery/",
+    "count": 1
+  },
+  {
+    "name": "Prístroje pre skúšky materiálov",
+    "level": 0,
+    "href": "https://pristroje.sk/product-category/pristroje-pre-skusky-materialov/",
+    "count": 56
+  },
+  {
+    "name": "Prístroje pre skúšky asfaltu",
+    "level": 1,
+    "href": "https://pristroje.sk/product-category/pristroje-pre-skusky-materialov/pristroje-pre-skusky-asfaltu/",
+    "count": 4
+  },
+  {
+    "name": "Prístroje pre skúšky betónu",
+    "level": 1,
+    "href": "https://pristroje.sk/product-category/pristroje-pre-skusky-materialov/pristroje-pre-skusky-betonu/",
+    "count": 33
+  },
+  {
+    "name": "Schmidtove kladivká",
+    "level": 2,
+    "href": "https://pristroje.sk/product-category/pristroje-pre-skusky-materialov/pristroje-pre-skusky-betonu/schmidtove-kladivka/",
+    "count": 16
+  },
+  {
+    "name": "Analógové",
+    "level": 3,
+    "href": "https://pristroje.sk/product-category/pristroje-pre-skusky-materialov/pristroje-pre-skusky-betonu/schmidtove-kladivka/analogove-schmidtove-kladivka/",
+    "count": 7
+  },
+  {
+    "name": "Digitálne",
+    "level": 3,
+    "href": "https://pristroje.sk/product-category/pristroje-pre-skusky-materialov/pristroje-pre-skusky-betonu/schmidtove-kladivka/digitalne-schmidtove-kladivka/",
+    "count": 11
+  },
+  {
+    "name": "Prístroje pre skúšky ostatných materiálov",
+    "level": 1,
+    "href": "https://pristroje.sk/product-category/pristroje-pre-skusky-materialov/pristroje-pre-skusky-ostatnych-materialov/",
+    "count": 2
+  },
+  {
+    "name": "Prístroje pre skúšky zemín",
+    "level": 1,
+    "href": "https://pristroje.sk/product-category/pristroje-pre-skusky-materialov/pristroje-pre-skusky-zemin/",
+    "count": 21
+  },
+  {
+    "name": "Ľahká dynamická doska LDD100",
+    "level": 2,
+    "href": "https://pristroje.sk/product-category/pristroje-pre-skusky-materialov/pristroje-pre-skusky-zemin/lahka-dynamicka-doska-ldd100/",
+    "count": 2
+  },
+  {
+    "name": "Príslušenstvo k ECM – Static",
+    "level": 2,
+    "href": "https://pristroje.sk/product-category/pristroje-pre-skusky-materialov/pristroje-pre-skusky-zemin/prislusenstvo-k-ecm-static/",
+    "count": 5
+  },
+  {
+    "name": "Príslušenstvo k Oedometru",
+    "level": 2,
+    "href": "https://pristroje.sk/product-category/pristroje-pre-skusky-materialov/pristroje-pre-skusky-zemin/prislusenstvo-k-oedometru/",
+    "count": 1
+  },
+  {
+    "name": "Ridgid kamery na prezeranie potrubí",
+    "level": 0,
+    "href": "https://pristroje.sk/product-category/ridgid-kamery-na-prezeranie-potrubi/",
+    "count": 3
+  },
+  {
+    "name": "SeeSnake bubnové kamery",
+    "level": 1,
+    "href": "https://pristroje.sk/product-category/ridgid-kamery-na-prezeranie-potrubi/seesnake-bubnove-kamery/",
+    "count": 3
+  },
+  {
+    "name": "Rotačné lasery",
+    "level": 0,
+    "href": "https://pristroje.sk/product-category/rotacne-lasery/",
+    "count": 24
+  },
+  {
+    "name": "Prijímače laserového lúča",
+    "level": 1,
+    "href": "https://pristroje.sk/product-category/rotacne-lasery/prijimace-laseroveho-luca/",
+    "count": 8
+  },
+  {
+    "name": "Príslušenstvo k rotačným laserom Leica",
+    "level": 1,
+    "href": "https://pristroje.sk/product-category/rotacne-lasery/prislusenstvo-k-rotacnym-laserom-leica-prislusenstvo-k-laserom/",
+    "count": 2
+  },
+  {
+    "name": "Príslušenstvo k rotačným laserom",
+    "level": 1,
+    "href": "https://pristroje.sk/product-category/rotacne-lasery/prislusenstvo-k-rotacnym-laserom/",
+    "count": 7
+  },
+  {
+    "name": "Rotačné lasery pre nastavenie sklonu",
+    "level": 1,
+    "href": "https://pristroje.sk/product-category/rotacne-lasery/rotacne-lasery-pre-nastavenie-sklonu/",
+    "count": 5
+  },
+  {
+    "name": "Rotačné lasery pre vodorovné a zvislé použitie",
+    "level": 1,
+    "href": "https://pristroje.sk/product-category/rotacne-lasery/rotacne-lasery-pre-vodorovne-a-zvisle-pouzitie/",
+    "count": 3
+  },
+  {
+    "name": "Rotačné lasery pre vodorovné použitie",
+    "level": 1,
+    "href": "https://pristroje.sk/product-category/rotacne-lasery/rotacne-lasery-pre-vodorovne-pouzitie/",
+    "count": 2
+  },
+  {
+    "name": "Sklonomery a uhlomery",
+    "level": 0,
+    "href": "https://pristroje.sk/product-category/sklonomery-a-uhlomery/",
+    "count": 7
+  },
+  {
+    "name": "Sklonomery",
+    "level": 1,
+    "href": "https://pristroje.sk/product-category/sklonomery-a-uhlomery/sklonomery/",
+    "count": 4
+  },
+  {
+    "name": "Uhlomery a uhlovníky",
+    "level": 1,
+    "href": "https://pristroje.sk/product-category/sklonomery-a-uhlomery/uhlomery-a-uhlovniky/",
+    "count": 3
+  },
+  {
+    "name": "Statívy",
+    "level": 0,
+    "href": "https://pristroje.sk/product-category/stativy/",
+    "count": 11
+  },
+  {
+    "name": "Fotostatívy",
+    "level": 1,
+    "href": "https://pristroje.sk/product-category/stativy/fotostativy/",
+    "count": 4
+  },
+  {
+    "name": "Príslušenstvo k statívom",
+    "level": 1,
+    "href": "https://pristroje.sk/product-category/stativy/prislusenstvo-k-stativom/",
+    "count": 3
+  },
+  {
+    "name": "Statívy klasické",
+    "level": 1,
+    "href": "https://pristroje.sk/product-category/stativy/stativy-klasicke/",
+    "count": 3
+  },
+  {
+    "name": "Statívy s elevátorom",
+    "level": 1,
+    "href": "https://pristroje.sk/product-category/stativy/stativy-s-elevatorom/",
+    "count": 1
+  },
+  {
+    "name": "Teodolity, totálne stanice",
+    "level": 0,
+    "href": "https://pristroje.sk/product-category/teodolity-totalne-stanice/",
+    "count": 10
+  },
+  {
+    "name": "Dátové káble",
+    "level": 1,
+    "href": "https://pristroje.sk/product-category/teodolity-totalne-stanice/datove-kable/",
+    "count": 2
+  },
+  {
+    "name": "GPS",
+    "level": 1,
+    "href": "https://pristroje.sk/product-category/teodolity-totalne-stanice/gps-teodolity-totalne-stanice/",
+    "count": 2
+  },
+  {
+    "name": "Príslušenstvo",
+    "level": 1,
+    "href": "https://pristroje.sk/product-category/teodolity-totalne-stanice/prislusenstvo-teodolity-totalne-stanice/",
+    "count": 2
+  },
+  {
+    "name": "Teodolity",
+    "level": 1,
+    "href": "https://pristroje.sk/product-category/teodolity-totalne-stanice/teodolity/",
+    "count": 2
+  },
+  {
+    "name": "Totálne stanice",
+    "level": 1,
+    "href": "https://pristroje.sk/product-category/teodolity-totalne-stanice/totalne-stanice/",
+    "count": 2
+  },
+  {
+    "name": "Teplomery",
+    "level": 0,
+    "href": "https://pristroje.sk/product-category/teplomery/",
+    "count": 19
+  },
+  {
+    "name": "Infračervené teplomery",
+    "level": 1,
+    "href": "https://pristroje.sk/product-category/teplomery/infracervene-teplomery/",
+    "count": 5
+  },
+  {
+    "name": "Teplomery priestoru",
+    "level": 1,
+    "href": "https://pristroje.sk/product-category/teplomery/teplomery-priestoru/",
+    "count": 7
+  },
+  {
+    "name": "Vpichové teplomery",
+    "level": 1,
+    "href": "https://pristroje.sk/product-category/teplomery/vpichove-teplomery/",
+    "count": 8
+  },
+  {
+    "name": "Termokamery",
+    "level": 0,
+    "href": "https://pristroje.sk/product-category/termokamery/",
+    "count": 2
+  },
+  {
+    "name": "Tvrdomery",
+    "level": 0,
+    "href": "https://pristroje.sk/product-category/tvrdomery/",
+    "count": 17
+  },
+  {
+    "name": "Na betón-Schmidtove kladivká",
+    "level": 1,
+    "href": "https://pristroje.sk/product-category/tvrdomery/na-beton-schmidtove-kladivka/",
+    "count": 15
+  },
+  {
+    "name": "Analógové",
+    "level": 2,
+    "href": "https://pristroje.sk/product-category/tvrdomery/na-beton-schmidtove-kladivka/analogove/",
+    "count": 5
+  },
+  {
+    "name": "Digitálne",
+    "level": 2,
+    "href": "https://pristroje.sk/product-category/tvrdomery/na-beton-schmidtove-kladivka/digitalne/",
+    "count": 9
+  },
+  {
+    "name": "Tvrdomery kovov",
+    "level": 1,
+    "href": "https://pristroje.sk/product-category/tvrdomery/tvrdomery-kovov/",
+    "count": 2
+  },
+  {
+    "name": "Videoinšpekcia",
+    "level": 0,
+    "href": "https://pristroje.sk/product-category/videoinspekcia/",
+    "count": 18
+  },
+  {
+    "name": "Kamerový inšpekčný systém Vivax vcam",
+    "level": 1,
+    "href": "https://pristroje.sk/product-category/videoinspekcia/kamerovy-inspekcny-system-vivax-vcam/",
+    "count": 4
+  },
+  {
+    "name": "Príslušenstvo",
+    "level": 1,
+    "href": "https://pristroje.sk/product-category/videoinspekcia/prislusenstvo-videoinspekcia/",
+    "count": 6
+  },
+  {
+    "name": "Vlhkomery",
+    "level": 0,
+    "href": "https://pristroje.sk/product-category/vlhkomery/",
+    "count": 21
+  },
+  {
+    "name": "Meranie viacerých veličín v 1 prístroji",
+    "level": 1,
+    "href": "https://pristroje.sk/product-category/vlhkomery/meranie-viacerych-velicin-v-1-pristroji/",
+    "count": 4
+  },
+  {
+    "name": "Meranie vlhkosti a teploty priestoru",
+    "level": 1,
+    "href": "https://pristroje.sk/product-category/vlhkomery/meranie-vlhkosti-a-teploty-priestoru/",
+    "count": 7
+  },
+  {
+    "name": "Meranie vlhkosti materiálov",
+    "level": 1,
+    "href": "https://pristroje.sk/product-category/vlhkomery/meranie-vlhkosti-materialov/",
+    "count": 12
+  },
+  {
+    "name": "Meranie vlhkosti metódou Karbidu vápnika",
+    "level": 1,
+    "href": "https://pristroje.sk/product-category/vlhkomery/meranie-vlhkosti-metodou-karbidu-vapnika/",
+    "count": 2
+  },
+  {
+    "name": "Vodováhy",
+    "level": 0,
+    "href": "https://pristroje.sk/product-category/vodovahy/",
+    "count": 34
+  },
+  {
+    "name": "Elektronické",
+    "level": 1,
+    "href": "https://pristroje.sk/product-category/vodovahy/elektronicke/",
+    "count": 3
+  },
+  {
+    "name": "Klasické s magnetom",
+    "level": 1,
+    "href": "https://pristroje.sk/product-category/vodovahy/klasicke-s-magnetom/",
+    "count": 4
+  },
+  {
+    "name": "Klasické",
+    "level": 1,
+    "href": "https://pristroje.sk/product-category/vodovahy/klasicke/",
+    "count": 20
+  },
+  {
+    "name": "Laserové",
+    "level": 1,
+    "href": "https://pristroje.sk/product-category/vodovahy/laserove/",
+    "count": 1
+  },
+  {
+    "name": "Sťahovacie",
+    "level": 1,
+    "href": "https://pristroje.sk/product-category/vodovahy/stahovacie/",
+    "count": 3
+  },
+  {
+    "name": "Vyhľadávače vedení a markerov",
+    "level": 0,
+    "href": "https://pristroje.sk/product-category/vyhladavace-vedeni-a-markerov/",
+    "count": 22
+  },
+  {
+    "name": "Vyhľadávače vedení v stene",
+    "level": 1,
+    "href": "https://pristroje.sk/product-category/vyhladavace-vedeni-a-markerov/vyhladavace-vedeni-v-stene/",
+    "count": 3
+  },
+  {
+    "name": "Vyhľadávače vedení v zemi",
+    "level": 1,
+    "href": "https://pristroje.sk/product-category/vyhladavace-vedeni-a-markerov/vyhladavace-vedeni-v-zemi/",
+    "count": 19
+  },
+  {
+    "name": "Príslušenstvo",
+    "level": 2,
+    "href": "https://pristroje.sk/product-category/vyhladavace-vedeni-a-markerov/vyhladavace-vedeni-v-zemi/prislusenstvo-vyhladavace-vedeni-v-zemi/",
+    "count": 6
+  },
+  {
+    "name": "Rigid vyhľadávače",
+    "level": 2,
+    "href": "https://pristroje.sk/product-category/vyhladavace-vedeni-a-markerov/vyhladavace-vedeni-v-zemi/rigid-vyhladavace/",
+    "count": 8
+  },
+  {
+    "name": "Vyhľadávače NaviTrack a SeekTech",
+    "level": 3,
+    "href": "https://pristroje.sk/product-category/vyhladavace-vedeni-a-markerov/vyhladavace-vedeni-v-zemi/rigid-vyhladavace/vyhladavace-navitrack-a-seektech/",
+    "count": 8
+  },
+  {
+    "name": "Vyhľadávače markerov",
+    "level": 2,
+    "href": "https://pristroje.sk/product-category/vyhladavace-vedeni-a-markerov/vyhladavace-vedeni-v-zemi/vyhladavace-markerov/",
+    "count": 1
+  },
+  {
+    "name": "Vyhľadávanie vedení v zemi",
+    "level": 2,
+    "href": "https://pristroje.sk/product-category/vyhladavace-vedeni-a-markerov/vyhladavace-vedeni-v-zemi/vyhladavanie-vedeni-v-zemi/",
+    "count": 4
+  }
+]
