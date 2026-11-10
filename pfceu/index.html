@@ -11,6 +11,18 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.profc.eu/">
 
+  <!-- Prevent FOUC: Theme detector script -->
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    })();
+  </script>
+
   <!-- Google Fonts: Plus Jakarta Sans & Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -61,15 +73,31 @@
   <script src="https://unpkg.com/lucide@latest"></script>
 
   <style>
+    /* Theme-aware navigation glass */
     .glass-nav {
-      background: rgba(10, 15, 29, 0.85);
+      background: rgba(255, 255, 255, 0.90);
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
     }
+    .dark .glass-nav {
+      background: rgba(10, 15, 29, 0.88);
+    }
+
+    /* Hero glow */
     .hero-glow {
+      background: radial-gradient(circle 800px at 50% -10%, rgba(12, 135, 235, 0.08), transparent 70%);
+    }
+    .dark .hero-glow {
       background: radial-gradient(circle 800px at 50% -20%, rgba(12, 135, 235, 0.22), transparent 70%);
     }
+
+    /* Shimmer Badge */
     .badge-shimmer {
+      background: linear-gradient(90deg, rgba(12,135,235,0.05) 0%, rgba(12,135,235,0.15) 50%, rgba(12,135,235,0.05) 100%);
+      background-size: 200% 100%;
+      animation: shimmer 4s infinite linear;
+    }
+    .dark .badge-shimmer {
       background: linear-gradient(90deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.15) 50%, rgba(255,255,255,0.05) 100%);
       background-size: 200% 100%;
       animation: shimmer 4s infinite linear;
@@ -81,76 +109,85 @@
   </style>
 </head>
 
-<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-brand-500 selection:text-white">
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100 font-sans antialiased selection:bg-brand-500 selection:text-white transition-colors duration-300">
 
   <!-- TOP EXECUTIVE ANNOUNCEMENT / UTILITY BAR -->
-  <div class="border-b border-slate-800 bg-navy-950/90 text-xs text-slate-400 py-2.5 px-4 sm:px-8">
+  <div class="border-b border-slate-200 bg-white/90 dark:border-slate-800 dark:bg-navy-950/90 text-xs text-slate-600 dark:text-slate-400 py-2.5 px-4 sm:px-8 transition-colors duration-300">
     <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3">
       <div class="flex items-center gap-6">
-        <span class="inline-flex items-center gap-1.5 text-emerald-400 font-medium">
-          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+        <span class="inline-flex items-center gap-1.5 text-emerald-600 dark:text-emerald-400 font-medium">
+          <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
           Výzvy 2026 otvorené: EÚ Fondy & Superodpočet VaV
         </span>
-        <span class="hidden md:inline-flex items-center gap-2 text-slate-400">
-          <i data-lucide="shield-check" class="w-3.5 h-3.5 text-brand-400"></i>
+        <span class="hidden md:inline-flex items-center gap-2 text-slate-500 dark:text-slate-400">
+          <i data-lucide="shield-check" class="w-3.5 h-3.5 text-brand-600 dark:text-brand-400"></i>
           Certifikácia ISO 9001, 14001, 10006 & ISO 31000 Risk Management
         </span>
       </div>
       
-      <div class="flex items-center gap-5 ml-auto">
-        <a href="tel:+421917717005" class="hover:text-white transition flex items-center gap-1.5">
-          <i data-lucide="phone" class="w-3.5 h-3.5 text-brand-400"></i>
+      <div class="flex items-center gap-4 sm:gap-5 ml-auto">
+        <a href="tel:+421917717005" class="hover:text-brand-600 dark:hover:text-white transition flex items-center gap-1.5 font-medium">
+          <i data-lucide="phone" class="w-3.5 h-3.5 text-brand-600 dark:text-brand-400"></i>
           <span>+421 917 717 005</span>
         </a>
-        <a href="mailto:info@profc.eu" class="hover:text-white transition hidden sm:flex items-center gap-1.5">
-          <i data-lucide="mail" class="w-3.5 h-3.5 text-brand-400"></i>
+        <a href="mailto:info@profc.eu" class="hover:text-brand-600 dark:hover:text-white transition hidden sm:flex items-center gap-1.5">
+          <i data-lucide="mail" class="w-3.5 h-3.5 text-brand-600 dark:text-brand-400"></i>
           <span>info@profc.eu</span>
         </a>
+
+        <!-- THEME TOGGLE BUTTON -->
+        <button id="theme-toggle-btn" onclick="toggleTheme()" title="Prepnúť svetlý/tmavý režim" class="p-1.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-slate-100 hover:bg-slate-200 dark:bg-slate-900 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 transition flex items-center gap-1.5 text-[11px] font-semibold">
+          <span id="theme-icon-container">
+            <i data-lucide="moon" class="w-3.5 h-3.5 block dark:hidden text-slate-700"></i>
+            <i data-lucide="sun" class="w-3.5 h-3.5 hidden dark:block text-amber-400"></i>
+          </span>
+          <span id="theme-label" class="hidden md:inline text-[10px]">Tmavý</span>
+        </button>
         
         <!-- Language Switcher -->
-        <div class="flex items-center border border-slate-700 rounded-md p-0.5 bg-slate-900/60">
+        <div class="flex items-center border border-slate-200 dark:border-slate-700 rounded-md p-0.5 bg-slate-100 dark:bg-slate-900/60">
           <button id="lang-sk" onclick="setLanguage('sk')" class="px-2 py-0.5 rounded text-[11px] font-semibold bg-brand-600 text-white transition">SK</button>
-          <button id="lang-en" onclick="setLanguage('en')" class="px-2 py-0.5 rounded text-[11px] font-semibold text-slate-400 hover:text-white transition">EN</button>
+          <button id="lang-en" onclick="setLanguage('en')" class="px-2 py-0.5 rounded text-[11px] font-semibold text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition">EN</button>
         </div>
       </div>
     </div>
   </div>
 
   <!-- NAVIGATION BAR -->
-  <header class="sticky top-0 z-50 glass-nav border-b border-slate-800/80 transition-all duration-300">
+  <header class="sticky top-0 z-50 glass-nav border-b border-slate-200/80 dark:border-slate-800/80 transition-all duration-300">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
       
       <!-- LOGO -->
       <a href="#" class="flex items-center gap-3 group">
-        <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-brand-500 to-brand-800 flex items-center justify-center shadow-lg shadow-brand-500/20 group-hover:shadow-brand-500/40 transition">
+        <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-brand-600 to-brand-800 flex items-center justify-center shadow-lg shadow-brand-500/20 group-hover:shadow-brand-500/40 transition">
           <span class="font-display font-extrabold text-xl text-white tracking-wider">PFC</span>
         </div>
         <div>
-          <div class="font-display font-bold text-lg text-white leading-tight flex items-center gap-1.5">
-            PFCEU <span class="text-brand-400 font-light text-sm">GROUP</span>
+          <div class="font-display font-bold text-lg text-slate-900 dark:text-white leading-tight flex items-center gap-1.5">
+            PFCEU <span class="text-brand-600 dark:text-brand-400 font-light text-sm">GROUP</span>
           </div>
-          <p class="text-[10px] text-slate-400 uppercase tracking-widest font-medium">Stratégie • Granty • Dane</p>
+          <p class="text-[10px] text-slate-500 dark:text-slate-400 uppercase tracking-widest font-semibold">Stratégie • Granty • Dane</p>
         </div>
       </a>
 
       <!-- DESKTOP NAV LINKS -->
-      <nav class="hidden lg:flex items-center gap-7 text-sm font-medium text-slate-300">
-        <a href="#services" class="hover:text-brand-400 transition">Služby</a>
-        <a href="#divisions" class="hover:text-brand-400 transition">Divízie</a>
-        <a href="#calculator" class="text-brand-400 hover:text-brand-300 flex items-center gap-1 transition">
+      <nav class="hidden lg:flex items-center gap-7 text-sm font-semibold text-slate-600 dark:text-slate-300">
+        <a href="#services" class="hover:text-brand-600 dark:hover:text-brand-400 transition">Služby</a>
+        <a href="#divisions" class="hover:text-brand-600 dark:hover:text-brand-400 transition">Divízie</a>
+        <a href="#calculator" class="text-brand-600 dark:text-brand-400 hover:text-brand-700 dark:hover:text-brand-300 flex items-center gap-1.5 transition">
           <i data-lucide="calculator" class="w-4 h-4"></i>
           <span>Kalkulačka VaV</span>
         </a>
-        <a href="#esg" class="hover:text-brand-400 transition">ESG & Projekty</a>
-        <a href="#references" class="hover:text-brand-400 transition">Referencie</a>
-        <a href="#about" class="hover:text-brand-400 transition">O nás</a>
-        <a href="#contact" class="hover:text-brand-400 transition">Kontakt</a>
+        <a href="#esg" class="hover:text-brand-600 dark:hover:text-brand-400 transition">ESG & Projekty</a>
+        <a href="#references" class="hover:text-brand-600 dark:hover:text-brand-400 transition">Referencie</a>
+        <a href="#about" class="hover:text-brand-600 dark:hover:text-brand-400 transition">O nás</a>
+        <a href="#contact" class="hover:text-brand-600 dark:hover:text-brand-400 transition">Kontakt</a>
       </nav>
 
-      <!-- CTA BUTTON -->
+      <!-- CTA BUTTON & DESKTOP THEME QUICK TOGGLE -->
       <div class="hidden sm:flex items-center gap-3">
-        <button onclick="openConsultationModal()" class="relative inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-medium rounded-xl group bg-gradient-to-br from-brand-500 to-blue-600 group-hover:from-brand-500 group-hover:to-blue-600 hover:text-white shadow-lg shadow-brand-500/25 transition">
-          <span class="relative px-5 py-2.5 transition-all ease-in duration-150 bg-slate-950 rounded-[10px] group-hover:bg-opacity-0 flex items-center gap-2 text-white">
+        <button onclick="openConsultationModal()" class="relative inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-semibold rounded-xl group bg-gradient-to-br from-brand-600 to-blue-700 hover:from-brand-500 hover:to-blue-600 hover:text-white shadow-lg shadow-brand-500/20 transition">
+          <span class="relative px-5 py-2.5 transition-all ease-in duration-150 bg-white dark:bg-slate-950 rounded-[10px] group-hover:bg-opacity-0 flex items-center gap-2 text-slate-900 dark:text-white group-hover:text-white">
             <span>Dohodnúť audit</span>
             <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover:translate-x-0.5"></i>
           </span>
@@ -158,22 +195,32 @@
       </div>
 
       <!-- MOBILE HAMBURGER -->
-      <button id="mobile-menu-btn" class="lg:hidden p-2 text-slate-400 hover:text-white focus:outline-none">
+      <button id="mobile-menu-btn" class="lg:hidden p-2 text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white focus:outline-none">
         <i data-lucide="menu" class="w-6 h-6"></i>
       </button>
     </div>
 
     <!-- MOBILE MENU DRAWER -->
-    <div id="mobile-menu" class="hidden lg:hidden border-b border-slate-800 bg-slate-950 px-4 pt-3 pb-6 space-y-3">
-      <a href="#services" class="block py-2 text-slate-200 hover:text-brand-400 font-medium">Služby</a>
-      <a href="#divisions" class="block py-2 text-slate-200 hover:text-brand-400 font-medium">Divízie</a>
-      <a href="#calculator" class="block py-2 text-brand-400 font-medium flex items-center gap-2">
+    <div id="mobile-menu" class="hidden lg:hidden border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 px-4 pt-3 pb-6 space-y-3 shadow-xl">
+      <a href="#services" class="block py-2 text-slate-800 dark:text-slate-200 hover:text-brand-600 dark:hover:text-brand-400 font-semibold">Služby</a>
+      <a href="#divisions" class="block py-2 text-slate-800 dark:text-slate-200 hover:text-brand-600 dark:hover:text-brand-400 font-semibold">Divízie</a>
+      <a href="#calculator" class="block py-2 text-brand-600 dark:text-brand-400 font-semibold flex items-center gap-2">
         <i data-lucide="calculator" class="w-4 h-4"></i> Kalkulačka VaV
       </a>
-      <a href="#esg" class="block py-2 text-slate-200 hover:text-brand-400 font-medium">ESG & Projekty</a>
-      <a href="#references" class="block py-2 text-slate-200 hover:text-brand-400 font-medium">Referencie</a>
-      <a href="#about" class="block py-2 text-slate-200 hover:text-brand-400 font-medium">O nás</a>
-      <a href="#contact" class="block py-2 text-slate-200 hover:text-brand-400 font-medium">Kontakt</a>
+      <a href="#esg" class="block py-2 text-slate-800 dark:text-slate-200 hover:text-brand-600 dark:hover:text-brand-400 font-semibold">ESG & Projekty</a>
+      <a href="#references" class="block py-2 text-slate-800 dark:text-slate-200 hover:text-brand-600 dark:hover:text-brand-400 font-semibold">Referencie</a>
+      <a href="#about" class="block py-2 text-slate-800 dark:text-slate-200 hover:text-brand-600 dark:hover:text-brand-400 font-semibold">O nás</a>
+      <a href="#contact" class="block py-2 text-slate-800 dark:text-slate-200 hover:text-brand-600 dark:hover:text-brand-400 font-semibold">Kontakt</a>
+      
+      <div class="pt-2 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between">
+        <span class="text-xs text-slate-500 dark:text-slate-400 font-medium">Režim zobrazenia:</span>
+        <button onclick="toggleTheme()" class="px-3 py-1.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-slate-100 dark:bg-slate-900 text-xs font-semibold flex items-center gap-2 text-slate-700 dark:text-slate-300">
+          <i data-lucide="moon" class="w-4 h-4 block dark:hidden"></i>
+          <i data-lucide="sun" class="w-4 h-4 hidden dark:block text-amber-400"></i>
+          <span id="theme-label-mobile">Prepnúť tému</span>
+        </button>
+      </div>
+
       <button onclick="openConsultationModal()" class="w-full mt-3 py-3 rounded-xl bg-brand-600 text-white font-semibold text-sm flex items-center justify-center gap-2 shadow-lg shadow-brand-600/30">
         <span>Dohodnúť audit zdarma</span>
         <i data-lucide="arrow-right" class="w-4 h-4"></i>
@@ -184,7 +231,7 @@
   <!-- HERO SECTION -->
   <section class="relative pt-16 pb-24 md:pt-28 md:pb-36 overflow-hidden hero-glow">
     <!-- Grid overlay background -->
-    <div class="absolute inset-0 bg-[linear-gradient(to_right,#1e293b15_1px,transparent_1px),linear-gradient(to_bottom,#1e293b15_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
+    <div class="absolute inset-0 bg-[linear-gradient(to_right,#0284c70a_1px,transparent_1px),linear-gradient(to_bottom,#0284c70a_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,#1e293b15_1px,transparent_1px),linear-gradient(to_bottom,#1e293b15_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
 
     <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid lg:grid-cols-12 gap-12 items-center">
@@ -192,48 +239,48 @@
         <!-- LEFT COLUMN: VALUE PROPOSITION -->
         <div class="lg:col-span-7 space-y-8 text-center lg:text-left">
           
-          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-brand-500/30 bg-brand-950/60 text-brand-300 text-xs font-semibold badge-shimmer">
-            <span class="flex h-2 w-2 rounded-full bg-brand-400"></span>
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-brand-200 dark:border-brand-500/30 bg-brand-50/80 dark:bg-brand-950/60 text-brand-700 dark:text-brand-300 text-xs font-semibold badge-shimmer shadow-sm">
+            <span class="flex h-2 w-2 rounded-full bg-brand-600 dark:bg-brand-400"></span>
             <span>Od roku 2006 • 20+ rokov strategického líderstva v CEE</span>
           </div>
 
-          <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.12]">
-            Transformujeme vízie na <span class="bg-gradient-to-r from-brand-400 via-sky-300 to-blue-500 bg-clip-text text-transparent">kapitál, granty a daňové úspory.</span>
+          <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-[1.12]">
+            Transformujeme vízie na <span class="bg-gradient-to-r from-brand-600 via-sky-600 to-blue-700 dark:from-brand-400 dark:via-sky-300 dark:to-blue-500 bg-clip-text text-transparent">kapitál, granty a daňové úspory.</span>
           </h1>
 
-          <p class="text-base sm:text-lg text-slate-300 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-            Kombinujeme komplexné strategické poradenstvo, priame eurogranty z Bruselu a certifikované uplatňovanie daňových úľav (<strong class="text-white">Superodpočet VaV, PatentBOX</strong>). Zvyšujeme hodnotu firiem a riadime projektové riziká bez straty vašej kontroly.
+          <p class="text-base sm:text-lg text-slate-600 dark:text-slate-300 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+            Kombinujeme komplexné strategické poradenstvo, priame eurogranty z Bruselu a certifikované uplatňovanie daňových úľav (<strong class="text-slate-900 dark:text-white">Superodpočet VaV, PatentBOX</strong>). Zvyšujeme hodnotu firiem a riadime projektové riziká bez straty vašej kontroly.
           </p>
 
           <!-- CTAs -->
           <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
-            <button onclick="openConsultationModal()" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-brand-600 to-blue-700 hover:from-brand-500 hover:to-blue-600 text-white font-semibold text-base shadow-xl shadow-brand-600/30 transition transform hover:-translate-y-0.5 flex items-center justify-center gap-2.5">
+            <button onclick="openConsultationModal()" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-brand-600 to-blue-700 hover:from-brand-500 hover:to-blue-600 text-white font-semibold text-base shadow-xl shadow-brand-600/25 transition transform hover:-translate-y-0.5 flex items-center justify-center gap-2.5">
               <span>Nezáväzný audit financovania</span>
               <i data-lucide="chevron-right" class="w-5 h-5"></i>
             </button>
-            <a href="#calculator" class="w-full sm:w-auto px-7 py-4 rounded-xl border border-slate-700 bg-slate-900/60 hover:bg-slate-800/80 text-slate-200 font-semibold text-base transition flex items-center justify-center gap-2">
-              <i data-lucide="calculator" class="w-5 h-5 text-brand-400"></i>
+            <a href="#calculator" class="w-full sm:w-auto px-7 py-4 rounded-xl border border-slate-300 dark:border-slate-700 bg-white hover:bg-slate-100 dark:bg-slate-900/60 dark:hover:bg-slate-800/80 text-slate-800 dark:text-slate-200 font-semibold text-base shadow-sm transition flex items-center justify-center gap-2">
+              <i data-lucide="calculator" class="w-5 h-5 text-brand-600 dark:text-brand-400"></i>
               <span>Vypočítať Superodpočet VaV</span>
             </a>
           </div>
 
           <!-- TRUST STATS -->
-          <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 pt-6 border-t border-slate-800/80">
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 pt-6 border-t border-slate-200 dark:border-slate-800/80">
             <div>
-              <div class="font-display text-2xl sm:text-3xl font-extrabold text-white">20+</div>
-              <div class="text-xs text-slate-400 uppercase tracking-wider mt-1">Rokov praxe</div>
+              <div class="font-display text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">20+</div>
+              <div class="text-xs text-slate-500 dark:text-slate-400 uppercase tracking-wider mt-1 font-semibold">Rokov praxe</div>
             </div>
             <div>
-              <div class="font-display text-2xl sm:text-3xl font-extrabold text-brand-400">150+</div>
-              <div class="text-xs text-slate-400 uppercase tracking-wider mt-1">Miliónov € získaných</div>
+              <div class="font-display text-2xl sm:text-3xl font-extrabold text-brand-600 dark:text-brand-400">150+</div>
+              <div class="text-xs text-slate-500 dark:text-slate-400 uppercase tracking-wider mt-1 font-semibold">Miliónov € získaných</div>
             </div>
             <div>
-              <div class="font-display text-2xl sm:text-3xl font-extrabold text-emerald-400">100%</div>
-              <div class="text-xs text-slate-400 uppercase tracking-wider mt-1">Akceptácia auditov</div>
+              <div class="font-display text-2xl sm:text-3xl font-extrabold text-emerald-600 dark:text-emerald-400">100%</div>
+              <div class="text-xs text-slate-500 dark:text-slate-400 uppercase tracking-wider mt-1 font-semibold">Akceptácia auditov</div>
             </div>
             <div>
-              <div class="font-display text-2xl sm:text-3xl font-extrabold text-white">ISO</div>
-              <div class="text-xs text-slate-400 uppercase tracking-wider mt-1">31000 / 9001 / 14001</div>
+              <div class="font-display text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">ISO</div>
+              <div class="text-xs text-slate-500 dark:text-slate-400 uppercase tracking-wider mt-1 font-semibold">31000 / 9001 / 14001</div>
             </div>
           </div>
 
@@ -243,69 +290,69 @@
         <div class="lg:col-span-5">
           <div class="relative mx-auto max-w-md lg:max-w-none">
             <!-- Glow background -->
-            <div class="absolute -inset-1 rounded-3xl bg-gradient-to-r from-brand-600 to-blue-600 opacity-20 blur-xl"></div>
+            <div class="absolute -inset-1 rounded-3xl bg-gradient-to-r from-brand-600 to-blue-600 opacity-20 dark:opacity-25 blur-xl"></div>
             
-            <div class="relative rounded-2xl border border-slate-800 bg-slate-900/90 p-6 sm:p-7 shadow-2xl backdrop-blur-xl space-y-6">
+            <div class="relative rounded-2xl border border-slate-200/90 dark:border-slate-800 bg-white dark:bg-slate-900/90 p-6 sm:p-7 shadow-2xl shadow-slate-300/50 dark:shadow-2xl backdrop-blur-xl space-y-6">
               
               <!-- Card Header -->
-              <div class="flex items-center justify-between pb-4 border-b border-slate-800">
+              <div class="flex items-center justify-between pb-4 border-b border-slate-100 dark:border-slate-800">
                 <div class="flex items-center gap-3">
-                  <div class="w-9 h-9 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold">
+                  <div class="w-9 h-9 rounded-lg bg-emerald-500/10 dark:bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 flex items-center justify-center font-bold">
                     <i data-lucide="trending-up" class="w-5 h-5"></i>
                   </div>
                   <div>
-                    <h3 class="text-sm font-semibold text-white">Ukážka ROI Klienta</h3>
-                    <p class="text-xs text-slate-400">Strojársky & IT podnik (SK)</p>
+                    <h3 class="text-sm font-bold text-slate-900 dark:text-white">Ukážka ROI Klienta</h3>
+                    <p class="text-xs text-slate-500 dark:text-slate-400">Strojársky & IT podnik (SK)</p>
                   </div>
                 </div>
-                <span class="px-2.5 py-1 rounded-full text-[11px] font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">Overené FS SR</span>
+                <span class="px-2.5 py-1 rounded-full text-[11px] font-bold bg-emerald-50 dark:bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-500/20">Overené FS SR</span>
               </div>
 
               <!-- Metric Highlight -->
-              <div class="p-4 rounded-xl bg-slate-950/70 border border-slate-800/80 space-y-2">
-                <div class="text-xs text-slate-400 font-medium">Uplatnený Superodpočet VaV (R&D)</div>
+              <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-950/70 border border-slate-200/80 dark:border-slate-800/80 space-y-2">
+                <div class="text-xs text-slate-500 dark:text-slate-400 font-medium">Uplatnený Superodpočet VaV (R&D)</div>
                 <div class="flex items-baseline justify-between">
-                  <span class="text-3xl font-display font-bold text-white">184 000 €</span>
-                  <span class="text-xs font-semibold text-emerald-400 flex items-center gap-1">
+                  <span class="text-3xl font-display font-extrabold text-slate-900 dark:text-white">184 000 €</span>
+                  <span class="text-xs font-bold text-emerald-600 dark:text-emerald-400 flex items-center gap-1">
                     <i data-lucide="check" class="w-3.5 h-3.5"></i> Čistá úspora na dani
                   </span>
                 </div>
-                <div class="w-full bg-slate-800 h-1.5 rounded-full overflow-hidden">
+                <div class="w-full bg-slate-200 dark:bg-slate-800 h-1.5 rounded-full overflow-hidden">
                   <div class="bg-gradient-to-r from-brand-500 to-emerald-400 h-1.5 rounded-full" style="width: 85%"></div>
                 </div>
               </div>
 
               <!-- Secondary Row -->
               <div class="grid grid-cols-2 gap-3">
-                <div class="p-3.5 rounded-xl bg-slate-950/50 border border-slate-800">
-                  <div class="text-[11px] text-slate-400">Schválený EÚ Grant</div>
-                  <div class="text-xl font-bold text-brand-300 mt-1">1 250 000 €</div>
+                <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-950/50 border border-slate-200/80 dark:border-slate-800">
+                  <div class="text-[11px] text-slate-500 dark:text-slate-400 font-medium">Schválený EÚ Grant</div>
+                  <div class="text-xl font-bold text-brand-700 dark:text-brand-300 mt-1">1 250 000 €</div>
                   <div class="text-[10px] text-slate-500 mt-0.5">Modernizácia & ESG</div>
                 </div>
-                <div class="p-3.5 rounded-xl bg-slate-950/50 border border-slate-800">
-                  <div class="text-[11px] text-slate-400">Projektové Riziko</div>
-                  <div class="text-xl font-bold text-emerald-400 mt-1">Minimalizované</div>
+                <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-950/50 border border-slate-200/80 dark:border-slate-800">
+                  <div class="text-[11px] text-slate-500 dark:text-slate-400 font-medium">Projektové Riziko</div>
+                  <div class="text-xl font-bold text-emerald-600 dark:text-emerald-400 mt-1">Minimalizované</div>
                   <div class="text-[10px] text-slate-500 mt-0.5">ISO 31000 Framework</div>
                 </div>
               </div>
 
               <!-- Feature bullet items -->
-              <div class="space-y-2.5 pt-1 text-xs text-slate-300">
+              <div class="space-y-2.5 pt-1 text-xs text-slate-600 dark:text-slate-300">
                 <div class="flex items-center gap-2.5">
-                  <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400 shrink-0"></i>
+                  <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0"></i>
                   <span>Kompletná projektová dokumentácia odolná voči daňovým kontrolám</span>
                 </div>
                 <div class="flex items-center gap-2.5">
-                  <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400 shrink-0"></i>
+                  <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0"></i>
                   <span>Zastupovanie pred Finančnou správou SR v plnom rozsahu</span>
                 </div>
                 <div class="flex items-center gap-2.5">
-                  <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400 shrink-0"></i>
+                  <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0"></i>
                   <span>Financovanie bez straty akcionárskej kontroly nad firmou</span>
                 </div>
               </div>
 
-              <button onclick="openConsultationModal()" class="w-full py-2.5 rounded-lg border border-brand-500/40 text-brand-300 hover:bg-brand-500/10 text-xs font-semibold transition flex items-center justify-center gap-2">
+              <button onclick="openConsultationModal()" class="w-full py-2.5 rounded-lg border border-brand-500/40 text-brand-700 dark:text-brand-300 hover:bg-brand-50 dark:hover:bg-brand-500/10 text-xs font-bold transition flex items-center justify-center gap-2">
                 <span>Zistiť možnosti pre vašu firmu</span>
                 <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
               </button>
@@ -319,36 +366,36 @@
   </section>
 
   <!-- CLIENT LOGO STRIP / REFERENCES CAROUSEL -->
-  <section class="py-12 border-y border-slate-800/80 bg-navy-950/70">
+  <section class="py-12 border-y border-slate-200 dark:border-slate-800/80 bg-slate-100/70 dark:bg-navy-950/70 transition-colors">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <p class="text-center text-xs uppercase tracking-widest text-slate-400 font-semibold mb-8">
+      <p class="text-center text-xs uppercase tracking-widest text-slate-500 dark:text-slate-400 font-bold mb-8">
         Dôverujú nám významné priemyselné a technologické spoločnosti v SR a EÚ
       </p>
       
       <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6 items-center justify-center text-center">
-        <div class="p-4 rounded-xl bg-slate-900/50 border border-slate-800/60 hover:border-slate-700 transition">
-          <span class="font-display font-bold text-slate-300 text-base">DOXXbet</span>
+        <div class="p-4 rounded-xl bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800/60 shadow-sm hover:shadow-md transition">
+          <span class="font-display font-extrabold text-slate-800 dark:text-slate-300 text-base">DOXXbet</span>
           <p class="text-[10px] text-slate-500 mt-0.5">Zábavný priemysel & IT</p>
         </div>
-        <div class="p-4 rounded-xl bg-slate-900/50 border border-slate-800/60 hover:border-slate-700 transition">
-          <span class="font-display font-bold text-slate-300 text-base">S&T Slovakia</span>
+        <div class="p-4 rounded-xl bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800/60 shadow-sm hover:shadow-md transition">
+          <span class="font-display font-extrabold text-slate-800 dark:text-slate-300 text-base">S&T Slovakia</span>
           <p class="text-[10px] text-slate-500 mt-0.5">Enterprise IT & Cloud</p>
         </div>
-        <div class="p-4 rounded-xl bg-slate-900/50 border border-slate-800/60 hover:border-slate-700 transition">
-          <span class="font-display font-bold text-slate-300 text-base">Mäspoma</span>
+        <div class="p-4 rounded-xl bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800/60 shadow-sm hover:shadow-md transition">
+          <span class="font-display font-extrabold text-slate-800 dark:text-slate-300 text-base">Mäspoma</span>
           <p class="text-[10px] text-slate-500 mt-0.5">Potravinársky priemysel</p>
         </div>
-        <div class="p-4 rounded-xl bg-slate-900/50 border border-slate-800/60 hover:border-slate-700 transition">
-          <span class="font-display font-bold text-slate-300 text-base">HYDAC</span>
+        <div class="p-4 rounded-xl bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800/60 shadow-sm hover:shadow-md transition">
+          <span class="font-display font-extrabold text-slate-800 dark:text-slate-300 text-base">HYDAC</span>
           <p class="text-[10px] text-slate-500 mt-0.5">Priemyselná hydraulika</p>
         </div>
-        <div class="p-4 rounded-xl bg-slate-900/50 border border-slate-800/60 hover:border-slate-700 transition">
-          <span class="font-display font-bold text-slate-300 text-base">Dachser</span>
-          <p class="text-[10px] text-slate-500 mt-0.5">Logistika a dodávateľské reťazce</p>
+        <div class="p-4 rounded-xl bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800/60 shadow-sm hover:shadow-md transition">
+          <span class="font-display font-extrabold text-slate-800 dark:text-slate-300 text-base">Dachser</span>
+          <p class="text-[10px] text-slate-500 mt-0.5">Logistika a reťazce</p>
         </div>
-        <div class="p-4 rounded-xl bg-slate-900/50 border border-slate-800/60 hover:border-slate-700 transition">
-          <span class="font-display font-bold text-slate-300 text-base">Pilulka</span>
-          <p class="text-[10px] text-slate-500 mt-0.5">E-commerce & Zdravotníctvo</p>
+        <div class="p-4 rounded-xl bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800/60 shadow-sm hover:shadow-md transition">
+          <span class="font-display font-extrabold text-slate-800 dark:text-slate-300 text-base">Pilulka</span>
+          <p class="text-[10px] text-slate-500 mt-0.5">E-commerce & Zdravie</p>
         </div>
       </div>
     </div>
@@ -357,13 +404,13 @@
   <!-- THE 2 SPECIALIZED DIVISIONS (PILLARS OF TRUST) -->
   <section id="divisions" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
-      <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-950 border border-brand-800/60 text-brand-400 text-xs font-semibold">
+      <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-50 dark:bg-brand-950 border border-brand-200 dark:border-brand-800/60 text-brand-700 dark:text-brand-400 text-xs font-bold">
         <span>Štruktúra skupiny</span>
       </div>
-      <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-white">
+      <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white">
         Dve špecializované biznis jednotky. Jedno integrované partnerstvo.
       </h2>
-      <p class="text-slate-400 text-base">
+      <p class="text-slate-600 dark:text-slate-400 text-base">
         Naše služby poskytujeme prostredníctvom dvoch synergických spoločností pokrývajúcich strategické riadenie aj certifikované daňové nástroje.
       </p>
     </div>
@@ -371,86 +418,86 @@
     <div class="grid md:grid-cols-2 gap-8">
       
       <!-- UNIT 1: PFCEU s.r.o. -->
-      <div class="group relative rounded-3xl border border-slate-800 bg-gradient-to-b from-slate-900 to-slate-950 p-8 sm:p-10 hover:border-brand-500/50 transition duration-300 shadow-xl">
-        <div class="w-14 h-14 rounded-2xl bg-brand-600/20 border border-brand-500/30 flex items-center justify-center text-brand-400 mb-6 group-hover:scale-105 transition">
+      <div class="group relative rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-gradient-to-b dark:from-slate-900 dark:to-slate-950 p-8 sm:p-10 hover:border-brand-500/50 transition duration-300 shadow-xl shadow-slate-200/50 dark:shadow-2xl">
+        <div class="w-14 h-14 rounded-2xl bg-brand-50 dark:bg-brand-600/20 border border-brand-200 dark:border-brand-500/30 flex items-center justify-center text-brand-600 dark:text-brand-400 mb-6 group-hover:scale-105 transition">
           <i data-lucide="compass" class="w-7 h-7"></i>
         </div>
 
         <div class="flex items-center justify-between mb-3">
-          <h3 class="font-display text-2xl font-bold text-white">PFCEU s.r.o.</h3>
-          <span class="text-xs font-semibold px-2.5 py-1 rounded bg-slate-800 text-slate-300">CEE & Brusel</span>
+          <h3 class="font-display text-2xl font-extrabold text-slate-900 dark:text-white">PFCEU s.r.o.</h3>
+          <span class="text-xs font-bold px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">CEE & Brusel</span>
         </div>
-        <p class="text-sm font-medium text-brand-400 mb-6">Sekcia strategických a transformačných projektov & manažment rizík</p>
+        <p class="text-sm font-bold text-brand-600 dark:text-brand-400 mb-6">Sekcia strategických a transformačných projektov & manažment rizík</p>
         
-        <p class="text-slate-300 text-sm leading-relaxed mb-6">
+        <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-6">
           Pripravuje a realizuje komplexné strategické plány pre top manažment a akcionárov. Zabezpečuje priame komunitárne eurogranty (Horizon Europe), štrukturálne fondy EÚ, kapitál pre start-upy a ESG dekarbonizáciu.
         </p>
 
-        <div class="space-y-3 pt-4 border-t border-slate-800/80 text-sm">
-          <div class="flex items-start gap-2.5 text-slate-300">
-            <i data-lucide="check" class="w-4 h-4 text-brand-400 mt-1 shrink-0"></i>
+        <div class="space-y-3 pt-4 border-t border-slate-100 dark:border-slate-800/80 text-sm">
+          <div class="flex items-start gap-2.5 text-slate-700 dark:text-slate-300">
+            <i data-lucide="check" class="w-4 h-4 text-brand-600 dark:text-brand-400 mt-1 shrink-0"></i>
             <span>Stratégie rozvoja, valuácie a príprava firiem na exit / M&A</span>
           </div>
-          <div class="flex items-start gap-2.5 text-slate-300">
-            <i data-lucide="check" class="w-4 h-4 text-brand-400 mt-1 shrink-0"></i>
+          <div class="flex items-start gap-2.5 text-slate-700 dark:text-slate-300">
+            <i data-lucide="check" class="w-4 h-4 text-brand-600 dark:text-brand-400 mt-1 shrink-0"></i>
             <span>Eurogranty priamo z Bruselu a štrukturálne dotácie SR</span>
           </div>
-          <div class="flex items-start gap-2.5 text-slate-300">
-            <i data-lucide="check" class="w-4 h-4 text-brand-400 mt-1 shrink-0"></i>
+          <div class="flex items-start gap-2.5 text-slate-700 dark:text-slate-300">
+            <i data-lucide="check" class="w-4 h-4 text-brand-600 dark:text-brand-400 mt-1 shrink-0"></i>
             <span>ESG reporting, CSRD audity a výpočet uhlíkovej stopy</span>
           </div>
-          <div class="flex items-start gap-2.5 text-slate-300">
-            <i data-lucide="check" class="w-4 h-4 text-brand-400 mt-1 shrink-0"></i>
+          <div class="flex items-start gap-2.5 text-slate-700 dark:text-slate-300">
+            <i data-lucide="check" class="w-4 h-4 text-brand-600 dark:text-brand-400 mt-1 shrink-0"></i>
             <span>Riadenie projektových a podnikateľských rizík podľa ISO 31000</span>
           </div>
         </div>
 
-        <div class="mt-8 pt-6 border-t border-slate-800 flex items-center justify-between">
-          <span class="text-xs text-slate-400">IČO: 36282600 • Pezinok</span>
-          <a href="#services" class="text-xs font-semibold text-brand-400 hover:text-brand-300 flex items-center gap-1">
+        <div class="mt-8 pt-6 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+          <span class="text-xs text-slate-500 dark:text-slate-400 font-medium">IČO: 36282600 • Pezinok</span>
+          <a href="#services" class="text-xs font-bold text-brand-600 dark:text-brand-400 hover:underline flex items-center gap-1">
             Zobraziť služby <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
           </a>
         </div>
       </div>
 
       <!-- UNIT 2: PFC TAX & AUDIT s.r.o. -->
-      <div class="group relative rounded-3xl border border-slate-800 bg-gradient-to-b from-slate-900 to-slate-950 p-8 sm:p-10 hover:border-emerald-500/50 transition duration-300 shadow-xl">
-        <div class="w-14 h-14 rounded-2xl bg-emerald-500/20 border border-emerald-500/30 flex items-center justify-center text-emerald-400 mb-6 group-hover:scale-105 transition">
+      <div class="group relative rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-gradient-to-b dark:from-slate-900 dark:to-slate-950 p-8 sm:p-10 hover:border-emerald-500/50 transition duration-300 shadow-xl shadow-slate-200/50 dark:shadow-2xl">
+        <div class="w-14 h-14 rounded-2xl bg-emerald-50 dark:bg-emerald-500/20 border border-emerald-200 dark:border-emerald-500/30 flex items-center justify-center text-emerald-600 dark:text-emerald-400 mb-6 group-hover:scale-105 transition">
           <i data-lucide="file-check-2" class="w-7 h-7"></i>
         </div>
 
         <div class="flex items-center justify-between mb-3">
-          <h3 class="font-display text-2xl font-bold text-white">PFC TAX & AUDIT s.r.o.</h3>
-          <span class="text-xs font-semibold px-2.5 py-1 rounded bg-slate-800 text-slate-300">Daňová špecializácia</span>
+          <h3 class="font-display text-2xl font-extrabold text-slate-900 dark:text-white">PFC TAX & AUDIT s.r.o.</h3>
+          <span class="text-xs font-bold px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Daňová špecializácia</span>
         </div>
-        <p class="text-sm font-medium text-emerald-400 mb-6">Sekcia daňových úľav, R&D auditov a kontrolingu</p>
+        <p class="text-sm font-bold text-emerald-600 dark:text-emerald-400 mb-6">Sekcia daňových úľav, R&D auditov a kontrolingu</p>
         
-        <p class="text-slate-300 text-sm leading-relaxed mb-6">
+        <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-6">
           Špecializovaná entita zameraná na legálne uplatňovanie daňových zvýhodnení pre firmy podnikajúce na Slovensku. Líder v implementácii Superodpočtu na výskum a vývoj a PatentBOXu s garanciou obhájiteľnosti.
         </p>
 
-        <div class="space-y-3 pt-4 border-t border-slate-800/80 text-sm">
-          <div class="flex items-start gap-2.5 text-slate-300">
-            <i data-lucide="check" class="w-4 h-4 text-emerald-400 mt-1 shrink-0"></i>
+        <div class="space-y-3 pt-4 border-t border-slate-100 dark:border-slate-800/80 text-sm">
+          <div class="flex items-start gap-2.5 text-slate-700 dark:text-slate-300">
+            <i data-lucide="check" class="w-4 h-4 text-emerald-600 dark:text-emerald-400 mt-1 shrink-0"></i>
             <span>Superodpočet výdavkov na výskum a vývoj (až 100% uplatnenie)</span>
           </div>
-          <div class="flex items-start gap-2.5 text-slate-300">
-            <i data-lucide="check" class="w-4 h-4 text-emerald-400 mt-1 shrink-0"></i>
+          <div class="flex items-start gap-2.5 text-slate-700 dark:text-slate-300">
+            <i data-lucide="check" class="w-4 h-4 text-emerald-600 dark:text-emerald-400 mt-1 shrink-0"></i>
             <span>PatentBOX – zníženie dane z príjmov z nehmotných aktív a licencií</span>
           </div>
-          <div class="flex items-start gap-2.5 text-slate-300">
-            <i data-lucide="check" class="w-4 h-4 text-emerald-400 mt-1 shrink-0"></i>
+          <div class="flex items-start gap-2.5 text-slate-700 dark:text-slate-300">
+            <i data-lucide="check" class="w-4 h-4 text-emerald-600 dark:text-emerald-400 mt-1 shrink-0"></i>
             <span>Daňový controlling a plné zastupovanie pred Finančnou správou SR</span>
           </div>
-          <div class="flex items-start gap-2.5 text-slate-300">
-            <i data-lucide="check" class="w-4 h-4 text-emerald-400 mt-1 shrink-0"></i>
+          <div class="flex items-start gap-2.5 text-slate-700 dark:text-slate-300">
+            <i data-lucide="check" class="w-4 h-4 text-emerald-600 dark:text-emerald-400 mt-1 shrink-0"></i>
             <span>Optimalizácie a daňové úľavy pri predaji obchodných podielov</span>
           </div>
         </div>
 
-        <div class="mt-8 pt-6 border-t border-slate-800 flex items-center justify-between">
-          <span class="text-xs text-slate-400">IČO: 52894894 • Pezinok</span>
-          <a href="#calculator" class="text-xs font-semibold text-emerald-400 hover:text-emerald-300 flex items-center gap-1">
+        <div class="mt-8 pt-6 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+          <span class="text-xs text-slate-500 dark:text-slate-400 font-medium">IČO: 52894894 • Pezinok</span>
+          <a href="#calculator" class="text-xs font-bold text-emerald-600 dark:text-emerald-400 hover:underline flex items-center gap-1">
             Vypočítať úsporu <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
           </a>
         </div>
@@ -460,61 +507,61 @@
   </section>
 
   <!-- INTERACTIVE SECTION 1: SUPERODPOČET VaV CALCULATOR -->
-  <section id="calculator" class="py-20 bg-slate-900/60 border-y border-slate-800">
+  <section id="calculator" class="py-20 bg-slate-100/70 dark:bg-slate-900/60 border-y border-slate-200 dark:border-slate-800 transition-colors">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="grid lg:grid-cols-12 gap-12 items-center">
         
         <!-- Left: Context & Explanation -->
         <div class="lg:col-span-5 space-y-6">
-          <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-950 border border-emerald-800 text-emerald-400 text-xs font-semibold">
+          <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-950 border border-emerald-200 dark:border-emerald-800 text-emerald-700 dark:text-emerald-400 text-xs font-bold">
             <i data-lucide="calculator" class="w-3.5 h-3.5"></i>
             <span>Interaktívny kalkulátor úspor</span>
           </div>
-          <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-white leading-tight">
+          <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white leading-tight">
             Koľko peňazí vám môže ušetriť Superodpočet VaV?
           </h2>
-          <p class="text-slate-300 text-sm leading-relaxed">
+          <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
             Vyvíjate nový softvér, inovujete výrobné postupy, skúšate nové materiály alebo optimalizujete technológie? Slovenská legislatíva umožňuje odpočítať až 100 % nákladov na VaV od základu dane.
           </p>
           
-          <div class="space-y-3 text-xs text-slate-400">
+          <div class="space-y-3 text-xs text-slate-600 dark:text-slate-400">
             <div class="flex items-center gap-2">
-              <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400 shrink-0"></i>
+              <i data-lucide="check-circle" class="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0"></i>
               <span>Zahŕňa mzdové náklady interných vývojárov a technikov</span>
             </div>
             <div class="flex items-center gap-2">
-              <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400 shrink-0"></i>
+              <i data-lucide="check-circle" class="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0"></i>
               <span>Odpisy strojov, licencií a softvéru používaného vo VaV</span>
             </div>
             <div class="flex items-center gap-2">
-              <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400 shrink-0"></i>
+              <i data-lucide="check-circle" class="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0"></i>
               <span>Možnosť umorenia odpočtu až počas 5 nasledujúcich rokov</span>
             </div>
           </div>
 
-          <div class="p-4 rounded-xl bg-slate-950 border border-slate-800 text-xs text-slate-400 flex items-start gap-3">
-            <i data-lucide="info" class="w-5 h-5 text-brand-400 shrink-0 mt-0.5"></i>
+          <div class="p-4 rounded-xl bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800 text-xs text-slate-600 dark:text-slate-400 flex items-start gap-3 shadow-sm">
+            <i data-lucide="info" class="w-5 h-5 text-brand-600 dark:text-brand-400 shrink-0 mt-0.5"></i>
             <span>Vypracujeme pre vás kompletnú formálnu dokumentáciu a projekt VaV, ktorý znesie aj najprísnejšiu kontrolu správcu dane.</span>
           </div>
         </div>
 
         <!-- Right: Interactive Calculator Card -->
         <div class="lg:col-span-7">
-          <div class="p-6 sm:p-8 rounded-3xl bg-slate-950 border border-slate-800 shadow-2xl">
-            <h3 class="text-lg font-bold text-white mb-6 flex items-center justify-between">
+          <div class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800 shadow-2xl">
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-6 flex items-center justify-between">
               <span>Kalkulačka daňovej úspory na VaV</span>
-              <span class="text-xs text-slate-400 font-normal">Sadzba DPPO 21% / 24%</span>
+              <span class="text-xs text-slate-500 dark:text-slate-400 font-medium">Sadzba DPPO 21% / 24%</span>
             </h3>
 
             <!-- Slider 1: Mzdové náklady na vývojárov/výskumníkov -->
             <div class="space-y-2 mb-6">
               <div class="flex justify-between text-sm">
-                <label for="calc-wages" class="text-slate-300 font-medium">Ročné mzdy pracovníkov VaV (hrubá mzda + odvody):</label>
-                <span id="calc-wages-val" class="font-bold text-white">120 000 €</span>
+                <label for="calc-wages" class="text-slate-700 dark:text-slate-300 font-semibold">Ročné mzdy pracovníkov VaV (hrubá mzda + odvody):</label>
+                <span id="calc-wages-val" class="font-extrabold text-slate-900 dark:text-white">120 000 €</span>
               </div>
-              <input id="calc-wages" type="range" min="10000" max="1000000" step="10000" value="120000" oninput="updateCalculator()" class="w-full accent-brand-500 bg-slate-800 h-2 rounded-lg cursor-pointer">
-              <div class="flex justify-between text-[11px] text-slate-500">
+              <input id="calc-wages" type="range" min="10000" max="1000000" step="10000" value="120000" oninput="updateCalculator()" class="w-full accent-brand-600 dark:accent-brand-500 bg-slate-200 dark:bg-slate-800 h-2 rounded-lg cursor-pointer">
+              <div class="flex justify-between text-[11px] text-slate-500 font-medium">
                 <span>10 000 €</span>
                 <span>500 000 €</span>
                 <span>1 000 000 €</span>
@@ -524,11 +571,11 @@
             <!-- Slider 2: Materiál, licencie a odpisy pre VaV -->
             <div class="space-y-2 mb-6">
               <div class="flex justify-between text-sm">
-                <label for="calc-material" class="text-slate-300 font-medium">Materiál, softvér a odpisy pre VaV:</label>
-                <span id="calc-material-val" class="font-bold text-white">40 000 €</span>
+                <label for="calc-material" class="text-slate-700 dark:text-slate-300 font-semibold">Materiál, softvér a odpisy pre VaV:</label>
+                <span id="calc-material-val" class="font-extrabold text-slate-900 dark:text-white">40 000 €</span>
               </div>
-              <input id="calc-material" type="range" min="0" max="500000" step="5000" value="40000" oninput="updateCalculator()" class="w-full accent-brand-500 bg-slate-800 h-2 rounded-lg cursor-pointer">
-              <div class="flex justify-between text-[11px] text-slate-500">
+              <input id="calc-material" type="range" min="0" max="500000" step="5000" value="40000" oninput="updateCalculator()" class="w-full accent-brand-600 dark:accent-brand-500 bg-slate-200 dark:bg-slate-800 h-2 rounded-lg cursor-pointer">
+              <div class="flex justify-between text-[11px] text-slate-500 font-medium">
                 <span>0 €</span>
                 <span>250 000 €</span>
                 <span>500 000 €</span>
@@ -537,35 +584,35 @@
 
             <!-- Tax Rate Selection -->
             <div class="mb-8">
-              <label class="block text-xs text-slate-400 mb-2 font-medium">Sadzba dane z príjmov právnických osôb:</label>
+              <label class="block text-xs text-slate-600 dark:text-slate-400 mb-2 font-semibold">Sadzba dane z príjmov právnických osôb:</label>
               <div class="grid grid-cols-2 gap-3">
-                <button type="button" id="btn-tax-21" onclick="setTaxRate(0.21)" class="py-2 px-4 rounded-xl border border-brand-500 bg-brand-500/20 text-white font-medium text-xs transition">
+                <button type="button" id="btn-tax-21" onclick="setTaxRate(0.21)" class="py-2 px-4 rounded-xl border border-brand-500 bg-brand-50 text-brand-700 dark:bg-brand-500/20 dark:text-white font-bold text-xs transition">
                   Základná sadzba (21 %)
                 </button>
-                <button type="button" id="btn-tax-24" onclick="setTaxRate(0.24)" class="py-2 px-4 rounded-xl border border-slate-700 bg-slate-900 text-slate-400 font-medium text-xs transition">
+                <button type="button" id="btn-tax-24" onclick="setTaxRate(0.24)" class="py-2 px-4 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 text-slate-600 dark:text-slate-400 font-semibold text-xs transition">
                   Vyššia sadzba (24 %)
                 </button>
               </div>
             </div>
 
             <!-- Results Card -->
-            <div class="p-6 rounded-2xl bg-gradient-to-br from-slate-900 to-navy-950 border border-slate-800 grid sm:grid-cols-2 gap-6 items-center">
+            <div class="p-6 rounded-2xl bg-gradient-to-br from-slate-50 to-blue-50/60 dark:from-slate-900 dark:to-navy-950 border border-slate-200 dark:border-slate-800 grid sm:grid-cols-2 gap-6 items-center">
               <div>
-                <div class="text-xs text-slate-400 uppercase tracking-wider">Odpočet od základu dane (100%)</div>
-                <div id="calc-deduction-val" class="text-2xl font-display font-extrabold text-white mt-1">160 000 €</div>
+                <div class="text-xs text-slate-500 dark:text-slate-400 font-bold uppercase tracking-wider">Odpočet od základu dane (100%)</div>
+                <div id="calc-deduction-val" class="text-2xl font-display font-extrabold text-slate-900 dark:text-white mt-1">160 000 €</div>
                 <div class="text-[11px] text-slate-500 mt-1">Uplatniteľný v daňovom priznaní</div>
               </div>
-              <div class="sm:border-l sm:border-slate-800 sm:pl-6">
-                <div class="text-xs text-emerald-400 font-semibold uppercase tracking-wider flex items-center gap-1">
+              <div class="sm:border-l border-slate-200 dark:border-slate-800 sm:pl-6">
+                <div class="text-xs text-emerald-600 dark:text-emerald-400 font-bold uppercase tracking-wider flex items-center gap-1">
                   <i data-lucide="sparkles" class="w-3.5 h-3.5"></i> Odhadovaná čistá úspora na dani
                 </div>
-                <div id="calc-savings-val" class="text-3xl font-display font-extrabold text-emerald-400 mt-1">33 600 €</div>
-                <div class="text-[11px] text-slate-400 mt-1">Peniaze, ktoré ostanú vo vašej firme</div>
+                <div id="calc-savings-val" class="text-3xl font-display font-extrabold text-emerald-600 dark:text-emerald-400 mt-1">33 600 €</div>
+                <div class="text-[11px] text-slate-500 dark:text-slate-400 mt-1 font-medium">Peniaze, ktoré ostanú vo vašej firme</div>
               </div>
             </div>
 
             <div class="mt-6 flex flex-col sm:flex-row gap-3">
-              <button onclick="requestCalcAudit()" class="flex-1 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-sm transition shadow-lg shadow-emerald-600/20 flex items-center justify-center gap-2">
+              <button onclick="requestCalcAudit()" class="flex-1 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm transition shadow-lg shadow-emerald-600/20 flex items-center justify-center gap-2">
                 <span>Objednať bezplatné posúdenie VaV aktivít</span>
                 <i data-lucide="arrow-right" class="w-4 h-4"></i>
               </button>
@@ -583,13 +630,13 @@
   <section id="services" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     
     <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
-      <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-950 border border-brand-800/60 text-brand-400 text-xs font-semibold">
+      <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-50 dark:bg-brand-950 border border-brand-200 dark:border-brand-800/60 text-brand-700 dark:text-brand-400 text-xs font-bold">
         <span>Komplexné portfólio služieb</span>
       </div>
-      <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-white">
+      <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white">
         Strategické poradenstvo, ktoré prináša merateľné výsledky
       </h2>
-      <p class="text-slate-400 text-base">
+      <p class="text-slate-600 dark:text-slate-400 text-base">
         Spájame strategické rozhodnutia, inžiniersku precíznosť a dôkladnú znalosť európskej legislatívy a finančných trhov.
       </p>
     </div>
@@ -598,94 +645,94 @@
     <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
       
       <!-- Card 1: STRATÉGIE -->
-      <div class="rounded-2xl border border-slate-800 bg-slate-900/70 p-6 flex flex-col justify-between hover:border-brand-500/50 hover:bg-slate-900 transition duration-300">
+      <div class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/70 p-6 flex flex-col justify-between hover:border-brand-500 hover:shadow-xl dark:hover:bg-slate-900 transition duration-300 shadow-sm">
         <div>
-          <div class="w-12 h-12 rounded-xl bg-brand-500/10 text-brand-400 flex items-center justify-center mb-5 border border-brand-500/20">
+          <div class="w-12 h-12 rounded-xl bg-brand-50 dark:bg-brand-500/10 text-brand-600 dark:text-brand-400 flex items-center justify-center mb-5 border border-brand-200 dark:border-brand-500/20">
             <i data-lucide="target" class="w-6 h-6"></i>
           </div>
-          <span class="text-xs font-bold text-brand-400 uppercase tracking-widest">Pilier 01</span>
-          <h3 class="font-display text-xl font-bold text-white mt-1 mb-3">Stratégie & Rast</h3>
-          <p class="text-slate-400 text-xs leading-relaxed mb-4">
+          <span class="text-xs font-extrabold text-brand-600 dark:text-brand-400 uppercase tracking-widest">Pilier 01</span>
+          <h3 class="font-display text-xl font-bold text-slate-900 dark:text-white mt-1 mb-3">Stratégie & Rast</h3>
+          <p class="text-slate-600 dark:text-slate-400 text-xs leading-relaxed mb-4">
             Pretavujeme vízie a nápady do robustných biznis modelov a finančných plánov odolných voči trhovej volatilite.
           </p>
-          <ul class="space-y-2 text-xs text-slate-300">
-            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-400"></i> Štúdie realizovateľnosti a prieskumy trhu</li>
-            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-400"></i> Zvyšovanie hodnoty firiem a exit plánovanie</li>
-            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-400"></i> Podpora pre fúzie a akvizície (M&A)</li>
-            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-400"></i> Prezentácia pre Private Equity & VC fondy</li>
+          <ul class="space-y-2 text-xs text-slate-700 dark:text-slate-300">
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-600 dark:text-brand-400"></i> Štúdie realizovateľnosti a prieskumy trhu</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-600 dark:text-brand-400"></i> Zvyšovanie hodnoty firiem a exit plánovanie</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-600 dark:text-brand-400"></i> Podpora pre fúzie a akvizície (M&A)</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-600 dark:text-brand-400"></i> Prezentácia pre Private Equity & VC fondy</li>
           </ul>
         </div>
-        <div class="mt-6 pt-4 border-t border-slate-800">
-          <a href="#contact" class="text-xs font-semibold text-brand-400 hover:text-brand-300 flex items-center gap-1">Konzultovať stratégiu &rarr;</a>
+        <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800">
+          <a href="#contact" class="text-xs font-bold text-brand-600 dark:text-brand-400 hover:underline flex items-center gap-1">Konzultovať stratégiu &rarr;</a>
         </div>
       </div>
 
       <!-- Card 2: DAŇOVÉ ÚĽAVY & AUDITY -->
-      <div class="rounded-2xl border border-slate-800 bg-slate-900/70 p-6 flex flex-col justify-between hover:border-emerald-500/50 hover:bg-slate-900 transition duration-300">
+      <div class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/70 p-6 flex flex-col justify-between hover:border-emerald-500 hover:shadow-xl dark:hover:bg-slate-900 transition duration-300 shadow-sm">
         <div>
-          <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center mb-5 border border-emerald-500/20">
+          <div class="w-12 h-12 rounded-xl bg-emerald-50 dark:bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center mb-5 border border-emerald-200 dark:border-emerald-500/20">
             <i data-lucide="receipt" class="w-6 h-6"></i>
           </div>
-          <span class="text-xs font-bold text-emerald-400 uppercase tracking-widest">Pilier 02</span>
-          <h3 class="font-display text-xl font-bold text-white mt-1 mb-3">Daňové Úľavy & VaV</h3>
-          <p class="text-slate-400 text-xs leading-relaxed mb-4">
+          <span class="text-xs font-extrabold text-emerald-600 dark:text-emerald-400 uppercase tracking-widest">Pilier 02</span>
+          <h3 class="font-display text-xl font-bold text-slate-900 dark:text-white mt-1 mb-3">Daňové Úľavy & VaV</h3>
+          <p class="text-slate-600 dark:text-slate-400 text-xs leading-relaxed mb-4">
             Legálne a bezpečné optimalizácie daňových povinností podložené precíznym auditom a odbornou obhajobou.
           </p>
-          <ul class="space-y-2 text-xs text-slate-300">
-            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400"></i> Superodpočet VaV (100% uplatnenie výdavkov)</li>
-            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400"></i> PatentBOX režim pre nehmotný majetok</li>
-            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400"></i> Daňové úľavy pri predaji obchodného podielu</li>
-            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400"></i> Plné zastupovanie pred Finančnou správou SR</li>
+          <ul class="space-y-2 text-xs text-slate-700 dark:text-slate-300">
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400"></i> Superodpočet VaV (100% uplatnenie výdavkov)</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400"></i> PatentBOX režim pre nehmotný majetok</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400"></i> Daňové úľavy pri predaji obchodného podielu</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400"></i> Plné zastupovanie pred Finančnou správou SR</li>
           </ul>
         </div>
-        <div class="mt-6 pt-4 border-t border-slate-800">
-          <a href="#calculator" class="text-xs font-semibold text-emerald-400 hover:text-emerald-300 flex items-center gap-1">Spočítať úsporu &rarr;</a>
+        <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800">
+          <a href="#calculator" class="text-xs font-bold text-emerald-600 dark:text-emerald-400 hover:underline flex items-center gap-1">Spočítať úsporu &rarr;</a>
         </div>
       </div>
 
       <!-- Card 3: PROJEKTY & ESG -->
-      <div class="rounded-2xl border border-slate-800 bg-slate-900/70 p-6 flex flex-col justify-between hover:border-sky-500/50 hover:bg-slate-900 transition duration-300">
+      <div class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/70 p-6 flex flex-col justify-between hover:border-sky-500 hover:shadow-xl dark:hover:bg-slate-900 transition duration-300 shadow-sm">
         <div>
-          <div class="w-12 h-12 rounded-xl bg-sky-500/10 text-sky-400 flex items-center justify-center mb-5 border border-sky-500/20">
+          <div class="w-12 h-12 rounded-xl bg-sky-50 dark:bg-sky-500/10 text-sky-600 dark:text-sky-400 flex items-center justify-center mb-5 border border-sky-200 dark:border-sky-500/20">
             <i data-lucide="leaf" class="w-6 h-6"></i>
           </div>
-          <span class="text-xs font-bold text-sky-400 uppercase tracking-widest">Pilier 03</span>
-          <h3 class="font-display text-xl font-bold text-white mt-1 mb-3">ESG & Projekty</h3>
-          <p class="text-slate-400 text-xs leading-relaxed mb-4">
+          <span class="text-xs font-extrabold text-sky-600 dark:text-sky-400 uppercase tracking-widest">Pilier 03</span>
+          <h3 class="font-display text-xl font-bold text-slate-900 dark:text-white mt-1 mb-3">ESG & Projekty</h3>
+          <p class="text-slate-600 dark:text-slate-400 text-xs leading-relaxed mb-4">
             Transformácia výroby, znižovanie uhlíkovej stopy a profesionálne riadenie investičných projektov.
           </p>
-          <ul class="space-y-2 text-xs text-slate-300">
-            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-sky-400"></i> ESG poradenstvo, CSRD reporting & audity</li>
-            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-sky-400"></i> Výpočet a znižovanie uhlíkovej stopy (Scope 1,2,3)</li>
-            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-sky-400"></i> Ochrana IPR (Patenty, licencie a ochranné známky)</li>
-            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-sky-400"></i> Riadenie projektových rizík podľa ISO 31000</li>
+          <ul class="space-y-2 text-xs text-slate-700 dark:text-slate-300">
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-sky-600 dark:text-sky-400"></i> ESG poradenstvo, CSRD reporting & audity</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-sky-600 dark:text-sky-400"></i> Výpočet a znižovanie uhlíkovej stopy (Scope 1,2,3)</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-sky-600 dark:text-sky-400"></i> Ochrana IPR (Patenty, licencie a ochranné známky)</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-sky-600 dark:text-sky-400"></i> Riadenie projektových rizík podľa ISO 31000</li>
           </ul>
         </div>
-        <div class="mt-6 pt-4 border-t border-slate-800">
-          <a href="#esg" class="text-xs font-semibold text-sky-400 hover:text-sky-300 flex items-center gap-1">Viac o ESG &rarr;</a>
+        <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800">
+          <a href="#esg" class="text-xs font-bold text-sky-600 dark:text-sky-400 hover:underline flex items-center gap-1">Viac o ESG &rarr;</a>
         </div>
       </div>
 
       <!-- Card 4: PENIAZE & GRANTY -->
-      <div class="rounded-2xl border border-slate-800 bg-slate-900/70 p-6 flex flex-col justify-between hover:border-amber-500/50 hover:bg-slate-900 transition duration-300">
+      <div class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/70 p-6 flex flex-col justify-between hover:border-amber-500 hover:shadow-xl dark:hover:bg-slate-900 transition duration-300 shadow-sm">
         <div>
-          <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center mb-5 border border-amber-500/20">
+          <div class="w-12 h-12 rounded-xl bg-amber-50 dark:bg-amber-500/10 text-amber-600 dark:text-amber-400 flex items-center justify-center mb-5 border border-amber-200 dark:border-amber-500/20">
             <i data-lucide="coins" class="w-6 h-6"></i>
           </div>
-          <span class="text-xs font-bold text-amber-400 uppercase tracking-widest">Pilier 04</span>
-          <h3 class="font-display text-xl font-bold text-white mt-1 mb-3">EÚ Fondy & Kapitál</h3>
-          <p class="text-slate-400 text-xs leading-relaxed mb-4">
+          <span class="text-xs font-extrabold text-amber-600 dark:text-amber-400 uppercase tracking-widest">Pilier 04</span>
+          <h3 class="font-display text-xl font-bold text-slate-900 dark:text-white mt-1 mb-3">EÚ Fondy & Kapitál</h3>
+          <p class="text-slate-600 dark:text-slate-400 text-xs leading-relaxed mb-4">
             Navigácia v komplexnom ekosystéme dotácií, bankových úverov a medzinárodného rizikového kapitálu.
           </p>
-          <ul class="space-y-2 text-xs text-slate-300">
-            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-amber-400"></i> Priame granty z Bruselu (Horizon Europe, EIC)</li>
-            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-amber-400"></i> Štrukturálne fondy EÚ & Plán obnovy SR</li>
-            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-amber-400"></i> Nórske granty & cezhraničná spolupráca</li>
-            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-amber-400"></i> Private Equity & Venture Capital syndikácia</li>
+          <ul class="space-y-2 text-xs text-slate-700 dark:text-slate-300">
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-amber-600 dark:text-amber-400"></i> Priame granty z Bruselu (Horizon Europe, EIC)</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-amber-600 dark:text-amber-400"></i> Štrukturálne fondy EÚ & Plán obnovy SR</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-amber-600 dark:text-amber-400"></i> Nórske granty & cezhraničná spolupráca</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-amber-600 dark:text-amber-400"></i> Private Equity & Venture Capital syndikácia</li>
           </ul>
         </div>
-        <div class="mt-6 pt-4 border-t border-slate-800">
-          <a href="#grant-wizard" class="text-xs font-semibold text-amber-400 hover:text-amber-300 flex items-center gap-1">Overiť granty &rarr;</a>
+        <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800">
+          <a href="#grant-wizard" class="text-xs font-bold text-amber-600 dark:text-amber-400 hover:underline flex items-center gap-1">Overiť granty &rarr;</a>
         </div>
       </div>
 
@@ -694,28 +741,28 @@
   </section>
 
   <!-- INTERACTIVE SECTION 2: GRANT FINDER WIZARD -->
-  <section id="grant-wizard" class="py-20 bg-navy-950/80 border-y border-slate-800">
+  <section id="grant-wizard" class="py-20 bg-slate-100/60 dark:bg-navy-950/80 border-y border-slate-200 dark:border-slate-800 transition-colors">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="text-center max-w-2xl mx-auto mb-10 space-y-3">
-        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-950 border border-brand-800 text-brand-300 text-xs font-semibold">
+        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-50 dark:bg-brand-950 border border-brand-200 dark:border-brand-800 text-brand-700 dark:text-brand-300 text-xs font-bold">
           <i data-lucide="search" class="w-3.5 h-3.5"></i>
           <span>Rýchly grantový sprievodca</span>
         </div>
-        <h2 class="font-display text-2xl sm:text-3xl font-extrabold text-white">
+        <h2 class="font-display text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">
           Zistite, aké finančné mechanizmy sú vhodné pre váš podnik
         </h2>
-        <p class="text-slate-400 text-xs sm:text-sm">
+        <p class="text-slate-600 dark:text-slate-400 text-xs sm:text-sm">
           Vyberte kategóriu a oblasť plánovanej investície pre okamžité odporúčanie podporných schém.
         </p>
       </div>
 
-      <div class="p-6 sm:p-8 rounded-3xl bg-slate-900 border border-slate-800 shadow-xl space-y-6">
+      <div class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xl space-y-6">
         <div class="grid sm:grid-cols-3 gap-4">
           
           <div>
-            <label class="block text-xs text-slate-300 font-semibold mb-2">1. Veľkosť spoločnosti</label>
-            <select id="wizard-size" onchange="runGrantWizard()" class="w-full bg-slate-950 border border-slate-700 text-white rounded-xl px-4 py-2.5 text-xs focus:ring-2 focus:ring-brand-500 focus:outline-none">
+            <label class="block text-xs text-slate-700 dark:text-slate-300 font-bold mb-2">1. Veľkosť spoločnosti</label>
+            <select id="wizard-size" onchange="runGrantWizard()" class="w-full bg-slate-50 dark:bg-slate-950 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white rounded-xl px-4 py-2.5 text-xs focus:ring-2 focus:ring-brand-500 focus:outline-none">
               <option value="sme">Malý a stredný podnik (do 250 zamestnancov)</option>
               <option value="large">Veľký podnik (nad 250 zamestnancov)</option>
               <option value="startup">Start-up / Inovatívna firma (do 3 rokov)</option>
@@ -723,8 +770,8 @@
           </div>
 
           <div>
-            <label class="block text-xs text-slate-300 font-semibold mb-2">2. Odvetvie / Sektor</label>
-            <select id="wizard-sector" onchange="runGrantWizard()" class="w-full bg-slate-950 border border-slate-700 text-white rounded-xl px-4 py-2.5 text-xs focus:ring-2 focus:ring-brand-500 focus:outline-none">
+            <label class="block text-xs text-slate-700 dark:text-slate-300 font-bold mb-2">2. Odvetvie / Sektor</label>
+            <select id="wizard-sector" onchange="runGrantWizard()" class="w-full bg-slate-50 dark:bg-slate-950 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white rounded-xl px-4 py-2.5 text-xs focus:ring-2 focus:ring-brand-500 focus:outline-none">
               <option value="industry">Priemyselná výroba & Strojarina</option>
               <option value="it">Informačné technológie & Softvér</option>
               <option value="energy">Energetika, Odpady & Obnoviteľné zdroje</option>
@@ -733,8 +780,8 @@
           </div>
 
           <div>
-            <label class="block text-xs text-slate-300 font-semibold mb-2">3. Cieľ projektu</label>
-            <select id="wizard-goal" onchange="runGrantWizard()" class="w-full bg-slate-950 border border-slate-700 text-white rounded-xl px-4 py-2.5 text-xs focus:ring-2 focus:ring-brand-500 focus:outline-none">
+            <label class="block text-xs text-slate-700 dark:text-slate-300 font-bold mb-2">3. Cieľ projektu</label>
+            <select id="wizard-goal" onchange="runGrantWizard()" class="w-full bg-slate-50 dark:bg-slate-950 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white rounded-xl px-4 py-2.5 text-xs focus:ring-2 focus:ring-brand-500 focus:outline-none">
               <option value="rnd">Vývoj nového produktu / prototypu (VaV)</option>
               <option value="decarb">Zníženie spotreby energií & emisií (ESG)</option>
               <option value="auto">Automatizácia a robotizácia výroby</option>
@@ -745,18 +792,18 @@
         </div>
 
         <!-- Wizard Output Result -->
-        <div id="wizard-result" class="p-5 rounded-2xl bg-slate-950/90 border border-brand-500/40 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div id="wizard-result" class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-950/90 border border-brand-300 dark:border-brand-500/40 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div class="space-y-1">
             <div class="flex items-center gap-2">
-              <span class="w-2.5 h-2.5 rounded-full bg-emerald-400"></span>
-              <span class="text-xs font-bold text-emerald-400 uppercase tracking-wider" id="wizard-badge">Odporúčaná kombinácia financovania</span>
+              <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+              <span class="text-xs font-extrabold text-emerald-700 dark:text-emerald-400 uppercase tracking-wider" id="wizard-badge">Odporúčaná kombinácia financovania</span>
             </div>
-            <h4 class="text-base font-bold text-white" id="wizard-title">Superodpočet VaV (100%) + Program Slovensko / Horizon Europe</h4>
-            <p class="text-xs text-slate-400 max-w-xl" id="wizard-desc">
+            <h4 class="text-base font-bold text-slate-900 dark:text-white" id="wizard-title">Superodpočet VaV (100%) + Program Slovensko / Horizon Europe</h4>
+            <p class="text-xs text-slate-600 dark:text-slate-400 max-w-xl" id="wizard-desc">
               Váš projekt je ideálnym kandidátom na kombináciu priameho nenávratného grantu z výziev EÚ a uplatnenie daňového superodpočtu na mzdové a materiálové výdavky vývoja.
             </p>
           </div>
-          <button onclick="openConsultationModal()" class="shrink-0 px-5 py-2.5 rounded-xl bg-brand-600 hover:bg-brand-500 text-white text-xs font-semibold shadow-md transition">
+          <button onclick="openConsultationModal()" class="shrink-0 px-5 py-2.5 rounded-xl bg-brand-600 hover:bg-brand-500 text-white text-xs font-bold shadow-md transition">
             Získať dotačnú analýzu
           </button>
         </div>
@@ -771,102 +818,102 @@
     <div class="grid lg:grid-cols-12 gap-12 items-center">
       
       <div class="lg:col-span-6 space-y-6">
-        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-sky-950 border border-sky-800 text-sky-400 text-xs font-semibold">
+        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-sky-50 dark:bg-sky-950 border border-sky-200 dark:border-sky-800 text-sky-700 dark:text-sky-400 text-xs font-bold">
           <i data-lucide="shield" class="w-3.5 h-3.5"></i>
           <span>Európska smernica CSRD & ESG regulácie</span>
         </div>
         
-        <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-white leading-tight">
+        <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white leading-tight">
           ESG reporting a dekarbonizácia: <br>Povinnosť premenená na konkurenčnú výhodu.
         </h2>
         
-        <p class="text-slate-300 text-sm leading-relaxed">
+        <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
           Nová európska legislatíva (CSRD, ESRS) zásadne mení prístup bánk, dodávateľov a investorov k firmám. Banky zvýhodňujú zelené úvery, zatiaľ čo nadnárodní odberatelia vyžadujú overený audit uhlíkovej stopy.
         </p>
 
         <div class="space-y-4 pt-2">
           <div class="flex items-start gap-3">
-            <div class="w-8 h-8 rounded-lg bg-sky-500/10 text-sky-400 flex items-center justify-center shrink-0 border border-sky-500/20">
+            <div class="w-8 h-8 rounded-lg bg-sky-50 dark:bg-sky-500/10 text-sky-600 dark:text-sky-400 flex items-center justify-center shrink-0 border border-sky-200 dark:border-sky-500/20">
               <i data-lucide="bar-chart-3" class="w-4 h-4"></i>
             </div>
             <div>
-              <h4 class="text-sm font-bold text-white">Výpočet uhlíkovej stopy (Scope 1, 2, 3)</h4>
-              <p class="text-xs text-slate-400 mt-0.5">Certifikovaná metodika výpočtu emisií pre bankové inštitúcie a auditných partnerov.</p>
+              <h4 class="text-sm font-bold text-slate-900 dark:text-white">Výpočet uhlíkovej stopy (Scope 1, 2, 3)</h4>
+              <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Certifikovaná metodika výpočtu emisií pre bankové inštitúcie a auditných partnerov.</p>
             </div>
           </div>
 
           <div class="flex items-start gap-3">
-            <div class="w-8 h-8 rounded-lg bg-sky-500/10 text-sky-400 flex items-center justify-center shrink-0 border border-sky-500/20">
+            <div class="w-8 h-8 rounded-lg bg-sky-50 dark:bg-sky-500/10 text-sky-600 dark:text-sky-400 flex items-center justify-center shrink-0 border border-sky-200 dark:border-sky-500/20">
               <i data-lucide="file-text" class="w-4 h-4"></i>
             </div>
             <div>
-              <h4 class="text-sm font-bold text-white">Príprava CSRD / ESG reportu</h4>
-              <p class="text-xs text-slate-400 mt-0.5">Kompletné zosumarizovanie environmentálnych, sociálnych a riadiacich ukazovateľov.</p>
+              <h4 class="text-sm font-bold text-slate-900 dark:text-white">Príprava CSRD / ESG reportu</h4>
+              <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Kompletné zosumarizovanie environmentálnych, sociálnych a riadiacich ukazovateľov.</p>
             </div>
           </div>
 
           <div class="flex items-start gap-3">
-            <div class="w-8 h-8 rounded-lg bg-sky-500/10 text-sky-400 flex items-center justify-center shrink-0 border border-sky-500/20">
+            <div class="w-8 h-8 rounded-lg bg-sky-50 dark:bg-sky-500/10 text-sky-600 dark:text-sky-400 flex items-center justify-center shrink-0 border border-sky-200 dark:border-sky-500/20">
               <i data-lucide="zap" class="w-4 h-4"></i>
             </div>
             <div>
-              <h4 class="text-sm font-bold text-white">Energetické audity a dotácie na dekarbonizáciu</h4>
-              <p class="text-xs text-slate-400 mt-0.5">Prepojenie ESG auditu s výzvami na fotovoltiku, zateplenie a tepelné čerpadlá.</p>
+              <h4 class="text-sm font-bold text-slate-900 dark:text-white">Energetické audity a dotácie na dekarbonizáciu</h4>
+              <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Prepojenie ESG auditu s výzvami na fotovoltiku, zateplenie a tepelné čerpadlá.</p>
             </div>
           </div>
         </div>
 
-        <button onclick="openConsultationModal()" class="px-6 py-3 rounded-xl bg-slate-900 border border-slate-700 hover:border-sky-500 text-white text-xs font-semibold transition flex items-center gap-2">
+        <button onclick="openConsultationModal()" class="px-6 py-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-700 hover:border-sky-500 text-slate-900 dark:text-white text-xs font-bold shadow-sm transition flex items-center gap-2">
           <span>Dohodnúť úvodný ESG audit</span>
-          <i data-lucide="arrow-right" class="w-4 h-4 text-sky-400"></i>
+          <i data-lucide="arrow-right" class="w-4 h-4 text-sky-600 dark:text-sky-400"></i>
         </button>
 
       </div>
 
       <div class="lg:col-span-6">
-        <div class="p-8 rounded-3xl bg-slate-900/90 border border-slate-800 shadow-2xl space-y-6">
-          <div class="flex items-center justify-between pb-4 border-b border-slate-800">
-            <h3 class="font-bold text-white text-base">Oblasti priemyselného pôsobenia</h3>
-            <span class="text-xs text-slate-400 font-medium">Overené skúsenosti</span>
+        <div class="p-8 rounded-3xl bg-white dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800 shadow-xl dark:shadow-2xl space-y-6">
+          <div class="flex items-center justify-between pb-4 border-b border-slate-100 dark:border-slate-800">
+            <h3 class="font-bold text-slate-900 dark:text-white text-base">Oblasti priemyselného pôsobenia</h3>
+            <span class="text-xs text-slate-500 dark:text-slate-400 font-semibold">Overené skúsenosti</span>
           </div>
 
           <div class="grid grid-cols-2 gap-4">
-            <div class="p-4 rounded-xl bg-slate-950 border border-slate-800/80">
-              <div class="w-8 h-8 rounded bg-brand-500/10 text-brand-400 flex items-center justify-center mb-2">
+            <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-200/80 dark:border-slate-800/80">
+              <div class="w-8 h-8 rounded bg-brand-50 dark:bg-brand-500/10 text-brand-600 dark:text-brand-400 flex items-center justify-center mb-2">
                 <i data-lucide="factory" class="w-4 h-4"></i>
               </div>
-              <div class="font-bold text-white text-xs">Priemyselná výroba</div>
-              <p class="text-[11px] text-slate-400 mt-1">Strojárstvo, plasty, automobilový subdodávateľský reťazec.</p>
+              <div class="font-bold text-slate-900 dark:text-white text-xs">Priemyselná výroba</div>
+              <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-1">Strojárstvo, plasty, automobilový subdodávateľský reťazec.</p>
             </div>
 
-            <div class="p-4 rounded-xl bg-slate-950 border border-slate-800/80">
-              <div class="w-8 h-8 rounded bg-amber-500/10 text-amber-400 flex items-center justify-center mb-2">
+            <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-200/80 dark:border-slate-800/80">
+              <div class="w-8 h-8 rounded bg-amber-50 dark:bg-amber-500/10 text-amber-600 dark:text-amber-400 flex items-center justify-center mb-2">
                 <i data-lucide="zap" class="w-4 h-4"></i>
               </div>
-              <div class="font-bold text-white text-xs">Energetika & Odpady</div>
-              <p class="text-[11px] text-slate-400 mt-1">Bioplyn, OZE, cirkulárna ekonomika a recyklácia surovín.</p>
+              <div class="font-bold text-slate-900 dark:text-white text-xs">Energetika & Odpady</div>
+              <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-1">Bioplyn, OZE, cirkulárna ekonomika a recyklácia surovín.</p>
             </div>
 
-            <div class="p-4 rounded-xl bg-slate-950 border border-slate-800/80">
-              <div class="w-8 h-8 rounded bg-blue-500/10 text-blue-400 flex items-center justify-center mb-2">
+            <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-200/80 dark:border-slate-800/80">
+              <div class="w-8 h-8 rounded bg-blue-50 dark:bg-blue-500/10 text-blue-600 dark:text-blue-400 flex items-center justify-center mb-2">
                 <i data-lucide="cpu" class="w-4 h-4"></i>
               </div>
-              <div class="font-bold text-white text-xs">Informačné technológie</div>
-              <p class="text-[11px] text-slate-400 mt-1">Enterprise softvér, AI, SaaS riešenia a kyberbezpečnosť.</p>
+              <div class="font-bold text-slate-900 dark:text-white text-xs">Informačné technológie</div>
+              <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-1">Enterprise softvér, AI, SaaS riešenia a kyberbezpečnosť.</p>
             </div>
 
-            <div class="p-4 rounded-xl bg-slate-950 border border-slate-800/80">
-              <div class="w-8 h-8 rounded bg-emerald-500/10 text-emerald-400 flex items-center justify-center mb-2">
+            <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-200/80 dark:border-slate-800/80">
+              <div class="w-8 h-8 rounded bg-emerald-50 dark:bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center mb-2">
                 <i data-lucide="pill" class="w-4 h-4"></i>
               </div>
-              <div class="font-bold text-white text-xs">Farmácia & Chémia</div>
-              <p class="text-[11px] text-slate-400 mt-1">Vývoj liečiv, biochemické technológie a certifikácie.</p>
+              <div class="font-bold text-slate-900 dark:text-white text-xs">Farmácia & Chémia</div>
+              <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-1">Vývoj liečiv, biochemické technológie a certifikácie.</p>
             </div>
           </div>
 
-          <div class="p-4 rounded-xl bg-brand-950/40 border border-brand-800/40 flex items-center justify-between text-xs">
-            <span class="text-slate-300">Stiahnite si našu oficiálnu politiku IMS:</span>
-            <a href="https://www.profc.eu/data/politika_IMS.pdf" target="_blank" class="font-semibold text-brand-400 hover:text-white flex items-center gap-1">
+          <div class="p-4 rounded-xl bg-brand-50/60 dark:bg-brand-950/40 border border-brand-200 dark:border-brand-800/40 flex items-center justify-between text-xs">
+            <span class="text-slate-700 dark:text-slate-300 font-medium">Stiahnite si našu oficiálnu politiku IMS:</span>
+            <a href="https://www.profc.eu/data/politika_IMS.pdf" target="_blank" class="font-bold text-brand-600 dark:text-brand-400 hover:underline flex items-center gap-1">
               <span>PDF Dokument</span> <i data-lucide="download" class="w-3.5 h-3.5"></i>
             </a>
           </div>
@@ -877,17 +924,17 @@
   </section>
 
   <!-- LEADERSHIP & INTERNATIONAL EXPERTS SECTION -->
-  <section id="about" class="py-24 bg-slate-900/50 border-t border-slate-800">
+  <section id="about" class="py-24 bg-slate-100/50 dark:bg-slate-900/50 border-t border-slate-200 dark:border-slate-800 transition-colors">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
-        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-950 border border-brand-800/60 text-brand-400 text-xs font-semibold">
+        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-50 dark:bg-brand-950 border border-brand-200 dark:border-brand-800/60 text-brand-700 dark:text-brand-400 text-xs font-bold">
           <span>Odborný tím & Aliancie</span>
         </div>
-        <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-white">
+        <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white">
           Skúsení projektoví manažéri s medzinárodným dosahom
         </h2>
-        <p class="text-slate-400 text-base">
+        <p class="text-slate-600 dark:text-slate-400 text-base">
           Disponujeme tímom certifikovaných expertov so skúsenosťami z Bruselu, Barcelony, Brna a Bratislavy.
         </p>
       </div>
@@ -896,70 +943,70 @@
       <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
         
         <!-- Member 1 -->
-        <div class="rounded-2xl border border-slate-800 bg-slate-950 p-6 text-center space-y-4 hover:border-brand-500/40 transition">
-          <div class="w-20 h-20 rounded-full bg-slate-800 mx-auto flex items-center justify-center font-bold text-xl text-brand-400 border-2 border-brand-500/30">
+        <div class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 p-6 text-center space-y-4 shadow-sm hover:shadow-md hover:border-brand-500/40 transition">
+          <div class="w-20 h-20 rounded-full bg-slate-100 dark:bg-slate-800 mx-auto flex items-center justify-center font-bold text-xl text-brand-600 dark:text-brand-400 border-2 border-brand-500/30">
             RL
           </div>
           <div>
-            <h3 class="font-display font-bold text-white text-base">Ing. Radovan Lucina, MBA</h3>
-            <p class="text-xs font-semibold text-brand-400 mt-0.5">Senior Project Manager</p>
-            <p class="text-[11px] text-slate-400 mt-2">Špecialista na Horizon 2020 / Horizon Europe, R&D projekty a riadenie rizík (ISO 31000).</p>
-            <span class="inline-block mt-3 text-[10px] uppercase font-bold text-slate-500">Pezinok / Bratislava</span>
+            <h3 class="font-display font-bold text-slate-900 dark:text-white text-base">Ing. Radovan Lucina, MBA</h3>
+            <p class="text-xs font-bold text-brand-600 dark:text-brand-400 mt-0.5">Senior Project Manager</p>
+            <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-2">Špecialista na Horizon 2020 / Horizon Europe, R&D projekty a riadenie rizík (ISO 31000).</p>
+            <span class="inline-block mt-3 text-[10px] uppercase font-bold text-slate-400 dark:text-slate-500">Pezinok / Bratislava</span>
           </div>
         </div>
 
         <!-- Member 2 -->
-        <div class="rounded-2xl border border-slate-800 bg-slate-950 p-6 text-center space-y-4 hover:border-brand-500/40 transition">
-          <div class="w-20 h-20 rounded-full bg-slate-800 mx-auto flex items-center justify-center font-bold text-xl text-emerald-400 border-2 border-emerald-500/30">
+        <div class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 p-6 text-center space-y-4 shadow-sm hover:shadow-md hover:border-emerald-500/40 transition">
+          <div class="w-20 h-20 rounded-full bg-slate-100 dark:bg-slate-800 mx-auto flex items-center justify-center font-bold text-xl text-emerald-600 dark:text-emerald-400 border-2 border-emerald-500/30">
             AL
           </div>
           <div>
-            <h3 class="font-display font-bold text-white text-base">Adela Lániková</h3>
-            <p class="text-xs font-semibold text-emerald-400 mt-0.5">Accounting & Junior PM</p>
-            <p class="text-[11px] text-slate-400 mt-2">Správa finančných tokov, kontroling a účtovná dokumentácia projektov podporenej z fondov EÚ.</p>
-            <span class="inline-block mt-3 text-[10px] uppercase font-bold text-slate-500">Pezinok</span>
+            <h3 class="font-display font-bold text-slate-900 dark:text-white text-base">Adela Lániková</h3>
+            <p class="text-xs font-bold text-emerald-600 dark:text-emerald-400 mt-0.5">Accounting & Junior PM</p>
+            <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-2">Správa finančných tokov, kontroling a účtovná dokumentácia projektov podporenej z fondov EÚ.</p>
+            <span class="inline-block mt-3 text-[10px] uppercase font-bold text-slate-400 dark:text-slate-500">Pezinok</span>
           </div>
         </div>
 
         <!-- Member 3 -->
-        <div class="rounded-2xl border border-slate-800 bg-slate-950 p-6 text-center space-y-4 hover:border-brand-500/40 transition">
-          <div class="w-20 h-20 rounded-full bg-slate-800 mx-auto flex items-center justify-center font-bold text-xl text-sky-400 border-2 border-sky-500/30">
+        <div class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 p-6 text-center space-y-4 shadow-sm hover:shadow-md hover:border-sky-500/40 transition">
+          <div class="w-20 h-20 rounded-full bg-slate-100 dark:bg-slate-800 mx-auto flex items-center justify-center font-bold text-xl text-sky-600 dark:text-sky-400 border-2 border-sky-500/30">
             DG
           </div>
           <div>
-            <h3 class="font-display font-bold text-white text-base">Daniela Gomes</h3>
-            <p class="text-xs font-semibold text-sky-400 mt-0.5">Horizon SME Expert & Lobbying</p>
-            <p class="text-[11px] text-slate-400 mt-2">Medzinárodné zastupovanie a strategický networking pre inovatívne slovenské firmy priamo v Bruseli.</p>
-            <span class="inline-block mt-3 text-[10px] uppercase font-bold text-slate-500">Brusel, Belgicko</span>
+            <h3 class="font-display font-bold text-slate-900 dark:text-white text-base">Daniela Gomes</h3>
+            <p class="text-xs font-bold text-sky-600 dark:text-sky-400 mt-0.5">Horizon SME Expert & Lobbying</p>
+            <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-2">Medzinárodné zastupovanie a strategický networking pre inovatívne slovenské firmy priamo v Bruseli.</p>
+            <span class="inline-block mt-3 text-[10px] uppercase font-bold text-slate-400 dark:text-slate-500">Brusel, Belgicko</span>
           </div>
         </div>
 
         <!-- Member 4 -->
-        <div class="rounded-2xl border border-slate-800 bg-slate-950 p-6 text-center space-y-4 hover:border-brand-500/40 transition">
-          <div class="w-20 h-20 rounded-full bg-slate-800 mx-auto flex items-center justify-center font-bold text-xl text-amber-400 border-2 border-amber-500/30">
+        <div class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 p-6 text-center space-y-4 shadow-sm hover:shadow-md hover:border-amber-500/40 transition">
+          <div class="w-20 h-20 rounded-full bg-slate-100 dark:bg-slate-800 mx-auto flex items-center justify-center font-bold text-xl text-amber-600 dark:text-amber-400 border-2 border-amber-500/30">
             IL
           </div>
           <div>
-            <h3 class="font-display font-bold text-white text-base">Irene Larroy, PMD</h3>
-            <p class="text-xs font-semibold text-amber-400 mt-0.5">Senior International PM</p>
-            <p class="text-[11px] text-slate-400 mt-2">Expertka na programy Horizon Europe RIA/IA a konzorciálne vedecko-výskumné partnerstvá.</p>
-            <span class="inline-block mt-3 text-[10px] uppercase font-bold text-slate-500">Barcelona, Španielsko</span>
+            <h3 class="font-display font-bold text-slate-900 dark:text-white text-base">Irene Larroy, PMD</h3>
+            <p class="text-xs font-bold text-amber-600 dark:text-amber-400 mt-0.5">Senior International PM</p>
+            <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-2">Expertka na programy Horizon Europe RIA/IA a konzorciálne vedecko-výskumné partnerstvá.</p>
+            <span class="inline-block mt-3 text-[10px] uppercase font-bold text-slate-400 dark:text-slate-500">Barcelona, Španielsko</span>
           </div>
         </div>
 
       </div>
 
       <!-- Professional Memberships Banner -->
-      <div class="p-8 rounded-2xl bg-slate-950 border border-slate-800">
-        <h3 class="text-center text-xs uppercase tracking-widest text-slate-400 font-semibold mb-6">
+      <div class="p-8 rounded-2xl bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800 shadow-sm">
+        <h3 class="text-center text-xs uppercase tracking-widest text-slate-500 dark:text-slate-400 font-bold mb-6">
           Členstvá a certifikácie v medzinárodných organizáciách
         </h3>
-        <div class="flex flex-wrap items-center justify-center gap-8 md:gap-14 text-sm font-display font-bold text-slate-400">
-          <span class="hover:text-white transition">ISACA (Auditing & Risk)</span>
-          <span class="hover:text-white transition">RIMS (Risk Management)</span>
-          <span class="hover:text-white transition">G31000 Global Institute</span>
-          <span class="hover:text-white transition">SLOVCA (Private Equity & VC)</span>
-          <span class="hover:text-white transition">SFA (Slovenská franchisingová asociácia)</span>
+        <div class="flex flex-wrap items-center justify-center gap-8 md:gap-14 text-sm font-display font-bold text-slate-700 dark:text-slate-400">
+          <span class="hover:text-brand-600 dark:hover:text-white transition">ISACA (Auditing & Risk)</span>
+          <span class="hover:text-brand-600 dark:hover:text-white transition">RIMS (Risk Management)</span>
+          <span class="hover:text-brand-600 dark:hover:text-white transition">G31000 Global Institute</span>
+          <span class="hover:text-brand-600 dark:hover:text-white transition">SLOVCA (Private Equity & VC)</span>
+          <span class="hover:text-brand-600 dark:hover:text-white transition">SFA (Slovenská franchisingová asociácia)</span>
         </div>
       </div>
 
@@ -970,96 +1017,96 @@
   <section id="references" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     
     <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
-      <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-950 border border-brand-800/60 text-brand-400 text-xs font-semibold">
+      <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-50 dark:bg-brand-950 border border-brand-200 dark:border-brand-800/60 text-brand-700 dark:text-brand-400 text-xs font-bold">
         <span>Preukázateľná prax</span>
       </div>
-      <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-white">
+      <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white">
         Referencie a úspešne realizované projekty
       </h2>
-      <p class="text-slate-400 text-base">
+      <p class="text-slate-600 dark:text-slate-400 text-base">
         Viac ako 150 podporených projektov v priemysle, energetike, IT a obchode.
       </p>
     </div>
 
     <!-- Filter Buttons -->
     <div class="flex flex-wrap items-center justify-center gap-2 mb-10">
-      <button onclick="filterReferences('all')" class="ref-btn px-4 py-2 rounded-xl text-xs font-semibold bg-brand-600 text-white transition" data-filter="all">Všetky odvetvia</button>
-      <button onclick="filterReferences('industry')" class="ref-btn px-4 py-2 rounded-xl text-xs font-semibold bg-slate-900 border border-slate-800 text-slate-400 hover:text-white transition" data-filter="industry">Priemysel & Strojarina</button>
-      <button onclick="filterReferences('it')" class="ref-btn px-4 py-2 rounded-xl text-xs font-semibold bg-slate-900 border border-slate-800 text-slate-400 hover:text-white transition" data-filter="it">IT & Technológie</button>
-      <button onclick="filterReferences('energy')" class="ref-btn px-4 py-2 rounded-xl text-xs font-semibold bg-slate-900 border border-slate-800 text-slate-400 hover:text-white transition" data-filter="energy">Energetika & Odpady</button>
+      <button onclick="filterReferences('all')" class="ref-btn px-4 py-2 rounded-xl text-xs font-bold bg-brand-600 text-white transition shadow-sm" data-filter="all">Všetky odvetvia</button>
+      <button onclick="filterReferences('industry')" class="ref-btn px-4 py-2 rounded-xl text-xs font-bold bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition" data-filter="industry">Priemysel & Strojarina</button>
+      <button onclick="filterReferences('it')" class="ref-btn px-4 py-2 rounded-xl text-xs font-bold bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition" data-filter="it">IT & Technológie</button>
+      <button onclick="filterReferences('energy')" class="ref-btn px-4 py-2 rounded-xl text-xs font-bold bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition" data-filter="energy">Energetika & Odpady</button>
     </div>
 
     <!-- Grid of Reference Cards -->
     <div class="grid md:grid-cols-3 gap-6" id="references-grid">
       
       <!-- Card 1 -->
-      <div class="ref-card industry p-6 rounded-2xl bg-slate-900/80 border border-slate-800 hover:border-slate-700 transition space-y-3">
+      <div class="ref-card industry p-6 rounded-2xl bg-white dark:bg-slate-900/80 border border-slate-200 dark:border-slate-800 hover:shadow-lg dark:hover:border-slate-700 transition space-y-3 shadow-sm">
         <div class="flex items-center justify-between">
-          <span class="text-xs font-bold text-brand-400">Priemyselná výroba</span>
-          <span class="text-[10px] text-slate-500">Superodpočet VaV</span>
+          <span class="text-xs font-bold text-brand-600 dark:text-brand-400">Priemyselná výroba</span>
+          <span class="text-[10px] text-slate-400 dark:text-slate-500 font-semibold">Superodpočet VaV</span>
         </div>
-        <h4 class="font-display font-bold text-white text-base">Strojárska skupina HYDAC</h4>
-        <p class="text-xs text-slate-400 leading-relaxed">
+        <h4 class="font-display font-bold text-slate-900 dark:text-white text-base">Strojárska skupina HYDAC</h4>
+        <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
           Kompletná metodická príprava a audit uplatnenia výdavkov na vývoj inovatívnych hydraulických komponentov s priamou daňovou úsporou.
         </p>
       </div>
 
       <!-- Card 2 -->
-      <div class="ref-card it p-6 rounded-2xl bg-slate-900/80 border border-slate-800 hover:border-slate-700 transition space-y-3">
+      <div class="ref-card it p-6 rounded-2xl bg-white dark:bg-slate-900/80 border border-slate-200 dark:border-slate-800 hover:shadow-lg dark:hover:border-slate-700 transition space-y-3 shadow-sm">
         <div class="flex items-center justify-between">
-          <span class="text-xs font-bold text-sky-400">IT & Enterprise</span>
-          <span class="text-[10px] text-slate-500">PatentBOX & VaV</span>
+          <span class="text-xs font-bold text-sky-600 dark:text-sky-400">IT & Enterprise</span>
+          <span class="text-[10px] text-slate-400 dark:text-slate-500 font-semibold">PatentBOX & VaV</span>
         </div>
-        <h4 class="font-display font-bold text-white text-base">S&T Slovakia & ARTIN Solutions</h4>
-        <p class="text-xs text-slate-400 leading-relaxed">
+        <h4 class="font-display font-bold text-slate-900 dark:text-white text-base">S&T Slovakia & ARTIN Solutions</h4>
+        <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
           Nastavenie procesu evidencie vlastného softvérového výskumu, uplatnenie superodpočtu a príprava licenčného modelu chráneného PatentBOXom.
         </p>
       </div>
 
       <!-- Card 3 -->
-      <div class="ref-card energy p-6 rounded-2xl bg-slate-900/80 border border-slate-800 hover:border-slate-700 transition space-y-3">
+      <div class="ref-card energy p-6 rounded-2xl bg-white dark:bg-slate-900/80 border border-slate-200 dark:border-slate-800 hover:shadow-lg dark:hover:border-slate-700 transition space-y-3 shadow-sm">
         <div class="flex items-center justify-between">
-          <span class="text-xs font-bold text-amber-400">Energetika</span>
-          <span class="text-[10px] text-slate-500">EÚ Fondy & ESG</span>
+          <span class="text-xs font-bold text-amber-600 dark:text-amber-400">Energetika</span>
+          <span class="text-[10px] text-slate-400 dark:text-slate-500 font-semibold">EÚ Fondy & ESG</span>
         </div>
-        <h4 class="font-display font-bold text-white text-base">Energetické systémy STEFE</h4>
-        <p class="text-xs text-slate-400 leading-relaxed">
+        <h4 class="font-display font-bold text-slate-900 dark:text-white text-base">Energetické systémy STEFE</h4>
+        <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
           Projektový manažment a príprava dotačnej schémy na modernizáciu tepelného hospodárstva a prechod na nízkouhlíkové zdroje.
         </p>
       </div>
 
       <!-- Card 4 -->
-      <div class="ref-card industry p-6 rounded-2xl bg-slate-900/80 border border-slate-800 hover:border-slate-700 transition space-y-3">
+      <div class="ref-card industry p-6 rounded-2xl bg-white dark:bg-slate-900/80 border border-slate-200 dark:border-slate-800 hover:shadow-lg dark:hover:border-slate-700 transition space-y-3 shadow-sm">
         <div class="flex items-center justify-between">
-          <span class="text-xs font-bold text-brand-400">Potravinárstvo</span>
-          <span class="text-[10px] text-slate-500">ŠFRR & Automatizácia</span>
+          <span class="text-xs font-bold text-brand-600 dark:text-brand-400">Potravinárstvo</span>
+          <span class="text-[10px] text-slate-400 dark:text-slate-500 font-semibold">ŠFRR & Automatizácia</span>
         </div>
-        <h4 class="font-display font-bold text-white text-base">Mäspoma spol. s r.o.</h4>
-        <p class="text-xs text-slate-400 leading-relaxed">
+        <h4 class="font-display font-bold text-slate-900 dark:text-white text-base">Mäspoma spol. s r.o.</h4>
+        <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
           Zabezpečenie štrukturálneho financovania na modernizáciu výrobných liniek, automatizáciu balenia a implementáciu štandardov kvality.
         </p>
       </div>
 
       <!-- Card 5 -->
-      <div class="ref-card it p-6 rounded-2xl bg-slate-900/80 border border-slate-800 hover:border-slate-700 transition space-y-3">
+      <div class="ref-card it p-6 rounded-2xl bg-white dark:bg-slate-900/80 border border-slate-200 dark:border-slate-800 hover:shadow-lg dark:hover:border-slate-700 transition space-y-3 shadow-sm">
         <div class="flex items-center justify-between">
-          <span class="text-xs font-bold text-sky-400">Digitálne platformy</span>
-          <span class="text-[10px] text-slate-500">Strategický audit</span>
+          <span class="text-xs font-bold text-sky-600 dark:text-sky-400">Digitálne platformy</span>
+          <span class="text-[10px] text-slate-400 dark:text-slate-500 font-semibold">Strategický audit</span>
         </div>
-        <h4 class="font-display font-bold text-white text-base">DOXXbet & Pilulka.sk</h4>
-        <p class="text-xs text-slate-400 leading-relaxed">
+        <h4 class="font-display font-bold text-slate-900 dark:text-white text-base">DOXXbet & Pilulka.sk</h4>
+        <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
           Optimalizácia procesov riadenia rizík, audit interných vývojových tímov a nastavenie udržateľnej stratégie pre medzinárodnú expanziu.
         </p>
       </div>
 
       <!-- Card 6 -->
-      <div class="ref-card energy p-6 rounded-2xl bg-slate-900/80 border border-slate-800 hover:border-slate-700 transition space-y-3">
+      <div class="ref-card energy p-6 rounded-2xl bg-white dark:bg-slate-900/80 border border-slate-200 dark:border-slate-800 hover:shadow-lg dark:hover:border-slate-700 transition space-y-3 shadow-sm">
         <div class="flex items-center justify-between">
-          <span class="text-xs font-bold text-amber-400">Ekológia & Odpady</span>
-          <span class="text-[10px] text-slate-500">Cirkulárna ekonomika</span>
+          <span class="text-xs font-bold text-amber-600 dark:text-amber-400">Ekológia & Odpady</span>
+          <span class="text-[10px] text-slate-400 dark:text-slate-500 font-semibold">Cirkulárna ekonomika</span>
         </div>
-        <h4 class="font-display font-bold text-white text-base">DETOX & Ekoservis</h4>
-        <p class="text-xs text-slate-400 leading-relaxed">
+        <h4 class="font-display font-bold text-slate-900 dark:text-white text-base">DETOX & Ekoservis</h4>
+        <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
           Príprava projektov zameraných na zhodnocovanie priemyselného odpadu a uplatnenie inovatívnych technológií čistenia odpadových vôd.
         </p>
       </div>
@@ -1069,7 +1116,7 @@
   </section>
 
   <!-- CONTACT & CONSULTATION BOOKING SECTION -->
-  <section id="contact" class="py-24 bg-navy-950 border-t border-slate-800">
+  <section id="contact" class="py-24 bg-white dark:bg-navy-950 border-t border-slate-200 dark:border-slate-800 transition-colors">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="grid lg:grid-cols-12 gap-12">
@@ -1077,13 +1124,13 @@
         <!-- Contact Info -->
         <div class="lg:col-span-5 space-y-8">
           <div>
-            <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-950 border border-brand-800/60 text-brand-400 text-xs font-semibold mb-4">
+            <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-50 dark:bg-brand-950 border border-brand-200 dark:border-brand-800/60 text-brand-700 dark:text-brand-400 text-xs font-bold mb-4">
               <span>Priamy kontakt</span>
             </div>
-            <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-white leading-tight">
+            <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white leading-tight">
               Prekonzultujte váš projekt s našimi expertmi
             </h2>
-            <p class="text-slate-400 text-sm mt-3">
+            <p class="text-slate-600 dark:text-slate-400 text-sm mt-3">
               Posúdime váš nárok na Superodpočet VaV, preveríme aktuálne výzvy na eurogranty alebo pripravíme stratégiu rozvoja vašej firmy.
             </p>
           </div>
@@ -1091,34 +1138,34 @@
           <div class="space-y-6 text-sm">
             
             <div class="flex items-start gap-4">
-              <div class="w-10 h-10 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-brand-400 shrink-0">
+              <div class="w-10 h-10 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex items-center justify-center text-brand-600 dark:text-brand-400 shrink-0">
                 <i data-lucide="map-pin" class="w-5 h-5"></i>
               </div>
               <div>
-                <h4 class="font-bold text-white">Sídlo spoločnosti</h4>
-                <p class="text-slate-300 mt-0.5">Kataríny Franklovej 5791/10<br>902 01 Pezinok, Slovenská republika</p>
+                <h4 class="font-bold text-slate-900 dark:text-white">Sídlo spoločnosti</h4>
+                <p class="text-slate-700 dark:text-slate-300 mt-0.5">Kataríny Franklovej 5791/10<br>902 01 Pezinok, Slovenská republika</p>
                 <p class="text-xs text-slate-500 mt-1">Región Bratislava & CEE</p>
               </div>
             </div>
 
             <div class="flex items-start gap-4">
-              <div class="w-10 h-10 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-brand-400 shrink-0">
+              <div class="w-10 h-10 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex items-center justify-center text-brand-600 dark:text-brand-400 shrink-0">
                 <i data-lucide="phone" class="w-5 h-5"></i>
               </div>
               <div>
-                <h4 class="font-bold text-white">Telefonický kontakt</h4>
-                <p class="text-slate-300 mt-0.5"><a href="tel:+421917717005" class="hover:text-brand-400 transition">+421 917 717 005</a></p>
-                <p class="text-slate-300"><a href="tel:+421917717006" class="hover:text-brand-400 transition">+421 917 717 006</a></p>
+                <h4 class="font-bold text-slate-900 dark:text-white">Telefonický kontakt</h4>
+                <p class="text-slate-700 dark:text-slate-300 mt-0.5"><a href="tel:+421917717005" class="hover:text-brand-600 dark:hover:text-brand-400 transition">+421 917 717 005</a></p>
+                <p class="text-slate-700 dark:text-slate-300"><a href="tel:+421917717006" class="hover:text-brand-600 dark:hover:text-brand-400 transition">+421 917 717 006</a></p>
               </div>
             </div>
 
             <div class="flex items-start gap-4">
-              <div class="w-10 h-10 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-brand-400 shrink-0">
+              <div class="w-10 h-10 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex items-center justify-center text-brand-600 dark:text-brand-400 shrink-0">
                 <i data-lucide="mail" class="w-5 h-5"></i>
               </div>
               <div>
-                <h4 class="font-bold text-white">Elektronická pošta</h4>
-                <p class="text-slate-300 mt-0.5"><a href="mailto:info@profc.eu" class="hover:text-brand-400 transition">info@profc.eu</a></p>
+                <h4 class="font-bold text-slate-900 dark:text-white">Elektronická pošta</h4>
+                <p class="text-slate-700 dark:text-slate-300 mt-0.5"><a href="mailto:info@profc.eu" class="hover:text-brand-600 dark:hover:text-brand-400 transition">info@profc.eu</a></p>
                 <p class="text-xs text-slate-500 mt-1">Odpovedáme do 24 hodín v pracovných dňoch.</p>
               </div>
             </div>
@@ -1126,8 +1173,8 @@
           </div>
 
           <!-- Billing Info in Compact Badge -->
-          <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 text-xs text-slate-400 space-y-1.5">
-            <div class="font-bold text-slate-200">Fakturačné údaje subjektov:</div>
+          <div class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 text-xs text-slate-600 dark:text-slate-400 space-y-1.5 shadow-sm">
+            <div class="font-bold text-slate-900 dark:text-slate-200">Fakturačné údaje subjektov:</div>
             <div>PFCEU s.r.o. • IČO: 36282600 • IČ DPH: SK2022138899</div>
             <div>PFC TAX & AUDIT s.r.o. • IČO: 52894894 • IČ DPH: SK2121194592</div>
             <div class="text-[11px] text-slate-500">Bankové spojenie: Tatra banka, a.s. (SWIFT: TATRSKBX)</div>
@@ -1137,36 +1184,36 @@
 
         <!-- Consultation Request Form -->
         <div class="lg:col-span-7">
-          <div class="p-8 sm:p-10 rounded-3xl bg-slate-900 border border-slate-800 shadow-2xl">
-            <h3 class="text-xl font-display font-bold text-white mb-2">Požiadať o úvodnú konzultáciu</h3>
-            <p class="text-slate-400 text-xs mb-6">Vyplňte krátky formulár. Náš vedúci konzultant sa vám ozve s konkrétnym návrhom.</p>
+          <div class="p-8 sm:p-10 rounded-3xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xl dark:shadow-2xl">
+            <h3 class="text-xl font-display font-bold text-slate-900 dark:text-white mb-2">Požiadať o úvodnú konzultáciu</h3>
+            <p class="text-slate-500 dark:text-slate-400 text-xs mb-6 font-medium">Vyplňte krátky formulár. Náš vedúci konzultant sa vám ozve s konkrétnym návrhom.</p>
             
             <form id="contact-form" onsubmit="handleFormSubmit(event)" class="space-y-4">
               <div class="grid sm:grid-cols-2 gap-4">
                 <div>
-                  <label class="block text-xs text-slate-300 font-semibold mb-1.5">Meno a priezvisko *</label>
-                  <input type="text" required placeholder="Ing. Peter Novák" class="w-full bg-slate-950 border border-slate-700 text-white rounded-xl px-4 py-3 text-xs focus:ring-2 focus:ring-brand-500 focus:outline-none placeholder:text-slate-600">
+                  <label class="block text-xs text-slate-700 dark:text-slate-300 font-bold mb-1.5">Meno a priezvisko *</label>
+                  <input type="text" required placeholder="Ing. Peter Novák" class="w-full bg-white dark:bg-slate-950 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white rounded-xl px-4 py-3 text-xs focus:ring-2 focus:ring-brand-500 focus:outline-none placeholder:text-slate-400 dark:placeholder:text-slate-600">
                 </div>
                 <div>
-                  <label class="block text-xs text-slate-300 font-semibold mb-1.5">Názov firmy / IČO *</label>
-                  <input type="text" required placeholder="Vaša Spoločnosť s.r.o." class="w-full bg-slate-950 border border-slate-700 text-white rounded-xl px-4 py-3 text-xs focus:ring-2 focus:ring-brand-500 focus:outline-none placeholder:text-slate-600">
+                  <label class="block text-xs text-slate-700 dark:text-slate-300 font-bold mb-1.5">Názov firmy / IČO *</label>
+                  <input type="text" required placeholder="Vaša Spoločnosť s.r.o." class="w-full bg-white dark:bg-slate-950 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white rounded-xl px-4 py-3 text-xs focus:ring-2 focus:ring-brand-500 focus:outline-none placeholder:text-slate-400 dark:placeholder:text-slate-600">
                 </div>
               </div>
 
               <div class="grid sm:grid-cols-2 gap-4">
                 <div>
-                  <label class="block text-xs text-slate-300 font-semibold mb-1.5">E-mailová adresa *</label>
-                  <input type="email" required placeholder="novak@firma.sk" class="w-full bg-slate-950 border border-slate-700 text-white rounded-xl px-4 py-3 text-xs focus:ring-2 focus:ring-brand-500 focus:outline-none placeholder:text-slate-600">
+                  <label class="block text-xs text-slate-700 dark:text-slate-300 font-bold mb-1.5">E-mailová adresa *</label>
+                  <input type="email" required placeholder="novak@firma.sk" class="w-full bg-white dark:bg-slate-950 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white rounded-xl px-4 py-3 text-xs focus:ring-2 focus:ring-brand-500 focus:outline-none placeholder:text-slate-400 dark:placeholder:text-slate-600">
                 </div>
                 <div>
-                  <label class="block text-xs text-slate-300 font-semibold mb-1.5">Telefónne číslo</label>
-                  <input type="tel" placeholder="+421 900 000 000" class="w-full bg-slate-950 border border-slate-700 text-white rounded-xl px-4 py-3 text-xs focus:ring-2 focus:ring-brand-500 focus:outline-none placeholder:text-slate-600">
+                  <label class="block text-xs text-slate-700 dark:text-slate-300 font-bold mb-1.5">Telefónne číslo</label>
+                  <input type="tel" placeholder="+421 900 000 000" class="w-full bg-white dark:bg-slate-950 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white rounded-xl px-4 py-3 text-xs focus:ring-2 focus:ring-brand-500 focus:outline-none placeholder:text-slate-400 dark:placeholder:text-slate-600">
                 </div>
               </div>
 
               <div>
-                <label class="block text-xs text-slate-300 font-semibold mb-1.5">Oblasť záujmu</label>
-                <select class="w-full bg-slate-950 border border-slate-700 text-white rounded-xl px-4 py-3 text-xs focus:ring-2 focus:ring-brand-500 focus:outline-none">
+                <label class="block text-xs text-slate-700 dark:text-slate-300 font-bold mb-1.5">Oblasť záujmu</label>
+                <select class="w-full bg-white dark:bg-slate-950 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white rounded-xl px-4 py-3 text-xs focus:ring-2 focus:ring-brand-500 focus:outline-none">
                   <option>Superodpočet na VaV a PatentBOX</option>
                   <option>Eurofondy a granty (Horizon Europe, Program Slovensko)</option>
                   <option>ESG reporting & CSRD audity</option>
@@ -1176,22 +1223,22 @@
               </div>
 
               <div>
-                <label class="block text-xs text-slate-300 font-semibold mb-1.5">Stručný opis zámeru / otázka</label>
-                <textarea rows="4" placeholder="Popíšte stručne plánované aktivity alebo výšku VaV výdavkov..." class="w-full bg-slate-950 border border-slate-700 text-white rounded-xl px-4 py-3 text-xs focus:ring-2 focus:ring-brand-500 focus:outline-none placeholder:text-slate-600"></textarea>
+                <label class="block text-xs text-slate-700 dark:text-slate-300 font-bold mb-1.5">Stručný opis zámeru / otázka</label>
+                <textarea rows="4" placeholder="Popíšte stručne plánované aktivity alebo výšku VaV výdavkov..." class="w-full bg-white dark:bg-slate-950 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white rounded-xl px-4 py-3 text-xs focus:ring-2 focus:ring-brand-500 focus:outline-none placeholder:text-slate-400 dark:placeholder:text-slate-600"></textarea>
               </div>
 
-              <div class="flex items-start gap-2 pt-1 text-[11px] text-slate-400">
-                <input type="checkbox" required id="consent" class="mt-0.5 rounded border-slate-700 bg-slate-950 text-brand-500 focus:ring-0">
+              <div class="flex items-start gap-2 pt-1 text-[11px] text-slate-500 dark:text-slate-400">
+                <input type="checkbox" required id="consent" class="mt-0.5 rounded border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-950 text-brand-600 focus:ring-0">
                 <label for="consent">Súhlasím so spracovaním osobných údajov za účelom vybavenia dopytu v súlade s GDPR.</label>
               </div>
 
-              <button type="submit" class="w-full py-4 rounded-xl bg-gradient-to-r from-brand-600 to-blue-700 hover:from-brand-500 hover:to-blue-600 text-white font-semibold text-sm shadow-xl shadow-brand-600/30 transition flex items-center justify-center gap-2">
+              <button type="submit" class="w-full py-4 rounded-xl bg-gradient-to-r from-brand-600 to-blue-700 hover:from-brand-500 hover:to-blue-600 text-white font-bold text-sm shadow-xl shadow-brand-600/30 transition flex items-center justify-center gap-2">
                 <span>Odoslať nezáväzný dopyt</span>
                 <i data-lucide="send" class="w-4 h-4"></i>
               </button>
             </form>
 
-            <div id="form-success" class="hidden mt-4 p-4 rounded-xl bg-emerald-500/20 border border-emerald-500/30 text-emerald-300 text-xs text-center">
+            <div id="form-success" class="hidden mt-4 p-4 rounded-xl bg-emerald-100 dark:bg-emerald-500/20 border border-emerald-300 dark:border-emerald-500/30 text-emerald-800 dark:text-emerald-300 text-xs text-center font-bold">
               Ďakujeme za váš dopyt! Náš senior konzultant sa vám ozve do 24 hodín.
             </div>
 
@@ -1204,8 +1251,8 @@
   </section>
 
   <!-- FOOTER -->
-  <footer class="border-t border-slate-800 bg-slate-950 py-12 text-slate-400 text-xs">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <footer class="border-t border-slate-200 dark:border-slate-800 bg-slate-900 text-slate-400 text-xs transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <div class="grid grid-cols-2 md:grid-cols-4 gap-8 pb-12 border-b border-slate-800">
         
         <div class="col-span-2 md:col-span-1 space-y-3">
@@ -1256,45 +1303,45 @@
       <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-slate-500 text-[11px]">
         <p>&copy; 2026 PFCEU Group (PFCEU s.r.o. a PFC TAX & AUDIT s.r.o.). Všetky práva vyhradené.</p>
         <div class="flex items-center gap-4">
-          <a href="#" class="hover:text-slate-400">Ochrana osobných údajov</a>
+          <a href="#" class="hover:text-slate-300">Ochrana osobných údajov</a>
           <span>•</span>
-          <a href="https://www.google.com/maps/place/PFCEU+s.r.o./" target="_blank" class="hover:text-slate-400">Pezinok, Slovensko</a>
+          <a href="https://www.google.com/maps/place/PFCEU+s.r.o./" target="_blank" class="hover:text-slate-300">Pezinok, Slovensko</a>
         </div>
       </div>
     </div>
   </footer>
 
   <!-- INTERACTIVE MODAL FOR AUDIT BOOKING -->
-  <div id="consultation-modal" class="fixed inset-0 z-50 hidden bg-slate-950/80 backdrop-blur-sm flex items-center justify-center p-4">
-    <div class="relative w-full max-w-lg rounded-3xl bg-slate-900 border border-slate-800 p-6 sm:p-8 shadow-2xl text-left">
-      <button onclick="closeConsultationModal()" class="absolute top-5 right-5 p-1.5 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 transition">
+  <div id="consultation-modal" class="fixed inset-0 z-50 hidden bg-slate-900/60 dark:bg-slate-950/80 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="relative w-full max-w-lg rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-6 sm:p-8 shadow-2xl text-left">
+      <button onclick="closeConsultationModal()" class="absolute top-5 right-5 p-1.5 rounded-lg text-slate-400 hover:text-slate-600 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition">
         <i data-lucide="x" class="w-5 h-5"></i>
       </button>
 
       <div class="space-y-2 mb-6">
-        <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-brand-950 text-brand-400 text-[11px] font-semibold border border-brand-800">
+        <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-brand-50 dark:bg-brand-950 text-brand-700 dark:text-brand-400 text-[11px] font-bold border border-brand-200 dark:border-brand-800">
           <span>Bezplatné vstupné posúdenie</span>
         </div>
-        <h3 class="font-display text-xl font-bold text-white">Dohodnúť strategický alebo daňový audit</h3>
-        <p class="text-xs text-slate-400">Vyberte termín alebo nechajte kontakt a my vám pripravíme predbežný prehľad možností financovania.</p>
+        <h3 class="font-display text-xl font-bold text-slate-900 dark:text-white">Dohodnúť strategický alebo daňový audit</h3>
+        <p class="text-xs text-slate-500 dark:text-slate-400">Vyberte termín alebo nechajte kontakt a my vám pripravíme predbežný prehľad možností financovania.</p>
       </div>
 
       <form onsubmit="handleModalSubmit(event)" class="space-y-3.5">
         <div>
-          <label class="block text-xs text-slate-300 font-medium mb-1">Meno a Priezvisko</label>
-          <input type="text" required placeholder="Ing. Peter Novák" class="w-full bg-slate-950 border border-slate-700 text-white rounded-xl px-3.5 py-2.5 text-xs focus:ring-2 focus:ring-brand-500 focus:outline-none">
+          <label class="block text-xs text-slate-700 dark:text-slate-300 font-semibold mb-1">Meno a Priezvisko</label>
+          <input type="text" required placeholder="Ing. Peter Novák" class="w-full bg-slate-50 dark:bg-slate-950 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white rounded-xl px-3.5 py-2.5 text-xs focus:ring-2 focus:ring-brand-500 focus:outline-none">
         </div>
         <div>
-          <label class="block text-xs text-slate-300 font-medium mb-1">Firemný e-mail</label>
-          <input type="email" required placeholder="peter@spolocnost.sk" class="w-full bg-slate-950 border border-slate-700 text-white rounded-xl px-3.5 py-2.5 text-xs focus:ring-2 focus:ring-brand-500 focus:outline-none">
+          <label class="block text-xs text-slate-700 dark:text-slate-300 font-semibold mb-1">Firemný e-mail</label>
+          <input type="email" required placeholder="peter@spolocnost.sk" class="w-full bg-slate-50 dark:bg-slate-950 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white rounded-xl px-3.5 py-2.5 text-xs focus:ring-2 focus:ring-brand-500 focus:outline-none">
         </div>
         <div>
-          <label class="block text-xs text-slate-300 font-medium mb-1">Telefónne číslo</label>
-          <input type="tel" required placeholder="+421 900 000 000" class="w-full bg-slate-950 border border-slate-700 text-white rounded-xl px-3.5 py-2.5 text-xs focus:ring-2 focus:ring-brand-500 focus:outline-none">
+          <label class="block text-xs text-slate-700 dark:text-slate-300 font-semibold mb-1">Telefónne číslo</label>
+          <input type="tel" required placeholder="+421 900 000 000" class="w-full bg-slate-50 dark:bg-slate-950 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white rounded-xl px-3.5 py-2.5 text-xs focus:ring-2 focus:ring-brand-500 focus:outline-none">
         </div>
         <div>
-          <label class="block text-xs text-slate-300 font-medium mb-1">Primárny záujem</label>
-          <select class="w-full bg-slate-950 border border-slate-700 text-white rounded-xl px-3.5 py-2.5 text-xs focus:ring-2 focus:ring-brand-500 focus:outline-none">
+          <label class="block text-xs text-slate-700 dark:text-slate-300 font-semibold mb-1">Primárny záujem</label>
+          <select class="w-full bg-slate-50 dark:bg-slate-950 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white rounded-xl px-3.5 py-2.5 text-xs focus:ring-2 focus:ring-brand-500 focus:outline-none">
             <option>Superodpočet na VaV (výskum a vývoj)</option>
             <option>Eurofondy a priame granty EÚ</option>
             <option>ESG audit a CSRD reporting</option>
@@ -1302,12 +1349,12 @@
           </select>
         </div>
         
-        <button type="submit" class="w-full mt-2 py-3.5 rounded-xl bg-brand-600 hover:bg-brand-500 text-white font-semibold text-xs transition shadow-lg shadow-brand-600/30">
+        <button type="submit" class="w-full mt-2 py-3.5 rounded-xl bg-brand-600 hover:bg-brand-500 text-white font-bold text-xs transition shadow-lg shadow-brand-600/30">
           Potvrdiť žiadosť o audit
         </button>
       </form>
 
-      <div id="modal-success" class="hidden mt-3 p-3 rounded-xl bg-emerald-500/20 border border-emerald-500/30 text-emerald-300 text-xs text-center">
+      <div id="modal-success" class="hidden mt-3 p-3 rounded-xl bg-emerald-100 dark:bg-emerald-500/20 border border-emerald-300 dark:border-emerald-500/30 text-emerald-800 dark:text-emerald-300 text-xs text-center font-bold">
         Ďakujeme. Budeme vás kontaktovať v priebehu dnešného dňa.
       </div>
     </div>
@@ -1317,6 +1364,25 @@
   <script>
     // Initialize Lucide icons
     lucide.createIcons();
+
+    // Theme Toggle Logic
+    function updateThemeUI(isDark) {
+      const label = document.getElementById('theme-label');
+      const mobileLabel = document.getElementById('theme-label-mobile');
+      if (label) label.innerText = isDark ? 'Svetlý' : 'Tmavý';
+      if (mobileLabel) mobileLabel.innerText = isDark ? 'Prepnúť na svetlý' : 'Prepnúť na tmavý';
+      lucide.createIcons();
+    }
+
+    function toggleTheme() {
+      const html = document.documentElement;
+      const isDark = html.classList.toggle('dark');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      updateThemeUI(isDark);
+    }
+
+    // Initialize theme button text
+    updateThemeUI(document.documentElement.classList.contains('dark'));
 
     // Mobile menu toggle
     const mobileBtn = document.getElementById('mobile-menu-btn');
@@ -1338,11 +1404,11 @@
       const btn24 = document.getElementById('btn-tax-24');
       
       if (rate === 0.21) {
-        btn21.className = 'py-2 px-4 rounded-xl border border-brand-500 bg-brand-500/20 text-white font-medium text-xs transition';
-        btn24.className = 'py-2 px-4 rounded-xl border border-slate-700 bg-slate-900 text-slate-400 font-medium text-xs transition';
+        btn21.className = 'py-2 px-4 rounded-xl border border-brand-500 bg-brand-50 text-brand-700 dark:bg-brand-500/20 dark:text-white font-bold text-xs transition';
+        btn24.className = 'py-2 px-4 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 text-slate-600 dark:text-slate-400 font-semibold text-xs transition';
       } else {
-        btn24.className = 'py-2 px-4 rounded-xl border border-brand-500 bg-brand-500/20 text-white font-medium text-xs transition';
-        btn21.className = 'py-2 px-4 rounded-xl border border-slate-700 bg-slate-900 text-slate-400 font-medium text-xs transition';
+        btn24.className = 'py-2 px-4 rounded-xl border border-brand-500 bg-brand-50 text-brand-700 dark:bg-brand-500/20 dark:text-white font-bold text-xs transition';
+        btn21.className = 'py-2 px-4 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 text-slate-600 dark:text-slate-400 font-semibold text-xs transition';
       }
       updateCalculator();
     }
@@ -1394,9 +1460,9 @@
       const buttons = document.querySelectorAll('.ref-btn');
       buttons.forEach(btn => {
         if (btn.getAttribute('data-filter') === category) {
-          btn.className = 'ref-btn px-4 py-2 rounded-xl text-xs font-semibold bg-brand-600 text-white transition';
+          btn.className = 'ref-btn px-4 py-2 rounded-xl text-xs font-bold bg-brand-600 text-white transition shadow-sm';
         } else {
-          btn.className = 'ref-btn px-4 py-2 rounded-xl text-xs font-semibold bg-slate-900 border border-slate-800 text-slate-400 hover:text-white transition';
+          btn.className = 'ref-btn px-4 py-2 rounded-xl text-xs font-bold bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition';
         }
       });
 
@@ -1442,10 +1508,10 @@
       const skBtn = document.getElementById('lang-sk');
       const enBtn = document.getElementById('lang-en');
       if (lang === 'en') {
-        skBtn.className = 'px-2 py-0.5 rounded text-[11px] font-semibold text-slate-400 hover:text-white transition';
+        skBtn.className = 'px-2 py-0.5 rounded text-[11px] font-semibold text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition';
         enBtn.className = 'px-2 py-0.5 rounded text-[11px] font-semibold bg-brand-600 text-white transition';
       } else {
-        enBtn.className = 'px-2 py-0.5 rounded text-[11px] font-semibold text-slate-400 hover:text-white transition';
+        enBtn.className = 'px-2 py-0.5 rounded text-[11px] font-semibold text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition';
         skBtn.className = 'px-2 py-0.5 rounded text-[11px] font-semibold bg-brand-600 text-white transition';
       }
     }
