@@ -51,6 +51,18 @@
     }
   </script>
 
+  <!-- Default: Start in Light Mode -->
+  <script>
+    try {
+      const stored = localStorage.getItem('symsite_theme');
+      if (stored === 'dark') {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    } catch(e) {}
+  </script>
+
   <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
 
@@ -1705,10 +1717,10 @@
     // Initialize current year
     document.getElementById('current-year').textContent = new Date().getFullYear();
 
-    // 1. THEME SWITCHER (Dark & Light)
+    // 1. THEME SWITCHER (Default: Light Mode)
     function initTheme() {
       const storedTheme = localStorage.getItem('symsite_theme');
-      if (storedTheme === 'dark' || (!storedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      if (storedTheme === 'dark') {
         document.documentElement.classList.add('dark');
       } else {
         document.documentElement.classList.remove('dark');
