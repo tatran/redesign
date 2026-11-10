@@ -1,0 +1,2306 @@
+<!DOCTYPE html>
+<html lang="sk" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AJ Metal Design a.s. | Popredný výrobca kovového nábytku a regálových systémov</title>
+  <meta name="description" content="Výroba kovového nábytku, šatníkov, dielenských stolov a priemyselných regálov. Areál 22 000 m² v Hrnčiarovciach nad Parnou, 9 000 t spracovanej ocele ročne. Člen skupiny AJ Produkter AB.">
+  <meta name="keywords" content="kovový nábytok, šatníky, kovové skrine, dielenské stoly, regály, paletové regály, kovovýroba trnava, AJ Metal Design, AJ Produkter, Salvagnini, Trumpf">
+  <meta name="author" content="AJ Metal Design a.s.">
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:title" content="AJ Metal Design a.s. | Kov umocnený dizajnom">
+  <meta property="og:description" content="Popredný stredoeurópsky výrobca kovového nábytku a komplexných úložných riešení pre školy, kancelárie a priemysel.">
+  <meta property="og:image" content="images/sklad.png">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.ajmetaldesign.sk/">
+
+  <!-- Google Fonts: Plus Jakarta Sans & Space Grotesk -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#fff7ed',
+              100: '#ffedd5',
+              200: '#fed7aa',
+              300: '#fdba74',
+              400: '#fb923c',
+              500: '#f97316', // AJ Swedish corporate vibrant orange
+              600: '#ea580c',
+              700: '#c2410c',
+              800: '#9a3412',
+              900: '#7c2d12',
+            },
+            steel: {
+              50: '#f8fafc',
+              100: '#f1f5f9',
+              200: '#e2e8f0',
+              300: '#cbd5e1',
+              400: '#94a3b8',
+              500: '#64748b',
+              600: '#475569',
+              700: '#334155',
+              800: '#1e293b',
+              850: '#151f30',
+              900: '#0f172a',
+              950: '#090d16',
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Space Grotesk"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    /* Custom scrollbar & glassmorphism */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0f172a;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #334155;
+      border-radius: 5px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #f97316;
+    }
+    .glass-nav {
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+    }
+    .text-gradient {
+      background: linear-gradient(135deg, #f97316 0%, #fb923c 50%, #fdba74 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero-bg-grid {
+      background-size: 40px 40px;
+      background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+    }
+    .light .hero-bg-grid {
+      background-image: 
+        linear-gradient(to right, rgba(15, 23, 42, 0.04) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(15, 23, 42, 0.04) 1px, transparent 1px);
+    }
+    .card-hover {
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .card-hover:hover {
+      transform: translateY(-4px);
+    }
+  </style>
+</head>
+<body class="bg-white dark:bg-steel-950 text-steel-800 dark:text-steel-100 font-sans antialiased selection:bg-brand-500 selection:text-white transition-colors duration-300">
+
+  <!-- ================= TOP TICKER / NOTIFICATION BAR ================= -->
+  <div class="bg-steel-900 text-steel-300 border-b border-steel-800 text-xs py-2 px-4 transition-colors">
+    <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
+      <div class="flex items-center space-x-3">
+        <span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-semibold bg-brand-500/20 text-brand-400 border border-brand-500/30">
+          <span class="w-1.5 h-1.5 rounded-full bg-brand-400 mr-1.5 animate-pulse"></span>
+          <span data-i18n="topbar_badge">Člen švédskej skupiny AJ Produkter AB 🇸🇪</span>
+        </span>
+        <span class="hidden md:inline text-steel-400" data-i18n="topbar_headline">Popredný výrobca kovového nábytku | Dlhé lúky 2, Hrnčiarovce nad Parnou</span>
+      </div>
+      <div class="flex items-center space-x-6 text-xs">
+        <a href="tel:+421335933521" class="hover:text-brand-400 transition-colors flex items-center">
+          <i data-lucide="phone" class="w-3.5 h-3.5 mr-1.5 text-brand-500"></i>
+          <span>+421 33 59 335 21</span>
+        </a>
+        <a href="mailto:sales@ajmetaldesign.sk" class="hover:text-brand-400 transition-colors hidden sm:flex items-center">
+          <i data-lucide="mail" class="w-3.5 h-3.5 mr-1.5 text-brand-500"></i>
+          <span>sales@ajmetaldesign.sk</span>
+        </a>
+        <div class="hidden lg:flex items-center space-x-2 text-steel-400">
+          <i data-lucide="award" class="w-3.5 h-3.5 text-brand-400"></i>
+          <span>ISO 9001 / 14001 / 45001 / 50001</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= MAIN HEADER / NAVBAR ================= -->
+  <header class="sticky top-0 z-50 glass-nav bg-white/90 dark:bg-steel-950/90 border-b border-steel-200 dark:border-steel-800/80 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Logo -->
+      <a href="#" class="flex items-center space-x-3 group">
+        <div class="relative p-1.5 rounded-xl bg-steel-100 dark:bg-steel-900 border border-steel-200 dark:border-steel-800 group-hover:border-brand-500 transition-all">
+          <img src="images/logo_ajmd.png" alt="AJ Metal Design a.s." class="h-10 w-auto object-contain">
+        </div>
+        <div>
+          <span class="font-display font-bold text-xl tracking-tight text-steel-900 dark:text-white flex items-center">
+            AJ METAL DESIGN
+            <span class="ml-1.5 text-xs font-semibold uppercase px-1.5 py-0.5 rounded bg-brand-500 text-white tracking-wider">a.s.</span>
+          </span>
+          <span class="block text-[11px] font-medium text-steel-500 dark:text-steel-400 tracking-wide uppercase" data-i18n="brand_slogan">
+            Kov umocnený dizajnom
+          </span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden xl:flex items-center space-x-7 text-sm font-semibold text-steel-700 dark:text-steel-300">
+        <a href="#o-nas" class="hover:text-brand-500 dark:hover:text-brand-400 transition-colors" data-i18n="nav_about">O nás</a>
+        <a href="#produkty" class="hover:text-brand-500 dark:hover:text-brand-400 transition-colors" data-i18n="nav_products">Produkty</a>
+        <a href="#technologie" class="hover:text-brand-500 dark:hover:text-brand-400 transition-colors" data-i18n="nav_tech">Technológie</a>
+        <a href="#konfigurator" class="hover:text-brand-500 dark:hover:text-brand-400 transition-colors flex items-center text-brand-600 dark:text-brand-400">
+          <i data-lucide="calculator" class="w-4 h-4 mr-1"></i>
+          <span data-i18n="nav_config">Kalkulátor</span>
+        </a>
+        <a href="#historia" class="hover:text-brand-500 dark:hover:text-brand-400 transition-colors" data-i18n="nav_history">História</a>
+        <a href="#kariera" class="hover:text-brand-500 dark:hover:text-brand-400 transition-colors relative" data-i18n="nav_careers">
+          Kariéra
+          <span class="absolute -top-2 -right-3 px-1.5 py-0.2 text-[9px] bg-brand-500 text-white font-bold rounded-full animate-bounce">2</span>
+        </a>
+        <a href="#galeria" class="hover:text-brand-500 dark:hover:text-brand-400 transition-colors" data-i18n="nav_gallery">Galéria</a>
+        <a href="#kontakt" class="hover:text-brand-500 dark:hover:text-brand-400 transition-colors" data-i18n="nav_contact">Kontakt</a>
+      </nav>
+
+      <!-- Action Controls (Lang, Theme, CTA) -->
+      <div class="flex items-center space-x-3">
+        
+        <!-- Language Switcher -->
+        <div class="flex items-center bg-steel-100 dark:bg-steel-900 border border-steel-200 dark:border-steel-800 rounded-lg p-0.5 text-xs font-semibold">
+          <button id="lang-sk" onclick="setLanguage('sk')" class="px-2.5 py-1 rounded-md transition-all bg-white dark:bg-steel-800 text-brand-600 dark:text-brand-400 shadow-sm">
+            🇸🇰 SK
+          </button>
+          <button id="lang-en" onclick="setLanguage('en')" class="px-2.5 py-1 rounded-md transition-all text-steel-500 dark:text-steel-400 hover:text-steel-900 dark:hover:text-white">
+            🇬🇧 EN
+          </button>
+        </div>
+
+        <!-- Dark/Light Theme Toggle -->
+        <button id="theme-toggle" onclick="toggleDarkMode()" aria-label="Toggle theme" class="p-2 rounded-lg bg-steel-100 dark:bg-steel-900 text-steel-600 dark:text-steel-300 hover:text-brand-500 border border-steel-200 dark:border-steel-800 transition-all">
+          <i data-lucide="sun" class="w-4 h-4 hidden dark:block"></i>
+          <i data-lucide="moon" class="w-4 h-4 block dark:hidden"></i>
+        </button>
+
+        <!-- CTA Button -->
+        <a href="#konfigurator" class="hidden sm:inline-flex items-center justify-center px-4 py-2.5 rounded-xl font-bold text-xs uppercase tracking-wider bg-brand-500 hover:bg-brand-600 text-white shadow-lg shadow-brand-500/25 transition-all hover:scale-[1.02] active:scale-[0.98]">
+          <i data-lucide="send" class="w-3.5 h-3.5 mr-1.5"></i>
+          <span data-i18n="cta_quote">B2B Dopyt</span>
+        </a>
+
+        <!-- Mobile Menu Trigger -->
+        <button id="mobile-menu-btn" onclick="toggleMobileMenu()" class="xl:hidden p-2 rounded-lg bg-steel-100 dark:bg-steel-900 text-steel-700 dark:text-steel-200 border border-steel-200 dark:border-steel-800">
+          <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobile-menu" class="hidden xl:hidden bg-white/98 dark:bg-steel-950/98 border-b border-steel-200 dark:border-steel-800 px-6 py-6 space-y-4 shadow-2xl">
+      <nav class="flex flex-col space-y-3 font-semibold text-base text-steel-800 dark:text-steel-200">
+        <a href="#o-nas" onclick="toggleMobileMenu()" class="py-2 border-b border-steel-100 dark:border-steel-900 flex items-center justify-between" data-i18n="nav_about">
+          O nás <i data-lucide="chevron-right" class="w-4 h-4 text-steel-400"></i>
+        </a>
+        <a href="#produkty" onclick="toggleMobileMenu()" class="py-2 border-b border-steel-100 dark:border-steel-900 flex items-center justify-between" data-i18n="nav_products">
+          Produkty & Riešenia <i data-lucide="chevron-right" class="w-4 h-4 text-steel-400"></i>
+        </a>
+        <a href="#technologie" onclick="toggleMobileMenu()" class="py-2 border-b border-steel-100 dark:border-steel-900 flex items-center justify-between" data-i18n="nav_tech">
+          Výrobné technológie <i data-lucide="chevron-right" class="w-4 h-4 text-steel-400"></i>
+        </a>
+        <a href="#konfigurator" onclick="toggleMobileMenu()" class="py-2 border-b border-steel-100 dark:border-steel-900 flex items-center justify-between text-brand-500 font-bold" data-i18n="nav_config">
+          Cenový konfigurátor <i data-lucide="calculator" class="w-4 h-4"></i>
+        </a>
+        <a href="#historia" onclick="toggleMobileMenu()" class="py-2 border-b border-steel-100 dark:border-steel-900 flex items-center justify-between" data-i18n="nav_history">
+          História od 1955 <i data-lucide="chevron-right" class="w-4 h-4 text-steel-400"></i>
+        </a>
+        <a href="#kariera" onclick="toggleMobileMenu()" class="py-2 border-b border-steel-100 dark:border-steel-900 flex items-center justify-between" data-i18n="nav_careers">
+          Kariéra & Voľné miesta (2) <i data-lucide="briefcase" class="w-4 h-4 text-brand-500"></i>
+        </a>
+        <a href="#galeria" onclick="toggleMobileMenu()" class="py-2 border-b border-steel-100 dark:border-steel-900 flex items-center justify-between" data-i18n="nav_gallery">
+          Galéria závodu <i data-lucide="chevron-right" class="w-4 h-4 text-steel-400"></i>
+        </a>
+        <a href="#kontakt" onclick="toggleMobileMenu()" class="py-2 flex items-center justify-between" data-i18n="nav_contact">
+          Kontaktné centrum <i data-lucide="chevron-right" class="w-4 h-4 text-steel-400"></i>
+        </a>
+      </nav>
+      <div class="pt-4 border-t border-steel-200 dark:border-steel-800 flex flex-col gap-3">
+        <a href="#konfigurator" onclick="toggleMobileMenu()" class="w-full text-center py-3 rounded-xl font-bold bg-brand-500 text-white shadow-lg">
+          Nezáväzný dopyt
+        </a>
+        <a href="tel:+421335933521" class="w-full text-center py-3 rounded-xl font-semibold border border-steel-300 dark:border-steel-700 text-steel-700 dark:text-steel-200 flex items-center justify-center">
+          <i data-lucide="phone" class="w-4 h-4 mr-2 text-brand-500"></i>
+          +421 33 59 335 21
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= HERO SECTION ================= -->
+  <section class="relative overflow-hidden pt-12 pb-20 md:pt-20 md:pb-32 bg-slate-50 dark:bg-steel-950 hero-bg-grid border-b border-steel-200 dark:border-steel-800">
+    <!-- Glow gradients -->
+    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-brand-500/10 dark:bg-brand-500/15 blur-[120px] rounded-full pointer-events-none"></div>
+    <div class="absolute top-1/2 right-10 w-[400px] h-[300px] bg-blue-500/10 dark:bg-blue-600/10 blur-[100px] rounded-full pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        
+        <!-- Left Content Column -->
+        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+          
+          <div class="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full bg-brand-500/10 dark:bg-brand-500/20 border border-brand-500/30 text-brand-600 dark:text-brand-400 text-xs sm:text-sm font-semibold">
+            <i data-lucide="sparkles" class="w-4 h-4 text-brand-500"></i>
+            <span data-i18n="hero_pill">Tradícia od roku 1955 • Špičkový priemysel 4.0</span>
+          </div>
+
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-display font-extrabold tracking-tight text-steel-900 dark:text-white leading-[1.15]">
+            <span data-i18n="hero_h1_lead">Kov umocnený</span><br>
+            <span class="text-gradient font-black" data-i18n="hero_h1_highlight">precíznym dizajnom</span>
+          </h1>
+
+          <p class="text-lg sm:text-xl text-steel-600 dark:text-steel-300 max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed" data-i18n="hero_desc">
+            Sme popredným výrobcom kovového nábytku, šatňových systémov a ťažkých priemyselných regálov. Ako kľúčový výrobný závod švédskej skupiny <strong class="text-steel-900 dark:text-white font-semibold">AJ Produkter AB</strong> ročne spracujeme viac ako 9 000 ton prvotriednej ocele v modernom areáli s rozlohou 22 000 m².
+          </p>
+
+          <!-- Action Buttons -->
+          <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
+            <a href="#konfigurator" class="px-6 py-3.5 rounded-xl font-bold text-sm uppercase tracking-wider bg-brand-500 hover:bg-brand-600 text-white shadow-xl shadow-brand-500/25 flex items-center transition-all hover:scale-[1.02] active:scale-[0.98]">
+              <i data-lucide="calculator" class="w-4 h-4 mr-2"></i>
+              <span data-i18n="hero_btn_calc">Konfigurátor dopytu</span>
+            </a>
+            <a href="#produkty" class="px-6 py-3.5 rounded-xl font-semibold text-sm border border-steel-300 dark:border-steel-700 hover:border-brand-500 text-steel-800 dark:text-steel-200 bg-white dark:bg-steel-900/60 transition-all hover:bg-steel-50 dark:hover:bg-steel-850 flex items-center">
+              <i data-lucide="package" class="w-4 h-4 mr-2 text-brand-500"></i>
+              <span data-i18n="hero_btn_products">Prehľad produktov</span>
+            </a>
+            <a href="#kariera" class="px-4 py-3.5 rounded-xl font-medium text-xs text-steel-600 dark:text-steel-400 hover:text-brand-500 transition-colors flex items-center">
+              <i data-lucide="users" class="w-4 h-4 mr-1.5"></i>
+              <span data-i18n="hero_btn_jobs">Hľadáme kolegov</span>
+            </a>
+          </div>
+
+          <!-- Trust Badges -->
+          <div class="pt-6 border-t border-steel-200 dark:border-steel-800/80 flex flex-wrap items-center justify-center lg:justify-start gap-6 text-xs text-steel-500 dark:text-steel-400">
+            <div class="flex items-center space-x-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500"></i>
+              <span data-i18n="trust_1">Certifikované podľa ISO 9001 / 14001</span>
+            </div>
+            <div class="flex items-center space-x-2">
+              <i data-lucide="globe-2" class="w-4 h-4 text-brand-500"></i>
+              <span data-i18n="trust_2">Export do 20 krajín Európy</span>
+            </div>
+            <div class="flex items-center space-x-2">
+              <i data-lucide="shield-check" class="w-4 h-4 text-blue-500"></i>
+              <span data-i18n="trust_3">Záruka až 10 rokov na vybrané rady</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Visual / Featured Card Column -->
+        <div class="lg:col-span-5 relative">
+          <div class="relative mx-auto max-w-md lg:max-w-none">
+            
+            <!-- Main Hero Image Frame -->
+            <div class="relative rounded-2xl overflow-hidden shadow-2xl border border-steel-200 dark:border-steel-800 bg-steel-900 group">
+              <img src="images/sklad.png" alt="Logistické a skladové centrum AJ Metal Design" class="w-full h-80 sm:h-96 object-cover object-center group-hover:scale-105 transition-transform duration-700">
+              <div class="absolute inset-0 bg-gradient-to-t from-steel-950 via-steel-950/40 to-transparent"></div>
+              
+              <div class="absolute bottom-6 left-6 right-6">
+                <span class="inline-block px-2.5 py-1 rounded bg-brand-500 text-white font-bold text-xs uppercase tracking-wider mb-2">
+                  Výrobný závod Hrnčiarovce nad Parnou
+                </span>
+                <h3 class="text-xl font-display font-bold text-white">
+                  Výroba & distribučné centrum
+                </h3>
+                <p class="text-xs text-steel-300 mt-1 line-clamp-2">
+                  Plne robotizované zváranie, CNC vysekávanie Trumpf, ohýbanie Salvagnini a 2 linky práškového lakovania.
+                </p>
+              </div>
+            </div>
+
+            <!-- Floating Overlay Card: Group Badge -->
+            <div class="absolute -top-6 -left-6 bg-white dark:bg-steel-900 border border-steel-200 dark:border-steel-700/80 rounded-2xl p-4 shadow-xl flex items-center space-x-3 backdrop-blur-md">
+              <div class="w-12 h-12 rounded-xl bg-brand-500/10 flex items-center justify-center text-brand-500">
+                <i data-lucide="factory" class="w-6 h-6"></i>
+              </div>
+              <div>
+                <p class="text-[11px] uppercase tracking-wider font-semibold text-steel-500 dark:text-steel-400">Skupina AJ Produkter</p>
+                <p class="text-sm font-bold text-steel-900 dark:text-white">Švédska precíznosť</p>
+              </div>
+            </div>
+
+            <!-- Floating Overlay Card: Annual Volume -->
+            <div class="absolute -bottom-6 -right-6 bg-white dark:bg-steel-900 border border-steel-200 dark:border-steel-700/80 rounded-2xl p-4 shadow-xl flex items-center space-x-3 backdrop-blur-md">
+              <div class="w-12 h-12 rounded-xl bg-emerald-500/10 flex items-center justify-center text-emerald-500">
+                <i data-lucide="trending-up" class="w-6 h-6"></i>
+              </div>
+              <div>
+                <p class="text-[11px] uppercase tracking-wider font-semibold text-steel-500 dark:text-steel-400">Ročná spotreba</p>
+                <p class="text-sm font-bold text-steel-900 dark:text-white">9 000 ton ocele</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <!-- KPI METRIC COUNTER ROW -->
+      <div class="mt-16 sm:mt-24 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-6">
+        
+        <div class="p-5 rounded-2xl bg-white dark:bg-steel-900/80 border border-steel-200 dark:border-steel-800 shadow-sm text-center">
+          <div class="text-2xl sm:text-3xl font-display font-extrabold text-brand-500">1955</div>
+          <div class="text-xs font-semibold text-steel-500 dark:text-steel-400 mt-1 uppercase tracking-wider" data-i18n="kpi_tradition">Tradícia od</div>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-white dark:bg-steel-900/80 border border-steel-200 dark:border-steel-800 shadow-sm text-center">
+          <div class="text-2xl sm:text-3xl font-display font-extrabold text-steel-900 dark:text-white">16+ mil. €</div>
+          <div class="text-xs font-semibold text-steel-500 dark:text-steel-400 mt-1 uppercase tracking-wider" data-i18n="kpi_revenue">Ročný obrat</div>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-white dark:bg-steel-900/80 border border-steel-200 dark:border-steel-800 shadow-sm text-center">
+          <div class="text-2xl sm:text-3xl font-display font-extrabold text-brand-500">22 000 m²</div>
+          <div class="text-xs font-semibold text-steel-500 dark:text-steel-400 mt-1 uppercase tracking-wider" data-i18n="kpi_area">Výrobný areál</div>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-white dark:bg-steel-900/80 border border-steel-200 dark:border-steel-800 shadow-sm text-center">
+          <div class="text-2xl sm:text-3xl font-display font-extrabold text-steel-900 dark:text-white">9 000 t</div>
+          <div class="text-xs font-semibold text-steel-500 dark:text-steel-400 mt-1 uppercase tracking-wider" data-i18n="kpi_steel">Ocele ročne</div>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-white dark:bg-steel-900/80 border border-steel-200 dark:border-steel-800 shadow-sm text-center">
+          <div class="text-2xl sm:text-3xl font-display font-extrabold text-brand-500">250+</div>
+          <div class="text-xs font-semibold text-steel-500 dark:text-steel-400 mt-1 uppercase tracking-wider" data-i18n="kpi_staff">Zamestnancov</div>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-white dark:bg-steel-900/80 border border-steel-200 dark:border-steel-800 shadow-sm text-center">
+          <div class="text-2xl sm:text-3xl font-display font-extrabold text-steel-900 dark:text-white">20</div>
+          <div class="text-xs font-semibold text-steel-500 dark:text-steel-400 mt-1 uppercase tracking-wider" data-i18n="kpi_countries">Krajín exportu</div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= ABOUT US & CORPORATE VALUES ================= -->
+  <section id="o-nas" class="py-20 md:py-28 bg-white dark:bg-steel-950 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left Image Composition -->
+        <div class="lg:col-span-5 space-y-4">
+          <div class="relative rounded-2xl overflow-hidden shadow-2xl border border-steel-200 dark:border-steel-800">
+            <img src="images/o-nas.png" alt="O nás - AJ Metal Design" class="w-full h-80 object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-steel-950/80 via-transparent to-transparent"></div>
+            <div class="absolute bottom-4 left-4 right-4 text-white">
+              <span class="text-xs font-bold text-brand-400 uppercase tracking-wider">Hrnčiarovce nad Parnou</span>
+              <p class="text-sm font-semibold">Komplexná výroba kovového nábytku a vybavenia</p>
+            </div>
+          </div>
+          <div class="grid grid-cols-2 gap-4">
+            <div class="rounded-xl overflow-hidden border border-steel-200 dark:border-steel-800 h-36">
+              <img src="images/msk2.webp" alt="Výrobné priestory" class="w-full h-full object-cover">
+            </div>
+            <div class="rounded-xl overflow-hidden border border-steel-200 dark:border-steel-800 h-36">
+              <img src="images/msk3.webp" alt="Automatizované linky" class="w-full h-full object-cover">
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Content & Mission -->
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center space-x-2 text-xs font-bold uppercase tracking-wider text-brand-500">
+            <i data-lucide="building-2" class="w-4 h-4"></i>
+            <span data-i18n="about_tag">O našej spoločnosti</span>
+          </div>
+
+          <h2 class="text-3xl sm:text-4xl font-display font-extrabold text-steel-900 dark:text-white leading-tight" data-i18n="about_heading">
+            Pridávame výrobkom novú dimenziu: <span class="text-gradient">kov umocnený dizajnom</span>
+          </h2>
+
+          <p class="text-steel-600 dark:text-steel-300 text-base leading-relaxed" data-i18n="about_p1">
+            Poslaním spoločnosti <strong>AJ Metal Design a.s.</strong> je pridať jej výrobkom novú dimenziu, ktorú umocňuje náš korporátny slogan <em>„kov umocnený dizajnom“</em>. Svojim zákazníkom chceme poskytovať prvotriedny servis v službách od momentu zadania až po samotnú realizáciu a expedíciu.
+          </p>
+
+          <p class="text-steel-600 dark:text-steel-300 text-base leading-relaxed" data-i18n="about_p2">
+            Vďaka tomu napĺňame víziu stať sa uznávaným domácim výrobcom a patriť medzi najvýznamnejších exportérov v tomto odvetví. Naše výrobky sa predávajú pod registrovanou značkou <strong>AJ MetalDesign®</strong> po celej Európe aj celom svete.
+          </p>
+
+          <!-- Quote Block by General Manager -->
+          <div class="p-6 rounded-2xl bg-steel-50 dark:bg-steel-900/70 border-l-4 border-brand-500 border-steel-200 dark:border-steel-800 shadow-sm relative">
+            <i data-lucide="quote" class="w-8 h-8 text-brand-500/20 absolute top-4 right-4"></i>
+            <p class="text-steel-800 dark:text-steel-200 italic font-medium text-sm sm:text-base leading-relaxed" data-i18n="about_quote">
+              „Sme popredným výrobcom kovového nábytku. Našou víziou je stať sa jedným z najlepších exportérov v tomto odvetví a dlhodobo poskytovať bezkonkurenčnú kvalitu a spoľahlivosť našim partnerom v 20 krajinách.“
+            </p>
+            <div class="mt-4 flex items-center space-x-3">
+              <div class="w-10 h-10 rounded-full bg-brand-500 text-white font-bold flex items-center justify-center font-display text-sm">
+                RF
+              </div>
+              <div>
+                <div class="font-bold text-steel-900 dark:text-white text-sm">Roman Fraňo</div>
+                <div class="text-xs text-steel-500 dark:text-steel-400" data-i18n="about_gm_title">Generálny riaditeľ, AJ Metal Design a.s.</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3 Pillars of Values -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
+            
+            <div class="p-4 rounded-xl bg-white dark:bg-steel-900 border border-steel-200 dark:border-steel-800">
+              <div class="w-10 h-10 rounded-lg bg-brand-500/10 text-brand-500 flex items-center justify-center mb-3">
+                <i data-lucide="cpu" class="w-5 h-5"></i>
+              </div>
+              <h4 class="font-bold text-sm text-steel-900 dark:text-white" data-i18n="pillar_1_title">Najnovšie technológie</h4>
+              <p class="text-xs text-steel-500 dark:text-steel-400 mt-1" data-i18n="pillar_1_desc">Každoročné investície do robotiky a automatizácie CNC centier.</p>
+            </div>
+
+            <div class="p-4 rounded-xl bg-white dark:bg-steel-900 border border-steel-200 dark:border-steel-800">
+              <div class="w-10 h-10 rounded-lg bg-blue-500/10 text-blue-500 flex items-center justify-center mb-3">
+                <i data-lucide="heart-handshake" class="w-5 h-5"></i>
+              </div>
+              <h4 class="font-bold text-sm text-steel-900 dark:text-white" data-i18n="pillar_2_title">Osobný prístup</h4>
+              <p class="text-xs text-steel-500 dark:text-steel-400 mt-1" data-i18n="pillar_2_desc">Partnerský prístup k architektom, investorom aj veľkoodberateľom.</p>
+            </div>
+
+            <div class="p-4 rounded-xl bg-white dark:bg-steel-900 border border-steel-200 dark:border-steel-800">
+              <div class="w-10 h-10 rounded-lg bg-emerald-500/10 text-emerald-500 flex items-center justify-center mb-3">
+                <i data-lucide="leaf" class="w-5 h-5"></i>
+              </div>
+              <h4 class="font-bold text-sm text-steel-900 dark:text-white" data-i18n="pillar_3_title">ISO Ekológia</h4>
+              <p class="text-xs text-steel-500 dark:text-steel-400 mt-1" data-i18n="pillar_3_desc">ISO 14001 a 50001, bezodpadové lakovanie a recyklovateľná oceľ.</p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= B2B PRODUCT CATALOG SHOWCASE ================= -->
+  <section id="produkty" class="py-20 md:py-28 bg-steel-50 dark:bg-steel-900/60 border-y border-steel-200 dark:border-steel-800 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto space-y-4">
+        <div class="inline-flex items-center space-x-2 text-xs font-bold uppercase tracking-wider text-brand-500">
+          <i data-lucide="layers" class="w-4 h-4"></i>
+          <span data-i18n="products_tag">Portfólio produktov</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-display font-extrabold text-steel-900 dark:text-white" data-i18n="products_title">
+          Komplexné riešenia pre priemysel, školy a kancelárie
+        </h2>
+        <p class="text-steel-600 dark:text-steel-300 text-base" data-i18n="products_subtitle">
+          Od certifikovaných šatňových skríň cez archivačné systémy až po ťažké paletové regály s vysokou nosnosťou.
+        </p>
+      </div>
+
+      <!-- Category Filter Tabs -->
+      <div class="mt-10 flex flex-wrap justify-center gap-2" id="product-tabs">
+        <button onclick="filterProducts('all')" class="prod-tab-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-bold bg-brand-500 text-white shadow-md transition-all" data-cat="all">
+          Všetky produkty
+        </button>
+        <button onclick="filterProducts('satne')" class="prod-tab-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-white dark:bg-steel-800 text-steel-700 dark:text-steel-300 border border-steel-200 dark:border-steel-700 hover:border-brand-500 transition-all" data-cat="satne">
+          Šatňové skrine & Boxy
+        </button>
+        <button onclick="filterProducts('kancelaria')" class="prod-tab-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-white dark:bg-steel-800 text-steel-700 dark:text-steel-300 border border-steel-200 dark:border-steel-700 hover:border-brand-500 transition-all" data-cat="kancelaria">
+          Kancelársky kovový nábytok
+        </button>
+        <button onclick="filterProducts('dielna')" class="prod-tab-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-white dark:bg-steel-800 text-steel-700 dark:text-steel-300 border border-steel-200 dark:border-steel-700 hover:border-brand-500 transition-all" data-cat="dielna">
+          Dielňa & Ponky
+        </button>
+        <button onclick="filterProducts('regaly')" class="prod-tab-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-white dark:bg-steel-800 text-steel-700 dark:text-steel-300 border border-steel-200 dark:border-steel-700 hover:border-brand-500 transition-all" data-cat="regaly">
+          Skladové & Paletové regály
+        </button>
+      </div>
+
+      <!-- Products Grid -->
+      <div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="product-grid">
+        
+        <!-- Product 1: Šatňová skriňa Zváraná -->
+        <div class="product-item card-hover rounded-2xl bg-white dark:bg-steel-900 border border-steel-200 dark:border-steel-800 overflow-hidden shadow-sm flex flex-col justify-between" data-category="satne">
+          <div>
+            <div class="relative h-56 bg-steel-100 dark:bg-steel-800 overflow-hidden group">
+              <img src="images/msk4.webp" alt="Zváraná šatňová skriňa" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute top-3 left-3 bg-brand-500 text-white text-[11px] font-bold px-2.5 py-0.5 rounded uppercase">
+                Bestseller
+              </div>
+              <div class="absolute bottom-3 right-3 bg-steel-900/80 backdrop-blur text-white text-xs px-2 py-1 rounded">
+                Nosnosť police 50 kg
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="text-xs font-semibold text-brand-500 uppercase tracking-wider">Šatne & Vstupy</div>
+              <h3 class="text-xl font-display font-bold text-steel-900 dark:text-white mt-1">Zváraná šatňová skriňa Classic</h3>
+              <p class="text-xs text-steel-500 dark:text-steel-400 mt-2 line-clamp-2">
+                Pevná zváraná oceľová konštrukcia, perforované vetranie, vnútorná polica, šatníková tyč s háčikmi a cylindrický bezpečnostný zámok.
+              </p>
+              
+              <div class="mt-4 pt-4 border-t border-steel-100 dark:border-steel-800/80 grid grid-cols-2 gap-2 text-xs text-steel-600 dark:text-steel-300">
+                <div><strong class="text-steel-900 dark:text-white">Výška:</strong> 1800 / 1950 mm</div>
+                <div><strong class="text-steel-900 dark:text-white">Šírka:</strong> 600 / 800 mm</div>
+                <div><strong class="text-steel-900 dark:text-white">Povrch:</strong> Komaxit RAL</div>
+                <div><strong class="text-steel-900 dark:text-white">Zámok:</strong> Kľúč / Čip / Visiaci</div>
+              </div>
+            </div>
+          </div>
+          <div class="p-6 pt-0">
+            <button onclick="selectProductForConfig('Zváraná šatňová skriňa Classic', 'satne')" class="w-full py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider bg-steel-100 dark:bg-steel-800 hover:bg-brand-500 hover:text-white text-steel-800 dark:text-steel-200 transition-all flex items-center justify-center">
+              <i data-lucide="sliders" class="w-3.5 h-3.5 mr-1.5"></i>
+              Nakonfigurovať dopyt
+            </button>
+          </div>
+        </div>
+
+        <!-- Product 2: Boxové skrine Z-typ pre školy -->
+        <div class="product-item card-hover rounded-2xl bg-white dark:bg-steel-900 border border-steel-200 dark:border-steel-800 overflow-hidden shadow-sm flex flex-col justify-between" data-category="satne">
+          <div>
+            <div class="relative h-56 bg-steel-100 dark:bg-steel-800 overflow-hidden group">
+              <img src="images/volne-miesta.png" alt="Boxové a Z-skrine" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute top-3 left-3 bg-blue-600 text-white text-[11px] font-bold px-2.5 py-0.5 rounded uppercase">
+                Školy & Šport
+              </div>
+              <div class="absolute bottom-3 right-3 bg-steel-900/80 backdrop-blur text-white text-xs px-2 py-1 rounded">
+                Úspora priestoru 50%
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="text-xs font-semibold text-brand-500 uppercase tracking-wider">Šatne & Školy</div>
+              <h3 class="text-xl font-display font-bold text-steel-900 dark:text-white mt-1">Modulárne Z-skrine & Boxy</h3>
+              <p class="text-xs text-steel-500 dark:text-steel-400 mt-2 line-clamp-2">
+                Ideálne riešenie pre fitness centrá a školy s maximálnou priestorovou efektivitou. Dvojkrídlové Z-profily umožňujú zavesenie dlhého odevu aj batohu.
+              </p>
+              
+              <div class="mt-4 pt-4 border-t border-steel-100 dark:border-steel-800/80 grid grid-cols-2 gap-2 text-xs text-steel-600 dark:text-steel-300">
+                <div><strong class="text-steel-900 dark:text-white">Konštrukcia:</strong> 0.8 mm oceľ</div>
+                <div><strong class="text-steel-900 dark:text-white">Odvetranie:</strong> Dvierka / Chrbát</div>
+                <div><strong class="text-steel-900 dark:text-white">Moduly:</strong> 2 až 8 dverí</div>
+                <div><strong class="text-steel-900 dark:text-white">Záruka:</strong> 5 rokov</div>
+              </div>
+            </div>
+          </div>
+          <div class="p-6 pt-0">
+            <button onclick="selectProductForConfig('Modulárne Z-skrine & Boxy', 'satne')" class="w-full py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider bg-steel-100 dark:bg-steel-800 hover:bg-brand-500 hover:text-white text-steel-800 dark:text-steel-200 transition-all flex items-center justify-center">
+              <i data-lucide="sliders" class="w-3.5 h-3.5 mr-1.5"></i>
+              Nakonfigurovať dopyt
+            </button>
+          </div>
+        </div>
+
+        <!-- Product 3: Kancelárska roletová skriňa -->
+        <div class="product-item card-hover rounded-2xl bg-white dark:bg-steel-900 border border-steel-200 dark:border-steel-800 overflow-hidden shadow-sm flex flex-col justify-between" data-category="kancelaria">
+          <div>
+            <div class="relative h-56 bg-steel-100 dark:bg-steel-800 overflow-hidden group">
+              <img src="images/customer-service.webp" alt="Kancelársky nábytok" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute top-3 left-3 bg-purple-600 text-white text-[11px] font-bold px-2.5 py-0.5 rounded uppercase">
+                Kancelária
+              </div>
+              <div class="absolute bottom-3 right-3 bg-steel-900/80 backdrop-blur text-white text-xs px-2 py-1 rounded">
+                Certifikát zhody
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="text-xs font-semibold text-brand-500 uppercase tracking-wider">Kancelársky nábytok</div>
+              <h3 class="text-xl font-display font-bold text-steel-900 dark:text-white mt-1">Roletové a krídlové archívne skrine</h3>
+              <p class="text-xs text-steel-500 dark:text-steel-400 mt-2 line-clamp-2">
+                Hladký chod plastových alebo hliníkových žalúzií, nastaviteľné police pre závesné zakladače a dokumenty A4, centrálne uzamykanie.
+              </p>
+              
+              <div class="mt-4 pt-4 border-t border-steel-100 dark:border-steel-800/80 grid grid-cols-2 gap-2 text-xs text-steel-600 dark:text-steel-300">
+                <div><strong class="text-steel-900 dark:text-white">Kapacita:</strong> 5 radov šanónov</div>
+                <div><strong class="text-steel-900 dark:text-white">Police:</strong> Nosnosť 70 kg/polica</div>
+                <div><strong class="text-steel-900 dark:text-white">Dvere:</strong> Roletové / Krídlové</div>
+                <div><strong class="text-steel-900 dark:text-white">Farba:</strong> RAL 7035 / 7016</div>
+              </div>
+            </div>
+          </div>
+          <div class="p-6 pt-0">
+            <button onclick="selectProductForConfig('Roletové a krídlové archívne skrine', 'kancelaria')" class="w-full py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider bg-steel-100 dark:bg-steel-800 hover:bg-brand-500 hover:text-white text-steel-800 dark:text-steel-200 transition-all flex items-center justify-center">
+              <i data-lucide="sliders" class="w-3.5 h-3.5 mr-1.5"></i>
+              Nakonfigurovať dopyt
+            </button>
+          </div>
+        </div>
+
+        <!-- Product 4: Priemyselný pracovný stôl (Ponk) -->
+        <div class="product-item card-hover rounded-2xl bg-white dark:bg-steel-900 border border-steel-200 dark:border-steel-800 overflow-hidden shadow-sm flex flex-col justify-between" data-category="dielna">
+          <div>
+            <div class="relative h-56 bg-steel-100 dark:bg-steel-800 overflow-hidden group">
+              <img src="images/dsc01749_opt.jpg" alt="Dielenský stôl ponk" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute top-3 left-3 bg-amber-600 text-white text-[11px] font-bold px-2.5 py-0.5 rounded uppercase">
+                Heavy Duty
+              </div>
+              <div class="absolute bottom-3 right-3 bg-steel-900/80 backdrop-blur text-white text-xs px-2 py-1 rounded">
+                Nosnosť 1 000 kg
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="text-xs font-semibold text-brand-500 uppercase tracking-wider">Dielenské vybavenie</div>
+              <h3 class="text-xl font-display font-bold text-steel-900 dark:text-white mt-1">Priemyselný stôl HeavyMaster</h3>
+              <p class="text-xs text-steel-500 dark:text-steel-400 mt-2 line-clamp-2">
+                Masívna buková pracovná doska (hrúbka 40 mm), oceľová zváraná podnož s nosnosťou 1 000 kg, modulárne zásuvkové bloky a perforovaný panel na náradie.
+              </p>
+              
+              <div class="mt-4 pt-4 border-t border-steel-100 dark:border-steel-800/80 grid grid-cols-2 gap-2 text-xs text-steel-600 dark:text-steel-300">
+                <div><strong class="text-steel-900 dark:text-white">Doska:</strong> Masívny buk 40mm</div>
+                <div><strong class="text-steel-900 dark:text-white">Výška:</strong> Nastaviteľná 80-105cm</div>
+                <div><strong class="text-steel-900 dark:text-white">Dĺžka:</strong> 1500 / 2000 mm</div>
+                <div><strong class="text-steel-900 dark:text-white">Zásuvky:</strong> 100% výsuv, 75kg</div>
+              </div>
+            </div>
+          </div>
+          <div class="p-6 pt-0">
+            <button onclick="selectProductForConfig('Priemyselný stôl HeavyMaster', 'dielna')" class="w-full py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider bg-steel-100 dark:bg-steel-800 hover:bg-brand-500 hover:text-white text-steel-800 dark:text-steel-200 transition-all flex items-center justify-center">
+              <i data-lucide="sliders" class="w-3.5 h-3.5 mr-1.5"></i>
+              Nakonfigurovať dopyt
+            </button>
+          </div>
+        </div>
+
+        <!-- Product 5: Certifikovaný policový regál ZU-4 -->
+        <div class="product-item card-hover rounded-2xl bg-white dark:bg-steel-900 border border-steel-200 dark:border-steel-800 overflow-hidden shadow-sm flex flex-col justify-between" data-category="regaly">
+          <div>
+            <div class="relative h-56 bg-steel-100 dark:bg-steel-800 overflow-hidden group">
+              <img src="images/sklad.png" alt="Policový regál ZU-4" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute top-3 left-3 bg-emerald-600 text-white text-[11px] font-bold px-2.5 py-0.5 rounded uppercase">
+                Certifikát ZU-4
+              </div>
+              <div class="absolute bottom-3 right-3 bg-steel-900/80 backdrop-blur text-white text-xs px-2 py-1 rounded">
+                Bezskrutková montáž
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="text-xs font-semibold text-brand-500 uppercase tracking-wider">Regálové systémy</div>
+              <h3 class="text-xl font-display font-bold text-steel-900 dark:text-white mt-1">Skladový policový regál ZU-4</h3>
+              <p class="text-xs text-steel-500 dark:text-steel-400 mt-2 line-clamp-2">
+                Originálny certifikovaný zásuvný systém profilovaný z pozinkovanej ocele na linkách Gasparini a SWAH. Jednoduchá prestaviteľnosť a vysoká stabilita.
+              </p>
+              
+              <div class="mt-4 pt-4 border-t border-steel-100 dark:border-steel-800/80 grid grid-cols-2 gap-2 text-xs text-steel-600 dark:text-steel-300">
+                <div><strong class="text-steel-900 dark:text-white">Nosnosť/polica:</strong> 150 – 350 kg</div>
+                <div><strong class="text-steel-900 dark:text-white">Materiál:</strong> Žiarový pozink</div>
+                <div><strong class="text-steel-900 dark:text-white">Výška:</strong> 2000 – 3000 mm</div>
+                <div><strong class="text-steel-900 dark:text-white">Certifikácia:</strong> Vyhlásenie o zhode</div>
+              </div>
+            </div>
+          </div>
+          <div class="p-6 pt-0">
+            <button onclick="selectProductForConfig('Skladový policový regál ZU-4', 'regaly')" class="w-full py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider bg-steel-100 dark:bg-steel-800 hover:bg-brand-500 hover:text-white text-steel-800 dark:text-steel-200 transition-all flex items-center justify-center">
+              <i data-lucide="sliders" class="w-3.5 h-3.5 mr-1.5"></i>
+              Nakonfigurovať dopyt
+            </button>
+          </div>
+        </div>
+
+        <!-- Product 6: Ťažký paletový a konzolový regál -->
+        <div class="product-item card-hover rounded-2xl bg-white dark:bg-steel-900 border border-steel-200 dark:border-steel-800 overflow-hidden shadow-sm flex flex-col justify-between" data-category="regaly">
+          <div>
+            <div class="relative h-56 bg-steel-100 dark:bg-steel-800 overflow-hidden group">
+              <img src="images/metal-o-nas.png" alt="Paletové regály" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute top-3 left-3 bg-red-600 text-white text-[11px] font-bold px-2.5 py-0.5 rounded uppercase">
+                Logistika
+              </div>
+              <div class="absolute bottom-3 right-3 bg-steel-900/80 backdrop-blur text-white text-xs px-2 py-1 rounded">
+                Až 4 000 kg/bunka
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="text-xs font-semibold text-brand-500 uppercase tracking-wider">Ťažké sklady</div>
+              <h3 class="text-xl font-display font-bold text-steel-900 dark:text-white mt-1">Paletové & Konzolové regály</h3>
+              <p class="text-xs text-steel-500 dark:text-steel-400 mt-2 line-clamp-2">
+                Riešenie pre veľkokapacitné logistické haly, distribučné sklady a skladovanie hutníckeho materiálu s vysokou nosnosťou stĺpov.
+              </p>
+              
+              <div class="mt-4 pt-4 border-t border-steel-100 dark:border-steel-800/80 grid grid-cols-2 gap-2 text-xs text-steel-600 dark:text-steel-300">
+                <div><strong class="text-steel-900 dark:text-white">Výška rámu:</strong> až do 12 metrov</div>
+                <div><strong class="text-steel-900 dark:text-white">Nosnosť stĺpa:</strong> až 15 000 kg</div>
+                <div><strong class="text-steel-900 dark:text-white">Normy:</strong> EN 15512, FEM</div>
+                <div><strong class="text-steel-900 dark:text-white">Záruka:</strong> 10 rokov</div>
+              </div>
+            </div>
+          </div>
+          <div class="p-6 pt-0">
+            <button onclick="selectProductForConfig('Paletové & Konzolové regály', 'regaly')" class="w-full py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider bg-steel-100 dark:bg-steel-800 hover:bg-brand-500 hover:text-white text-steel-800 dark:text-steel-200 transition-all flex items-center justify-center">
+              <i data-lucide="sliders" class="w-3.5 h-3.5 mr-1.5"></i>
+              Nakonfigurovať dopyt
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= INTERACTIVE B2B CONFIGURATOR ================= -->
+  <section id="konfigurator" class="py-20 md:py-28 bg-white dark:bg-steel-950 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto space-y-4">
+        <div class="inline-flex items-center space-x-2 text-xs font-bold uppercase tracking-wider text-brand-500">
+          <i data-lucide="calculator" class="w-4 h-4"></i>
+          <span data-i18n="calc_tag">B2B Cenový odhad</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-display font-extrabold text-steel-900 dark:text-white" data-i18n="calc_title">
+          Interaktívny konfigurátor kovového vybavenia
+        </h2>
+        <p class="text-steel-600 dark:text-steel-300 text-base" data-i18n="calc_subtitle">
+          Zvoľte typ produktu, rozsah zostavy, uzamykací systém a doplnkové služby. Okamžite získate orientačný cenový prepočet s možnosťou priameho odoslania na naše obchodné oddelenie.
+        </p>
+      </div>
+
+      <div class="mt-12 max-w-4xl mx-auto bg-steel-50 dark:bg-steel-900/80 rounded-3xl border border-steel-200 dark:border-steel-800 p-6 sm:p-10 shadow-xl">
+        
+        <form id="configurator-form" class="space-y-8" onsubmit="event.preventDefault()">
+          
+          <!-- Step 1: Category & Product Selection -->
+          <div>
+            <label class="block text-sm font-bold text-steel-900 dark:text-white mb-3 flex items-center">
+              <span class="w-6 h-6 rounded-full bg-brand-500 text-white flex items-center justify-center text-xs mr-2 font-display">1</span>
+              <span data-i18n="cfg_step1">Vyberte produktovú radu</span>
+            </label>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+              <label class="cursor-pointer">
+                <input type="radio" name="cfg-prod" value="satne" checked onchange="updateCalc()" class="peer sr-only">
+                <div class="p-4 rounded-xl border border-steel-200 dark:border-steel-700 bg-white dark:bg-steel-800 peer-checked:border-brand-500 peer-checked:ring-2 peer-checked:ring-brand-500/20 text-center transition-all">
+                  <i data-lucide="lock" class="w-6 h-6 mx-auto text-brand-500 mb-2"></i>
+                  <span class="text-xs font-bold text-steel-900 dark:text-white block">Šatňové skrine</span>
+                  <span class="text-[10px] text-steel-500">od 145 € / modul</span>
+                </div>
+              </label>
+
+              <label class="cursor-pointer">
+                <input type="radio" name="cfg-prod" value="kancelaria" onchange="updateCalc()" class="peer sr-only">
+                <div class="p-4 rounded-xl border border-steel-200 dark:border-steel-700 bg-white dark:bg-steel-800 peer-checked:border-brand-500 peer-checked:ring-2 peer-checked:ring-brand-500/20 text-center transition-all">
+                  <i data-lucide="archive" class="w-6 h-6 mx-auto text-blue-500 mb-2"></i>
+                  <span class="text-xs font-bold text-steel-900 dark:text-white block">Kancelárske skrine</span>
+                  <span class="text-[10px] text-steel-500">od 210 € / ks</span>
+                </div>
+              </label>
+
+              <label class="cursor-pointer">
+                <input type="radio" name="cfg-prod" value="dielna" onchange="updateCalc()" class="peer sr-only">
+                <div class="p-4 rounded-xl border border-steel-200 dark:border-steel-700 bg-white dark:bg-steel-800 peer-checked:border-brand-500 peer-checked:ring-2 peer-checked:ring-brand-500/20 text-center transition-all">
+                  <i data-lucide="wrench" class="w-6 h-6 mx-auto text-amber-500 mb-2"></i>
+                  <span class="text-xs font-bold text-steel-900 dark:text-white block">Dielenské ponky</span>
+                  <span class="text-[10px] text-steel-500">od 380 € / ks</span>
+                </div>
+              </label>
+
+              <label class="cursor-pointer">
+                <input type="radio" name="cfg-prod" value="regaly" onchange="updateCalc()" class="peer sr-only">
+                <div class="p-4 rounded-xl border border-steel-200 dark:border-steel-700 bg-white dark:bg-steel-800 peer-checked:border-brand-500 peer-checked:ring-2 peer-checked:ring-brand-500/20 text-center transition-all">
+                  <i data-lucide="layers" class="w-6 h-6 mx-auto text-emerald-500 mb-2"></i>
+                  <span class="text-xs font-bold text-steel-900 dark:text-white block">Skladové regály ZU-4</span>
+                  <span class="text-[10px] text-steel-500">od 85 € / stĺpec</span>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <!-- Step 2: Quantity / Modules Slider -->
+          <div>
+            <div class="flex justify-between items-center mb-2">
+              <label class="text-sm font-bold text-steel-900 dark:text-white flex items-center">
+                <span class="w-6 h-6 rounded-full bg-brand-500 text-white flex items-center justify-center text-xs mr-2 font-display">2</span>
+                <span data-i18n="cfg_step2">Počet modulov / kusov</span>
+              </label>
+              <span id="cfg-qty-val" class="font-display font-extrabold text-brand-500 text-lg">10 ks</span>
+            </div>
+            <input type="range" id="cfg-qty" min="1" max="100" value="10" oninput="updateCalc()" class="w-full h-2.5 bg-steel-200 dark:bg-steel-700 rounded-lg appearance-none cursor-pointer accent-brand-500">
+            <div class="flex justify-between text-[11px] text-steel-500 mt-1">
+              <span>1 ks (vzorka)</span>
+              <span>25 ks</span>
+              <span>50 ks (objemová zľava 10%)</span>
+              <span>100+ ks (objemová zľava 18%)</span>
+            </div>
+          </div>
+
+          <!-- Step 3: Locking System & Security -->
+          <div>
+            <label class="block text-sm font-bold text-steel-900 dark:text-white mb-3 flex items-center">
+              <span class="w-6 h-6 rounded-full bg-brand-500 text-white flex items-center justify-center text-xs mr-2 font-display">3</span>
+              <span data-i18n="cfg_step3">Uzamykací systém / Vyhotovenie</span>
+            </label>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              <label class="cursor-pointer">
+                <input type="radio" name="cfg-lock" value="standard" checked onchange="updateCalc()" class="peer sr-only">
+                <div class="p-3.5 rounded-xl border border-steel-200 dark:border-steel-700 bg-white dark:bg-steel-800 peer-checked:border-brand-500 peer-checked:ring-2 peer-checked:ring-brand-500/20 transition-all flex items-center space-x-3">
+                  <i data-lucide="key" class="w-5 h-5 text-steel-500 peer-checked:text-brand-500"></i>
+                  <div>
+                    <div class="text-xs font-bold text-steel-900 dark:text-white">Cylindrický zámok</div>
+                    <div class="text-[10px] text-steel-500">2 kľúče, v cene</div>
+                  </div>
+                </div>
+              </label>
+
+              <label class="cursor-pointer">
+                <input type="radio" name="cfg-lock" value="code" onchange="updateCalc()" class="peer sr-only">
+                <div class="p-3.5 rounded-xl border border-steel-200 dark:border-steel-700 bg-white dark:bg-steel-800 peer-checked:border-brand-500 peer-checked:ring-2 peer-checked:ring-brand-500/20 transition-all flex items-center space-x-3">
+                  <i data-lucide="dialpad" class="w-5 h-5 text-steel-500 peer-checked:text-brand-500"></i>
+                  <div>
+                    <div class="text-xs font-bold text-steel-900 dark:text-white">Mechanický kódový</div>
+                    <div class="text-[10px] text-steel-500">+ 18 € / modul</div>
+                  </div>
+                </div>
+              </label>
+
+              <label class="cursor-pointer">
+                <input type="radio" name="cfg-lock" value="rfid" onchange="updateCalc()" class="peer sr-only">
+                <div class="p-3.5 rounded-xl border border-steel-200 dark:border-steel-700 bg-white dark:bg-steel-800 peer-checked:border-brand-500 peer-checked:ring-2 peer-checked:ring-brand-500/20 transition-all flex items-center space-x-3">
+                  <i data-lucide="credit-card" class="w-5 h-5 text-steel-500 peer-checked:text-brand-500"></i>
+                  <div>
+                    <div class="text-xs font-bold text-steel-900 dark:text-white">RFID Smart Čip</div>
+                    <div class="text-[10px] text-steel-500">+ 42 € / modul</div>
+                  </div>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <!-- Step 4: RAL Color Finish -->
+          <div>
+            <label class="block text-sm font-bold text-steel-900 dark:text-white mb-3 flex items-center">
+              <span class="w-6 h-6 rounded-full bg-brand-500 text-white flex items-center justify-center text-xs mr-2 font-display">4</span>
+              <span data-i18n="cfg_step4">Povrchová úprava KOMAXIT (RAL vzorkovník)</span>
+            </label>
+            <div class="flex flex-wrap gap-3 items-center">
+              <label class="flex items-center space-x-2 cursor-pointer bg-white dark:bg-steel-800 border border-steel-200 dark:border-steel-700 px-3 py-2 rounded-xl">
+                <input type="radio" name="cfg-color" value="7035" checked onchange="updateCalc()" class="sr-only peer">
+                <span class="w-4 h-4 rounded-full bg-[#d0d3d4] border border-steel-400 peer-checked:ring-2 peer-checked:ring-brand-500"></span>
+                <span class="text-xs font-semibold text-steel-800 dark:text-steel-200">Svetlosivá (RAL 7035)</span>
+              </label>
+              <label class="flex items-center space-x-2 cursor-pointer bg-white dark:bg-steel-800 border border-steel-200 dark:border-steel-700 px-3 py-2 rounded-xl">
+                <input type="radio" name="cfg-color" value="7016" onchange="updateCalc()" class="sr-only peer">
+                <span class="w-4 h-4 rounded-full bg-[#383e42] border border-steel-400 peer-checked:ring-2 peer-checked:ring-brand-500"></span>
+                <span class="text-xs font-semibold text-steel-800 dark:text-steel-200">Antracit (RAL 7016)</span>
+              </label>
+              <label class="flex items-center space-x-2 cursor-pointer bg-white dark:bg-steel-800 border border-steel-200 dark:border-steel-700 px-3 py-2 rounded-xl">
+                <input type="radio" name="cfg-color" value="5010" onchange="updateCalc()" class="sr-only peer">
+                <span class="w-4 h-4 rounded-full bg-[#0e467f] border border-steel-400 peer-checked:ring-2 peer-checked:ring-brand-500"></span>
+                <span class="text-xs font-semibold text-steel-800 dark:text-steel-200">Enziánová modrá (RAL 5010)</span>
+              </label>
+              <label class="flex items-center space-x-2 cursor-pointer bg-white dark:bg-steel-800 border border-steel-200 dark:border-steel-700 px-3 py-2 rounded-xl">
+                <input type="radio" name="cfg-color" value="3020" onchange="updateCalc()" class="sr-only peer">
+                <span class="w-4 h-4 rounded-full bg-[#cc0605] border border-steel-400 peer-checked:ring-2 peer-checked:ring-brand-500"></span>
+                <span class="text-xs font-semibold text-steel-800 dark:text-steel-200">Dopravná červená (RAL 3020)</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Step 5: Additional Services -->
+          <div>
+            <label class="block text-sm font-bold text-steel-900 dark:text-white mb-3 flex items-center">
+              <span class="w-6 h-6 rounded-full bg-brand-500 text-white flex items-center justify-center text-xs mr-2 font-display">5</span>
+              <span data-i18n="cfg_step5">Doplnkové služby</span>
+            </label>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <label class="flex items-center p-3.5 rounded-xl border border-steel-200 dark:border-steel-700 bg-white dark:bg-steel-800 cursor-pointer space-x-3">
+                <input type="checkbox" id="cfg-delivery" onchange="updateCalc()" class="w-4 h-4 rounded text-brand-500 focus:ring-brand-500 border-steel-300">
+                <div class="text-xs">
+                  <div class="font-bold text-steel-900 dark:text-white">Doprava priamo do objektu</div>
+                  <div class="text-steel-500">Expedícia z Hrnčiaroviec nad Parnou po celom SK/CZ</div>
+                </div>
+              </label>
+              <label class="flex items-center p-3.5 rounded-xl border border-steel-200 dark:border-steel-700 bg-white dark:bg-steel-800 cursor-pointer space-x-3">
+                <input type="checkbox" id="cfg-assembly" onchange="updateCalc()" class="w-4 h-4 rounded text-brand-500 focus:ring-brand-500 border-steel-300">
+                <div class="text-xs">
+                  <div class="font-bold text-steel-900 dark:text-white">Odborná montáž na kľúč</div>
+                  <div class="text-steel-500">Kotvenie, nivelácia, odovzdanie revízie a certifikátov</div>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <!-- Realtime Estimate Summary Banner -->
+          <div class="p-6 rounded-2xl bg-steel-900 text-white flex flex-col sm:flex-row items-center justify-between gap-6 border border-steel-800 shadow-xl">
+            <div>
+              <span class="text-xs font-semibold text-brand-400 uppercase tracking-wider block">Orientačný odhad ceny bez DPH</span>
+              <div class="flex items-baseline space-x-2 mt-1">
+                <span id="calc-total" class="text-3xl sm:text-4xl font-display font-extrabold text-white">1 450 €</span>
+                <span id="calc-unit" class="text-xs text-steel-400">(cca 145 € / ks)</span>
+              </div>
+              <p class="text-[11px] text-steel-400 mt-1">
+                Presná cenová ponuka závisí od finálnych rozmerov a množstevných zliav.
+              </p>
+            </div>
+            
+            <button type="button" onclick="openLeadModalWithConfig()" class="w-full sm:w-auto px-6 py-3.5 rounded-xl font-bold text-xs uppercase tracking-wider bg-brand-500 hover:bg-brand-600 text-white shadow-lg shadow-brand-500/25 transition-all flex items-center justify-center shrink-0">
+              <i data-lucide="send" class="w-4 h-4 mr-2"></i>
+              <span>Vyžiadať oficiálnu ponuku</span>
+            </button>
+          </div>
+
+        </form>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= MANUFACTURING TECHNOLOGIES (INDUSTRY 4.0) ================= -->
+  <section id="technologie" class="py-20 md:py-28 bg-steel-900 text-white relative overflow-hidden transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <div class="lg:col-span-6 space-y-6">
+          <div class="inline-flex items-center space-x-2 text-xs font-bold uppercase tracking-wider text-brand-400">
+            <i data-lucide="cpu" class="w-4 h-4"></i>
+            <span data-i18n="tech_tag">Špičkový strojový park</span>
+          </div>
+
+          <h2 class="text-3xl sm:text-4xl font-display font-extrabold tracking-tight" data-i18n="tech_title">
+            Vysoko efektívne výrobné technológie & robotizácia
+          </h2>
+
+          <p class="text-steel-300 text-base leading-relaxed" data-i18n="tech_desc">
+            Spoločnosť <strong>AJ Metal Design a.s.</strong> využíva vysoko efektívne európske technológie a tak optimalizuje výrobné náklady. Každoročne investujeme do nových robotických buniek, automatizovaného delenia a lakovania, aby sme garantovali najvyššiu rozmerovú presnosť a životnosť.
+          </p>
+
+          <!-- Technology Breakdown Accordion / List -->
+          <div class="space-y-3 pt-2">
+            
+            <div class="p-4 rounded-xl bg-steel-800/80 border border-steel-700/80 flex items-start space-x-4">
+              <div class="p-2.5 rounded-lg bg-brand-500/10 text-brand-400 shrink-0">
+                <i data-lucide="cog" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-sm text-white">Valcovacie a profilovacie linky SWAH / DIBALEX / GASPARINI</h4>
+                <p class="text-xs text-steel-400 mt-1">Kontinuálne tvarovanie profilov s mikro-toleranciami pre regálové stĺpy a šatníkové rámy.</p>
+              </div>
+            </div>
+
+            <div class="p-4 rounded-xl bg-steel-800/80 border border-steel-700/80 flex items-start space-x-4">
+              <div class="p-2.5 rounded-lg bg-blue-500/10 text-blue-400 shrink-0">
+                <i data-lucide="scissors" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-sm text-white">Delenie zvitkov ocele IMAL & CNC vysekávanie TRUMPF</h4>
+                <p class="text-xs text-steel-400 mt-1">Pozdĺžne aj priečne presné formátovanie plechu s minimálnym prestrihom a nulovým odpadom.</p>
+              </div>
+            </div>
+
+            <div class="p-4 rounded-xl bg-steel-800/80 border border-steel-700/80 flex items-start space-x-4">
+              <div class="p-2.5 rounded-lg bg-purple-500/10 text-purple-400 shrink-0">
+                <i data-lucide="bot" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-sm text-white">CNC ohýbacie centrum Salvagnini & Zváracie roboty ABB / FANUC</h4>
+                <p class="text-xs text-steel-400 mt-1">Plnoautomatický panel bender s adaptívnou kompenzáciou a vysokorýchlostné robotické zváranie.</p>
+              </div>
+            </div>
+
+            <div class="p-4 rounded-xl bg-steel-800/80 border border-steel-700/80 flex items-start space-x-4">
+              <div class="p-2.5 rounded-lg bg-emerald-500/10 text-emerald-400 shrink-0">
+                <i data-lucide="paint-bucket" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-sm text-white">2 moderné linky práškovej povrchovej úpravy & montáž</h4>
+                <p class="text-xs text-steel-400 mt-1">Ekologický KOMAXIT s nanokeramickou predúpravou a kontinuálna dopravníková montážna linka.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Right Machine Photo & Visual -->
+        <div class="lg:col-span-6 space-y-4">
+          <div class="relative rounded-2xl overflow-hidden shadow-2xl border border-steel-700 bg-steel-950">
+            <img src="images/vyr-tech.webp" alt="Výrobné technológie AJ Metal Design" class="w-full h-80 object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-steel-950 via-transparent to-transparent"></div>
+            <div class="absolute bottom-4 left-4 right-4">
+              <span class="text-xs font-bold text-brand-400 uppercase tracking-wider">Salvagnini & Trumpf & ABB</span>
+              <p class="text-sm font-semibold text-white">Automatizovaný výrobný cyklus od zvitku po zabalený produkt</p>
+            </div>
+          </div>
+          
+          <div class="grid grid-cols-2 gap-4">
+            <div class="rounded-xl overflow-hidden border border-steel-700 h-36">
+              <img src="images/vyrch-tech-2.jpg" alt="Výrobné technológie detail" class="w-full h-full object-cover">
+            </div>
+            <div class="rounded-xl overflow-hidden border border-steel-700 h-36">
+              <img src="images/dsc01749_opt.jpg" alt="Strojový park" class="w-full h-full object-cover">
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= TIMELINE / HISTORY (1955 - 2026) ================= -->
+  <section id="historia" class="py-20 md:py-28 bg-white dark:bg-steel-950 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto space-y-4">
+        <div class="inline-flex items-center space-x-2 text-xs font-bold uppercase tracking-wider text-brand-500">
+          <i data-lucide="history" class="w-4 h-4"></i>
+          <span data-i18n="history_tag">70+ rokov skúseností</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-display font-extrabold text-steel-900 dark:text-white" data-i18n="history_title">
+          História úspechu: Od ROZVOJ VD po moderný európsky závod
+        </h2>
+        <p class="text-steel-600 dark:text-steel-300 text-base" data-i18n="history_subtitle">
+          Pozrite si kľúčové míľniky našej spoločnosti, technologickú transformáciu a rast do nadnárodnej švédskej skupiny.
+        </p>
+      </div>
+
+      <!-- Vintage Brand Evolution Logos -->
+      <div class="mt-12 flex flex-wrap justify-center items-center gap-8 p-6 rounded-2xl bg-steel-50 dark:bg-steel-900/50 border border-steel-200 dark:border-steel-800">
+        <div class="text-center">
+          <div class="h-14 flex items-center justify-center p-2 bg-white dark:bg-steel-800 rounded-lg border border-steel-200 dark:border-steel-700 shadow-sm">
+            <img src="images/rozvoj-logo1.jpg" alt="ROZVOJ VD 1955" class="max-h-10 w-auto">
+          </div>
+          <span class="text-[11px] font-bold text-steel-500 mt-2 block">1955: ROZVOJ VD</span>
+        </div>
+        
+        <i data-lucide="arrow-right" class="w-5 h-5 text-steel-400 hidden sm:block"></i>
+
+        <div class="text-center">
+          <div class="h-14 flex items-center justify-center p-2 bg-white dark:bg-steel-800 rounded-lg border border-steel-200 dark:border-steel-700 shadow-sm">
+            <img src="images/logo-msk-stare.jpg" alt="metal design slovakia a.s." class="max-h-10 w-auto">
+          </div>
+          <span class="text-[11px] font-bold text-steel-500 mt-2 block">2004: metal design slovakia</span>
+        </div>
+
+        <i data-lucide="arrow-right" class="w-5 h-5 text-steel-400 hidden sm:block"></i>
+
+        <div class="text-center">
+          <div class="h-14 flex items-center justify-center p-2 bg-white dark:bg-steel-800 rounded-lg border border-steel-200 dark:border-steel-700 shadow-sm">
+            <img src="images/aj-msk-logo.png" alt="AJ & MSK Logo" class="max-h-10 w-auto">
+          </div>
+          <span class="text-[11px] font-bold text-steel-500 mt-2 block">2010: Integrácia AJ Group</span>
+        </div>
+
+        <i data-lucide="arrow-right" class="w-5 h-5 text-steel-400 hidden sm:block"></i>
+
+        <div class="text-center">
+          <div class="h-14 flex items-center justify-center p-2 bg-white dark:bg-steel-800 rounded-lg border border-steel-200 dark:border-steel-700 shadow-sm">
+            <img src="images/logo_ajmd.png" alt="AJ Metal Design a.s." class="max-h-10 w-auto">
+          </div>
+          <span class="text-[11px] font-bold text-brand-500 mt-2 block">Súčasnosť: AJ Metal Design a.s.</span>
+        </div>
+      </div>
+
+      <!-- Timeline Items -->
+      <div class="mt-16 max-w-4xl mx-auto relative border-l-2 border-brand-500/30 dark:border-brand-500/20 ml-4 sm:ml-32 space-y-12">
+        
+        <!-- Milestone 1955 -->
+        <div class="relative pl-8 sm:pl-10">
+          <div class="absolute -left-3 top-1 w-6 h-6 rounded-full bg-brand-500 border-4 border-white dark:border-steel-950 flex items-center justify-center"></div>
+          <span class="hidden sm:block absolute -left-28 top-0 text-right font-display font-extrabold text-brand-500 text-lg">1955</span>
+          <div class="bg-steel-50 dark:bg-steel-900/80 p-6 rounded-2xl border border-steel-200 dark:border-steel-800">
+            <span class="sm:hidden inline-block text-xs font-bold text-brand-500 mb-1">Rok 1955</span>
+            <h3 class="text-lg font-bold text-steel-900 dark:text-white">Založenie spoločnosti ROZVOJ VD</h3>
+            <p class="text-xs sm:text-sm text-steel-600 dark:text-steel-300 mt-2">
+              Počiatky strojárenskej a remeselnej tradície v trnavskom regióne. Vznik výrobného družstva, ktoré položilo základy precízneho spracovania kovov.
+            </p>
+          </div>
+        </div>
+
+        <!-- Milestone 1964 -->
+        <div class="relative pl-8 sm:pl-10">
+          <div class="absolute -left-3 top-1 w-6 h-6 rounded-full bg-brand-500 border-4 border-white dark:border-steel-950 flex items-center justify-center"></div>
+          <span class="hidden sm:block absolute -left-28 top-0 text-right font-display font-extrabold text-brand-500 text-lg">1964</span>
+          <div class="bg-steel-50 dark:bg-steel-900/80 p-6 rounded-2xl border border-steel-200 dark:border-steel-800">
+            <span class="sm:hidden inline-block text-xs font-bold text-brand-500 mb-1">Rok 1964</span>
+            <h3 class="text-lg font-bold text-steel-900 dark:text-white">Štart výroby kovového nábytku</h3>
+            <p class="text-xs sm:text-sm text-steel-600 dark:text-steel-300 mt-2">
+              Spoločnosť oficiálne zahajuje špecializovanú výrobu kovových skríň a šatníkov. Dosiahnutý ročný obrat 1,6 mil. € a spotreba ocele 0,3 mil. €. Výrobné priestory 1 800 m², sklad 500 m², 186 zamestnancov.
+            </p>
+          </div>
+        </div>
+
+        <!-- Milestone 1994 -->
+        <div class="relative pl-8 sm:pl-10">
+          <div class="absolute -left-3 top-1 w-6 h-6 rounded-full bg-brand-500 border-4 border-white dark:border-steel-950 flex items-center justify-center"></div>
+          <span class="hidden sm:block absolute -left-28 top-0 text-right font-display font-extrabold text-brand-500 text-lg">1994</span>
+          <div class="bg-steel-50 dark:bg-steel-900/80 p-6 rounded-2xl border border-steel-200 dark:border-steel-800">
+            <span class="sm:hidden inline-block text-xs font-bold text-brand-500 mb-1">Rok 1994</span>
+            <h3 class="text-lg font-bold text-steel-900 dark:text-white">Partnerstvo s AJ Produkter AB Švédsko</h3>
+            <p class="text-xs sm:text-sm text-steel-600 dark:text-steel-300 mt-2">
+              Strategický zlom a začiatok úzkej spolupráce so švédskym lídrom v oblasti vybavenia skladov a kancelárií. Výroba prebieha v 3 pobočkách (Trnava, Smolenice, Piešťany). Obrat stúpa na 3,1 mil. € a počet zamestnancov na 221.
+            </p>
+          </div>
+        </div>
+
+        <!-- Milestone 2000 -->
+        <div class="relative pl-8 sm:pl-10">
+          <div class="absolute -left-3 top-1 w-6 h-6 rounded-full bg-brand-500 border-4 border-white dark:border-steel-950 flex items-center justify-center"></div>
+          <span class="hidden sm:block absolute -left-28 top-0 text-right font-display font-extrabold text-brand-500 text-lg">2000</span>
+          <div class="bg-steel-50 dark:bg-steel-900/80 p-6 rounded-2xl border border-steel-200 dark:border-steel-800">
+            <span class="sm:hidden inline-block text-xs font-bold text-brand-500 mb-1">Rok 2000</span>
+            <h3 class="text-lg font-bold text-steel-900 dark:text-white">Nový moderný závod Hrnčiarovce nad Parnou</h3>
+            <p class="text-xs sm:text-sm text-steel-600 dark:text-steel-300 mt-2">
+              Vďaka masívnej investícii 8,7 mil. € bol na zelenej lúke vybudovaný nový závod vybavený špičkovými značkovými technológiami, ktorý sa stal domovom firmy dodnes.
+            </p>
+          </div>
+        </div>
+
+        <!-- Milestone 2004 - 2016 -->
+        <div class="relative pl-8 sm:pl-10">
+          <div class="absolute -left-3 top-1 w-6 h-6 rounded-full bg-brand-500 border-4 border-white dark:border-steel-950 flex items-center justify-center"></div>
+          <span class="hidden sm:block absolute -left-28 top-0 text-right font-display font-extrabold text-brand-500 text-lg">2016</span>
+          <div class="bg-steel-50 dark:bg-steel-900/80 p-6 rounded-2xl border border-steel-200 dark:border-steel-800">
+            <span class="sm:hidden inline-block text-xs font-bold text-brand-500 mb-1">Rok 2016</span>
+            <h3 class="text-lg font-bold text-steel-900 dark:text-white">Rebranding na AJ Metal Design a.s.</h3>
+            <p class="text-xs sm:text-sm text-steel-600 dark:text-steel-300 mt-2">
+              Zavŕšenie transformácie z metal design slovakia a.s. a plná integrácia do rodiny AJ Group. Rozšírenie výrobnej a logistickej plochy na dnešných 22 000 m².
+            </p>
+          </div>
+        </div>
+
+        <!-- Milestone Dnes -->
+        <div class="relative pl-8 sm:pl-10">
+          <div class="absolute -left-3.5 top-0.5 w-7 h-7 rounded-full bg-brand-500 text-white flex items-center justify-center shadow-lg shadow-brand-500/50">
+            <i data-lucide="check" class="w-4 h-4"></i>
+          </div>
+          <span class="hidden sm:block absolute -left-28 top-0 text-right font-display font-extrabold text-brand-500 text-lg">Dnes</span>
+          <div class="bg-gradient-to-br from-brand-500/10 to-transparent dark:bg-steel-900 p-6 rounded-2xl border-2 border-brand-500">
+            <span class="inline-block text-xs font-bold uppercase tracking-wider text-brand-500 mb-1">Súčasnosť (2026)</span>
+            <h3 class="text-xl font-bold text-steel-900 dark:text-white">Priemyselný líder a stabilný zamestnávateľ</h3>
+            <p class="text-xs sm:text-sm text-steel-600 dark:text-steel-300 mt-2">
+              Ročný obrat 16+ mil. €, viac ako 9 000 ton spotrebovanej ocele, 250 zamestnancov a export kompletného sortimentu do 20 európskych krajín.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= ISO CERTIFICATES & QUALITY ================= -->
+  <section id="certifikaty" class="py-20 md:py-28 bg-steel-50 dark:bg-steel-900/60 border-y border-steel-200 dark:border-steel-800 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto space-y-4">
+        <div class="inline-flex items-center space-x-2 text-xs font-bold uppercase tracking-wider text-brand-500">
+          <i data-lucide="shield-check" class="w-4 h-4"></i>
+          <span data-i18n="cert_tag">Kvalita a normy</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-display font-extrabold text-steel-900 dark:text-white" data-i18n="cert_title">
+          Medzinárodne certifikovaný systém riadenia
+        </h2>
+        <p class="text-steel-600 dark:text-steel-300 text-base" data-i18n="cert_subtitle">
+          Naše výrobné postupy, bezpečnosť pri práci aj environmentálna stopa podliehajú prísnym medzinárodným auditom nezávislej certifikačnej autority 3EC International.
+        </p>
+      </div>
+
+      <!-- 4 ISO Certificate Cards -->
+      <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- ISO 9001 -->
+        <div class="card-hover p-6 rounded-2xl bg-white dark:bg-steel-900 border border-steel-200 dark:border-steel-800 text-center flex flex-col justify-between shadow-sm">
+          <div>
+            <div class="h-28 flex items-center justify-center p-2 mb-4">
+              <img src="images/iso-9001-2015.png" alt="ISO 9001 : 2015" class="max-h-24 w-auto object-contain">
+            </div>
+            <h3 class="text-lg font-bold text-steel-900 dark:text-white">ISO 9001 : 2015</h3>
+            <p class="text-xs text-steel-500 dark:text-steel-400 mt-2">
+              Systém manažérstva kvality. Garancia stálosti kvality zvarov, rozmerových tolerancií a povrchovej úpravy.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-steel-100 dark:border-steel-800">
+            <span class="text-[11px] font-semibold text-emerald-600 dark:text-emerald-400 flex items-center justify-center">
+              <i data-lucide="check" class="w-3.5 h-3.5 mr-1"></i> Platný audit
+            </span>
+          </div>
+        </div>
+
+        <!-- ISO 14001 -->
+        <div class="card-hover p-6 rounded-2xl bg-white dark:bg-steel-900 border border-steel-200 dark:border-steel-800 text-center flex flex-col justify-between shadow-sm">
+          <div>
+            <div class="h-28 flex items-center justify-center p-2 mb-4">
+              <img src="images/iso-14001-2015.png" alt="ISO 14001 : 2015" class="max-h-24 w-auto object-contain">
+            </div>
+            <h3 class="text-lg font-bold text-steel-900 dark:text-white">ISO 14001 : 2015</h3>
+            <p class="text-xs text-steel-500 dark:text-steel-400 mt-2">
+              Systém environmentálneho manažmentu. Zodpovedné nakladanie s odpadmi, recyklácia a nízkoemisná výroba.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-steel-100 dark:border-steel-800">
+            <span class="text-[11px] font-semibold text-emerald-600 dark:text-emerald-400 flex items-center justify-center">
+              <i data-lucide="check" class="w-3.5 h-3.5 mr-1"></i> Platný audit
+            </span>
+          </div>
+        </div>
+
+        <!-- ISO 45001 -->
+        <div class="card-hover p-6 rounded-2xl bg-white dark:bg-steel-900 border border-steel-200 dark:border-steel-800 text-center flex flex-col justify-between shadow-sm">
+          <div>
+            <div class="h-28 flex items-center justify-center p-2 mb-4">
+              <img src="images/iso-45001-2018.png" alt="ISO 45001 : 2018" class="max-h-24 w-auto object-contain">
+            </div>
+            <h3 class="text-lg font-bold text-steel-900 dark:text-white">ISO 45001 : 2018</h3>
+            <p class="text-xs text-steel-500 dark:text-steel-400 mt-2">
+              Manažérstvo bezpečnosti a ochrany zdravia pri práci (BOZP). Prevencia rizík na každom výrobnom stupni.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-steel-100 dark:border-steel-800">
+            <span class="text-[11px] font-semibold text-emerald-600 dark:text-emerald-400 flex items-center justify-center">
+              <i data-lucide="check" class="w-3.5 h-3.5 mr-1"></i> Platný audit
+            </span>
+          </div>
+        </div>
+
+        <!-- ISO 50001 -->
+        <div class="card-hover p-6 rounded-2xl bg-white dark:bg-steel-900 border border-steel-200 dark:border-steel-800 text-center flex flex-col justify-between shadow-sm">
+          <div>
+            <div class="h-28 flex items-center justify-center p-2 mb-4">
+              <img src="images/iso-50001-2018.png" alt="ISO 50001 : 2018" class="max-h-24 w-auto object-contain">
+            </div>
+            <h3 class="text-lg font-bold text-steel-900 dark:text-white">ISO 50001 : 2018</h3>
+            <p class="text-xs text-steel-500 dark:text-steel-400 mt-2">
+              Systém energetického manažérstva. Znižovanie energetickej náročnosti pecí lakovacích liniek a budov.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-steel-100 dark:border-steel-800">
+            <span class="text-[11px] font-semibold text-emerald-600 dark:text-emerald-400 flex items-center justify-center">
+              <i data-lucide="check" class="w-3.5 h-3.5 mr-1"></i> Platný audit
+            </span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Additional Declarations of Conformity -->
+      <div class="mt-12 p-6 rounded-2xl bg-white dark:bg-steel-900 border border-steel-200 dark:border-steel-800 flex flex-wrap items-center justify-between gap-4">
+        <div>
+          <h4 class="font-bold text-sm text-steel-900 dark:text-white">Ďalšie technické vyhlásenia o zhode:</h4>
+          <p class="text-xs text-steel-500 dark:text-steel-400 mt-1">
+            Kancelársky nábytok • Skladový policový regál • Skladový konzolový regál • Šatníkové systémy ZU-4
+          </p>
+        </div>
+        <div class="flex items-center space-x-4">
+          <img src="images/cert_ims.jpg" alt="3EC IMS Mark" class="h-9 w-auto opacity-80 hover:opacity-100 transition-opacity">
+          <img src="images/cert_mark2.jpg" alt="Certification Mark" class="h-9 w-auto opacity-80 hover:opacity-100 transition-opacity">
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= CAREER / HR SECTION ================= -->
+  <section id="kariera" class="py-20 md:py-28 bg-white dark:bg-steel-950 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        
+        <!-- Left Column: Employer Branding & Benefits -->
+        <div class="lg:col-span-5 space-y-6">
+          <div class="inline-flex items-center space-x-2 text-xs font-bold uppercase tracking-wider text-brand-500">
+            <i data-lucide="briefcase" class="w-4 h-4"></i>
+            <span data-i18n="jobs_tag">Kariéra v AJ Metal Design</span>
+          </div>
+
+          <h2 class="text-3xl sm:text-4xl font-display font-extrabold text-steel-900 dark:text-white leading-tight" data-i18n="jobs_title">
+            Pracujte v stabilnej švédskej spoločnosti pri Trnave
+          </h2>
+
+          <p class="text-steel-600 dark:text-steel-300 text-sm sm:text-base leading-relaxed" data-i18n="jobs_desc">
+            V našom modernom závode v Hrnčiarovciach nad Parnou nehľadáme iba zamestnancov, ale dlhodobých kolegov. U nás na žiadnej pozícii <strong>nebudete stáť za monotónnym pásom</strong> — nového kolegu dôkladne zaškolíme a ponúkame stabilné zázemie.
+          </p>
+
+          <!-- Benefits Checklist -->
+          <div class="p-6 rounded-2xl bg-steel-50 dark:bg-steel-900/80 border border-steel-200 dark:border-steel-800 space-y-3">
+            <h4 class="font-bold text-sm text-steel-900 dark:text-white flex items-center">
+              <i data-lucide="gift" class="w-4 h-4 text-brand-500 mr-2"></i>
+              Čo vám ponúkame k základnej mzde:
+            </h4>
+            
+            <ul class="space-y-2 text-xs text-steel-700 dark:text-steel-300">
+              <li class="flex items-center"><i data-lucide="check-circle" class="w-3.5 h-3.5 text-emerald-500 mr-2 shrink-0"></i> <strong>Zmluva na dobu neurčitú</strong> s nástupom priamo do kmeňa</li>
+              <li class="flex items-center"><i data-lucide="check-circle" class="w-3.5 h-3.5 text-emerald-500 mr-2 shrink-0"></i> <strong>Navýšenie mzdy</strong> automaticky po skúšobnej dobe</li>
+              <li class="flex items-center"><i data-lucide="check-circle" class="w-3.5 h-3.5 text-emerald-500 mr-2 shrink-0"></i> Mesačný bonus, ročný bonus & vernostný bonus</li>
+              <li class="flex items-center"><i data-lucide="check-circle" class="w-3.5 h-3.5 text-emerald-500 mr-2 shrink-0"></i> Príspevok na <strong>3. pilier DDS</strong></li>
+              <li class="flex items-center"><i data-lucide="check-circle" class="w-3.5 h-3.5 text-emerald-500 mr-2 shrink-0"></i> Stravné v hodnote <strong>6,60 €</strong> na deň</li>
+              <li class="flex items-center"><i data-lucide="check-circle" class="w-3.5 h-3.5 text-emerald-500 mr-2 shrink-0"></i> Darčekové poukážky, mikulášske a vianočné balíčky</li>
+              <li class="flex items-center"><i data-lucide="check-circle" class="w-3.5 h-3.5 text-emerald-500 mr-2 shrink-0"></i> Príspevok pri narodení dieťaťa & jubilantské odmeny</li>
+              <li class="flex items-center"><i data-lucide="check-circle" class="w-3.5 h-3.5 text-emerald-500 mr-2 shrink-0"></i> Firemné športové dni, výlety a vianočný večierok</li>
+            </ul>
+          </div>
+
+          <div class="flex items-center space-x-3 text-xs text-steel-500 dark:text-steel-400">
+            <i data-lucide="phone-call" class="w-4 h-4 text-brand-500"></i>
+            <span>Otázky k pozíciám? Personálne: <strong>+421 907 333 553</strong></span>
+          </div>
+
+        </div>
+
+        <!-- Right Column: Open Positions List & Apply Form -->
+        <div class="lg:col-span-7 space-y-6">
+          <h3 class="text-xl font-display font-bold text-steel-900 dark:text-white flex items-center">
+            <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 mr-2 animate-ping"></span>
+            Aktuálne otvorené pracovné miesta (2)
+          </h3>
+
+          <!-- Job Card 1: Strojárenský pracovník - montáž -->
+          <div class="p-6 rounded-2xl bg-steel-50 dark:bg-steel-900/80 border border-steel-200 dark:border-steel-800 shadow-sm space-y-4">
+            <div class="flex flex-wrap justify-between items-start gap-2">
+              <div>
+                <span class="inline-block px-2.5 py-0.5 rounded text-[11px] font-bold bg-brand-500/10 text-brand-500 uppercase tracking-wider">
+                  Trvalý pracovný pomer (3 zmeny)
+                </span>
+                <h4 class="text-xl font-display font-bold text-steel-900 dark:text-white mt-1">
+                  Strojárenský pracovník – oddelenie montáže
+                </h4>
+              </div>
+              <span class="px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-500 text-xs font-bold">
+                Vhodné aj na zaškolenie
+              </span>
+            </div>
+
+            <p class="text-xs sm:text-sm text-steel-600 dark:text-steel-300">
+              Kompletizácia kancelárskych a šatníkových skríň (vkladanie a montáž prvkov), označovanie tovaru etiketami, kontrola kvality podľa metodického pokynu, balenie a príprava na expedíciu.
+            </p>
+
+            <div class="pt-2 flex flex-wrap items-center justify-between gap-4">
+              <div class="text-xs text-steel-500">
+                <i data-lucide="map-pin" class="w-3.5 h-3.5 inline mr-1 text-brand-500"></i> Hrnčiarovce nad Parnou
+              </div>
+              <button onclick="openApplyModal('Strojárenský pracovník - montáž')" class="px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider bg-brand-500 hover:bg-brand-600 text-white transition-all shadow-md">
+                Reagovať na pozíciu
+              </button>
+            </div>
+          </div>
+
+          <!-- Job Card 2: Údržbár - elektrikár -->
+          <div class="p-6 rounded-2xl bg-steel-50 dark:bg-steel-900/80 border border-steel-200 dark:border-steel-800 shadow-sm space-y-4">
+            <div class="flex flex-wrap justify-between items-start gap-2">
+              <div>
+                <span class="inline-block px-2.5 py-0.5 rounded text-[11px] font-bold bg-blue-500/10 text-blue-500 uppercase tracking-wider">
+                  Trvalý pracovný pomer (Vyhl. §21 / §22)
+                </span>
+                <h4 class="text-xl font-display font-bold text-steel-900 dark:text-white mt-1">
+                  Údržbár – elektrikár / mechatronik
+                </h4>
+              </div>
+              <span class="px-3 py-1 rounded-full bg-blue-500/10 text-blue-500 text-xs font-bold">
+                Vhodné aj pre absolventa
+              </span>
+            </div>
+
+            <p class="text-xs sm:text-sm text-steel-600 dark:text-steel-300">
+              Diagnostika porúch strojov a zariadení, preventívna údržba elektrických častí, obsluha vyhradených technických zariadení (VTZ), vzduchotechniky a kúrenia. Čítanie E-plánov a hydraulických schém.
+            </p>
+
+            <div class="pt-2 flex flex-wrap items-center justify-between gap-4">
+              <div class="text-xs text-steel-500">
+                <i data-lucide="map-pin" class="w-3.5 h-3.5 inline mr-1 text-brand-500"></i> Hrnčiarovce nad Parnou
+              </div>
+              <button onclick="openApplyModal('Údržbár - elektrikár')" class="px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider bg-brand-500 hover:bg-brand-600 text-white transition-all shadow-md">
+                Reagovať na pozíciu
+              </button>
+            </div>
+          </div>
+
+          <!-- Spontaneous application banner -->
+          <div class="p-6 rounded-2xl bg-gradient-to-r from-steel-900 to-steel-800 text-white flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div>
+              <h4 class="font-bold text-sm">Nenašli ste svoju pozíciu?</h4>
+              <p class="text-xs text-steel-300 mt-1">Pošlite nám svoj štruktúrovaný životopis a my sa vám radi ozveme.</p>
+            </div>
+            <a href="mailto:praca@ajmetaldesign.sk" class="px-4 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider bg-white/10 hover:bg-white/20 text-white border border-white/20 transition-all shrink-0">
+              praca@ajmetaldesign.sk
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= MEDIA & FACTORY GALLERY ================= -->
+  <section id="galeria" class="py-20 md:py-28 bg-steel-50 dark:bg-steel-900/60 border-t border-steel-200 dark:border-steel-800 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto space-y-4">
+        <div class="inline-flex items-center space-x-2 text-xs font-bold uppercase tracking-wider text-brand-500">
+          <i data-lucide="image" class="w-4 h-4"></i>
+          <span data-i18n="gallery_tag">Fotogaléria</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-display font-extrabold text-steel-900 dark:text-white" data-i18n="gallery_title">
+          Pohľad do nášho výrobného areálu a dielní
+        </h2>
+        <p class="text-steel-600 dark:text-steel-300 text-base" data-i18n="gallery_subtitle">
+          Pozrite si autentické zábery zo spracovania ocele, montážnych hál a expedičného centra v Hrnčiarovciach nad Parnou.
+        </p>
+      </div>
+
+      <!-- Gallery Grid with Lightbox Triggers -->
+      <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <div onclick="openLightbox('images/sklad.png', 'Moderné skladové a expedičné centrum')" class="card-hover group relative h-64 rounded-2xl overflow-hidden cursor-pointer shadow-md border border-steel-200 dark:border-steel-800 bg-steel-950">
+          <img src="images/sklad.png" alt="Sklad a logistika" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-steel-950/80 via-transparent to-transparent opacity-80 group-hover:opacity-100 transition-opacity"></div>
+          <div class="absolute bottom-4 left-4 right-4 text-white">
+            <span class="text-[11px] font-bold text-brand-400 uppercase">Areál & Sklad</span>
+            <h4 class="text-base font-bold">Moderné distribučné centrum</h4>
+          </div>
+          <div class="absolute top-4 right-4 w-8 h-8 rounded-full bg-steel-900/80 flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity">
+            <i data-lucide="maximize-2" class="w-4 h-4"></i>
+          </div>
+        </div>
+
+        <div onclick="openLightbox('images/vyr-tech.webp', 'Automatizované technológie Trumpf a Salvagnini')" class="card-hover group relative h-64 rounded-2xl overflow-hidden cursor-pointer shadow-md border border-steel-200 dark:border-steel-800 bg-steel-950">
+          <img src="images/vyr-tech.webp" alt="Výrobné linky" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-steel-950/80 via-transparent to-transparent opacity-80 group-hover:opacity-100 transition-opacity"></div>
+          <div class="absolute bottom-4 left-4 right-4 text-white">
+            <span class="text-[11px] font-bold text-brand-400 uppercase">Technológie</span>
+            <h4 class="text-base font-bold">Automatizované ohýbanie & delenie</h4>
+          </div>
+          <div class="absolute top-4 right-4 w-8 h-8 rounded-full bg-steel-900/80 flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity">
+            <i data-lucide="maximize-2" class="w-4 h-4"></i>
+          </div>
+        </div>
+
+        <div onclick="openLightbox('images/dsc01749_opt.jpg', 'Strojársky výrobný park a príprava dielov')" class="card-hover group relative h-64 rounded-2xl overflow-hidden cursor-pointer shadow-md border border-steel-200 dark:border-steel-800 bg-steel-950">
+          <img src="images/dsc01749_opt.jpg" alt="Výroba dielov" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-steel-950/80 via-transparent to-transparent opacity-80 group-hover:opacity-100 transition-opacity"></div>
+          <div class="absolute bottom-4 left-4 right-4 text-white">
+            <span class="text-[11px] font-bold text-brand-400 uppercase">Výrobná hala</span>
+            <h4 class="text-base font-bold">Presné spracovanie plechov</h4>
+          </div>
+          <div class="absolute top-4 right-4 w-8 h-8 rounded-full bg-steel-900/80 flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity">
+            <i data-lucide="maximize-2" class="w-4 h-4"></i>
+          </div>
+        </div>
+
+        <div onclick="openLightbox('images/volne-miesta.png', 'Montážne pracovisko a tím pracovníkov')" class="card-hover group relative h-64 rounded-2xl overflow-hidden cursor-pointer shadow-md border border-steel-200 dark:border-steel-800 bg-steel-950">
+          <img src="images/volne-miesta.png" alt="Montážne pracovisko" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-steel-950/80 via-transparent to-transparent opacity-80 group-hover:opacity-100 transition-opacity"></div>
+          <div class="absolute bottom-4 left-4 right-4 text-white">
+            <span class="text-[11px] font-bold text-brand-400 uppercase">Tím & Ľudia</span>
+            <h4 class="text-base font-bold">Montáž skríň a boxov</h4>
+          </div>
+          <div class="absolute top-4 right-4 w-8 h-8 rounded-full bg-steel-900/80 flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity">
+            <i data-lucide="maximize-2" class="w-4 h-4"></i>
+          </div>
+        </div>
+
+        <div onclick="openLightbox('images/msk3.webp', 'Dopravníková a baliaca linka')" class="card-hover group relative h-64 rounded-2xl overflow-hidden cursor-pointer shadow-md border border-steel-200 dark:border-steel-800 bg-steel-950">
+          <img src="images/msk3.webp" alt="Dopravníková linka" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-steel-950/80 via-transparent to-transparent opacity-80 group-hover:opacity-100 transition-opacity"></div>
+          <div class="absolute bottom-4 left-4 right-4 text-white">
+            <span class="text-[11px] font-bold text-brand-400 uppercase">Logistika</span>
+            <h4 class="text-base font-bold">Dopravníková montáž & balenie</h4>
+          </div>
+          <div class="absolute top-4 right-4 w-8 h-8 rounded-full bg-steel-900/80 flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity">
+            <i data-lucide="maximize-2" class="w-4 h-4"></i>
+          </div>
+        </div>
+
+        <div onclick="openLightbox('images/metal-o-nas.png', 'Výrobný areál AJ Metal Design v Hrnčiarovciach nad Parnou')" class="card-hover group relative h-64 rounded-2xl overflow-hidden cursor-pointer shadow-md border border-steel-200 dark:border-steel-800 bg-steel-950">
+          <img src="images/metal-o-nas.png" alt="Celkový pohľad na areál" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-steel-950/80 via-transparent to-transparent opacity-80 group-hover:opacity-100 transition-opacity"></div>
+          <div class="absolute bottom-4 left-4 right-4 text-white">
+            <span class="text-[11px] font-bold text-brand-400 uppercase">Závod</span>
+            <h4 class="text-base font-bold">22 000 m² výrobných a skladových plôch</h4>
+          </div>
+          <div class="absolute top-4 right-4 w-8 h-8 rounded-full bg-steel-900/80 flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity">
+            <i data-lucide="maximize-2" class="w-4 h-4"></i>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= CONTACT CENTER & DEPARTMENTS ================= -->
+  <section id="kontakt" class="py-20 md:py-28 bg-white dark:bg-steel-950 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto space-y-4">
+        <div class="inline-flex items-center space-x-2 text-xs font-bold uppercase tracking-wider text-brand-500">
+          <i data-lucide="map-pin" class="w-4 h-4"></i>
+          <span data-i18n="contact_tag">Kontaktné centrum</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-display font-extrabold text-steel-900 dark:text-white" data-i18n="contact_title">
+          Spojte sa s našimi špecialistami
+        </h2>
+        <p class="text-steel-600 dark:text-steel-300 text-base" data-i18n="contact_subtitle">
+          Sme vám k dispozícii v pracovných dňoch od 07:00 do 15:30. Zákaznícky servis, nákup, logistika aj personálne oddelenie.
+        </p>
+      </div>
+
+      <!-- Department Directory Cards -->
+      <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- Customer Service / Sales -->
+        <div class="p-6 rounded-2xl bg-steel-50 dark:bg-steel-900/80 border border-steel-200 dark:border-steel-800 space-y-3">
+          <div class="flex items-center space-x-3">
+            <div class="w-10 h-10 rounded-xl bg-brand-500/10 text-brand-500 flex items-center justify-center">
+              <i data-lucide="headphones" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-sm text-steel-900 dark:text-white">Zákaznícky servis & Predaj</h4>
+              <span class="text-[11px] text-steel-500">sales@ajmetaldesign.sk</span>
+            </div>
+          </div>
+          <div class="pt-2 border-t border-steel-100 dark:border-steel-800 space-y-1.5 text-xs text-steel-700 dark:text-steel-300">
+            <div><i data-lucide="phone" class="w-3.5 h-3.5 inline mr-1 text-brand-500"></i> +421 915 300 998</div>
+            <div><i data-lucide="phone" class="w-3.5 h-3.5 inline mr-1 text-brand-500"></i> +421 908 943 914</div>
+            <div><i data-lucide="phone" class="w-3.5 h-3.5 inline mr-1 text-brand-500"></i> +421 905 859 188</div>
+          </div>
+        </div>
+
+        <!-- Procurement / Nákup -->
+        <div class="p-6 rounded-2xl bg-steel-50 dark:bg-steel-900/80 border border-steel-200 dark:border-steel-800 space-y-3">
+          <div class="flex items-center space-x-3">
+            <div class="w-10 h-10 rounded-xl bg-blue-500/10 text-blue-500 flex items-center justify-center">
+              <i data-lucide="shopping-cart" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-sm text-steel-900 dark:text-white">Nákup & Dodávatelia</h4>
+              <span class="text-[11px] text-steel-500">dodavatelia@ajmetaldesign.sk</span>
+            </div>
+          </div>
+          <div class="pt-2 border-t border-steel-100 dark:border-steel-800 space-y-1.5 text-xs text-steel-700 dark:text-steel-300">
+            <div><i data-lucide="phone" class="w-3.5 h-3.5 inline mr-1 text-blue-500"></i> +421 905 248 199</div>
+            <div><i data-lucide="phone" class="w-3.5 h-3.5 inline mr-1 text-blue-500"></i> +421 918 898 139</div>
+          </div>
+        </div>
+
+        <!-- HR / Ľudské zdroje -->
+        <div class="p-6 rounded-2xl bg-steel-50 dark:bg-steel-900/80 border border-steel-200 dark:border-steel-800 space-y-3">
+          <div class="flex items-center space-x-3">
+            <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-500 flex items-center justify-center">
+              <i data-lucide="users" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-sm text-steel-900 dark:text-white">Oddelenie ľudských zdrojov (HR)</h4>
+              <span class="text-[11px] text-steel-500">praca@ajmetaldesign.sk</span>
+            </div>
+          </div>
+          <div class="pt-2 border-t border-steel-100 dark:border-steel-800 space-y-1.5 text-xs text-steel-700 dark:text-steel-300">
+            <div><i data-lucide="phone" class="w-3.5 h-3.5 inline mr-1 text-emerald-500"></i> +421 907 333 553</div>
+            <div><i data-lucide="clock" class="w-3.5 h-3.5 inline mr-1 text-emerald-500"></i> Po – Pia: 08:00 – 15:00</div>
+          </div>
+        </div>
+
+        <!-- Logistics / Expedícia & Príjem -->
+        <div class="p-6 rounded-2xl bg-steel-50 dark:bg-steel-900/80 border border-steel-200 dark:border-steel-800 space-y-3">
+          <div class="flex items-center space-x-3">
+            <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-500 flex items-center justify-center">
+              <i data-lucide="truck" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-sm text-steel-900 dark:text-white">Príjem tovaru & Sklad</h4>
+              <span class="text-[11px] text-steel-500">Rampa a nakládka kamiónov</span>
+            </div>
+          </div>
+          <div class="pt-2 border-t border-steel-100 dark:border-steel-800 space-y-1.5 text-xs text-steel-700 dark:text-steel-300">
+            <div><i data-lucide="phone" class="w-3.5 h-3.5 inline mr-1 text-amber-500"></i> Príjem tovaru: +421 918 491 824</div>
+            <div><i data-lucide="phone" class="w-3.5 h-3.5 inline mr-1 text-amber-500"></i> Expedícia: +421 905 248 199</div>
+          </div>
+        </div>
+
+        <!-- Billing & Fakturácia -->
+        <div class="p-6 rounded-2xl bg-steel-50 dark:bg-steel-900/80 border border-steel-200 dark:border-steel-800 space-y-3">
+          <div class="flex items-center space-x-3">
+            <div class="w-10 h-10 rounded-xl bg-purple-500/10 text-purple-500 flex items-center justify-center">
+              <i data-lucide="file-text" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-sm text-steel-900 dark:text-white">Fakturácia & Účtáreň</h4>
+              <span class="text-[11px] text-steel-500">Ekonomický úsek</span>
+            </div>
+          </div>
+          <div class="pt-2 border-t border-steel-100 dark:border-steel-800 space-y-1.5 text-xs text-steel-700 dark:text-steel-300">
+            <div><i data-lucide="mail" class="w-3.5 h-3.5 inline mr-1 text-purple-500"></i> dodavatelia@ajmetaldesign.sk</div>
+            <div><i data-lucide="credit-card" class="w-3.5 h-3.5 inline mr-1 text-purple-500"></i> IBAN: SK53 0200 0000 0032 7667 6259</div>
+          </div>
+        </div>
+
+        <!-- Compliance / Podnety -->
+        <div class="p-6 rounded-2xl bg-steel-50 dark:bg-steel-900/80 border border-steel-200 dark:border-steel-800 space-y-3">
+          <div class="flex items-center space-x-3">
+            <div class="w-10 h-10 rounded-xl bg-red-500/10 text-red-500 flex items-center justify-center">
+              <i data-lucide="shield-alert" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-sm text-steel-900 dark:text-white">Oznamovanie protispoločenskej činnosti</h4>
+              <span class="text-[11px] text-steel-500">Zákonná ochrana oznamovateľov</span>
+            </div>
+          </div>
+          <div class="pt-2 border-t border-steel-100 dark:border-steel-800 space-y-1.5 text-xs text-steel-700 dark:text-steel-300">
+            <div><i data-lucide="mail" class="w-3.5 h-3.5 inline mr-1 text-red-500"></i> podnety@ajmetaldesign.sk</div>
+            <div class="text-[11px] text-steel-400">Dôverná schránka v zmysle zákona č. 54/2019 Z. z.</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Contact Info & Map Row -->
+      <div class="mt-12 grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+        
+        <!-- Company Billing & Address Info -->
+        <div class="lg:col-span-5 p-8 rounded-3xl bg-steel-900 text-white flex flex-col justify-between shadow-xl">
+          <div>
+            <span class="inline-block px-2.5 py-1 rounded bg-brand-500 text-white font-bold text-xs uppercase tracking-wider mb-4">
+              Sídlo spoločnosti a výrobný areál
+            </span>
+            <h3 class="text-2xl font-display font-extrabold text-white">AJ Metal Design a.s.</h3>
+            
+            <div class="mt-6 space-y-3 text-sm text-steel-300">
+              <p class="flex items-start">
+                <i data-lucide="map-pin" class="w-5 h-5 mr-3 text-brand-400 shrink-0 mt-0.5"></i>
+                <span><strong>Dlhé lúky 2</strong><br>919 35 Hrnčiarovce nad Parnou<br>Slovenská republika</span>
+              </p>
+              <p class="flex items-center">
+                <i data-lucide="phone" class="w-5 h-5 mr-3 text-brand-400 shrink-0"></i>
+                <a href="tel:+421335933521" class="hover:text-brand-400 transition-colors">+421 33 59 335 21</a>
+              </p>
+              <p class="flex items-center">
+                <i data-lucide="mail" class="w-5 h-5 mr-3 text-brand-400 shrink-0"></i>
+                <a href="mailto:sales@ajmetaldesign.sk" class="hover:text-brand-400 transition-colors">sales@ajmetaldesign.sk</a>
+              </p>
+            </div>
+
+            <div class="mt-8 pt-6 border-t border-steel-800 grid grid-cols-2 gap-4 text-xs text-steel-400">
+              <div>
+                <span class="block text-steel-500">IČO:</span>
+                <strong class="text-white text-sm">31449557</strong>
+              </div>
+              <div>
+                <span class="block text-steel-500">DIČ:</span>
+                <strong class="text-white text-sm">2020392308</strong>
+              </div>
+              <div>
+                <span class="block text-steel-500">IČ DPH:</span>
+                <strong class="text-white text-sm">SK2020392308</strong>
+              </div>
+              <div>
+                <span class="block text-steel-500">Banka:</span>
+                <strong class="text-white">VÚB a.s.</strong>
+              </div>
+            </div>
+
+            <div class="mt-4 pt-4 border-t border-steel-800 text-[11px] text-steel-400 leading-normal">
+              Zapísaná v Obchodnom registri Okresného súdu v Trnave, oddiel Sa, vložka číslo 20/T.
+            </div>
+          </div>
+
+          <div class="mt-8">
+            <a href="https://maps.google.com/?q=AJ+Metal+Design+Hrnciarovce+nad+Parnou" target="_blank" rel="noopener noreferrer" class="w-full py-3 rounded-xl font-bold text-xs uppercase tracking-wider bg-brand-500 hover:bg-brand-600 text-white transition-all flex items-center justify-center shadow-lg">
+              <i data-lucide="navigation" class="w-4 h-4 mr-2"></i>
+              Otvoriť navigáciu (Google Mapy)
+            </a>
+          </div>
+        </div>
+
+        <!-- Interactive Google Map Embed -->
+        <div class="lg:col-span-7 rounded-3xl overflow-hidden border border-steel-200 dark:border-steel-800 shadow-xl min-h-[380px] relative bg-steel-100 dark:bg-steel-900">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10609.431876527582!2d17.5744855!3d48.3371665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476ca096ffcf7763%3A0xe54d21659725f187!2sAJ%20Metal%20Design%20a.s.!5e0!3m2!1ssk!2ssk!4v1700000000000!5m2!1ssk!2ssk" 
+            width="100%" 
+            height="100%" 
+            style="border:0; min-height: 400px;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Mapa areálu AJ Metal Design">
+          </iframe>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-steel-950 text-steel-400 border-t border-steel-800 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
+        
+        <!-- Col 1: Brand Info -->
+        <div class="lg:col-span-2 space-y-4">
+          <div class="flex items-center space-x-3">
+            <div class="p-1 rounded bg-white">
+              <img src="images/logo_ajmd.png" alt="AJ Metal Design" class="h-8 w-auto">
+            </div>
+            <span class="text-white font-display font-bold text-lg">AJ METAL DESIGN a.s.</span>
+          </div>
+          <p class="text-steel-400 text-xs leading-relaxed max-w-sm">
+            Popredný výrobca kovového nábytku, šatníkových a regálových systémov v strednej Európe. Kľúčový výrobný partner švédskej skupiny AJ Produkter AB.
+          </p>
+          <div class="flex items-center space-x-4 pt-2">
+            <img src="images/cert_ims.jpg" alt="3EC IMS" class="h-8 w-auto opacity-70 hover:opacity-100 transition-opacity">
+            <img src="images/cert_mark2.jpg" alt="Audit Mark" class="h-8 w-auto opacity-70 hover:opacity-100 transition-opacity">
+          </div>
+        </div>
+
+        <!-- Col 2: Rýchle odkazy -->
+        <div class="space-y-3">
+          <h4 class="font-bold text-white text-sm uppercase tracking-wider">Navigácia</h4>
+          <ul class="space-y-2">
+            <li><a href="#o-nas" class="hover:text-brand-400 transition-colors">O spoločnosti</a></li>
+            <li><a href="#produkty" class="hover:text-brand-400 transition-colors">Kovový nábytok</a></li>
+            <li><a href="#technologie" class="hover:text-brand-400 transition-colors">Výrobné technológie</a></li>
+            <li><a href="#konfigurator" class="hover:text-brand-400 transition-colors">Kalkulátor dopytu</a></li>
+            <li><a href="#historia" class="hover:text-brand-400 transition-colors">História od 1955</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Produkty -->
+        <div class="space-y-3">
+          <h4 class="font-bold text-white text-sm uppercase tracking-wider">Sortiment</h4>
+          <ul class="space-y-2">
+            <li><a href="#produkty" class="hover:text-brand-400 transition-colors">Šatňové zvárané skrine</a></li>
+            <li><a href="#produkty" class="hover:text-brand-400 transition-colors">Boxové a Z-skrine</a></li>
+            <li><a href="#produkty" class="hover:text-brand-400 transition-colors">Kancelárske roletové skrine</a></li>
+            <li><a href="#produkty" class="hover:text-brand-400 transition-colors">Dielenské stoly & ponky</a></li>
+            <li><a href="#produkty" class="hover:text-brand-400 transition-colors">Skladové regály ZU-4</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Kontakt & Kariéra -->
+        <div class="space-y-3">
+          <h4 class="font-bold text-white text-sm uppercase tracking-wider">Kontakt & Kariéra</h4>
+          <p class="text-steel-400">
+            Dlhé lúky 2, 919 35 Hrnčiarovce nad Parnou
+          </p>
+          <p class="text-steel-400">
+            Tel: <a href="tel:+421335933521" class="text-white hover:text-brand-400">+421 33 59 335 21</a>
+          </p>
+          <p class="text-steel-400">
+            Kariéra: <a href="mailto:praca@ajmetaldesign.sk" class="text-brand-400 hover:underline">praca@ajmetaldesign.sk</a>
+          </p>
+          <div class="pt-2">
+            <a href="#kariera" class="inline-block px-3 py-1 rounded bg-brand-500/20 text-brand-400 text-xs font-semibold hover:bg-brand-500 hover:text-white transition-all">
+              Voľné pracovné miesta (2)
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="mt-12 pt-8 border-t border-steel-800/80 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-steel-500">
+        <div>
+          © 1955–2026 AJ Metal Design a.s. Všetky práva vyhradené. Kov umocnený dizajnom®.
+        </div>
+        <div class="flex items-center space-x-6">
+          <a href="#" class="hover:text-steel-300 transition-colors">Ochrana osobných údajov (GDPR)</a>
+          <a href="#" class="hover:text-steel-300 transition-colors">Oznamovanie protispoločenskej činnosti</a>
+          <a href="https://www.ajprodukty.sk" target="_blank" class="hover:text-brand-400 transition-colors">AJ Produkty Slovensko</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ================= MODAL: B2B LEAD / QUOTE REQUEST ================= -->
+  <div id="lead-modal" class="fixed inset-0 z-50 hidden bg-steel-950/80 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-white dark:bg-steel-900 border border-steel-200 dark:border-steel-800 rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl relative max-h-[90vh] overflow-y-auto">
+      <button onclick="closeLeadModal()" class="absolute top-5 right-5 text-steel-400 hover:text-steel-900 dark:hover:text-white p-1">
+        <i data-lucide="x" class="w-6 h-6"></i>
+      </button>
+
+      <div class="flex items-center space-x-3 mb-6">
+        <div class="w-12 h-12 rounded-2xl bg-brand-500/10 text-brand-500 flex items-center justify-center shrink-0">
+          <i data-lucide="send" class="w-6 h-6"></i>
+        </div>
+        <div>
+          <h3 class="text-xl font-display font-bold text-steel-900 dark:text-white">Vyžiadať nezáväznú B2B ponuku</h3>
+          <p class="text-xs text-steel-500 dark:text-steel-400">Pripravíme vám kalkuláciu na mieru do 24 hodín.</p>
+        </div>
+      </div>
+
+      <!-- Config Summary in Modal -->
+      <div id="modal-config-summary" class="p-3.5 rounded-xl bg-steel-50 dark:bg-steel-800/60 border border-steel-200 dark:border-steel-700 text-xs mb-6 text-steel-700 dark:text-steel-300">
+        <!-- Dynamically injected -->
+      </div>
+
+      <form id="lead-form" onsubmit="submitLeadForm(event)" class="space-y-4">
+        <div>
+          <label class="block text-xs font-bold text-steel-700 dark:text-steel-300 mb-1">Meno a priezvisko *</label>
+          <input type="text" required placeholder="Ing. Peter Kováč" class="w-full px-3.5 py-2.5 rounded-xl bg-white dark:bg-steel-800 border border-steel-300 dark:border-steel-700 text-sm text-steel-900 dark:text-white focus:ring-2 focus:ring-brand-500 focus:border-brand-500">
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs font-bold text-steel-700 dark:text-steel-300 mb-1">Firma / Inštitúcia *</label>
+            <input type="text" required placeholder="Spoločnosť s.r.o." class="w-full px-3.5 py-2.5 rounded-xl bg-white dark:bg-steel-800 border border-steel-300 dark:border-steel-700 text-sm text-steel-900 dark:text-white focus:ring-2 focus:ring-brand-500 focus:border-brand-500">
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-steel-700 dark:text-steel-300 mb-1">IČO</label>
+            <input type="text" placeholder="12345678" class="w-full px-3.5 py-2.5 rounded-xl bg-white dark:bg-steel-800 border border-steel-300 dark:border-steel-700 text-sm text-steel-900 dark:text-white focus:ring-2 focus:ring-brand-500 focus:border-brand-500">
+          </div>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs font-bold text-steel-700 dark:text-steel-300 mb-1">E-mail *</label>
+            <input type="email" required placeholder="meno@firma.sk" class="w-full px-3.5 py-2.5 rounded-xl bg-white dark:bg-steel-800 border border-steel-300 dark:border-steel-700 text-sm text-steel-900 dark:text-white focus:ring-2 focus:ring-brand-500 focus:border-brand-500">
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-steel-700 dark:text-steel-300 mb-1">Telefón *</label>
+            <input type="tel" required placeholder="+421 900 000 000" class="w-full px-3.5 py-2.5 rounded-xl bg-white dark:bg-steel-800 border border-steel-300 dark:border-steel-700 text-sm text-steel-900 dark:text-white focus:ring-2 focus:ring-brand-500 focus:border-brand-500">
+          </div>
+        </div>
+        <div>
+          <label class="block text-xs font-bold text-steel-700 dark:text-steel-300 mb-1">Poznámka / Špecifické požiadavky</label>
+          <textarea rows="3" placeholder="Uveďte požadované rozmery, termín dodania, miesto stavby..." class="w-full px-3.5 py-2 rounded-xl bg-white dark:bg-steel-800 border border-steel-300 dark:border-steel-700 text-sm text-steel-900 dark:text-white focus:ring-2 focus:ring-brand-500 focus:border-brand-500"></textarea>
+        </div>
+        <div class="flex items-start space-x-2">
+          <input type="checkbox" required id="gdpr-consent" class="mt-1 rounded text-brand-500 border-steel-300">
+          <label for="gdpr-consent" class="text-[11px] text-steel-500">Súhlasím so spracovaním osobných údajov za účelom vypracovania cenovej ponuky.</label>
+        </div>
+        <button type="submit" class="w-full py-3.5 rounded-xl font-bold text-xs uppercase tracking-wider bg-brand-500 hover:bg-brand-600 text-white shadow-lg transition-all flex items-center justify-center">
+          <i data-lucide="check" class="w-4 h-4 mr-2"></i>
+          Odoslať dopyt obchodnému tímu
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ================= MODAL: JOB APPLICATION ================= -->
+  <div id="apply-modal" class="fixed inset-0 z-50 hidden bg-steel-950/80 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-white dark:bg-steel-900 border border-steel-200 dark:border-steel-800 rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl relative max-h-[90vh] overflow-y-auto">
+      <button onclick="closeApplyModal()" class="absolute top-5 right-5 text-steel-400 hover:text-steel-900 dark:hover:text-white p-1">
+        <i data-lucide="x" class="w-6 h-6"></i>
+      </button>
+
+      <div class="flex items-center space-x-3 mb-6">
+        <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 text-emerald-500 flex items-center justify-center shrink-0">
+          <i data-lucide="user-check" class="w-6 h-6"></i>
+        </div>
+        <div>
+          <h3 class="text-xl font-display font-bold text-steel-900 dark:text-white">Žiadosť o zamestnanie</h3>
+          <p id="apply-job-name" class="text-xs font-semibold text-brand-500">Strojárenský pracovník</p>
+        </div>
+      </div>
+
+      <form id="apply-form" onsubmit="submitApplyForm(event)" class="space-y-4">
+        <div>
+          <label class="block text-xs font-bold text-steel-700 dark:text-steel-300 mb-1">Meno a priezvisko *</label>
+          <input type="text" required placeholder="Jozef Novák" class="w-full px-3.5 py-2.5 rounded-xl bg-white dark:bg-steel-800 border border-steel-300 dark:border-steel-700 text-sm text-steel-900 dark:text-white focus:ring-2 focus:ring-brand-500">
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs font-bold text-steel-700 dark:text-steel-300 mb-1">Telefón *</label>
+            <input type="tel" required placeholder="+421 900 000 000" class="w-full px-3.5 py-2.5 rounded-xl bg-white dark:bg-steel-800 border border-steel-300 dark:border-steel-700 text-sm text-steel-900 dark:text-white focus:ring-2 focus:ring-brand-500">
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-steel-700 dark:text-steel-300 mb-1">E-mail *</label>
+            <input type="email" required placeholder="novak@email.sk" class="w-full px-3.5 py-2.5 rounded-xl bg-white dark:bg-steel-800 border border-steel-300 dark:border-steel-700 text-sm text-steel-900 dark:text-white focus:ring-2 focus:ring-brand-500">
+          </div>
+        </div>
+        <div>
+          <label class="block text-xs font-bold text-steel-700 dark:text-steel-300 mb-1">Dosiahnuté vzdelanie / Osvedčenia</label>
+          <input type="text" placeholder="Napr. Stredné odborné elektrotechnické, §21, VZV preukaz..." class="w-full px-3.5 py-2.5 rounded-xl bg-white dark:bg-steel-800 border border-steel-300 dark:border-steel-700 text-sm text-steel-900 dark:text-white focus:ring-2 focus:ring-brand-500">
+        </div>
+        <div>
+          <label class="block text-xs font-bold text-steel-700 dark:text-steel-300 mb-1">Životopis (CV) alebo krátka správa o praxi</label>
+          <textarea rows="3" placeholder="Popíšte Vaše doterajšie skúsenosti alebo nám napíšte kedy môžete nastúpiť..." class="w-full px-3.5 py-2 rounded-xl bg-white dark:bg-steel-800 border border-steel-300 dark:border-steel-700 text-sm text-steel-900 dark:text-white focus:ring-2 focus:ring-brand-500"></textarea>
+        </div>
+        <div class="flex items-start space-x-2">
+          <input type="checkbox" required id="apply-gdpr" class="mt-1 rounded text-emerald-500 border-steel-300">
+          <label for="apply-gdpr" class="text-[11px] text-steel-500">Súhlasím so spracovaním osobných údajov pre účely výberového konania.</label>
+        </div>
+        <button type="submit" class="w-full py-3.5 rounded-xl font-bold text-xs uppercase tracking-wider bg-emerald-600 hover:bg-emerald-700 text-white shadow-lg transition-all flex items-center justify-center">
+          <i data-lucide="check" class="w-4 h-4 mr-2"></i>
+          Odoslať žiadosť na personálne
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ================= LIGHTBOX MODAL ================= -->
+  <div id="lightbox-modal" class="fixed inset-0 z-50 hidden bg-black/95 backdrop-blur-md flex items-center justify-center p-4" onclick="closeLightbox()">
+    <button class="absolute top-6 right-6 text-white/80 hover:text-white p-2">
+      <i data-lucide="x" class="w-8 h-8"></i>
+    </button>
+    <div class="max-w-5xl max-h-[90vh] flex flex-col items-center" onclick="event.stopPropagation()">
+      <img id="lightbox-img" src="" alt="Fullscreen náhľad" class="max-h-[80vh] w-auto rounded-xl object-contain shadow-2xl border border-steel-800">
+      <p id="lightbox-caption" class="text-white text-sm mt-4 font-semibold text-center"></p>
+    </div>
+  </div>
+
+  <!-- ================= TOAST NOTIFICATION ================= -->
+  <div id="toast" class="fixed bottom-6 right-6 z-50 hidden bg-steel-900 text-white px-5 py-3.5 rounded-2xl shadow-2xl border border-steel-700 flex items-center space-x-3 transition-all duration-300">
+    <i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-400"></i>
+    <span id="toast-msg" class="text-xs font-semibold">Správa bola úspešne odoslaná!</span>
+  </div>
+
+  <!-- ================= SCRIPTS & LOGIC ================= -->
+  <script>
+    // Initialize Lucide icons
+    lucide.createIcons();
+
+    // Dark Mode Handling
+    function initTheme() {
+      if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    }
+    initTheme();
+
+    function toggleDarkMode() {
+      if (document.documentElement.classList.contains('dark')) {
+        document.documentElement.classList.remove('dark');
+        localStorage.setItem('theme', 'light');
+      } else {
+        document.documentElement.classList.add('dark');
+        localStorage.setItem('theme', 'dark');
+      }
+      lucide.createIcons();
+    }
+
+    // Mobile Menu Toggle
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
+    }
+
+    // Product Filter Tabs
+    function filterProducts(category) {
+      const items = document.querySelectorAll('.product-item');
+      const tabs = document.querySelectorAll('.prod-tab-btn');
+
+      tabs.forEach(tab => {
+        if (tab.getAttribute('data-cat') === category) {
+          tab.classList.add('bg-brand-500', 'text-white', 'shadow-md');
+          tab.classList.remove('bg-white', 'dark:bg-steel-800', 'text-steel-700', 'dark:text-steel-300');
+        } else {
+          tab.classList.remove('bg-brand-500', 'text-white', 'shadow-md');
+          tab.classList.add('bg-white', 'dark:bg-steel-800', 'text-steel-700', 'dark:text-steel-300');
+        }
+      });
+
+      items.forEach(item => {
+        if (category === 'all' || item.getAttribute('data-category') === category) {
+          item.style.display = 'flex';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    }
+
+    // Price Configurator Calculation
+    const productBasePrices = {
+      satne: 145,
+      kancelaria: 210,
+      dielna: 380,
+      regaly: 85
+    };
+
+    function updateCalc() {
+      const prodEl = document.querySelector('input[name="cfg-prod"]:checked');
+      const qtyEl = document.getElementById('cfg-qty');
+      const lockEl = document.querySelector('input[name="cfg-lock"]:checked');
+      const delEl = document.getElementById('cfg-delivery');
+      const asmEl = document.getElementById('cfg-assembly');
+
+      const prod = prodEl ? prodEl.value : 'satne';
+      const qty = parseInt(qtyEl.value, 10);
+      const lock = lockEl ? lockEl.value : 'standard';
+
+      document.getElementById('cfg-qty-val').innerText = qty + ' ks';
+
+      let basePrice = productBasePrices[prod] || 145;
+      
+      // Lock add-on
+      let lockPrice = 0;
+      if (lock === 'code') lockPrice = 18;
+      if (lock === 'rfid') lockPrice = 42;
+
+      let unitPrice = basePrice + lockPrice;
+
+      // Volume discount
+      if (qty >= 50) {
+        unitPrice = unitPrice * 0.90; // 10% discount
+      } else if (qty >= 20) {
+        unitPrice = unitPrice * 0.95; // 5% discount
+      }
+
+      let total = unitPrice * qty;
+
+      // Add-on services
+      if (delEl && delEl.checked) {
+        total += 80 + (qty * 2);
+      }
+      if (asmEl && asmEl.checked) {
+        total += qty * 15;
+      }
+
+      const totalFormatted = Math.round(total).toLocaleString('sk-SK') + ' €';
+      const unitFormatted = '(cca ' + Math.round(total / qty).toLocaleString('sk-SK') + ' € / ks)';
+
+      document.getElementById('calc-total').innerText = totalFormatted;
+      document.getElementById('calc-unit').innerText = unitFormatted;
+    }
+    updateCalc();
+
+    function selectProductForConfig(name, category) {
+      const radio = document.querySelector(`input[name="cfg-prod"][value="${category}"]`);
+      if (radio) {
+        radio.checked = true;
+        updateCalc();
+      }
+      const el = document.getElementById('konfigurator');
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
+    // Lead Modal Handling
+    function openLeadModalWithConfig() {
+      const prodEl = document.querySelector('input[name="cfg-prod"]:checked');
+      const qty = document.getElementById('cfg-qty').value;
+      const total = document.getElementById('calc-total').innerText;
+
+      const summaryEl = document.getElementById('modal-config-summary');
+      summaryEl.innerHTML = `
+        <strong>Nakonfigurovaná položka:</strong> ${prodEl.value.toUpperCase()}<br>
+        <strong>Množstvo:</strong> ${qty} ks<br>
+        <strong>Predbežná orientačná hodnota:</strong> ${total} bez DPH
+      `;
+
+      document.getElementById('lead-modal').classList.remove('hidden');
+    }
+
+    function closeLeadModal() {
+      document.getElementById('lead-modal').classList.add('hidden');
+    }
+
+    function submitLeadForm(e) {
+      e.preventDefault();
+      closeLeadModal();
+      showToast('Dopyt bol úspešne odoslaný nášmu obchodnému tímu!');
+      e.target.reset();
+    }
+
+    // Career Apply Modal
+    function openApplyModal(jobName) {
+      document.getElementById('apply-job-name').innerText = jobName;
+      document.getElementById('apply-modal').classList.remove('hidden');
+    }
+
+    function closeApplyModal() {
+      document.getElementById('apply-modal').classList.add('hidden');
+    }
+
+    function submitApplyForm(e) {
+      e.preventDefault();
+      closeApplyModal();
+      showToast('Ďakujeme! Vaša žiadosť bola odoslaná na personálne oddelenie.');
+      e.target.reset();
+    }
+
+    // Lightbox
+    function openLightbox(src, caption) {
+      document.getElementById('lightbox-img').src = src;
+      document.getElementById('lightbox-caption').innerText = caption;
+      document.getElementById('lightbox-modal').classList.remove('hidden');
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox-modal').classList.add('hidden');
+    }
+
+    // Toast notification
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      document.getElementById('toast-msg').innerText = msg;
+      toast.classList.remove('hidden');
+      setTimeout(() => {
+        toast.classList.add('hidden');
+      }, 4000);
+    }
+
+    // Bilingual i18n Dictionary
+    const translations = {
+      sk: {
+        topbar_badge: "Člen švédskej skupiny AJ Produkter AB 🇸🇪",
+        topbar_headline: "Popredný výrobca kovového nábytku | Dlhé lúky 2, Hrnčiarovce nad Parnou",
+        brand_slogan: "Kov umocnený dizajnom",
+        nav_about: "O nás",
+        nav_products: "Produkty",
+        nav_tech: "Technológie",
+        nav_config: "Kalkulátor",
+        nav_history: "História",
+        nav_careers: "Kariéra",
+        nav_gallery: "Galéria",
+        nav_contact: "Kontakt",
+        cta_quote: "B2B Dopyt",
+        hero_pill: "Tradícia od roku 1955 • Špičkový priemysel 4.0",
+        hero_h1_lead: "Kov umocnený",
+        hero_h1_highlight: "precíznym dizajnom",
+        hero_desc: "Sme popredným výrobcom kovového nábytku, šatňových systémov a ťažkých priemyselných regálov. Ako kľúčový výrobný závod švédskej skupiny AJ Produkter AB ročne spracujeme viac ako 9 000 ton prvotriednej ocele v modernom areáli s rozlohou 22 000 m².",
+        hero_btn_calc: "Konfigurátor dopytu",
+        hero_btn_products: "Prehľad produktov",
+        hero_btn_jobs: "Hľadáme kolegov",
+        trust_1: "Certifikované podľa ISO 9001 / 14001",
+        trust_2: "Export do 20 krajín Európy",
+        trust_3: "Záruka až 10 rokov na vybrané rady",
+        kpi_tradition: "Tradícia od",
+        kpi_revenue: "Ročný obrat",
+        kpi_area: "Výrobný areál",
+        kpi_steel: "Ocele ročne",
+        kpi_staff: "Zamestnancov",
+        kpi_countries: "Krajín exportu",
+        about_tag: "O našej spoločnosti",
+        about_heading: "Pridávame výrobkom novú dimenziu: kov umocnený dizajnom",
+        about_p1: "Poslaním spoločnosti AJ Metal Design a.s. je pridať jej výrobkom novú dimenziu, ktorú umocňuje náš korporátny slogan „kov umocnený dizajnom“. Svojim zákazníkom chceme poskytovať prvotriedny servis v službách od momentu zadania až po samotnú realizáciu a expedíciu.",
+        about_p2: "Vďaka tomu napĺňame víziu stať sa uznávaným domácim výrobcom a patriť medzi najvýznamnejších exportérov v tomto odvetví. Naše výrobky sa predávajú pod registrovanou značkou AJ MetalDesign® po celej Európe aj celom svete.",
+        about_quote: "„Sme popredným výrobcom kovového nábytku. Našou víziou je stať sa jedným z najlepších exportérov v tomto odvetví a dlhodobo poskytovať bezkonkurenčnú kvalitu a spoľahlivosť našim partnerom v 20 krajinách.“",
+        about_gm_title: "Generálny riaditeľ, AJ Metal Design a.s.",
+        pillar_1_title: "Najnovšie technológie",
+        pillar_1_desc: "Každoročné investície do robotiky a automatizácie CNC centier.",
+        pillar_2_title: "Osobný prístup",
+        pillar_2_desc: "Partnerský prístup k architektom, investorom aj veľkoodberateľom.",
+        pillar_3_title: "ISO Ekológia",
+        pillar_3_desc: "ISO 14001 a 50001, bezodpadové lakovanie a recyklovateľná oceľ.",
+        products_tag: "Portfólio produktov",
+        products_title: "Komplexné riešenia pre priemysel, školy a kancelárie",
+        products_subtitle: "Od certifikovaných šatňových skríň cez archivačné systémy až po ťažké paletové regály s vysokou nosnosťou.",
+        calc_tag: "B2B Cenový odhad",
+        calc_title: "Interaktívny konfigurátor kovového vybavenia",
+        calc_subtitle: "Zvoľte typ produktu, rozsah zostavy, uzamykací systém a doplnkové služby. Okamžite získate orientačný cenový prepočet s možnosťou priameho odoslania.",
+        cfg_step1: "Vyberte produktovú radu",
+        cfg_step2: "Počet modulov / kusov",
+        cfg_step3: "Uzamykací systém / Vyhotovenie",
+        cfg_step4: "Povrchová úprava KOMAXIT (RAL vzorkovník)",
+        cfg_step5: "Doplnkové služby",
+        tech_tag: "Špičkový strojový park",
+        tech_title: "Vysoko efektívne výrobné technológie & robotizácia",
+        tech_desc: "Spoločnosť AJ Metal Design a.s. využíva vysoko efektívne európske technológie a tak optimalizuje výrobné náklady. Každoročne investujeme do nových robotických buniek, automatizovaného delenia a lakovania.",
+        history_tag: "70+ rokov skúseností",
+        history_title: "História úspechu: Od ROZVOJ VD po moderný európsky závod",
+        history_subtitle: "Pozrite si kľúčové míľniky našej spoločnosti, technologickú transformáciu a rast do nadnárodnej švédskej skupiny.",
+        cert_tag: "Kvalita a normy",
+        cert_title: "Medzinárodne certifikovaný systém riadenia",
+        cert_subtitle: "Naše výrobné postupy, bezpečnosť pri práci aj environmentálna stopa podliehajú prísnym medzinárodným auditom autority 3EC International.",
+        jobs_tag: "Kariéra v AJ Metal Design",
+        jobs_title: "Pracujte v stabilnej švédskej spoločnosti pri Trnave",
+        jobs_desc: "V našom modernom závode v Hrnčiarovciach nad Parnou nehľadáme iba zamestnancov, ale dlhodobých kolegov. U nás na žiadnej pozícii nebudete stáť za monotónnym pásom.",
+        gallery_tag: "Fotogaléria",
+        gallery_title: "Pohľad do nášho výrobného areálu a dielní",
+        gallery_subtitle: "Pozrite si autentické zábery zo spracovania ocele, montážnych hál a expedičného centra v Hrnčiarovciach nad Parnou.",
+        contact_tag: "Kontaktné centrum",
+        contact_title: "Spojte sa s našimi špecialistami",
+        contact_subtitle: "Sme vám k dispozícii v pracovných dňoch od 07:00 do 15:30. Zákaznícky servis, nákup, logistika aj personálne oddelenie."
+      },
+      en: {
+        topbar_badge: "Member of Swedish AJ Produkter AB Group 🇸🇪",
+        topbar_headline: "Leading metal furniture manufacturer | Hrnčiarovce nad Parnou, Slovakia",
+        brand_slogan: "Metal Enhanced by Design",
+        nav_about: "About Us",
+        nav_products: "Products",
+        nav_tech: "Technologies",
+        nav_config: "Estimator",
+        nav_history: "History",
+        nav_careers: "Careers",
+        nav_gallery: "Gallery",
+        nav_contact: "Contact",
+        cta_quote: "B2B RFQ",
+        hero_pill: "Heritage since 1955 • Advanced Industry 4.0",
+        hero_h1_lead: "Metal enhanced by",
+        hero_h1_highlight: "precision design",
+        hero_desc: "We are a leading manufacturer of metal furniture, locker systems, and heavy-duty industrial racking. As a core manufacturing plant of the Swedish group AJ Produkter AB, we process over 9,000 tonnes of steel annually across a modern 22,000 m² campus.",
+        hero_btn_calc: "Price Estimator",
+        hero_btn_products: "View Products",
+        hero_btn_jobs: "We Are Hiring",
+        trust_1: "Certified to ISO 9001 / 14001",
+        trust_2: "Exported to 20 European Countries",
+        trust_3: "Up to 10-year warranty on selected lines",
+        kpi_tradition: "Heritage Since",
+        kpi_revenue: "Annual Turnover",
+        kpi_area: "Manufacturing Campus",
+        kpi_steel: "Steel / Year",
+        kpi_staff: "Team Members",
+        kpi_countries: "Export Countries",
+        about_tag: "About Our Company",
+        about_heading: "Adding a new dimension to our products: metal enhanced by design",
+        about_p1: "The mission of AJ Metal Design a.s. is to add a new dimension to its products, embodied in our corporate slogan 'Metal Enhanced by Design'. We provide our clients with first-class service from quotation to delivery.",
+        about_p2: "This enables us to fulfill our vision of being a recognized domestic leader and a top exporter across Europe and worldwide under the registered brand AJ MetalDesign®.",
+        about_quote: "„We are a leading manufacturer of metal furniture. Our vision is to be one of the top exporters in the industry, delivering unmatched quality and reliability to our partners in 20 European countries.“",
+        about_gm_title: "General Manager, AJ Metal Design a.s.",
+        pillar_1_title: "Cutting-edge Tech",
+        pillar_1_desc: "Continuous investments into robotics and automated CNC sheet processing.",
+        pillar_2_title: "Personal Approach",
+        pillar_2_desc: "Dedicated partnership for architects, institutional buyers and logistics hubs.",
+        pillar_3_title: "ISO Sustainability",
+        pillar_3_desc: "ISO 14001 & 50001, circular zero-waste powder coating and recyclable steel.",
+        products_tag: "Product Portfolio",
+        products_title: "Comprehensive Storage Solutions for Industry, Schools & Offices",
+        products_subtitle: "From certified changing room lockers and archival cabinets to heavy industrial pallet racking.",
+        calc_tag: "B2B Price Estimator",
+        calc_title: "Interactive Metal Furniture Configurator",
+        calc_subtitle: "Select product line, module count, locking mechanism and optional services to obtain an immediate estimate.",
+        cfg_step1: "Select Product Line",
+        cfg_step2: "Number of Modules / Units",
+        cfg_step3: "Locking System & Hardware",
+        cfg_step4: "KOMAXIT Powder Coat (RAL)",
+        cfg_step5: "Additional Services",
+        tech_tag: "Machinery Fleet",
+        tech_title: "High-Efficiency Production Technologies & Robotics",
+        tech_desc: "AJ Metal Design a.s. leverages advanced European manufacturing technology to optimize production costs and ensure micro-tolerances.",
+        history_tag: "70+ Years of Excellence",
+        history_title: "History of Success: From ROZVOJ VD to a Modern European Plant",
+        history_subtitle: "Explore key milestones of our industrial evolution and growth into the Swedish AJ Group.",
+        cert_tag: "Quality & Compliance",
+        cert_title: "Internationally Certified Management Systems",
+        cert_subtitle: "Our manufacturing, occupational health and environmental footprint are rigorously audited by 3EC International.",
+        jobs_tag: "Careers at AJ Metal Design",
+        jobs_title: "Build Your Career with a Stable Swedish Employer Near Trnava",
+        jobs_desc: "At our modern plant in Hrnčiarovce nad Parnou, we offer direct company employment, no monotonous assembly lines, and exceptional benefits.",
+        gallery_tag: "Photo Gallery",
+        gallery_title: "Inside Our Manufacturing Campus and Workshops",
+        gallery_subtitle: "Authentic views of our steel fabrication, robotics, assembly lines and logistics center.",
+        contact_tag: "Contact Center",
+        contact_title: "Connect with Our Specialists",
+        contact_subtitle: "Available on business days 07:00 – 15:30. Customer service, procurement, shipping and human resources."
+      }
+    };
+
+    let currentLang = 'sk';
+    function setLanguage(lang) {
+      currentLang = lang;
+      const dict = translations[lang];
+      if (!dict) return;
+
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (dict[key]) {
+          el.innerText = dict[key];
+        }
+      });
+
+      // Update switcher active state
+      const btnSk = document.getElementById('lang-sk');
+      const btnEn = document.getElementById('lang-en');
+      if (lang === 'sk') {
+        btnSk.className = 'px-2.5 py-1 rounded-md transition-all bg-white dark:bg-steel-800 text-brand-600 dark:text-brand-400 shadow-sm';
+        btnEn.className = 'px-2.5 py-1 rounded-md transition-all text-steel-500 dark:text-steel-400 hover:text-steel-900 dark:hover:text-white';
+      } else {
+        btnEn.className = 'px-2.5 py-1 rounded-md transition-all bg-white dark:bg-steel-800 text-brand-600 dark:text-brand-400 shadow-sm';
+        btnSk.className = 'px-2.5 py-1 rounded-md transition-all text-steel-500 dark:text-steel-400 hover:text-steel-900 dark:hover:text-white';
+      }
+    }
+  </script>
+</body>
+</html>
