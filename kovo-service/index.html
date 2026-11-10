@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="sk" class="dark scroll-smooth">
+<html lang="sk" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -129,8 +129,8 @@
             <span id="lang-code">SK</span>
           </button>
           <!-- Theme Switcher -->
-          <button id="theme-btn" onclick="toggleTheme()" class="p-1 rounded bg-white dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 transition border border-slate-300 dark:border-slate-700" title="Prepnúť Svetlý / Tmavý režim">
-            <i data-lucide="sun" id="theme-icon" class="w-3.5 h-3.5"></i>
+          <button id="theme-btn" onclick="toggleTheme()" class="p-1 rounded bg-white dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 transition border border-slate-300 dark:border-slate-700" title="Prepnúť do tmavého režimu">
+            <i data-lucide="moon" id="theme-icon" class="w-3.5 h-3.5"></i>
           </button>
         </div>
       </div>
@@ -1631,17 +1631,20 @@
       menu.classList.add('hidden');
     }
 
-    // THEME SWITCHER
-    let currentTheme = localStorage.getItem('kovo_theme') || 'dark';
+    // THEME SWITCHER (Default: Light theme)
+    let currentTheme = localStorage.getItem('kovo_theme') || 'light';
     function applyTheme(theme) {
       const root = document.documentElement;
       const themeIcon = document.getElementById('theme-icon');
+      const themeBtn = document.getElementById('theme-btn');
       if (theme === 'light') {
         root.classList.remove('dark');
         if (themeIcon) themeIcon.setAttribute('data-lucide', 'moon');
+        if (themeBtn) themeBtn.setAttribute('title', 'Prepnúť do tmavého režimu');
       } else {
         root.classList.add('dark');
         if (themeIcon) themeIcon.setAttribute('data-lucide', 'sun');
+        if (themeBtn) themeBtn.setAttribute('title', 'Prepnúť do svetlého režimu');
       }
       lucide.createIcons();
       localStorage.setItem('kovo_theme', theme);
