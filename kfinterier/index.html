@@ -1,0 +1,1432 @@
+<!DOCTYPE html>
+<html lang="sk" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt & Nezáväzný dopyt | KF-interiér s.r.o. - Výroba nábytku na mieru Bratislava</title>
+    <meta name="description" content="Hľadáte poctivú stolársku výrobu nábytku na mieru v Bratislave a okolí? Kontaktujte KF-interiér s.r.o. Vlastná dielňa v Limbachu, laserové zameranie, 3D návrh a montáž.">
+    <link rel="icon" type="image/jpeg" href="https://vyroba-nabytku-bratislava-kfinterier.sk/wp-content/uploads/2023/03/cropped-kf-logo.jpg">
+
+    <!-- Prevent FOUC: Theme detector script (Defaults to clean Light mode unless dark is explicitly saved) -->
+    <script>
+        (function() {
+            try {
+                const savedTheme = localStorage.getItem('kf_theme');
+                if (savedTheme === 'dark') {
+                    document.documentElement.classList.add('dark');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                }
+            } catch (e) {
+                document.documentElement.classList.remove('dark');
+            }
+        })();
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#fdf8f4',
+                            100: '#faefe6',
+                            200: '#f4decb',
+                            300: '#e9c4a5',
+                            400: '#dba178',
+                            500: '#c87c4a',
+                            600: '#b8663b',
+                            700: '#994e30',
+                            800: '#7c3f2b',
+                            900: '#653526',
+                            950: '#381a12',
+                        },
+                        amberwood: {
+                            DEFAULT: '#C87C4A',
+                            dark: '#994E30',
+                            light: '#E9C4A5'
+                        },
+                        wooddark: '#1c1714',
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'Georgia', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        /* Custom scrollbar and subtle theme gradients */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        .dark ::-webkit-scrollbar-track {
+            background: #18181b;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #c87c4a;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #994e30;
+        }
+
+        .wood-pattern {
+            background-image: radial-gradient(rgba(200, 124, 74, 0.12) 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+        .dark .wood-pattern {
+            background-image: radial-gradient(rgba(200, 124, 74, 0.18) 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+    </style>
+</head>
+<body class="bg-stone-50 dark:bg-[#12100e] text-stone-800 dark:text-stone-200 font-sans antialiased selection:bg-brand-500 selection:text-white transition-colors duration-200">
+
+    <!-- Top Announcement Bar (Light & Dark theme aware) -->
+    <div class="bg-stone-100 dark:bg-stone-900 text-stone-700 dark:text-stone-300 text-xs py-2 px-4 border-b border-stone-200 dark:border-stone-800 transition-colors">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
+            <div class="flex items-center gap-3 flex-wrap justify-center sm:justify-start">
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-emerald-500/15 text-emerald-700 dark:text-emerald-400 border border-emerald-500/30">
+                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 dark:bg-emerald-400 animate-pulse"></span>
+                    Aktuálne prijímame zákazky
+                </span>
+                <span class="hidden md:inline text-stone-400 dark:text-stone-600">•</span>
+                <span class="flex items-center gap-1 text-stone-600 dark:text-stone-300">
+                    <i data-lucide="map-pin" class="w-3.5 h-3.5 text-brand-600 dark:text-brand-400"></i>
+                    Bratislava, Pezinok, Limbach, Senec a okolie
+                </span>
+            </div>
+            <div class="flex items-center gap-4 text-xs font-semibold">
+                <a href="tel:+421903224896" class="hover:text-brand-600 dark:hover:text-brand-400 flex items-center gap-1 transition-colors">
+                    <i data-lucide="phone" class="w-3.5 h-3.5 text-brand-600 dark:text-brand-400"></i>
+                    Výroba: +421 903 224 896
+                </a>
+                <span class="text-stone-300 dark:text-stone-700">|</span>
+                <a href="tel:+421903451120" class="hover:text-brand-600 dark:hover:text-brand-400 flex items-center gap-1 transition-colors">
+                    <i data-lucide="ruler" class="w-3.5 h-3.5 text-brand-600 dark:text-brand-400"></i>
+                    Zameranie: +421 903 451 120
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation Header -->
+    <header class="sticky top-0 z-40 bg-white/95 dark:bg-[#151210]/95 backdrop-blur-md border-b border-stone-200 dark:border-stone-800 shadow-sm transition-colors">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="https://vyroba-nabytku-bratislava-kfinterier.sk/" class="flex items-center gap-3.5 group">
+                <div class="w-12 h-12 rounded-xl overflow-hidden border border-brand-500/30 shadow-md group-hover:scale-105 transition-transform bg-white">
+                    <img src="https://vyroba-nabytku-bratislava-kfinterier.sk/wp-content/uploads/2023/03/cropped-kf-logo.jpg" 
+                         alt="KF Interiér Logo" 
+                         class="w-full h-full object-cover">
+                </div>
+                <div>
+                    <div class="flex items-center gap-2">
+                        <span class="font-serif text-2xl font-bold tracking-tight text-stone-900 dark:text-white">KF-INTERIÉR</span>
+                        <span class="text-[10px] font-bold uppercase tracking-widest px-1.5 py-0.5 rounded bg-brand-100 dark:bg-brand-950/70 text-brand-700 dark:text-brand-300 border border-brand-200 dark:border-brand-800">s.r.o.</span>
+                    </div>
+                    <p class="text-xs text-stone-500 dark:text-stone-400 font-medium">Stolárska výroba nábytku na mieru od 2018</p>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden lg:flex items-center gap-8 text-sm font-semibold">
+                <a href="https://vyroba-nabytku-bratislava-kfinterier.sk/" class="text-stone-600 dark:text-stone-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Domov</a>
+                <a href="https://vyroba-nabytku-bratislava-kfinterier.sk/vyroba-nabytku/" class="text-stone-600 dark:text-stone-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Výroba nábytku</a>
+                <a href="https://vyroba-nabytku-bratislava-kfinterier.sk/sluzby/" class="text-stone-600 dark:text-stone-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Služby & Postup</a>
+                <a href="https://vyroba-nabytku-bratislava-kfinterier.sk/galeria/" class="text-stone-600 dark:text-stone-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Galéria realizácií</a>
+                <a href="#kontakt-sekcia" class="text-brand-600 dark:text-brand-400 font-bold flex items-center gap-1.5 border-b-2 border-brand-600 dark:border-brand-400 pb-0.5">
+                    Kontakt & Dopyt
+                </a>
+            </nav>
+
+            <!-- Actions & Theme Toggle -->
+            <div class="flex items-center gap-3">
+                <!-- Dedicated Theme Toggle Button -->
+                <button id="theme-toggle" onclick="toggleTheme()" aria-label="Prepnúť svetlý/tmavý režim" title="Prepnúť svetlý / tmavý režim" class="px-3 py-2 rounded-xl border border-stone-300 dark:border-stone-700 bg-stone-100 hover:bg-stone-200 dark:bg-stone-800 dark:hover:bg-stone-700 text-stone-700 dark:text-stone-200 transition-all flex items-center gap-2 text-xs font-bold shadow-sm">
+                    <span id="theme-icon-container" class="flex items-center">
+                        <i data-lucide="sun" class="w-4 h-4 text-amber-500"></i>
+                    </span>
+                    <span id="theme-label" class="hidden sm:inline">Svetlý režim</span>
+                </button>
+
+                <!-- CTA Button -->
+                <a href="#dopyt-formular" class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-bold text-white bg-gradient-to-r from-brand-600 to-brand-700 hover:from-brand-700 hover:to-brand-800 shadow-md shadow-brand-500/20 hover:shadow-lg hover:shadow-brand-500/30 hover:-translate-y-0.5 transition-all">
+                    <i data-lucide="calculator" class="w-4 h-4"></i>
+                    <span>Nezáväzný dopyt</span>
+                </a>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" aria-label="Otvoriť menu" class="lg:hidden p-2.5 rounded-xl border border-stone-200 dark:border-stone-800 text-stone-700 dark:text-stone-200 hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden border-b border-stone-200 dark:border-stone-800 bg-white dark:bg-[#151210] px-4 pt-3 pb-6 space-y-3">
+            <a href="https://vyroba-nabytku-bratislava-kfinterier.sk/" class="block py-2 text-base font-semibold text-stone-800 dark:text-stone-200 hover:text-brand-600">Domov</a>
+            <a href="https://vyroba-nabytku-bratislava-kfinterier.sk/vyroba-nabytku/" class="block py-2 text-base font-semibold text-stone-800 dark:text-stone-200 hover:text-brand-600">Výroba nábytku</a>
+            <a href="https://vyroba-nabytku-bratislava-kfinterier.sk/sluzby/" class="block py-2 text-base font-semibold text-stone-800 dark:text-stone-200 hover:text-brand-600">Služby & Postup</a>
+            <a href="https://vyroba-nabytku-bratislava-kfinterier.sk/galeria/" class="block py-2 text-base font-semibold text-stone-800 dark:text-stone-200 hover:text-brand-600">Galéria realizácií</a>
+            <a href="#kontakt-sekcia" class="block py-2 text-base font-bold text-brand-600 dark:text-brand-400">Kontakt & Rýchly dopyt</a>
+            
+            <!-- Mobile Theme Toggle Option -->
+            <div class="pt-2">
+                <button onclick="toggleTheme()" class="w-full flex items-center justify-between py-2.5 px-3.5 rounded-xl border border-stone-300 dark:border-stone-700 bg-stone-100 dark:bg-stone-800 text-stone-800 dark:text-stone-200 text-sm font-semibold">
+                    <span class="flex items-center gap-2">
+                        <span id="theme-icon-container-mobile">
+                            <i data-lucide="sun" class="w-4 h-4 text-amber-500"></i>
+                        </span>
+                        <span>Vzhľad stránky:</span>
+                    </span>
+                    <span id="theme-label-mobile" class="text-xs font-bold px-2 py-0.5 rounded bg-brand-100 dark:bg-brand-950 text-brand-700 dark:text-brand-300">Svetlý režim</span>
+                </button>
+            </div>
+
+            <div class="pt-3 border-t border-stone-200 dark:border-stone-800 flex flex-col gap-2">
+                <a href="tel:+421903224896" class="flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-stone-100 dark:bg-stone-800 font-semibold text-stone-800 dark:text-stone-100">
+                    <i data-lucide="phone-call" class="w-4 h-4 text-brand-500"></i>
+                    Volať výrobu (+421 903 224 896)
+                </a>
+                <a href="#dopyt-formular" class="flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-brand-600 text-white font-bold shadow-md">
+                    <i data-lucide="send" class="w-4 h-4"></i>
+                    Odoslať nezáväzný dopyt
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Page Hero Section -->
+    <section class="relative overflow-hidden pt-12 pb-20 wood-pattern border-b border-stone-200 dark:border-stone-800/80 bg-stone-50 dark:bg-[#12100e]">
+        <div class="absolute inset-0 bg-gradient-to-b from-stone-100/60 via-transparent to-stone-50 dark:from-[#151210]/90 dark:via-transparent dark:to-[#12100e] pointer-events-none"></div>
+
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Breadcrumbs -->
+            <nav class="flex items-center gap-2 text-xs font-medium text-stone-500 dark:text-stone-400 mb-6">
+                <a href="https://vyroba-nabytku-bratislava-kfinterier.sk/" class="hover:text-brand-600 transition-colors">Domov</a>
+                <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+                <span class="text-stone-800 dark:text-stone-200 font-semibold">Kontakt & Dopyt</span>
+            </nav>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- Hero Left: Pitch & Headlines -->
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-brand-100 dark:bg-brand-950/80 text-brand-800 dark:text-brand-300 border border-brand-300/50 dark:border-brand-800">
+                        <i data-lucide="hammer" class="w-4 h-4 text-brand-600 dark:text-brand-400"></i>
+                        Poctivé stolárske remeslo & moderná výroba
+                    </div>
+
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-stone-900 dark:text-white leading-[1.15]">
+                        Z domu vám vytvoríme <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 via-brand-500 to-amber-600">skutočný domov.</span>
+                    </h1>
+
+                    <p class="text-lg text-stone-600 dark:text-stone-300 leading-relaxed max-w-2xl">
+                        Máte predstavu o novej kuchyni, vstavanej skrini či kompletnom zariadení interiéru? Sme priamo výrobca – <strong class="text-stone-900 dark:text-white font-semibold">KF-interiér s.r.o.</strong> s vlastnou dielňou a moderným strojovým parkom v Limbachu.
+                        Žiadne prirážky predajní ani nekonečné čakanie.
+                    </p>
+
+                    <!-- Trust Cards Pills -->
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
+                        <div class="p-3.5 rounded-2xl bg-white dark:bg-stone-900/80 border border-stone-200/80 dark:border-stone-800 shadow-sm">
+                            <div class="w-8 h-8 rounded-lg bg-brand-50 dark:bg-brand-950/60 text-brand-600 dark:text-brand-400 flex items-center justify-center mb-2">
+                                <i data-lucide="zap" class="w-4 h-4"></i>
+                            </div>
+                            <div class="text-xs text-stone-500 dark:text-stone-400">Cenová ponuka</div>
+                            <div class="text-sm font-bold text-stone-900 dark:text-white">Do 24 hodín</div>
+                        </div>
+
+                        <div class="p-3.5 rounded-2xl bg-white dark:bg-stone-900/80 border border-stone-200/80 dark:border-stone-800 shadow-sm">
+                            <div class="w-8 h-8 rounded-lg bg-emerald-50 dark:bg-emerald-950/60 text-emerald-600 dark:text-emerald-400 flex items-center justify-center mb-2">
+                                <i data-lucide="ruler" class="w-4 h-4"></i>
+                            </div>
+                            <div class="text-xs text-stone-500 dark:text-stone-400">Laserové zameranie</div>
+                            <div class="text-sm font-bold text-stone-900 dark:text-white">U vás doma</div>
+                        </div>
+
+                        <div class="p-3.5 rounded-2xl bg-white dark:bg-stone-900/80 border border-stone-200/80 dark:border-stone-800 shadow-sm">
+                            <div class="w-8 h-8 rounded-lg bg-amber-50 dark:bg-amber-950/60 text-amber-600 dark:text-amber-400 flex items-center justify-center mb-2">
+                                <i data-lucide="shield-check" class="w-4 h-4"></i>
+                            </div>
+                            <div class="text-xs text-stone-500 dark:text-stone-400">Kovanie Blum/Hettich</div>
+                            <div class="text-sm font-bold text-stone-900 dark:text-white">Doživotná záruka</div>
+                        </div>
+
+                        <div class="p-3.5 rounded-2xl bg-white dark:bg-stone-900/80 border border-stone-200/80 dark:border-stone-800 shadow-sm">
+                            <div class="w-8 h-8 rounded-lg bg-blue-50 dark:bg-blue-950/60 text-blue-600 dark:text-blue-400 flex items-center justify-center mb-2">
+                                <i data-lucide="truck" class="w-4 h-4"></i>
+                            </div>
+                            <div class="text-xs text-stone-500 dark:text-stone-400">Vlastná doprava</div>
+                            <div class="text-sm font-bold text-stone-900 dark:text-white">A čistá montáž</div>
+                        </div>
+                    </div>
+
+                    <!-- Fast Direct Action Links -->
+                    <div class="flex flex-wrap items-center gap-4 pt-2">
+                        <a href="#dopyt-formular" class="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-xl font-bold text-white bg-brand-600 hover:bg-brand-700 shadow-lg shadow-brand-600/30 hover:shadow-xl hover:-translate-y-0.5 transition-all text-base">
+                            <i data-lucide="clipboard-pen-line" class="w-5 h-5"></i>
+                            Nezáväzne naceniť projekt
+                        </a>
+                        <a href="tel:+421903224896" class="inline-flex items-center gap-2 px-5 py-3.5 rounded-xl font-bold text-stone-800 dark:text-stone-100 bg-white dark:bg-stone-800/90 border border-stone-300 dark:border-stone-700 hover:bg-stone-100 dark:hover:bg-stone-700 transition-all text-base shadow-sm">
+                            <i data-lucide="phone" class="w-5 h-5 text-brand-600 dark:text-brand-400"></i>
+                            Zavolať priamo majstrovi
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Hero Right: Real Workshop Card / Visual Proof -->
+                <div class="lg:col-span-5">
+                    <div class="relative rounded-3xl overflow-hidden border border-stone-200 dark:border-stone-800 shadow-xl bg-white dark:bg-stone-900 group">
+                        <!-- Real Photo from their actual workshop -->
+                        <div class="relative h-72 sm:h-80 overflow-hidden">
+                            <img src="https://vyroba-nabytku-bratislava-kfinterier.sk/wp-content/uploads/2023/03/vyroba-nabytku-na-mieru-Bratislava-edited-scaled.jpg" 
+                                 alt="Vozový park a tím KF-Interiér" 
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+                            
+                            <div class="absolute top-4 left-4">
+                                <span class="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-white/90 backdrop-blur-md text-stone-900 shadow-sm flex items-center gap-1.5">
+                                    <i data-lucide="badge-check" class="w-3.5 h-3.5 text-brand-600"></i>
+                                    Overená dielňa Limbach
+                                </span>
+                            </div>
+
+                            <div class="absolute bottom-4 left-4 right-4 text-white">
+                                <div class="text-xs uppercase tracking-wider text-brand-300 font-semibold">Vlastné zázemie</div>
+                                <h3 class="text-xl font-bold font-serif">Vlastný vozový park a moderné stroje</h3>
+                                <p class="text-xs text-stone-300 mt-1">Formátovacie píly, PUR olepovanie hrán a striekací box pre dokonalý lak.</p>
+                            </div>
+                        </div>
+
+                        <!-- Mini Direct Contacts in Hero -->
+                        <div class="p-6 divide-y divide-stone-100 dark:divide-stone-800/80 bg-stone-50/70 dark:bg-stone-900/50">
+                            <div class="pb-3 flex items-center justify-between">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-10 h-10 rounded-xl bg-brand-100 dark:bg-brand-950 text-brand-700 dark:text-brand-300 flex items-center justify-center font-bold">
+                                        KF
+                                    </div>
+                                    <div>
+                                        <div class="text-xs text-stone-500 dark:text-stone-400">Výroba & Dielňa</div>
+                                        <div class="text-sm font-bold text-stone-900 dark:text-white">Kamil Fraňo</div>
+                                    </div>
+                                </div>
+                                <a href="tel:+421903224896" class="px-3.5 py-1.5 rounded-lg text-xs font-bold bg-brand-600 hover:bg-brand-700 text-white flex items-center gap-1.5 transition-colors">
+                                    <i data-lucide="phone-outgoing" class="w-3.5 h-3.5"></i>
+                                    Volať
+                                </a>
+                            </div>
+
+                            <div class="pt-3 flex items-center justify-between">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-10 h-10 rounded-xl bg-amber-100 dark:bg-amber-950 text-amber-700 dark:text-amber-300 flex items-center justify-center font-bold">
+                                        📐
+                                    </div>
+                                    <div>
+                                        <div class="text-xs text-stone-500 dark:text-stone-400">Zameranie & Obhliadky</div>
+                                        <div class="text-sm font-bold text-stone-900 dark:text-white">Bratislava & okolie</div>
+                                    </div>
+                                </div>
+                                <a href="tel:+421903451120" class="px-3.5 py-1.5 rounded-lg text-xs font-bold bg-stone-800 hover:bg-stone-900 dark:bg-stone-800 dark:hover:bg-stone-700 text-white flex items-center gap-1.5 transition-colors border border-stone-300 dark:border-stone-700">
+                                    <i data-lucide="calendar" class="w-3.5 h-3.5 text-brand-400"></i>
+                                    Termín
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Direct Contact Channels Section -->
+    <section id="kontakt-sekcia" class="py-16 bg-white dark:bg-[#151210] border-b border-stone-200 dark:border-stone-800 transition-colors">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <span class="text-xs font-bold uppercase tracking-widest text-brand-600 dark:text-brand-400">Priame kontakty bez čakania</span>
+                <h2 class="text-3xl sm:text-4xl font-serif font-bold text-stone-900 dark:text-white mt-2">
+                    S kým potrebujete hovoriť?
+                </h2>
+                <p class="text-stone-600 dark:text-stone-400 mt-3 text-base">
+                    U nás nevoláte do anonymného call centra. Zdvihne vám priamo človek zodpovedný za výrobu alebo zameranie vášho nábytku.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Contact Card 1: Výroba -->
+                <div class="relative rounded-3xl p-7 bg-stone-50 dark:bg-stone-900 border border-stone-200 dark:border-stone-800 hover:border-brand-500/50 dark:hover:border-brand-500/50 shadow-md hover:shadow-xl transition-all duration-300 group flex flex-col justify-between">
+                    <div class="space-y-5">
+                        <div class="flex items-center justify-between">
+                            <div class="w-14 h-14 rounded-2xl bg-brand-100 dark:bg-brand-950/70 text-brand-600 dark:text-brand-400 flex items-center justify-center group-hover:scale-110 transition-transform shadow-inner">
+                                <i data-lucide="wrench" class="w-7 h-7"></i>
+                            </div>
+                            <span class="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-brand-500/10 text-brand-600 dark:text-brand-400 border border-brand-500/20">
+                                Dielňa & Technika
+                            </span>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl font-bold font-serif text-stone-900 dark:text-white">Výroba & Realizácia</h3>
+                            <p class="text-sm font-semibold text-brand-700 dark:text-brand-300 mt-0.5">Kamil Fraňo</p>
+                            <p class="text-xs text-stone-500 dark:text-stone-400 mt-2 leading-relaxed">
+                                Konzultácie technických detailov, výber kovania Blum/Hettich, striekané povrchy, masív a priebeh rozpracovanej výroby.
+                            </p>
+                        </div>
+
+                        <div class="space-y-2 pt-2">
+                            <a href="tel:+421903224896" class="flex items-center gap-3 p-3 rounded-xl bg-white dark:bg-stone-800 border border-stone-200 dark:border-stone-700/80 hover:border-brand-500 transition-colors">
+                                <i data-lucide="phone-call" class="w-5 h-5 text-brand-600"></i>
+                                <div>
+                                    <div class="text-[11px] text-stone-400 uppercase font-semibold">Priama linka do výroby</div>
+                                    <div class="text-base font-bold text-stone-900 dark:text-white">+421 903 224 896</div>
+                                </div>
+                            </a>
+
+                            <a href="https://wa.me/421903224896?text=Dobry%20den,%20chcel%20by%20som%20sa%20informovat%20o%20vyrobe%20nabytku%20na%20mieru." target="_blank" rel="noopener" class="flex items-center gap-3 p-3 rounded-xl bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800/60 hover:bg-emerald-100 dark:hover:bg-emerald-950/60 transition-colors">
+                                <i data-lucide="message-circle" class="w-5 h-5 text-emerald-600 dark:text-emerald-400"></i>
+                                <div>
+                                    <div class="text-[11px] text-emerald-700 dark:text-emerald-400 uppercase font-semibold">WhatsApp chat</div>
+                                    <div class="text-sm font-bold text-emerald-800 dark:text-emerald-300">Napísať rýchlu správu</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="pt-5 mt-4 border-t border-stone-200 dark:border-stone-800 text-xs text-stone-500 flex items-center justify-between">
+                        <span>Dostupnosť na telefóne:</span>
+                        <strong class="text-stone-800 dark:text-stone-200">Po – Pia: 07:30 – 17:00</strong>
+                    </div>
+                </div>
+
+                <!-- Contact Card 2: Zameranie & Návrhy -->
+                <div class="relative rounded-3xl p-7 bg-stone-50 dark:bg-stone-900 border-2 border-brand-500/30 dark:border-brand-500/30 hover:border-brand-500 dark:hover:border-brand-500 shadow-lg hover:shadow-xl transition-all duration-300 group flex flex-col justify-between">
+                    <div class="absolute -top-3.5 right-6 px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider bg-brand-600 text-white shadow-md">
+                        Najžiadanejšie
+                    </div>
+
+                    <div class="space-y-5">
+                        <div class="flex items-center justify-between">
+                            <div class="w-14 h-14 rounded-2xl bg-amber-100 dark:bg-amber-950/70 text-amber-700 dark:text-amber-400 flex items-center justify-center group-hover:scale-110 transition-transform shadow-inner">
+                                <i data-lucide="ruler" class="w-7 h-7"></i>
+                            </div>
+                            <span class="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-500/10 text-amber-700 dark:text-amber-300 border border-amber-500/20">
+                                Obhliadka u vás
+                            </span>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl font-bold font-serif text-stone-900 dark:text-white">Zameranie & 3D Návrhy</h3>
+                            <p class="text-sm font-semibold text-brand-700 dark:text-brand-300 mt-0.5">Obhliadky u klientov</p>
+                            <p class="text-xs text-stone-500 dark:text-stone-400 mt-2 leading-relaxed">
+                                Dohodnutie termínu laserového zamerania priestoru, prezentácia fyzických vzorkovníkov Egger/Kronospan a príprava cenovej kalkulácie.
+                            </p>
+                        </div>
+
+                        <div class="space-y-2 pt-2">
+                            <a href="tel:+421903451120" class="flex items-center gap-3 p-3 rounded-xl bg-white dark:bg-stone-800 border border-stone-200 dark:border-stone-700/80 hover:border-brand-500 transition-colors">
+                                <i data-lucide="calendar-check" class="w-5 h-5 text-amber-600"></i>
+                                <div>
+                                    <div class="text-[11px] text-stone-400 uppercase font-semibold">Objednať zameranie</div>
+                                    <div class="text-base font-bold text-stone-900 dark:text-white">+421 903 451 120</div>
+                                </div>
+                            </a>
+
+                            <a href="#dopyt-formular" class="flex items-center gap-3 p-3 rounded-xl bg-brand-50 dark:bg-brand-950/40 border border-brand-200 dark:border-brand-800/60 hover:bg-brand-100 dark:hover:bg-brand-950/60 transition-colors">
+                                <i data-lucide="sparkles" class="w-5 h-5 text-brand-600 dark:text-brand-400"></i>
+                                <div>
+                                    <div class="text-[11px] text-brand-700 dark:text-brand-400 uppercase font-semibold">Online rezervácia</div>
+                                    <div class="text-sm font-bold text-brand-800 dark:text-brand-300">Vyplniť žiadosť o obhliadku</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="pt-5 mt-4 border-t border-stone-200 dark:border-stone-800 text-xs text-stone-500 flex items-center justify-between">
+                        <span>Pôsobnosť:</span>
+                        <strong class="text-stone-800 dark:text-stone-200">BA, PK, SC, TT a okolie</strong>
+                    </div>
+                </div>
+
+                <!-- Contact Card 3: Email & Projekty -->
+                <div class="relative rounded-3xl p-7 bg-stone-50 dark:bg-stone-900 border border-stone-200 dark:border-stone-800 hover:border-brand-500/50 dark:hover:border-brand-500/50 shadow-md hover:shadow-xl transition-all duration-300 group flex flex-col justify-between">
+                    <div class="space-y-5">
+                        <div class="flex items-center justify-between">
+                            <div class="w-14 h-14 rounded-2xl bg-blue-100 dark:bg-blue-950/70 text-blue-600 dark:text-blue-400 flex items-center justify-center group-hover:scale-110 transition-transform shadow-inner">
+                                <i data-lucide="mail" class="w-7 h-7"></i>
+                            </div>
+                            <span class="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-blue-500/10 text-blue-600 dark:text-blue-400 border border-blue-500/20">
+                                Projekty & Pôdorysy
+                            </span>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl font-bold font-serif text-stone-900 dark:text-white">Email & Architekti</h3>
+                            <p class="text-sm font-semibold text-brand-700 dark:text-brand-300 mt-0.5">kamil.frano@gmail.com</p>
+                            <p class="text-xs text-stone-500 dark:text-stone-400 mt-2 leading-relaxed">
+                                Máte hotový projekt od architekta, výkres, nákres na papieri alebo inšpiráciu z Pinterestu? Pošlite nám súbory priamo na email.
+                            </p>
+                        </div>
+
+                        <div class="space-y-2 pt-2">
+                            <a href="mailto:kamil.frano@gmail.com?subject=Dopyt%20na%20vyrobu%20nabytku%20na%20mieru" class="flex items-center gap-3 p-3 rounded-xl bg-white dark:bg-stone-800 border border-stone-200 dark:border-stone-700/80 hover:border-brand-500 transition-colors">
+                                <i data-lucide="send" class="w-5 h-5 text-blue-600"></i>
+                                <div class="overflow-hidden">
+                                    <div class="text-[11px] text-stone-400 uppercase font-semibold">Oficiálny email</div>
+                                    <div class="text-sm font-bold text-stone-900 dark:text-white truncate">kamil.frano@gmail.com</div>
+                                </div>
+                            </a>
+
+                            <button onclick="copyEmailToClipboard()" class="w-full flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl bg-stone-200/80 dark:bg-stone-800 hover:bg-stone-300 dark:hover:bg-stone-700 text-stone-700 dark:text-stone-300 text-xs font-bold transition-colors">
+                                <i data-lucide="copy" class="w-3.5 h-3.5"></i>
+                                <span id="copy-btn-text">Skopírovať email</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="pt-5 mt-4 border-t border-stone-200 dark:border-stone-800 text-xs text-stone-500 flex items-center justify-between">
+                        <span>Garantovaná odozva:</span>
+                        <strong class="text-emerald-600 dark:text-emerald-400">Do 24 hodín</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comprehensive Interactive Multi-Step Inquiry Form Section -->
+    <section id="dopyt-formular" class="py-20 bg-stone-100 dark:bg-[#12100e] relative transition-colors">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="inline-flex items-center gap-1 text-xs font-bold uppercase tracking-widest text-brand-600 dark:text-brand-400 bg-brand-100 dark:bg-brand-950 px-3 py-1 rounded-full">
+                    <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+                    Rýchla kalkulácia zdarma
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-serif font-bold text-stone-900 dark:text-white mt-3">
+                    Nakonfigurujte si svoj dopyt
+                </h2>
+                <p class="text-stone-600 dark:text-stone-400 mt-2 text-sm sm:text-base">
+                    Vyplnenie trvá len 2 minúty. Pripravíme vám nezáväznú kalkuláciu a ozveme sa s návrhom riešenia.
+                </p>
+            </div>
+
+            <!-- Form Card Wrapper -->
+            <div class="bg-white dark:bg-stone-900 rounded-3xl shadow-xl border border-stone-200 dark:border-stone-800 overflow-hidden transition-colors">
+                <!-- Progress Stepper Header -->
+                <div class="bg-stone-50 dark:bg-stone-900/90 border-b border-stone-200 dark:border-stone-800 px-6 py-4">
+                    <div class="flex items-center justify-between max-w-2xl mx-auto">
+                        <div class="step-indicator flex items-center gap-2" data-step="1">
+                            <span class="w-8 h-8 rounded-full bg-brand-600 text-white font-bold text-xs flex items-center justify-center shadow-sm">1</span>
+                            <span class="text-xs font-bold text-stone-900 dark:text-white hidden sm:inline">Typ nábytku</span>
+                        </div>
+                        <div class="flex-1 h-0.5 mx-3 bg-stone-200 dark:bg-stone-800"></div>
+
+                        <div class="step-indicator flex items-center gap-2 opacity-60" data-step="2">
+                            <span class="w-8 h-8 rounded-full bg-stone-200 dark:bg-stone-800 text-stone-600 dark:text-stone-300 font-bold text-xs flex items-center justify-center">2</span>
+                            <span class="text-xs font-bold text-stone-500 dark:text-stone-400 hidden sm:inline">Rozsah & Štýl</span>
+                        </div>
+                        <div class="flex-1 h-0.5 mx-3 bg-stone-200 dark:bg-stone-800"></div>
+
+                        <div class="step-indicator flex items-center gap-2 opacity-60" data-step="3">
+                            <span class="w-8 h-8 rounded-full bg-stone-200 dark:bg-stone-800 text-stone-600 dark:text-stone-300 font-bold text-xs flex items-center justify-center">3</span>
+                            <span class="text-xs font-bold text-stone-500 dark:text-stone-400 hidden sm:inline">Kontakt & Podklady</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form Content Container -->
+                <form id="inquiry-form" class="p-6 sm:p-10 space-y-8" onsubmit="event.preventDefault(); submitInquiry();">
+                    
+                    <!-- STEP 1: TYP NÁBYTKU -->
+                    <div id="step-1" class="step-panel space-y-6">
+                        <div class="border-b border-stone-100 dark:border-stone-800 pb-3">
+                            <h3 class="text-xl font-bold text-stone-900 dark:text-white">Krok 1: O aký typ nábytku máte záujem?</h3>
+                            <p class="text-xs text-stone-500 dark:text-stone-400">Môžete označiť viacero možností.</p>
+                        </div>
+
+                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3.5">
+                            <!-- Option: Kuchyňa -->
+                            <label class="cursor-pointer relative rounded-2xl border-2 border-stone-200 dark:border-stone-800 p-4 hover:border-brand-500 transition-all text-center flex flex-col items-center justify-center gap-2.5 has-[:checked]:border-brand-600 has-[:checked]:bg-brand-50/60 dark:has-[:checked]:bg-brand-950/30 group">
+                                <input type="checkbox" name="furniture_type" value="Kuchynská linka na mieru" class="hidden">
+                                <div class="w-12 h-12 rounded-xl bg-stone-100 dark:bg-stone-800 group-hover:bg-brand-100 text-stone-700 dark:text-stone-300 group-hover:text-brand-600 flex items-center justify-center transition-colors">
+                                    <i data-lucide="chef-hat" class="w-6 h-6"></i>
+                                </div>
+                                <span class="text-xs font-bold text-stone-800 dark:text-stone-200">Kuchynská linka</span>
+                            </label>
+
+                            <!-- Option: Vstavaná skriňa -->
+                            <label class="cursor-pointer relative rounded-2xl border-2 border-stone-200 dark:border-stone-800 p-4 hover:border-brand-500 transition-all text-center flex flex-col items-center justify-center gap-2.5 has-[:checked]:border-brand-600 has-[:checked]:bg-brand-50/60 dark:has-[:checked]:bg-brand-950/30 group">
+                                <input type="checkbox" name="furniture_type" value="Vstavaná skriňa / Šatník" class="hidden">
+                                <div class="w-12 h-12 rounded-xl bg-stone-100 dark:bg-stone-800 group-hover:bg-brand-100 text-stone-700 dark:text-stone-300 group-hover:text-brand-600 flex items-center justify-center transition-colors">
+                                    <i data-lucide="door-closed" class="w-6 h-6"></i>
+                                </div>
+                                <span class="text-xs font-bold text-stone-800 dark:text-stone-200">Vstavaná skriňa / Šatník</span>
+                            </label>
+
+                            <!-- Option: Obývačka -->
+                            <label class="cursor-pointer relative rounded-2xl border-2 border-stone-200 dark:border-stone-800 p-4 hover:border-brand-500 transition-all text-center flex flex-col items-center justify-center gap-2.5 has-[:checked]:border-brand-600 has-[:checked]:bg-brand-50/60 dark:has-[:checked]:bg-brand-950/30 group">
+                                <input type="checkbox" name="furniture_type" value="Obývacia stena & TV skrinky" class="hidden">
+                                <div class="w-12 h-12 rounded-xl bg-stone-100 dark:bg-stone-800 group-hover:bg-brand-100 text-stone-700 dark:text-stone-300 group-hover:text-brand-600 flex items-center justify-center transition-colors">
+                                    <i data-lucide="tv" class="w-6 h-6"></i>
+                                </div>
+                                <span class="text-xs font-bold text-stone-800 dark:text-stone-200">Obývacia stena & TV</span>
+                            </label>
+
+                            <!-- Option: Kúpeľňa -->
+                            <label class="cursor-pointer relative rounded-2xl border-2 border-stone-200 dark:border-stone-800 p-4 hover:border-brand-500 transition-all text-center flex flex-col items-center justify-center gap-2.5 has-[:checked]:border-brand-600 has-[:checked]:bg-brand-50/60 dark:has-[:checked]:bg-brand-950/30 group">
+                                <input type="checkbox" name="furniture_type" value="Kúpeľňový nábytok" class="hidden">
+                                <div class="w-12 h-12 rounded-xl bg-stone-100 dark:bg-stone-800 group-hover:bg-brand-100 text-stone-700 dark:text-stone-300 group-hover:text-brand-600 flex items-center justify-center transition-colors">
+                                    <i data-lucide="bath" class="w-6 h-6"></i>
+                                </div>
+                                <span class="text-xs font-bold text-stone-800 dark:text-stone-200">Kúpeľňový nábytok</span>
+                            </label>
+
+                            <!-- Option: Spálňa / Detská izba -->
+                            <label class="cursor-pointer relative rounded-2xl border-2 border-stone-200 dark:border-stone-800 p-4 hover:border-brand-500 transition-all text-center flex flex-col items-center justify-center gap-2.5 has-[:checked]:border-brand-600 has-[:checked]:bg-brand-50/60 dark:has-[:checked]:bg-brand-950/30 group">
+                                <input type="checkbox" name="furniture_type" value="Spálňa & Detská izba" class="hidden">
+                                <div class="w-12 h-12 rounded-xl bg-stone-100 dark:bg-stone-800 group-hover:bg-brand-100 text-stone-700 dark:text-stone-300 group-hover:text-brand-600 flex items-center justify-center transition-colors">
+                                    <i data-lucide="bed" class="w-6 h-6"></i>
+                                </div>
+                                <span class="text-xs font-bold text-stone-800 dark:text-stone-200">Spálňa / Detská izba</span>
+                            </label>
+
+                            <!-- Option: Schody & Dvere -->
+                            <label class="cursor-pointer relative rounded-2xl border-2 border-stone-200 dark:border-stone-800 p-4 hover:border-brand-500 transition-all text-center flex flex-col items-center justify-center gap-2.5 has-[:checked]:border-brand-600 has-[:checked]:bg-brand-50/60 dark:has-[:checked]:bg-brand-950/30 group">
+                                <input type="checkbox" name="furniture_type" value="Drevené schody & Dvere" class="hidden">
+                                <div class="w-12 h-12 rounded-xl bg-stone-100 dark:bg-stone-800 group-hover:bg-brand-100 text-stone-700 dark:text-stone-300 group-hover:text-brand-600 flex items-center justify-center transition-colors">
+                                    <i data-lucide="footprints" class="w-6 h-6"></i>
+                                </div>
+                                <span class="text-xs font-bold text-stone-800 dark:text-stone-200">Schody & Dvere</span>
+                            </label>
+
+                            <!-- Option: Terasa / Exteriér -->
+                            <label class="cursor-pointer relative rounded-2xl border-2 border-stone-200 dark:border-stone-800 p-4 hover:border-brand-500 transition-all text-center flex flex-col items-center justify-center gap-2.5 has-[:checked]:border-brand-600 has-[:checked]:bg-brand-50/60 dark:has-[:checked]:bg-brand-950/30 group">
+                                <input type="checkbox" name="furniture_type" value="Pergola, terasa & exteriér" class="hidden">
+                                <div class="w-12 h-12 rounded-xl bg-stone-100 dark:bg-stone-800 group-hover:bg-brand-100 text-stone-700 dark:text-stone-300 group-hover:text-brand-600 flex items-center justify-center transition-colors">
+                                    <i data-lucide="sun-dim" class="w-6 h-6"></i>
+                                </div>
+                                <span class="text-xs font-bold text-stone-800 dark:text-stone-200">Pergola / Terasa</span>
+                            </label>
+
+                            <!-- Option: Celý interiér na kľúč -->
+                            <label class="cursor-pointer relative rounded-2xl border-2 border-stone-200 dark:border-stone-800 p-4 hover:border-brand-500 transition-all text-center flex flex-col items-center justify-center gap-2.5 has-[:checked]:border-brand-600 has-[:checked]:bg-brand-50/60 dark:has-[:checked]:bg-brand-950/30 group">
+                                <input type="checkbox" name="furniture_type" value="Kompletný interiér na kľúč" class="hidden">
+                                <div class="w-12 h-12 rounded-xl bg-stone-100 dark:bg-stone-800 group-hover:bg-brand-100 text-stone-700 dark:text-stone-300 group-hover:text-brand-600 flex items-center justify-center transition-colors">
+                                    <i data-lucide="home" class="w-6 h-6"></i>
+                                </div>
+                                <span class="text-xs font-bold text-stone-800 dark:text-stone-200">Kompletný interiér</span>
+                            </label>
+                        </div>
+
+                        <!-- Step 1 Actions -->
+                        <div class="flex justify-end pt-4">
+                            <button type="button" onclick="goToStep(2)" class="px-6 py-3 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-bold flex items-center gap-2 shadow-md">
+                                <span>Pokračovať na Krok 2</span>
+                                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- STEP 2: ROZSAH & MATERIÁLY -->
+                    <div id="step-2" class="step-panel space-y-6 hidden">
+                        <div class="border-b border-stone-100 dark:border-stone-800 pb-3">
+                            <h3 class="text-xl font-bold text-stone-900 dark:text-white">Krok 2: V akom štádiu je váš projekt?</h3>
+                            <p class="text-xs text-stone-500 dark:text-stone-400">Pomôže nám to pripraviť najvhodnejší postup.</p>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                            <label class="cursor-pointer p-4 rounded-2xl border-2 border-stone-200 dark:border-stone-800 has-[:checked]:border-brand-600 has-[:checked]:bg-brand-50/60 dark:has-[:checked]:bg-brand-950/30 transition-all flex flex-col justify-between">
+                                <div class="flex items-center justify-between">
+                                    <i data-lucide="file-check-2" class="w-6 h-6 text-brand-600"></i>
+                                    <input type="radio" name="project_stage" value="Mám projekt od architekta / výkres" class="text-brand-600">
+                                </div>
+                                <div class="mt-4">
+                                    <div class="font-bold text-sm text-stone-900 dark:text-white">Mám hotový projekt</div>
+                                    <p class="text-xs text-stone-500 dark:text-stone-400 mt-1">Mám nákres, výkres od architekta alebo vizualizáciu.</p>
+                                </div>
+                            </label>
+
+                            <label class="cursor-pointer p-4 rounded-2xl border-2 border-stone-200 dark:border-stone-800 has-[:checked]:border-brand-600 has-[:checked]:bg-brand-50/60 dark:has-[:checked]:bg-brand-950/30 transition-all flex flex-col justify-between">
+                                <div class="flex items-center justify-between">
+                                    <i data-lucide="lightbulb" class="w-6 h-6 text-amber-600"></i>
+                                    <input type="radio" name="project_stage" value="Mám len predstavu, potrebujem zamerať a navrhnúť" checked class="text-brand-600">
+                                </div>
+                                <div class="mt-4">
+                                    <div class="font-bold text-sm text-stone-900 dark:text-white">Potrebujem návrh & zameranie</div>
+                                    <p class="text-xs text-stone-500 dark:text-stone-400 mt-1">Mám len približnú predstavu, potrebujem poradiť.</p>
+                                </div>
+                            </label>
+
+                            <label class="cursor-pointer p-4 rounded-2xl border-2 border-stone-200 dark:border-stone-800 has-[:checked]:border-brand-600 has-[:checked]:bg-brand-50/60 dark:has-[:checked]:bg-brand-950/30 transition-all flex flex-col justify-between">
+                                <div class="flex items-center justify-between">
+                                    <i data-lucide="building-2" class="w-6 h-6 text-blue-600"></i>
+                                    <input type="radio" name="project_stage" value="Novostavba / Holobyt pred dokončením" class="text-brand-600">
+                                </div>
+                                <div class="mt-4">
+                                    <div class="font-bold text-sm text-stone-900 dark:text-white">Novostavba / Holobyt</div>
+                                    <p class="text-xs text-stone-500 dark:text-stone-400 mt-1">Priestor sa stavia alebo čaká na dokončenie omietok/podláh.</p>
+                                </div>
+                            </label>
+                        </div>
+
+                        <!-- Materials & Hardware Preference -->
+                        <div class="space-y-3 pt-4">
+                            <label class="block text-sm font-bold text-stone-900 dark:text-white">Preferované materiály a vyhotovenie:</label>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+                                <label class="flex items-center gap-2 p-3 rounded-xl bg-stone-50 dark:bg-stone-800/60 border border-stone-200 dark:border-stone-700/80 cursor-pointer">
+                                    <input type="checkbox" name="materials" value="Laminát DTD (Egger / Kronospan)" class="rounded text-brand-600">
+                                    <span>Laminát DTD (Egger, Kronospan, Fundermax)</span>
+                                </label>
+                                <label class="flex items-center gap-2 p-3 rounded-xl bg-stone-50 dark:bg-stone-800/60 border border-stone-200 dark:border-stone-700/80 cursor-pointer">
+                                    <input type="checkbox" name="materials" value="Striekané lakované MDF (mat / lesk RAL)" class="rounded text-brand-600">
+                                    <span>Striekané lakované MDF (mat / vysoký lesk)</span>
+                                </label>
+                                <label class="flex items-center gap-2 p-3 rounded-xl bg-stone-50 dark:bg-stone-800/60 border border-stone-200 dark:border-stone-700/80 cursor-pointer">
+                                    <input type="checkbox" name="materials" value="Prírodné drevo / Masív / Dubová dýha" class="rounded text-brand-600">
+                                    <span>Prírodné drevo / Masív / Dubová dýha</span>
+                                </label>
+                                <label class="flex items-center gap-2 p-3 rounded-xl bg-stone-50 dark:bg-stone-800/60 border border-stone-200 dark:border-stone-700/80 cursor-pointer">
+                                    <input type="checkbox" name="materials" value="Prémiové tlmené kovanie Blum / Hettich" checked class="rounded text-brand-600">
+                                    <span>Prémiové tiché kovanie (Blum / Hettich)</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Step 2 Actions -->
+                        <div class="flex justify-between pt-4">
+                            <button type="button" onclick="goToStep(1)" class="px-5 py-3 rounded-xl border border-stone-300 dark:border-stone-700 text-stone-700 dark:text-stone-300 font-bold flex items-center gap-2 hover:bg-stone-100 dark:hover:bg-stone-800">
+                                <i data-lucide="arrow-left" class="w-4 h-4"></i>
+                                <span>Späť</span>
+                            </button>
+                            <button type="button" onclick="goToStep(3)" class="px-6 py-3 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-bold flex items-center gap-2 shadow-md">
+                                <span>Pokračovať na Krok 3</span>
+                                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- STEP 3: KONTAKTY, ADRESA A PRÍLOHA -->
+                    <div id="step-3" class="step-panel space-y-6 hidden">
+                        <div class="border-b border-stone-100 dark:border-stone-800 pb-3">
+                            <h3 class="text-xl font-bold text-stone-900 dark:text-white">Krok 3: Kam vám máme poslať kalkuláciu?</h3>
+                            <p class="text-xs text-stone-500 dark:text-stone-400">Vaše údaje použijeme výhradne na vypracovanie ponuky.</p>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold uppercase tracking-wider text-stone-600 dark:text-stone-400 mb-1.5">
+                                    Vaše celé meno / Firma <span class="text-rose-500">*</span>
+                                </label>
+                                <input type="text" id="cust-name" required placeholder="napr. Martin Novák" class="w-full px-4 py-3 rounded-xl bg-white dark:bg-stone-800 border border-stone-300 dark:border-stone-700 text-stone-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-brand-500 text-sm shadow-sm">
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-bold uppercase tracking-wider text-stone-600 dark:text-stone-400 mb-1.5">
+                                    Telefónne číslo <span class="text-rose-500">*</span>
+                                </label>
+                                <input type="tel" id="cust-phone" required placeholder="napr. +421 900 123 456" class="w-full px-4 py-3 rounded-xl bg-white dark:bg-stone-800 border border-stone-300 dark:border-stone-700 text-stone-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-brand-500 text-sm shadow-sm">
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-bold uppercase tracking-wider text-stone-600 dark:text-stone-400 mb-1.5">
+                                    Emailová adresa <span class="text-rose-500">*</span>
+                                </label>
+                                <input type="email" id="cust-email" required placeholder="napr. novak@email.sk" class="w-full px-4 py-3 rounded-xl bg-white dark:bg-stone-800 border border-stone-300 dark:border-stone-700 text-stone-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-brand-500 text-sm shadow-sm">
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-bold uppercase tracking-wider text-stone-600 dark:text-stone-400 mb-1.5">
+                                    Miesto realizácie (Mesto / Obec) <span class="text-rose-500">*</span>
+                                </label>
+                                <input type="text" id="cust-city" required placeholder="napr. Bratislava - Ružinov, Pezinok, Senec..." class="w-full px-4 py-3 rounded-xl bg-white dark:bg-stone-800 border border-stone-300 dark:border-stone-700 text-stone-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-brand-500 text-sm shadow-sm">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-wider text-stone-600 dark:text-stone-400 mb-1.5">
+                                Stručný popis, rozmery alebo špeciálne požiadavky
+                            </label>
+                            <textarea id="cust-notes" rows="3" placeholder="Popíšte približné rozmery, farebné ladenie, či máte záujem aj o demontáž starého nábytku alebo spotrebiče..." class="w-full px-4 py-3 rounded-xl bg-white dark:bg-stone-800 border border-stone-300 dark:border-stone-700 text-stone-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-brand-500 text-sm shadow-sm"></textarea>
+                        </div>
+
+                        <!-- File Upload Mockup / Interactive Box -->
+                        <div class="border-2 border-dashed border-stone-300 dark:border-stone-700 rounded-2xl p-6 text-center hover:border-brand-500 dark:hover:border-brand-500 transition-colors bg-stone-50/70 dark:bg-stone-800/30">
+                            <i data-lucide="upload-cloud" class="w-8 h-8 mx-auto text-brand-600 dark:text-brand-400 mb-2"></i>
+                            <div class="text-sm font-bold text-stone-800 dark:text-stone-200">
+                                Nahrajte pôdorys, skicu alebo fotky priestoru
+                            </div>
+                            <p class="text-xs text-stone-500 dark:text-stone-400 mt-1">
+                                Podporované formáty: JPG, PNG, PDF, DWG (max. 25 MB)
+                            </p>
+                            <label class="mt-3 inline-block cursor-pointer px-4 py-2 rounded-xl bg-white dark:bg-stone-800 border border-stone-300 dark:border-stone-700 text-xs font-bold text-stone-700 dark:text-stone-200 hover:bg-stone-100 shadow-sm">
+                                <span>Vybrať súbor z počítača</span>
+                                <input type="file" id="cust-file" class="hidden" onchange="handleFileUpload(this)">
+                            </label>
+                            <div id="file-selected-name" class="text-xs text-emerald-600 dark:text-emerald-400 font-semibold mt-2 hidden"></div>
+                        </div>
+
+                        <!-- GDPR Checkbox -->
+                        <div class="flex items-start gap-3 pt-2">
+                            <input type="checkbox" id="cust-gdpr" required checked class="mt-1 rounded text-brand-600 focus:ring-brand-500">
+                            <label for="cust-gdpr" class="text-xs text-stone-500 dark:text-stone-400">
+                                Súhlasím so spracovaním osobných údajov spoločnosťou KF-interiér s.r.o. za účelom vypracovania cenovej ponuky a kontaktu v zmysle <a href="https://vyroba-nabytku-bratislava-kfinterier.sk/ochrana-sukromia/" target="_blank" class="text-brand-600 underline">zásad ochrany osobných údajov (GDPR)</a>.
+                            </label>
+                        </div>
+
+                        <!-- Step 3 Actions -->
+                        <div class="flex justify-between pt-4">
+                            <button type="button" onclick="goToStep(2)" class="px-5 py-3 rounded-xl border border-stone-300 dark:border-stone-700 text-stone-700 dark:text-stone-300 font-bold flex items-center gap-2 hover:bg-stone-100 dark:hover:bg-stone-800">
+                                <i data-lucide="arrow-left" class="w-4 h-4"></i>
+                                <span>Späť</span>
+                            </button>
+                            <button type="submit" class="px-8 py-3.5 rounded-xl bg-gradient-to-r from-brand-600 to-amber-600 hover:from-brand-700 hover:to-amber-700 text-white font-bold flex items-center gap-2.5 shadow-lg shadow-brand-500/25 hover:shadow-xl hover:-translate-y-0.5 transition-all text-base">
+                                <i data-lucide="send" class="w-5 h-5"></i>
+                                <span>Odoslať nezáväzný dopyt</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- STEP 4: SUCCESS CONFIRMATION MODAL STATE -->
+                    <div id="step-success" class="space-y-6 text-center py-8 hidden">
+                        <div class="w-20 h-20 rounded-full bg-emerald-100 dark:bg-emerald-950/70 text-emerald-600 dark:text-emerald-400 flex items-center justify-center mx-auto shadow-inner">
+                            <i data-lucide="check-check" class="w-10 h-10"></i>
+                        </div>
+
+                        <div class="space-y-2">
+                            <h3 class="text-2xl sm:text-3xl font-serif font-bold text-stone-900 dark:text-white">
+                                Ďakujeme! Váš dopyt bol úspešne odoslaný.
+                            </h3>
+                            <p class="text-sm text-stone-600 dark:text-stone-400 max-w-md mx-auto">
+                                Náš tím v <strong class="text-stone-900 dark:text-white">KF-interiér s.r.o.</strong> prejde vaše požiadavky a ozve sa vám najneskôr do 24 hodín s prvotným odhadom alebo návrhom termínu zamerania.
+                            </p>
+                        </div>
+
+                        <div class="p-6 rounded-2xl bg-stone-50 dark:bg-stone-800/50 max-w-lg mx-auto text-left border border-stone-200 dark:border-stone-800 space-y-3">
+                            <div class="text-xs font-bold uppercase tracking-wider text-brand-600 dark:text-brand-400">Súhrn odoslaného dopytu:</div>
+                            <div class="text-xs text-stone-600 dark:text-stone-300 space-y-1" id="summary-content">
+                                <!-- Populated dynamically by JS -->
+                            </div>
+                        </div>
+
+                        <div class="pt-4 flex flex-wrap justify-center gap-4">
+                            <a href="tel:+421903224896" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-stone-900 dark:bg-stone-800 text-white text-xs font-bold">
+                                <i data-lucide="phone" class="w-4 h-4 text-brand-400"></i>
+                                Volať výrobu v prípade súrnych otázok
+                            </a>
+                            <button onclick="resetInquiryForm()" class="px-5 py-2.5 rounded-xl border border-stone-300 dark:border-stone-700 text-xs font-bold text-stone-700 dark:text-stone-300 hover:bg-stone-100 dark:hover:bg-stone-800">
+                                Zadať ďalší dopyt
+                            </button>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Company Details, Billing Info & Interactive Location Section -->
+    <section class="py-16 bg-white dark:bg-[#151210] border-b border-stone-200 dark:border-stone-800 transition-colors">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                
+                <!-- Left: Full Official Business Register Details -->
+                <div class="lg:col-span-5 space-y-6">
+                    <div>
+                        <span class="text-xs font-bold uppercase tracking-widest text-brand-600 dark:text-brand-400">Právna istota & Transparentnosť</span>
+                        <h2 class="text-2xl sm:text-3xl font-serif font-bold text-stone-900 dark:text-white mt-1">
+                            Fakturačné a firemné údaje
+                        </h2>
+                        <p class="text-xs text-stone-500 dark:text-stone-400 mt-2">
+                            Sme registrovaná slovenská spoločnosť s ručením obmedzeným, platiteľ DPH, s čistou históriou od roku 2018.
+                        </p>
+                    </div>
+
+                    <div class="rounded-2xl border border-stone-200 dark:border-stone-800 p-6 bg-stone-50 dark:bg-stone-900/50 space-y-4">
+                        <div class="flex items-start justify-between border-b border-stone-200 dark:border-stone-800 pb-3">
+                            <span class="text-xs text-stone-500 dark:text-stone-400">Obchodné meno:</span>
+                            <span class="text-sm font-bold text-stone-900 dark:text-white">KF-interiér s.r.o.</span>
+                        </div>
+
+                        <div class="flex items-start justify-between border-b border-stone-200 dark:border-stone-800 pb-3">
+                            <span class="text-xs text-stone-500 dark:text-stone-400">Sídlo spoločnosti:</span>
+                            <span class="text-sm font-semibold text-stone-900 dark:text-white text-right">Záhradná 591/74, 900 91 Limbach</span>
+                        </div>
+
+                        <div class="flex items-start justify-between border-b border-stone-200 dark:border-stone-800 pb-3">
+                            <span class="text-xs text-stone-500 dark:text-stone-400">IČO:</span>
+                            <span class="text-sm font-mono font-bold text-stone-900 dark:text-white">51 689 537</span>
+                        </div>
+
+                        <div class="flex items-start justify-between border-b border-stone-200 dark:border-stone-800 pb-3">
+                            <span class="text-xs text-stone-500 dark:text-stone-400">DIČ:</span>
+                            <span class="text-sm font-mono font-semibold text-stone-900 dark:text-white">2120766934</span>
+                        </div>
+
+                        <div class="flex items-start justify-between border-b border-stone-200 dark:border-stone-800 pb-3">
+                            <span class="text-xs text-stone-500 dark:text-stone-400">IČ DPH:</span>
+                            <span class="text-sm font-mono font-bold text-emerald-600 dark:text-emerald-400">SK2120766934 (Platiteľ DPH)</span>
+                        </div>
+
+                        <div class="flex items-start justify-between border-b border-stone-200 dark:border-stone-800 pb-3">
+                            <span class="text-xs text-stone-500 dark:text-stone-400">Registrácia:</span>
+                            <span class="text-xs font-medium text-stone-700 dark:text-stone-300 text-right">Okresný súd Bratislava III, vložka č. 128479/B</span>
+                        </div>
+
+                        <div class="flex items-start justify-between pt-1">
+                            <span class="text-xs text-stone-500 dark:text-stone-400">Dátum zápisu:</span>
+                            <span class="text-xs font-semibold text-stone-800 dark:text-stone-200">24. mája 2018</span>
+                        </div>
+                    </div>
+
+                    <!-- Coverage Areas Badges -->
+                    <div class="space-y-3">
+                        <span class="text-xs font-bold uppercase tracking-wider text-stone-700 dark:text-stone-300 flex items-center gap-1.5">
+                            <i data-lucide="navigation" class="w-4 h-4 text-brand-600"></i>
+                            Región priamej obsluhy bez vysokých príplatkov za dopravu:
+                        </span>
+                        <div class="flex flex-wrap gap-2 text-xs font-medium">
+                            <span class="px-3 py-1 rounded-lg bg-stone-100 dark:bg-stone-800 text-stone-800 dark:text-stone-200">Bratislava (celé mesto)</span>
+                            <span class="px-3 py-1 rounded-lg bg-stone-100 dark:bg-stone-800 text-stone-800 dark:text-stone-200">Limbach & Pezinok</span>
+                            <span class="px-3 py-1 rounded-lg bg-stone-100 dark:bg-stone-800 text-stone-800 dark:text-stone-200">Senec & okolie</span>
+                            <span class="px-3 py-1 rounded-lg bg-stone-100 dark:bg-stone-800 text-stone-800 dark:text-stone-200">Modra & Svätý Jur</span>
+                            <span class="px-3 py-1 rounded-lg bg-stone-100 dark:bg-stone-800 text-stone-800 dark:text-stone-200">Stupava & Malacky</span>
+                            <span class="px-3 py-1 rounded-lg bg-stone-100 dark:bg-stone-800 text-stone-800 dark:text-stone-200">Trnava & okolitý kraj</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Map and Location Visualizer -->
+                <div class="lg:col-span-7 flex flex-col justify-between space-y-6">
+                    <div>
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-xs font-bold uppercase tracking-widest text-brand-600 dark:text-brand-400">Sídlo & Dielňa</span>
+                            <a href="https://maps.google.com/?q=Záhradná+591/74,+900+91+Limbach" target="_blank" rel="noopener" class="text-xs font-bold text-brand-600 dark:text-brand-400 hover:underline flex items-center gap-1">
+                                <span>Otvoriť v Google Maps</span>
+                                <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+                            </a>
+                        </div>
+                        <h3 class="text-2xl font-serif font-bold text-stone-900 dark:text-white">
+                            Záhradná 591/74, 900 91 Limbach (okres Pezinok)
+                        </h3>
+                    </div>
+
+                    <!-- Interactive Map Iframe Embed -->
+                    <div class="w-full h-80 sm:h-96 rounded-3xl overflow-hidden border border-stone-200 dark:border-stone-800 shadow-lg relative">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2656.7720743603417!2d17.215579976865213!3d48.28807897126131!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476c968f9a2e6f43%3A0x6b44dd80d9a4fba7!2sZ%C3%A1hradn%C3%A1%20591%2F74%2C%20900%2091%20Limbach!5e0!3m2!1ssk!2ssk!4v1700000000000!5m2!1ssk!2ssk" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Poloha KF-Interiér Limbach">
+                        </iframe>
+                    </div>
+
+                    <!-- Workshop Visit Notice -->
+                    <div class="p-4 rounded-2xl bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-900/60 flex items-start gap-3">
+                        <i data-lucide="info" class="w-5 h-5 text-amber-600 dark:text-amber-400 shrink-0 mt-0.5"></i>
+                        <p class="text-xs text-amber-900 dark:text-amber-200 leading-relaxed">
+                            <strong>Upozornenie pre osobnú návštevu dielne:</strong> Keďže naši majstri často vykonávajú zamerania a montáže priamo u zákazníkov, osobnú návštevu dielne v Limbachu si, prosím, <strong>vopred telefonicky dohodnite na čísle +421 903 224 896</strong>, aby sme sa vám mohli naplno venovať.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 5-Step Craftsmanship Process (Ako prebieha spolupráca) -->
+    <section class="py-16 bg-stone-50 dark:bg-[#12100e] border-b border-stone-200 dark:border-stone-800 transition-colors">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <span class="text-xs font-bold uppercase tracking-widest text-brand-600 dark:text-brand-400">Jednoduchý & preverený proces</span>
+                <h2 class="text-3xl sm:text-4xl font-serif font-bold text-stone-900 dark:text-white mt-2">
+                    5 krokov od prvého kontaktu po váš nový nábytok
+                </h2>
+                <p class="text-stone-600 dark:text-stone-400 mt-2 text-sm sm:text-base">
+                    Bez stresu a chaosu. Presne viete, čo a kedy sa deje.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-6">
+                <!-- Step 1 -->
+                <div class="p-6 rounded-2xl bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 relative space-y-3 shadow-sm">
+                    <div class="text-3xl font-serif font-bold text-brand-500/40">01</div>
+                    <h4 class="font-bold text-base text-stone-900 dark:text-white">Kontakt & Dopyt</h4>
+                    <p class="text-xs text-stone-500 dark:text-stone-400 leading-relaxed">
+                        Vyplníte formulár alebo zavoláte. Preberieme vaše požiadavky a pripravíme orientačný rozpočet.
+                    </p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="p-6 rounded-2xl bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 relative space-y-3 shadow-sm">
+                    <div class="text-3xl font-serif font-bold text-brand-500/40">02</div>
+                    <h4 class="font-bold text-base text-stone-900 dark:text-white">Laserové zameranie</h4>
+                    <p class="text-xs text-stone-500 dark:text-stone-400 leading-relaxed">
+                        Prídeme k vám s fyzickými vzorkovníkmi, premeriame steny, uhly a vyriešime detaily na mieste.
+                    </p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="p-6 rounded-2xl bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 relative space-y-3 shadow-sm">
+                    <div class="text-3xl font-serif font-bold text-brand-500/40">03</div>
+                    <h4 class="font-bold text-base text-stone-900 dark:text-white">3D Návrh & Cena</h4>
+                    <p class="text-xs text-stone-500 dark:text-stone-400 leading-relaxed">
+                        Pripravíme vizualizáciu a finálnu záväznú cenovú ponuku bez skrytých poplatkov.
+                    </p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="p-6 rounded-2xl bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 relative space-y-3 shadow-sm">
+                    <div class="text-3xl font-serif font-bold text-brand-500/40">04</div>
+                    <h4 class="font-bold text-base text-stone-900 dark:text-white">Výroba v dielni</h4>
+                    <p class="text-xs text-stone-500 dark:text-stone-400 leading-relaxed">
+                        Poctivé spracovanie na špičkových strojoch v Limbachu, vodeodolné PUR hrany a precízne laky.
+                    </p>
+                </div>
+
+                <!-- Step 5 -->
+                <div class="p-6 rounded-2xl bg-white dark:bg-stone-900 border border-brand-500/40 dark:border-brand-500/40 shadow-sm relative space-y-3">
+                    <div class="text-3xl font-serif font-bold text-brand-600">05</div>
+                    <h4 class="font-bold text-base text-stone-900 dark:text-white">Dovoz & Montáž</h4>
+                    <p class="text-xs text-stone-500 dark:text-stone-400 leading-relaxed">
+                        Vlastnými autami privezieme, zmontujeme, upraceme a v prípade záujmu odvezieme starý nábytok.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Workshop & Craftsmanship Gallery Preview (Real photos from their workshop) -->
+    <section class="py-16 bg-white dark:bg-[#151210] border-b border-stone-200 dark:border-stone-800 transition-colors">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+                <div>
+                    <span class="text-xs font-bold uppercase tracking-widest text-brand-600 dark:text-brand-400">Reálna výroba bez sprostredkovateľov</span>
+                    <h2 class="text-3xl font-serif font-bold text-stone-900 dark:text-white mt-1">
+                        Pohľad do našej dielne a realizácií
+                    </h2>
+                </div>
+                <a href="https://vyroba-nabytku-bratislava-kfinterier.sk/galeria/" target="_blank" class="inline-flex items-center gap-1.5 text-sm font-bold text-brand-600 dark:text-brand-400 hover:underline">
+                    <span>Pozrieť celú galériu 60+ realizácií</span>
+                    <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </a>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <!-- Photo 1: Kitchen Realization -->
+                <div class="group relative rounded-2xl overflow-hidden shadow-sm aspect-square bg-stone-100 dark:bg-stone-800">
+                    <img src="https://vyroba-nabytku-bratislava-kfinterier.sk/wp-content/uploads/2023/03/Kuchynska-linka-na-mieru-Bratislava.-KF-Interier..jpeg" 
+                         alt="Kuchyňa na mieru Bratislava" 
+                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-4 flex items-end">
+                        <span class="text-xs font-bold text-white">Kuchynská linka na mieru</span>
+                    </div>
+                </div>
+
+                <!-- Photo 2: Machines / Dielňa -->
+                <div class="group relative rounded-2xl overflow-hidden shadow-sm aspect-square bg-stone-100 dark:bg-stone-800">
+                    <img src="https://vyroba-nabytku-bratislava-kfinterier.sk/wp-content/uploads/2023/03/stroj-2-scaled.jpg" 
+                         alt="Strojové vybavenie dielne Limbach" 
+                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-4 flex items-end">
+                        <span class="text-xs font-bold text-white">Vybavenie stolárskej dielne</span>
+                    </div>
+                </div>
+
+                <!-- Photo 3: Wardrobes / Šatník -->
+                <div class="group relative rounded-2xl overflow-hidden shadow-sm aspect-square bg-stone-100 dark:bg-stone-800">
+                    <img src="https://vyroba-nabytku-bratislava-kfinterier.sk/wp-content/uploads/2023/03/vstavana-skrina.jpg" 
+                         alt="Vstavaná skriňa Bratislava" 
+                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-4 flex items-end">
+                        <span class="text-xs font-bold text-white">Vstavaná skriňa so zrkadlom</span>
+                    </div>
+                </div>
+
+                <!-- Photo 4: Fleet / Doprava -->
+                <div class="group relative rounded-2xl overflow-hidden shadow-sm aspect-square bg-stone-100 dark:bg-stone-800">
+                    <img src="https://vyroba-nabytku-bratislava-kfinterier.sk/wp-content/uploads/2023/03/kf-voz-park-scaled.jpg" 
+                         alt="Vozový park KF Interier" 
+                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-4 flex items-end">
+                        <span class="text-xs font-bold text-white">Vlastná doprava až k vám</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Accordion Section -->
+    <section class="py-16 bg-stone-50 dark:bg-[#12100e] border-b border-stone-200 dark:border-stone-800 transition-colors">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="text-xs font-bold uppercase tracking-widest text-brand-600 dark:text-brand-400">Často kladené otázky</span>
+                <h2 class="text-3xl font-serif font-bold text-stone-900 dark:text-white mt-2">
+                    Všetko, čo potrebujete vedieť pred objednávkou
+                </h2>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ 1 -->
+                <div class="faq-item rounded-2xl border border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-900 overflow-hidden shadow-sm">
+                    <button class="w-full p-5 text-left font-bold text-stone-900 dark:text-white flex items-center justify-between gap-4 focus:outline-none" onclick="toggleFaq(this)">
+                        <span class="text-sm sm:text-base">Je zameranie a vypracovanie cenovej ponuky bezplatné?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-stone-400 transform transition-transform duration-200"></i>
+                    </button>
+                    <div class="faq-content hidden px-5 pb-5 text-xs sm:text-sm text-stone-600 dark:text-stone-400 leading-relaxed border-t border-stone-100 dark:border-stone-800 pt-3">
+                        Áno. Po úvodnej konzultácii a orientačnom odsúhlasení rozpočtu za vami prídeme priamo na stavbu alebo do bytu v Bratislave a okolí. Presne priestor zameriame laserom a vypracujeme nezáväznú finálnu cenovú ponuku.
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="faq-item rounded-2xl border border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-900 overflow-hidden shadow-sm">
+                    <button class="w-full p-5 text-left font-bold text-stone-900 dark:text-white flex items-center justify-between gap-4 focus:outline-none" onclick="toggleFaq(this)">
+                        <span class="text-sm sm:text-base">Aká je bežná dodacia lehota výroby nábytku?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-stone-400 transform transition-transform duration-200"></i>
+                    </button>
+                    <div class="faq-content hidden px-5 pb-5 text-xs sm:text-sm text-stone-600 dark:text-stone-400 leading-relaxed border-t border-stone-100 dark:border-stone-800 pt-3">
+                        Štandardná dodacia lehota pri vstavaných skriniach a menšom nábytku je 3 až 5 týždňov od schválenia výkresov a zloženia zálohy. Pri komplexných kuchynských linkách so striekanými lakovanými povrchmi alebo masívom je to spravidla 5 až 8 týždňov. Termíny vždy pevne uvádzame v zmluve.
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="faq-item rounded-2xl border border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-900 overflow-hidden shadow-sm">
+                    <button class="w-full p-5 text-left font-bold text-stone-900 dark:text-white flex items-center justify-between gap-4 focus:outline-none" onclick="toggleFaq(this)">
+                        <span class="text-sm sm:text-base">Aké materiály a kovania pri výrobe používate?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-stone-400 transform transition-transform duration-200"></i>
+                    </button>
+                    <div class="faq-content hidden px-5 pb-5 text-xs sm:text-sm text-stone-600 dark:text-stone-400 leading-relaxed border-t border-stone-100 dark:border-stone-800 pt-3">
+                        Pracujeme výhradne s certifikovanými materiálmi od renomovaných európskych výrobcov: laminované drevotrieskové dosky Egger, Kronospan a Fundermax, kvalitné MDF dosky striekané polyuretánovými lakmi (mat aj vysoký lesk podľa vzorkovníkov RAL/NCS), prírodné dýhy a masívne drevo. Kovania osádzame výhradne prémiové rakúske Blum a nemecké Hettich s doživotnou garanciou plynulého chodu.
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="faq-item rounded-2xl border border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-900 overflow-hidden shadow-sm">
+                    <button class="w-full p-5 text-left font-bold text-stone-900 dark:text-white flex items-center justify-between gap-4 focus:outline-none" onclick="toggleFaq(this)">
+                        <span class="text-sm sm:text-base">Zabezpečujete aj demontáž starého nábytku a odvoz odpadu?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-stone-400 transform transition-transform duration-200"></i>
+                    </button>
+                    <div class="faq-content hidden px-5 pb-5 text-xs sm:text-sm text-stone-600 dark:text-stone-400 leading-relaxed border-t border-stone-100 dark:border-stone-800 pt-3">
+                        Áno! Ponúkame kompletný full-service. Ak vymieňate starú kuchyňu alebo skriňu, náš tím ju odborne demontuje, znesie a zabezpečí ekologickú likvidáciu a odvoz odpadu, aby bol priestor okamžite pripravený na montáž nového nábytku.
+                    </div>
+                </div>
+
+                <!-- FAQ 5 -->
+                <div class="faq-item rounded-2xl border border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-900 overflow-hidden shadow-sm">
+                    <button class="w-full p-5 text-left font-bold text-stone-900 dark:text-white flex items-center justify-between gap-4 focus:outline-none" onclick="toggleFaq(this)">
+                        <span class="text-sm sm:text-base">Máte vlastnú dielňu alebo ste len sprostredkovateľ?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-stone-400 transform transition-transform duration-200"></i>
+                    </button>
+                    <div class="faq-content hidden px-5 pb-5 text-xs sm:text-sm text-stone-600 dark:text-stone-400 leading-relaxed border-t border-stone-100 dark:border-stone-800 pt-3">
+                        Sme priamo výrobná stolárska firma KF-interiér s.r.o. s vlastnou dielňou a strojovým parkom (formátovacia píla, olepovačka hrán s PUR lepidlom, striekacia kabína) v Limbachu pri Bratislave. Vďaka tomu máte 100% kontrolu nad kvalitou a neplatíte žiadne marže obchodníkom ani štúdiám.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bottom Final CTA Banner (Warm rich wood gradient in light mode, deep dark in dark mode) -->
+    <section class="py-16 bg-gradient-to-br from-brand-700 via-brand-800 to-amber-900 dark:from-stone-900 dark:via-stone-950 dark:to-brand-950 text-white relative overflow-hidden transition-colors">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 space-y-6">
+            <span class="px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-white/20 text-white border border-white/30 backdrop-blur-sm">
+                Začnite ešte dnes
+            </span>
+            <h2 class="text-3xl sm:text-5xl font-serif font-bold tracking-tight text-white">
+                Vytvorme spolu nábytok, ktorý vám bude slúžiť desiatky rokov.
+            </h2>
+            <p class="text-brand-100 dark:text-stone-300 max-w-2xl mx-auto text-base">
+                Zavolajte nám do výroby alebo vyplňte dopyt. Radi vám poradíme a navrhneme najlepšie technické riešenie pre váš domov.
+            </p>
+            <div class="flex flex-wrap items-center justify-center gap-4 pt-2">
+                <a href="#dopyt-formular" class="px-7 py-3.5 rounded-xl bg-white hover:bg-stone-100 text-brand-900 font-bold shadow-lg shadow-black/20 hover:shadow-xl hover:-translate-y-0.5 transition-all">
+                    Odoslať nezáväzný dopyt
+                </a>
+                <a href="tel:+421903224896" class="px-7 py-3.5 rounded-xl bg-brand-900/80 hover:bg-brand-950 font-bold text-white border border-brand-400/40 transition-all flex items-center gap-2">
+                    <i data-lucide="phone" class="w-4 h-4 text-brand-300"></i>
+                    Volať +421 903 224 896
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comprehensive Footer (Clean light in light mode, luxury dark in dark mode) -->
+    <footer class="bg-stone-100 dark:bg-stone-950 text-stone-600 dark:text-stone-400 text-xs py-12 border-t border-stone-200 dark:border-stone-800 transition-colors">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Col 1: About & Logo -->
+                <div class="space-y-3 md:col-span-1">
+                    <div class="flex items-center gap-2.5">
+                        <span class="font-serif text-xl font-bold text-stone-900 dark:text-white">KF-INTERIÉR</span>
+                        <span class="text-[10px] font-bold uppercase tracking-widest px-1.5 py-0.5 rounded bg-brand-100 dark:bg-brand-900/80 text-brand-800 dark:text-brand-300 border border-brand-300 dark:border-brand-800">s.r.o.</span>
+                    </div>
+                    <p class="text-stone-600 dark:text-stone-400 leading-relaxed text-xs">
+                        Výroba nábytku na mieru s vlastnou stolárskou dielňou v Limbachu. Kuchyne, vstavané skrine, obývačky, schody a dvere pre Bratislavu a okolie.
+                    </p>
+                    <div class="text-[11px] text-stone-500 pt-1">
+                        IČO: 51689537 • IČ DPH: SK2120766934
+                    </div>
+                </div>
+
+                <!-- Col 2: Rýchle linky -->
+                <div class="space-y-3">
+                    <h5 class="text-stone-900 dark:text-stone-200 font-bold uppercase tracking-wider text-xs">Navigácia</h5>
+                    <ul class="space-y-2 text-stone-600 dark:text-stone-400">
+                        <li><a href="https://vyroba-nabytku-bratislava-kfinterier.sk/" class="hover:text-brand-600 dark:hover:text-white transition-colors">Domov</a></li>
+                        <li><a href="https://vyroba-nabytku-bratislava-kfinterier.sk/vyroba-nabytku/" class="hover:text-brand-600 dark:hover:text-white transition-colors">Výroba nábytku na mieru</a></li>
+                        <li><a href="https://vyroba-nabytku-bratislava-kfinterier.sk/sluzby/" class="hover:text-brand-600 dark:hover:text-white transition-colors">Služby a technológia</a></li>
+                        <li><a href="https://vyroba-nabytku-bratislava-kfinterier.sk/galeria/" class="hover:text-brand-600 dark:hover:text-white transition-colors">Fotogaléria realizácií</a></li>
+                        <li><a href="https://vyroba-nabytku-bratislava-kfinterier.sk/ochrana-sukromia/" class="hover:text-brand-600 dark:hover:text-white transition-colors">Ochrana súkromia (GDPR)</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Produkty & Služby -->
+                <div class="space-y-3">
+                    <h5 class="text-stone-900 dark:text-stone-200 font-bold uppercase tracking-wider text-xs">Sortiment na mieru</h5>
+                    <ul class="space-y-2 text-stone-600 dark:text-stone-400">
+                        <li>Kuchynské linky a ostrovčeky</li>
+                        <li>Vstavané skrine a walk-in šatníky</li>
+                        <li>Obývacie steny a TV nábytok</li>
+                        <li>Kúpeľňový nábytok s PUR hranami</li>
+                        <li>Drevené schody, dvere a zárubne</li>
+                        <li>Atypické interiéry a kancelárie</li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Priamy kontakt -->
+                <div class="space-y-3">
+                    <h5 class="text-stone-900 dark:text-stone-200 font-bold uppercase tracking-wider text-xs">Priamy kontakt</h5>
+                    <div class="space-y-2">
+                        <div class="flex items-center gap-2 text-stone-700 dark:text-stone-300">
+                            <i data-lucide="phone" class="w-4 h-4 text-brand-600 dark:text-brand-400 shrink-0"></i>
+                            <a href="tel:+421903224896" class="hover:text-brand-600 dark:hover:text-white font-medium">+421 903 224 896 (Výroba)</a>
+                        </div>
+                        <div class="flex items-center gap-2 text-stone-700 dark:text-stone-300">
+                            <i data-lucide="ruler" class="w-4 h-4 text-brand-600 dark:text-brand-400 shrink-0"></i>
+                            <a href="tel:+421903451120" class="hover:text-brand-600 dark:hover:text-white font-medium">+421 903 451 120 (Zameranie)</a>
+                        </div>
+                        <div class="flex items-center gap-2 text-stone-700 dark:text-stone-300">
+                            <i data-lucide="mail" class="w-4 h-4 text-brand-600 dark:text-brand-400 shrink-0"></i>
+                            <a href="mailto:kamil.frano@gmail.com" class="hover:text-brand-600 dark:hover:text-white">kamil.frano@gmail.com</a>
+                        </div>
+                        <div class="flex items-start gap-2 text-stone-600 dark:text-stone-400 pt-1">
+                            <i data-lucide="map-pin" class="w-4 h-4 text-brand-600 dark:text-brand-400 shrink-0 mt-0.5"></i>
+                            <span>Záhradná 591/74, 900 91 Limbach</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-stone-200 dark:border-stone-900 flex flex-col sm:flex-row items-center justify-between text-stone-500 text-[11px] gap-3">
+                <p>&copy; 2018 – 2026 KF-interiér s.r.o. Všetky práva vyhradené. Vytvorené s dôrazom na prémiovú stolársku kvalitu.</p>
+                <div class="flex items-center gap-4">
+                    <a href="https://vyroba-nabytku-bratislava-kfinterier.sk/ochrana-sukromia/" class="hover:text-stone-700 dark:hover:text-stone-400 transition-colors">GDPR</a>
+                    <span>•</span>
+                    <span>Slovenská remeselná výroba</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Fixed Bottom Action Bar -->
+    <div class="lg:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/95 dark:bg-[#151210]/95 backdrop-blur-md border-t border-stone-200 dark:border-stone-800 p-2.5 px-4 flex items-center justify-between gap-2 shadow-2xl transition-colors">
+        <a href="tel:+421903224896" class="flex-1 flex items-center justify-center gap-1.5 py-3 px-3 rounded-xl bg-stone-800 hover:bg-stone-900 dark:bg-stone-800 dark:hover:bg-stone-700 text-white text-xs font-bold shadow-sm">
+            <i data-lucide="phone-call" class="w-4 h-4 text-brand-400"></i>
+            <span>Zavolať výrobu</span>
+        </a>
+        <a href="https://wa.me/421903224896" target="_blank" rel="noopener" class="flex-none p-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold shadow-sm flex items-center justify-center">
+            <i data-lucide="message-circle" class="w-5 h-5"></i>
+        </a>
+        <a href="#dopyt-formular" class="flex-1 flex items-center justify-center gap-1.5 py-3 px-3 rounded-xl bg-brand-600 hover:bg-brand-700 text-white text-xs font-bold shadow-sm">
+            <i data-lucide="sparkles" class="w-4 h-4"></i>
+            <span>Naceniť</span>
+        </a>
+    </div>
+
+    <!-- Interactive Client Scripts -->
+    <script>
+        // Theme Management Logic
+        function updateThemeUI(isDark) {
+            const label = document.getElementById('theme-label');
+            const mobileLabel = document.getElementById('theme-label-mobile');
+            const container = document.getElementById('theme-icon-container');
+            const mobileContainer = document.getElementById('theme-icon-container-mobile');
+
+            if (label) label.textContent = isDark ? 'Tmavý režim' : 'Svetlý režim';
+            if (mobileLabel) mobileLabel.textContent = isDark ? 'Tmavý režim' : 'Svetlý režim';
+
+            const iconHtml = isDark 
+                ? '<i data-lucide="moon" class="w-4 h-4 text-brand-400"></i>' 
+                : '<i data-lucide="sun" class="w-4 h-4 text-amber-500"></i>';
+
+            if (container) container.innerHTML = iconHtml;
+            if (mobileContainer) mobileContainer.innerHTML = iconHtml;
+
+            if (window.lucide) {
+                lucide.createIcons();
+            }
+        }
+
+        function toggleTheme() {
+            const isDark = document.documentElement.classList.toggle('dark');
+            try {
+                localStorage.setItem('kf_theme', isDark ? 'dark' : 'light');
+            } catch (e) {
+                console.warn('localStorage is restricted:', e);
+            }
+            updateThemeUI(isDark);
+        }
+
+        // Initialize Lucide Icons & Theme UI on Load
+        document.addEventListener('DOMContentLoaded', () => {
+            const isCurrentlyDark = document.documentElement.classList.contains('dark');
+            updateThemeUI(isCurrentlyDark);
+        });
+        // Initial call in case DOMContentLoaded already fired
+        if (window.lucide) {
+            lucide.createIcons();
+        }
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+
+        // Copy Email Helper
+        function copyEmailToClipboard() {
+            navigator.clipboard.writeText('kamil.frano@gmail.com').then(() => {
+                const btnText = document.getElementById('copy-btn-text');
+                if (btnText) {
+                    btnText.textContent = 'Skopírované do schránky!';
+                    setTimeout(() => {
+                        btnText.textContent = 'Skopírovať email';
+                    }, 2500);
+                }
+            }).catch(() => {
+                alert('Email: kamil.frano@gmail.com');
+            });
+        }
+
+        // Multi-Step Form Logic
+        let currentStep = 1;
+        function goToStep(stepNumber) {
+            if (stepNumber === 2) {
+                const types = document.querySelectorAll('input[name="furniture_type"]:checked');
+                if (types.length === 0) {
+                    alert('Prosím, zvoľte aspoň jeden typ nábytku, o ktorý máte záujem.');
+                    return;
+                }
+            }
+
+            document.querySelectorAll('.step-panel').forEach(panel => panel.classList.add('hidden'));
+            const targetPanel = document.getElementById(`step-${stepNumber}`);
+            if (targetPanel) {
+                targetPanel.classList.remove('hidden');
+            }
+
+            // Update step indicators
+            document.querySelectorAll('.step-indicator').forEach(ind => {
+                const s = parseInt(ind.getAttribute('data-step'));
+                const circle = ind.querySelector('span:first-child');
+                if (s === stepNumber) {
+                    ind.classList.remove('opacity-60');
+                    circle.classList.remove('bg-stone-200', 'dark:bg-stone-800', 'text-stone-600', 'dark:text-stone-300');
+                    circle.classList.add('bg-brand-600', 'text-white');
+                } else if (s < stepNumber) {
+                    ind.classList.remove('opacity-60');
+                    circle.classList.remove('bg-brand-600');
+                    circle.classList.add('bg-emerald-600', 'text-white');
+                } else {
+                    ind.classList.add('opacity-60');
+                    circle.classList.remove('bg-brand-600', 'bg-emerald-600', 'text-white');
+                    circle.classList.add('bg-stone-200', 'dark:bg-stone-800', 'text-stone-600', 'dark:text-stone-300');
+                }
+            });
+
+            currentStep = stepNumber;
+            if (window.lucide) lucide.createIcons();
+        }
+
+        // File upload handler
+        function handleFileUpload(input) {
+            const fileNameDiv = document.getElementById('file-selected-name');
+            if (input.files && input.files[0]) {
+                fileNameDiv.textContent = '✓ Vybraný súbor: ' + input.files[0].name;
+                fileNameDiv.classList.remove('hidden');
+            }
+        }
+
+        // Form Submit Handler
+        function submitInquiry() {
+            const name = document.getElementById('cust-name').value;
+            const phone = document.getElementById('cust-phone').value;
+            const email = document.getElementById('cust-email').value;
+            const city = document.getElementById('cust-city').value;
+            const notes = document.getElementById('cust-notes').value;
+
+            // Collect selected types
+            const selectedTypes = Array.from(document.querySelectorAll('input[name="furniture_type"]:checked')).map(el => el.value);
+            const stage = document.querySelector('input[name="project_stage"]:checked')?.value || 'Neuvedené';
+            const materials = Array.from(document.querySelectorAll('input[name="materials"]:checked')).map(el => el.value);
+
+            // Populate summary
+            const summaryDiv = document.getElementById('summary-content');
+            summaryDiv.innerHTML = `
+                <div><strong>Klient:</strong> ${name} (${phone}, ${email})</div>
+                <div><strong>Lokalita:</strong> ${city}</div>
+                <div><strong>Typ nábytku:</strong> ${selectedTypes.join(', ')}</div>
+                <div><strong>Štádium projektu:</strong> ${stage}</div>
+                ${materials.length > 0 ? `<div><strong>Materiály:</strong> ${materials.join(', ')}</div>` : ''}
+                ${notes ? `<div><strong>Poznámka:</strong> ${notes}</div>` : ''}
+            `;
+
+            // Hide step 3, show success
+            document.getElementById('step-3').classList.add('hidden');
+            document.getElementById('step-success').classList.remove('hidden');
+            if (window.lucide) lucide.createIcons();
+        }
+
+        function resetInquiryForm() {
+            document.getElementById('inquiry-form').reset();
+            document.getElementById('step-success').classList.add('hidden');
+            document.getElementById('file-selected-name').classList.add('hidden');
+            goToStep(1);
+        }
+
+        // FAQ Toggle Logic
+        function toggleFaq(button) {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('[data-lucide="chevron-down"]');
+            const isExpanded = !content.classList.contains('hidden');
+
+            document.querySelectorAll('.faq-content').forEach(c => c.classList.add('hidden'));
+            document.querySelectorAll('.faq-item [data-lucide="chevron-down"]').forEach(i => i.classList.remove('rotate-180'));
+
+            if (!isExpanded) {
+                content.classList.remove('hidden');
+                if (icon) icon.classList.add('rotate-180');
+            }
+        }
+    </script>
+</body>
+</html>
