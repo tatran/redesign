@@ -1,0 +1,120 @@
+.primary-nav a[aria-current="page"] {
+  color: var(--blue-dark);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 6px;
+}
+
+.pricing-hero {
+  padding: 22px 0 54px;
+  background: radial-gradient(ellipse at 84% 115%, #2a436c, transparent 65%), var(--navy);
+  color: var(--white);
+}
+.pricing-breadcrumb { display: flex; gap: 10px; margin-bottom: 35px; color: #d5dff2; font-size: .8rem; }
+.pricing-breadcrumb a { text-decoration: underline; text-underline-offset: 3px; }
+.pricing-hero-grid { display: grid; grid-template-columns: 1.15fr 1fr; align-items: center; gap: clamp(24px, 6vw, 90px); }
+.pricing-hero .eyebrow { color: var(--sky); }
+.pricing-hero h1 { font-size: clamp(2.7rem, 6vw, 5.1rem); letter-spacing: -.065em; font-weight: 800; }
+.pricing-intro { max-width: 33rem; margin-top: 14px; color: #d5dff2; font-size: clamp(1rem, 1.6vw, 1.14rem); }
+.pricing-overview { padding: 18px 22px 10px; border: 1px solid #526587; border-radius: 13px; background: #182a46; }
+.pricing-overview h2 { color: var(--sky); font-size: .72rem; line-height: 1.45; letter-spacing: .13em; text-transform: uppercase; }
+.pricing-overview a {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  align-items: center;
+  gap: 12px;
+  padding-block: 12px;
+  font-size: .88rem;
+  font-weight: 700;
+}
+.pricing-overview a + a { border-top: 1px solid #475b7d; }
+.pricing-overview a:hover span { text-decoration: underline; text-underline-offset: 3px; }
+.pricing-overview strong { font-size: 1rem; font-weight: 800; font-variant-numeric: tabular-nums; }
+.pricing-overview small { display: block; color: #c1cfea; font-size: .7rem; font-weight: 600; }
+.pricing-overview .icon { color: var(--sky); }
+
+.pricing-jump { padding-block: 15px; border-bottom: 1px solid var(--line); }
+.pricing-jump .wrap { display: flex; flex-wrap: wrap; gap: 8px; }
+.pricing-jump a {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  padding: 6px 14px;
+  border: 1px solid var(--line);
+  border-radius: 100px;
+  background: var(--wash);
+  color: var(--blue-dark);
+  font-size: .82rem;
+  font-weight: 800;
+}
+.pricing-jump a:hover { border-color: #8ba7f6; }
+
+.pricing-section h2 { font-size: clamp(2rem, 4.1vw, 3rem); }
+.pricing-split { display: grid; grid-template-columns: minmax(0, .76fr) minmax(0, 1.24fr); align-items: start; gap: clamp(20px, 5vw, 72px); }
+.pricing-note { max-width: 46rem; margin-top: 13px; color: var(--muted); font-size: .96rem; }
+.rate-card { min-width: 0; border: 1px solid var(--line); border-radius: 13px; background: var(--white); }
+.rate-table { width: 100%; border-collapse: separate; border-spacing: 0; font-size: .92rem; line-height: 1.45; }
+.rate-table th, .rate-table td { padding: 14px 19px; text-align: left; }
+.rate-table thead th { background: var(--wash); color: var(--blue-dark); font-size: .78rem; font-weight: 800; }
+.rate-card thead th:first-child { border-top-left-radius: 12px; }
+.rate-card thead th:last-child { border-top-right-radius: 12px; }
+.rate-table tbody th { font-weight: 700; }
+.rate-table tbody tr + tr > * { border-top: 1px solid var(--line); }
+.rate-table th:last-child, .rate-table td:last-child { text-align: right; }
+.rate-table td { color: var(--navy); font-weight: 800; font-variant-numeric: tabular-nums; }
+.rate-table a { text-decoration: underline; text-decoration-color: #a9b8de; text-underline-offset: 3px; }
+.rate-table a:hover { color: var(--blue-dark); text-decoration-color: currentColor; }
+.rate-table small, .rate-detail { display: block; color: var(--muted); font-size: .74rem; font-weight: 650; }
+
+.offices { background: var(--wash); border-block: 1px solid #e9eff9; }
+.office-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: start; gap: 14px; margin-top: 25px; }
+.office-card { border: 1px solid var(--line); border-radius: 13px; background: var(--white); }
+.office-card:hover, .office-card[open] { border-color: #a9baf0; }
+.office-card summary {
+  display: flex;
+  min-height: 83px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 13px 16px;
+  border-radius: 12px;
+  cursor: pointer;
+  list-style: none;
+}
+.office-card summary::-webkit-details-marker { display: none; }
+.office-card summary strong { display: block; font-size: 1.04rem; font-weight: 800; }
+.office-card summary small { display: block; margin-top: 2px; color: var(--muted); font-size: .71rem; line-height: 1.4; }
+.office-from { display: inline-flex; flex: none; align-items: center; gap: 6px; color: var(--blue-dark); font-size: .81rem; font-weight: 800; }
+.office-card[open] summary .icon { transform: rotate(180deg); }
+.office-table th, .office-table td { padding: 8px 16px; }
+.office-table thead th { border-top: 1px solid var(--line); }
+.office-terms { max-width: 54rem; margin-top: 18px; color: var(--muted); font-size: .81rem; }
+.office-terms p + p { margin-top: 5px; }
+.office-terms a { color: var(--blue-dark); text-decoration: underline; text-underline-offset: 2px; }
+
+.pricing-extras { border-top: 1px solid var(--line); }
+.extra-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; gap: 16px; margin-top: 25px; }
+.pricing-contact { display: flex; justify-content: space-between; align-items: center; gap: 20px; }
+.pricing-contact p:not(.eyebrow) { margin-bottom: 0; }
+.pricing-contact .button { flex: none; }
+.pricing-phone { white-space: nowrap; text-decoration: underline; text-underline-offset: 3px; }
+
+@media (max-width: 1050px) {
+  .office-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 730px) {
+  .pricing-hero { padding: 17px 0 28px; }
+  .pricing-breadcrumb { margin-bottom: 23px; }
+  .pricing-hero-grid, .pricing-split, .extra-grid { grid-template-columns: 1fr; gap: 18px; }
+  .pricing-overview { padding-inline: 14px; }
+  .pricing-overview a { gap: 8px; }
+  .pricing-jump a { padding-inline: 11px; }
+  .rate-table th, .rate-table td { padding-inline: 12px; }
+  .pricing-contact { flex-direction: column; align-items: start; }
+}
+
+@media (max-width: 530px) {
+  .office-grid { grid-template-columns: 1fr; gap: 9px; }
+  .office-card summary { min-height: 72px; }
+}
