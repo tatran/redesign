@@ -1,0 +1,2251 @@
+<!DOCTYPE html>
+<html lang="sk" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vinárstvo Foriš Limbach | Malokarpatské butikové vína, ktoré si zamilujete</title>
+    <meta name="description" content="Rodinné butikové vinárstvo Foriš v Limbachu. Ručne zbierané hrozno, limitovaná produkcia 10 000 fliaš a oceňované vína ako Pinot Noir, Silvánske zelené a L. Rosé. Ochutnajte pravú vášeň Malých Karpát.">
+    <meta name="keywords" content="Vinárstvo Foriš, Víno Foris, Limbach, Malokarpatské víno, Pinot Noir, Silvánske zelené, Dunaj, L. Rose, degustácie Limbach, butikové vinárstvo">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Vinárstvo Foriš Limbach | Poctivé butikové víno">
+    <meta property="og:description" content="Každá fľaša je originál s podpisom vinára. Objavte ocenených šampiónov Malých Karpát a zažite degustáciu priamo v historickej pivnici.">
+    <meta property="og:image" content="https://vinoforis.sk/storage/files/1/banner_f.jpg">
+    <meta property="og:type" content="website">
+
+    <!-- Google Fonts: Cormorant Garamond & Playfair Display for Luxury Winery + Plus Jakarta Sans for UI -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome 6 Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        wine: {
+                            50: '#fbf4f5',
+                            100: '#f7e7e9',
+                            200: '#efd0d6',
+                            300: '#e1aab6',
+                            400: '#ce768b',
+                            500: '#b74c65',
+                            600: '#9d354e',
+                            700: '#83283e',
+                            800: '#6f2436',
+                            900: '#5c2230',
+                            950: '#340f18',
+                        },
+                        bordeaux: {
+                            DEFAULT: '#6b1124',
+                            dark: '#420a16',
+                            deep: '#23050b'
+                        },
+                        gold: {
+                            light: '#f5e5b8',
+                            DEFAULT: '#d4af37',
+                            rich: '#c59b27',
+                            dark: '#9a7516'
+                        },
+                        limestone: '#f7f4ed',
+                        charcoal: '#120f10',
+                        slateCellar: '#1a1618'
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'Georgia', 'serif'],
+                        display: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+                    },
+                    backgroundImage: {
+                        'cellar-radial': 'radial-gradient(circle at 50% 20%, rgba(107, 17, 36, 0.25) 0%, rgba(18, 15, 16, 0.98) 75%)',
+                        'gold-gradient': 'linear-gradient(135deg, #f5e5b8 0%, #d4af37 50%, #9a7516 100%)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Smooth scrolling and luxury scrollbar */
+        html { scroll-behavior: smooth; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #120f10; }
+        ::-webkit-scrollbar-thumb { background: #5c2230; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #d4af37; }
+
+        /* Custom glow & glass effects */
+        .glass-panel {
+            background: rgba(26, 22, 24, 0.75);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(212, 175, 55, 0.15);
+        }
+        .glass-panel-light {
+            background: rgba(255, 255, 255, 0.04);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .glass-panel-gold {
+            background: rgba(45, 18, 25, 0.85);
+            backdrop-filter: blur(14px);
+            border: 1px solid rgba(212, 175, 55, 0.35);
+            box-shadow: 0 10px 30px -10px rgba(107, 17, 36, 0.5);
+        }
+        .gold-shimmer {
+            background: linear-gradient(90deg, #d4af37 0%, #fff2cc 50%, #d4af37 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .wine-gradient-bg {
+            background: linear-gradient(180deg, #120f10 0%, #23050b 45%, #120f10 100%);
+        }
+        /* Custom image hover zoom */
+        .bottle-card:hover .bottle-img {
+            transform: scale(1.08) rotate(-1deg);
+        }
+        .bottle-card:hover .tasting-peek {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        /* Pulse badge */
+        @keyframes subtle-pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.85; transform: scale(1.03); }
+        }
+        .award-pulse {
+            animation: subtle-pulse 3s infinite ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-[#0f0c0d] text-stone-200 font-sans antialiased selection:bg-wine-700 selection:text-white">
+
+    <!-- 1. TOP ANNOUNCEMENT BAR (Terroir, Fresh vintage, Free shipping) -->
+    <div class="bg-gradient-to-r from-wine-950 via-bordeaux to-wine-950 text-gold-light py-2 px-4 text-xs tracking-wider border-b border-gold/20 text-center font-medium flex items-center justify-center gap-3">
+        <span class="inline-flex items-center gap-1.5"><i class="fa-solid fa-trophy text-gold"></i> Pinot Noir 2021: Veľká Zlatá Medaila & Šampión červených vín</span>
+        <span class="hidden md:inline text-gold/40">•</span>
+        <span class="hidden md:inline"><i class="fa-solid fa-truck-fast text-gold/80 mr-1"></i> Doprava zadarmo v SR od 6 fliaš</span>
+        <span class="hidden lg:inline text-gold/40">•</span>
+        <span class="hidden lg:inline"><i class="fa-solid fa-location-dot text-gold/80 mr-1"></i> Osobný odber v Limbachu s pohárom vína zdarma</span>
+    </div>
+
+    <!-- 2. LUXURY NAVIGATION HEADER -->
+    <header class="sticky top-0 z-50 transition-all duration-300 glass-panel border-b border-gold/15" id="mainHeader">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                
+                <!-- Brand Logo (Authentic Foriš typography & coat) -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <div class="w-12 h-12 rounded-full border border-gold/40 flex items-center justify-center bg-bordeaux/40 group-hover:border-gold transition-colors shadow-lg shadow-bordeaux/30">
+                        <span class="font-serif text-2xl font-bold text-gold">F</span>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-serif text-2xl font-bold tracking-widest text-stone-100 group-hover:text-gold transition-colors">FORIŠ</span>
+                        <span class="text-[10px] tracking-[0.25em] text-gold uppercase font-medium -mt-1">Vinárstvo • Limbach 1993</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden md:flex items-center space-x-7 text-sm font-medium tracking-wide">
+                    <a href="#kolekcia" class="text-stone-300 hover:text-gold transition-colors py-1 relative group">
+                        Naša Pivnica
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gold transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="#somelier" class="text-stone-300 hover:text-gold transition-colors py-1 relative group flex items-center gap-1.5">
+                        <span class="w-2 h-2 rounded-full bg-gold animate-ping"></span>
+                        Digitálny Someliér
+                    </a>
+                    <a href="#chutovy-profil" class="text-stone-300 hover:text-gold transition-colors py-1 relative group">
+                        Prečo zachutí
+                    </a>
+                    <a href="#degustacie" class="text-stone-300 hover:text-gold transition-colors py-1 relative group">
+                        Zážitková Pivnica
+                    </a>
+                    <a href="#pribeh" class="text-stone-300 hover:text-gold transition-colors py-1 relative group">
+                        Otec & Syn
+                    </a>
+                    <a href="#kontakt" class="text-stone-300 hover:text-gold transition-colors py-1 relative group">
+                        Kontakt
+                    </a>
+                </nav>
+
+                <!-- Actions: Audio Toast, Cart Trigger, Quick Order -->
+                <div class="flex items-center gap-4">
+                    <!-- Subtle Winery Audio Toast -->
+                    <button id="toastSoundBtn" onclick="playWineToastSound()" title="Pripite si s nami (zvuk)" class="hidden sm:flex items-center justify-center w-10 h-10 rounded-full border border-gold/30 hover:border-gold bg-stone-900/80 text-gold hover:scale-105 transition-all">
+                        <i class="fa-solid fa-wine-glass"></i>
+                    </button>
+
+                    <!-- Cart Drawer Button -->
+                    <button onclick="toggleCartDrawer()" class="relative flex items-center gap-2.5 px-4 py-2.5 rounded-full bg-gradient-to-r from-wine-900 to-bordeaux border border-gold/40 hover:border-gold text-stone-100 font-medium text-sm shadow-lg shadow-bordeaux/40 hover:shadow-gold/20 transition-all">
+                        <i class="fa-solid fa-basket-shopping text-gold"></i>
+                        <span class="hidden sm:inline">Košík</span>
+                        <span id="cartCountBadge" class="bg-gold text-bordeaux-dark text-xs font-bold px-2 py-0.5 rounded-full">0</span>
+                    </button>
+
+                    <!-- Mobile Menu Hamburger -->
+                    <button onclick="toggleMobileMenu()" class="md:hidden text-stone-200 hover:text-gold p-2">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer -->
+        <div id="mobileMenu" class="hidden md:hidden glass-panel border-t border-gold/15 px-4 pt-3 pb-6 space-y-3">
+            <a href="#kolekcia" onclick="toggleMobileMenu()" class="block py-2 text-stone-200 hover:text-gold border-b border-white/5 font-medium">Naša Pivnica (Vína)</a>
+            <a href="#somelier" onclick="toggleMobileMenu()" class="block py-2 text-gold font-medium border-b border-white/5 flex items-center gap-2">
+                <i class="fa-solid fa-sparkles"></i> Digitálny Someliér (Nájdi svoje víno)
+            </a>
+            <a href="#chutovy-profil" onclick="toggleMobileMenu()" class="block py-2 text-stone-200 hover:text-gold border-b border-white/5">Prečo zachutí</a>
+            <a href="#degustacie" onclick="toggleMobileMenu()" class="block py-2 text-stone-200 hover:text-gold border-b border-white/5">Zážitková Pivnica & Ochutnávky</a>
+            <a href="#pribeh" onclick="toggleMobileMenu()" class="block py-2 text-stone-200 hover:text-gold border-b border-white/5">Príbeh otca a syna Forišovcov</a>
+            <a href="#kontakt" onclick="toggleMobileMenu()" class="block py-2 text-stone-200 hover:text-gold">Kontakt & Kde nás nájdete</a>
+            <div class="pt-2 flex flex-col gap-2">
+                <a href="tel:+421903719807" class="flex items-center justify-center gap-2 py-2.5 rounded-lg bg-bordeaux/60 text-gold text-sm border border-gold/30">
+                    <i class="fa-solid fa-phone"></i> +421 903 719 807
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 3. SENSORY HERO: MAKE PEOPLE THIRSTY FOR WINE -->
+    <section class="relative min-h-[92vh] flex items-center justify-center overflow-hidden wine-gradient-bg">
+        <!-- Ambient lighting & background artwork -->
+        <div class="absolute inset-0 z-0 opacity-20 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-gold/30 via-bordeaux/20 to-transparent"></div>
+        <div class="absolute -top-40 -left-40 w-96 h-96 bg-bordeaux rounded-full blur-[140px] opacity-40"></div>
+        <div class="absolute -bottom-40 -right-40 w-96 h-96 bg-gold/20 rounded-full blur-[140px] opacity-30"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 relative z-10 w-full">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left: Evocative Sensory Copywriting -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    
+                    <!-- Prestige Badge -->
+                    <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full border border-gold/40 bg-bordeaux/40 backdrop-blur-md text-gold text-xs font-semibold tracking-wider uppercase">
+                        <i class="fa-solid fa-medal text-gold"></i>
+                        <span>Butikové vinárstvo • Limbach • Len 10 000 fliaš ročne</span>
+                    </div>
+
+                    <!-- Main Thirst-Inducing Headline -->
+                    <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl text-stone-50 font-bold leading-[1.15]">
+                        Víno, ktoré vzniká s láskou <br class="hidden sm:inline">
+                        a <span class="gold-shimmer italic font-normal">pije sa s pôžitkom.</span>
+                    </h1>
+
+                    <!-- Sensory Description -->
+                    <p class="text-stone-300 text-base sm:text-lg max-w-2xl leading-relaxed font-light">
+                        Vstúpte do sveta poctivého malokarpatského remesla. Chrumkavé minerálne Silvánske zelené z limbašských žulových svahov, hodvábny zamatový Pinot Noir zrejúci 24 mesiacov v dubových sudoch či roztopašné bublinky L. Rosé s levanduľovým dotykom.
+                    </p>
+
+                    <!-- Accolades / Quick Trust Ticker -->
+                    <div class="grid grid-cols-3 gap-3 py-2 max-w-lg mx-auto lg:mx-0 border-y border-white/10 text-left">
+                        <div class="p-2">
+                            <div class="font-serif text-gold text-xl sm:text-2xl font-bold">1993</div>
+                            <div class="text-[11px] text-stone-400 uppercase tracking-wider">Tradícia a vášeň</div>
+                        </div>
+                        <div class="p-2 border-x border-white/10">
+                            <div class="font-serif text-gold text-xl sm:text-2xl font-bold">100%</div>
+                            <div class="text-[11px] text-stone-400 uppercase tracking-wider">Ručný zber & cit</div>
+                        </div>
+                        <div class="p-2">
+                            <div class="font-serif text-gold text-xl sm:text-2xl font-bold">Šampión</div>
+                            <div class="text-[11px] text-stone-400 uppercase tracking-wider">Vínne trhy & AWC</div>
+                        </div>
+                    </div>
+
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+                        <a href="#kolekcia" class="w-full sm:w-auto px-8 py-4 rounded-full bg-gradient-to-r from-gold via-gold-rich to-gold-dark text-bordeaux-deep font-semibold tracking-wide text-sm shadow-xl shadow-gold/20 hover:shadow-gold/40 hover:scale-[1.02] transition-all flex items-center justify-center gap-3">
+                            <span>Ochutnať naše vína</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                        <a href="#somelier" class="w-full sm:w-auto px-7 py-4 rounded-full glass-panel hover:bg-stone-800/80 text-stone-200 border border-gold/30 hover:border-gold font-medium text-sm transition-all flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-wand-magic-sparkles text-gold"></i>
+                            <span>Digitálny Someliér (Nájdi víno)</span>
+                        </a>
+                    </div>
+
+                    <!-- Reassurance: fast delivery, guarantee -->
+                    <div class="flex items-center justify-center lg:justify-start gap-6 text-xs text-stone-400 pt-1">
+                        <span class="flex items-center gap-1.5"><i class="fa-solid fa-check text-gold"></i> Priamo od vinára</span>
+                        <span class="flex items-center gap-1.5"><i class="fa-solid fa-check text-gold"></i> Bezpečné balenie fliaš</span>
+                        <span class="flex items-center gap-1.5"><i class="fa-solid fa-check text-gold"></i> Osobný odber v Limbachu</span>
+                    </div>
+
+                </div>
+
+                <!-- Right: High-End Wine Bottle Showcase with Tasting Peek -->
+                <div class="lg:col-span-5 relative flex justify-center">
+                    
+                    <!-- Ambient Glow underneath bottle -->
+                    <div class="absolute inset-0 bg-bordeaux/30 rounded-full blur-3xl transform scale-75"></div>
+
+                    <!-- Luxury Hero Showcase Card -->
+                    <div class="relative glass-panel-gold rounded-3xl p-6 sm:p-8 max-w-md w-full border border-gold/30 shadow-2xl backdrop-blur-xl">
+                        
+                        <!-- Ribbon badge -->
+                        <div class="absolute -top-3.5 right-6 bg-gradient-to-r from-gold to-gold-rich text-bordeaux-dark text-xs font-bold uppercase tracking-wider py-1 px-4 rounded-full shadow-md award-pulse flex items-center gap-1.5">
+                            <i class="fa-solid fa-crown text-[10px]"></i> Klenot pivnice
+                        </div>
+
+                        <!-- Bottle Presentation -->
+                        <div class="relative flex justify-center py-4">
+                            <img src="https://vinoforis.sk/storage/files/1/61.jpg" alt="Pinot Noir 2022 Vinárstvo Foriš" class="h-80 sm:h-96 object-contain drop-shadow-[0_20px_35px_rgba(0,0,0,0.9)] hover:scale-105 transition-transform duration-500">
+                            
+                            <!-- Floating Tasting Tag 1 -->
+                            <div class="absolute top-10 -left-2 sm:-left-4 glass-panel px-3 py-2 rounded-xl text-xs border border-gold/30 shadow-xl flex items-center gap-2 animate-bounce" style="animation-duration: 4s;">
+                                <span class="w-2.5 h-2.5 rounded-full bg-red-600"></span>
+                                <div>
+                                    <div class="font-bold text-stone-200">24 mesiacov</div>
+                                    <div class="text-[10px] text-stone-400">v dubových sudoch</div>
+                                </div>
+                            </div>
+
+                            <!-- Floating Tasting Tag 2 -->
+                            <div class="absolute bottom-16 -right-2 sm:-right-4 glass-panel px-3 py-2 rounded-xl text-xs border border-gold/30 shadow-xl flex items-center gap-2">
+                                <i class="fa-solid fa-trophy text-gold"></i>
+                                <div>
+                                    <div class="font-bold text-stone-200">Veľká Zlatá Medaila</div>
+                                    <div class="text-[10px] text-gold">Šampión Pezinok</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Bottle Meta & Instant Pouring notes -->
+                        <div class="mt-4 pt-4 border-t border-white/10 space-y-2.5 text-center">
+                            <div class="text-xs uppercase tracking-widest text-gold font-semibold">Vinárstvo Foriš • Výber vinára</div>
+                            <h3 class="font-serif text-2xl font-bold text-stone-100">Pinot Noir 2022 Barrique</h3>
+                            <p class="text-xs text-stone-300 italic font-serif">
+                                "Intenzívna rubínová farba, zrelé višne, lesné černice a jemný dymový záver. Zamat, ktorý pohladí zmysly."
+                            </p>
+
+                            <!-- Mini Taste Profile Meters -->
+                            <div class="grid grid-cols-3 gap-2 pt-2 text-[11px] text-stone-300">
+                                <div class="bg-stone-900/60 p-2 rounded-lg border border-white/5">
+                                    <div class="text-stone-400">Telo</div>
+                                    <div class="font-bold text-gold">Plné & Mohutné</div>
+                                </div>
+                                <div class="bg-stone-900/60 p-2 rounded-lg border border-white/5">
+                                    <div class="text-stone-400">Cukor</div>
+                                    <div class="font-bold text-stone-200">Suché (1,8 g)</div>
+                                </div>
+                                <div class="bg-stone-900/60 p-2 rounded-lg border border-white/5">
+                                    <div class="text-stone-400">Servírovanie</div>
+                                    <div class="font-bold text-gold">16 – 18 °C</div>
+                                </div>
+                            </div>
+
+                            <!-- Price & Add -->
+                            <div class="flex items-center justify-between pt-3">
+                                <div>
+                                    <span class="text-xs text-stone-400 block text-left">Cena za fľašu</span>
+                                    <span class="font-serif text-2xl font-bold text-gold">20,00 €</span>
+                                </div>
+                                <button onclick="addToCart({id: 61, name: 'Pinot Noir 2022 Barrique', price: 20.00, img: 'https://vinoforis.sk/storage/files/1/thumbs/61.jpg'})" class="px-5 py-2.5 rounded-full bg-gradient-to-r from-wine-700 to-bordeaux hover:from-wine-600 hover:to-bordeaux-dark text-white font-medium text-xs tracking-wider uppercase border border-gold/30 hover:border-gold shadow-lg shadow-wine-950 transition-all flex items-center gap-2">
+                                    <i class="fa-solid fa-plus text-gold"></i> Do košíka
+                                </button>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. SENSORY PILLARS: WHY PEOPLE LOVE & CRAVE FORIŠ WINE -->
+    <section id="chutovy-profil" class="py-20 bg-stone-950 relative border-y border-gold/15">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <span class="text-xs font-semibold uppercase tracking-[0.2em] text-gold">Umenie malokarpatského vinohradníctva</span>
+                <h2 class="font-serif text-3xl sm:text-4xl text-stone-100 font-bold">
+                    Prečo naše víno zachutí na prvý dúšok
+                </h2>
+                <p class="text-stone-400 text-sm sm:text-base">
+                    Nie sme priemyselná fabrika. Sme rodinné butikové vinárstvo, kde sa spája 30 rokov skúseností otca Ivana s modernou enológiou syna Lukáša.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                
+                <!-- Pillar 1: Terroir -->
+                <div class="glass-panel p-8 rounded-2xl border border-gold/20 hover:border-gold/50 transition-all group hover:-translate-y-1">
+                    <div class="w-14 h-14 rounded-2xl bg-bordeaux/40 border border-gold/30 flex items-center justify-center text-gold text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-mountain-sun"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-stone-100 mb-2">Žulový Terroir Limbachu</h3>
+                    <p class="text-xs text-stone-400 leading-relaxed">
+                        Koreňový systém révy preniká hlboko do žulového a kremenného podložia svahov Malých Karpát. Vínam to dáva chrumkavú šťavnatosť, nezameniteľnú mineralitu a iskru.
+                    </p>
+                </div>
+
+                <!-- Pillar 2: Handcrafted 10,000 bottles -->
+                <div class="glass-panel p-8 rounded-2xl border border-gold/20 hover:border-gold/50 transition-all group hover:-translate-y-1">
+                    <div class="w-14 h-14 rounded-2xl bg-bordeaux/40 border border-gold/30 flex items-center justify-center text-gold text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-hand-holding-heart"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-stone-100 mb-2">Len 10 000 fliaš ročne</h3>
+                    <p class="text-xs text-stone-400 leading-relaxed">
+                        Striktne limitovaná produkcia. Každý strapec prejde rukami vinára. Žiadne unifikované chute z regálov supermarketov, ale autentické, živé dielo s vlastnou dušou.
+                    </p>
+                </div>
+
+                <!-- Pillar 3: Oak Barriques & Patience -->
+                <div class="glass-panel p-8 rounded-2xl border border-gold/20 hover:border-gold/50 transition-all group hover:-translate-y-1">
+                    <div class="w-14 h-14 rounded-2xl bg-bordeaux/40 border border-gold/30 flex items-center justify-center text-gold text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-hourglass-half"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-stone-100 mb-2">Trpezlivosť v sude</h3>
+                    <p class="text-xs text-stone-400 leading-relaxed">
+                        Červené vína ako náš Pinot Noir a Dunaj zrejú až 24 mesiacov v dubových barikoch. Získavajú tým zamatovú hebkosť, tóny vanilky, tmavej čokolády a ušľachtilého duba.
+                    </p>
+                </div>
+
+                <!-- Pillar 4: Playful Bubbles & Innovation -->
+                <div class="glass-panel p-8 rounded-2xl border border-gold/20 hover:border-gold/50 transition-all group hover:-translate-y-1">
+                    <div class="w-14 h-14 rounded-2xl bg-bordeaux/40 border border-gold/30 flex items-center justify-center text-gold text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-champagne-glasses"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-stone-100 mb-2">Prírodné Bublinky & L. Rosé</h3>
+                    <p class="text-xs text-stone-400 leading-relaxed">
+                        Od prírodne kvasených Pét-Natov až po letný hit L. Rosé (5,5% alk.) s levanduľovým sirupom. Vína navrhnuté tak, aby prinášali čistú radosť a uvoľnenie.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 5. INTERACTIVE SOMMELIER FINDER ("DIGITÁLNY SOMELIÉR") -->
+    <section id="somelier" class="py-20 relative overflow-hidden bg-gradient-to-b from-stone-950 via-bordeaux-deep to-stone-950 border-b border-gold/15">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            
+            <div class="text-center mb-12 space-y-3">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold/10 border border-gold/30 text-gold text-xs font-semibold tracking-wider uppercase">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i> Asistent pivničného majstra
+                </div>
+                <h2 class="font-serif text-3xl sm:text-4xl text-stone-100 font-bold">
+                    Neviete, aké víno si vybrať? <br>
+                    <span class="gold-shimmer italic">Nechajte si poradiť za 30 sekúnd</span>
+                </h2>
+                <p class="text-stone-400 text-sm max-w-xl mx-auto">
+                    Povedzte nám, na čo máte chuť alebo akú chvíľu plánujete, a náš digitálny someliér vám vyberie presnú fľašu z našej limbašskej pivnice.
+                </p>
+            </div>
+
+            <!-- Quiz Card Container -->
+            <div class="glass-panel-gold rounded-3xl p-6 sm:p-10 border border-gold/30 shadow-2xl relative">
+                
+                <!-- Step 1: Occasion -->
+                <div id="sommelierStep1" class="space-y-6">
+                    <div class="flex items-center justify-between border-b border-white/10 pb-4">
+                        <span class="text-xs font-bold text-gold uppercase tracking-wider">Krok 1 z 3</span>
+                        <span class="text-xs text-stone-400 font-medium">Na akú príležitosť hľadáte víno?</span>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                        <button onclick="selectOccasion('romantic', 'Romantická večera vo dvoch')" class="som-btn p-4 rounded-xl text-left bg-stone-900/60 border border-white/10 hover:border-gold hover:bg-bordeaux/40 transition-all group flex flex-col justify-between">
+                            <i class="fa-solid fa-heart text-wine-400 text-2xl mb-3 group-hover:scale-110 transition-transform"></i>
+                            <div>
+                                <div class="font-serif font-bold text-stone-100 text-base">Romantická večera</div>
+                                <div class="text-xs text-stone-400 mt-1">Sviečky, zamatové chute a intímna atmosféra.</div>
+                            </div>
+                        </button>
+                        <button onclick="selectOccasion('terrace', 'Letná terasa & Posedenie s priateľmi')" class="som-btn p-4 rounded-xl text-left bg-stone-900/60 border border-white/10 hover:border-gold hover:bg-bordeaux/40 transition-all group flex flex-col justify-between">
+                            <i class="fa-solid fa-sun text-yellow-400 text-2xl mb-3 group-hover:scale-110 transition-transform"></i>
+                            <div>
+                                <div class="font-serif font-bold text-stone-100 text-base">Letná terasa & priatelia</div>
+                                <div class="text-xs text-stone-400 mt-1">Sviežosť, perlenie a ľahkosť bez ťažkej hlavy.</div>
+                            </div>
+                        </button>
+                        <button onclick="selectOccasion('dinner', 'Kvalitné jedlo (Steak, Divina, Kačka)')" class="som-btn p-4 rounded-xl text-left bg-stone-900/60 border border-white/10 hover:border-gold hover:bg-bordeaux/40 transition-all group flex flex-col justify-between">
+                            <i class="fa-solid fa-utensils text-gold text-2xl mb-3 group-hover:scale-110 transition-transform"></i>
+                            <div>
+                                <div class="font-serif font-bold text-stone-100 text-base">Gastronomický zážitok</div>
+                                <div class="text-xs text-stone-400 mt-1">K pečenému mäsu, divine alebo vyzretým syrom.</div>
+                            </div>
+                        </button>
+                        <button onclick="selectOccasion('gift', 'Hodnotný darček pre znalca')" class="som-btn p-4 rounded-xl text-left bg-stone-900/60 border border-white/10 hover:border-gold hover:bg-bordeaux/40 transition-all group flex flex-col justify-between">
+                            <i class="fa-solid fa-gift text-amber-300 text-2xl mb-3 group-hover:scale-110 transition-transform"></i>
+                            <div>
+                                <div class="font-serif font-bold text-stone-100 text-base">Exkluzívny darček</div>
+                                <div class="text-xs text-stone-400 mt-1">Medailový šampión, ktorý očarí každého gurmána.</div>
+                            </div>
+                        </button>
+                        <button onclick="selectOccasion('relax', 'Pohodový večer po práci')" class="som-btn p-4 rounded-xl text-left bg-stone-900/60 border border-white/10 hover:border-gold hover:bg-bordeaux/40 transition-all group flex flex-col justify-between">
+                            <i class="fa-solid fa-couch text-teal-400 text-2xl mb-3 group-hover:scale-110 transition-transform"></i>
+                            <div>
+                                <div class="font-serif font-bold text-stone-100 text-base">Večerný relax</div>
+                                <div class="text-xs text-stone-400 mt-1">Vyložiť nohy, pustiť film a vychutnať si pohár.</div>
+                            </div>
+                        </button>
+                        <button onclick="selectOccasion('party', 'Oslava & Pripíjanie')" class="som-btn p-4 rounded-xl text-left bg-stone-900/60 border border-white/10 hover:border-gold hover:bg-bordeaux/40 transition-all group flex flex-col justify-between">
+                            <i class="fa-solid fa-champagne-glasses text-rose-300 text-2xl mb-3 group-hover:scale-110 transition-transform"></i>
+                            <div>
+                                <div class="font-serif font-bold text-stone-100 text-base">Slávnostný prípitok</div>
+                                <div class="text-xs text-stone-400 mt-1">Šumivé iskrenie, radosť a nezabudnuteľný toast.</div>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Step 2: Flavor Profile -->
+                <div id="sommelierStep2" class="hidden space-y-6">
+                    <div class="flex items-center justify-between border-b border-white/10 pb-4">
+                        <div class="flex items-center gap-3">
+                            <button onclick="goSommelierBack(1)" class="text-xs text-stone-400 hover:text-gold flex items-center gap-1">
+                                <i class="fa-solid fa-arrow-left"></i> Späť
+                            </button>
+                            <span class="text-xs font-bold text-gold uppercase tracking-wider">Krok 2 z 3</span>
+                        </div>
+                        <span id="selectedOccasionLabel" class="text-xs text-stone-300 italic"></span>
+                    </div>
+                    <div class="space-y-2">
+                        <h3 class="font-serif text-xl font-bold text-stone-100">Aký štýl vína vaše chuťové poháriky milujú?</h3>
+                        <p class="text-xs text-stone-400">Vyberte si charakter, ktorý vám najviac vyhovuje:</p>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <button onclick="selectFlavor('mineral', 'Iskrivé, suché, svieža limbašská kyselinka')" class="som-flavor p-5 rounded-xl text-left bg-stone-900/60 border border-white/10 hover:border-gold hover:bg-bordeaux/40 transition-all">
+                            <div class="font-serif font-bold text-stone-100 text-lg flex items-center gap-2">
+                                <i class="fa-solid fa-gem text-cyan-300"></i> Minerálne & Chrumkavé
+                            </div>
+                            <div class="text-xs text-stone-400 mt-2">Zelené jablko, citrus, kremeň a svieža malokarpatská kyselinka. Extra suché.</div>
+                        </button>
+                        <button onclick="selectFlavor('velvet', 'Plné, zamatové, zrejúce v dreve s tónmi černíc')" class="som-flavor p-5 rounded-xl text-left bg-stone-900/60 border border-white/10 hover:border-gold hover:bg-bordeaux/40 transition-all">
+                            <div class="font-serif font-bold text-stone-100 text-lg flex items-center gap-2">
+                                <i class="fa-solid fa-wine-bottle text-red-500"></i> Mohutné & Zamatové Barikové
+                            </div>
+                            <div class="text-xs text-stone-400 mt-2">Zrelé višne, čokoláda, dubové drevo a jemné hladké triesloviny. Dlhá dochuť.</div>
+                        </button>
+                        <button onclick="selectFlavor('bubbles', 'Svieže bublinky, jahody alebo levanduľa')" class="som-flavor p-5 rounded-xl text-left bg-stone-900/60 border border-white/10 hover:border-gold hover:bg-bordeaux/40 transition-all">
+                            <div class="font-serif font-bold text-stone-100 text-lg flex items-center gap-2">
+                                <i class="fa-solid fa-sparkles text-pink-400"></i> Šumivé & Ovocné Perlenie
+                            </div>
+                            <div class="text-xs text-stone-400 mt-2">Pät-Nat, Frizzante alebo levanduľové L. Rosé. Hravé, aromatické a osviežujúce.</div>
+                        </button>
+                        <button onclick="selectFlavor('aromatic', 'Aromatické, ovocné, šťavnaté biele')" class="som-flavor p-5 rounded-xl text-left bg-stone-900/60 border border-white/10 hover:border-gold hover:bg-bordeaux/40 transition-all">
+                            <div class="font-serif font-bold text-stone-100 text-lg flex items-center gap-2">
+                                <i class="fa-solid fa-leaf text-lime-400"></i> Aromatické & Šťavnaté
+                            </div>
+                            <div class="text-xs text-stone-400 mt-2">Kvitnúca lipa, biela broskyňa, muškátové a kvetinové tóny s harmonickým telom.</div>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Step 3: Result Recommendation -->
+                <div id="sommelierResult" class="hidden space-y-6">
+                    <div class="flex items-center justify-between border-b border-white/10 pb-4">
+                        <button onclick="resetSommelier()" class="text-xs text-stone-400 hover:text-gold flex items-center gap-1.5">
+                            <i class="fa-solid fa-rotate-left"></i> Začať odznova
+                        </button>
+                        <span class="text-xs font-bold text-gold uppercase tracking-wider flex items-center gap-1">
+                            <i class="fa-solid fa-circle-check"></i> Osobný výber od Lukáša Foriša
+                        </span>
+                    </div>
+
+                    <!-- Dynamic Recommendation Box -->
+                    <div id="recommendationContent" class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center bg-stone-950/80 p-6 sm:p-8 rounded-2xl border border-gold/40">
+                        <!-- Populated by JavaScript -->
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 6. COMPLETE WINE COLLECTION (E-SHOP & PORTFOLIO) -->
+    <section id="kolekcia" class="py-24 bg-[#120f10] relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+                <div>
+                    <span class="text-xs font-semibold uppercase tracking-[0.2em] text-gold">Priamo z limbašskej pivnice</span>
+                    <h2 class="font-serif text-3xl sm:text-5xl text-stone-100 font-bold mt-1">
+                        Kolekcia Vín Foriš
+                    </h2>
+                    <p class="text-stone-400 text-sm max-w-xl mt-2">
+                        Vyberte si zo starostlivo vyladených odrôd. Každé víno nesie svoj vlastný príbeh, ročník a ocenenia.
+                    </p>
+                </div>
+
+                <!-- Category Filter Tabs -->
+                <div class="flex flex-wrap items-center gap-2 p-1.5 rounded-full bg-stone-900 border border-white/10 text-xs">
+                    <button onclick="filterWines('all')" class="filter-tab active px-4 py-2 rounded-full font-medium transition-all bg-gold text-bordeaux-dark font-bold shadow-md">
+                        Všetky vína
+                    </button>
+                    <button onclick="filterWines('white')" class="filter-tab px-4 py-2 rounded-full font-medium transition-all text-stone-300 hover:text-white">
+                        Biele (7)
+                    </button>
+                    <button onclick="filterWines('red')" class="filter-tab px-4 py-2 rounded-full font-medium transition-all text-stone-300 hover:text-white">
+                        Červené (4)
+                    </button>
+                    <button onclick="filterWines('rose-bubbles')" class="filter-tab px-4 py-2 rounded-full font-medium transition-all text-stone-300 hover:text-white">
+                        Bublinky & Rosé (5)
+                    </button>
+                    <button onclick="filterWines('sets')" class="filter-tab px-4 py-2 rounded-full font-medium transition-all text-stone-300 hover:text-white flex items-center gap-1">
+                        <i class="fa-solid fa-box-open text-gold"></i> Balíčky & Zážitky (3)
+                    </button>
+                </div>
+            </div>
+
+            <!-- Wine Grid -->
+            <div id="winesGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Dynamically populated or rendered with complete wine list -->
+            </div>
+
+            <!-- Free delivery banner under catalog -->
+            <div class="mt-16 p-8 rounded-3xl glass-panel-gold border border-gold/40 flex flex-col md:flex-row items-center justify-between gap-6 shadow-2xl">
+                <div class="flex items-center gap-5">
+                    <div class="w-16 h-16 rounded-2xl bg-gold/20 border border-gold/40 flex items-center justify-center text-gold text-3xl shrink-0">
+                        <i class="fa-solid fa-box-archive"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-serif text-xl font-bold text-stone-100">Chcete si vyskladať kartón 6 fliaš?</h4>
+                        <p class="text-xs text-stone-300 mt-1 max-w-xl">
+                            Pri objednávke akýchkoľvek 6 fliaš máte <strong class="text-gold font-bold">dopravu kuriérom zadarmo</strong> v rámci celého Slovenska a k tomu darčekové degustačné poznámky od vinára.
+                        </p>
+                    </div>
+                </div>
+                <button onclick="addBundleToCart('champions')" class="px-6 py-3.5 rounded-full bg-gradient-to-r from-gold via-gold-rich to-gold-dark text-bordeaux-dark font-bold text-xs uppercase tracking-wider shadow-lg hover:shadow-gold/30 hover:scale-105 transition-all shrink-0">
+                    <i class="fa-solid fa-star mr-1"></i> Objednať Kartón Šampiónov
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 7. CELLAR EXPERIENCE & TASTINGS (DEGUSTÁCIE V PIVNICI LIMBACH) -->
+    <section id="degustacie" class="py-24 bg-stone-950 relative border-t border-gold/20 overflow-hidden">
+        <!-- Background image of stone cellar with dark overlay -->
+        <div class="absolute inset-0 opacity-15 bg-[url('https://vinoforis.sk/storage/files/1/degustacia.jpg')] bg-cover bg-center"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <span class="text-xs font-semibold uppercase tracking-[0.2em] text-gold">Autentický zážitok v Limbachu</span>
+                <h2 class="font-serif text-3xl sm:text-5xl text-stone-100 font-bold">
+                    Zostúpte do našej kamennej pivnice
+                </h2>
+                <p class="text-stone-300 text-sm sm:text-base leading-relaxed">
+                    Zažite nezabudnuteľný večer tam, kde víno dýcha a zreje v dubových sudoch. Priamo v historickej pivnici v Limbachu vás privíta zakladateľ Ivan alebo pivničný majster Lukáš Foriš.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+                
+                <!-- Tasting Package 1: 5 vzoriek -->
+                <div class="glass-panel p-8 sm:p-10 rounded-3xl border border-gold/30 flex flex-col justify-between hover:border-gold transition-all relative group">
+                    <div class="space-y-6">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <span class="text-xs font-bold uppercase tracking-wider text-gold">Základný zážitok</span>
+                                <h3 class="font-serif text-2xl sm:text-3xl font-bold text-stone-100 mt-1">Malokarpatská Klasika</h3>
+                            </div>
+                            <div class="text-right">
+                                <span class="font-serif text-3xl font-bold text-gold">25 €</span>
+                                <span class="text-[11px] text-stone-400 block">na osobu</span>
+                            </div>
+                        </div>
+
+                        <p class="text-xs text-stone-300 leading-relaxed">
+                            Perfektný úvod do sveta butikových malokarpatských vín. Spoznáte odrody, ktoré preslávili Limbach a Pezinok.
+                        </p>
+
+                        <div class="space-y-3 pt-2 text-xs text-stone-200 border-t border-white/10">
+                            <div class="flex items-center gap-3">
+                                <i class="fa-solid fa-wine-glass text-gold"></i>
+                                <span><strong>5 vybraných vzoriek</strong> (svieže biele, rosé, lahodné červené)</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <i class="fa-solid fa-cheese text-gold"></i>
+                                <span>Malokarpatský záhryz: lokálne remeselné syry, olivy, čerstvý chlieb</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <i class="fa-solid fa-clock text-gold"></i>
+                                <span>Trvanie cca <strong>1,5 až 2 hodiny</strong></span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <i class="fa-solid fa-user-group text-gold"></i>
+                                <span>Vhodné pre menšie aj väčšie skupiny (od 4 osôb)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-8 mt-6 border-t border-white/10 flex items-center justify-between">
+                        <span class="text-xs text-stone-400">Pri kockách 4, Limbach</span>
+                        <button onclick="openBookingModal('Malokarpatská Klasika (5 vzoriek)', 25)" class="px-6 py-3 rounded-full bg-stone-800 hover:bg-gold hover:text-bordeaux-dark text-gold font-bold text-xs uppercase tracking-wider border border-gold/40 transition-all">
+                            Rezervovať termín
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Tasting Package 2: 10 vzoriek (Majstrovská pivničná) -->
+                <div class="glass-panel-gold p-8 sm:p-10 rounded-3xl border border-gold/50 flex flex-col justify-between shadow-2xl relative group">
+                    <div class="absolute -top-3.5 right-8 bg-gradient-to-r from-gold to-gold-rich text-bordeaux-dark text-xs font-bold uppercase tracking-wider py-1 px-4 rounded-full shadow-md award-pulse flex items-center gap-1.5">
+                        <i class="fa-solid fa-crown text-[10px]"></i> Najobľúbenejší zážitok
+                    </div>
+
+                    <div class="space-y-6">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <span class="text-xs font-bold uppercase tracking-wider text-gold">Veľká prehliadka s vinárom</span>
+                                <h3 class="font-serif text-2xl sm:text-3xl font-bold text-stone-100 mt-1">Majstrovská Pivnica</h3>
+                            </div>
+                            <div class="text-right">
+                                <span class="font-serif text-3xl font-bold text-gold">35 €</span>
+                                <span class="text-[11px] text-stone-400 block">na osobu</span>
+                            </div>
+                        </div>
+
+                        <p class="text-xs text-stone-300 leading-relaxed">
+                            Pre skutočných milovníkov a zvedavcov. Nahliadnete do zákulisia barikovej pivnice a ochutnáte aj archívne a medailové šampióny.
+                        </p>
+
+                        <div class="space-y-3 pt-2 text-xs text-stone-200 border-t border-white/10">
+                            <div class="flex items-center gap-3">
+                                <i class="fa-solid fa-wine-glass text-gold"></i>
+                                <span><strong>10 vzoriek vína</strong> vrátane archívneho Pinot Noir & Dunaj</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <i class="fa-solid fa-droplet text-gold"></i>
+                                <span>Ochutnávka mladého vína <strong>priamo z dubového suda</strong></span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <i class="fa-solid fa-drumstick-bite text-gold"></i>
+                                <span>Bohatý studený stôl: domáce mäsové špeciality, remeselné syry, orechy</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <i class="fa-solid fa-user-tie text-gold"></i>
+                                <span>Osobný výklad a diskusia s pivničným majstrom <strong>Lukášom Forišom</strong></span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <i class="fa-solid fa-clock text-gold"></i>
+                                <span>Trvanie cca <strong>2,5 až 3 hodiny</strong></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-8 mt-6 border-t border-white/10 flex items-center justify-between">
+                        <span class="text-xs text-stone-400">Pivnica Pri kockách 4, Limbach</span>
+                        <button onclick="openBookingModal('Majstrovská Pivnica (10 vzoriek)', 35)" class="px-7 py-3 rounded-full bg-gradient-to-r from-gold via-gold-rich to-gold-dark text-bordeaux-dark font-bold text-xs uppercase tracking-wider shadow-lg hover:shadow-gold/30 hover:scale-105 transition-all">
+                            Rezervovať zážitok
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Authentic photos from the cellar & vineyards -->
+            <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="relative rounded-2xl overflow-hidden group h-64 border border-gold/20 shadow-xl">
+                    <img src="https://vinoforis.sk/storage/files/1/degustacia.jpg" alt="Degustácia v pivnici Foriš" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-stone-950 via-transparent to-transparent flex items-end p-5">
+                        <span class="font-serif text-sm font-semibold text-stone-200">Klenbová pivnica v Limbachu</span>
+                    </div>
+                </div>
+                <div class="relative rounded-2xl overflow-hidden group h-64 border border-gold/20 shadow-xl">
+                    <img src="https://vinoforis.sk/storage/img/pribeh1.jpg" alt="Vinohrady Foriš" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-stone-950 via-transparent to-transparent flex items-end p-5">
+                        <span class="font-serif text-sm font-semibold text-stone-200">Vinice na úpätí Malých Karpát</span>
+                    </div>
+                </div>
+                <div class="relative rounded-2xl overflow-hidden group h-64 border border-gold/20 shadow-xl">
+                    <img src="https://vinoforis.sk/storage/img/pribeh2.jpg" alt="Dubové sudy Barrique" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-stone-950 via-transparent to-transparent flex items-end p-5">
+                        <span class="font-serif text-sm font-semibold text-stone-200">Zrenie v prémiových drevených sudoch</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 8. THE STORY: OTEC A SYN (IVAN & LUKÁŠ FORIŠ) -->
+    <section id="pribeh" class="py-24 bg-gradient-to-b from-stone-950 via-[#181113] to-stone-950 relative border-t border-gold/15">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Story Visuals -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative rounded-3xl overflow-hidden border border-gold/30 shadow-2xl">
+                        <img src="https://vinoforis.sk/storage/img/pribeh3.jpg" alt="Ivan a Lukáš Foriš vinári" class="w-full h-[460px] object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-stone-950/90 via-stone-950/20 to-transparent"></div>
+                        <div class="absolute bottom-6 left-6 right-6">
+                            <span class="text-xs uppercase tracking-widest text-gold font-bold">Generácie vinárov</span>
+                            <h4 class="font-serif text-xl font-bold text-stone-100">Ivan & Lukáš Foriš</h4>
+                            <p class="text-xs text-stone-300 mt-1">Zakladateľ & Pivničný majster</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Quote Callout -->
+                    <div class="absolute -bottom-6 -right-4 sm:-right-6 glass-panel-gold p-5 rounded-2xl max-w-xs border border-gold/40 shadow-xl hidden sm:block">
+                        <i class="fa-solid fa-quote-left text-gold text-lg mb-2"></i>
+                        <p class="font-serif italic text-xs text-stone-200">
+                            "Na každej fľaši je meno jeho tvorcu, lebo za každú jednu kvapku ručíme svojou cťou."
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Story Text -->
+                <div class="lg:col-span-7 space-y-6">
+                    <span class="text-xs font-semibold uppercase tracking-[0.2em] text-gold">Od roku 1993 v Limbachu</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl text-stone-100 font-bold leading-tight">
+                        Z vášnivého koníčka vzniklo <br>
+                        <span class="gold-shimmer italic">jedno z najoceňovanejších butikových vinárstiev</span>
+                    </h2>
+                    
+                    <div class="space-y-4 text-stone-300 text-sm leading-relaxed font-light">
+                        <p>
+                            V malebnej obci Limbach na úpätí Malých Karpát sme sa v roku 1993 rozhodli, že našim vínom budeme robiť radosť nielen sebe, ale aj všetkým milovníkom dobrého vína. Čo začalo ako rodinná vášeň, prerástlo do rešpektovaného vinárstva, ktoré si však striktne zachováva svoj butikový rozmer.
+                        </p>
+                        <p>
+                            Ročná produkcia je približne <strong>10 tisíc fliaš</strong>. Práve pri tomto počte dokážeme osobne dozrieť na každý detail: celoročnú starostlivosť o vinice, ručný selektívny zber hrozna, šetrné lisovanie, trpezlivé školenie vína a dlhé zrenie v sudoch.
+                        </p>
+                        <p>
+                            Najväčším ocenením sú pre nás zákazníci, ktorí k nám prichádzajú opakovane. Či už obľubujete svieže, iskrivé biele Silvánske, roztopašné letné Frizzante rosé alebo vyzreté a dospelé červené vína ocenené zlatými medailami na najväčších svetových výstavách v Pezinku a Viedni.
+                        </p>
+                    </div>
+
+                    <!-- Podcast Spotlight -->
+                    <div class="p-5 rounded-2xl bg-stone-900/80 border border-gold/25 flex items-center justify-between gap-4">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full bg-red-600/20 text-red-500 border border-red-500/40 flex items-center justify-center text-xl shrink-0">
+                                <i class="fa-brands fa-youtube"></i>
+                            </div>
+                            <div>
+                                <div class="font-serif font-bold text-sm text-stone-100">Podcast "Na dúšok s Peťkom"</div>
+                                <div class="text-xs text-stone-400">Vypočujte si autentický rozhovor o tajomstvách našej pivnice</div>
+                            </div>
+                        </div>
+                        <a href="https://youtu.be/Xn5HZGjsBmk" target="_blank" rel="noopener" class="px-4 py-2 rounded-full glass-panel hover:bg-gold hover:text-bordeaux-dark text-xs font-semibold text-gold border border-gold/30 transition-all shrink-0">
+                            Prehrať diel <i class="fa-solid fa-arrow-up-right-from-square ml-1 text-[10px]"></i>
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. PRESTIGIOUS AWARDS SHOWCASE (TRUST & SOCIAL PROOF) -->
+    <section class="py-16 bg-[#100d0e] border-y border-gold/15">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-10">
+                <span class="text-xs font-semibold uppercase tracking-[0.2em] text-gold">Uznanie odbornej enologickej poroty</span>
+                <h3 class="font-serif text-2xl sm:text-3xl font-bold text-stone-100 mt-1">Oceňovaní doma aj vo svete</h3>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <!-- Award 1 -->
+                <div class="glass-panel p-6 rounded-2xl text-center border border-gold/20 flex flex-col items-center justify-center">
+                    <i class="fa-solid fa-trophy text-gold text-3xl mb-3"></i>
+                    <div class="font-serif font-bold text-stone-100 text-sm">Vínne Trhy Pezinok</div>
+                    <div class="text-xs text-gold font-semibold mt-1">Veľká Zlatá Medaila & Šampión</div>
+                    <div class="text-[11px] text-stone-400 mt-1">Pinot Noir</div>
+                </div>
+
+                <!-- Award 2 -->
+                <div class="glass-panel p-6 rounded-2xl text-center border border-gold/20 flex flex-col items-center justify-center">
+                    <i class="fa-solid fa-medal text-gold text-3xl mb-3"></i>
+                    <div class="font-serif font-bold text-stone-100 text-sm">AWC Vienna (Rakúsko)</div>
+                    <div class="text-xs text-gold font-semibold mt-1">Zlaté & Strieborné medaily</div>
+                    <div class="text-[11px] text-stone-400 mt-1">91,8 bodov (Pinot Noir, Silvánske)</div>
+                </div>
+
+                <!-- Award 3 -->
+                <div class="glass-panel p-6 rounded-2xl text-center border border-gold/20 flex flex-col items-center justify-center">
+                    <i class="fa-solid fa-crown text-gold text-3xl mb-3"></i>
+                    <div class="font-serif font-bold text-stone-100 text-sm">Kráľovský Rizling Sv. Jur</div>
+                    <div class="text-xs text-gold font-semibold mt-1">Dvojnásobný Šampión</div>
+                    <div class="text-[11px] text-stone-400 mt-1">Rizling rýnsky</div>
+                </div>
+
+                <!-- Award 4 -->
+                <div class="glass-panel p-6 rounded-2xl text-center border border-gold/20 flex flex-col items-center justify-center">
+                    <i class="fa-solid fa-star text-gold text-3xl mb-3"></i>
+                    <div class="font-serif font-bold text-stone-100 text-sm">Salón vín SR</div>
+                    <div class="text-xs text-gold font-semibold mt-1">Zaradené medzi 100 najlepších vín</div>
+                    <div class="text-[11px] text-stone-400 mt-1">Rizling vlašský & Pinot</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. REVIEWS & COMMUNITY LOVE -->
+    <section class="py-20 bg-stone-950">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-14 space-y-2">
+                <span class="text-xs font-semibold uppercase tracking-[0.2em] text-gold">Skutočné zážitky</span>
+                <h3 class="font-serif text-3xl text-stone-100 font-bold">Čo hovoria tí, ktorí ochutnali</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Review 1 -->
+                <div class="glass-panel p-8 rounded-2xl border border-white/10 space-y-4">
+                    <div class="flex text-gold text-sm gap-1">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-xs text-stone-300 italic leading-relaxed font-serif">
+                        "Ich Pinot Noir 2021/2022 je úplná extratrieda. Mäkké, čerešňové tóny a tá dymová elegancia dreva. Odvtedy máme na Vianoce a výročia na stole len Forišovo víno."
+                    </p>
+                    <div class="pt-2 border-t border-white/5 flex items-center justify-between text-xs">
+                        <span class="font-bold text-stone-200">Martin K. (Bratislava)</span>
+                        <span class="text-stone-400">Pravidelný odberateľ</span>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="glass-panel p-8 rounded-2xl border border-white/10 space-y-4">
+                    <div class="flex text-gold text-sm gap-1">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-xs text-stone-300 italic leading-relaxed font-serif">
+                        "Na letné posedenia sme vyskúšali novinku L. Rosé s levanduľou a zmizli 3 fľaše za večer! Ľahké, jemné bublinky a tá aróma je čisté letné kúzlo."
+                    </p>
+                    <div class="pt-2 border-t border-white/5 flex items-center justify-between text-xs">
+                        <span class="font-bold text-stone-200">Katarína & Peter (Pezinok)</span>
+                        <span class="text-stone-400">Letná degustácia</span>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="glass-panel p-8 rounded-2xl border border-white/10 space-y-4">
+                    <div class="flex text-gold text-sm gap-1">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-xs text-stone-300 italic leading-relaxed font-serif">
+                        "Boli sme na degustácii v pivnici v Limbachu celá firma (12 ľudí). Lukáš Foriš nám rozprával s takou vášňou, že sme nechceli odísť. Vrelo odporúčam každému."
+                    </p>
+                    <div class="pt-2 border-t border-white/5 flex items-center justify-between text-xs">
+                        <span class="font-bold text-stone-200">Ing. Richard B.</span>
+                        <span class="text-stone-400">Firemná ochutnávka</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 11. CONTACT & WINERY LOCATION -->
+    <section id="kontakt" class="py-24 bg-gradient-to-t from-black via-stone-950 to-stone-950 relative border-t border-gold/15">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                
+                <!-- Contact Info & Quick Direct Inquiry -->
+                <div class="lg:col-span-5 space-y-6">
+                    <span class="text-xs font-semibold uppercase tracking-[0.2em] text-gold">Zastavte sa u nás</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl text-stone-100 font-bold">
+                        Vinárstvo Foriš v Limbachu
+                    </h2>
+                    <p class="text-stone-400 text-sm leading-relaxed">
+                        Radi vás privítame priamo v našom vinárstve na osobný odber vína alebo degustáciu. Pred návštevou nám, prosím, krátko zavolajte, aby sme sa vám mohli naplno venovať.
+                    </p>
+
+                    <div class="space-y-4 text-sm text-stone-200 pt-2">
+                        <div class="flex items-start gap-3.5">
+                            <div class="w-10 h-10 rounded-full bg-bordeaux/40 border border-gold/30 flex items-center justify-center text-gold shrink-0 mt-0.5">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <strong class="block text-stone-100 font-serif">Adresa pivnice:</strong>
+                                <span>Pri kockách 4 (bývalá Vavrinecká 21), 900 91 Limbach</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3.5">
+                            <div class="w-10 h-10 rounded-full bg-bordeaux/40 border border-gold/30 flex items-center justify-center text-gold shrink-0 mt-0.5">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <strong class="block text-stone-100 font-serif">Telefónne kontakty:</strong>
+                                <a href="tel:+421903719807" class="hover:text-gold block">+421 (0)903 719 807</a>
+                                <a href="tel:+421904006250" class="hover:text-gold block">+421 (0)904 006 250</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3.5">
+                            <div class="w-10 h-10 rounded-full bg-bordeaux/40 border border-gold/30 flex items-center justify-center text-gold shrink-0 mt-0.5">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <strong class="block text-stone-100 font-serif">Email:</strong>
+                                <a href="mailto:info@vinoforis.sk" class="hover:text-gold">info@vinoforis.sk</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3.5">
+                            <div class="w-10 h-10 rounded-full bg-bordeaux/40 border border-gold/30 flex items-center justify-center text-gold shrink-0 mt-0.5">
+                                <i class="fa-solid fa-clock"></i>
+                            </div>
+                            <div>
+                                <strong class="block text-stone-100 font-serif">Otváracie hodiny:</strong>
+                                <span>Po telefonickej dohode (radi sa prispôsobíme vášmu času)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social Channels -->
+                    <div class="flex items-center gap-3 pt-4">
+                        <a href="https://www.facebook.com/forisvinarstvo/" target="_blank" rel="noopener" class="w-11 h-11 rounded-full glass-panel border border-gold/30 hover:border-gold text-stone-300 hover:text-gold flex items-center justify-center transition-colors">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com/foris_winery/" target="_blank" rel="noopener" class="w-11 h-11 rounded-full glass-panel border border-gold/30 hover:border-gold text-stone-300 hover:text-gold flex items-center justify-center transition-colors">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="https://youtu.be/Xn5HZGjsBmk" target="_blank" rel="noopener" class="w-11 h-11 rounded-full glass-panel border border-gold/30 hover:border-gold text-stone-300 hover:text-gold flex items-center justify-center transition-colors">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+                    </div>
+
+                </div>
+
+                <!-- Interactive Direct Contact Form / Quick Message -->
+                <div class="lg:col-span-7">
+                    <div class="glass-panel-gold p-8 sm:p-10 rounded-3xl border border-gold/30 shadow-2xl">
+                        <h3 class="font-serif text-2xl font-bold text-stone-100 mb-2">Máte otázku alebo chcete víno na mieru?</h3>
+                        <p class="text-xs text-stone-300 mb-6">Napíšte nám priamo do pivnice a my sa vám ozveme ešte dnes.</p>
+
+                        <form id="contactForm" onsubmit="handleContactSubmit(event)" class="space-y-4">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs text-stone-300 mb-1">Vaše meno a priezvisko *</label>
+                                    <input type="text" required placeholder="Ján Novák" class="w-full px-4 py-3 rounded-xl bg-stone-900/80 border border-white/10 focus:border-gold focus:outline-none text-stone-100 text-sm">
+                                </div>
+                                <div>
+                                    <label class="block text-xs text-stone-300 mb-1">Telefónne číslo *</label>
+                                    <input type="tel" required placeholder="+421 900 000 000" class="w-full px-4 py-3 rounded-xl bg-stone-900/80 border border-white/10 focus:border-gold focus:outline-none text-stone-100 text-sm">
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-xs text-stone-300 mb-1">Emailová adresa *</label>
+                                <input type="email" required placeholder="jan@example.sk" class="w-full px-4 py-3 rounded-xl bg-stone-900/80 border border-white/10 focus:border-gold focus:outline-none text-stone-100 text-sm">
+                            </div>
+                            <div>
+                                <label class="block text-xs text-stone-300 mb-1">Čo vás zaujíma?</label>
+                                <select class="w-full px-4 py-3 rounded-xl bg-stone-900/80 border border-white/10 focus:border-gold focus:outline-none text-stone-100 text-sm">
+                                    <option>Objednávka vína / poradenstvo s výberom</option>
+                                    <option>Rezervácia degustácie v pivnici</option>
+                                    <option>Firemné balíčky a vianočné darčeky</option>
+                                    <option>Iná otázka pre vinára</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-xs text-stone-300 mb-1">Vaša správa</label>
+                                <textarea rows="3" placeholder="Dobrý deň, rád by som sa opýtal na..." class="w-full px-4 py-3 rounded-xl bg-stone-900/80 border border-white/10 focus:border-gold focus:outline-none text-stone-100 text-sm"></textarea>
+                            </div>
+                            <button type="submit" class="w-full py-4 rounded-xl bg-gradient-to-r from-gold via-gold-rich to-gold-dark text-bordeaux-dark font-bold text-xs uppercase tracking-wider shadow-lg hover:shadow-gold/30 hover:scale-[1.01] transition-all">
+                                Odoslať správu vinárovi
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Embedded Google Map -->
+            <div class="mt-16 rounded-3xl overflow-hidden border border-gold/20 shadow-2xl h-80">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2654.8792958900935!2d17.226387715619126!3d48.28593797923551!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476c9127a385b3af%3A0x6508370e88e85cc9!2zVmluw6Fyc3R2byBGb3JpxaE!5e0!3m2!1ssk!2ssk!4v1596663497392!5m2!1ssk!2ssk" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-black py-12 border-t border-gold/20 text-xs text-stone-500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="flex items-center gap-3">
+                <div class="w-8 h-8 rounded-full border border-gold/40 flex items-center justify-center font-serif text-gold font-bold">F</div>
+                <span class="font-serif text-stone-300 font-bold tracking-widest">VINÁRSTVO FORIŠ</span>
+                <span>• Limbach 1993</span>
+            </div>
+
+            <div class="flex flex-wrap items-center gap-6 text-stone-400">
+                <a href="#kolekcia" class="hover:text-gold transition-colors">Vína</a>
+                <a href="#somelier" class="hover:text-gold transition-colors">Someliér</a>
+                <a href="#degustacie" class="hover:text-gold transition-colors">Degustácie</a>
+                <a href="#pribeh" class="hover:text-gold transition-colors">Príbeh</a>
+                <a href="#kontakt" class="hover:text-gold transition-colors">Kontakt</a>
+            </div>
+
+            <div>
+                &copy; 1993 – 2026 Vinárstvo Foriš. Všetky práva vyhradené. Pite s rozumom a pôžitkom.
+            </div>
+        </div>
+    </footer>
+
+    <!-- SLIDE-IN CART DRAWER -->
+    <div id="cartDrawerBackdrop" onclick="toggleCartDrawer()" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 opacity-0 pointer-events-none transition-opacity duration-300"></div>
+    <div id="cartDrawer" class="fixed top-0 right-0 h-full w-full max-w-md bg-stone-950 border-l border-gold/30 z-50 transform translate-x-full transition-transform duration-300 flex flex-col shadow-2xl">
+        <!-- Cart Header -->
+        <div class="p-6 border-b border-white/10 flex items-center justify-between bg-bordeaux/30">
+            <div class="flex items-center gap-2.5">
+                <i class="fa-solid fa-basket-shopping text-gold text-lg"></i>
+                <h3 class="font-serif text-xl font-bold text-stone-100">Váš Výber Vín</h3>
+            </div>
+            <button onclick="toggleCartDrawer()" class="text-stone-400 hover:text-stone-100 p-2 text-lg">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+
+        <!-- Free shipping indicator -->
+        <div class="p-4 bg-stone-900 border-b border-white/5">
+            <div class="flex justify-between text-xs mb-1.5">
+                <span id="shippingText" class="text-stone-300">Doprava zadarmo od 6 fliaš</span>
+                <span id="shippingCountNotice" class="text-gold font-bold">Chýba 6 fliaš</span>
+            </div>
+            <div class="w-full h-2 bg-stone-800 rounded-full overflow-hidden">
+                <div id="shippingProgressBar" class="h-full bg-gradient-to-r from-gold to-gold-rich transition-all duration-300" style="width: 0%"></div>
+            </div>
+        </div>
+
+        <!-- Cart Items List -->
+        <div id="cartItemsList" class="flex-1 overflow-y-auto p-6 space-y-4">
+            <!-- Populated via JavaScript -->
+            <div id="emptyCartNotice" class="text-center py-16 text-stone-400 space-y-3">
+                <i class="fa-solid fa-wine-glass text-4xl text-stone-600 mb-2"></i>
+                <p class="font-serif text-lg text-stone-300">Váš košík je zatiaľ prázdny</p>
+                <p class="text-xs">Vyberte si z našich ocenených vín a doprajte si skutočný pôžitok.</p>
+                <button onclick="toggleCartDrawer(); location.href='#kolekcia';" class="mt-4 px-5 py-2.5 rounded-full bg-gold text-bordeaux-dark font-bold text-xs uppercase tracking-wider">
+                    Pozrieť ponuku vín
+                </button>
+            </div>
+        </div>
+
+        <!-- Cart Footer / Checkout button -->
+        <div id="cartFooter" class="p-6 border-t border-white/10 bg-stone-900/90 space-y-4">
+            <div class="space-y-1.5 text-xs text-stone-300">
+                <div class="flex justify-between">
+                    <span>Počet fliaš:</span>
+                    <span id="cartTotalBottles" class="font-bold text-stone-100">0 ks</span>
+                </div>
+                <div class="flex justify-between">
+                    <span>Doprava:</span>
+                    <span id="cartShippingCost" class="font-medium text-gold">4,90 € (alebo osobný odber zadarmo)</span>
+                </div>
+                <div class="flex justify-between text-base font-bold text-stone-100 pt-2 border-t border-white/10">
+                    <span>Celková suma:</span>
+                    <span id="cartGrandTotal" class="font-serif text-2xl text-gold">0,00 €</span>
+                </div>
+            </div>
+
+            <button onclick="openCheckoutModal()" id="cartCheckoutBtn" disabled class="w-full py-4 rounded-xl bg-gradient-to-r from-gold via-gold-rich to-gold-dark text-bordeaux-dark font-bold text-xs uppercase tracking-wider shadow-lg hover:shadow-gold/30 hover:scale-[1.01] transition-all disabled:opacity-40 disabled:pointer-events-none">
+                Prejsť k objednávke
+            </button>
+        </div>
+    </div>
+
+    <!-- WINE DETAIL MODAL (TASTING SHEET) -->
+    <div id="wineModalBackdrop" onclick="closeWineModal()" class="fixed inset-0 bg-black/80 backdrop-blur-md z-50 hidden items-center justify-center p-4">
+        <div onclick="event.stopPropagation()" class="glass-panel-gold rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-y-auto border border-gold/40 shadow-2xl p-6 sm:p-8 relative">
+            <button onclick="closeWineModal()" class="absolute top-5 right-5 text-stone-400 hover:text-stone-100 w-8 h-8 rounded-full bg-stone-900/80 flex items-center justify-center">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div id="wineModalContent" class="space-y-6">
+                <!-- Injected via JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- BOOKING MODAL (DEGUSTATION RESERVATION) -->
+    <div id="bookingModalBackdrop" onclick="closeBookingModal()" class="fixed inset-0 bg-black/80 backdrop-blur-md z-50 hidden items-center justify-center p-4">
+        <div onclick="event.stopPropagation()" class="glass-panel-gold rounded-3xl max-w-lg w-full max-h-[90vh] overflow-y-auto border border-gold/40 shadow-2xl p-6 sm:p-8 relative">
+            <button onclick="closeBookingModal()" class="absolute top-5 right-5 text-stone-400 hover:text-stone-100 w-8 h-8 rounded-full bg-stone-900/80 flex items-center justify-center">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="space-y-4">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold/15 text-gold text-xs font-semibold tracking-wider uppercase">
+                    <i class="fa-solid fa-calendar-check"></i> Rezervácia degustácie
+                </div>
+                <h3 id="bookingModalTitle" class="font-serif text-2xl font-bold text-stone-100">Degustácia v pivnici</h3>
+                <p class="text-xs text-stone-300">Vyberte si požadovaný termín a počet hostí. Následne sa s vami spojíme pre potvrdenie.</p>
+
+                <form onsubmit="handleBookingSubmit(event)" class="space-y-3 pt-2">
+                    <input type="hidden" id="bookingPackageInput">
+                    <div>
+                        <label class="block text-xs text-stone-300 mb-1">Počet osôb</label>
+                        <select id="bookingGuests" onchange="updateBookingTotal()" class="w-full px-4 py-2.5 rounded-xl bg-stone-900 border border-white/10 focus:border-gold focus:outline-none text-stone-100 text-sm">
+                            <option value="2">2 osoby (Romantická ochutnávka)</option>
+                            <option value="4" selected>4 osoby (Odporúčané)</option>
+                            <option value="6">6 osôb</option>
+                            <option value="8">8 osôb</option>
+                            <option value="10">10 osôb</option>
+                            <option value="15">15+ osôb (Firemná skupina)</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-xs text-stone-300 mb-1">Preferovaný dátum</label>
+                        <input type="date" required id="bookingDate" class="w-full px-4 py-2.5 rounded-xl bg-stone-900 border border-white/10 focus:border-gold focus:outline-none text-stone-100 text-sm">
+                    </div>
+                    <div class="grid grid-cols-2 gap-3">
+                        <div>
+                            <label class="block text-xs text-stone-300 mb-1">Meno a Priezvisko</label>
+                            <input type="text" required placeholder="Ján Novák" class="w-full px-4 py-2.5 rounded-xl bg-stone-900 border border-white/10 focus:border-gold focus:outline-none text-stone-100 text-sm">
+                        </div>
+                        <div>
+                            <label class="block text-xs text-stone-300 mb-1">Telefón</label>
+                            <input type="tel" required placeholder="+421 903..." class="w-full px-4 py-2.5 rounded-xl bg-stone-900 border border-white/10 focus:border-gold focus:outline-none text-stone-100 text-sm">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-xs text-stone-300 mb-1">Email</label>
+                        <input type="email" required placeholder="jan@novak.sk" class="w-full px-4 py-2.5 rounded-xl bg-stone-900 border border-white/10 focus:border-gold focus:outline-none text-stone-100 text-sm">
+                    </div>
+                    <div>
+                        <label class="block text-xs text-stone-300 mb-1">Poznámka / Špeciálne želania</label>
+                        <textarea rows="2" placeholder="Napr. vegetariánske syry, oslava narodenín..." class="w-full px-4 py-2 rounded-xl bg-stone-900 border border-white/10 focus:border-gold focus:outline-none text-stone-100 text-sm"></textarea>
+                    </div>
+
+                    <div class="p-3 rounded-xl bg-stone-950/60 border border-gold/20 flex justify-between items-center text-xs">
+                        <span class="text-stone-300">Orientačná cena degustácie:</span>
+                        <span id="bookingPriceCalculation" class="font-serif text-lg font-bold text-gold">100 €</span>
+                    </div>
+
+                    <button type="submit" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-gold via-gold-rich to-gold-dark text-bordeaux-dark font-bold text-xs uppercase tracking-wider shadow-lg hover:shadow-gold/30 hover:scale-[1.01] transition-all">
+                        Odoslať nezáväznú rezerváciu
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- CHECKOUT MODAL -->
+    <div id="checkoutModalBackdrop" onclick="closeCheckoutModal()" class="fixed inset-0 bg-black/85 backdrop-blur-md z-50 hidden items-center justify-center p-4">
+        <div onclick="event.stopPropagation()" class="glass-panel-gold rounded-3xl max-w-xl w-full max-h-[92vh] overflow-y-auto border border-gold/40 shadow-2xl p-6 sm:p-8 relative">
+            <button onclick="closeCheckoutModal()" class="absolute top-5 right-5 text-stone-400 hover:text-stone-100 w-8 h-8 rounded-full bg-stone-900/80 flex items-center justify-center">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="space-y-5">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold/15 text-gold text-xs font-semibold tracking-wider uppercase">
+                    <i class="fa-solid fa-shield-check"></i> Rýchla a bezpečná objednávka
+                </div>
+                <h3 class="font-serif text-2xl font-bold text-stone-100">Dokončenie Objednávky Vína</h3>
+                <p class="text-xs text-stone-300">Víno vám precízne zabalíme do špeciálnych certifikovaných thermo-obalov na sklo.</p>
+
+                <!-- Order summary pills -->
+                <div class="p-4 rounded-xl bg-stone-950/80 border border-white/10 space-y-2 text-xs">
+                    <div class="flex justify-between">
+                        <span class="text-stone-300">Vybrané vína:</span>
+                        <span id="checkoutBottlesSummary" class="font-bold text-stone-100">0 fliaš</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="text-stone-300">Spôsob dopravy:</span>
+                        <span id="checkoutShippingNotice" class="font-semibold text-gold">Doprava zadarmo</span>
+                    </div>
+                    <div class="flex justify-between text-sm font-bold border-t border-white/10 pt-2">
+                        <span class="text-stone-100">K úhrade:</span>
+                        <span id="checkoutGrandTotal" class="font-serif text-xl text-gold">0,00 €</span>
+                    </div>
+                </div>
+
+                <form onsubmit="handleCheckoutSubmit(event)" class="space-y-3.5">
+                    <div class="grid grid-cols-2 gap-3">
+                        <div>
+                            <label class="block text-xs text-stone-300 mb-1">Meno a Priezvisko *</label>
+                            <input type="text" required placeholder="Ján Novák" class="w-full px-3.5 py-2.5 rounded-xl bg-stone-900 border border-white/10 focus:border-gold focus:outline-none text-stone-100 text-sm">
+                        </div>
+                        <div>
+                            <label class="block text-xs text-stone-300 mb-1">Telefón *</label>
+                            <input type="tel" required placeholder="+421 900 000 000" class="w-full px-3.5 py-2.5 rounded-xl bg-stone-900 border border-white/10 focus:border-gold focus:outline-none text-stone-100 text-sm">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-xs text-stone-300 mb-1">Email pre potvrdenie *</label>
+                        <input type="email" required placeholder="jan@novak.sk" class="w-full px-3.5 py-2.5 rounded-xl bg-stone-900 border border-white/10 focus:border-gold focus:outline-none text-stone-100 text-sm">
+                    </div>
+                    
+                    <!-- Delivery method choice -->
+                    <div>
+                        <label class="block text-xs text-stone-300 mb-1">Spôsob doručenia</label>
+                        <div class="grid grid-cols-2 gap-2 text-xs">
+                            <label class="flex items-center gap-2 p-3 rounded-xl bg-stone-900 border border-gold/30 cursor-pointer hover:border-gold">
+                                <input type="radio" name="deliveryMethod" value="courier" checked onchange="updateDeliveryMethod(this.value)">
+                                <div>
+                                    <span class="font-bold text-stone-200 block">Kuriér (Celé SR)</span>
+                                    <span class="text-[10px] text-stone-400">Priamo k dverám</span>
+                                </div>
+                            </label>
+                            <label class="flex items-center gap-2 p-3 rounded-xl bg-stone-900 border border-white/10 cursor-pointer hover:border-gold">
+                                <input type="radio" name="deliveryMethod" value="pickup" onchange="updateDeliveryMethod(this.value)">
+                                <div>
+                                    <span class="font-bold text-stone-200 block">Osobný odber</span>
+                                    <span class="text-[10px] text-gold">Limbach (Zadarmo)</span>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div id="addressFieldsBlock">
+                        <label class="block text-xs text-stone-300 mb-1">Doručovacia adresa (Ulica, Číslo, Mesto, PSČ)</label>
+                        <input type="text" id="deliveryAddressInput" required placeholder="Hlavná 12, 811 01 Bratislava" class="w-full px-3.5 py-2.5 rounded-xl bg-stone-900 border border-white/10 focus:border-gold focus:outline-none text-stone-100 text-sm">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs text-stone-300 mb-1">Poznámka k objednávke / darčekové venovanie</label>
+                        <input type="text" placeholder="Napr. kód na bráne, darčekové balenie..." class="w-full px-3.5 py-2.5 rounded-xl bg-stone-900 border border-white/10 focus:border-gold focus:outline-none text-stone-100 text-sm">
+                    </div>
+
+                    <button type="submit" class="w-full py-4 rounded-xl bg-gradient-to-r from-gold via-gold-rich to-gold-dark text-bordeaux-dark font-bold text-xs uppercase tracking-wider shadow-lg hover:shadow-gold/30 hover:scale-[1.01] transition-all">
+                        Potvrdiť objednávku vín
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- SUCCESS NOTIFICATION TOAST -->
+    <div id="notificationToast" class="fixed bottom-6 right-6 z-50 glass-panel-gold border border-gold/50 px-5 py-3.5 rounded-2xl shadow-2xl transform translate-y-24 opacity-0 transition-all duration-300 flex items-center gap-3">
+        <i class="fa-solid fa-circle-check text-gold text-lg"></i>
+        <div class="text-xs">
+            <div id="toastTitle" class="font-bold text-stone-100">Pridané do košíka!</div>
+            <div id="toastMessage" class="text-stone-300">Fľaša bola úspešne pridaná.</div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT DATA & APP LOGIC -->
+    <script>
+        // Wine Database with Authentic Products, Sensory Notes, and Attributes
+        const WINES = [
+            {
+                id: 61,
+                name: "Pinot Noir 2022 Barrique",
+                category: "red",
+                price: 20.00,
+                vintage: "2022",
+                alcohol: "14.0 %",
+                sugar: "1.8 g/l (Suché)",
+                acidity: "5.0 g/l",
+                volume: "0.75 l",
+                awards: ["Veľká Zlatá Medaila & Šampión Vínne Trhy Pezinok", "Zlato AWC Vienna"],
+                img: "https://vinoforis.sk/storage/files/1/61.jpg",
+                thumb: "https://vinoforis.sk/storage/files/1/thumbs/61.jpg",
+                tagline: "Zamatový aristokrat zrejúci 24 mesiacov v dubových barikoch",
+                tastingNotes: "Intenzívna rubínovo-čerešňová farba so svetlejším tehlovým okrajom. Vôňa vás omámi tónmi prezretých lesných višní, černicového džemu, horkej belgickej čokolády a ušľachtilého cédrového dreva. V ústach je mäkké, hodvábne, plné s nekonečne noblesným zamatovým záverom.",
+                pairing: "Hovädzí steak, pečená divina, kačacie prsia s višňovou omáčkou a zrelé syry s modrou plesňou.",
+                servingTemp: "16 – 18 °C",
+                glass: "Veľký burgundský kalich (balón)",
+                profile: { body: 95, sweetness: 15, acidity: 50, tannins: 75 }
+            },
+            {
+                id: 8,
+                name: "Silvánske Zelené 2025",
+                category: "white",
+                price: 9.90,
+                vintage: "2025",
+                alcohol: "12.5 %",
+                sugar: "2.1 g/l (Suché)",
+                acidity: "6.2 g/l",
+                volume: "0.75 l",
+                awards: ["Strieborná Medaila AWC Vienna (89,8 b.)", "Tradičná limbašská klasika"],
+                img: "https://vinoforis.sk/storage/files/1/8.jpg",
+                thumb: "https://vinoforis.sk/storage/files/1/thumbs/8.jpg",
+                tagline: "Pravá limbašská ikona s kriedovo-minerálnou iskrou",
+                tastingNotes: "Iskrivá zlatozelená farba. V aromatike dominujú tóny zeleného jablka granny smith, egrešov, lúčnych bylín a jemného limbašského kremeňa. Na jazyku je chrumkavé, šťavnaté, osviežujúce s typickou mandľovou dochuťou.",
+                pairing: "Sladkovodné ryby (pstruh, zubáč na masle), kurací rezeň s viedenským zemiakovým šalátom a čerstvý kozí syr.",
+                servingTemp: "9 – 11 °C",
+                glass: "Stredne veľký kalich na biele vína tulipánového tvaru",
+                profile: { body: 60, sweetness: 15, acidity: 85, tannins: 10 }
+            },
+            {
+                id: 2,
+                name: "L. Rosé (Levanduľové bublinky)",
+                category: "rose-bubbles",
+                price: 5.90,
+                vintage: "NV",
+                alcohol: "5.5 %",
+                sugar: "Polosladké osvieženie",
+                acidity: "Svieža bublinková",
+                volume: "0.75 l",
+                awards: ["Letný bestseller vinárstva", "Osvieženie s nízkym alkoholom"],
+                img: "https://vinoforis.sk/storage/files/1/2.jpg",
+                thumb: "https://vinoforis.sk/storage/files/1/thumbs/2.jpg",
+                tagline: "Roztopašné letné bublinky s infúziou pravej levandule",
+                tastingNotes: "Keď sa ružové víno spojí s jemným sirupom z pravej levandule a jemnými bublinkami, vznikne nápoj, ktorý vonia bezstarostným letom. Lesné jahody, kvetinová levanduľová lúka a nízky obsah alkoholu (len 5,5 %). Ľahkosť bytia v každom pohári.",
+                pairing: "Letné ovocné šaláty, grilovaný halloumi syr, pikniky na tráve, jahodové dezerty alebo len tak s ľadom a mätou.",
+                servingTemp: "6 – 8 °C (Dobre zachladiť)",
+                glass: "Pohár na šumivé víno alebo veľký kalich s ľadom",
+                profile: { body: 40, sweetness: 65, acidity: 70, tannins: 5 }
+            },
+            {
+                id: 56,
+                name: "Dunaj 2023 Barrique",
+                category: "red",
+                price: 18.00,
+                vintage: "2023",
+                alcohol: "14.5 %",
+                sugar: "2.4 g/l (Suché)",
+                acidity: "5.4 g/l",
+                volume: "0.75 l",
+                awards: ["Šampión redakčného testu časopisu Vinotéka", "Slovenský aristokrat"],
+                img: "https://vinoforis.sk/storage/files/1/56.jpg",
+                thumb: "https://vinoforis.sk/storage/files/1/thumbs/56.jpg",
+                tagline: "Mohutné slovenské novošľachtenie s dušou černíc a sliviek",
+                tastingNotes: "Hustá, takmer nepriehľadná fialovo-rubínová farba. Extraktívna vôňa lekváru z lesných černíc, horkej čokolády, vanilky a mletého čierneho korenia. V chuti je hrejivé, zamatovo mohutné, s bohatou štruktúrou zrelých tanínov.",
+                pairing: "Hovädzie ragú na červenom víne, pečená husacina a lokše, zrejúci parmezán a čokoládové suflé.",
+                servingTemp: "16 – 18 °C",
+                glass: "Veľký široký kalich typu Bordeaux",
+                profile: { body: 98, sweetness: 20, acidity: 45, tannins: 85 }
+            },
+            {
+                id: 23,
+                name: "Rizling rýnsky 2024",
+                category: "white",
+                price: 9.90,
+                vintage: "2024",
+                alcohol: "13.0 %",
+                sugar: "3.5 g/l (Suché)",
+                acidity: "7.0 g/l",
+                volume: "0.75 l",
+                awards: ["Dvojnásobný Šampión Kráľovský Rizling Sv. Jur", "Kráľ bielych vín"],
+                img: "https://vinoforis.sk/storage/files/1/23.jpg",
+                thumb: "https://vinoforis.sk/storage/files/1/thumbs/23.jpg",
+                tagline: "Kráľovské víno s tónmi lipového kvetu a marhúľ",
+                tastingNotes: "Brilantná zlatožltá farba. Noblesná vôňa rozkvitnutej lipy, sušených marhúľ a medového plástu podporená pevnou malokarpatskou kyselinkou. Komplexné, perzistentné víno s obrovským archivačným potenciálom.",
+                pairing: "Pečené bravčové koleno, teľací rezeň, hydinové paštéty, ázijská pikantnejšia kuchyňa.",
+                servingTemp: "10 – 12 °C",
+                glass: "Klasický rizlingový kalich",
+                profile: { body: 75, sweetness: 25, acidity: 90, tannins: 5 }
+            },
+            {
+                id: 36,
+                name: "PÄŤ-NAT St. Laurent rosé 2025",
+                category: "rose-bubbles",
+                price: 12.90,
+                vintage: "2025",
+                alcohol: "12.0 %",
+                sugar: "Brut Nature (Prírodne suché)",
+                acidity: "6.8 g/l",
+                volume: "0.75 l",
+                awards: ["100% prírodné kvasenie vo fľaši", "Nefiltrovaný remeselný originál"],
+                img: "https://vinoforis.sk/storage/files/1/36.jpg",
+                thumb: "https://vinoforis.sk/storage/files/1/thumbs/36.jpg",
+                tagline: "Nespútané prírodné perlenie bez pridaných siričitanov",
+                tastingNotes: "Autentický pét-nat (pétillant naturel) z odrody Svätovavrinecké. Fľašované ešte počas primárnej fermentácie. Jemný prirodzený zákal, energické husté bublinky a explózia čerstvo natrhaných lesných malín, brusníc a granátového jablka. Extrémne osviežujúce.",
+                pairing: "Ustrice, sushi, tapas, sušená šunka prosciutto a chrumkavé bruschetty s paradajkami.",
+                servingTemp: "7 – 9 °C",
+                glass: "Kalich na šampanské",
+                profile: { body: 55, sweetness: 10, acidity: 85, tannins: 20 }
+            },
+            {
+                id: 27,
+                name: "Pinot blanc 2024",
+                category: "white",
+                price: 9.90,
+                vintage: "2024",
+                alcohol: "13.0 %",
+                sugar: "2.8 g/l (Suché)",
+                acidity: "5.8 g/l",
+                volume: "0.75 l",
+                awards: ["Strieborná Medaila AWC Vienna (89,4 b.)", "Krémová elegancia"],
+                img: "https://vinoforis.sk/storage/files/1/27.jpg",
+                thumb: "https://vinoforis.sk/storage/files/1/thumbs/27.jpg",
+                tagline: "Hebké, krémové biele víno s tónmi bielej broskyne a lieskových orieškov",
+                tastingNotes: "Svetložltá farba so zlatistými odleskami. Vo vôni vystupujú zrelé hrušky maslovky, biele broskyne a jemný brioškový podtón. Na podnebí zanecháva zamatovú, zaoblenú stopu s elegantnou kyselinkou.",
+                pairing: "Cestoviny so smotanovými omáčkami, pečené kurča na masle, pečený losos a mäkké syry typu brie.",
+                servingTemp: "10 – 12 °C",
+                glass: "Širší burgundský kalich na biele vína",
+                profile: { body: 75, sweetness: 20, acidity: 65, tannins: 10 }
+            },
+            {
+                id: 65,
+                name: "Pinot - Syrah Cuvée 2021",
+                category: "red",
+                price: 20.00,
+                vintage: "2021",
+                alcohol: "14.5 %",
+                sugar: "2.1 g/l (Suché)",
+                acidity: "5.2 g/l",
+                volume: "0.75 l",
+                awards: ["Exkluzívna limitovaná rezerva", "Zrenie v barikových sudoch"],
+                img: "https://vinoforis.sk/storage/files/1/65.jpg",
+                thumb: "https://vinoforis.sk/storage/files/1/thumbs/65.jpg",
+                tagline: "Harmonické spojenie burgundskej jemnosti a rhônskej sily",
+                tastingNotes: "Kombinácia noblesného Pinot Noir a korenistého Syrahu. Vôňa čiernych ríbezlí, dymového dreva, korenia a tabakových listov. V chuti je mohutné, komplexné a hlboké s pevnou tanínovou chrbticou.",
+                pairing: "Grilovaný tomahawk steak, jahňacie kotlety na rozmaríne a vyzretý čedar.",
+                servingTemp: "17 – 19 °C",
+                glass: "Veľký kalich Bordeaux",
+                profile: { body: 95, sweetness: 15, acidity: 50, tannins: 80 }
+            },
+            {
+                id: 40,
+                name: "Frizzante St. Laurent rosé 2025",
+                category: "rose-bubbles",
+                price: 9.90,
+                vintage: "2025",
+                alcohol: "11.5 %",
+                sugar: "Polosuché",
+                acidity: "6.5 g/l",
+                volume: "0.75 l",
+                awards: ["Ideálne letné osvieženie", "Jahodovo-malinový buket"],
+                img: "https://vinoforis.sk/storage/files/1/40.jpg",
+                thumb: "https://vinoforis.sk/storage/files/1/thumbs/40.jpg",
+                tagline: "Hravé perlenie plné lesných jahôd a malín",
+                tastingNotes: "Krásna lososovo-ružová farba. Intenzívna aróma čerstvo roztlačených lesných jahôd s trochou smotany. Jemné jemné perlenie hladí jazyk a vyvoláva okamžitú túžbu po ďalšom dúšku.",
+                pairing: "Jahodový cheesecake, letné šaláty, grilovaná hydina.",
+                servingTemp: "7 – 9 °C",
+                glass: "Štíhly kalich na šumivé víno",
+                profile: { body: 45, sweetness: 40, acidity: 75, tannins: 10 }
+            },
+            {
+                id: 20,
+                name: "Rizling vlašský 2024",
+                category: "white",
+                price: 9.90,
+                vintage: "2024",
+                alcohol: "12.5 %",
+                sugar: "2.0 g/l (Suché)",
+                acidity: "6.4 g/l",
+                volume: "0.75 l",
+                awards: ["Zaradené v Malokarpatskom salóne vín", "Pravý vlašák"],
+                img: "https://vinoforis.sk/storage/files/1/20.jpg",
+                thumb: "https://vinoforis.sk/storage/files/1/thumbs/20.jpg",
+                tagline: "Svieži vlašák s vôňou lúčnych kvetov a minerálnym záverom",
+                tastingNotes: "Svetlá slamová farba. Vôňa zelených jabĺk a lúčneho sena s jemným minerálnym tónom. V ústach priamočiare, svieže, s čistým minerálnym dozvukom.",
+                pairing: "Domáce nátierky, oškvarkové pagáče, pečené kura a ľahké zeleninové jedlá.",
+                servingTemp: "9 – 11 °C",
+                glass: "Kalich na mladé biele vína",
+                profile: { body: 55, sweetness: 10, acidity: 80, tannins: 5 }
+            },
+            {
+                id: 11,
+                name: "Veltlínske Zelené Farské 2025",
+                category: "white",
+                price: 9.90,
+                vintage: "2025",
+                alcohol: "12.5 %",
+                sugar: "2.5 g/l (Suché)",
+                acidity: "6.1 g/l",
+                volume: "0.75 l",
+                awards: ["Hon Farské v Limbachu", "Typická korenistosť"],
+                img: "https://vinoforis.sk/storage/files/1/11.jpg",
+                thumb: "https://vinoforis.sk/storage/files/1/thumbs/11.jpg",
+                tagline: "Hon Farské prináša pikantnú bielo-korenistú stopu",
+                tastingNotes: "Žltozelená farba, intenzívna aróma zeleného korenia, citrusov a mandľového kvetu. Plná chuť s chrumkavou kyselinkou a korenistou dochuťou.",
+                pairing: "Viedenský rezeň, pečené bravčové mäso, bryndzové halušky a tvrdé syry.",
+                servingTemp: "10 – 12 °C",
+                glass: "Stredný kalich",
+                profile: { body: 65, sweetness: 15, acidity: 75, tannins: 10 }
+            },
+            {
+                id: 4,
+                name: "Irsai Oliver 2025",
+                category: "white",
+                price: 9.90,
+                vintage: "2025",
+                alcohol: "11.5 %",
+                sugar: "Polosuché",
+                acidity: "5.9 g/l",
+                volume: "0.75 l",
+                awards: ["Mladé aromatické víno", "Extrémne voňavé"],
+                img: "https://vinoforis.sk/storage/files/1/4.jpg",
+                thumb: "https://vinoforis.sk/storage/files/1/thumbs/4.jpg",
+                tagline: "Omamná kvetinovo-muškátová vôňa s dotykom bazových kvetov",
+                tastingNotes: "Výrazne aromatické víno plné vône kvitnúcej bazy, zrelého hrozna a muškátového orieška. V ústach ľahké, svieže, s príjemným harmonickým zvyškovým cukrom.",
+                pairing: "Aperitív, ľahké ovocné dezerty, tvarohové koláče a posedenie na terase.",
+                servingTemp: "8 – 10 °C",
+                glass: "Kalich na aromatické biele vína",
+                profile: { body: 45, sweetness: 50, acidity: 70, tannins: 5 }
+            },
+            // Tasting sets & packages
+            {
+                id: 101,
+                name: "Kartón Šampióni Limbachu (6 fliaš)",
+                category: "sets",
+                price: 69.00,
+                vintage: "Výber vinára",
+                alcohol: "Mix",
+                sugar: "Suché aj polosuché",
+                acidity: "Vyvážená",
+                volume: "6x 0.75 l",
+                awards: ["Doprava zadarmo v cene", "10% úspora oproti jednotlivým fľašiam"],
+                img: "https://vinoforis.sk/storage/files/1/banner_f.jpg",
+                thumb: "https://vinoforis.sk/storage/files/1/banner_f.jpg",
+                tagline: "Najlepšie z našej pivnice v jednom reprezentatívnom kartóne",
+                tastingNotes: "Obsahuje: 1x Pinot Noir 2022 Barrique (Šampión), 1x Silvánske zelené 2025 (AWC Vienna), 1x Dunaj 2023 Barrique, 1x Rizling rýnsky 2024, 1x PÄŤ-NAT Rosé, 1x L. Rosé. Ideálne ako prestížny darček alebo na spoznanie celého charakteru Vinárstva Foriš.",
+                pairing: "Kompletný prierez pre celovečernú degustáciu s priateľmi.",
+                servingTemp: "Podľa jednotlivých fliaš",
+                glass: "Univerzálna degustačná sada",
+                profile: { body: 80, sweetness: 30, acidity: 75, tannins: 60 }
+            },
+            {
+                id: 102,
+                name: "Letný Set Bubliniek & Rosé (4 fľaše)",
+                category: "sets",
+                price: 36.00,
+                vintage: "2025",
+                alcohol: "5.5% – 12%",
+                sugar: "Svieže & voňavé",
+                acidity: "Iskrivá",
+                volume: "4x 0.75 l",
+                awards: ["Letný bestseller", "Ideálne na terasu a piknik"],
+                img: "https://vinoforis.sk/storage/files/1/102.jpg",
+                thumb: "https://vinoforis.sk/storage/files/1/thumbs/2.jpg",
+                tagline: "Osvieženie na teplé večery: L. Rosé, Pät-Nat a Frizzante",
+                tastingNotes: "Obsahuje: 2x L. Rosé s levanduľou, 1x PÄŤ-NAT St. Laurent rosé, 1x Frizzante Cabernet Sauvignon rosé. Skutočný festival ovocnej sviežosti a jemných bubliniek.",
+                pairing: "Letné grilovačky, posedenie s priateľmi, jahody a syry.",
+                servingTemp: "6 – 8 °C",
+                glass: "Šumivý kalich",
+                profile: { body: 45, sweetness: 50, acidity: 80, tannins: 10 }
+            },
+            {
+                id: 90,
+                name: "Darčekový Poukaz: Degustácia (5 vzoriek)",
+                category: "sets",
+                price: 25.00,
+                vintage: "Platnosť 1 rok",
+                alcohol: "-",
+                sugar: "-",
+                acidity: "-",
+                volume: "Pre 1 osobu",
+                awards: ["Zážitok v kamennej pivnici", "Limbach Pri kockách 4"],
+                img: "https://vinoforis.sk/storage/files/1/degustacia.jpg",
+                thumb: "https://vinoforis.sk/storage/files/1/thumbs/90.jpg",
+                tagline: "Podarujte nezabudnuteľný večer s výkladom vinára",
+                tastingNotes: "Poukaz zahŕňa ochutnávku 5 prémiových vzoriek vín, prehliadku historickej klenbovej pivnice v Limbachu a bohatý malokarpatský záhryz s remeselnými syrmi a chlebom. Platnosť poukazu je celých 12 mesiacov.",
+                pairing: "Skvelé ako darček k narodeninám, výročiu či Vianociam.",
+                servingTemp: "Pivničná teplota",
+                glass: "Originálne degustačné sklo Foriš",
+                profile: { body: 70, sweetness: 20, acidity: 70, tannins: 50 }
+            }
+        ];
+
+        // Shopping Cart State
+        let cart = [];
+
+        // Load cart from LocalStorage if available
+        try {
+            const savedCart = localStorage.getItem('foris_cart');
+            if (savedCart) {
+                cart = JSON.parse(savedCart);
+            }
+        } catch(e) { cart = []; }
+
+        // Render wines in catalog
+        function renderWines(category = 'all') {
+            const grid = document.getElementById('winesGrid');
+            if (!grid) return;
+
+            const filtered = category === 'all' 
+                ? WINES 
+                : WINES.filter(w => w.category === category);
+
+            grid.innerHTML = filtered.map(wine => {
+                const awardBadge = wine.awards && wine.awards.length > 0 
+                    ? `<div class="absolute top-4 left-4 z-10 bg-bordeaux/90 backdrop-blur-md text-gold text-[10px] font-bold tracking-wider uppercase px-2.5 py-1 rounded-full border border-gold/30 flex items-center gap-1 shadow-lg">
+                        <i class="fa-solid fa-trophy text-[9px]"></i> ${wine.awards[0]}
+                       </div>`
+                    : '';
+
+                return `
+                    <div class="bottle-card glass-panel rounded-3xl p-6 border border-gold/20 hover:border-gold/50 transition-all duration-300 flex flex-col justify-between group shadow-xl hover:shadow-2xl relative">
+                        ${awardBadge}
+
+                        <div>
+                            <!-- Bottle Image Presentation -->
+                            <div class="relative h-64 sm:h-72 w-full flex items-center justify-center p-4 bg-stone-900/40 rounded-2xl mb-5 overflow-hidden border border-white/5">
+                                <img src="${wine.thumb || wine.img}" alt="${wine.name}" class="bottle-img max-h-full object-contain drop-shadow-[0_15px_20px_rgba(0,0,0,0.8)] transition-transform duration-500">
+                                
+                                <!-- Fast Tasting Peek Overlay on Hover -->
+                                <div class="tasting-peek absolute inset-x-3 bottom-3 p-3 rounded-xl bg-stone-950/90 backdrop-blur-md border border-gold/30 text-[11px] text-stone-200 opacity-0 transform translate-y-2 transition-all duration-300 pointer-events-none">
+                                    <div class="font-serif italic text-gold">${wine.tagline}</div>
+                                </div>
+                            </div>
+
+                            <!-- Meta & Title -->
+                            <div class="space-y-1 mb-3">
+                                <div class="flex items-center justify-between text-[11px] text-stone-400">
+                                    <span class="uppercase tracking-widest text-gold font-medium">${wine.vintage !== 'NV' ? 'Ročník ' + wine.vintage : 'Špecialita'}</span>
+                                    <span>${wine.volume} • ${wine.alcohol}</span>
+                                </div>
+                                <h3 class="font-serif text-xl sm:text-2xl font-bold text-stone-100 group-hover:text-gold transition-colors leading-snug">
+                                    ${wine.name}
+                                </h3>
+                                <p class="text-xs text-stone-400 line-clamp-2 leading-relaxed">
+                                    ${wine.tastingNotes}
+                                </p>
+                            </div>
+
+                            <!-- Sensory Meters -->
+                            <div class="space-y-1.5 py-3 border-y border-white/5 my-3 text-[10px]">
+                                <div class="flex justify-between items-center text-stone-400">
+                                    <span>Telo & Štruktúra</span>
+                                    <div class="w-24 h-1.5 bg-stone-800 rounded-full overflow-hidden">
+                                        <div class="h-full bg-gradient-to-r from-wine-500 to-gold rounded-full" style="width: ${wine.profile.body}%"></div>
+                                    </div>
+                                </div>
+                                <div class="flex justify-between items-center text-stone-400">
+                                    <span>Sviežosť / Kyselinka</span>
+                                    <div class="w-24 h-1.5 bg-stone-800 rounded-full overflow-hidden">
+                                        <div class="h-full bg-gradient-to-r from-teal-500 to-lime-400 rounded-full" style="width: ${wine.profile.acidity}%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Price, Detail & Add Button -->
+                        <div class="pt-2 flex items-center justify-between gap-2">
+                            <div>
+                                <span class="text-[10px] text-stone-400 block uppercase tracking-wider">Cena fľaše</span>
+                                <span class="font-serif text-2xl font-bold text-gold">${wine.price.toFixed(2)} €</span>
+                            </div>
+
+                            <div class="flex items-center gap-2">
+                                <button onclick="openWineModal(${wine.id})" title="Zobraziť detail a chuťový profil" class="w-10 h-10 rounded-full border border-white/10 hover:border-gold text-stone-300 hover:text-gold flex items-center justify-center text-sm transition-colors bg-stone-900/60">
+                                    <i class="fa-regular fa-eye"></i>
+                                </button>
+                                <button onclick="addToCart({id: ${wine.id}, name: '${wine.name}', price: ${wine.price}, img: '${wine.thumb || wine.img}'})" class="px-4 py-2.5 rounded-full bg-gradient-to-r from-wine-800 to-bordeaux hover:from-wine-700 hover:to-bordeaux-dark text-white text-xs font-semibold uppercase tracking-wider border border-gold/30 hover:border-gold shadow-md hover:scale-105 transition-all flex items-center gap-1.5">
+                                    <i class="fa-solid fa-plus text-gold text-[10px]"></i> Kúpiť
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                `;
+            }).join('');
+        }
+
+        // Filter button click handler
+        function filterWines(cat) {
+            document.querySelectorAll('.filter-tab').forEach(b => {
+                b.classList.remove('active', 'bg-gold', 'text-bordeaux-dark', 'font-bold', 'shadow-md');
+                b.classList.add('text-stone-300');
+            });
+            event.currentTarget.classList.add('active', 'bg-gold', 'text-bordeaux-dark', 'font-bold', 'shadow-md');
+            event.currentTarget.classList.remove('text-stone-300');
+            renderWines(cat);
+        }
+
+        // Add to Cart
+        function addToCart(wine) {
+            const existing = cart.find(i => i.id === wine.id);
+            if (existing) {
+                existing.qty += 1;
+            } else {
+                cart.push({ ...wine, qty: 1 });
+            }
+            saveCart();
+            updateCartUI();
+            showToast('Pridané do košíka!', `${wine.name} bolo úspešne pridané.`);
+            playWinePourSound();
+        }
+
+        function addBundleToCart(type) {
+            if (type === 'champions') {
+                const bundle = WINES.find(w => w.id === 101);
+                if (bundle) {
+                    addToCart({
+                        id: bundle.id,
+                        name: bundle.name,
+                        price: bundle.price,
+                        img: bundle.thumb || bundle.img
+                    });
+                    toggleCartDrawer();
+                }
+            }
+        }
+
+        function changeQty(id, delta) {
+            const item = cart.find(i => i.id === id);
+            if (!item) return;
+            item.qty += delta;
+            if (item.qty <= 0) {
+                cart = cart.filter(i => i.id !== id);
+            }
+            saveCart();
+            updateCartUI();
+        }
+
+        function saveCart() {
+            try {
+                localStorage.setItem('foris_cart', JSON.stringify(cart));
+            } catch(e){}
+        }
+
+        function updateCartUI() {
+            const totalBottles = cart.reduce((acc, i) => acc + (i.id === 101 ? i.qty * 6 : (i.id === 102 ? i.qty * 4 : i.qty)), 0);
+            const totalItemsCount = cart.reduce((acc, i) => acc + i.qty, 0);
+            const subtotal = cart.reduce((acc, i) => acc + (i.price * i.qty), 0);
+            
+            // Badge
+            const badge = document.getElementById('cartCountBadge');
+            if (badge) badge.innerText = totalItemsCount;
+
+            // Free Shipping threshold: 6 bottles or 60 €
+            const freeShippingEligible = totalBottles >= 6 || subtotal >= 60;
+            const bottlesNeeded = Math.max(0, 6 - totalBottles);
+            const progress = Math.min(100, Math.round((totalBottles / 6) * 100));
+
+            const progressBar = document.getElementById('shippingProgressBar');
+            const notice = document.getElementById('shippingCountNotice');
+            if (progressBar && notice) {
+                progressBar.style.width = progress + '%';
+                if (freeShippingEligible) {
+                    notice.innerHTML = '<span class="text-green-400 font-bold"><i class="fa-solid fa-check mr-1"></i>Doprava kuriérom ZADARMO!</span>';
+                } else {
+                    notice.innerText = `Chýba ešte ${bottlesNeeded} ks`;
+                }
+            }
+
+            // Items list
+            const list = document.getElementById('cartItemsList');
+            const emptyNotice = document.getElementById('emptyCartNotice');
+            const checkoutBtn = document.getElementById('cartCheckoutBtn');
+            const grandTotalEl = document.getElementById('cartGrandTotal');
+            const totalBottlesEl = document.getElementById('cartTotalBottles');
+            const shippingCostEl = document.getElementById('cartShippingCost');
+
+            if (!list) return;
+
+            if (cart.length === 0) {
+                list.innerHTML = emptyNotice ? emptyNotice.outerHTML : '<p class="text-center py-10 text-stone-400">Košík je prázdny</p>';
+                if (checkoutBtn) checkoutBtn.disabled = true;
+                if (grandTotalEl) grandTotalEl.innerText = '0,00 €';
+                if (totalBottlesEl) totalBottlesEl.innerText = '0 ks';
+                if (shippingCostEl) shippingCostEl.innerText = '0,00 €';
+                return;
+            }
+
+            if (checkoutBtn) checkoutBtn.disabled = false;
+            if (totalBottlesEl) totalBottlesEl.innerText = totalBottles + ' fliaš';
+
+            const shippingPrice = freeShippingEligible ? 0 : 4.90;
+            if (shippingCostEl) {
+                shippingCostEl.innerHTML = freeShippingEligible 
+                    ? '<span class="text-green-400 font-bold">ZADARMO (od 6 fliaš)</span>' 
+                    : '4,90 € (Kuriér celá SR)';
+            }
+
+            const grandTotal = subtotal + shippingPrice;
+            if (grandTotalEl) grandTotalEl.innerText = grandTotal.toFixed(2) + ' €';
+
+            list.innerHTML = cart.map(item => `
+                <div class="flex items-center gap-3.5 p-3 rounded-2xl bg-stone-900 border border-white/5">
+                    <img src="${item.img}" alt="${item.name}" class="w-12 h-16 object-contain bg-stone-950 rounded-lg p-1 border border-white/5 shrink-0">
+                    <div class="flex-1 min-w-0">
+                        <div class="font-serif font-bold text-stone-100 text-sm truncate">${item.name}</div>
+                        <div class="text-xs text-gold font-medium">${item.price.toFixed(2)} € / ks</div>
+                        <div class="flex items-center gap-2 mt-1.5">
+                            <button onclick="changeQty(${item.id}, -1)" class="w-6 h-6 rounded-full bg-stone-800 text-stone-300 hover:text-white flex items-center justify-center text-xs border border-white/10">-</button>
+                            <span class="text-xs font-bold text-stone-100 px-1">${item.qty}</span>
+                            <button onclick="changeQty(${item.id}, 1)" class="w-6 h-6 rounded-full bg-stone-800 text-stone-300 hover:text-white flex items-center justify-center text-xs border border-white/10">+</button>
+                        </div>
+                    </div>
+                    <div class="text-right shrink-0">
+                        <div class="font-serif font-bold text-stone-100 text-sm">${(item.price * item.qty).toFixed(2)} €</div>
+                        <button onclick="changeQty(${item.id}, -${item.qty})" class="text-[10px] text-stone-500 hover:text-red-400 mt-2 block">
+                            <i class="fa-regular fa-trash-can"></i>
+                        </button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function toggleCartDrawer() {
+            const drawer = document.getElementById('cartDrawer');
+            const backdrop = document.getElementById('cartDrawerBackdrop');
+            if (!drawer || !backdrop) return;
+
+            const isOpen = !drawer.classList.contains('translate-x-full');
+            if (isOpen) {
+                drawer.classList.add('translate-x-full');
+                backdrop.classList.add('opacity-0', 'pointer-events-none');
+            } else {
+                updateCartUI();
+                drawer.classList.remove('translate-x-full');
+                backdrop.classList.remove('opacity-0', 'pointer-events-none');
+            }
+        }
+
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            if (menu) menu.classList.toggle('hidden');
+        }
+
+        // Digital Sommelier Quiz Logic
+        let sommelierState = {
+            occasion: null,
+            occasionName: null,
+            flavor: null,
+            flavorName: null
+        };
+
+        function selectOccasion(key, label) {
+            sommelierState.occasion = key;
+            sommelierState.occasionName = label;
+            document.getElementById('sommelierStep1').classList.add('hidden');
+            document.getElementById('sommelierStep2').classList.remove('hidden');
+            document.getElementById('selectedOccasionLabel').innerText = label;
+        }
+
+        function goSommelierBack(step) {
+            if (step === 1) {
+                document.getElementById('sommelierStep2').classList.add('hidden');
+                document.getElementById('sommelierStep1').classList.remove('hidden');
+            }
+        }
+
+        function selectFlavor(key, label) {
+            sommelierState.flavor = key;
+            sommelierState.flavorName = label;
+            document.getElementById('sommelierStep2').classList.add('hidden');
+            document.getElementById('sommelierResult').classList.remove('hidden');
+            renderSommelierRecommendation();
+        }
+
+        function resetSommelier() {
+            sommelierState = { occasion: null, occasionName: null, flavor: null, flavorName: null };
+            document.getElementById('sommelierResult').classList.add('hidden');
+            document.getElementById('sommelierStep2').classList.add('hidden');
+            document.getElementById('sommelierStep1').classList.remove('hidden');
+        }
+
+        function renderSommelierRecommendation() {
+            const box = document.getElementById('recommendationContent');
+            if (!box) return;
+
+            // Recommendation mapping algorithm
+            let matchedId = 61; // default Pinot Noir
+            let sommelierQuote = "Pre výnimočné chvíle a nezabudnuteľný dojem odporúčam náš ocenený Pinot Noir.";
+
+            if (sommelierState.flavor === 'bubbles' || sommelierState.occasion === 'terrace') {
+                if (sommelierState.occasion === 'terrace') {
+                    matchedId = 2; // L. Rose
+                    sommelierQuote = "Na letnú terasu nie je nič lepšie ako L. Rosé s levanduľovým sirupom a jemným perlením. Ľahké, osviežujúce, nezameniteľné.";
+                } else {
+                    matchedId = 36; // Pet-Nat
+                    sommelierQuote = "PÄŤ-NAT St. Laurent je divoká, nespútaná príroda vo fľaši. Fermentovaný priamo vo fľaši bez filtrácie.";
+                }
+            } else if (sommelierState.flavor === 'mineral') {
+                matchedId = 8; // Silvanske Zelene
+                sommelierQuote = "Limbach je kolískou Silvánskeho zeleného. Naše žulové podložie mu dodáva iskru a kriedovú mineralitu, ktorá pohladí každého znalca.";
+            } else if (sommelierState.flavor === 'velvet') {
+                if (sommelierState.occasion === 'dinner') {
+                    matchedId = 56; // Dunaj
+                    sommelierQuote = "K poctivému steaku alebo divine je náš Dunaj 2023 Barrique absolútny kráľ stola. Hustý ako slivkový lekvár s tónmi vanilky.";
+                } else {
+                    matchedId = 61; // Pinot Noir
+                    sommelierQuote = "Pinot Noir 2022 Barrique získal Veľkú zlatú medailu a titul Šampióna na Vínnych trhoch v Pezinku. 24 mesiacov v dubovom sude.";
+                }
+            } else if (sommelierState.flavor === 'aromatic') {
+                matchedId = 23; // Rizling rynsky
+                sommelierQuote = "Rizling rýnsky 2024 je náš dvojnásobný Šampión Kráľovského rizlingu vo Svätom Jure. Lipový kvet, sušené marhule a noblesná kyselinka.";
+            }
+
+            const wine = WINES.find(w => w.id === matchedId) || WINES[0];
+
+            box.innerHTML = `
+                <div class="md:col-span-5 flex justify-center">
+                    <img src="${wine.img}" alt="${wine.name}" class="h-72 object-contain drop-shadow-[0_15px_30px_rgba(0,0,0,0.9)] hover:scale-105 transition-transform">
+                </div>
+                <div class="md:col-span-7 space-y-4">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold/20 text-gold text-xs font-bold uppercase tracking-wider">
+                        <i class="fa-solid fa-star"></i> Váš ideálny výber
+                    </div>
+                    <h3 class="font-serif text-3xl font-bold text-stone-100">${wine.name}</h3>
+                    <p class="text-xs text-gold font-serif italic text-base">
+                        "${sommelierQuote}"
+                    </p>
+                    <p class="text-xs text-stone-300 leading-relaxed">
+                        ${wine.tastingNotes}
+                    </p>
+                    
+                    <div class="p-3 rounded-xl bg-stone-900 border border-white/5 text-xs text-stone-300 flex items-center gap-3">
+                        <i class="fa-solid fa-utensils text-gold text-lg"></i>
+                        <div>
+                            <span class="font-bold text-stone-200">Gastro párovanie:</span> ${wine.pairing}
+                        </div>
+                    </div>
+
+                    <div class="pt-2 flex items-center justify-between">
+                        <div>
+                            <span class="text-xs text-stone-400 block">Cena za fľašu</span>
+                            <span class="font-serif text-2xl font-bold text-gold">${wine.price.toFixed(2)} €</span>
+                        </div>
+                        <button onclick="addToCart({id: ${wine.id}, name: '${wine.name}', price: ${wine.price}, img: '${wine.thumb || wine.img}'}); toggleCartDrawer();" class="px-6 py-3 rounded-full bg-gradient-to-r from-gold via-gold-rich to-gold-dark text-bordeaux-dark font-bold text-xs uppercase tracking-wider shadow-lg hover:shadow-gold/30 hover:scale-105 transition-all flex items-center gap-2">
+                            <i class="fa-solid fa-cart-shopping"></i> Vložiť do košíka
+                        </button>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Wine Detail Modal
+        function openWineModal(id) {
+            const wine = WINES.find(w => w.id === id);
+            if (!wine) return;
+
+            const modal = document.getElementById('wineModalBackdrop');
+            const content = document.getElementById('wineModalContent');
+            if (!modal || !content) return;
+
+            content.innerHTML = `
+                <div class="grid grid-cols-1 sm:grid-cols-12 gap-6 items-center">
+                    <div class="sm:col-span-5 flex justify-center bg-stone-900/60 p-4 rounded-2xl border border-white/5">
+                        <img src="${wine.img}" alt="${wine.name}" class="h-80 object-contain drop-shadow-[0_15px_25px_rgba(0,0,0,0.9)]">
+                    </div>
+                    <div class="sm:col-span-7 space-y-3">
+                        <div class="text-xs font-semibold text-gold tracking-widest uppercase">${wine.vintage !== 'NV' ? 'Ročník ' + wine.vintage : 'Špeciálna edícia'} • Limbach</div>
+                        <h3 class="font-serif text-2xl sm:text-3xl font-bold text-stone-100">${wine.name}</h3>
+                        <p class="text-xs text-gold italic font-serif text-sm">"${wine.tagline}"</p>
+                        
+                        <div class="grid grid-cols-2 gap-2 text-xs text-stone-300 pt-1">
+                            <div><strong class="text-stone-400">Alkohol:</strong> ${wine.alcohol}</div>
+                            <div><strong class="text-stone-400">Cukor:</strong> ${wine.sugar}</div>
+                            <div><strong class="text-stone-400">Kyseliny:</strong> ${wine.acidity}</div>
+                            <div><strong class="text-stone-400">Objem:</strong> ${wine.volume}</div>
+                        </div>
+
+                        <div class="space-y-1 pt-2">
+                            <div class="text-xs font-bold text-stone-200">Podrobný senzorický profil:</div>
+                            <p class="text-xs text-stone-300 leading-relaxed">${wine.tastingNotes}</p>
+                        </div>
+
+                        <div class="p-3 rounded-xl bg-stone-900/80 border border-white/5 text-xs text-stone-300 space-y-1">
+                            <div><strong class="text-gold">Odporúčané jedlo:</strong> ${wine.pairing}</div>
+                            <div><strong class="text-gold">Ideálna teplota:</strong> ${wine.servingTemp}</div>
+                            <div><strong class="text-gold">Vhodné sklo:</strong> ${wine.glass}</div>
+                        </div>
+
+                        <div class="flex items-center justify-between pt-2">
+                            <span class="font-serif text-2xl font-bold text-gold">${wine.price.toFixed(2)} €</span>
+                            <button onclick="addToCart({id: ${wine.id}, name: '${wine.name}', price: ${wine.price}, img: '${wine.thumb || wine.img}'}); closeWineModal();" class="px-5 py-2.5 rounded-full bg-gradient-to-r from-wine-700 to-bordeaux text-white font-bold text-xs uppercase tracking-wider border border-gold/30 hover:border-gold">
+                                Pridať do košíka
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function closeWineModal() {
+            const modal = document.getElementById('wineModalBackdrop');
+            if (modal) {
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+            }
+        }
+
+        // Booking Modal
+        let currentBookingPricePerPerson = 25;
+        function openBookingModal(pkgName, price) {
+            currentBookingPricePerPerson = price;
+            const modal = document.getElementById('bookingModalBackdrop');
+            const title = document.getElementById('bookingModalTitle');
+            const input = document.getElementById('bookingPackageInput');
+            if (title) title.innerText = pkgName;
+            if (input) input.value = pkgName;
+            updateBookingTotal();
+
+            // Set default date to tomorrow
+            const tomorrow = new Date();
+            tomorrow.setDate(tomorrow.getDate() + 1);
+            const dateInput = document.getElementById('bookingDate');
+            if (dateInput) {
+                dateInput.value = tomorrow.toISOString().split('T')[0];
+                dateInput.min = new Date().toISOString().split('T')[0];
+            }
+
+            if (modal) {
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+            }
+        }
+
+        function closeBookingModal() {
+            const modal = document.getElementById('bookingModalBackdrop');
+            if (modal) {
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+            }
+        }
+
+        function updateBookingTotal() {
+            const guestsEl = document.getElementById('bookingGuests');
+            const priceCalc = document.getElementById('bookingPriceCalculation');
+            if (!guestsEl || !priceCalc) return;
+            const count = parseInt(guestsEl.value, 10) || 4;
+            const total = count * currentBookingPricePerPerson;
+            priceCalc.innerText = `${total} € (${count} osôb × ${currentBookingPricePerPerson} €)`;
+        }
+
+        function handleBookingSubmit(e) {
+            e.preventDefault();
+            closeBookingModal();
+            showToast('Rezervácia prijatá!', 'Ďakujeme! Do 24 hodín vám potvrdíme termín degustácie telefonicky alebo emailom.');
+        }
+
+        // Checkout Modal
+        let activeDeliveryMethod = 'courier';
+        function openCheckoutModal() {
+            if (cart.length === 0) return;
+            toggleCartDrawer();
+
+            const modal = document.getElementById('checkoutModalBackdrop');
+            const bottlesSummary = document.getElementById('checkoutBottlesSummary');
+            const grandTotalEl = document.getElementById('checkoutGrandTotal');
+            const shippingNotice = document.getElementById('checkoutShippingNotice');
+
+            const totalBottles = cart.reduce((acc, i) => acc + (i.id === 101 ? i.qty * 6 : (i.id === 102 ? i.qty * 4 : i.qty)), 0);
+            const subtotal = cart.reduce((acc, i) => acc + (i.price * i.qty), 0);
+            const isFreeShipping = totalBottles >= 6 || subtotal >= 60 || activeDeliveryMethod === 'pickup';
+            const shippingCost = isFreeShipping ? 0 : 4.90;
+            const grandTotal = subtotal + shippingCost;
+
+            if (bottlesSummary) bottlesSummary.innerText = `${totalBottles} fliaš (${cart.length} položiek)`;
+            if (shippingNotice) {
+                shippingNotice.innerHTML = isFreeShipping 
+                    ? '<span class="text-green-400 font-bold">Zadarmo</span>' 
+                    : '4,90 € (Kuriér celá SR)';
+            }
+            if (grandTotalEl) grandTotalEl.innerText = grandTotal.toFixed(2) + ' €';
+
+            if (modal) {
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+            }
+        }
+
+        function closeCheckoutModal() {
+            const modal = document.getElementById('checkoutModalBackdrop');
+            if (modal) {
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+            }
+        }
+
+        function updateDeliveryMethod(method) {
+            activeDeliveryMethod = method;
+            const addressBlock = document.getElementById('addressFieldsBlock');
+            const addressInput = document.getElementById('deliveryAddressInput');
+            if (method === 'pickup') {
+                if (addressBlock) addressBlock.classList.add('opacity-40');
+                if (addressInput) addressInput.required = false;
+            } else {
+                if (addressBlock) addressBlock.classList.remove('opacity-40');
+                if (addressInput) addressInput.required = true;
+            }
+            openCheckoutModal(); // refresh sums
+        }
+
+        function handleCheckoutSubmit(e) {
+            e.preventDefault();
+            closeCheckoutModal();
+            cart = [];
+            saveCart();
+            updateCartUI();
+            showToast('Objednávka úspešne odoslaná!', 'Ďakujeme za vašu dôveru. Vaše vína začíname pripravovať a budeme vás kontaktovať.');
+        }
+
+        function handleContactSubmit(e) {
+            e.preventDefault();
+            e.target.reset();
+            showToast('Správa odoslaná!', 'Ďakujeme! Pivničný majster Lukáš Foriš sa vám ozve čo najskôr.');
+        }
+
+        // Toast feedback
+        function showToast(title, msg) {
+            const toast = document.getElementById('notificationToast');
+            const tTitle = document.getElementById('toastTitle');
+            const tMsg = document.getElementById('toastMessage');
+            if (!toast) return;
+
+            if (tTitle) tTitle.innerText = title;
+            if (tMsg) tMsg.innerText = msg;
+
+            toast.classList.remove('translate-y-24', 'opacity-0');
+            setTimeout(() => {
+                toast.classList.add('translate-y-24', 'opacity-0');
+            }, 4000);
+        }
+
+        // Web Audio Synthesizer for Atmospheric Wine Pour & Toast
+        let audioCtx = null;
+        function getAudioContext() {
+            if (!audioCtx) {
+                const AudioContext = window.AudioContext || window.webkitAudioContext;
+                if (AudioContext) audioCtx = new AudioContext();
+            }
+            if (audioCtx && audioCtx.state === 'suspended') {
+                audioCtx.resume();
+            }
+            return audioCtx;
+        }
+
+        function playWineToastSound() {
+            try {
+                const ctx = getAudioContext();
+                if (!ctx) return;
+                
+                // Crystal Wine Glass Clink: Clean pure sinusoidal fundamental with lingering crystal harmonics
+                const osc1 = ctx.createOscillator();
+                const osc2 = ctx.createOscillator();
+                const gain = ctx.createGain();
+
+                osc1.type = 'sine';
+                osc1.frequency.setValueAtTime(2489.02, ctx.currentTime); // D#7 (crystal chime)
+                
+                osc2.type = 'sine';
+                osc2.frequency.setValueAtTime(4978.03, ctx.currentTime); // Harmonics
+
+                gain.gain.setValueAtTime(0.2, ctx.currentTime);
+                gain.gain.exponentialRampToValueAtTime(0.0001, ctx.currentTime + 1.8);
+
+                osc1.connect(gain);
+                osc2.connect(gain);
+                gain.connect(ctx.destination);
+
+                osc1.start();
+                osc2.start();
+                osc1.stop(ctx.currentTime + 1.8);
+                osc2.stop(ctx.currentTime + 1.8);
+
+                showToast('Na zdravie!', 'Pripíjame s vami na poctivé slovenské víno.');
+            } catch(e) {}
+        }
+
+        function playWinePourSound() {
+            try {
+                const ctx = getAudioContext();
+                if (!ctx) return;
+                
+                // Subtle gentle liquid trickle chime
+                const osc = ctx.createOscillator();
+                const gain = ctx.createGain();
+
+                osc.type = 'sine';
+                osc.frequency.setValueAtTime(523.25, ctx.currentTime); // C5
+                osc.frequency.exponentialRampToValueAtTime(659.25, ctx.currentTime + 0.15); // E5
+
+                gain.gain.setValueAtTime(0.08, ctx.currentTime);
+                gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.2);
+
+                osc.connect(gain);
+                gain.connect(ctx.destination);
+
+                osc.start();
+                osc.stop(ctx.currentTime + 0.2);
+            } catch(e) {}
+        }
+
+        // Initialize on load
+        document.addEventListener('DOMContentLoaded', () => {
+            renderWines('all');
+            updateCartUI();
+        });
+    </script>
+</body>
+</html>
