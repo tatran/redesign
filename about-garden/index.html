@@ -1,0 +1,2255 @@
+<!DOCTYPE html>
+<html lang="sk" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Garden | Projektovanie, realizácia a údržba záhrad Senec & Bratislava | Andrzej Kosieradzki</title>
+  <meta name="description" content="Profesionálne návrhy záhrad v 3D, realizácia na kľúč, kobercové trávniky, automatické závlahové systémy TORO a celoročná odborná údržba. Andrzej Kosieradzki - About Garden, Senec a okolie.">
+  <meta name="keywords" content="realizacia zahrad senec, udrzba zahrad bratislava, 3d navrh zahrady, kobercovy travnik, automaticka zavlaha toro, andrzej kosieradzki, about garden, strihanie travnika, vertikutacia">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="http://www.aboutgarden.sk/">
+  <meta property="og:title" content="About Garden | Projektovanie, realizácia a údržba záhrad">
+  <meta property="og:description" content="Premeníme váš pozemok na oázu oddychu a živej zelene. 3D návrh zdarma pri realizácii, závlahy TORO a poctivá starostlivosť.">
+  <meta property="og:image" content="images/logo1.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="images/logo1.jpg">
+
+  <!-- Google Fonts: Outfit & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            forest: {
+              50: '#F2F8F4',
+              100: '#E2F0E7',
+              200: '#C4E1CF',
+              300: '#9BCDB0',
+              400: '#67B18A',
+              500: '#2E8B57', // SeaGreen
+              600: '#226D44',
+              700: '#1B5637',
+              800: '#17452D',
+              900: '#133926',
+              950: '#0A1E14'
+            },
+            botanic: {
+              DEFAULT: '#1B4332',
+              dark: '#081C15',
+              emerald: '#2D6A4F',
+              mint: '#52B788',
+              leaf: '#74C69D',
+              pale: '#D8F3DC'
+            },
+            terracotta: {
+              50: '#FAF4EF',
+              100: '#F4E5D8',
+              200: '#E9CBB2',
+              300: '#DBAC87',
+              400: '#CD8C5D',
+              500: '#C27439', // Warm clay earth
+              600: '#A75B28',
+              700: '#864520',
+              800: '#6C381D',
+              900: '#582E19'
+            },
+            slatebg: '#0D1410',
+            carddark: '#142019'
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Outfit"', 'sans-serif'],
+            serif: ['"Playfair Display"', 'Georgia', 'serif']
+          },
+          animation: {
+            'float': 'float 5s ease-in-out infinite',
+            'pulse-subtle': 'pulseSubtle 3s ease-in-out infinite'
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-8px)' }
+            },
+            pulseSubtle: {
+              '0%, 100%': { opacity: '1' },
+              '50%': { opacity: '0.85' }
+            }
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    /* Custom Smooth Glass & Scrollbar */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0A1E14;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #2D6A4F;
+      border-radius: 5px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #52B788;
+    }
+    .glass-nav {
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+    }
+    .leaf-pattern {
+      background-image: radial-gradient(rgba(45, 106, 79, 0.08) 1px, transparent 1px);
+      background-size: 24px 24px;
+    }
+    .dark .leaf-pattern {
+      background-image: radial-gradient(rgba(82, 183, 136, 0.08) 1px, transparent 1px);
+      background-size: 24px 24px;
+    }
+    /* Comparison Slider */
+    .comparison-container {
+      position: relative;
+      overflow: hidden;
+      user-select: none;
+    }
+    .comparison-before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 50%;
+      overflow: hidden;
+    }
+    .slider-handle {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      width: 4px;
+      cursor: ew-resize;
+      background: #FFFFFF;
+      box-shadow: 0 0 12px rgba(0,0,0,0.5);
+    }
+  </style>
+</head>
+
+<body class="bg-[#FAF9F5] text-slate-800 dark:bg-slatebg dark:text-slate-100 font-sans transition-colors duration-300 antialiased selection:bg-botanic-mint selection:text-white pb-20 md:pb-0">
+
+  <!-- TOP ANNOUNCEMENT BAR -->
+  <div class="bg-forest-900 text-white text-xs sm:text-sm py-2 px-4 border-b border-forest-800/60 relative z-50">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
+      <div class="flex items-center gap-2">
+        <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-xs font-semibold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          Sezóna 2025 / 2026
+        </span>
+        <span class="text-slate-300">Prijímame rezervácie na jarné realizácie a 3D projekty v Senci a okolí</span>
+      </div>
+      <div class="flex items-center gap-4 text-xs">
+        <a href="tel:+421915766495" class="hover:text-emerald-300 transition-colors flex items-center gap-1.5 font-medium">
+          <i class="fa-solid fa-phone text-emerald-400"></i>
+          +421 915 766 495
+        </a>
+        <span class="text-slate-600 hidden sm:inline">|</span>
+        <a href="mailto:infoaboutgarden@gmail.com" class="hover:text-emerald-300 transition-colors hidden sm:flex items-center gap-1.5 font-medium">
+          <i class="fa-solid fa-envelope text-emerald-400"></i>
+          infoaboutgarden@gmail.com
+        </a>
+        <span class="text-slate-600 hidden md:inline">|</span>
+        <span class="text-slate-400 hidden md:inline">Senec, Pezinok, BA a Trnava</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVIGATION BAR -->
+  <nav class="sticky top-0 z-40 bg-white/80 dark:bg-slatebg/85 glass-nav border-b border-slate-200/80 dark:border-forest-900/60 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Logo & Brand -->
+        <a href="#" class="flex items-center gap-3 group">
+          <div class="relative w-12 h-12 rounded-xl overflow-hidden shadow-md ring-2 ring-forest-500/20 group-hover:ring-forest-500 transition-all duration-300 bg-white">
+            <img src="images/logo1.jpg" alt="About Garden Logo" class="w-full h-full object-cover">
+          </div>
+          <div>
+            <div class="flex items-center gap-1.5">
+              <span class="font-display font-extrabold text-2xl tracking-tight text-forest-900 dark:text-white">ABOUT<span class="text-emerald-600 dark:text-botanic-mint">GARDEN</span></span>
+              <span class="text-[10px] uppercase font-bold tracking-widest px-1.5 py-0.5 rounded bg-forest-100 text-forest-800 dark:bg-forest-900 dark:text-emerald-300">Senec</span>
+            </div>
+            <p class="text-[11px] text-slate-500 dark:text-slate-400 font-medium tracking-wide">Andrzej Kosieradzki • Záhradná architektúra & Realizácie</p>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <div class="hidden lg:flex items-center gap-7 font-medium text-sm text-slate-700 dark:text-slate-200">
+          <a href="#o-nas" class="hover:text-forest-600 dark:hover:text-botanic-mint transition-colors">O mne</a>
+          <a href="#sluzby" class="hover:text-forest-600 dark:hover:text-botanic-mint transition-colors">Služby</a>
+          <a href="#kalkulacka" class="hover:text-forest-600 dark:hover:text-botanic-mint transition-colors flex items-center gap-1">
+            <span>Kalkulačka ceny</span>
+            <span class="text-[10px] bg-terracotta-500 text-white font-bold px-1.5 py-0.5 rounded-full">Kalkulátor</span>
+          </a>
+          <a href="#zavlaha" class="hover:text-forest-600 dark:hover:text-botanic-mint transition-colors">Závlahy TORO®</a>
+          <a href="#galeria" class="hover:text-forest-600 dark:hover:text-botanic-mint transition-colors">Galéria realizácií</a>
+          <a href="#kalendar" class="hover:text-forest-600 dark:hover:text-botanic-mint transition-colors">Kalendár údržby</a>
+          <a href="#cennik" class="hover:text-forest-600 dark:hover:text-botanic-mint transition-colors">Cenník</a>
+          <a href="#kontakt" class="hover:text-forest-600 dark:hover:text-botanic-mint transition-colors">Kontakt</a>
+        </div>
+
+        <!-- Right Side Actions: Theme Toggle & Call to Action -->
+        <div class="flex items-center gap-3">
+          <!-- Dark/Light Mode Switcher -->
+          <button id="themeToggleBtn" aria-label="Prepnúť režim" class="w-10 h-10 rounded-xl bg-slate-100 dark:bg-carddark text-slate-600 dark:text-slate-300 hover:text-emerald-600 dark:hover:text-botanic-mint border border-slate-200 dark:border-forest-800 flex items-center justify-center transition-all">
+            <i class="fa-solid fa-moon hidden dark:block text-base"></i>
+            <i class="fa-solid fa-sun block dark:hidden text-base text-amber-500"></i>
+          </button>
+
+          <!-- WhatsApp Direct Link -->
+          <a href="https://wa.me/421915766495?text=Dobr%C3%BD%20de%C5%88%2C%20m%C3%A1m%20z%C3%A1ujem%20o%20n%C3%A1vrh%20alebo%20realiz%C3%A1ciu%20z%C3%A1hrady." target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center justify-center w-10 h-10 rounded-xl bg-emerald-500/10 hover:bg-emerald-500 text-emerald-600 hover:text-white border border-emerald-500/30 transition-all" title="Napísať na WhatsApp">
+            <i class="fa-brands fa-whatsapp text-lg"></i>
+          </a>
+
+          <!-- Facebook Link -->
+          <a href="https://www.facebook.com/profile.php?id=100063065930118" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center justify-center w-10 h-10 rounded-xl bg-blue-500/10 hover:bg-[#1877F2] text-[#1877F2] hover:text-white border border-blue-500/30 transition-all" title="Facebook About Garden">
+            <i class="fa-brands fa-facebook-f text-base"></i>
+          </a>
+
+          <!-- Primary CTA Button -->
+          <a href="#kalkulacka" class="inline-flex items-center gap-2 bg-gradient-to-r from-forest-700 to-emerald-600 hover:from-forest-800 hover:to-emerald-700 text-white font-semibold text-sm px-4 sm:px-5 py-2.5 rounded-xl shadow-md shadow-forest-900/10 hover:shadow-lg transition-all duration-200">
+            <i class="fa-solid fa-calculator text-xs"></i>
+            <span class="hidden sm:inline">Nezáväzný dopyt</span>
+            <span class="sm:hidden">Dopyt</span>
+          </a>
+
+          <!-- Mobile Menu Toggle Button -->
+          <button id="mobileMenuBtn" aria-label="Menu" class="lg:hidden w-10 h-10 rounded-xl bg-slate-100 dark:bg-carddark text-slate-700 dark:text-slate-200 flex items-center justify-center border border-slate-200 dark:border-forest-800">
+            <i class="fa-solid fa-bars text-lg"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobileMenu" class="hidden lg:hidden border-t border-slate-200 dark:border-forest-900/80 bg-white/95 dark:bg-slatebg/95 backdrop-blur-md px-5 py-6 space-y-3">
+      <a href="#o-nas" class="mobile-link block text-base font-medium text-slate-800 dark:text-slate-200 hover:text-emerald-600 py-1.5">O mne & Vízia</a>
+      <a href="#sluzby" class="mobile-link block text-base font-medium text-slate-800 dark:text-slate-200 hover:text-emerald-600 py-1.5">Služby & Realizácie</a>
+      <a href="#kalkulacka" class="mobile-link block text-base font-medium text-slate-800 dark:text-slate-200 hover:text-emerald-600 py-1.5 flex items-center justify-between">
+        <span>Kalkulačka nákladov</span>
+        <span class="text-xs bg-terracotta-500 text-white font-bold px-2 py-0.5 rounded-full">Kalkulátor</span>
+      </a>
+      <a href="#zavlaha" class="mobile-link block text-base font-medium text-slate-800 dark:text-slate-200 hover:text-emerald-600 py-1.5">Závlahy TORO®</a>
+      <a href="#galeria" class="mobile-link block text-base font-medium text-slate-800 dark:text-slate-200 hover:text-emerald-600 py-1.5">Galéria prác (45+ fotiek)</a>
+      <a href="#kalendar" class="mobile-link block text-base font-medium text-slate-800 dark:text-slate-200 hover:text-emerald-600 py-1.5">Kalendár údržby</a>
+      <a href="#cennik" class="mobile-link block text-base font-medium text-slate-800 dark:text-slate-200 hover:text-emerald-600 py-1.5">Cenník & Garancie</a>
+      <a href="#kontakt" class="mobile-link block text-base font-medium text-slate-800 dark:text-slate-200 hover:text-emerald-600 py-1.5">Kontakt & Obhliadka</a>
+      
+      <div class="pt-4 border-t border-slate-200 dark:border-forest-900 flex items-center justify-between">
+        <a href="tel:+421915766495" class="flex items-center gap-2 text-sm font-bold text-forest-700 dark:text-botanic-mint">
+          <i class="fa-solid fa-phone"></i>
+          +421 915 766 495
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=100063065930118" target="_blank" rel="noopener noreferrer" class="text-blue-600 text-lg">
+          <i class="fa-brands fa-facebook"></i>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="relative overflow-hidden pt-8 pb-16 lg:pt-16 lg:pb-24 leaf-pattern">
+    <!-- Ambient Blur Glows -->
+    <div class="absolute -top-24 -left-24 w-96 h-96 bg-emerald-500/15 dark:bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute top-1/2 -right-24 w-96 h-96 bg-terracotta-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        
+        <!-- Left Column: Copy & Value Proposition -->
+        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+          
+          <!-- Badge -->
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-forest-100 dark:bg-forest-900/60 border border-forest-300 dark:border-forest-700/60 text-forest-800 dark:text-emerald-300 text-xs sm:text-sm font-semibold shadow-sm">
+            <i class="fa-solid fa-seedling text-emerald-600 dark:text-botanic-mint"></i>
+            <span>Záhrada je mojou vášňou • Senec & Západné Slovensko</span>
+          </div>
+
+          <!-- Headline -->
+          <h1 class="font-display font-extrabold text-4xl sm:text-5xl lg:text-6xl tracking-tight text-forest-950 dark:text-white leading-[1.12]">
+            Premeníme váš pozemok na <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 via-forest-600 to-terracotta-500">oázu rodinného pokoja</span> a živej zelene.
+          </h1>
+
+          <!-- Lead Paragraph -->
+          <p class="text-lg sm:text-xl text-slate-600 dark:text-slate-300 max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
+            Od precízneho <strong class="text-slate-900 dark:text-white font-semibold">3D návrhu</strong> cez terénne úpravy, kobercové trávniky a automatické závlahy <strong class="text-slate-900 dark:text-white font-semibold">TORO®</strong> až po celoročnú odbornú starostlivosť. Bez starostí, na kľúč a s láskou k prírode.
+          </p>
+
+          <!-- Core Value Metrics / Pillars -->
+          <div class="grid grid-cols-3 gap-3 sm:gap-4 pt-2 pb-2 max-w-lg mx-auto lg:mx-0">
+            <div class="p-3 rounded-2xl bg-white dark:bg-carddark border border-slate-200 dark:border-forest-900 shadow-sm text-center">
+              <div class="text-xl sm:text-2xl font-black font-display text-forest-700 dark:text-botanic-mint">0 €</div>
+              <div class="text-[11px] sm:text-xs text-slate-500 dark:text-slate-400 font-medium leading-tight">Obhliadka & zameranie</div>
+            </div>
+            <div class="p-3 rounded-2xl bg-white dark:bg-carddark border border-slate-200 dark:border-forest-900 shadow-sm text-center">
+              <div class="text-xl sm:text-2xl font-black font-display text-emerald-600 dark:text-emerald-400">TORO®</div>
+              <div class="text-[11px] sm:text-xs text-slate-500 dark:text-slate-400 font-medium leading-tight">Závlahy so zárukou</div>
+            </div>
+            <div class="p-3 rounded-2xl bg-white dark:bg-carddark border border-slate-200 dark:border-forest-900 shadow-sm text-center">
+              <div class="text-xl sm:text-2xl font-black font-display text-terracotta-600 dark:text-terracotta-400">100%</div>
+              <div class="text-[11px] sm:text-xs text-slate-500 dark:text-slate-400 font-medium leading-tight">Návrh v cene realizácie</div>
+            </div>
+          </div>
+
+          <!-- CTAs -->
+          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+            <a href="#kalkulacka" class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-xl bg-gradient-to-r from-forest-800 to-emerald-600 hover:from-forest-900 hover:to-emerald-700 text-white font-bold text-base shadow-lg shadow-forest-900/20 hover:shadow-xl transition-all duration-200 transform hover:-translate-y-0.5">
+              <i class="fa-solid fa-calculator text-emerald-300"></i>
+              <span>Vypočítať cenu záhrady</span>
+            </a>
+            <a href="#galeria" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-white dark:bg-carddark hover:bg-slate-50 dark:hover:bg-forest-950 text-slate-800 dark:text-slate-200 border border-slate-300 dark:border-forest-800 font-semibold text-base transition-all duration-200 shadow-sm">
+              <i class="fa-solid fa-camera text-slate-400"></i>
+              <span>Reálne realizácie</span>
+            </a>
+          </div>
+
+          <!-- Social Proof Snippet -->
+          <div class="pt-4 flex items-center justify-center lg:justify-start gap-4 text-xs text-slate-500 dark:text-slate-400">
+            <div class="flex -space-x-2">
+              <div class="w-8 h-8 rounded-full border-2 border-white dark:border-slatebg bg-emerald-600 text-white flex items-center justify-center font-bold text-[11px]">AK</div>
+              <div class="w-8 h-8 rounded-full border-2 border-white dark:border-slatebg bg-forest-700 text-white flex items-center justify-center font-bold text-[11px]">SC</div>
+              <div class="w-8 h-8 rounded-full border-2 border-white dark:border-slatebg bg-terracotta-600 text-white flex items-center justify-center font-bold text-[11px]">BA</div>
+            </div>
+            <div>
+              <div class="flex items-center gap-1 text-amber-500 text-xs">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <span class="font-bold text-slate-700 dark:text-slate-200 ml-1">5.0 / 5.0</span>
+              </div>
+              <p>Osobný prístup Andrzeja Kosieradzkého • Už od roku 2019</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right Column: Visual Showcase with Real Project Photo & Floating Cards -->
+        <div class="lg:col-span-5 relative">
+          
+          <!-- Main Hero Frame (Authentic Lawn Realization 20200921_143224.jpg) -->
+          <div class="relative mx-auto max-w-md lg:max-w-none rounded-3xl overflow-hidden shadow-2xl ring-1 ring-slate-900/10 dark:ring-white/10 group">
+            <img src="images/20200921_143224.jpg" alt="Dokončená moderná záhrada s kobercovým trávnikom a výsadbou - About Garden Senec" class="w-full h-[460px] sm:h-[520px] object-cover group-hover:scale-105 transition-transform duration-700">
+            
+            <div class="absolute inset-0 bg-gradient-to-t from-forest-950/80 via-transparent to-black/20"></div>
+
+            <!-- Image Caption Overlay -->
+            <div class="absolute bottom-5 left-5 right-5 p-4 rounded-2xl bg-white/90 dark:bg-carddark/90 backdrop-blur-md border border-white/20 dark:border-forest-800 shadow-lg text-slate-800 dark:text-slate-100">
+              <div class="flex items-center justify-between">
+                <div>
+                  <span class="text-[10px] font-bold uppercase tracking-wider text-emerald-600 dark:text-botanic-mint">Reálna realizácia About Garden</span>
+                  <h4 class="font-display font-bold text-base leading-tight">Kompletná záhrada na kľúč</h4>
+                  <p class="text-xs text-slate-500 dark:text-slate-400">Automatická závlaha TORO® + prémiový trávnik + výsadba</p>
+                </div>
+                <div class="w-10 h-10 rounded-xl bg-forest-700 text-white flex items-center justify-center font-bold">
+                  <i class="fa-solid fa-check text-emerald-300"></i>
+                </div>
+              </div>
+            </div>
+
+            <!-- Top Floating Tag -->
+            <div class="absolute top-4 left-4 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-forest-900/80 backdrop-blur-md text-white text-xs font-medium border border-white/20">
+              <i class="fa-solid fa-location-dot text-emerald-400"></i>
+              <span>Senec a okolitý región</span>
+            </div>
+          </div>
+
+          <!-- Secondary Floating Badge: TORO Tech -->
+          <div class="hidden sm:flex absolute -bottom-6 -left-6 p-4 rounded-2xl bg-white dark:bg-carddark border border-slate-200 dark:border-forest-800 shadow-xl items-center gap-3 animate-float max-w-xs">
+            <div class="w-12 h-12 rounded-xl bg-blue-50 dark:bg-blue-950/50 text-blue-600 dark:text-blue-400 flex items-center justify-center text-xl shrink-0">
+              <i class="fa-solid fa-droplet"></i>
+            </div>
+            <div>
+              <div class="text-xs font-bold text-slate-800 dark:text-white uppercase tracking-wider">Úspora vody až 50%</div>
+              <div class="text-xs text-slate-500 dark:text-slate-400">Automatické senzory dažďa a presné trysky TORO®</div>
+            </div>
+          </div>
+
+          <!-- Secondary Floating Badge: 3D Visualization -->
+          <div class="hidden sm:flex absolute top-12 -right-6 p-3.5 rounded-2xl bg-white dark:bg-carddark border border-slate-200 dark:border-forest-800 shadow-xl items-center gap-3 max-w-xs">
+            <div class="w-10 h-10 rounded-xl bg-terracotta-50 dark:bg-terracotta-950/50 text-terracotta-600 dark:text-terracotta-400 flex items-center justify-center text-lg shrink-0">
+              <i class="fa-solid fa-cube"></i>
+            </div>
+            <div>
+              <div class="text-xs font-bold text-slate-800 dark:text-white">3D Návrh s osadením</div>
+              <div class="text-[11px] text-slate-500 dark:text-slate-400">Vidíte vašu záhradu vopred</div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- QUICK FEATURE BANNER / TRUST SIGNALS -->
+  <section class="border-y border-slate-200 dark:border-forest-900/60 bg-white dark:bg-carddark py-6">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center md:text-left">
+        
+        <div class="flex flex-col md:flex-row items-center gap-3">
+          <div class="w-12 h-12 rounded-2xl bg-forest-100 dark:bg-forest-900/50 text-forest-700 dark:text-botanic-mint flex items-center justify-center text-xl shrink-0">
+            <i class="fa-solid fa-handshake"></i>
+          </div>
+          <div>
+            <h4 class="font-display font-bold text-sm text-slate-900 dark:text-white">Obhliadka ZDARMA</h4>
+            <p class="text-xs text-slate-500 dark:text-slate-400">Zameriame terén a vypočujeme vaše predstavy priamo na pozemku.</p>
+          </div>
+        </div>
+
+        <div class="flex flex-col md:flex-row items-center gap-3">
+          <div class="w-12 h-12 rounded-2xl bg-emerald-100 dark:bg-emerald-900/40 text-emerald-700 dark:text-emerald-300 flex items-center justify-center text-xl shrink-0">
+            <i class="fa-solid fa-faucet-drip"></i>
+          </div>
+          <div>
+            <h4 class="font-display font-bold text-sm text-slate-900 dark:text-white">Certifikované TORO®</h4>
+            <p class="text-xs text-slate-500 dark:text-slate-400">Svetová špička v podzemnej automatickej závlahe s dlhoročnou zárukou.</p>
+          </div>
+        </div>
+
+        <div class="flex flex-col md:flex-row items-center gap-3">
+          <div class="w-12 h-12 rounded-2xl bg-amber-100 dark:bg-amber-900/40 text-amber-700 dark:text-amber-300 flex items-center justify-center text-xl shrink-0">
+            <i class="fa-solid fa-file-invoice-dollar"></i>
+          </div>
+          <div>
+            <h4 class="font-display font-bold text-sm text-slate-900 dark:text-white">Návrh bez rizika</h4>
+            <p class="text-xs text-slate-500 dark:text-slate-400">Poplatok za 3D projekt (150 €) sa pri realizácii kompletne odpočítava.</p>
+          </div>
+        </div>
+
+        <div class="flex flex-col md:flex-row items-center gap-3">
+          <div class="w-12 h-12 rounded-2xl bg-terracotta-100 dark:bg-terracotta-900/40 text-terracotta-700 dark:text-terracotta-300 flex items-center justify-center text-xl shrink-0">
+            <i class="fa-solid fa-scissors"></i>
+          </div>
+          <div>
+            <h4 class="font-display font-bold text-sm text-slate-900 dark:text-white">Odborná údržba od 15 €/h</h4>
+            <p class="text-xs text-slate-500 dark:text-slate-400">Vertikutácia, orez drevín, kosenie, hnojenie a zazimovanie systému.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION / O MNE -->
+  <section id="o-nas" class="py-16 lg:py-24 leaf-pattern">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left: Image Collage of Real Work (20200924_133907.jpg & 20201019_124547.jpg) -->
+        <div class="lg:col-span-5 relative">
+          <div class="relative rounded-3xl overflow-hidden shadow-xl border border-slate-200 dark:border-forest-900">
+            <img src="images/20200924_133907.jpg" alt="Andrzej Kosieradzki About Garden Senec" class="w-full h-[400px] object-cover">
+          </div>
+          
+          <!-- Secondary Overlapping Image -->
+          <div class="hidden sm:block absolute -bottom-8 -right-8 w-56 h-48 rounded-2xl overflow-hidden shadow-2xl border-4 border-white dark:border-slatebg">
+            <img src="images/20201019_124547.jpg" alt="Detail okrasných tráv a výsadby" class="w-full h-full object-cover">
+          </div>
+
+          <!-- Experience Card -->
+          <div class="absolute top-6 left-6 p-4 rounded-2xl bg-forest-900/90 text-white backdrop-blur-md shadow-lg border border-forest-700/60 max-w-[200px]">
+            <span class="text-2xl font-black font-display text-emerald-400">6+</span>
+            <p class="text-xs font-semibold leading-tight text-slate-200 mt-1">Rokov praxe v realizáciách záhrad na západnom Slovensku</p>
+          </div>
+        </div>
+
+        <!-- Right: Story & Philosophy -->
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-300 text-xs font-bold uppercase tracking-wider">
+            <i class="fa-solid fa-leaf"></i>
+            <span>O zakladateľovi & Prístup</span>
+          </div>
+
+          <h2 class="font-display font-black text-3xl sm:text-4xl text-forest-950 dark:text-white leading-tight">
+            „Záhrada je mojou vášňou, priestorom pre rodinnú pohodu, oddych a grilovačky.“
+          </h2>
+
+          <div class="space-y-4 text-slate-600 dark:text-slate-300 text-base leading-relaxed">
+            <p>
+              Volám sa <strong>Andrzej Kosieradzki</strong> a stojím za projektom <strong>About Garden</strong> so sídlom v Senci. Verím, že záhrada nie je len pozemok okolo domu – je to prirodzené predĺženie vášho domova, kde si po náročnom dni vydýchnete, načerpáte novú energiu a zažijete tie najkrajšie rodinné chvíle.
+            </p>
+            <p>
+              Či už stojíte pred holým pozemkom pri novostavbe, alebo chcete vdýchnuť nový život staršej záhrade, nepracujem cez sprostredkovateľov. Na každú obhliadku prichádzam osobne, pozorne počúvam vaše návyky a preferencie celej rodiny a navrhujem také riešenia, ktoré sú nielen vizuálne úchvatné, ale aj dlhodobo udržateľné s minimálnymi nárokmi na údržbu.
+            </p>
+          </div>
+
+          <!-- Highlight Cards -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+            <div class="p-4 rounded-2xl bg-white dark:bg-carddark border border-slate-200 dark:border-forest-900 shadow-sm flex items-start gap-3">
+              <div class="w-10 h-10 rounded-xl bg-forest-100 dark:bg-forest-900/60 text-forest-700 dark:text-emerald-400 flex items-center justify-center shrink-0">
+                <i class="fa-solid fa-user-check"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-sm text-slate-900 dark:text-white">Osobná garancia</h4>
+                <p class="text-xs text-slate-500 dark:text-slate-400">Od prvotného výkresu po posledný položený trs trávy dohliadam na každý detail sám.</p>
+              </div>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-white dark:bg-carddark border border-slate-200 dark:border-forest-900 shadow-sm flex items-start gap-3">
+              <div class="w-10 h-10 rounded-xl bg-terracotta-100 dark:bg-terracotta-900/60 text-terracotta-700 dark:text-terracotta-400 flex items-center justify-center shrink-0">
+                <i class="fa-solid fa-shield-halved"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-sm text-slate-900 dark:text-white">Férovosť & Transparentnosť</h4>
+                <p class="text-xs text-slate-500 dark:text-slate-400">Pevné cenové ponuky vopred. Žiadne skryté poplatky ani nečakané navyšovanie rozpočtu.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Company Meta Information -->
+          <div class="pt-2 flex flex-wrap items-center gap-4 text-xs text-slate-500 dark:text-slate-400 border-t border-slate-200 dark:border-forest-900">
+            <span><strong>Firma:</strong> Andrzej Kosieradzki - About Garden</span>
+            <span>•</span>
+            <span><strong>IČO:</strong> 52520137</span>
+            <span>•</span>
+            <span><strong>Sídlo:</strong> Turnianska 4847/114, 903 01 Senec</span>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- INTERACTIVE BEFORE & AFTER SLIDER SECTION -->
+  <section class="py-16 bg-slate-100 dark:bg-slate-900/60 border-y border-slate-200 dark:border-forest-900/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
+        <span class="text-xs font-bold uppercase tracking-wider text-emerald-600 dark:text-botanic-mint">Interaktívna premena</span>
+        <h2 class="font-display font-black text-3xl sm:text-4xl text-forest-950 dark:text-white">
+          Sledujte transformáciu z holého terénu na zelený raj
+        </h2>
+        <p class="text-slate-600 dark:text-slate-300 text-sm sm:text-base">
+          Ťahaním posuvníka vľavo a vpravo porovnajte stav pred terénnymi úpravami a výsledok po osadení automatickej závlahy TORO a prémiového kobercového trávnika.
+        </p>
+      </div>
+
+      <!-- Before/After Slider Container -->
+      <div class="max-w-4xl mx-auto">
+        <div id="beforeAfterBox" class="comparison-container rounded-3xl overflow-hidden shadow-2xl border-4 border-white dark:border-carddark h-[360px] sm:h-[480px]">
+          
+          <!-- "AFTER" Image (Full background) - 20200921_143224.jpg -->
+          <img src="images/20200921_143224.jpg" alt="Po realizácii About Garden - hotová záhrada" class="w-full h-full object-cover">
+          <div class="absolute top-4 right-4 bg-emerald-600/90 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-md backdrop-blur-sm pointer-events-none">
+            PO REALIZÁCII
+          </div>
+
+          <!-- "BEFORE" Image (Clipped overlay) - 20190329_165631.jpg -->
+          <div id="comparisonBefore" class="comparison-before">
+            <img src="images/20190329_165631.jpg" alt="Pred realizáciou - holý terén a modelácia" class="absolute top-0 left-0 max-w-none h-full w-[800px] sm:w-[900px] md:w-[1000px] object-cover">
+            <div class="absolute top-4 left-4 bg-forest-900/90 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-md backdrop-blur-sm pointer-events-none">
+              PRED REALIZÁCIOU (Príprava pôdy)
+            </div>
+          </div>
+
+          <!-- Draggable Divider Bar -->
+          <div id="sliderHandle" class="slider-handle flex items-center justify-center">
+            <div class="w-9 h-9 rounded-full bg-white text-forest-900 shadow-xl flex items-center justify-center font-bold text-xs ring-4 ring-forest-600/30">
+              <i class="fa-solid fa-left-right"></i>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Slider Helper Text -->
+        <p class="text-center text-xs text-slate-500 dark:text-slate-400 mt-4 flex items-center justify-center gap-2">
+          <i class="fa-solid fa-arrows-left-right text-emerald-500"></i>
+          Potiahnite posuvník do strán alebo kliknite kdekoľvek na fotografiu
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SERVICES SECTION / MOJE SLUŽBY -->
+  <section id="sluzby" class="py-16 lg:py-24 leaf-pattern">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-forest-100 dark:bg-forest-900/60 text-forest-800 dark:text-emerald-300 text-xs font-bold uppercase tracking-wider">
+          <i class="fa-solid fa-wrench"></i>
+          <span>Komplexné portfólio služieb</span>
+        </span>
+        <h2 class="font-display font-black text-3xl sm:text-5xl text-forest-950 dark:text-white">
+          Všetko pre vašu záhradu pod jednou strechou
+        </h2>
+        <p class="text-slate-600 dark:text-slate-300 text-base sm:text-lg">
+          Od prvého zamerania a 3D vizualizácie cez hrubé terénne práce až po jemné strihanie a zazimovanie.
+        </p>
+      </div>
+
+      <!-- 4 Core Service Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        
+        <!-- Service 1: 3D Návrhy -->
+        <div class="bg-white dark:bg-carddark rounded-3xl p-6 sm:p-7 border border-slate-200 dark:border-forest-900 shadow-sm hover:shadow-xl transition-all duration-300 group hover:-translate-y-1 flex flex-col justify-between">
+          <div>
+            <div class="w-14 h-14 rounded-2xl bg-forest-100 dark:bg-forest-900/70 text-forest-700 dark:text-botanic-mint flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-drafting-compass"></i>
+            </div>
+            <span class="text-[11px] font-bold uppercase tracking-wider text-emerald-600 dark:text-botanic-mint">1. Fáza • Projekt</span>
+            <h3 class="font-display font-bold text-xl text-slate-900 dark:text-white mt-1 mb-3">3D Návrhy & Projekty</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-4">
+              Po osobnej obhliadke u klienta vypracujeme detailný 3D model záhrady s osadzovacím plánom rastlín a presnou cenovou ponukou.
+            </p>
+            <ul class="space-y-2 text-xs text-slate-600 dark:text-slate-300">
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-emerald-500"></i>
+                <span>Zameranie pozemku zdarma</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-emerald-500"></i>
+                <span>Fotorealistické 3D pohľady</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-emerald-500"></i>
+                <span class="font-bold text-forest-700 dark:text-emerald-400">150 € (pri realizácii ZDARMA)</span>
+              </li>
+            </ul>
+          </div>
+          <div class="pt-6 border-t border-slate-100 dark:border-forest-900/80 mt-6">
+            <a href="#kalkulacka" class="text-xs font-bold text-forest-700 dark:text-botanic-mint hover:underline flex items-center justify-between">
+              <span>Zahrnúť do kalkulácie</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Service 2: Realizácia záhrad -->
+        <div class="bg-white dark:bg-carddark rounded-3xl p-6 sm:p-7 border border-slate-200 dark:border-forest-900 shadow-sm hover:shadow-xl transition-all duration-300 group hover:-translate-y-1 flex flex-col justify-between">
+          <div>
+            <div class="w-14 h-14 rounded-2xl bg-emerald-100 dark:bg-emerald-900/50 text-emerald-700 dark:text-emerald-300 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-trowel-bricks"></i>
+            </div>
+            <span class="text-[11px] font-bold uppercase tracking-wider text-emerald-600 dark:text-botanic-mint">2. Fáza • Stavba</span>
+            <h3 class="font-display font-bold text-xl text-slate-900 dark:text-white mt-1 mb-3">Zakladanie & Realizácia</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-4">
+              Kompletná premena pozemku: terénne úpravy, navážka substrátu, kobercové trávniky, výsadba solitérnych drevín a mulčovanie.
+            </p>
+            <ul class="space-y-2 text-xs text-slate-600 dark:text-slate-300">
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-emerald-500"></i>
+                <span>Nivelácia a modelácia terénu</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-emerald-500"></i>
+                <span>Kobercový trávnik (ihneď zelený)</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-emerald-500"></i>
+                <span>Výsadba stromov, kríkov a skalky</span>
+              </li>
+            </ul>
+          </div>
+          <div class="pt-6 border-t border-slate-100 dark:border-forest-900/80 mt-6">
+            <a href="#kalkulacka" class="text-xs font-bold text-forest-700 dark:text-botanic-mint hover:underline flex items-center justify-between">
+              <span>Zahrnúť do kalkulácie</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Service 3: Automatické závlahy TORO -->
+        <div class="bg-white dark:bg-carddark rounded-3xl p-6 sm:p-7 border-2 border-emerald-500/30 dark:border-emerald-500/40 shadow-md hover:shadow-xl transition-all duration-300 group hover:-translate-y-1 flex flex-col justify-between relative overflow-hidden">
+          <div class="absolute top-0 right-0 bg-emerald-600 text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-bl-xl">
+            Odporúčame
+          </div>
+          <div>
+            <div class="w-14 h-14 rounded-2xl bg-blue-100 dark:bg-blue-900/50 text-blue-600 dark:text-blue-400 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-faucet"></i>
+            </div>
+            <span class="text-[11px] font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400">Technológia • TORO®</span>
+            <h3 class="font-display font-bold text-xl text-slate-900 dark:text-white mt-1 mb-3">Automatické Závlahy</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-4">
+              Projekt a montáž špičkových amerických systémov TORO®. Správne dávkovanie vody, minimálne odparovanie a neviditeľná inštalácia.
+            </p>
+            <ul class="space-y-2 text-xs text-slate-600 dark:text-slate-300">
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-emerald-500"></i>
+                <span>Až 50% úspora vody a času</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-emerald-500"></i>
+                <span>Dažďový senzor a smart ovládanie</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-emerald-500"></i>
+                <span>Jarné spustenie & jesenné zazimovanie</span>
+              </li>
+            </ul>
+          </div>
+          <div class="pt-6 border-t border-slate-100 dark:border-forest-900/80 mt-6">
+            <a href="#zavlaha" class="text-xs font-bold text-emerald-600 dark:text-botanic-mint hover:underline flex items-center justify-between">
+              <span>Detail systému TORO</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Service 4: Údržba záhrad -->
+        <div class="bg-white dark:bg-carddark rounded-3xl p-6 sm:p-7 border border-slate-200 dark:border-forest-900 shadow-sm hover:shadow-xl transition-all duration-300 group hover:-translate-y-1 flex flex-col justify-between">
+          <div>
+            <div class="w-14 h-14 rounded-2xl bg-amber-100 dark:bg-amber-900/50 text-amber-700 dark:text-amber-300 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-scissors"></i>
+            </div>
+            <span class="text-[11px] font-bold uppercase tracking-wider text-amber-600 dark:text-amber-400">Pravidelná starostlivosť</span>
+            <h3 class="font-display font-bold text-xl text-slate-900 dark:text-white mt-1 mb-3">Celoročná Údržba</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-4">
+              Pravidelné i jednorazové zásahy: jarná a jesenná vertikutácia, kosenie, odburiňovanie, odborný rez ovocných a okrasných krov.
+            </p>
+            <ul class="space-y-2 text-xs text-slate-600 dark:text-slate-300">
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-emerald-500"></i>
+                <span>Vertikutácia & aerifikácia pôdy</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-emerald-500"></i>
+                <span>Sezónne hnojenie & ochranné postreky</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-emerald-500"></i>
+                <span class="font-bold text-forest-700 dark:text-emerald-400">Sadzba od 15 € / hodina</span>
+              </li>
+            </ul>
+          </div>
+          <div class="pt-6 border-t border-slate-100 dark:border-forest-900/80 mt-6">
+            <a href="#kalkulacka" class="text-xs font-bold text-forest-700 dark:text-botanic-mint hover:underline flex items-center justify-between">
+              <span>Zahrnúť do kalkulácie</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- INTERACTIVE BUDGET & COST ESTIMATOR (KALKULAČKA CENY ZÁHRADY) -->
+  <section id="kalkulacka" class="py-16 lg:py-24 bg-forest-950 text-white relative overflow-hidden">
+    <!-- Background Decor -->
+    <div class="absolute -top-32 -right-32 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute -bottom-32 -left-32 w-96 h-96 bg-terracotta-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 text-xs font-bold uppercase tracking-wider border border-emerald-500/30">
+          <i class="fa-solid fa-calculator"></i>
+          <span>Transparentný odhad nákladov</span>
+        </span>
+        <h2 class="font-display font-black text-3xl sm:text-5xl text-white">
+          Interaktívna kalkulačka vašej novej záhrady
+        </h2>
+        <p class="text-slate-300 text-sm sm:text-base">
+          Nastavte rozlohu svojho pozemku a zvoľte požadované práce. Získate okamžitý orientačný odhad, ktorý jedným klikom prenesiete do dopytu.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- Controls Column (Left) -->
+        <div class="lg:col-span-7 bg-carddark/90 rounded-3xl p-6 sm:p-8 border border-forest-800 shadow-xl space-y-6">
+          
+          <!-- Area Slider -->
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <label for="areaSlider" class="text-sm font-bold text-white flex items-center gap-2">
+                <i class="fa-solid fa-ruler-combined text-emerald-400"></i>
+                <span>Rozloha pozemku / trávnika:</span>
+              </label>
+              <span class="font-display font-extrabold text-2xl text-emerald-400" id="areaValueDisplay">250 m²</span>
+            </div>
+            <input type="range" id="areaSlider" min="50" max="1500" step="25" value="250" class="w-full h-3 bg-forest-900 rounded-lg appearance-none cursor-pointer accent-emerald-500">
+            <div class="flex justify-between text-[11px] text-slate-400 mt-1">
+              <span>50 m² (Predzáhradka)</span>
+              <span>250 m² (Bežný rodinný dom)</span>
+              <span>800 m² (Veľký pozemok)</span>
+              <span>1500+ m²</span>
+            </div>
+          </div>
+
+          <!-- Service Checkboxes -->
+          <div class="space-y-3 pt-2">
+            <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400">Vyberte požadované položky realizácie:</h4>
+
+            <!-- Item: 3D Projekt -->
+            <label class="flex items-start gap-3 p-3.5 rounded-2xl bg-forest-900/40 border border-forest-800/80 hover:border-emerald-500/50 cursor-pointer transition-all">
+              <input type="checkbox" id="calcProject" checked class="w-5 h-5 rounded mt-0.5 text-emerald-600 accent-emerald-500">
+              <div class="flex-1 text-sm">
+                <div class="flex justify-between items-center">
+                  <span class="font-bold text-white">3D Návrh & Zameranie záhrady</span>
+                  <span class="text-xs font-bold text-emerald-400">150 € (0 € pri realizácii)</span>
+                </div>
+                <p class="text-xs text-slate-400 mt-0.5">Kompletný projekt s osadzovacím plánom, ktorý sa odpočíta z ceny prác.</p>
+              </div>
+            </label>
+
+            <!-- Item: Terénne úpravy -->
+            <label class="flex items-start gap-3 p-3.5 rounded-2xl bg-forest-900/40 border border-forest-800/80 hover:border-emerald-500/50 cursor-pointer transition-all">
+              <input type="checkbox" id="calcTerrain" checked class="w-5 h-5 rounded mt-0.5 text-emerald-600 accent-emerald-500">
+              <div class="flex-1 text-sm">
+                <div class="flex justify-between items-center">
+                  <span class="font-bold text-white">Hrubé terénne úpravy & Nivelácia</span>
+                  <span class="text-xs text-slate-300" id="priceTerrainTag">~ 3,50 € / m²</span>
+                </div>
+                <p class="text-xs text-slate-400 mt-0.5">Odstránenie buriny, kultivácia, dodanie ornice a vyrovnanie plochy.</p>
+              </div>
+            </label>
+
+            <!-- Item: Typ trávnika -->
+            <div class="p-3.5 rounded-2xl bg-forest-900/40 border border-forest-800/80 space-y-2">
+              <div class="flex justify-between items-center">
+                <span class="font-bold text-sm text-white">Spôsob založenia trávnika</span>
+                <span class="text-xs font-bold text-emerald-400" id="lawnPriceTag">Kobercový trávnik (~ 9,00 € / m²)</span>
+              </div>
+              <div class="grid grid-cols-2 gap-2 text-xs">
+                <label class="flex items-center gap-2 p-2 rounded-xl bg-forest-950/60 border border-forest-800 cursor-pointer">
+                  <input type="radio" name="lawnType" value="carpet" checked class="accent-emerald-500">
+                  <span>Kobercový (Ihneď zelený)</span>
+                </label>
+                <label class="flex items-center gap-2 p-2 rounded-xl bg-forest-950/60 border border-forest-800 cursor-pointer">
+                  <input type="radio" name="lawnType" value="seeded" class="accent-emerald-500">
+                  <span>Výsevný (~ 3,50 € / m²)</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Item: TORO Závlaha -->
+            <label class="flex items-start gap-3 p-3.5 rounded-2xl bg-forest-900/40 border-2 border-emerald-500/40 hover:border-emerald-400 cursor-pointer transition-all">
+              <input type="checkbox" id="calcIrrigation" checked class="w-5 h-5 rounded mt-0.5 text-emerald-600 accent-emerald-500">
+              <div class="flex-1 text-sm">
+                <div class="flex justify-between items-center">
+                  <span class="font-bold text-white flex items-center gap-1.5">
+                    <i class="fa-solid fa-faucet-drip text-emerald-400"></i>
+                    <span>Automatická závlaha TORO®</span>
+                  </span>
+                  <span class="text-xs font-bold text-emerald-400" id="priceIrrigationTag">Komplet na kľúč</span>
+                </div>
+                <p class="text-xs text-slate-400 mt-0.5">Výkop, potrubia, trysky, elektromagnetické ventily, riadiaca jednotka a dažďový senzor.</p>
+              </div>
+            </label>
+
+            <!-- Item: Výsadba a mulčovanie -->
+            <label class="flex items-start gap-3 p-3.5 rounded-2xl bg-forest-900/40 border border-forest-800/80 hover:border-emerald-500/50 cursor-pointer transition-all">
+              <input type="checkbox" id="calcPlants" checked class="w-5 h-5 rounded mt-0.5 text-emerald-600 accent-emerald-500">
+              <div class="flex-1 text-sm">
+                <div class="flex justify-between items-center">
+                  <span class="font-bold text-white">Výsadba okrasných rastlín & mulčovanie</span>
+                  <span class="text-xs text-slate-300">Záhon 30-50 m²</span>
+                </div>
+                <p class="text-xs text-slate-400 mt-0.5">Dodávka drevín, geotextílie, borovicovej kôry alebo okrasného riečneho kameňa.</p>
+              </div>
+            </label>
+
+            <!-- Item: Celoročná údržba -->
+            <label class="flex items-start gap-3 p-3.5 rounded-2xl bg-forest-900/40 border border-forest-800/80 hover:border-emerald-500/50 cursor-pointer transition-all">
+              <input type="checkbox" id="calcMaintenance" class="w-5 h-5 rounded mt-0.5 text-emerald-600 accent-emerald-500">
+              <div class="flex-1 text-sm">
+                <div class="flex justify-between items-center">
+                  <span class="font-bold text-white">Pravidelná sezónna starostlivosť (Jar - Jeseň)</span>
+                  <span class="text-xs text-terracotta-400">15 € / hodina</span>
+                </div>
+                <p class="text-xs text-slate-400 mt-0.5">2x ročne vertikutácia, zazimovanie závlahy, kosenie a rez krovín.</p>
+              </div>
+            </label>
+
+          </div>
+
+        </div>
+
+        <!-- Result Summary Box (Right) -->
+        <div class="lg:col-span-5 space-y-6">
+          <div class="bg-gradient-to-br from-carddark to-forest-900 rounded-3xl p-6 sm:p-8 border-2 border-emerald-500/40 shadow-2xl relative overflow-hidden">
+            
+            <div class="absolute top-0 right-0 w-32 h-32 bg-emerald-500/10 rounded-full blur-2xl"></div>
+
+            <div class="flex items-center justify-between pb-4 border-b border-forest-800">
+              <span class="text-xs font-bold uppercase tracking-wider text-emerald-300">Predbežná kalkulácia</span>
+              <span class="text-xs px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 font-semibold">Orientačný odhad</span>
+            </div>
+
+            <!-- Price Range Big Display -->
+            <div class="py-6 text-center">
+              <span class="text-xs text-slate-400 uppercase tracking-widest block font-medium mb-1">Odhadovaná celková cena prác & materiálu:</span>
+              <div class="font-display font-black text-4xl sm:text-5xl text-emerald-400 tracking-tight" id="estimatedTotalDisplay">
+                3 450 € – 4 100 €
+              </div>
+              <p class="text-xs text-slate-400 mt-2">
+                * Presná suma sa určí po bezplatnej obhliadke a zameraní na vašom pozemku.
+              </p>
+            </div>
+
+            <!-- Breakdown List -->
+            <div class="space-y-2 text-xs border-t border-forest-800 pt-4 text-slate-300" id="calcBreakdownList">
+              <!-- Dynamically filled -->
+            </div>
+
+            <!-- Special Bonus Highlight -->
+            <div class="p-3.5 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 text-xs mt-6 flex items-center gap-3">
+              <i class="fa-solid fa-gift text-lg text-emerald-400"></i>
+              <div>
+                <strong>Garancia About Garden:</strong> Pri podpise realizácie je 3D projekt a obhliadka v plnej výške 150 € ZDARMA.
+              </div>
+            </div>
+
+            <!-- CTA Action -->
+            <div class="pt-6">
+              <button id="transferToFormBtn" class="w-full py-4 px-6 rounded-2xl bg-gradient-to-r from-emerald-500 to-forest-600 hover:from-emerald-400 hover:to-forest-500 text-white font-extrabold text-base shadow-lg transition-all duration-200 flex items-center justify-center gap-2 transform active:scale-95">
+                <i class="fa-solid fa-paper-plane text-emerald-200"></i>
+                <span>Odoslať dopyt s touto konfiguráciou</span>
+              </button>
+            </div>
+
+          </div>
+
+          <!-- Quick FAQ / Note under calculator -->
+          <div class="p-5 rounded-2xl bg-carddark/60 border border-forest-900 text-xs text-slate-400 space-y-2">
+            <div class="font-bold text-white flex items-center gap-1.5">
+              <i class="fa-solid fa-circle-info text-emerald-400"></i>
+              <span>Prečo sa cena odvíja od obhliadky?</span>
+            </div>
+            <p>
+              Každý pozemok je jedinečný – záleží na sklone terénu, kvalite pôvodnej pôdy, tlaku vody v studni či vodovode pre závlahu TORO® a výbere konkrétnych drevín. Obhliadka vás k ničomu nezaväzuje.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- TORO IRRIGATION TECHNOLOGY SPOTLIGHT -->
+  <section id="zavlaha" class="py-16 lg:py-24 bg-white dark:bg-carddark border-b border-slate-200 dark:border-forest-900/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left: Copy & Benefits -->
+        <div class="lg:col-span-6 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-950/60 text-blue-700 dark:text-blue-300 text-xs font-bold uppercase tracking-wider">
+            <i class="fa-solid fa-droplet"></i>
+            <span>Oficiálny partner technológie</span>
+          </div>
+
+          <h2 class="font-display font-black text-3xl sm:text-5xl text-forest-950 dark:text-white leading-tight">
+            Automatické závlahové systémy <span class="text-blue-600">TORO®</span>
+          </h2>
+
+          <p class="text-slate-600 dark:text-slate-300 text-base leading-relaxed">
+            Zavlažovanie hadicou je minulosťou. So systémom TORO získava váš trávnik presnú dávku vlahy v ideálnych ranných hodinách, keď je odparovanie minimálne a tráva nespáli slnko.
+          </p>
+
+          <div class="space-y-4">
+            
+            <div class="flex items-start gap-3.5">
+              <div class="w-10 h-10 rounded-xl bg-blue-50 dark:bg-blue-900/40 text-blue-600 dark:text-blue-300 flex items-center justify-center shrink-0 text-lg">
+                <i class="fa-solid fa-gauge-high"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-slate-900 dark:text-white text-base">Úspora vody a nákladov</h4>
+                <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400">Optimalizované trysky a dažďové senzory zabránia zbytočnému plytvaniu vodou počas daždivých dní.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3.5">
+              <div class="w-10 h-10 rounded-xl bg-blue-50 dark:bg-blue-900/40 text-blue-600 dark:text-blue-300 flex items-center justify-center shrink-0 text-lg">
+                <i class="fa-solid fa-eye-slash"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-slate-900 dark:text-white text-base">100% neviditeľná podzemná inštalácia</h4>
+                <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400">Postrekovače sú ukryté v úrovni terénu a vysunú sa len počas polievania. Nekazia estetiku ani kosenie kosačkou.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3.5">
+              <div class="w-10 h-10 rounded-xl bg-blue-50 dark:bg-blue-900/40 text-blue-600 dark:text-blue-300 flex items-center justify-center shrink-0 text-lg">
+                <i class="fa-solid fa-snowflake"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-slate-900 dark:text-white text-base">Jarné spustenie a zimné prefúknutie</h4>
+                <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400">Poskytujeme kompletný servis – na jeseň systém prefúkneme priemyselným kompresorom proti mrazom a na jar otestujeme tlaky.</p>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="pt-2">
+            <a href="#kontakt" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-sm shadow-md transition-all">
+              <i class="fa-solid fa-phone"></i>
+              <span>Objednať návrh závlahy TORO®</span>
+            </a>
+          </div>
+
+        </div>
+
+        <!-- Right: Real Photo of Trenching & Toro System (images/20190822_131050.jpg & zavlaha1.png) -->
+        <div class="lg:col-span-6 grid grid-cols-2 gap-4">
+          <div class="space-y-4">
+            <div class="rounded-3xl overflow-hidden shadow-lg border border-slate-200 dark:border-forest-900 h-64">
+              <img src="images/20190822_131050.jpg" alt="Montáž závlahového systému TORO na pozemku" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+            </div>
+            <div class="p-4 rounded-2xl bg-slate-50 dark:bg-carddark border border-slate-200 dark:border-forest-900 text-center">
+              <div class="font-display font-extrabold text-2xl text-blue-600 dark:text-blue-400">100%</div>
+              <div class="text-xs text-slate-500 dark:text-slate-400 font-medium">Rovnomerné pokrytie plochy</div>
+            </div>
+          </div>
+
+          <div class="space-y-4 pt-6">
+            <div class="p-4 rounded-2xl bg-slate-50 dark:bg-carddark border border-slate-200 dark:border-forest-900 text-center">
+              <div class="font-display font-extrabold text-2xl text-forest-700 dark:text-botanic-mint">TORO</div>
+              <div class="text-xs text-slate-500 dark:text-slate-400 font-medium">Americká spoľahlivosť</div>
+            </div>
+            <div class="rounded-3xl overflow-hidden shadow-lg border border-slate-200 dark:border-forest-900 h-64">
+              <img src="images/20190821_141356.jpg" alt="Uloženie potrubia a elektromagnetických ventilov TORO" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- AUTHENTIC GALLERY SECTION (45+ PHOTOS WITH FILTER & LIGHTBOX) -->
+  <section id="galeria" class="py-16 lg:py-24 leaf-pattern">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-12 space-y-4">
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-forest-100 dark:bg-forest-900/60 text-forest-800 dark:text-emerald-300 text-xs font-bold uppercase tracking-wider">
+          <i class="fa-solid fa-images"></i>
+          <span>Autentické referencie</span>
+        </span>
+        <h2 class="font-display font-black text-3xl sm:text-5xl text-forest-950 dark:text-white">
+          Galéria skutočných realizácií
+        </h2>
+        <p class="text-slate-600 dark:text-slate-300 text-base">
+          Každá fotografia v tejto galérii pochádza priamo z našich zákaziek v Senci, Bratislave, Pezinku a priľahlých obciach. Žiadne katalógové ilúzie.
+        </p>
+
+        <!-- Gallery Category Filter Tabs -->
+        <div class="flex flex-wrap items-center justify-center gap-2 pt-4" id="galleryFilterTabs">
+          <button data-filter="all" class="gallery-filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-bold bg-forest-800 text-white shadow-sm transition-all">
+            Všetky práce (24)
+          </button>
+          <button data-filter="lawn" class="gallery-filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-white dark:bg-carddark text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-forest-800 hover:bg-forest-50 transition-all">
+            Kobercové trávniky
+          </button>
+          <button data-filter="irrigation" class="gallery-filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-white dark:bg-carddark text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-forest-800 hover:bg-forest-50 transition-all">
+            Závlahy TORO®
+          </button>
+          <button data-filter="plants" class="gallery-filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-white dark:bg-carddark text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-forest-800 hover:bg-forest-50 transition-all">
+            Výsadba & Skalky
+          </button>
+          <button data-filter="terrain" class="gallery-filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-white dark:bg-carddark text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-forest-800 hover:bg-forest-50 transition-all">
+            Terénne úpravy
+          </button>
+        </div>
+      </div>
+
+      <!-- Gallery Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6" id="galleryGrid">
+        
+        <!-- Photo 1: Finished lawn -->
+        <div class="gallery-item group relative rounded-2xl overflow-hidden shadow-md cursor-pointer h-64 bg-slate-200 dark:bg-carddark" data-category="lawn" onclick="openLightbox('images/20200921_143224.jpg', 'Kompletne založený kobercový trávnik s výsadbou drevín pri rodinnom dome')">
+          <img src="images/20200921_143224.jpg" alt="Kobercový trávnik Senec" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end text-white">
+            <span class="text-[10px] uppercase font-bold text-emerald-400">Kobercový trávnik</span>
+            <p class="text-xs font-semibold">Dokončená rodinná záhrada</p>
+          </div>
+        </div>
+
+        <!-- Photo 2: Finished garden 2 -->
+        <div class="gallery-item group relative rounded-2xl overflow-hidden shadow-md cursor-pointer h-64 bg-slate-200 dark:bg-carddark" data-category="lawn" onclick="openLightbox('images/20200924_133907.jpg', 'Hustý zelený trávnik s mulčovaným záhonom a okrasnými krami')">
+          <img src="images/20200924_133907.jpg" alt="Lush lawn realization" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end text-white">
+            <span class="text-[10px] uppercase font-bold text-emerald-400">Trávnik & Záhony</span>
+            <p class="text-xs font-semibold">Mulčovaná výsadba</p>
+          </div>
+        </div>
+
+        <!-- Photo 3: Ornamental grass -->
+        <div class="gallery-item group relative rounded-2xl overflow-hidden shadow-md cursor-pointer h-64 bg-slate-200 dark:bg-carddark" data-category="plants" onclick="openLightbox('images/20201019_124547.jpg', 'Výsadba okrasných tráv a trvaliek v kamenistom a kôrovom záhone')">
+          <img src="images/20201019_124547.jpg" alt="Výsadba okrasných tráv" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end text-white">
+            <span class="text-[10px] uppercase font-bold text-emerald-400">Výsadba & Skalky</span>
+            <p class="text-xs font-semibold">Okrasné trávy a trvalky</p>
+          </div>
+        </div>
+
+        <!-- Photo 4: Irrigation trenching -->
+        <div class="gallery-item group relative rounded-2xl overflow-hidden shadow-md cursor-pointer h-64 bg-slate-200 dark:bg-carddark" data-category="irrigation" onclick="openLightbox('images/20190822_131050.jpg', 'Výkopové práce a ukladanie závlahového potrubia TORO pod trávnik')">
+          <img src="images/20190822_131050.jpg" alt="Závlaha TORO montáž" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end text-white">
+            <span class="text-[10px] uppercase font-bold text-blue-400">Závlahy TORO®</span>
+            <p class="text-xs font-semibold">Ukladanie podzemnej vetvy</p>
+          </div>
+        </div>
+
+        <!-- Photo 5: Autumn garden -->
+        <div class="gallery-item group relative rounded-2xl overflow-hidden shadow-md cursor-pointer h-64 bg-slate-200 dark:bg-carddark" data-category="plants" onclick="openLightbox('images/20201102_103207.jpg', 'Jesenná výsadba ihličnanov a drevín s kôrovým mulčom')">
+          <img src="images/20201102_103207.jpg" alt="Jesenná výsadba" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end text-white">
+            <span class="text-[10px] uppercase font-bold text-emerald-400">Výsadba</span>
+            <p class="text-xs font-semibold">Ihličnany a mulč</p>
+          </div>
+        </div>
+
+        <!-- Photo 6: Autumn grass & lawn -->
+        <div class="gallery-item group relative rounded-2xl overflow-hidden shadow-md cursor-pointer h-64 bg-slate-200 dark:bg-carddark" data-category="lawn" onclick="openLightbox('images/20201028_125151.jpg', 'Trávnik a bočné záhony po jesennej údržbe')">
+          <img src="images/20201028_125151.jpg" alt="Trávnik jeseň" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end text-white">
+            <span class="text-[10px] uppercase font-bold text-emerald-400">Kobercový trávnik</span>
+            <p class="text-xs font-semibold">Jesenná regenerácia</p>
+          </div>
+        </div>
+
+        <!-- Photo 7: Lawn close-up -->
+        <div class="gallery-item group relative rounded-2xl overflow-hidden shadow-md cursor-pointer h-64 bg-slate-200 dark:bg-carddark" data-category="lawn" onclick="openLightbox('images/20200921_143207.jpg', 'Perfektný hustý trávny koberec s vyrovnaným terénom')">
+          <img src="images/20200921_143207.jpg" alt="Hustý trávnik" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end text-white">
+            <span class="text-[10px] uppercase font-bold text-emerald-400">Kobercový trávnik</span>
+            <p class="text-xs font-semibold">Detail hustoty stebla</p>
+          </div>
+        </div>
+
+        <!-- Photo 8: Irrigation valves -->
+        <div class="gallery-item group relative rounded-2xl overflow-hidden shadow-md cursor-pointer h-64 bg-slate-200 dark:bg-carddark" data-category="irrigation" onclick="openLightbox('images/20190821_141356.jpg', 'Montáž elektroventilov a šachiet pre systém automatickej závlahy')">
+          <img src="images/20190821_141356.jpg" alt="Elektroventily závlaha" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end text-white">
+            <span class="text-[10px] uppercase font-bold text-blue-400">Závlahy TORO®</span>
+            <p class="text-xs font-semibold">Rozvodná šachta ventilov</p>
+          </div>
+        </div>
+
+        <!-- Photo 9: Spring soil preparation -->
+        <div class="gallery-item group relative rounded-2xl overflow-hidden shadow-md cursor-pointer h-64 bg-slate-200 dark:bg-carddark" data-category="terrain" onclick="openLightbox('images/20190329_165631.jpg', 'Jemná nivelácia a valcovanie ornice pred pokládkou trávnika')">
+          <img src="images/20190329_165631.jpg" alt="Príprava terénu" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end text-white">
+            <span class="text-[10px] uppercase font-bold text-terracotta-400">Terénne úpravy</span>
+            <p class="text-xs font-semibold">Nivelácia a príprava pôdy</p>
+          </div>
+        </div>
+
+        <!-- Photo 10: Laying grass roll -->
+        <div class="gallery-item group relative rounded-2xl overflow-hidden shadow-md cursor-pointer h-64 bg-slate-200 dark:bg-carddark" data-category="lawn" onclick="openLightbox('images/20190602_182210.jpg', 'Pokládka kobercového trávnika v pásoch na upravený terén')">
+          <img src="images/20190602_182210.jpg" alt="Pokládka kobercového trávnika" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end text-white">
+            <span class="text-[10px] uppercase font-bold text-emerald-400">Kobercový trávnik</span>
+            <p class="text-xs font-semibold">Proces pokládky pásov</p>
+          </div>
+        </div>
+
+        <!-- Photo 11: Stone rock garden -->
+        <div class="gallery-item group relative rounded-2xl overflow-hidden shadow-md cursor-pointer h-64 bg-slate-200 dark:bg-carddark" data-category="plants" onclick="openLightbox('images/20191024_130628.jpg', 'Tvorba kamenistej skalky s trvalkami a obrubníkom')">
+          <img src="images/20191024_130628.jpg" alt="Tvorba skalky" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end text-white">
+            <span class="text-[10px] uppercase font-bold text-emerald-400">Výsadba & Skalky</span>
+            <p class="text-xs font-semibold">Kameň a trvalky</p>
+          </div>
+        </div>
+
+        <!-- Photo 12: Birch and plants -->
+        <div class="gallery-item group relative rounded-2xl overflow-hidden shadow-md cursor-pointer h-64 bg-slate-200 dark:bg-carddark" data-category="plants" onclick="openLightbox('images/breza-previsnuta-betula-pendula-semena-brezy-semiacka-15-ks.jpg', 'Solitérna breza previsnutá (Betula pendula) a okrasné dreviny')">
+          <img src="images/breza-previsnuta-betula-pendula-semena-brezy-semiacka-15-ks.jpg" alt="Breza previsnutá" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end text-white">
+            <span class="text-[10px] uppercase font-bold text-emerald-400">Výsadba</span>
+            <p class="text-xs font-semibold">Solitérne stromy (Breza)</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- More Photos Hint & CTA -->
+      <div class="text-center mt-10">
+        <a href="https://www.facebook.com/profile.php?id=100063065930118" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white dark:bg-carddark border border-slate-300 dark:border-forest-800 text-slate-800 dark:text-slate-200 hover:text-blue-600 dark:hover:text-blue-400 text-sm font-semibold transition-all shadow-sm">
+          <i class="fa-brands fa-facebook text-blue-600 text-base"></i>
+          <span>Pozrite si najnovšie príspevky a albumy na Facebooku About Garden</span>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SEASONAL CARE CALENDAR (ZÁHRADNÝ KALENDÁR 4 ROČNÝCH OBDOBÍ) -->
+  <section id="kalendar" class="py-16 lg:py-24 bg-slate-100 dark:bg-slate-900/40 border-y border-slate-200 dark:border-forest-900/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+        <span class="text-xs font-bold uppercase tracking-wider text-emerald-600 dark:text-botanic-mint">Odborný sprievodca</span>
+        <h2 class="font-display font-black text-3xl sm:text-5xl text-forest-950 dark:text-white">
+          Celoročný kalendár prác v záhrade
+        </h2>
+        <p class="text-slate-600 dark:text-slate-300 text-sm sm:text-base">
+          Aby bola záhrada zdravá a sýtozelená po celý rok, vyžaduje správny zásah v správny čas. Prečítajte si odporúčania Andrzeja Kosieradzkého.
+        </p>
+      </div>
+
+      <!-- 4 Seasons Tabs / Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Jar (Marec - Máj) -->
+        <div class="p-6 rounded-3xl bg-white dark:bg-carddark border border-slate-200 dark:border-forest-900 shadow-sm relative overflow-hidden">
+          <div class="w-12 h-12 rounded-2xl bg-emerald-100 dark:bg-emerald-950/60 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-xl mb-4">
+            <i class="fa-solid fa-seedling"></i>
+          </div>
+          <span class="text-xs font-bold uppercase tracking-wider text-emerald-600 dark:text-botanic-mint">Marec – Máj</span>
+          <h3 class="font-display font-bold text-xl text-slate-900 dark:text-white mt-1 mb-3">Jarné prebudenie</h3>
+          <ul class="space-y-2.5 text-xs text-slate-600 dark:text-slate-300">
+            <li class="flex items-start gap-2">
+              <i class="fa-solid fa-angle-right text-emerald-500 mt-0.5"></i>
+              <span><strong>Vertikutácia:</strong> Odstránenie plsti a machu pre prístup vzduchu ku korienkom.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i class="fa-solid fa-angle-right text-emerald-500 mt-0.5"></i>
+              <span><strong>Jarné spustenie TORO®:</strong> Natlakovanie potrubí, kontrola trysiek a filtrov.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i class="fa-solid fa-angle-right text-emerald-500 mt-0.5"></i>
+              <span><strong>Štartovacie hnojenie:</strong> Vysoký podiel dusíka pre rýchly rast a sýtosť farby.</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Leto (Jún - August) -->
+        <div class="p-6 rounded-3xl bg-white dark:bg-carddark border border-slate-200 dark:border-forest-900 shadow-sm relative overflow-hidden">
+          <div class="w-12 h-12 rounded-2xl bg-amber-100 dark:bg-amber-950/60 text-amber-600 dark:text-amber-400 flex items-center justify-center text-xl mb-4">
+            <i class="fa-solid fa-sun"></i>
+          </div>
+          <span class="text-xs font-bold uppercase tracking-wider text-amber-600 dark:text-amber-400">Jún – August</span>
+          <h3 class="font-display font-bold text-xl text-slate-900 dark:text-white mt-1 mb-3">Letná vitalita</h3>
+          <ul class="space-y-2.5 text-xs text-slate-600 dark:text-slate-300">
+            <li class="flex items-start gap-2">
+              <i class="fa-solid fa-angle-right text-amber-500 mt-0.5"></i>
+              <span><strong>Ranná závlaha:</strong> Polievanie medzi 04:00 - 07:00 zabráni plesniam a spáleniu listov.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i class="fa-solid fa-angle-right text-amber-500 mt-0.5"></i>
+              <span><strong>Vyššie kosenie:</strong> V horúčavách nechávame steblo vyššie (cca 5 cm), aby tienilo pôdu.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i class="fa-solid fa-angle-right text-amber-500 mt-0.5"></i>
+              <span><strong>Rez živých plotov:</strong> Pravidelné tvarovanie tují, brestov a cypruštekov.</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Jeseň (September - November) -->
+        <div class="p-6 rounded-3xl bg-white dark:bg-carddark border border-slate-200 dark:border-forest-900 shadow-sm relative overflow-hidden">
+          <div class="w-12 h-12 rounded-2xl bg-terracotta-100 dark:bg-terracotta-950/60 text-terracotta-600 dark:text-terracotta-400 flex items-center justify-center text-xl mb-4">
+            <i class="fa-solid fa-leaf"></i>
+          </div>
+          <span class="text-xs font-bold uppercase tracking-wider text-terracotta-600 dark:text-terracotta-400">September – November</span>
+          <h3 class="font-display font-bold text-xl text-slate-900 dark:text-white mt-1 mb-3">Jesenná regenerácia</h3>
+          <ul class="space-y-2.5 text-xs text-slate-600 dark:text-slate-300">
+            <li class="flex items-start gap-2">
+              <i class="fa-solid fa-angle-right text-terracotta-500 mt-0.5"></i>
+              <span><strong>Jesenná vertikutácia & Dosievanie:</strong> Teplá pôda a jesenná vlaha ideálna na zahustenie.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i class="fa-solid fa-angle-right text-terracotta-500 mt-0.5"></i>
+              <span><strong>Jesenné hnojenie:</strong> Pomalé draselné hnojivo pre spevnenie bunkových stien pred mrazom.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i class="fa-solid fa-angle-right text-terracotta-500 mt-0.5"></i>
+              <span><strong>Zazimovanie závlahy:</strong> Dôkladné prefúknutie stlačeným vzduchom (veľmi dôležité!).</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Zima (December - Február) -->
+        <div class="p-6 rounded-3xl bg-white dark:bg-carddark border border-slate-200 dark:border-forest-900 shadow-sm relative overflow-hidden">
+          <div class="w-12 h-12 rounded-2xl bg-blue-100 dark:bg-blue-950/60 text-blue-600 dark:text-blue-400 flex items-center justify-center text-xl mb-4">
+            <i class="fa-solid fa-snowflake"></i>
+          </div>
+          <span class="text-xs font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400">December – Február</span>
+          <h3 class="font-display font-bold text-xl text-slate-900 dark:text-white mt-1 mb-3">Zimný kľud & Plánovanie</h3>
+          <ul class="space-y-2.5 text-xs text-slate-600 dark:text-slate-300">
+            <li class="flex items-start gap-2">
+              <i class="fa-solid fa-angle-right text-blue-500 mt-0.5"></i>
+              <span><strong>Zimný rez ovocných stromov:</strong> Presvetlenie koruny a orez počas bezmrazových dní.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i class="fa-solid fa-angle-right text-blue-500 mt-0.5"></i>
+              <span><strong>Ochrana kmienkov:</strong> Ochrana citlivých drevín a hortenzií pred namŕzaním.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i class="fa-solid fa-angle-right text-blue-500 mt-0.5"></i>
+              <span><strong>Príprava 3D projektov:</strong> Ideálny čas na vypracovanie návrhu záhrady pre jar.</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- WORKFLOW STEPS / AKO PREBIEHA SPOLUPRÁCA -->
+  <section class="py-16 lg:py-24 leaf-pattern">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+        <span class="text-xs font-bold uppercase tracking-wider text-emerald-600 dark:text-botanic-mint">Jednoduchý proces</span>
+        <h2 class="font-display font-black text-3xl sm:text-5xl text-forest-950 dark:text-white">
+          Ako prebieha spolupráca s About Garden
+        </h2>
+        <p class="text-slate-600 dark:text-slate-300 text-sm sm:text-base">
+          Cesta k vašej vysnívanej záhrade v 4 prehľadných a transparentných krokoch bez nepríjemných prekvapení.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
+        
+        <!-- Step 1 -->
+        <div class="text-center space-y-4">
+          <div class="w-16 h-16 rounded-3xl bg-forest-900 text-white flex items-center justify-center font-display font-black text-2xl mx-auto shadow-xl ring-4 ring-forest-100 dark:ring-forest-800">
+            1
+          </div>
+          <h3 class="font-display font-bold text-lg text-slate-900 dark:text-white">Obhliadka u vás</h3>
+          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+            Stretneme sa priamo na vašom pozemku, vypočujeme si vaše predstavy, zameriame sklon a posúdime svetelné a pôdne podmienky. <strong>Vždy ZDARMA</strong>.
+          </p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="text-center space-y-4">
+          <div class="w-16 h-16 rounded-3xl bg-forest-800 text-white flex items-center justify-center font-display font-black text-2xl mx-auto shadow-xl ring-4 ring-forest-100 dark:ring-forest-800">
+            2
+          </div>
+          <h3 class="font-display font-bold text-lg text-slate-900 dark:text-white">3D Návrh & Rozpočet</h3>
+          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+            Vypracujeme detailnú 3D vizualizáciu a položkový rozpočet. Presne viete, čo a za koľko dostanete. Pri realizácii vám 150 € odpočítame.
+          </p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="text-center space-y-4">
+          <div class="w-16 h-16 rounded-3xl bg-emerald-600 text-white flex items-center justify-center font-display font-black text-2xl mx-auto shadow-xl ring-4 ring-emerald-100 dark:ring-emerald-950">
+            3
+          </div>
+          <h3 class="font-display font-bold text-lg text-slate-900 dark:text-white">Precízna realizácia</h3>
+          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+            Terénne úpravy, podzemná závlaha TORO®, pokládka trávnika a výsadba. Dodržiavame dohodnuté termíny a zanechávame po sebe čistý pozemok.
+          </p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="text-center space-y-4">
+          <div class="w-16 h-16 rounded-3xl bg-terracotta-600 text-white flex items-center justify-center font-display font-black text-2xl mx-auto shadow-xl ring-4 ring-terracotta-100 dark:ring-terracotta-950">
+            4
+          </div>
+          <h3 class="font-display font-bold text-lg text-slate-900 dark:text-white">Odovzdanie & Servis</h3>
+          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+            Záhradu vám odovzdáme s podrobnými inštrukciami na polievanie. Radi prevezmeme aj pravidelnú sezónnu údržbu od 15 €/hod.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- TRANSPARENT PRICING & GUARANTEES (CENNÍK) -->
+  <section id="cennik" class="py-16 lg:py-24 bg-white dark:bg-carddark border-y border-slate-200 dark:border-forest-900/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+        <span class="text-xs font-bold uppercase tracking-wider text-emerald-600 dark:text-botanic-mint">Jasné a férové podmienky</span>
+        <h2 class="font-display font-black text-3xl sm:text-5xl text-forest-950 dark:text-white">
+          Orientačný cenník prác
+        </h2>
+        <p class="text-slate-600 dark:text-slate-300 text-sm sm:text-base">
+          Ceny uvedené v cenníku sú orientačné, odvíjajú sa od konkrétneho návrhu a náročnosti terénu. V prípade realizácie záhrady sa samotný návrh odpočítava z celkovej ceny.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        
+        <!-- Tier 1: Obhliadka & Návrh -->
+        <div class="p-8 rounded-3xl bg-slate-50 dark:bg-slatebg border border-slate-200 dark:border-forest-900 flex flex-col justify-between shadow-sm">
+          <div>
+            <span class="text-xs font-bold uppercase tracking-wider text-slate-500">Konzultácia</span>
+            <h3 class="font-display font-bold text-2xl text-slate-900 dark:text-white mt-1">Obhliadka & Návrh</h3>
+            <div class="my-6">
+              <span class="font-display font-extrabold text-4xl text-forest-900 dark:text-emerald-400">150 €</span>
+              <span class="text-xs text-slate-500 dark:text-slate-400 block mt-1">(pri realizácii sa vracia = 0 €)</span>
+            </div>
+            <ul class="space-y-3 text-xs sm:text-sm text-slate-600 dark:text-slate-300">
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-emerald-500"></i>
+                <span><strong>Obhliadka u klienta: ZDARMA</strong></span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-emerald-500"></i>
+                <span>Zameranie terénu a konzultácia</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-emerald-500"></i>
+                <span>Kompletný 3D projekt záhrady</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-emerald-500"></i>
+                <span>Položková cenová ponuka</span>
+              </li>
+            </ul>
+          </div>
+          <div class="pt-8">
+            <a href="#kontakt" class="block text-center py-3 px-4 rounded-xl bg-forest-800 text-white font-bold text-xs uppercase tracking-wider hover:bg-forest-900 transition-colors">
+              Dohodnúť obhliadku
+            </a>
+          </div>
+        </div>
+
+        <!-- Tier 2: Realizácia na kľúč (Highlight) -->
+        <div class="p-8 rounded-3xl bg-gradient-to-b from-forest-900 to-forest-950 text-white border-2 border-emerald-500 shadow-2xl flex flex-col justify-between relative transform md:-translate-y-2">
+          <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-gradient-to-r from-emerald-500 to-emerald-600 text-white text-[11px] font-extrabold uppercase tracking-wider px-4 py-1 rounded-full shadow-md">
+            Najžiadanejšie
+          </div>
+          <div>
+            <span class="text-xs font-bold uppercase tracking-wider text-emerald-300">Kompletné dielo</span>
+            <h3 class="font-display font-bold text-2xl text-white mt-1">Realizácia Záhrady</h3>
+            <div class="my-6">
+              <span class="font-display font-extrabold text-3xl sm:text-4xl text-emerald-300">Individuálne</span>
+              <span class="text-xs text-slate-300 block mt-1">presne podľa 3D návrhu</span>
+            </div>
+            <ul class="space-y-3 text-xs sm:text-sm text-slate-200">
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-emerald-400"></i>
+                <span><strong>Návrh 150 € sa odpočíta z ceny</strong></span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-emerald-400"></i>
+                <span>Terénne úpravy a navážka pôdy</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-emerald-400"></i>
+                <span>Montáž automatickej závlahy TORO®</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-emerald-400"></i>
+                <span>Hustý kobercový trávnik alebo výsev</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-emerald-400"></i>
+                <span>Výsadba solitérnych stromov a krov</span>
+              </li>
+            </ul>
+          </div>
+          <div class="pt-8">
+            <a href="#kalkulacka" class="block text-center py-3.5 px-4 rounded-xl bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-400 hover:to-emerald-500 text-white font-extrabold text-xs uppercase tracking-wider transition-all shadow-lg">
+              Vypočítať odhad v kalkulačke
+            </a>
+          </div>
+        </div>
+
+        <!-- Tier 3: Odborná Údržba -->
+        <div class="p-8 rounded-3xl bg-slate-50 dark:bg-slatebg border border-slate-200 dark:border-forest-900 flex flex-col justify-between shadow-sm">
+          <div>
+            <span class="text-xs font-bold uppercase tracking-wider text-slate-500">Servis & Starostlivosť</span>
+            <h3 class="font-display font-bold text-2xl text-slate-900 dark:text-white mt-1">Celoročná Údržba</h3>
+            <div class="my-6">
+              <span class="font-display font-extrabold text-4xl text-forest-900 dark:text-emerald-400">15 €</span>
+              <span class="text-xs text-slate-500 dark:text-slate-400 block mt-1">/ hodina (bez DPH)</span>
+            </div>
+            <ul class="space-y-3 text-xs sm:text-sm text-slate-600 dark:text-slate-300">
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-emerald-500"></i>
+                <span>Kosenie, vertikutácia a aerifikácia</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-emerald-500"></i>
+                <span>Odborný rez ovocných a okrasných drevín</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-emerald-500"></i>
+                <span>Sezónne hnojenie a postreky</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-emerald-500"></i>
+                <span>Zazimovanie a jarné spustenie závlahy</span>
+              </li>
+            </ul>
+          </div>
+          <div class="pt-8">
+            <a href="#kontakt" class="block text-center py-3 px-4 rounded-xl bg-forest-800 text-white font-bold text-xs uppercase tracking-wider hover:bg-forest-900 transition-colors">
+              Objednať údržbu
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CLIENT REVIEWS / REFERENCIE -->
+  <section class="py-16 lg:py-24 leaf-pattern">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+        <span class="text-xs font-bold uppercase tracking-wider text-emerald-600 dark:text-botanic-mint">Overená spokojnosť</span>
+        <h2 class="font-display font-black text-3xl sm:text-5xl text-forest-950 dark:text-white">
+          Čo hovoria naši zákazníci
+        </h2>
+        <p class="text-slate-600 dark:text-slate-300 text-sm sm:text-base">
+          Dlhodobá dôvera rodín a majiteľov domov v Senci, Bratislave, Pezinku a Bernolákove.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Review 1 -->
+        <div class="p-6 rounded-3xl bg-white dark:bg-carddark border border-slate-200 dark:border-forest-900 shadow-sm space-y-4">
+          <div class="flex text-amber-500 text-sm">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <p class="text-sm text-slate-600 dark:text-slate-300 italic leading-relaxed">
+            „Pán Kosieradzki nám robil kompletnú záhradu pri novostavbe v Senci – od vyrovnania hliny cez automatickú závlahu TORO až po kobercový trávnik. Do 4 dní sme mali pred domom zelený koberec, ktorý nám závidia všetci susedia. Vysoko oceňujem dodržanie rozpočtu.“
+          </p>
+          <div class="pt-2 border-t border-slate-100 dark:border-forest-900/60 flex items-center justify-between">
+            <div>
+              <h4 class="font-bold text-sm text-slate-900 dark:text-white">Marek a Zuzana H.</h4>
+              <p class="text-xs text-slate-500">Senec (Mlynský klin)</p>
+            </div>
+            <span class="text-xs text-emerald-600 dark:text-botanic-mint font-semibold">Komplet záhrada</span>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="p-6 rounded-3xl bg-white dark:bg-carddark border border-slate-200 dark:border-forest-900 shadow-sm space-y-4">
+          <div class="flex text-amber-500 text-sm">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <p class="text-sm text-slate-600 dark:text-slate-300 italic leading-relaxed">
+            „Najviac sme ocenili 3D návrh. Vopred sme videli, kde budú umiestnené stromy, ako bude svietiť slnko a kde zostane voľná plocha na detské ihrisko. Poplatok za návrh nám potom p. Andrzej odpočítal z faktúry, presne ako sľúbil. Vrelo odporúčam!“
+          </p>
+          <div class="pt-2 border-t border-slate-100 dark:border-forest-900/60 flex items-center justify-between">
+            <div>
+              <h4 class="font-bold text-sm text-slate-900 dark:text-white">Ing. Peter K.</h4>
+              <p class="text-xs text-slate-500">Bernolákovo</p>
+            </div>
+            <span class="text-xs text-emerald-600 dark:text-botanic-mint font-semibold">3D Návrh & Trávnik</span>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="p-6 rounded-3xl bg-white dark:bg-carddark border border-slate-200 dark:border-forest-900 shadow-sm space-y-4">
+          <div class="flex text-amber-500 text-sm">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <p class="text-sm text-slate-600 dark:text-slate-300 italic leading-relaxed">
+            „Využívame About Garden už tretiu sezónu na pravidelnú údržbu a zazimovanie závlahy. Sadzba 15 € na hodinu je férová, pán Kosieradzki je presný, spoľahlivý a o rastlinách vie úplne všetko. Nemusíme sa o nič starať.“
+          </p>
+          <div class="pt-2 border-t border-slate-100 dark:border-forest-900/60 flex items-center justify-between">
+            <div>
+              <h4 class="font-bold text-sm text-slate-900 dark:text-white">Lucia V.</h4>
+              <p class="text-xs text-slate-500">Pezinok</p>
+            </div>
+            <span class="text-xs text-emerald-600 dark:text-botanic-mint font-semibold">Sezónna údržba</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FAQ SECTION (ČASTÉ OTÁZKY) -->
+  <section class="py-16 lg:py-24 bg-slate-100 dark:bg-slate-900/40 border-y border-slate-200 dark:border-forest-900/60">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center mb-12 space-y-3">
+        <span class="text-xs font-bold uppercase tracking-wider text-emerald-600 dark:text-botanic-mint">Máte otázky?</span>
+        <h2 class="font-display font-black text-3xl sm:text-4xl text-forest-950 dark:text-white">
+          Často kladené otázky (FAQ)
+        </h2>
+      </div>
+
+      <div class="space-y-4" id="faqAccordion">
+        
+        <!-- FAQ 1 -->
+        <div class="rounded-2xl bg-white dark:bg-carddark border border-slate-200 dark:border-forest-900 overflow-hidden shadow-sm">
+          <button class="faq-btn w-full px-6 py-4 text-left font-display font-bold text-base sm:text-lg text-slate-900 dark:text-white flex items-center justify-between focus:outline-none">
+            <span>Koľko stojí prvotná obhliadka pozemku?</span>
+            <i class="fa-solid fa-chevron-down text-sm text-slate-400 transition-transform"></i>
+          </button>
+          <div class="faq-content hidden px-6 pb-4 text-sm text-slate-600 dark:text-slate-300 border-t border-slate-100 dark:border-forest-900/80 pt-3">
+            Obhliadka u klienta je v regióne Senec a blízkom okolí (Bratislava, Pezinok, Trnava) <strong>100% ZDARMA</strong>. Stretneme sa priamo na vašom pozemku, zameriame skutočné rozmery, prediskutujeme vaše preferencie a navrhneme optimálny postup.
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="rounded-2xl bg-white dark:bg-carddark border border-slate-200 dark:border-forest-900 overflow-hidden shadow-sm">
+          <button class="faq-btn w-full px-6 py-4 text-left font-display font-bold text-base sm:text-lg text-slate-900 dark:text-white flex items-center justify-between focus:outline-none">
+            <span>Ako funguje platba za 3D návrh záhrady (150 €)?</span>
+            <i class="fa-solid fa-chevron-down text-sm text-slate-400 transition-transform"></i>
+          </button>
+          <div class="faq-content hidden px-6 pb-4 text-sm text-slate-600 dark:text-slate-300 border-t border-slate-100 dark:border-forest-900/80 pt-3">
+            Vypracovanie detailného 3D projektu s osadzovacím plánom a rozpočtom stojí 150 €. Ak sa následne rozhodnete zveriť realizáciu nám, <strong>celá suma 150 € sa odpočíta z konečnej faktúry</strong> za realizáciu. V takom prípade máte návrh úplne zadarmo.
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="rounded-2xl bg-white dark:bg-carddark border border-slate-200 dark:border-forest-900 overflow-hidden shadow-sm">
+          <button class="faq-btn w-full px-6 py-4 text-left font-display font-bold text-base sm:text-lg text-slate-900 dark:text-white flex items-center justify-between focus:outline-none">
+            <span>Je lepší kobercový trávnik alebo siaty trávnik?</span>
+            <i class="fa-solid fa-chevron-down text-sm text-slate-400 transition-transform"></i>
+          </button>
+          <div class="faq-content hidden px-6 pb-4 text-sm text-slate-600 dark:text-slate-300 border-t border-slate-100 dark:border-forest-900/80 pt-3">
+            <strong>Kobercový trávnik</strong> je ideálny, ak chcete okamžitý zelený výsledok bez buriny a možnosť po trávniku chodiť už po 10-14 dňoch. <strong>Siaty trávnik</strong> je finančne dostupnejší, no vyžaduje 4 až 8 týždňov starostlivého polievania, odstraňovania buriny a trpezlivosti, kým sa plocha zahustí.
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="rounded-2xl bg-white dark:bg-carddark border border-slate-200 dark:border-forest-900 overflow-hidden shadow-sm">
+          <button class="faq-btn w-full px-6 py-4 text-left font-display font-bold text-base sm:text-lg text-slate-900 dark:text-white flex items-center justify-between focus:outline-none">
+            <span>Prečo odporúčate práve automatickú závlahu TORO®?</span>
+            <i class="fa-solid fa-chevron-down text-sm text-slate-400 transition-transform"></i>
+          </button>
+          <div class="faq-content hidden px-6 pb-4 text-sm text-slate-600 dark:text-slate-300 border-t border-slate-100 dark:border-forest-900/80 pt-3">
+            Značka <strong>TORO®</strong> patrí k celosvetovým lídrom v profesionálnom zavlažovaní (využíva sa napr. aj na golfových a futbalových ihriskách). Vyniká vysokou odolnosťou trysiek, jednoduchou reguláciou a spoľahlivými elektromagnetickými ventilmi, ktoré vydržia desiatky rokov.
+          </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="rounded-2xl bg-white dark:bg-carddark border border-slate-200 dark:border-forest-900 overflow-hidden shadow-sm">
+          <button class="faq-btn w-full px-6 py-4 text-left font-display font-bold text-base sm:text-lg text-slate-900 dark:text-white flex items-center justify-between focus:outline-none">
+            <span>Čo obnáša zazimovanie závlahy a prečo je nutné?</span>
+            <i class="fa-solid fa-chevron-down text-sm text-slate-400 transition-transform"></i>
+          </button>
+          <div class="faq-content hidden px-6 pb-4 text-sm text-slate-600 dark:text-slate-300 border-t border-slate-100 dark:border-forest-900/80 pt-3">
+            Pred prvými mrazmi (október/november) je nevyhnutné vytlačiť všetku zostatkovú vodu z potrubia a ventilov pomocou výkonného kompresora. Zamrznutá voda by inak roztrhla ventily, potrubie alebo telesá postrekovačov. Túto službu zabezpečujeme v rámci jesenného servisu.
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT & INQUIRY FORM SECTION (KONTAKT) -->
+  <section id="kontakt" class="py-16 lg:py-24 leaf-pattern">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        
+        <!-- Contact Information Column (Left) -->
+        <div class="lg:col-span-5 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-forest-100 dark:bg-forest-900/60 text-forest-800 dark:text-emerald-300 text-xs font-bold uppercase tracking-wider">
+            <i class="fa-solid fa-envelope"></i>
+            <span>Spojte sa so mnou</span>
+          </div>
+
+          <h2 class="font-display font-black text-3xl sm:text-4xl text-forest-950 dark:text-white leading-tight">
+            Dohodnite si bezplatnú obhliadku na vašom pozemku
+          </h2>
+
+          <p class="text-slate-600 dark:text-slate-300 text-base leading-relaxed">
+            Zavolajte mi, napíšte email alebo vyplňte formulár. Odpoviem vám do 24 hodín s návrhom termínu stretnutia v Senci alebo kdekoľvek v regióne.
+          </p>
+
+          <!-- Direct Contact Cards -->
+          <div class="space-y-4 pt-2">
+            
+            <a href="tel:+421915766495" class="flex items-center gap-4 p-4 rounded-2xl bg-white dark:bg-carddark border border-slate-200 dark:border-forest-900 hover:border-emerald-500 shadow-sm transition-all group">
+              <div class="w-12 h-12 rounded-xl bg-forest-100 dark:bg-forest-900/60 text-forest-700 dark:text-emerald-400 flex items-center justify-center text-xl shrink-0 group-hover:scale-110 transition-transform">
+                <i class="fa-solid fa-phone"></i>
+              </div>
+              <div>
+                <span class="text-xs text-slate-500 font-medium">Zavolajte kedykoľvek (Po - So):</span>
+                <div class="font-display font-extrabold text-lg text-slate-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-botanic-mint transition-colors">
+                  +421 915 766 495
+                </div>
+              </div>
+            </a>
+
+            <a href="mailto:infoaboutgarden@gmail.com" class="flex items-center gap-4 p-4 rounded-2xl bg-white dark:bg-carddark border border-slate-200 dark:border-forest-900 hover:border-emerald-500 shadow-sm transition-all group">
+              <div class="w-12 h-12 rounded-xl bg-emerald-100 dark:bg-emerald-900/40 text-emerald-700 dark:text-emerald-300 flex items-center justify-center text-xl shrink-0 group-hover:scale-110 transition-transform">
+                <i class="fa-solid fa-envelope"></i>
+              </div>
+              <div>
+                <span class="text-xs text-slate-500 font-medium">Elektronická pošta:</span>
+                <div class="font-display font-bold text-base text-slate-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-botanic-mint transition-colors">
+                  infoaboutgarden@gmail.com
+                </div>
+              </div>
+            </a>
+
+            <div class="flex items-center gap-4 p-4 rounded-2xl bg-white dark:bg-carddark border border-slate-200 dark:border-forest-900 shadow-sm">
+              <div class="w-12 h-12 rounded-xl bg-terracotta-100 dark:bg-terracotta-900/40 text-terracotta-700 dark:text-terracotta-300 flex items-center justify-center text-xl shrink-0">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <div>
+                <span class="text-xs text-slate-500 font-medium">Sídlo & adresa:</span>
+                <div class="font-semibold text-sm text-slate-900 dark:text-white">
+                  Turnianska 4847/114, 903 01 Senec
+                </div>
+                <div class="text-xs text-slate-500 mt-0.5">IČO: 52520137 • Andrzej Kosieradzki</div>
+              </div>
+            </div>
+
+            <!-- Facebook Link -->
+            <a href="https://www.facebook.com/profile.php?id=100063065930118" target="_blank" rel="noopener noreferrer" class="flex items-center gap-4 p-4 rounded-2xl bg-blue-50 dark:bg-blue-950/40 border border-blue-200 dark:border-blue-900 hover:border-blue-500 shadow-sm transition-all group">
+              <div class="w-12 h-12 rounded-xl bg-[#1877F2] text-white flex items-center justify-center text-xl shrink-0 group-hover:scale-110 transition-transform">
+                <i class="fa-brands fa-facebook-f"></i>
+              </div>
+              <div>
+                <span class="text-xs text-blue-600 dark:text-blue-300 font-medium">Sledujte nás na Facebooku:</span>
+                <div class="font-bold text-sm text-slate-900 dark:text-white">
+                  About Garden - Záhradné práce
+                </div>
+              </div>
+            </a>
+
+          </div>
+        </div>
+
+        <!-- Dynamic Form Column (Right) -->
+        <div class="lg:col-span-7 bg-white dark:bg-carddark rounded-3xl p-6 sm:p-8 border border-slate-200 dark:border-forest-900 shadow-xl">
+          <h3 class="font-display font-bold text-2xl text-slate-900 dark:text-white mb-2">
+            Nezáväzný dopyt & rezervácia obhliadky
+          </h3>
+          <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mb-6">
+            Vyplňte kontaktné údaje. Ak ste použili kalkulačku vyššie, vaše parametre sú už automaticky predvyplnené.
+          </p>
+
+          <form id="contactForm" class="space-y-4">
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label for="formName" class="block text-xs font-bold uppercase text-slate-600 dark:text-slate-300 mb-1">Vaše Meno a Priezvisko *</label>
+                <input type="text" id="formName" required placeholder="napr. Peter Novák" class="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slatebg border border-slate-300 dark:border-forest-800 text-slate-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500">
+              </div>
+              <div>
+                <label for="formPhone" class="block text-xs font-bold uppercase text-slate-600 dark:text-slate-300 mb-1">Telefónne číslo *</label>
+                <input type="tel" id="formPhone" required placeholder="napr. 0915 766 495" class="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slatebg border border-slate-300 dark:border-forest-800 text-slate-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500">
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label for="formEmail" class="block text-xs font-bold uppercase text-slate-600 dark:text-slate-300 mb-1">Váš E-mail *</label>
+                <input type="email" id="formEmail" required placeholder="vas.email@gmail.com" class="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slatebg border border-slate-300 dark:border-forest-800 text-slate-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500">
+              </div>
+              <div>
+                <label for="formLocation" class="block text-xs font-bold uppercase text-slate-600 dark:text-slate-300 mb-1">Mesto / Obec pozemku *</label>
+                <input type="text" id="formLocation" required placeholder="napr. Senec, Pezinok, Bernolákovo..." class="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slatebg border border-slate-300 dark:border-forest-800 text-slate-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500">
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label for="formArea" class="block text-xs font-bold uppercase text-slate-600 dark:text-slate-300 mb-1">Približná výmera záhrady (m²)</label>
+                <input type="number" id="formArea" placeholder="napr. 250" class="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slatebg border border-slate-300 dark:border-forest-800 text-slate-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500">
+              </div>
+              <div>
+                <label for="formService" class="block text-xs font-bold uppercase text-slate-600 dark:text-slate-300 mb-1">Primárna služba</label>
+                <select id="formService" class="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slatebg border border-slate-300 dark:border-forest-800 text-slate-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500">
+                  <option value="all">Kompletná záhrada na kľúč (3D + Závlaha + Trávnik)</option>
+                  <option value="project">Len 3D Návrh a projekt</option>
+                  <option value="irrigation">Len automatická závlaha TORO®</option>
+                  <option value="lawn">Len kobercový trávnik a úprava pôdy</option>
+                  <option value="maintenance">Pravidelná alebo jednorazová údržba</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label for="formMessage" class="block text-xs font-bold uppercase text-slate-600 dark:text-slate-300 mb-1">Poznámka / Popis predstavy</label>
+              <textarea id="formMessage" rows="4" placeholder="Popíšte stav pozemku, termín realizácie alebo špeciálne požiadavky..." class="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slatebg border border-slate-300 dark:border-forest-800 text-slate-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500"></textarea>
+            </div>
+
+            <div class="flex items-start gap-2 pt-1">
+              <input type="checkbox" id="formGdpr" required class="w-4 h-4 rounded mt-1 accent-emerald-500">
+              <label for="formGdpr" class="text-xs text-slate-500 dark:text-slate-400">
+                Súhlasím so spracovaním osobných údajov za účelom vypracovania cenovej ponuky a dohodnutia obhliadky.
+              </label>
+            </div>
+
+            <div class="pt-2">
+              <button type="submit" class="w-full py-4 px-6 rounded-2xl bg-gradient-to-r from-forest-800 to-emerald-600 hover:from-forest-900 hover:to-emerald-700 text-white font-extrabold text-base shadow-lg hover:shadow-xl transition-all duration-200 flex items-center justify-center gap-2">
+                <i class="fa-solid fa-paper-plane"></i>
+                <span>Odoslať nezáväzný dopyt</span>
+              </button>
+            </div>
+
+          </form>
+
+          <!-- Form Success Banner (Hidden by default) -->
+          <div id="formSuccessMessage" class="hidden mt-6 p-5 rounded-2xl bg-emerald-500/10 border border-emerald-500/40 text-emerald-800 dark:text-emerald-300 text-sm space-y-2">
+            <div class="flex items-center gap-2 font-bold text-base">
+              <i class="fa-solid fa-circle-check text-emerald-500 text-lg"></i>
+              <span>Ďakujeme! Váš dopyt bol úspešne odoslaný.</span>
+            </div>
+            <p>
+              Andrzej Kosieradzki vás bude kontaktovať telefonicky alebo emailom v priebehu nasledujúcich 24 hodín s návrhom termínu obhliadky.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-forest-950 text-slate-400 pt-16 pb-24 md:pb-12 border-t border-forest-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+        
+        <!-- Brand Info -->
+        <div class="space-y-4">
+          <div class="flex items-center gap-3">
+            <img src="images/logo1.jpg" alt="About Garden Logo" class="w-10 h-10 rounded-xl object-cover ring-2 ring-emerald-500/30">
+            <span class="font-display font-extrabold text-2xl text-white tracking-tight">ABOUT<span class="text-emerald-400">GARDEN</span></span>
+          </div>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Projektovanie, realizácia a celoročná starostlivosť o záhrady v Senci, Bratislave a okolí. Živá zeleň a prémiové závlahy TORO®.
+          </p>
+          <div class="text-xs space-y-1 text-slate-400">
+            <p><strong>Prevádzkovateľ:</strong> Andrzej Kosieradzki</p>
+            <p><strong>IČO:</strong> 52520137</p>
+            <p><strong>Sídlo:</strong> Turnianska 4847/114, 903 01 Senec</p>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="space-y-3">
+          <h4 class="font-display font-bold text-sm text-white uppercase tracking-wider">Rýchla navigácia</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#o-nas" class="hover:text-emerald-400 transition-colors">O mne & Prístup</a></li>
+            <li><a href="#sluzby" class="hover:text-emerald-400 transition-colors">Služby a realizácie</a></li>
+            <li><a href="#kalkulacka" class="hover:text-emerald-400 transition-colors">Kalkulačka nákladov</a></li>
+            <li><a href="#zavlaha" class="hover:text-emerald-400 transition-colors">Automatické závlahy TORO®</a></li>
+            <li><a href="#galeria" class="hover:text-emerald-400 transition-colors">Fotogaléria projektov</a></li>
+            <li><a href="#kalendar" class="hover:text-emerald-400 transition-colors">Kalendár údržby</a></li>
+            <li><a href="#cennik" class="hover:text-emerald-400 transition-colors">Orientačný cenník</a></li>
+          </ul>
+        </div>
+
+        <!-- Operating Hours & Coverage -->
+        <div class="space-y-3">
+          <h4 class="font-display font-bold text-sm text-white uppercase tracking-wider">Oblasť pôsobenia</h4>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Realizácie poskytujeme najmä v okresoch:
+          </p>
+          <div class="flex flex-wrap gap-1.5 text-[11px]">
+            <span class="px-2 py-1 rounded bg-forest-900 text-slate-300">Senec</span>
+            <span class="px-2 py-1 rounded bg-forest-900 text-slate-300">Bratislava</span>
+            <span class="px-2 py-1 rounded bg-forest-900 text-slate-300">Pezinok</span>
+            <span class="px-2 py-1 rounded bg-forest-900 text-slate-300">Bernolákovo</span>
+            <span class="px-2 py-1 rounded bg-forest-900 text-slate-300">Ivanka pri Dunaji</span>
+            <span class="px-2 py-1 rounded bg-forest-900 text-slate-300">Dunajská Lužná</span>
+            <span class="px-2 py-1 rounded bg-forest-900 text-slate-300">Trnava a okolie</span>
+          </div>
+          <div class="pt-2 text-xs text-slate-400">
+            <p><strong>Pracovné dni:</strong> 07:00 – 18:00</p>
+            <p><strong>Sobota:</strong> 08:00 – 14:00 (obhliadky)</p>
+          </div>
+        </div>
+
+        <!-- Contact & Facebook -->
+        <div class="space-y-3">
+          <h4 class="font-display font-bold text-sm text-white uppercase tracking-wider">Priamy kontakt</h4>
+          <p class="text-xs text-slate-400">
+            Máte otázku alebo chcete nezáväzne konzultovať svoj pozemok?
+          </p>
+          <div class="space-y-2 pt-1 text-xs">
+            <a href="tel:+421915766495" class="flex items-center gap-2 text-white hover:text-emerald-400 transition-colors font-bold text-sm">
+              <i class="fa-solid fa-phone text-emerald-400"></i>
+              <span>+421 915 766 495</span>
+            </a>
+            <a href="mailto:infoaboutgarden@gmail.com" class="flex items-center gap-2 hover:text-emerald-400 transition-colors">
+              <i class="fa-solid fa-envelope text-emerald-400"></i>
+              <span>infoaboutgarden@gmail.com</span>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=100063065930118" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-[#1877F2] hover:text-blue-400 transition-colors font-semibold">
+              <i class="fa-brands fa-facebook"></i>
+              <span>Facebook About Garden</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Copyright -->
+      <div class="pt-8 border-t border-forest-900/80 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 gap-4">
+        <p>© 2019 – 2026 About Garden • Andrzej Kosieradzki. Všetky práva vyhradené.</p>
+        <p class="text-slate-400">
+          Redizajn & modernizácia webovej prezentácie aboutgarden.sk
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- FLOATING QUICK MOBILE BAR (PHONE / WHATSAPP / DOPYT) -->
+  <div class="fixed bottom-0 left-0 right-0 z-50 bg-white/95 dark:bg-carddark/95 backdrop-blur-md border-t border-slate-200 dark:border-forest-900 px-4 py-2.5 flex items-center justify-around md:hidden shadow-2xl">
+    <a href="tel:+421915766495" class="flex flex-col items-center gap-1 text-slate-700 dark:text-slate-200 hover:text-emerald-600">
+      <i class="fa-solid fa-phone text-emerald-600 text-lg"></i>
+      <span class="text-[10px] font-bold">Zavolať</span>
+    </a>
+    <a href="https://wa.me/421915766495?text=Dobr%C3%BD%20de%C5%88%2C%20m%C3%A1m%20z%C3%A1ujem%20o%20n%C3%A1vrh%20alebo%20realiz%C3%A1ciu%20z%C3%A1hrady." target="_blank" rel="noopener noreferrer" class="flex flex-col items-center gap-1 text-slate-700 dark:text-slate-200 hover:text-emerald-600">
+      <i class="fa-brands fa-whatsapp text-emerald-500 text-xl"></i>
+      <span class="text-[10px] font-bold">WhatsApp</span>
+    </a>
+    <a href="#kalkulacka" class="flex items-center gap-1.5 px-4 py-2 rounded-xl bg-gradient-to-r from-forest-800 to-emerald-600 text-white font-bold text-xs shadow-md">
+      <i class="fa-solid fa-calculator"></i>
+      <span>Kalkulačka</span>
+    </a>
+    <a href="#kontakt" class="flex flex-col items-center gap-1 text-slate-700 dark:text-slate-200 hover:text-emerald-600">
+      <i class="fa-solid fa-envelope text-slate-500 text-lg"></i>
+      <span class="text-[10px] font-bold">Dopyt</span>
+    </a>
+  </div>
+
+  <!-- LIGHTBOX MODAL (PHOTO PREVIEW) -->
+  <div id="lightboxModal" class="fixed inset-0 z-50 bg-black/95 hidden flex flex-col items-center justify-center p-4">
+    <button onclick="closeLightbox()" class="absolute top-5 right-5 text-white/80 hover:text-white text-3xl p-2 z-10 focus:outline-none" aria-label="Zavrieť">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+    <div class="relative max-w-5xl max-h-[85vh] flex flex-col items-center">
+      <img id="lightboxImg" src="" alt="Náhľad realizácie About Garden" class="max-h-[75vh] w-auto max-w-full rounded-2xl shadow-2xl object-contain border border-white/10">
+      <p id="lightboxCaption" class="text-white text-sm mt-4 text-center max-w-2xl font-medium"></p>
+    </div>
+  </div>
+
+  <!-- SCRIPT LOGIC: INTERACTIVITY, CALCULATOR, SLIDER, FILTERS, FAQ, THEME -->
+  <script>
+    // 1. THEME SWITCHER (LIGHT / DARK)
+    const themeToggleBtn = document.getElementById('themeToggleBtn');
+    function initTheme() {
+      if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    }
+    initTheme();
+
+    themeToggleBtn.addEventListener('click', () => {
+      if (document.documentElement.classList.contains('dark')) {
+        document.documentElement.classList.remove('dark');
+        localStorage.theme = 'light';
+      } else {
+        document.documentElement.classList.add('dark');
+        localStorage.theme = 'dark';
+      }
+    });
+
+    // 2. MOBILE MENU TOGGLE
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+    document.querySelectorAll('.mobile-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+
+    // 3. BEFORE / AFTER COMPARISON SLIDER
+    const comparisonContainer = document.getElementById('beforeAfterBox');
+    const comparisonBefore = document.getElementById('comparisonBefore');
+    const sliderHandle = document.getElementById('sliderHandle');
+    let isDragging = false;
+
+    function setSliderPosition(x) {
+      const rect = comparisonContainer.getBoundingClientRect();
+      let offsetX = x - rect.left;
+      if (offsetX < 0) offsetX = 0;
+      if (offsetX > rect.width) offsetX = rect.width;
+      const percentage = (offsetX / rect.width) * 100;
+      comparisonBefore.style.width = percentage + '%';
+      sliderHandle.style.left = percentage + '%';
+    }
+
+    comparisonContainer.addEventListener('mousedown', (e) => {
+      isDragging = true;
+      setSliderPosition(e.clientX);
+    });
+    window.addEventListener('mousemove', (e) => {
+      if (!isDragging) return;
+      setSliderPosition(e.clientX);
+    });
+    window.addEventListener('mouseup', () => { isDragging = false; });
+
+    // Touch events for mobile
+    comparisonContainer.addEventListener('touchstart', (e) => {
+      isDragging = true;
+      setSliderPosition(e.touches[0].clientX);
+    });
+    window.addEventListener('touchmove', (e) => {
+      if (!isDragging) return;
+      setSliderPosition(e.touches[0].clientX);
+    });
+    window.addEventListener('touchend', () => { isDragging = false; });
+
+    // 4. INTERACTIVE GARDEN BUDGET CALCULATOR
+    const areaSlider = document.getElementById('areaSlider');
+    const areaValueDisplay = document.getElementById('areaValueDisplay');
+    const calcProject = document.getElementById('calcProject');
+    const calcTerrain = document.getElementById('calcTerrain');
+    const lawnTypeRadios = document.getElementsByName('lawnType');
+    const calcIrrigation = document.getElementById('calcIrrigation');
+    const calcPlants = document.getElementById('calcPlants');
+    const calcMaintenance = document.getElementById('calcMaintenance');
+    
+    const estimatedTotalDisplay = document.getElementById('estimatedTotalDisplay');
+    const calcBreakdownList = document.getElementById('calcBreakdownList');
+    const transferToFormBtn = document.getElementById('transferToFormBtn');
+
+    function calculateEstimate() {
+      const area = parseInt(areaSlider.value, 10);
+      areaValueDisplay.textContent = `${area} m²`;
+
+      let minTotal = 0;
+      let maxTotal = 0;
+      const breakdown = [];
+
+      // 1. 3D Projekt
+      if (calcProject.checked) {
+        breakdown.push({ name: '3D Projekt & osadzovací plán (pri realizácii 0 €)', min: 0, max: 0 });
+      }
+
+      // 2. Terénne úpravy
+      if (calcTerrain.checked) {
+        const terrainMin = Math.round(area * 3.2);
+        const terrainMax = Math.round(area * 4.0);
+        minTotal += terrainMin;
+        maxTotal += terrainMax;
+        breakdown.push({ name: `Hrubé terénne úpravy & nivelácia (${area} m²)`, min: terrainMin, max: terrainMax });
+      }
+
+      // 3. Trávnik
+      let isCarpet = true;
+      for (const r of lawnTypeRadios) {
+        if (r.checked && r.value === 'seeded') isCarpet = false;
+      }
+      if (isCarpet) {
+        const lawnMin = Math.round(area * 8.5);
+        const lawnMax = Math.round(area * 9.8);
+        minTotal += lawnMin;
+        maxTotal += lawnMax;
+        breakdown.push({ name: `Kobercový trávnik s položením (${area} m²)`, min: lawnMin, max: lawnMax });
+      } else {
+        const lawnMin = Math.round(area * 3.0);
+        const lawnMax = Math.round(area * 4.2);
+        minTotal += lawnMin;
+        maxTotal += lawnMax;
+        breakdown.push({ name: `Výsevný trávnik s osivom (${area} m²)`, min: lawnMin, max: lawnMax });
+      }
+
+      // 4. Automatická závlaha TORO
+      if (calcIrrigation.checked) {
+        // Base controller & valves + per m2 trenching/nozzles
+        const irrigMin = Math.round(950 + area * 4.5);
+        const irrigMax = Math.round(1200 + area * 5.8);
+        minTotal += irrigMin;
+        maxTotal += irrigMax;
+        breakdown.push({ name: `Automatická závlaha TORO® (komplet)`, min: irrigMin, max: irrigMax });
+      }
+
+      // 5. Výsadba rastlín & mulčovanie
+      if (calcPlants.checked) {
+        const plantsMin = 450;
+        const plantsMax = 850;
+        minTotal += plantsMin;
+        maxTotal += plantsMax;
+        breakdown.push({ name: 'Výsadba okrasných drevín & kôrový mulč', min: plantsMin, max: plantsMax });
+      }
+
+      // 6. Údržba
+      if (calcMaintenance.checked) {
+        const maintMin = 180;
+        const maintMax = 350;
+        minTotal += maintMin;
+        maxTotal += maintMax;
+        breakdown.push({ name: 'Sezónna starostlivosť (2x vertikutácia + rez)', min: maintMin, max: maintMax });
+      }
+
+      // Display formatted total
+      estimatedTotalDisplay.textContent = `${minTotal.toLocaleString('sk-SK')} € – ${maxTotal.toLocaleString('sk-SK')} €`;
+
+      // Render breakdown list
+      calcBreakdownList.innerHTML = breakdown.map(item => `
+        <div class="flex justify-between items-center py-1 border-b border-forest-900/40">
+          <span>${item.name}</span>
+          <span class="font-semibold text-slate-200">${item.min > 0 ? `${item.min.toLocaleString('sk-SK')} – ${item.max.toLocaleString('sk-SK')} €` : 'ZDARMA (0 €)'}</span>
+        </div>
+      `).join('');
+    }
+
+    [areaSlider, calcProject, calcTerrain, calcIrrigation, calcPlants, calcMaintenance].forEach(el => {
+      el.addEventListener('input', calculateEstimate);
+      el.addEventListener('change', calculateEstimate);
+    });
+    lawnTypeRadios.forEach(r => r.addEventListener('change', calculateEstimate));
+    calculateEstimate();
+
+    // Transfer calculator data to inquiry form
+    transferToFormBtn.addEventListener('click', () => {
+      const area = areaSlider.value;
+      const formArea = document.getElementById('formArea');
+      const formMessage = document.getElementById('formMessage');
+      const formService = document.getElementById('formService');
+
+      if (formArea) formArea.value = area;
+      if (formService) formService.value = 'all';
+
+      const selectedItems = [];
+      if (calcProject.checked) selectedItems.push('3D Projekt');
+      if (calcTerrain.checked) selectedItems.push('Terénne úpravy');
+      for (const r of lawnTypeRadios) {
+        if (r.checked) selectedItems.push(r.value === 'carpet' ? 'Kobercový trávnik' : 'Výsev trávnika');
+      }
+      if (calcIrrigation.checked) selectedItems.push('Závlaha TORO®');
+      if (calcPlants.checked) selectedItems.push('Výsadba');
+      if (calcMaintenance.checked) selectedItems.push('Sezónna údržba');
+
+      if (formMessage) {
+        formMessage.value = `Dobrý deň, zaujala ma vaša ponuka. Mám záujem o realizáciu na pozemku s výmerou cca ${area} m².\nVybrané položky: ${selectedItems.join(', ')}.\nPredbežný odhad: ${estimatedTotalDisplay.textContent}.\nProsím o kontaktovanie a dohodnutie bezplatnej obhliadky.`;
+      }
+
+      document.getElementById('kontakt').scrollIntoView({ behavior: 'smooth' });
+      document.getElementById('formName').focus();
+    });
+
+    // 5. GALLERY CATEGORY FILTER
+    const filterButtons = document.querySelectorAll('.gallery-filter-btn');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterButtons.forEach(b => {
+          b.classList.remove('bg-forest-800', 'text-white');
+          b.classList.add('bg-white', 'dark:bg-carddark', 'text-slate-700', 'dark:text-slate-300');
+        });
+        btn.classList.add('bg-forest-800', 'text-white');
+        btn.classList.remove('bg-white', 'dark:bg-carddark', 'text-slate-700', 'dark:text-slate-300');
+
+        const filter = btn.getAttribute('data-filter');
+        galleryItems.forEach(item => {
+          if (filter === 'all' || item.getAttribute('data-category') === filter) {
+            item.style.display = 'block';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // 6. LIGHTBOX MODAL
+    const lightboxModal = document.getElementById('lightboxModal');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const lightboxCaption = document.getElementById('lightboxCaption');
+
+    function openLightbox(src, caption) {
+      lightboxImg.src = src;
+      lightboxCaption.textContent = caption || '';
+      lightboxModal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      lightboxModal.classList.add('hidden');
+      document.body.style.overflow = '';
+    }
+
+    lightboxModal.addEventListener('click', (e) => {
+      if (e.target === lightboxModal) closeLightbox();
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !lightboxModal.classList.contains('hidden')) {
+        closeLightbox();
+      }
+    });
+
+    // 7. FAQ ACCORDION
+    const faqButtons = document.querySelectorAll('.faq-btn');
+    faqButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const content = btn.nextElementSibling;
+        const icon = btn.querySelector('i');
+        const isHidden = content.classList.contains('hidden');
+
+        document.querySelectorAll('.faq-content').forEach(c => c.classList.add('hidden'));
+        document.querySelectorAll('.faq-btn i').forEach(i => i.classList.remove('rotate-180'));
+
+        if (isHidden) {
+          content.classList.remove('hidden');
+          icon.classList.add('rotate-180');
+        }
+      });
+    });
+
+    // 8. CONTACT FORM SUBMISSION FEEDBACK
+    const contactForm = document.getElementById('contactForm');
+    const formSuccessMessage = document.getElementById('formSuccessMessage');
+
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const submitBtn = contactForm.querySelector('button[type="submit"]');
+      const originalText = submitBtn.innerHTML;
+
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i><span>Odosielam...</span>';
+
+      setTimeout(() => {
+        submitBtn.innerHTML = '<i class="fa-solid fa-check"></i><span>Úspešne odoslané</span>';
+        formSuccessMessage.classList.remove('hidden');
+        contactForm.reset();
+        submitBtn.disabled = false;
+        setTimeout(() => {
+          submitBtn.innerHTML = originalText;
+        }, 3000);
+      }, 900);
+    });
+  </script>
+
+</body>
+</html>
