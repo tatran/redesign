@@ -1,0 +1,4077 @@
+<!DOCTYPE html>
+<html lang="sk" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eurotrezor | Certifikované Trezory Wertheim | Industry NWT Šurany</title>
+  <meta name="description" content="Oficiálny predajca rakúskych trezorov Wertheim na Slovensku. Certifikované trezory I. až III. bezpečnostnej triedy (VdS, ECB•S, EN 1143-1), ohňovzdorné a stenové trezory. Maximálna diskrétnosť a 53 rokov strojárskej tradície.">
+  <meta name="keywords" content="trezory wertheim, certifikované trezory, ohňovzdorné trezory, stenové trezory, trezory na zbrane, vds trezory, bezpecnostna trieda 1 2 3, eurotrezor, industry nwt, surany">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            vault: {
+              950: '#070a12',
+              900: '#0b0f19',
+              850: '#101726',
+              800: '#162035',
+              700: '#1e2d4a',
+              600: '#2c3e63',
+              500: '#3d5482',
+            },
+            gold: {
+              300: '#fde68a',
+              400: '#fbbf24',
+              500: '#f59e0b',
+              600: '#d97706',
+              700: '#b45309',
+            },
+            steel: {
+              100: '#f1f5f9',
+              200: '#e2e8f0',
+              300: '#cbd5e1',
+              400: '#94a3b8',
+              500: '#64748b',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Plus Jakarta Sans', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+            tech: ['Space Grotesk', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0b0f19;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #1e2d4a;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #d97706;
+    }
+
+    .bg-vault-pattern {
+      background-color: #0b0f19;
+      background-image: 
+        radial-gradient(at 0% 0%, rgba(217, 119, 6, 0.1) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(30, 45, 74, 0.45) 0px, transparent 50%),
+        radial-gradient(at 50% 50%, rgba(15, 23, 42, 0.85) 0px, transparent 100%);
+    }
+
+    .border-glow:hover {
+      box-shadow: 0 0 30px -5px rgba(245, 158, 11, 0.28);
+    }
+
+    .glass-card {
+      background: rgba(16, 23, 38, 0.8);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .glass-card-gold {
+      background: rgba(26, 21, 14, 0.85);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(245, 158, 11, 0.3);
+    }
+
+    @keyframes dial-turn {
+      0% { transform: rotate(0deg); }
+      30% { transform: rotate(120deg); }
+      60% { transform: rotate(45deg); }
+      100% { transform: rotate(0deg); }
+    }
+    .animate-dial {
+      animation: dial-turn 10s ease-in-out infinite;
+    }
+
+    @media print {
+      body {
+        background: white !important;
+        color: black !important;
+      }
+      header, footer, #sprievodca, #zamky, #doprava-montaz, #o-firme, #faq, #kontakt, .series-btn, #seriesFilters, #sortSelect, #gradeSelect {
+        display: none !important;
+      }
+      #inquiryModal {
+        position: static !important;
+        background: white !important;
+        color: black !important;
+        padding: 0 !important;
+        display: block !important;
+      }
+      .glass-card {
+        background: white !important;
+        border: 1px solid #ccc !important;
+        color: black !important;
+      }
+      .text-white, .text-slate-200, .text-slate-300 {
+        color: black !important;
+      }
+    }
+  </style>
+</head>
+<body class="bg-vault-950 text-slate-200 font-sans antialiased selection:bg-gold-500 selection:text-vault-950">
+
+  <!-- ==================== TOP ANNOUNCEMENT & TRUST BAR ==================== -->
+  <div class="bg-vault-900 border-b border-white/5 py-2.5 px-4 text-xs tracking-wide">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-2">
+      <div class="flex items-center gap-3">
+        <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-gold-500/10 text-gold-400 font-medium border border-gold-500/20">
+          <svg class="w-3.5 h-3.5 text-gold-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 1.944A11.954 11.954 0 012.166 5C2.056 5.649 2 6.319 2 7c0 5.225 3.34 9.67 8 11.317C14.66 16.67 18 12.225 18 7c0-.682-.057-1.35-.166-2.001A11.954 11.954 0 0110 1.944zM11 14a1 1 0 11-2 0 1 1 0 012 0zm0-7a1 1 0 10-2 0v3a1 1 0 102 0V7z" clip-rule="evenodd"></path></svg>
+          Oficiálny partner Wertheim Rakúsko od roku 1998
+        </span>
+        <span class="text-slate-400 hidden sm:inline">|</span>
+        <span class="text-slate-400 hidden sm:inline">Certifikácia podľa európskej normy <strong>EN 1143-1</strong> (VdS Nemecko & ECB•S)</span>
+      </div>
+      <div class="flex items-center gap-5 text-slate-300">
+        <a href="tel:+421908750500" class="hover:text-gold-400 transition-colors flex items-center gap-1.5 font-mono">
+          <svg class="w-3.5 h-3.5 text-gold-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+          +421 908 750 500
+        </a>
+        <a href="mailto:office@eurotrezor.com" class="hover:text-gold-400 transition-colors flex items-center gap-1.5">
+          <svg class="w-3.5 h-3.5 text-gold-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+          office@eurotrezor.com
+        </a>
+        <span class="text-slate-500 hidden md:inline">Šurany, SR</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== MAIN NAVIGATION ==================== -->
+  <header class="sticky top-0 z-40 bg-vault-950/90 backdrop-blur-md border-b border-white/10 transition-all duration-200" id="mainHeader">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Logo & Brand -->
+        <a href="#top" class="flex items-center gap-3.5 group">
+          <div class="relative w-12 h-12 rounded-xl bg-gradient-to-br from-gold-500/20 to-vault-800 border border-gold-500/30 flex items-center justify-center p-2 group-hover:border-gold-500 transition-all shadow-lg shadow-gold-500/5">
+            <svg class="w-7 h-7 text-gold-500 animate-dial" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="9"></circle>
+              <circle cx="12" cy="12" r="4"></circle>
+              <line x1="12" y1="3" x2="12" y2="6"></line>
+              <line x1="12" y1="18" x2="12" y2="21"></line>
+              <line x1="3" y1="12" x2="6" y2="12"></line>
+              <line x1="18" y1="12" x2="21" y2="12"></line>
+            </svg>
+          </div>
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="font-display font-extrabold text-2xl tracking-tight text-white group-hover:text-gold-400 transition-colors">EUROTREZOR</span>
+              <span class="text-[10px] font-mono tracking-widest px-1.5 py-0.5 rounded bg-slate-800 text-slate-300 uppercase">Wertheim</span>
+            </div>
+            <div class="text-[11px] text-slate-400 tracking-wider">INDUSTRY NWT | RODINNÁ TRADÍCIA OD 1998</div>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden lg:flex items-center gap-7 text-sm font-medium text-slate-300">
+          <a href="#katalog" class="hover:text-gold-400 transition-colors">Katalóg (54 modelov)</a>
+          <a href="#triedy" class="hover:text-gold-400 transition-colors">Bezpečnostné triedy</a>
+          <a href="#sprievodca" class="hover:text-gold-400 transition-colors flex items-center gap-1.5 text-gold-400 font-semibold">
+            <span class="w-2 h-2 rounded-full bg-gold-400 animate-pulse"></span>
+            Sprievodca výberom
+          </a>
+          <a href="#zamky" class="hover:text-gold-400 transition-colors">Zámky</a>
+          <a href="#doprava-montaz" class="hover:text-gold-400 transition-colors">Doprava & Montáž</a>
+          <a href="#o-firme" class="hover:text-gold-400 transition-colors">O firme</a>
+          <a href="#kontakt" class="hover:text-gold-400 transition-colors">Kontakt</a>
+        </nav>
+
+        <!-- Action Buttons -->
+        <div class="flex items-center gap-3">
+          <!-- Compare Trigger -->
+          <button onclick="toggleCompareDrawer()" id="compareBtn" class="relative p-2.5 rounded-xl bg-vault-850 hover:bg-vault-800 text-slate-300 hover:text-white border border-white/5 transition-all text-xs font-medium flex items-center gap-1.5" title="Porovnanie modelov">
+            <svg class="w-4 h-4 text-gold-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+            <span class="hidden sm:inline">Porovnať</span>
+            <span id="compareCount" class="w-5 h-5 rounded-full bg-slate-700 text-slate-200 text-[10px] flex items-center justify-center font-bold">0</span>
+          </button>
+
+          <!-- Inquiry Cart Trigger -->
+          <button onclick="toggleInquiryModal()" id="cartBtn" class="relative px-4 py-2.5 rounded-xl bg-gradient-to-r from-gold-600 to-gold-500 hover:from-gold-500 hover:to-gold-400 text-vault-950 font-display font-bold text-xs uppercase tracking-wider flex items-center gap-2 shadow-lg shadow-gold-500/20 hover:shadow-gold-500/40 transition-all transform hover:-translate-y-0.5">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
+            <span>Dopytový košík</span>
+            <span id="cartCountBadge" class="w-5 h-5 rounded-full bg-vault-950 text-gold-400 text-[11px] font-mono flex items-center justify-center font-extrabold">0</span>
+          </button>
+
+          <!-- Mobile Menu Button -->
+          <button onclick="toggleMobileMenu()" class="lg:hidden p-2.5 rounded-xl bg-vault-850 text-slate-300 hover:text-white border border-white/5">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobileMenu" class="hidden lg:hidden bg-vault-900 border-b border-white/10 px-6 py-6 space-y-4">
+      <a href="#katalog" onclick="toggleMobileMenu()" class="block text-base font-medium text-slate-200 hover:text-gold-400">Katalóg trezorov (54 modelov)</a>
+      <a href="#triedy" onclick="toggleMobileMenu()" class="block text-base font-medium text-slate-200 hover:text-gold-400">Bezpečnostné triedy & Poistné limity</a>
+      <a href="#sprievodca" onclick="toggleMobileMenu()" class="block text-base font-medium text-gold-400">Sprievodca výberom na mieru</a>
+      <a href="#zamky" onclick="toggleMobileMenu()" class="block text-base font-medium text-slate-200 hover:text-gold-400">Zámkové systémy (Kľúč vs Kód)</a>
+      <a href="#doprava-montaz" onclick="toggleMobileMenu()" class="block text-base font-medium text-slate-200 hover:text-gold-400">Kalkulačka dopravy & montáže</a>
+      <a href="#o-firme" onclick="toggleMobileMenu()" class="block text-base font-medium text-slate-200 hover:text-gold-400">O rodinnej firme Industry NWT</a>
+      <a href="#kontakt" onclick="toggleMobileMenu()" class="block text-base font-medium text-slate-200 hover:text-gold-400">Kontaktné údaje & Showroom</a>
+      <div class="pt-4 border-t border-white/10 flex flex-col gap-3">
+        <a href="tel:+421908750500" class="text-center py-2.5 rounded-lg bg-vault-800 text-gold-400 font-mono font-medium">+421 908 750 500</a>
+        <a href="mailto:office@eurotrezor.com" class="text-center text-xs text-slate-400">office@eurotrezor.com</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== HERO SECTION ==================== -->
+  <section class="relative pt-12 pb-24 overflow-hidden bg-vault-pattern" id="top">
+    <!-- Ambient Glows -->
+    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] bg-gradient-to-tr from-gold-600/10 to-blue-600/10 blur-[140px] pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <!-- Brand Co-branding banner -->
+      <div class="mb-8 flex flex-wrap items-center justify-between gap-4 py-3 px-5 rounded-2xl bg-vault-850/60 border border-white/5 backdrop-blur-sm">
+        <div class="flex items-center gap-4">
+          <img src="images/logo.png" alt="Wertheim Logo" class="h-8 w-auto filter brightness-90">
+          <div class="h-6 w-px bg-white/10 hidden sm:block"></div>
+          <span class="text-xs text-slate-300 hidden sm:inline">Oficiálny slovenský predajca trezorov <strong>Wertheim</strong></span>
+        </div>
+        <div class="flex items-center gap-3">
+          <img src="images/wertheim-slogan.png" alt="Wertheim Slogan" class="h-5 w-auto opacity-70">
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left Hero Content -->
+        <div class="lg:col-span-7 space-y-7">
+          
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-800/80 border border-slate-700/80 text-xs font-medium text-slate-300">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            <span>Výhradné zastúpenie rakúskej trezorovej techniky Wertheim</span>
+          </div>
+
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-display font-extrabold tracking-tight text-white leading-[1.12]">
+            Nekompromisná ochrana <br>
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-gold-400 via-amber-300 to-gold-500">
+              toho najcennejšieho.
+            </span>
+          </h1>
+
+          <p class="text-lg text-slate-300 leading-relaxed max-w-2xl">
+            Trezory svetového lídra <strong>Wertheim</strong> s certifikáciou najprestížnejšej nemeckej skúšobne <strong>VdS</strong> a <strong>ECB•S</strong>. Využite výhodu malej rodinnej firmy Industry NWT — <strong>maximálnu diskrétnosť</strong>, 53 rokov strojárskej precíznosti a profesionálnu montáž priamo u Vás.
+          </p>
+
+          <!-- Hero CTAs -->
+          <div class="flex flex-wrap items-center gap-4 pt-2">
+            <a href="#sprievodca" class="px-7 py-4 rounded-xl bg-gradient-to-r from-gold-500 to-amber-600 hover:from-gold-400 hover:to-amber-500 text-vault-950 font-display font-bold text-sm uppercase tracking-wider shadow-xl shadow-gold-500/25 hover:shadow-gold-500/40 transition-all flex items-center gap-3">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+              <span>Inteligentný poradca výberu</span>
+            </a>
+            <a href="#katalog" class="px-7 py-4 rounded-xl bg-vault-850 hover:bg-vault-800 border border-slate-700 hover:border-slate-500 text-white font-display font-semibold text-sm transition-all flex items-center gap-2.5">
+              <span>Prezrieť 54 modelov</span>
+              <svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </a>
+          </div>
+
+          <!-- Quick Trust Badges -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-6 border-t border-white/10">
+            <div class="space-y-1">
+              <div class="font-tech font-bold text-2xl text-gold-400">170+</div>
+              <div class="text-xs text-slate-400">Rokov tradície Wertheim (od 1852)</div>
+            </div>
+            <div class="space-y-1">
+              <div class="font-tech font-bold text-2xl text-gold-400">53 r.</div>
+              <div class="text-xs text-slate-400">Strojárskej praxe Industry NWT</div>
+            </div>
+            <div class="space-y-1">
+              <div class="font-tech font-bold text-2xl text-gold-400">VdS</div>
+              <div class="text-xs text-slate-400">Nemecká skúšobňa & ECB•S</div>
+            </div>
+            <div class="space-y-1">
+              <div class="font-tech font-bold text-2xl text-emerald-400">100%</div>
+              <div class="text-xs text-slate-400">Diskrétne dodanie a kotvenie</div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right Hero Interactive Showcase -->
+        <div class="lg:col-span-5">
+          <div class="relative glass-card rounded-2xl p-6 border-glow shadow-2xl">
+            <!-- Badge -->
+            <div class="absolute -top-3.5 right-6 px-3.5 py-1 rounded-full bg-gold-500 text-vault-950 font-bold text-xs uppercase tracking-wider shadow">
+              Bestseller v SR
+            </div>
+
+            <!-- Featured Safe Card -->
+            <div class="space-y-5">
+              <div class="flex items-center justify-between">
+                <div>
+                  <span class="text-xs font-mono text-gold-400 tracking-wider">I. BEZPEČNOSTNÁ TRIEDA + OHEŇ</span>
+                  <h3 class="text-2xl font-display font-extrabold text-white">Wertheim AP10</h3>
+                </div>
+                <div class="text-right">
+                  <span class="text-xs text-slate-400">Cena s DPH</span>
+                  <div class="text-2xl font-tech font-bold text-white">1 708 €</div>
+                </div>
+              </div>
+
+              <!-- Image with interactive 3D effect -->
+              <div class="relative h-64 rounded-xl bg-gradient-to-b from-vault-800 to-vault-900 border border-white/5 flex items-center justify-center p-4 overflow-hidden group">
+                <img src="images/ap10.jpg" alt="Wertheim AP10" class="max-h-full object-contain filter drop-shadow-[0_15px_25px_rgba(0,0,0,0.8)] group-hover:scale-105 transition-transform duration-500">
+                
+                <!-- Floating Spec Badges -->
+                <div class="absolute bottom-3 left-3 flex gap-2">
+                  <span class="px-2 py-1 rounded bg-red-950/80 text-red-300 border border-red-800 text-[10px] font-bold flex items-center gap-1">
+                    <svg class="w-3 h-3 text-red-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.316.492-.633.985-.95 1.477a17.56 17.56 0 01-1.69 2.193c-.42.474-.863.923-1.332 1.344-.658.59-1.39 1.137-2.124 1.706C3.21 10.428 2.5 11.536 2.5 13a7.5 7.5 0 0015 0c0-1.954-1.077-3.69-2.705-4.877-.85-.62-1.782-1.12-2.7-1.62-.258-.14-.52-.28-.7-.45z" clip-rule="evenodd"></path></svg>
+                    LFS 60P (60 min)
+                  </span>
+                  <span class="px-2 py-1 rounded bg-blue-950/80 text-blue-300 border border-blue-800 text-[10px] font-bold">
+                    Váha 180 kg
+                  </span>
+                  <span class="px-2 py-1 rounded bg-slate-800 text-slate-300 text-[10px] font-mono">
+                    Objem 55 l
+                  </span>
+                </div>
+              </div>
+
+              <!-- Quick Specs Matrix -->
+              <div class="grid grid-cols-2 gap-3 text-xs bg-vault-900/80 p-3.5 rounded-xl border border-white/5">
+                <div>
+                  <span class="text-slate-400 block">Vonkajšie rozmery:</span>
+                  <span class="font-mono text-slate-200">474 × 605 × 522 mm</span>
+                </div>
+                <div>
+                  <span class="text-slate-400 block">Poistné krytie:</span>
+                  <span class="font-semibold text-emerald-400">do 40 000 €</span>
+                </div>
+                <div>
+                  <span class="text-slate-400 block">Zámok:</span>
+                  <span class="text-slate-200">Motýlkový obojstranný / kód</span>
+                </div>
+                <div>
+                  <span class="text-slate-400 block">Dodanie:</span>
+                  <span class="font-medium text-amber-400">3 - 4 týždne</span>
+                </div>
+              </div>
+
+              <!-- Quick Action in Hero -->
+              <div class="flex gap-2.5">
+                <button onclick="openProductModal('ap10_2')" class="flex-1 py-2.5 rounded-xl bg-vault-700 hover:bg-vault-600 text-white text-xs font-semibold transition-colors">
+                  Detail a parametre
+                </button>
+                <button onclick="addToCart('ap10_2')" class="px-4 py-2.5 rounded-xl bg-gold-500 hover:bg-gold-400 text-vault-950 text-xs font-bold transition-colors flex items-center gap-1.5">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                  <span>Dopyt</span>
+                </button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== WIZARD / SAFE ADVISOR ==================== -->
+  <section class="py-20 bg-vault-900 border-y border-white/5 relative" id="sprievodca">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto space-y-4 mb-14">
+        <span class="text-xs font-mono uppercase tracking-widest text-gold-400 bg-gold-500/10 border border-gold-500/20 px-3 py-1 rounded-full">
+          Interaktívny Konfigurátor
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-display font-extrabold text-white">
+          Neviete, ktorý trezor je pre Vás ten pravý?
+        </h2>
+        <p class="text-slate-300 text-sm sm:text-base">
+          Odpovedzte na 3 jednoduché otázky a náš algoritmus Vám okamžite odporučí optimálnu bezpečnostnú triedu, model a certifikáciu podľa požiadaviek slovenských poisťovní.
+        </p>
+      </div>
+
+      <div class="max-w-4xl mx-auto glass-card rounded-2xl p-6 sm:p-10 border border-white/10 shadow-2xl">
+        
+        <!-- Step Progress Bar -->
+        <div class="flex items-center justify-between mb-8 pb-6 border-b border-white/10">
+          <div class="flex items-center gap-3">
+            <span class="w-8 h-8 rounded-full bg-gold-500 text-vault-950 font-bold flex items-center justify-center font-mono text-sm" id="wizardStepNumber">1</span>
+            <div>
+              <div class="text-xs text-slate-400 uppercase font-mono">Krok z 3</div>
+              <div class="text-sm font-bold text-white" id="wizardStepTitle">Aký je primárny účel trezoru?</div>
+            </div>
+          </div>
+          <div class="flex gap-1.5" id="wizardDots">
+            <div class="w-8 h-2 rounded-full bg-gold-500"></div>
+            <div class="w-8 h-2 rounded-full bg-slate-800"></div>
+            <div class="w-8 h-2 rounded-full bg-slate-800"></div>
+          </div>
+        </div>
+
+        <!-- Step 1: Purpose -->
+        <div id="step1" class="wizard-step space-y-4">
+          <label class="block text-sm text-slate-300 font-medium mb-3">Vyberte, čo budete v trezore najčastejšie uchovávať:</label>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            
+            <button onclick="selectWizardOption('purpose', 'home')" class="wizard-opt text-left p-4 rounded-xl bg-vault-850 hover:bg-vault-800 border border-white/5 hover:border-gold-500/50 transition-all group">
+              <div class="flex items-start gap-3.5">
+                <div class="w-10 h-10 rounded-lg bg-gold-500/10 text-gold-400 flex items-center justify-center text-xl shrink-0 group-hover:scale-110 transition-transform">🏡</div>
+                <div>
+                  <div class="font-bold text-white text-sm group-hover:text-gold-400 transition-colors">Domácnosť & rodinné cennosti</div>
+                  <div class="text-xs text-slate-400 mt-1">Šperky, pasy, hotovosť, rodinné dokumenty v rodinnom dome či byte.</div>
+                </div>
+              </div>
+            </button>
+
+            <button onclick="selectWizardOption('purpose', 'office')" class="wizard-opt text-left p-4 rounded-xl bg-vault-850 hover:bg-vault-800 border border-white/5 hover:border-gold-500/50 transition-all group">
+              <div class="flex items-start gap-3.5">
+                <div class="w-10 h-10 rounded-lg bg-blue-500/10 text-blue-400 flex items-center justify-center text-xl shrink-0 group-hover:scale-110 transition-transform">🏢</div>
+                <div>
+                  <div class="font-bold text-white text-sm group-hover:text-gold-400 transition-colors">Firma & zmluvy (ohňovzdorné)</div>
+                  <div class="text-xs text-slate-400 mt-1">Dôležité firemné zmluvy, účtovníctvo, dátové nosiče s ochranou pred požiarom.</div>
+                </div>
+              </div>
+            </button>
+
+            <button onclick="selectWizardOption('purpose', 'guns')" class="wizard-opt text-left p-4 rounded-xl bg-vault-850 hover:bg-vault-800 border border-white/5 hover:border-gold-500/50 transition-all group">
+              <div class="flex items-start gap-3.5">
+                <div class="w-10 h-10 rounded-lg bg-red-500/10 text-red-400 flex items-center justify-center text-xl shrink-0 group-hover:scale-110 transition-transform">🎯</div>
+                <div>
+                  <div class="font-bold text-white text-sm group-hover:text-gold-400 transition-colors">Zbrane, strelivo & poľovníctvo</div>
+                  <div class="text-xs text-slate-400 mt-1">Splnenie zákona SR o zbraniach a strelive (I. trieda s vnútornou schránkou).</div>
+                </div>
+              </div>
+            </button>
+
+            <button onclick="selectWizardOption('purpose', 'commercial')" class="wizard-opt text-left p-4 rounded-xl bg-vault-850 hover:bg-vault-800 border border-white/5 hover:border-gold-500/50 transition-all group">
+              <div class="flex items-start gap-3.5">
+                <div class="w-10 h-10 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-xl shrink-0 group-hover:scale-110 transition-transform">💎</div>
+                <div>
+                  <div class="font-bold text-white text-sm group-hover:text-gold-400 transition-colors">Vysoké hodnoty, zlato & klenoty</div>
+                  <div class="text-xs text-slate-400 mt-1">Obchodná hotovosť, investičné zlato, bankové a klenotnícke zabezpečenie.</div>
+                </div>
+              </div>
+            </button>
+
+          </div>
+        </div>
+
+        <!-- Step 2: Value Limit -->
+        <div id="step2" class="wizard-step hidden space-y-4">
+          <label class="block text-sm text-slate-300 font-medium mb-3">Aká je orientačná hodnota majetku pre poistné krytie?</label>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            
+            <button onclick="selectWizardOption('limit', 'low')" class="wizard-opt text-left p-5 rounded-xl bg-vault-850 hover:bg-vault-800 border border-white/5 hover:border-gold-500 transition-all">
+              <span class="text-xs font-mono text-slate-400 block mb-1">Základné krytie</span>
+              <div class="text-xl font-bold text-white font-tech">do 15 000 €</div>
+              <p class="text-xs text-slate-400 mt-2">Dostačujúce pre menšie úspory a bežné dokumenty.</p>
+            </button>
+
+            <button onclick="selectWizardOption('limit', 'mid')" class="wizard-opt text-left p-5 rounded-xl bg-vault-850 hover:bg-vault-800 border border-white/5 hover:border-gold-500 transition-all">
+              <span class="text-xs font-mono text-gold-400 block mb-1">I. Bezpečnostná trieda</span>
+              <div class="text-xl font-bold text-white font-tech">do 40 000 €</div>
+              <p class="text-xs text-slate-400 mt-2">Najpopulárnejšia trieda pre domy a malé/stredné firmy.</p>
+            </button>
+
+            <button onclick="selectWizardOption('limit', 'high')" class="wizard-opt text-left p-5 rounded-xl bg-vault-850 hover:bg-vault-800 border border-white/5 hover:border-gold-500 transition-all">
+              <span class="text-xs font-mono text-emerald-400 block mb-1">II. & III. Bezpečnostná trieda</span>
+              <div class="text-xl font-bold text-white font-tech">do 160 000 €+</div>
+              <p class="text-xs text-slate-400 mt-2">Maximálna pancierová odolnosť pre banky a luxusné tovary.</p>
+            </button>
+
+          </div>
+        </div>
+
+        <!-- Step 3: Installation Type -->
+        <div id="step3" class="wizard-step hidden space-y-4">
+          <label class="block text-sm text-slate-300 font-medium mb-3">Kde má byť trezor umiestnený?</label>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            
+            <button onclick="selectWizardOption('install', 'stand')" class="wizard-opt text-left p-5 rounded-xl bg-vault-850 hover:bg-vault-800 border border-white/5 hover:border-gold-500 transition-all">
+              <span class="text-2xl mb-2 block">🚪</span>
+              <div class="font-bold text-white text-sm">Voľne stojaci v miestnosti</div>
+              <p class="text-xs text-slate-400 mt-1">Ukotvený do podlahy, jednoduchý prístup a masívna ochrana.</p>
+            </button>
+
+            <button onclick="selectWizardOption('install', 'wall')" class="wizard-opt text-left p-5 rounded-xl bg-vault-850 hover:bg-vault-800 border border-white/5 hover:border-gold-500 transition-all">
+              <span class="text-2xl mb-2 block">🧱</span>
+              <div class="font-bold text-white text-sm">Zabudovateľný do steny</div>
+              <p class="text-xs text-slate-400 mt-1">Neviditeľný trezor zabetónovaný do nosného múru (AMS séria).</p>
+            </button>
+
+            <button onclick="selectWizardOption('install', 'furniture')" class="wizard-opt text-left p-5 rounded-xl bg-vault-850 hover:bg-vault-800 border border-white/5 hover:border-gold-500 transition-all">
+              <span class="text-2xl mb-2 block">🗄️</span>
+              <div class="font-bold text-white text-sm">Nábytkový trezor do skrine</div>
+              <p class="text-xs text-slate-400 mt-1">Kompaktnejšie rozmery, kotvenie cez zadnú aj spodnú stenu.</p>
+            </button>
+
+          </div>
+        </div>
+
+        <!-- Result Box -->
+        <div id="wizardResult" class="hidden pt-4 space-y-6">
+          <div class="p-6 rounded-2xl bg-gradient-to-br from-vault-800 to-vault-850 border border-gold-500/40 shadow-xl">
+            <div class="flex items-center gap-2 text-xs font-mono text-gold-400 uppercase tracking-widest mb-2">
+              <svg class="w-4 h-4 text-gold-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+              Vaša odporúčaná konfigurácia
+            </div>
+            <h3 class="text-2xl font-display font-extrabold text-white" id="wizardRecTitle">Séria Wertheim AP (Ohňovzdorné)</h3>
+            <p class="text-slate-300 text-sm mt-1" id="wizardRecDesc">Kombinácia certifikácie proti vlámaniu I. triedy a certifikovanej požiarnej odolnosti LFS 60P.</p>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mt-5 pt-4 border-t border-white/10 text-xs">
+              <div>
+                <span class="text-slate-400 block">Bezpečnostná trieda:</span>
+                <span class="font-bold text-white font-mono" id="wizardRecGrade">I. Bezpečnostná trieda (EN 1143-1)</span>
+              </div>
+              <div>
+                <span class="text-slate-400 block">Doporučené krytie:</span>
+                <span class="font-bold text-emerald-400 font-mono" id="wizardRecInsurance">do 40 000 €</span>
+              </div>
+              <div>
+                <span class="text-slate-400 block">Požiarna skúška:</span>
+                <span class="font-bold text-red-300 font-mono" id="wizardRecFire">LFS 30P / 60P (1 090 °C)</span>
+              </div>
+            </div>
+
+            <div class="mt-6 flex flex-wrap gap-3">
+              <button onclick="applyWizardFilter()" class="px-6 py-2.5 rounded-xl bg-gold-500 hover:bg-gold-400 text-vault-950 font-bold text-xs uppercase tracking-wider transition-all">
+                Zobraziť odporúčané modely v katalógu
+              </button>
+              <button onclick="resetWizard()" class="px-5 py-2.5 rounded-xl bg-vault-700 hover:bg-vault-600 text-slate-300 text-xs transition-colors">
+                Začať znova
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== SECURITY GRADES EXPLANATION ==================== -->
+  <section class="py-20 bg-vault-950" id="triedy">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+        <div class="space-y-3 max-w-2xl">
+          <span class="text-xs font-mono uppercase tracking-widest text-gold-400">Certifikačné Normy</span>
+          <h2 class="text-3xl sm:text-4xl font-display font-extrabold text-white">
+            Prehľad bezpečnostných tried a limitov
+          </h2>
+          <p class="text-slate-400 text-sm">
+            Každý trezor Wertheim je podrobený deštrukčným skúškam v nemeckej skúšobni <strong>VdS</strong>. Na základe odporu voči mechanickým, termickým a elektronickým vlámacím nástrojom sú zaradené do prísnych európskych tried podľa <strong>EN 1143-1</strong>.
+          </p>
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="text-xs text-slate-400">Oficiálny katalóg Wertheim:</span>
+          <a href="https://katalog.eurotrezor.com/img/cms/Wertheim_Safe-Collection_EN.pdf" target="_blank" class="px-4 py-2 rounded-lg bg-vault-850 hover:bg-vault-800 text-gold-400 border border-gold-500/30 text-xs font-semibold flex items-center gap-1.5 transition-colors">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+            Stiahnuť PDF (EN)
+          </a>
+        </div>
+      </div>
+
+      <!-- Grade Comparison Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <!-- Grade 1 -->
+        <div class="glass-card rounded-2xl p-6 space-y-4 hover:border-gold-500/50 transition-all group">
+          <div class="flex items-center justify-between">
+            <span class="px-3 py-1 rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/20 text-xs font-mono font-bold">
+              EN 1143-1: Trieda I
+            </span>
+            <span class="text-xs text-slate-400">VdS / ECB•S</span>
+          </div>
+          <div>
+            <h3 class="text-xl font-display font-bold text-white group-hover:text-gold-400 transition-colors">I. Bezpečnostná trieda</h3>
+            <p class="text-xs text-slate-300 mt-1">Série: <strong>AL, AN, AP (ohňovzdorné), AWS</strong></p>
+          </div>
+          <div class="p-3.5 rounded-xl bg-vault-900 border border-white/5 space-y-1">
+            <span class="text-[11px] text-slate-400">Odporúčané poistné krytie:</span>
+            <div class="text-xl font-tech font-bold text-emerald-400">do 40 000 €</div>
+            <span class="text-[10px] text-slate-400">(Pre podnikateľské subjekty do cca 20 000 €)</span>
+          </div>
+          <ul class="text-xs text-slate-300 space-y-2">
+            <li class="flex items-start gap-2">
+              <span class="text-gold-500 font-bold">✓</span>
+              <span>Viacplášťové pancierovanie korpusu s hrúbkou dverí 65 mm.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-gold-500 font-bold">✓</span>
+              <span>Splnenie zákona SR o držaní a úschove zbraní a streliva.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-gold-500 font-bold">✓</span>
+              <span>Možnosť certifikovanej požiarnej ochrany LFS 30P / 60P (séria AP).</span>
+            </li>
+          </ul>
+          <button onclick="filterByGrade('I. Bezpečnostná trieda')" class="w-full py-2.5 rounded-xl bg-vault-800 hover:bg-gold-500 hover:text-vault-950 text-slate-300 text-xs font-semibold transition-all">
+            Zobraziť trezory I. triedy
+          </button>
+        </div>
+
+        <!-- Grade 2 -->
+        <div class="glass-card rounded-2xl p-6 space-y-4 hover:border-gold-500/50 transition-all group">
+          <div class="flex items-center justify-between">
+            <span class="px-3 py-1 rounded-full bg-amber-500/10 text-amber-400 border border-amber-500/20 text-xs font-mono font-bold">
+              EN 1143-1: Trieda II
+            </span>
+            <span class="text-xs text-slate-400">VdS / ECB•S</span>
+          </div>
+          <div>
+            <h3 class="text-xl font-display font-bold text-white group-hover:text-gold-400 transition-colors">II. Bezpečnostná trieda</h3>
+            <p class="text-xs text-slate-300 mt-1">Série: <strong>BG, BM, BP (ohňovzdorné), BWS</strong></p>
+          </div>
+          <div class="p-3.5 rounded-xl bg-vault-900 border border-white/5 space-y-1">
+            <span class="text-[11px] text-slate-400">Odporúčané poistné krytie:</span>
+            <div class="text-xl font-tech font-bold text-emerald-400">do 80 000 €</div>
+            <span class="text-[10px] text-slate-400">(Pre podnikateľské subjekty do cca 40 000 €)</span>
+          </div>
+          <ul class="text-xs text-slate-300 space-y-2">
+            <li class="flex items-start gap-2">
+              <span class="text-gold-500 font-bold">✓</span>
+              <span>Zosilnená pancierová bariéra proti diamantovým korunkovým vrtákom.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-gold-500 font-bold">✓</span>
+              <span>Viacnásobné pasívne sklenené relockery blokujúce rozvory pri napadnutí.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-gold-500 font-bold">✓</span>
+              <span>Podpora montáže dvoch nezávislých certifikovaných zámkov (kľúč + kód).</span>
+            </li>
+          </ul>
+          <button onclick="filterByGrade('II. Bezpečnostná trieda')" class="w-full py-2.5 rounded-xl bg-vault-800 hover:bg-gold-500 hover:text-vault-950 text-slate-300 text-xs font-semibold transition-all">
+            Zobraziť trezory II. triedy
+          </button>
+        </div>
+
+        <!-- Grade 3 -->
+        <div class="glass-card-gold rounded-2xl p-6 space-y-4 hover:border-gold-400 transition-all group">
+          <div class="flex items-center justify-between">
+            <span class="px-3 py-1 rounded-full bg-gold-500/20 text-gold-400 border border-gold-500/30 text-xs font-mono font-bold">
+              EN 1143-1: Trieda III
+            </span>
+            <span class="text-xs text-gold-400 font-semibold">Bankový Štandard</span>
+          </div>
+          <div>
+            <h3 class="text-xl font-display font-bold text-white group-hover:text-gold-400 transition-colors">III. Bezpečnostná trieda</h3>
+            <p class="text-xs text-slate-300 mt-1">Série: <strong>CM, CP (ohňovzdorné)</strong></p>
+          </div>
+          <div class="p-3.5 rounded-xl bg-vault-900 border border-gold-500/20 space-y-1">
+            <span class="text-[11px] text-slate-400">Odporúčané poistné krytie:</span>
+            <div class="text-xl font-tech font-bold text-gold-400">do 160 000 €+</div>
+            <span class="text-[10px] text-slate-400">(Klenotníctva, záložne, hotovosť, numizmatika)</span>
+          </div>
+          <ul class="text-xs text-slate-300 space-y-2">
+            <li class="flex items-start gap-2">
+              <span class="text-gold-500 font-bold">✓</span>
+              <span>Masívne pancierovanie s odolnosťou proti rezaniu kyslíkom a autogénu.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-gold-500 font-bold">✓</span>
+              <span>Hmotnosti modelov až do 705 kg (CM40) garantujú extrémny odpor.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-gold-500 font-bold">✓</span>
+              <span>Príprava na napojenie na priemyselné poplachové systémy (PCO / EMA).</span>
+            </li>
+          </ul>
+          <button onclick="filterByGrade('III. Bezpečnostná trieda')" class="w-full py-2.5 rounded-xl bg-gold-500 hover:bg-gold-400 text-vault-950 text-xs font-bold uppercase tracking-wider transition-all">
+            Zobraziť trezory III. triedy
+          </button>
+        </div>
+
+      </div>
+
+      <!-- Door Boltwork Engineering Showcase Banner -->
+      <div class="mt-12 glass-card rounded-2xl p-6 sm:p-8 border border-white/10 flex flex-col lg:flex-row items-center gap-8">
+        <div class="lg:w-1/3 shrink-0">
+          <img src="images/blok-dvere.jpg" alt="Wertheim masívne dvere" class="rounded-xl border border-white/10 shadow-xl max-h-56 mx-auto object-cover">
+        </div>
+        <div class="space-y-3 lg:w-2/3">
+          <span class="text-xs font-mono text-gold-400 uppercase tracking-widest">Inžinierska Dokonalosť</span>
+          <h3 class="text-2xl font-display font-bold text-white">Trojstranný masívny rozvorový systém s tvrdenými čapmi</h3>
+          <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+            Dvere trezorov Wertheim sú osadené kruhovými oceľovými závorami s priemerom až 32 mm, chránenými špeciálnym mangánovým plechom proti odvŕtaniu. Pasívne relockery okamžite a nezvratne zablokujú rozvory pri akomkoľvek pokuse o násilný atak autogénom alebo kladivom.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== MAIN PRODUCT CATALOG (54 PRODUCTS) ==================== -->
+  <section class="py-20 bg-vault-900 border-t border-white/5" id="katalog">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Catalog Header -->
+      <div class="space-y-4 mb-8">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+          <div>
+            <span class="text-xs font-mono uppercase tracking-widest text-gold-400">Kompletná ponuka</span>
+            <h2 class="text-3xl sm:text-4xl font-display font-extrabold text-white">
+              Katalóg trezorov Wertheim
+            </h2>
+            <p class="text-slate-400 text-sm mt-1">
+              Filtrujte medzi 54 certifikovanými modelmi podľa bezpečnostnej triedy, rozmerov, hmotnosti a požiarnej odolnosti.
+            </p>
+          </div>
+
+          <!-- Quick stats counter -->
+          <div class="text-right">
+            <div class="text-xs text-slate-400">Zobrazených modelov:</div>
+            <div class="text-2xl font-tech font-bold text-gold-400" id="catalogResultsCount">54 z 54</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Filter Controls Bar -->
+      <div class="glass-card rounded-2xl p-5 mb-8 border border-white/10 space-y-4">
+        
+        <!-- Search & Quick Series Buttons -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-4 items-center">
+          
+          <!-- Live Search Bar -->
+          <div class="lg:col-span-4 relative">
+            <input type="text" id="catalogSearch" oninput="applyFilters()" placeholder="Hľadať model (napr. AP10, CM, 55 kg, 600 mm)..." 
+                   class="w-full pl-10 pr-4 py-3 rounded-xl bg-vault-850 border border-white/10 focus:border-gold-500 focus:outline-none text-sm text-white placeholder-slate-500 transition-colors">
+            <svg class="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+            <button onclick="clearSearch()" id="clearSearchBtn" class="hidden absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-white text-xs">✕</button>
+          </div>
+
+          <!-- Series Selector Pills -->
+          <div class="lg:col-span-8 flex flex-wrap items-center gap-2" id="seriesFilters">
+            <button onclick="setSeriesFilter('ALL')" class="series-btn active px-3.5 py-2 rounded-xl text-xs font-semibold bg-gold-500 text-vault-950 transition-all">Všetky</button>
+            <button onclick="setSeriesFilter('AL')" class="series-btn px-3 py-2 rounded-xl text-xs font-semibold bg-vault-850 hover:bg-vault-800 text-slate-300 border border-white/5 transition-all">Séria AL (I. tr)</button>
+            <button onclick="setSeriesFilter('AN')" class="series-btn px-3 py-2 rounded-xl text-xs font-semibold bg-vault-850 hover:bg-vault-800 text-slate-300 border border-white/5 transition-all">Séria AN (I. tr)</button>
+            <button onclick="setSeriesFilter('AP')" class="series-btn px-3 py-2 rounded-xl text-xs font-semibold bg-vault-850 hover:bg-vault-800 text-slate-300 border border-white/5 transition-all flex items-center gap-1">
+              <span>Séria AP</span>
+              <span class="w-1.5 h-1.5 rounded-full bg-red-400"></span>
+            </button>
+            <button onclick="setSeriesFilter('BG')" class="series-btn px-3 py-2 rounded-xl text-xs font-semibold bg-vault-850 hover:bg-vault-800 text-slate-300 border border-white/5 transition-all">Séria BG (II. tr)</button>
+            <button onclick="setSeriesFilter('BM')" class="series-btn px-3 py-2 rounded-xl text-xs font-semibold bg-vault-850 hover:bg-vault-800 text-slate-300 border border-white/5 transition-all">Séria BM (II. tr)</button>
+            <button onclick="setSeriesFilter('CM')" class="series-btn px-3 py-2 rounded-xl text-xs font-semibold bg-vault-850 hover:bg-vault-800 text-slate-300 border border-white/5 transition-all text-gold-400">Séria CM (III. tr)</button>
+            <button onclick="setSeriesFilter('Stenové')" class="series-btn px-3 py-2 rounded-xl text-xs font-semibold bg-vault-850 hover:bg-vault-800 text-slate-300 border border-white/5 transition-all">Stenové (AMS)</button>
+            <button onclick="setSeriesFilter('Nábytkové')" class="series-btn px-3 py-2 rounded-xl text-xs font-semibold bg-vault-850 hover:bg-vault-800 text-slate-300 border border-white/5 transition-all">Nábytkové (ZS)</button>
+          </div>
+
+        </div>
+
+        <!-- Secondary Filters Row (Fireproof, Sort, View) -->
+        <div class="pt-4 border-t border-white/10 flex flex-wrap items-center justify-between gap-4 text-xs">
+          
+          <div class="flex flex-wrap items-center gap-4">
+            <!-- Fireproof Checkbox -->
+            <label class="flex items-center gap-2 cursor-pointer select-none">
+              <input type="checkbox" id="fireOnlyFilter" onchange="applyFilters()" class="w-4 h-4 rounded bg-vault-800 border-slate-700 text-red-500 focus:ring-0 focus:ring-offset-0">
+              <span class="text-slate-300 font-medium flex items-center gap-1.5">
+                <span class="text-red-400">🔥</span> Len certifikované ohňovzdorné (LFS 30P / 60P)
+              </span>
+            </label>
+
+            <!-- Grade Dropdown Filter -->
+            <div class="flex items-center gap-1.5">
+              <span class="text-slate-400">Trieda:</span>
+              <select id="gradeSelect" onchange="applyFilters()" class="bg-vault-850 border border-white/10 text-white rounded-lg px-2.5 py-1.5 focus:outline-none focus:border-gold-500">
+                <option value="ALL">Všetky triedy</option>
+                <option value="I. Bezpečnostná trieda">I. Bezpečnostná trieda</option>
+                <option value="II. Bezpečnostná trieda">II. Bezpečnostná trieda</option>
+                <option value="III. Bezpečnostná trieda">III. Bezpečnostná trieda</option>
+                <option value="Stenové">Stenové zabudovateľné</option>
+                <option value="Nábytkové">Nábytkové trezory</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-4">
+            <!-- Sort dropdown -->
+            <div class="flex items-center gap-1.5">
+              <span class="text-slate-400">Zoradiť:</span>
+              <select id="sortSelect" onchange="applyFilters()" class="bg-vault-850 border border-white/10 text-white rounded-lg px-2.5 py-1.5 focus:outline-none focus:border-gold-500">
+                <option value="price_asc">Cena: od najnižšej</option>
+                <option value="price_desc">Cena: od najvyššej</option>
+                <option value="weight_asc">Hmotnosť: najľahšie</option>
+                <option value="weight_desc">Hmotnosť: najťažšie</option>
+                <option value="volume_desc">Objem: najväčšie</option>
+                <option value="name_asc">Názov: A - Z</option>
+              </select>
+            </div>
+
+            <!-- Grid vs List View -->
+            <div class="flex rounded-lg bg-vault-850 p-1 border border-white/5">
+              <button onclick="setViewMode('grid')" id="viewGridBtn" class="p-1.5 rounded bg-vault-700 text-white" title="Dlaždice">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg>
+              </button>
+              <button onclick="setViewMode('list')" id="viewListBtn" class="p-1.5 rounded text-slate-400 hover:text-white" title="Zoznam">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Products Container (Rendered dynamically by JS) -->
+      <div id="productsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <!-- Rendered by JavaScript -->
+      </div>
+
+      <!-- Empty State -->
+      <div id="noProductsFound" class="hidden text-center py-16 space-y-4">
+        <div class="text-4xl">🔍</div>
+        <h3 class="text-xl font-bold text-white">Nenašli sa žiadne trezory</h3>
+        <p class="text-slate-400 text-sm">Skúste upraviť parametre vyhľadávania alebo zrušiť niektoré filtre.</p>
+        <button onclick="resetAllFilters()" class="px-5 py-2.5 rounded-xl bg-gold-500 text-vault-950 font-bold text-xs uppercase">
+          Zresetovať filtre
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== LOCK TECHNOLOGY GUIDE ==================== -->
+  <section class="py-20 bg-vault-950 border-t border-white/5" id="zamky">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+        <span class="text-xs font-mono uppercase tracking-widest text-gold-400 bg-gold-500/10 border border-gold-500/20 px-3 py-1 rounded-full">
+          Zabezpečenie Vstupu
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-display font-extrabold text-white">
+          Zámkové systémy Wertheim
+        </h2>
+        <p class="text-slate-300 text-sm sm:text-base">
+          Trezor je len tak bezpečný, ako jeho zámkový mechanizmus. Porovnajte výhody kľúčových, elektronických kódových a mechanických kombinačných zámkov.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        
+        <!-- Key Lock [K] -->
+        <div class="glass-card rounded-2xl p-6 sm:p-8 space-y-5 flex flex-col justify-between border-glow">
+          <div class="space-y-4">
+            <div class="w-14 h-14 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 text-2xl">
+              🔑
+            </div>
+            <div>
+              <span class="text-xs font-mono text-blue-400 uppercase tracking-widest">[K] Štandardná Výbava</span>
+              <h3 class="text-2xl font-display font-bold text-white mt-1">Motýlkový obojstranný kľúč</h3>
+              <p class="text-xs text-slate-400 mt-1">Zámok CAWI / Mauer (VdS trieda 1 / EN 1300 trieda A)</p>
+            </div>
+            <p class="text-slate-300 text-xs leading-relaxed">
+              Dodáva sa štandardne ku každému trezoru Wertheim v cene s 2 kusmi masívnych obojstranných kľúčov. Maximálna mechanická spoľahlivosť bez akejkoľvek elektroniky.
+            </p>
+            <div class="space-y-2 pt-2 border-t border-white/10 text-xs">
+              <div class="flex items-center gap-2 text-emerald-400 font-medium">
+                <span>+</span> 100% nezávislé od batérií a napájania
+              </div>
+              <div class="flex items-center gap-2 text-emerald-400 font-medium">
+                <span>+</span> Žiadne príplatky (zahrnuté v základnej cene)
+              </div>
+              <div class="flex items-center gap-2 text-amber-400 font-medium">
+                <span>!</span> Nutnosť prísne strážiť kľúč (poisťovňa neplní pri krádeži kľúčom)
+              </div>
+            </div>
+          </div>
+          <div class="p-3 rounded-xl bg-vault-900 text-center font-mono text-xs text-slate-300 border border-white/5">
+            Cena výbavy: <strong class="text-emerald-400">V cene (0 €)</strong>
+          </div>
+        </div>
+
+        <!-- Electronic Lock [E] -->
+        <div class="glass-card-gold rounded-2xl p-6 sm:p-8 space-y-5 flex flex-col justify-between border-gold-500/40 shadow-xl">
+          <div class="space-y-4">
+            <div class="w-14 h-14 rounded-xl bg-gold-500/20 border border-gold-500/30 flex items-center justify-center text-gold-400 text-2xl">
+              🔢
+            </div>
+            <div>
+              <span class="text-xs font-mono text-gold-400 uppercase tracking-widest">[E] Najobľúbenejšia Voľba</span>
+              <h3 class="text-2xl font-display font-bold text-white mt-1">Elektronický kód M-LOCKS</h3>
+              <p class="text-xs text-gold-300 mt-1">Model EM3520 (VdS trieda 2 / EN 1300 trieda B)</p>
+            </div>
+            <p class="text-slate-300 text-xs leading-relaxed">
+              Maximálny komfort. Otvorenie 6-miestnym kódom (1 milión kombinácií). Manažérsky kód + užívateľský kód. Pamäť nestrácate ani pri vybití batérie!
+            </p>
+            <div class="space-y-2 pt-2 border-t border-white/10 text-xs">
+              <div class="flex items-center gap-2 text-emerald-400 font-medium">
+                <span>+</span> Netreba nikam schovávať fyzický kľúč
+              </div>
+              <div class="flex items-center gap-2 text-emerald-400 font-medium">
+                <span>+</span> Jednoduchá zmena kódu kedykoľvek
+              </div>
+              <div class="flex items-center gap-2 text-emerald-400 font-medium">
+                <span>+</span> Núdzové kontakty na 9V batériu priamo na klávesnici
+              </div>
+            </div>
+          </div>
+          <div class="p-3 rounded-xl bg-vault-900 text-center font-mono text-xs text-slate-300 border border-gold-500/20">
+            Doplatok: <strong class="text-gold-400">+ cca 240 € s DPH</strong>
+          </div>
+        </div>
+
+        <!-- Mechanical Dial [N/Z] -->
+        <div class="glass-card rounded-2xl p-6 sm:p-8 space-y-5 flex flex-col justify-between border-glow">
+          <div class="space-y-4">
+            <div class="w-14 h-14 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400 text-2xl">
+              ⚙️
+            </div>
+            <div>
+              <span class="text-xs font-mono text-purple-400 uppercase tracking-widest">[N/Z] Klasický Číselník</span>
+              <h3 class="text-2xl font-display font-bold text-white mt-1">Mechanický kombinačný zámok</h3>
+              <p class="text-xs text-slate-400 mt-1">Sargent & Greenleaf (VdS trieda 2 / EN 1300 trieda B)</p>
+            </div>
+            <p class="text-slate-300 text-xs leading-relaxed">
+              Klasický filmový trezorový otočný číselník. Vytáčaním 3 alebo 4 číselných kombinácií v presnom poradí otvárate závorový mechanizmus bez akejkoľvek batérie.
+            </p>
+            <div class="space-y-2 pt-2 border-t border-white/10 text-xs">
+              <div class="flex items-center gap-2 text-emerald-400 font-medium">
+                <span>+</span> Čisto mechanický, nezávislý od elektroniky
+              </div>
+              <div class="flex items-center gap-2 text-emerald-400 font-medium">
+                <span>+</span> Na kód pri zadávaní nikto nevidí
+              </div>
+              <div class="flex items-center gap-2 text-amber-400 font-medium">
+                <span>!</span> Vyžaduje precízne otáčanie (pri chybe sa musí začať odznova)
+              </div>
+            </div>
+          </div>
+          <div class="p-3 rounded-xl bg-vault-900 text-center font-mono text-xs text-slate-300 border border-white/5">
+            Doplatok: <strong class="text-slate-200">+ cca 180 € s DPH</strong>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Interactive Lock Simulator Box -->
+      <div class="mt-12 glass-card rounded-2xl p-6 sm:p-8 max-w-2xl mx-auto border border-gold-500/30 text-center">
+        <h4 class="text-lg font-display font-bold text-white">Vyskúšajte si simulátor klávesnice M-LOCKS</h4>
+        <p class="text-xs text-slate-400 mt-1">Zadajte testovací kód <span class="font-mono text-gold-400 font-bold">1 2 3 4 5 6</span> a sledujte odozvu elektronického zámku:</p>
+        
+        <div class="mt-5 inline-block bg-vault-950 p-5 rounded-2xl border border-slate-700 shadow-2xl">
+          <div class="h-10 bg-slate-900 border border-slate-700 rounded-lg mb-4 flex items-center justify-center font-mono text-xl tracking-widest text-gold-400" id="simDisplay">
+            ------
+          </div>
+          <div class="grid grid-cols-3 gap-2 w-48 mx-auto">
+            <button onclick="pressSimKey('1')" class="h-10 rounded bg-slate-800 hover:bg-slate-700 text-white font-mono font-bold">1</button>
+            <button onclick="pressSimKey('2')" class="h-10 rounded bg-slate-800 hover:bg-slate-700 text-white font-mono font-bold">2</button>
+            <button onclick="pressSimKey('3')" class="h-10 rounded bg-slate-800 hover:bg-slate-700 text-white font-mono font-bold">3</button>
+            <button onclick="pressSimKey('4')" class="h-10 rounded bg-slate-800 hover:bg-slate-700 text-white font-mono font-bold">4</button>
+            <button onclick="pressSimKey('5')" class="h-10 rounded bg-slate-800 hover:bg-slate-700 text-white font-mono font-bold">5</button>
+            <button onclick="pressSimKey('6')" class="h-10 rounded bg-slate-800 hover:bg-slate-700 text-white font-mono font-bold">6</button>
+            <button onclick="pressSimKey('7')" class="h-10 rounded bg-slate-800 hover:bg-slate-700 text-white font-mono font-bold">7</button>
+            <button onclick="pressSimKey('8')" class="h-10 rounded bg-slate-800 hover:bg-slate-700 text-white font-mono font-bold">8</button>
+            <button onclick="pressSimKey('9')" class="h-10 rounded bg-slate-800 hover:bg-slate-700 text-white font-mono font-bold">9</button>
+            <button onclick="clearSimKey()" class="h-10 rounded bg-red-950/60 hover:bg-red-900 text-red-300 font-mono text-xs">C</button>
+            <button onclick="pressSimKey('0')" class="h-10 rounded bg-slate-800 hover:bg-slate-700 text-white font-mono font-bold">0</button>
+            <button onclick="checkSimCode()" class="h-10 rounded bg-gold-600 hover:bg-gold-500 text-vault-950 font-mono font-bold">↵</button>
+          </div>
+          <div class="mt-3 text-[11px] font-mono text-slate-400" id="simStatus">Pripravený na zadanie kódu</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== DELIVERY, RIGGING & ANCHORING CALCULATOR ==================== -->
+  <section class="py-20 bg-vault-900 border-t border-white/5" id="doprava-montaz">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <div class="lg:col-span-6 space-y-6">
+          <span class="text-xs font-mono uppercase tracking-widest text-gold-400 bg-gold-500/10 border border-gold-500/20 px-3 py-1 rounded-full">
+            Diskrétna Logistika & Inštalácia
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-display font-extrabold text-white">
+            Prevoz, vynáška po schodoch a certifikované kotvenie
+          </h2>
+          <p class="text-slate-300 text-sm leading-relaxed">
+            Bezpečnostný trezor s hmotnosťou 100 kg až 700 kg si vyžaduje špecializovanú ťažkú techniku a pásový schodolez. Poisťovne navyše <strong>striktne vyžadujú ukotvenie</strong> každého trezoru s hmotnosťou pod 1 000 kg certifikovanými oceľovými kotvami.
+          </p>
+
+          <div class="space-y-3.5 text-xs text-slate-300">
+            <div class="flex items-start gap-3 p-3.5 rounded-xl bg-vault-850 border border-white/5">
+              <div class="text-gold-500 text-lg">🛡️</div>
+              <div>
+                <strong class="text-white block">Absolútna diskrétnosť prevozu</strong>
+                Vozidlá a oblečenie technikov sú neutrálne bez reklamných nápisov. O existencii Vášho trezoru nevie susedstvo ani externá kuriérska služba.
+              </div>
+            </div>
+            <div class="flex items-start gap-3 p-3.5 rounded-xl bg-vault-850 border border-white/5">
+              <div class="text-gold-500 text-lg">⚙️</div>
+              <div>
+                <strong class="text-white block">Ťažká technika & schodolez</strong>
+                Zvládame aj úzke točité schodiská, historické objekty a nosnosti podláh bez poškodenia dlažby či parkiet.
+              </div>
+            </div>
+            <div class="flex items-start gap-3 p-3.5 rounded-xl bg-vault-850 border border-white/5">
+              <div class="text-gold-500 text-lg">📜</div>
+              <div>
+                <strong class="text-white block">Protokol o certifikovanom ukotvení</strong>
+                Vystavíme revízny doklad o kotvení potrebný pre poisťovňu pri uzatváraní poistnej zmluvy.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive Calculator Widget -->
+        <div class="lg:col-span-6">
+          <div class="glass-card rounded-2xl p-6 sm:p-8 border border-white/10 shadow-2xl space-y-5">
+            <div class="flex items-center justify-between pb-4 border-b border-white/10">
+              <h3 class="font-display font-bold text-white text-lg">Kalkulátor dopravy a montáže</h3>
+              <span class="text-xs font-mono text-gold-400">Orientačný odhad</span>
+            </div>
+
+            <!-- Weight Bracket -->
+            <div>
+              <label class="block text-xs font-medium text-slate-300 mb-1.5">Hmotnosť trezoru:</label>
+              <select id="calcWeight" onchange="calculateDelivery()" class="w-full bg-vault-850 border border-white/10 rounded-xl px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-gold-500">
+                <option value="50">Do 70 kg (Kompaktný - napr. AL03, AL05)</option>
+                <option value="120" selected>70 - 150 kg (Stredný - napr. AL10, AL20, BG10)</option>
+                <option value="250">150 - 300 kg (Ťažký / Ohňovzdorný - napr. AP10, CM15)</option>
+                <option value="500">300 - 700+ kg (Bankový monolit - napr. CM30, CM40)</option>
+              </select>
+            </div>
+
+            <!-- Access & Floor -->
+            <div>
+              <label class="block text-xs font-medium text-slate-300 mb-1.5">Prístup & Poschodie:</label>
+              <select id="calcFloor" onchange="calculateDelivery()" class="w-full bg-vault-850 border border-white/10 rounded-xl px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-gold-500">
+                <option value="0">Prízemie bez schodov / nákladný výťah</option>
+                <option value="35">1. poschodie bez výťahu (+35 €)</option>
+                <option value="70">2. až 3. poschodie bez výťahu (+70 €)</option>
+                <option value="120">4.+ poschodie alebo točité úzke schodisko (+120 €)</option>
+              </select>
+            </div>
+
+            <!-- Anchoring Type -->
+            <div>
+              <label class="block text-xs font-medium text-slate-300 mb-1.5">Typ montáže / kotvenia:</label>
+              <select id="calcAnchor" onchange="calculateDelivery()" class="w-full bg-vault-850 border border-white/10 rounded-xl px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-gold-500">
+                <option value="0">Iba doručenie za prvé uzamykateľné dvere (0 € montáž)</option>
+                <option value="75" selected>Certifikované kotvenie do betónu s protokolom (+75 €)</option>
+                <option value="120">Chemická kotva do dutých tehál / špeciálny podklad (+120 €)</option>
+                <option value="190">Zabudovanie stenového trezoru do muriva (betonáž) (+190 €)</option>
+              </select>
+            </div>
+
+            <!-- Distance from Šurany -->
+            <div>
+              <label class="block text-xs font-medium text-slate-300 mb-1.5">Lokalita doručenia:</label>
+              <select id="calcRegion" onchange="calculateDelivery()" class="w-full bg-vault-850 border border-white/10 rounded-xl px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-gold-500">
+                <option value="40">Západoslovenský kraj (BA, TT, NR, Šurany okolie)</option>
+                <option value="70">Stredné Slovensko (BB, ZA, TN)</option>
+                <option value="100">Východné Slovensko (KE, PO)</option>
+              </select>
+            </div>
+
+            <!-- Calculation Output -->
+            <div class="p-4 rounded-xl bg-vault-950 border border-gold-500/30 flex items-center justify-between">
+              <div>
+                <span class="text-xs text-slate-400 block">Odhadovaná cena služieb:</span>
+                <span class="text-2xl font-tech font-bold text-gold-400" id="calcTotal">190 € s DPH</span>
+              </div>
+              <button onclick="addServicesToCart()" class="px-4 py-2 rounded-lg bg-gold-500 hover:bg-gold-400 text-vault-950 text-xs font-bold uppercase tracking-wider transition-colors">
+                Pridať k dopytu
+              </button>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== ABOUT INDUSTRY NWT & WERTHEIM STORY ==================== -->
+  <section class="py-20 bg-vault-950 border-t border-white/5" id="o-firme">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="max-w-3xl mx-auto text-center space-y-4 mb-16">
+        <span class="text-xs font-mono uppercase tracking-widest text-gold-400 bg-gold-500/10 border border-gold-500/20 px-3 py-1 rounded-full">
+          Dôvera & Precíznosť
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-display font-extrabold text-white">
+          Prečo zveriť bezpečnosť rodinnej firme Industry NWT?
+        </h2>
+        <p class="text-slate-300 text-sm sm:text-base">
+          Pri kúpe trezora je najväčším rizikom únik informácií. Kto vie, že máte trezor? Kde je umiestnený? Aký kľúč či kód používa?
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <div class="glass-card rounded-2xl p-6 space-y-3 border-glow">
+          <div class="text-3xl">🤫</div>
+          <h3 class="text-lg font-display font-bold text-white">Minimálny okruh osôb</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Sme rodinná firma so sídlom v Šuranoch. O vašom trezore a inštalácii vie iba majiteľ a technik. Žiadne call-centrá, žiadne nezabezpečené databázy kuriérov.
+          </p>
+        </div>
+
+        <div class="glass-card rounded-2xl p-6 space-y-3 border-glow">
+          <div class="text-3xl">⚙️</div>
+          <h3 class="text-lg font-display font-bold text-white">53 rokov v strojárstve</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Spájame vyše polstoročnú prax v nástrojárstve a kovoobrábaní s 20-ročnými skúsenosťami v oblasti bezpečnosti osôb a ochrany majetku.
+          </p>
+        </div>
+
+        <div class="glass-card rounded-2xl p-6 space-y-3 border-glow">
+          <div class="text-3xl">🤝</div>
+          <h3 class="text-lg font-display font-bold text-white">Partner Wertheim od 1998</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            S firmou Wertheim spolupracujeme od roku 1998 a od februára 2014 máme podpísanú oficiálnu zmluvu o obchodnom zastúpení. Poznáme každý detail konštrukcie.
+          </p>
+        </div>
+
+        <div class="glass-card rounded-2xl p-6 space-y-3 border-glow">
+          <div class="text-3xl">🏛️</div>
+          <h3 class="text-lg font-display font-bold text-white">Tradícia Wertheim od 1852</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Rakúsky priemyselník Franz Wertheim vyrobil prvý trezor v roku 1852. Dnes je synonymom pre bankové trezory a trezorové dvere najvyšších svetových tried.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== FAQ & KNOWLEDGE BASE ==================== -->
+  <section class="py-20 bg-vault-900 border-t border-white/5" id="faq">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center space-y-3 mb-14">
+        <span class="text-xs font-mono uppercase tracking-widest text-gold-400">Poradňa & Otázky</span>
+        <h2 class="text-3xl sm:text-4xl font-display font-extrabold text-white">
+          Často kladené otázky k trezorom
+        </h2>
+      </div>
+
+      <div class="space-y-4">
+        
+        <!-- FAQ 1 -->
+        <div class="glass-card rounded-xl border border-white/5 overflow-hidden">
+          <button onclick="toggleFaq(1)" class="w-full text-left p-5 flex items-center justify-between text-sm sm:text-base font-bold text-white hover:text-gold-400 transition-colors">
+            <span>Prečo poisťovňa vyžaduje certifikát VdS a ukotvenie trezora?</span>
+            <span id="faqIcon1" class="text-gold-500 font-mono text-xl">+</span>
+          </button>
+          <div id="faqContent1" class="hidden px-5 pb-5 text-xs sm:text-sm text-slate-300 border-t border-white/5 pt-3 leading-relaxed">
+            V prípade poistnej udalosti (vlámanie) poisťovňa skúma, či bol trezor certifikovaný v príslušnej bezpečnostnej triede (EN 1143-1) a či bol odborne ukotvený. Ak má trezor menej ako 1 000 kg a nie je ukotvený, zlodeji ho môžu odniesť celý. Všetky certifikované trezory Wertheim do 1 000 kg sa dodávajú s kotviacimi otvormi a certifikovaným kotviacim materiálom.
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="glass-card rounded-xl border border-white/5 overflow-hidden">
+          <button onclick="toggleFaq(2)" class="w-full text-left p-5 flex items-center justify-between text-sm sm:text-base font-bold text-white hover:text-gold-400 transition-colors">
+            <span>Čo sa stane, ak sa v elektronickom zámku vybijú batérie?</span>
+            <span id="faqIcon2" class="text-gold-500 font-mono text-xl">+</span>
+          </button>
+          <div id="faqContent2" class="hidden px-5 pb-5 text-xs sm:text-sm text-slate-300 border-t border-white/5 pt-3 leading-relaxed">
+            Elektronické zámky (ako M-LOCKS EM3520) využívajú energeticky nezávislú mikroprocesorovú pamäť EEPROM. Kód sa pri vybití batérie <strong>nikdy nevymaže</strong>. Zámok navyše vopred signalizuje slabú batériu akustickým pípnutím. Ak sa batéria vybije úplne, z vonkajšej strany klávesnice sú umiestnené núdzové kontakty, na ktoré stačí priložiť bežnú 9V batériu a trezor otvoriť vaším obvyklým kódom.
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="glass-card rounded-xl border border-white/5 overflow-hidden">
+          <button onclick="toggleFaq(3)" class="w-full text-left p-5 flex items-center justify-between text-sm sm:text-base font-bold text-white hover:text-gold-400 transition-colors">
+            <span>Aký trezor potrebujem na úschovu zbraní a streliva podľa zákona SR?</span>
+            <span id="faqIcon3" class="text-gold-500 font-mono text-xl">+</span>
+          </button>
+          <div id="faqContent3" class="hidden px-5 pb-5 text-xs sm:text-sm text-slate-300 border-t border-white/5 pt-3 leading-relaxed">
+            Podľa zákona č. 190/2003 Z. z. o strelných zbraniach a strelive musí byť držanie zbraní a streliva zabezpečené v uzamykateľnej oceľovej schránke alebo trezore. Pre väčší počet zbraní (kategória A, B) polícia a zákon vyžadujú trezor s certifikáciou minimálne I. bezpečnostnej triedy (napríklad séria AL, AN alebo AP) s oddelenou uzamykateľnou vnútornou schránkou na strelivo.
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="glass-card rounded-xl border border-white/5 overflow-hidden">
+          <button onclick="toggleFaq(4)" class="w-full text-left p-5 flex items-center justify-between text-sm sm:text-base font-bold text-white hover:text-gold-400 transition-colors">
+            <span>Aký je rozdiel medzi bežným a ohňovzdorným trezorom?</span>
+            <span id="faqIcon4" class="text-gold-500 font-mono text-xl">+</span>
+          </button>
+          <div id="faqContent4" class="hidden px-5 pb-5 text-xs sm:text-sm text-slate-300 border-t border-white/5 pt-3 leading-relaxed">
+            Bežný trezor má oceľovú konštrukciu chrániacu pred odvŕtaním a páčením, no oceľ je výborný vodič tepla. Pri požiari by papierové dokumenty vo vnútri zhoreli samovznietením už pri 170 °C. Ohňovzdorné trezory (napr. séria Wertheim AP) majú medzi plášťami špeciálnu žiaruvzdornú výplň a expandujúce požiarne pásky, ktoré prešli certifikačnou skúškou LFS 30P / 60P podľa EN 15659 pri teplote až 1 090 °C.
+          </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="glass-card rounded-xl border border-white/5 overflow-hidden">
+          <button onclick="toggleFaq(5)" class="w-full text-left p-5 flex items-center justify-between text-sm sm:text-base font-bold text-white hover:text-gold-400 transition-colors">
+            <span>Ako prebieha montáž stenového trezoru (séria AMS)?</span>
+            <span id="faqIcon5" class="text-gold-500 font-mono text-xl">+</span>
+          </button>
+          <div id="faqContent5" class="hidden px-5 pb-5 text-xs sm:text-sm text-slate-300 border-t border-white/5 pt-3 leading-relaxed">
+            Stenový trezor musí byť zabetónovaný do nosnej steny tak, aby okolo neho vznikol betónový plášť hrúbky minimálne 100 mm z betónu triedy C20/25 s armovacou oceľou. Tým sa zabráni vytrhnutiu trezora zo steny. Dvere trezora musia byť osadené presne vodorovne s omietkou.
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== CONTACT & COMPANY INFO ==================== -->
+  <section class="py-20 bg-vault-950 border-t border-white/5" id="kontakt">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        
+        <!-- Company Credentials -->
+        <div class="lg:col-span-5 space-y-6">
+          <span class="text-xs font-mono uppercase tracking-widest text-gold-400 bg-gold-500/10 border border-gold-500/20 px-3 py-1 rounded-full">
+            Oficiálny Kontakt
+          </span>
+          <h2 class="text-3xl font-display font-extrabold text-white">
+            Industry NWT, s. r. o.
+          </h2>
+          <p class="text-slate-300 text-sm leading-relaxed">
+            Neváhajte nás kontaktovať pre odbornú konzultáciu, vypracovanie nezáväznej cenovej ponuky, alebo dohodnutie obhliadky a montáže trezoru.
+          </p>
+
+          <div class="space-y-4 pt-2 text-sm text-slate-300">
+            <div class="flex items-center gap-3.5">
+              <div class="w-10 h-10 rounded-xl bg-gold-500/10 text-gold-400 flex items-center justify-center shrink-0">📍</div>
+              <div>
+                <span class="text-xs text-slate-400 block">Sídlo spoločnosti:</span>
+                <span class="text-white font-medium">ul. Chalúpkova 501/4, 942 01 Šurany</span>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3.5">
+              <div class="w-10 h-10 rounded-xl bg-gold-500/10 text-gold-400 flex items-center justify-center shrink-0">📞</div>
+              <div>
+                <span class="text-xs text-slate-400 block">Infolinka & osobná konzultácia:</span>
+                <a href="tel:+421908750500" class="text-gold-400 font-mono font-bold text-base hover:underline">+421 908 750 500</a>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3.5">
+              <div class="w-10 h-10 rounded-xl bg-gold-500/10 text-gold-400 flex items-center justify-center shrink-0">✉️</div>
+              <div>
+                <span class="text-xs text-slate-400 block">E-mailové dopyty:</span>
+                <a href="mailto:office@eurotrezor.com" class="text-white font-medium hover:text-gold-400 transition-colors">office@eurotrezor.com</a>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3.5">
+              <div class="w-10 h-10 rounded-xl bg-gold-500/10 text-gold-400 flex items-center justify-center shrink-0">🏢</div>
+              <div>
+                <span class="text-xs text-slate-400 block">Fakturačné údaje:</span>
+                <div class="text-xs text-slate-300 font-mono">
+                  IČO: 46471570 | IČ DPH: SK2023390710 (Platca DPH)<br>
+                  OR Okresného súdu Nitra, oddiel Sro, vložka č. 30454/N<br>
+                  Tatra banka: 2927867952 / 1100
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Direct Quick Inquiry Form -->
+        <div class="lg:col-span-7">
+          <div class="glass-card rounded-2xl p-6 sm:p-8 border border-white/10 shadow-2xl space-y-5">
+            <h3 class="text-xl font-display font-bold text-white">Rýchly dopyt alebo otázka</h3>
+            <p class="text-xs text-slate-400">Vyplňte formulár a náš špecialista sa Vám ozve do 24 hodín s diskrétnym návrhom riešenia.</p>
+
+            <form onsubmit="handleDirectInquiry(event)" class="space-y-4">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-medium text-slate-300 mb-1">Vaše meno / Názov firmy *</label>
+                  <input type="text" id="directName" required placeholder="Ján Novák" class="w-full bg-vault-850 border border-white/10 rounded-xl px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-gold-500">
+                </div>
+                <div>
+                  <label class="block text-xs font-medium text-slate-300 mb-1">Telefónne číslo *</label>
+                  <input type="tel" id="directPhone" required placeholder="+421 900 000 000" class="w-full bg-vault-850 border border-white/10 rounded-xl px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-gold-500">
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-medium text-slate-300 mb-1">E-mailová adresa *</label>
+                  <input type="email" id="directEmail" required placeholder="jan@novak.sk" class="w-full bg-vault-850 border border-white/10 rounded-xl px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-gold-500">
+                </div>
+                <div>
+                  <label class="block text-xs font-medium text-slate-300 mb-1">Mesto / Obec doručenia</label>
+                  <input type="text" id="directCity" placeholder="Napr. Bratislava, Nitra..." class="w-full bg-vault-850 border border-white/10 rounded-xl px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-gold-500">
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-xs font-medium text-slate-300 mb-1">Máte záujem o konkrétny model alebo požiadavku?</label>
+                <textarea id="directMsg" rows="3" placeholder="Napr. mám záujem o trezor Wertheim AP10 s elektronickým zámkom a montážou na 1. poschodie rodinného domu..." class="w-full bg-vault-850 border border-white/10 rounded-xl px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-gold-500"></textarea>
+              </div>
+
+              <div class="text-[11px] text-slate-400">
+                Odoslaním formulára súhlasíte so spracovaním osobných údajov v súlade s GDPR za účelom vypracovania ponuky. Vaše údaje nikde nezverejňujeme ani neposkytujeme tretím stranám.
+              </div>
+
+              <button type="submit" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-gold-500 to-amber-600 hover:from-gold-400 hover:to-amber-500 text-vault-950 font-display font-bold text-xs uppercase tracking-wider shadow-lg shadow-gold-500/20 transition-all">
+                Odoslať nezáväzný dopyt
+              </button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="bg-vault-950 border-t border-white/10 py-12 text-slate-400 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8 pb-8 border-b border-white/5">
+        
+        <div class="space-y-3">
+          <div class="flex items-center gap-2">
+            <span class="font-display font-extrabold text-lg text-white">EUROTREZOR</span>
+            <span class="text-[10px] font-mono px-1.5 py-0.5 rounded bg-slate-800 text-gold-400">Wertheim</span>
+          </div>
+          <p class="text-slate-400 leading-relaxed">
+            Autorizovaný predajca trezorov a trezorovej techniky Wertheim na Slovensku. Prevádzkovateľ: Industry NWT s.r.o.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="font-bold text-white mb-3 uppercase tracking-wider text-xs">Sortiment trezorov</h4>
+          <ul class="space-y-2">
+            <li><a href="#katalog" onclick="setSeriesFilter('AL')" class="hover:text-gold-400 transition-colors">Trezory AL & AN (I. trieda)</a></li>
+            <li><a href="#katalog" onclick="setSeriesFilter('AP')" class="hover:text-gold-400 transition-colors">Ohňovzdorné trezory AP</a></li>
+            <li><a href="#katalog" onclick="setSeriesFilter('BG')" class="hover:text-gold-400 transition-colors">Trezory BG & BM (II. trieda)</a></li>
+            <li><a href="#katalog" onclick="setSeriesFilter('CM')" class="hover:text-gold-400 transition-colors">Bankové trezory CM (III. trieda)</a></li>
+            <li><a href="#katalog" onclick="setSeriesFilter('Stenové')" class="hover:text-gold-400 transition-colors">Stenové trezory AMS</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-bold text-white mb-3 uppercase tracking-wider text-xs">Dôležité informácie</h4>
+          <ul class="space-y-2">
+            <li><a href="#triedy" class="hover:text-gold-400 transition-colors">Bezpečnostné triedy EN 1143-1</a></li>
+            <li><a href="#zamky" class="hover:text-gold-400 transition-colors">Návod k zámkom M-LOCKS</a></li>
+            <li><a href="#doprava-montaz" class="hover:text-gold-400 transition-colors">Kotvenie a montáž trezorov</a></li>
+            <li><a href="#faq" class="hover:text-gold-400 transition-colors">Poistné limity a podmienky</a></li>
+            <li><a href="https://katalog.eurotrezor.com/img/cms/Wertheim_Safe-Collection_EN.pdf" target="_blank" class="hover:text-gold-400 transition-colors">Katalóg Wertheim PDF</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-bold text-white mb-3 uppercase tracking-wider text-xs">Kontakt Šurany</h4>
+          <div class="space-y-2">
+            <div>Industry NWT, s. r. o.</div>
+            <div>ul. Chalúpkova 501/4, 942 01 Šurany</div>
+            <div class="text-gold-400 font-mono font-bold">+421 908 750 500</div>
+            <div>office@eurotrezor.com</div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-slate-400">
+        <div>
+          © 2026 Industry NWT, s. r. o. | Všetky práva vyhradené. Oficiálny partner Wertheim.
+        </div>
+        <div class="flex gap-4 text-slate-400">
+          <a href="#top" class="hover:text-slate-300">Hore ↑</a>
+          <span>|</span>
+          <span>GDPR & Ochrana súkromia</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== QUICK VIEW MODAL ==================== -->
+  <div id="quickViewModal" class="hidden fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="glass-card rounded-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto border border-white/10 shadow-2xl p-6 sm:p-8 relative">
+      <button onclick="closeProductModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white p-2 text-xl font-bold">✕</button>
+      
+      <div id="modalContent">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== COMPARISON DRAWER / MODAL ==================== -->
+  <div id="compareDrawer" class="hidden fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="glass-card rounded-2xl max-w-5xl w-full max-h-[90vh] overflow-y-auto border border-white/10 shadow-2xl p-6 sm:p-8 relative">
+      <div class="flex items-center justify-between pb-4 border-b border-white/10 mb-6">
+        <div>
+          <span class="text-xs font-mono text-gold-400 uppercase">Porovnávač modelov</span>
+          <h3 class="text-2xl font-display font-bold text-white">Technické porovnanie trezorov</h3>
+        </div>
+        <button onclick="toggleCompareDrawer()" class="text-slate-400 hover:text-white p-2 text-xl font-bold">✕</button>
+      </div>
+
+      <div id="compareTableContainer" class="overflow-x-auto">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== INQUIRY / CART DRAWER ==================== -->
+  <div id="inquiryModal" class="hidden fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="glass-card rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto border border-white/10 shadow-2xl p-6 sm:p-8 relative space-y-6">
+      
+      <div class="flex items-center justify-between pb-4 border-b border-white/10">
+        <div>
+          <span class="text-xs font-mono text-gold-400 uppercase">Dopytový Košík</span>
+          <h3 class="text-2xl font-display font-bold text-white">Vaša nezáväzná cenová ponuka</h3>
+        </div>
+        <button onclick="toggleInquiryModal()" class="text-slate-400 hover:text-white p-2 text-xl font-bold">✕</button>
+      </div>
+
+      <!-- Items List -->
+      <div id="cartItemsList" class="space-y-3 divide-y divide-white/5">
+        <!-- Rendered by JS -->
+      </div>
+
+      <!-- Services in Cart -->
+      <div id="cartServices" class="p-3.5 rounded-xl bg-vault-900 border border-white/5 text-xs text-slate-300 hidden">
+        <div class="flex items-center justify-between">
+          <span class="font-medium" id="cartServicesLabel">Doprava a kotvenie</span>
+          <span class="font-mono font-bold text-gold-400" id="cartServicesPrice">0 €</span>
+        </div>
+      </div>
+
+      <!-- Cart Totals -->
+      <div class="p-4 rounded-xl bg-vault-950 border border-gold-500/30 space-y-2">
+        <div class="flex justify-between text-xs text-slate-400">
+          <span>Suma bez DPH:</span>
+          <span class="font-mono text-slate-300" id="cartSubtotal">0 €</span>
+        </div>
+        <div class="flex justify-between text-xs text-slate-400">
+          <span>DPH (20%):</span>
+          <span class="font-mono text-slate-300" id="cartVat">0 €</span>
+        </div>
+        <div class="flex justify-between text-base font-bold text-white pt-2 border-t border-white/10">
+          <span>Predpokladaná cena s DPH:</span>
+          <span class="font-mono text-gold-400 text-xl" id="cartTotal">0 €</span>
+        </div>
+      </div>
+
+      <!-- Inquiry Submission Form -->
+      <form onsubmit="submitInquiryCart(event)" class="space-y-4 pt-2">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <input type="text" id="cartName" required placeholder="Vaše Meno / Spoločnosť *" class="bg-vault-850 border border-white/10 rounded-xl px-3.5 py-2.5 text-xs text-white focus:outline-none focus:border-gold-500">
+          <input type="tel" id="cartPhone" required placeholder="Telefón *" class="bg-vault-850 border border-white/10 rounded-xl px-3.5 py-2.5 text-xs text-white focus:outline-none focus:border-gold-500">
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <input type="email" id="cartEmail" required placeholder="E-mail *" class="bg-vault-850 border border-white/10 rounded-xl px-3.5 py-2.5 text-xs text-white focus:outline-none focus:border-gold-500">
+          <input type="text" id="cartAddress" placeholder="Mesto / PSČ doručenia" class="bg-vault-850 border border-white/10 rounded-xl px-3.5 py-2.5 text-xs text-white focus:outline-none focus:border-gold-500">
+        </div>
+        <textarea id="cartNotes" rows="2" placeholder="Doplňujúca poznámka (požadovaný zámok, termín, poschodie...)" class="w-full bg-vault-850 border border-white/10 rounded-xl px-3.5 py-2.5 text-xs text-white focus:outline-none focus:border-gold-500"></textarea>
+
+        <div class="flex gap-3">
+          <button type="submit" class="flex-1 py-3 rounded-xl bg-gold-500 hover:bg-gold-400 text-vault-950 font-bold text-xs uppercase tracking-wider transition-colors">
+            Odoslať dopyt na ponuku
+          </button>
+          <button type="button" onclick="printQuote()" class="px-4 py-3 rounded-xl bg-vault-800 hover:bg-vault-700 text-slate-300 text-xs font-semibold flex items-center gap-1.5 transition-colors" title="Vytlačiť ponuku">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path></svg>
+            Tlačiť
+          </button>
+        </div>
+      </form>
+
+    </div>
+  </div>
+
+  <!-- Notification Toast -->
+  <div id="toast" class="fixed bottom-5 right-5 z-50 hidden px-5 py-3 rounded-xl bg-vault-800 border border-gold-500/50 text-white text-xs font-medium shadow-2xl flex items-center gap-2 transform translate-y-2 transition-all">
+    <span class="text-gold-400">✓</span>
+    <span id="toastMsg">Produkt pridaný do dopytu</span>
+  </div>
+
+  <!-- ==================== JAVASCRIPT APP LOGIC ==================== -->
+  <script>
+    // Embedded 54 Real Products Dataset
+    const ALL_PRODUCTS = [
+  {
+    "id": "al03_0",
+    "name": "AL03",
+    "series": "AL",
+    "grade": "I. Bezpečnostná trieda",
+    "gradeBadge": "I. Trieda",
+    "insurance": "do 40 000 €",
+    "fire": false,
+    "fireBadge": null,
+    "fireDetails": "Konštrukčná ochrana pred sálavým teplom a dymom.",
+    "type": "Voľnestojaci nábytkový / trezor",
+    "price": "1 043 €",
+    "priceNum": 1043,
+    "vonkajsieRozmery": "280 x 400 x 312 mm",
+    "vnutorneRozmery": "230 x 350 x 180 mm",
+    "objem": "14 l",
+    "volumeNum": 14,
+    "vaha": "55 kg",
+    "weightNum": 55,
+    "dobaDodania": "3-4 týždne",
+    "img": "https://katalog.eurotrezor.com/298-home_default/al03.jpg",
+    "localImg": "images/al03.jpg",
+    "tags": [
+      "Kompaktný"
+    ],
+    "features": [
+      "Certifikované VdS Nemecko & ECB•S podľa normy EN 1143-1",
+      "Viacplášťové pancierovanie dverí a korpusu s mangánovou ochranou zámku",
+      "Príprava na ukotvenie do podlahy / steny vrátane certifikovaných kotiev",
+      "Trojstranný masívny závorový rozvorový mechanizmus s pasívnym relockerom",
+      "Štandardne dodávané s certifikovaným trezorovým zámkom na kľúč (2 kľúče)"
+    ]
+  },
+  {
+    "id": "al05_1",
+    "name": "AL05",
+    "series": "AL",
+    "grade": "I. Bezpečnostná trieda",
+    "gradeBadge": "I. Trieda",
+    "insurance": "do 40 000 €",
+    "fire": false,
+    "fireBadge": null,
+    "fireDetails": "Konštrukčná ochrana pred sálavým teplom a dymom.",
+    "type": "Voľnestojaci nábytkový / trezor",
+    "price": "1 128 €",
+    "priceNum": 1128,
+    "vonkajsieRozmery": "280 x 450 x 442 mm",
+    "vnutorneRozmery": "230 x 400 x 310 mm",
+    "objem": "29 l",
+    "volumeNum": 29,
+    "vaha": "70 kg",
+    "weightNum": 70,
+    "dobaDodania": "3-4 týždne",
+    "img": "https://katalog.eurotrezor.com/308-home_default/al05.jpg",
+    "localImg": "images/al05.jpg",
+    "tags": [
+      "Kompaktný"
+    ],
+    "features": [
+      "Certifikované VdS Nemecko & ECB•S podľa normy EN 1143-1",
+      "Viacplášťové pancierovanie dverí a korpusu s mangánovou ochranou zámku",
+      "Príprava na ukotvenie do podlahy / steny vrátane certifikovaných kotiev",
+      "Trojstranný masívny závorový rozvorový mechanizmus s pasívnym relockerom",
+      "Štandardne dodávané s certifikovaným trezorovým zámkom na kľúč (2 kľúče)"
+    ]
+  },
+  {
+    "id": "al10_2",
+    "name": "AL10",
+    "series": "AL",
+    "grade": "I. Bezpečnostná trieda",
+    "gradeBadge": "I. Trieda",
+    "insurance": "do 40 000 €",
+    "fire": false,
+    "fireBadge": null,
+    "fireDetails": "Konštrukčná ochrana pred sálavým teplom a dymom.",
+    "type": "Voľnestojaci nábytkový / trezor",
+    "price": "1 244 €",
+    "priceNum": 1244,
+    "vonkajsieRozmery": "395 x 450 x 442 mm",
+    "vnutorneRozmery": "345 x 400 x 310 mm",
+    "objem": "43 l",
+    "volumeNum": 43,
+    "vaha": "90 kg",
+    "weightNum": 90,
+    "dobaDodania": "3-4 týždne",
+    "img": "https://katalog.eurotrezor.com/318-home_default/al10.jpg",
+    "localImg": "images/al10.jpg",
+    "tags": [
+      "Univerzálny"
+    ],
+    "features": [
+      "Certifikované VdS Nemecko & ECB•S podľa normy EN 1143-1",
+      "Viacplášťové pancierovanie dverí a korpusu s mangánovou ochranou zámku",
+      "Príprava na ukotvenie do podlahy / steny vrátane certifikovaných kotiev",
+      "Trojstranný masívny závorový rozvorový mechanizmus s pasívnym relockerom",
+      "Štandardne dodávané s certifikovaným trezorovým zámkom na kľúč (2 kľúče)"
+    ]
+  },
+  {
+    "id": "al15_3",
+    "name": "AL15",
+    "series": "AL",
+    "grade": "I. Bezpečnostná trieda",
+    "gradeBadge": "I. Trieda",
+    "insurance": "do 40 000 €",
+    "fire": false,
+    "fireBadge": null,
+    "fireDetails": "Konštrukčná ochrana pred sálavým teplom a dymom.",
+    "type": "Voľnestojaci nábytkový / trezor",
+    "price": "1 403 €",
+    "priceNum": 1403,
+    "vonkajsieRozmery": "565 x 450 x 442 mm",
+    "vnutorneRozmery": "515 x 400 x 310 mm",
+    "objem": "64 l",
+    "volumeNum": 64,
+    "vaha": "115 kg",
+    "weightNum": 115,
+    "dobaDodania": "3-4 týždne",
+    "img": "https://katalog.eurotrezor.com/329-home_default/al15.jpg",
+    "localImg": "images/al15.jpg",
+    "tags": [
+      "Univerzálny"
+    ],
+    "features": [
+      "Certifikované VdS Nemecko & ECB•S podľa normy EN 1143-1",
+      "Viacplášťové pancierovanie dverí a korpusu s mangánovou ochranou zámku",
+      "Príprava na ukotvenie do podlahy / steny vrátane certifikovaných kotiev",
+      "Trojstranný masívny závorový rozvorový mechanizmus s pasívnym relockerom",
+      "Štandardne dodávané s certifikovaným trezorovým zámkom na kľúč (2 kľúče)"
+    ]
+  },
+  {
+    "id": "al20_4",
+    "name": "AL20",
+    "series": "AL",
+    "grade": "I. Bezpečnostná trieda",
+    "gradeBadge": "I. Trieda",
+    "insurance": "do 40 000 €",
+    "fire": false,
+    "fireBadge": null,
+    "fireDetails": "Konštrukčná ochrana pred sálavým teplom a dymom.",
+    "type": "Voľnestojaci nábytkový / trezor",
+    "price": "1 755 €",
+    "priceNum": 1755,
+    "vonkajsieRozmery": "735 x 450 x 442 mm",
+    "vnutorneRozmery": "685 x 400 x 310 mm",
+    "objem": "85 l",
+    "volumeNum": 85,
+    "vaha": "140 kg",
+    "weightNum": 140,
+    "dobaDodania": "3-4 týždne",
+    "img": "https://katalog.eurotrezor.com/341-home_default/al20.jpg",
+    "localImg": "images/al20.jpg",
+    "tags": [
+      "Univerzálny"
+    ],
+    "features": [
+      "Certifikované VdS Nemecko & ECB•S podľa normy EN 1143-1",
+      "Viacplášťové pancierovanie dverí a korpusu s mangánovou ochranou zámku",
+      "Príprava na ukotvenie do podlahy / steny vrátane certifikovaných kotiev",
+      "Trojstranný masívny závorový rozvorový mechanizmus s pasívnym relockerom",
+      "Štandardne dodávané s certifikovaným trezorovým zámkom na kľúč (2 kľúče)"
+    ]
+  },
+  {
+    "id": "al25_5",
+    "name": "AL25",
+    "series": "AL",
+    "grade": "I. Bezpečnostná trieda",
+    "gradeBadge": "I. Trieda",
+    "insurance": "do 40 000 €",
+    "fire": false,
+    "fireBadge": null,
+    "fireDetails": "Konštrukčná ochrana pred sálavým teplom a dymom.",
+    "type": "Voľnestojaci nábytkový / trezor",
+    "price": "1 958 €",
+    "priceNum": 1958,
+    "vonkajsieRozmery": "905 x 450 x 442 mm",
+    "vnutorneRozmery": "855 x 400 x 310 mm",
+    "objem": "106 l",
+    "volumeNum": 106,
+    "vaha": "170 kg",
+    "weightNum": 170,
+    "dobaDodania": "3-4 týždne",
+    "img": "https://katalog.eurotrezor.com/353-home_default/al25.jpg",
+    "localImg": "images/al25.jpg",
+    "tags": [
+      "Univerzálny"
+    ],
+    "features": [
+      "Certifikované VdS Nemecko & ECB•S podľa normy EN 1143-1",
+      "Viacplášťové pancierovanie dverí a korpusu s mangánovou ochranou zámku",
+      "Príprava na ukotvenie do podlahy / steny vrátane certifikovaných kotiev",
+      "Trojstranný masívny závorový rozvorový mechanizmus s pasívnym relockerom",
+      "Štandardne dodávané s certifikovaným trezorovým zámkom na kľúč (2 kľúče)"
+    ]
+  },
+  {
+    "id": "al30_6",
+    "name": "AL30",
+    "series": "AL",
+    "grade": "I. Bezpečnostná trieda",
+    "gradeBadge": "I. Trieda",
+    "insurance": "do 40 000 €",
+    "fire": false,
+    "fireBadge": null,
+    "fireDetails": "Konštrukčná ochrana pred sálavým teplom a dymom.",
+    "type": "Voľnestojaci nábytkový / trezor",
+    "price": "2 140 €",
+    "priceNum": 2140,
+    "vonkajsieRozmery": "1075 x 450 x 442 mm",
+    "vnutorneRozmery": "1025 x 400 x 310 mm",
+    "objem": "127 l",
+    "volumeNum": 127,
+    "vaha": "195 kg",
+    "weightNum": 195,
+    "dobaDodania": "3-4 týždne",
+    "img": "https://katalog.eurotrezor.com/365-home_default/al30.jpg",
+    "localImg": "images/al30.jpg",
+    "tags": [
+      "Univerzálny"
+    ],
+    "features": [
+      "Certifikované VdS Nemecko & ECB•S podľa normy EN 1143-1",
+      "Viacplášťové pancierovanie dverí a korpusu s mangánovou ochranou zámku",
+      "Príprava na ukotvenie do podlahy / steny vrátane certifikovaných kotiev",
+      "Trojstranný masívny závorový rozvorový mechanizmus s pasívnym relockerom",
+      "Štandardne dodávané s certifikovaným trezorovým zámkom na kľúč (2 kľúče)"
+    ]
+  },
+  {
+    "id": "al35_7",
+    "name": "AL35",
+    "series": "AL",
+    "grade": "I. Bezpečnostná trieda",
+    "gradeBadge": "I. Trieda",
+    "insurance": "do 40 000 €",
+    "fire": false,
+    "fireBadge": null,
+    "fireDetails": "Konštrukčná ochrana pred sálavým teplom a dymom.",
+    "type": "Voľnestojaci nábytkový / trezor",
+    "price": "2 344 €",
+    "priceNum": 2344,
+    "vonkajsieRozmery": "1245 x 450 x 442 mm",
+    "vnutorneRozmery": "1195 x 400 x 310 mm",
+    "objem": "148 l",
+    "volumeNum": 148,
+    "vaha": "220 kg",
+    "weightNum": 220,
+    "dobaDodania": "3-4 týždne",
+    "img": "https://katalog.eurotrezor.com/377-home_default/al35.jpg",
+    "localImg": "images/al35.jpg",
+    "tags": [
+      "Ťažká pancierová ochrana"
+    ],
+    "features": [
+      "Certifikované VdS Nemecko & ECB•S podľa normy EN 1143-1",
+      "Viacplášťové pancierovanie dverí a korpusu s mangánovou ochranou zámku",
+      "Príprava na ukotvenie do podlahy / steny vrátane certifikovaných kotiev",
+      "Trojstranný masívny závorový rozvorový mechanizmus s pasívnym relockerom",
+      "Štandardne dodávané s certifikovaným trezorovým zámkom na kľúč (2 kľúče)"
+    ]
+  },
+  {
+    "id": "al40_8",
+    "name": "AL40",
+    "series": "AL",
+    "grade": "I. Bezpečnostná trieda",
+    "gradeBadge": "I. Trieda",
+    "insurance": "do 40 000 €",
+    "fire": false,
+    "fireBadge": null,
+    "fireDetails": "Konštrukčná ochrana pred sálavým teplom a dymom.",
+    "type": "Voľnestojaci nábytkový / trezor",
+    "price": "2 529 €",
+    "priceNum": 2529,
+    "vonkajsieRozmery": "1415 x 450 x 442 mm",
+    "vnutorneRozmery": "1365 x 400 x 310 mm",
+    "objem": "169 l",
+    "volumeNum": 169,
+    "vaha": "245 kg",
+    "weightNum": 245,
+    "dobaDodania": "3-4 týždne",
+    "img": "https://katalog.eurotrezor.com/388-home_default/al40.jpg",
+    "localImg": "images/al40.jpg",
+    "tags": [
+      "Ťažká pancierová ochrana"
+    ],
+    "features": [
+      "Certifikované VdS Nemecko & ECB•S podľa normy EN 1143-1",
+      "Viacplášťové pancierovanie dverí a korpusu s mangánovou ochranou zámku",
+      "Príprava na ukotvenie do podlahy / steny vrátane certifikovaných kotiev",
+      "Trojstranný masívny závorový rozvorový mechanizmus s pasívnym relockerom",
+      "Štandardne dodávané s certifikovaným trezorovým zámkom na kľúč (2 kľúče)"
+    ]
+  },
+  {
+    "id": "an10_9",
+    "name": "AN10",
+    "series": "AN",
+    "grade": "I. Bezpečnostná trieda",
+    "gradeBadge": "I. Trieda",
+    "insurance": "do 40 000 €",
+    "fire": false,
+    "fireBadge": null,
+    "fireDetails": "Konštrukčná ochrana pred sálavým teplom a dymom.",
+    "type": "Kompaktný trezor",
+    "price": "1 371 €",
+    "priceNum": 1371,
+    "vonkajsieRozmery": "395 x 545 x 442 mm",
+    "vnutorneRozmery": "345 x 495 x 310 mm",
+    "objem": "53 l",
+    "volumeNum": 53,
+    "vaha": "100 kg",
+    "weightNum": 100,
+    "dobaDodania": "3-4 týždne",
+    "img": "https://katalog.eurotrezor.com/398-home_default/an10.jpg",
+    "localImg": "images/an10.jpg",
+    "tags": [
+      "Univerzálny"
+    ],
+    "features": [
+      "Certifikované VdS Nemecko & ECB•S podľa normy EN 1143-1",
+      "Viacplášťové pancierovanie dverí a korpusu s mangánovou ochranou zámku",
+      "Príprava na ukotvenie do podlahy / steny vrátane certifikovaných kotiev",
+      "Trojstranný masívny závorový rozvorový mechanizmus s pasívnym relockerom",
+      "Štandardne dodávané s certifikovaným trezorovým zámkom na kľúč (2 kľúče)"
+    ]
+  },
+  {
+    "id": "an15_10",
+    "name": "AN15",
+    "series": "AN",
+    "grade": "I. Bezpečnostná trieda",
+    "gradeBadge": "I. Trieda",
+    "insurance": "do 40 000 €",
+    "fire": false,
+    "fireBadge": null,
+    "fireDetails": "Konštrukčná ochrana pred sálavým teplom a dymom.",
+    "type": "Kompaktný trezor",
+    "price": "1 557 €",
+    "priceNum": 1557,
+    "vonkajsieRozmery": "565 x 545 x 442 mm",
+    "vnutorneRozmery": "515 x 495 x 310 mm",
+    "objem": "79 l",
+    "volumeNum": 79,
+    "vaha": "130 kg",
+    "weightNum": 130,
+    "dobaDodania": "3-4 týždne",
+    "img": "https://katalog.eurotrezor.com/401-home_default/an15.jpg",
+    "localImg": "images/an15.jpg",
+    "tags": [
+      "Univerzálny"
+    ],
+    "features": [
+      "Certifikované VdS Nemecko & ECB•S podľa normy EN 1143-1",
+      "Viacplášťové pancierovanie dverí a korpusu s mangánovou ochranou zámku",
+      "Príprava na ukotvenie do podlahy / steny vrátane certifikovaných kotiev",
+      "Trojstranný masívny závorový rozvorový mechanizmus s pasívnym relockerom",
+      "Štandardne dodávané s certifikovaným trezorovým zámkom na kľúč (2 kľúče)"
+    ]
+  },
+  {
+    "id": "an20_11",
+    "name": "AN20",
+    "series": "AN",
+    "grade": "I. Bezpečnostná trieda",
+    "gradeBadge": "I. Trieda",
+    "insurance": "do 40 000 €",
+    "fire": false,
+    "fireBadge": null,
+    "fireDetails": "Konštrukčná ochrana pred sálavým teplom a dymom.",
+    "type": "Kompaktný trezor",
+    "price": "1 929 €",
+    "priceNum": 1929,
+    "vonkajsieRozmery": "735 x 545 x 442 mm",
+    "vnutorneRozmery": "685 x 495 x 310 mm",
+    "objem": "105 l",
+    "volumeNum": 105,
+    "vaha": "160 kg",
+    "weightNum": 160,
+    "dobaDodania": "3-4 týždne",
+    "img": "https://katalog.eurotrezor.com/404-home_default/an20.jpg",
+    "localImg": "images/an20.jpg",
+    "tags": [
+      "Univerzálny"
+    ],
+    "features": [
+      "Certifikované VdS Nemecko & ECB•S podľa normy EN 1143-1",
+      "Viacplášťové pancierovanie dverí a korpusu s mangánovou ochranou zámku",
+      "Príprava na ukotvenie do podlahy / steny vrátane certifikovaných kotiev",
+      "Trojstranný masívny závorový rozvorový mechanizmus s pasívnym relockerom",
+      "Štandardne dodávané s certifikovaným trezorovým zámkom na kľúč (2 kľúče)"
+    ]
+  },
+  {
+    "id": "an25_12",
+    "name": "AN25",
+    "series": "AN",
+    "grade": "I. Bezpečnostná trieda",
+    "gradeBadge": "I. Trieda",
+    "insurance": "do 40 000 €",
+    "fire": false,
+    "fireBadge": null,
+    "fireDetails": "Konštrukčná ochrana pred sálavým teplom a dymom.",
+    "type": "Kompaktný trezor",
+    "price": "2 161 €",
+    "priceNum": 2161,
+    "vonkajsieRozmery": "905 x 545 x 442 mm",
+    "vnutorneRozmery": "855 x 495 x 310 mm",
+    "objem": "131 l",
+    "volumeNum": 131,
+    "vaha": "190 kg",
+    "weightNum": 190,
+    "dobaDodania": "3-4 týždne",
+    "img": "https://katalog.eurotrezor.com/408-home_default/an25.jpg",
+    "localImg": "images/an25.jpg",
+    "tags": [
+      "Univerzálny"
+    ],
+    "features": [
+      "Certifikované VdS Nemecko & ECB•S podľa normy EN 1143-1",
+      "Viacplášťové pancierovanie dverí a korpusu s mangánovou ochranou zámku",
+      "Príprava na ukotvenie do podlahy / steny vrátane certifikovaných kotiev",
+      "Trojstranný masívny závorový rozvorový mechanizmus s pasívnym relockerom",
+      "Štandardne dodávané s certifikovaným trezorovým zámkom na kľúč (2 kľúče)"
+    ]
+  },
+  {
+    "id": "an30_13",
+    "name": "AN30",
+    "series": "AN",
+    "grade": "I. Bezpečnostná trieda",
+    "gradeBadge": "I. Trieda",
+    "insurance": "do 40 000 €",
+    "fire": false,
+    "fireBadge": null,
+    "fireDetails": "Konštrukčná ochrana pred sálavým teplom a dymom.",
+    "type": "Kompaktný trezor",
+    "price": "2 368 €",
+    "priceNum": 2368,
+    "vonkajsieRozmery": "1075 x 545 x 44 mm",
+    "vnutorneRozmery": "1025 x 495 x 310 mm",
+    "objem": "157 l",
+    "volumeNum": 157,
+    "vaha": "220 kg",
+    "weightNum": 220,
+    "dobaDodania": "3-4 týždne",
+    "img": "https://katalog.eurotrezor.com/411-home_default/an30.jpg",
+    "localImg": "images/an30.jpg",
+    "tags": [
+      "Ťažká pancierová ochrana"
+    ],
+    "features": [
+      "Certifikované VdS Nemecko & ECB•S podľa normy EN 1143-1",
+      "Viacplášťové pancierovanie dverí a korpusu s mangánovou ochranou zámku",
+      "Príprava na ukotvenie do podlahy / steny vrátane certifikovaných kotiev",
+      "Trojstranný masívny závorový rozvorový mechanizmus s pasívnym relockerom",
+      "Štandardne dodávané s certifikovaným trezorovým zámkom na kľúč (2 kľúče)"
+    ]
+  },
+  {
+    "id": "an35_14",
+    "name": "AN35",
+    "series": "AN",
+    "grade": "I. Bezpečnostná trieda",
+    "gradeBadge": "I. Trieda",
+    "insurance": "do 40 000 €",
+    "fire": false,
+    "fireBadge": null,
+    "fireDetails": "Konštrukčná ochrana pred sálavým teplom a dymom.",
+    "type": "Kompaktný trezor",
+    "price": "2 595 €",
+    "priceNum": 2595,
+    "vonkajsieRozmery": "1245 x 545 x 442 mm",
+    "vnutorneRozmery": "1195 x 495 x 310 mm",
+    "objem": "183 l",
+    "volumeNum": 183,
+    "vaha": "250 kg",
+    "weightNum": 250,
+    "dobaDodania": "3-4 týždne",
+    "img": "https://katalog.eurotrezor.com/415-home_default/an35.jpg",
+    "localImg": "images/an35.jpg",
+    "tags": [
+      "Ťažká pancierová ochrana"
+    ],
+    "features": [
+      "Certifikované VdS Nemecko & ECB•S podľa normy EN 1143-1",
+      "Viacplášťové pancierovanie dverí a korpusu s mangánovou ochranou zámku",
+      "Príprava na ukotvenie do podlahy / steny vrátane certifikovaných kotiev",
+      "Trojstranný masívny závorový rozvorový mechanizmus s pasívnym relockerom",
+      "Štandardne dodávané s certifikovaným trezorovým zámkom na kľúč (2 kľúče)"
+    ]
+  },
+  {
+    "id": "an40_15",
+    "name": "AN40",
+    "series": "AN",
+    "grade": "I. Bezpečnostná trieda",
+    "gradeBadge": "I. Trieda",
+    "insurance": "do 40 000 €",
+    "fire": false,
+    "fireBadge": null,
+    "fireDetails": "Konštrukčná ochrana pred sálavým teplom a dymom.",
+    "type": "Kompaktný trezor",
+    "price": "2 787 €",
+    "priceNum": 2787,
+    "vonkajsieRozmery": "1415 x 545 x 442 mm",
+    "vnutorneRozmery": "1365 x 495 x 310 mm",
+    "objem": "209 l",
+    "volumeNum": 209,
+    "vaha": "280 kg",
+    "weightNum": 280,
+    "dobaDodania": "3-4 týždne",
+    "img": "https://katalog.eurotrezor.com/418-home_default/an40.jpg",
+    "localImg": "images/an40.jpg",
+    "tags": [
+      "Ťažká pancierová ochrana"
+    ],
+    "features": [
+      "Certifikované VdS Nemecko & ECB•S podľa normy EN 1143-1",
+      "Viacplášťové pancierovanie dverí a korpusu s mangánovou ochranou zámku",
+      "Príprava na ukotvenie do podlahy / steny vrátane certifikovaných kotiev",
+      "Trojstranný masívny závorový rozvorový mechanizmus s pasívnym relockerom",
+      "Štandardne dodávané s certifikovaným trezorovým zámkom na kľúč (2 kľúče)"
+    ]
+  },
+  {
+    "id": "ap10_16",
+    "name": "AP10",
+    "series": "AP",
+    "grade": "I. Bezpečnostná trieda",
+    "gradeBadge": "I. Trieda",
+    "insurance": "do 40 000 €",
+    "fire": true,
+    "fireBadge": "LFS 60P (60 min)",
+    "fireDetails": "Certifikovaná požiarna ochrana podľa EN 15659 (LFS 60P (60 min)) testovaná pri teplote 1 090 °C pre dokumenty.",
+    "type": "Ohňovzdorný certifikovaný trezor",
+    "price": "1 708 €",
+    "priceNum": 1708,
+    "vonkajsieRozmery": "474 x 605 x 522 mm",
+    "vnutorneRozmery": "360 x 495 x 310 mm",
+    "objem": "55 l",
+    "volumeNum": 55,
+    "vaha": "180 kg",
+    "weightNum": 180,
+    "dobaDodania": "3-4 týždne",
+    "img": "https://katalog.eurotrezor.com/422-home_default/ap10.jpg",
+    "localImg": "images/ap10.jpg",
+    "tags": [
+      "Univerzálny",
+      "Ohňovzdorný"
+    ],
+    "features": [
+      "Certifikované VdS Nemecko & ECB•S podľa normy EN 1143-1",
+      "Viacplášťové pancierovanie dverí a korpusu s mangánovou ochranou zámku",
+      "Príprava na ukotvenie do podlahy / steny vrátane certifikovaných kotiev",
+      "Trojstranný masívny závorový rozvorový mechanizmus s pasívnym relockerom",
+      "Štandardne dodávané s certifikovaným trezorovým zámkom na kľúč (2 kľúče)"
+    ]
+  },
+  {
+    "id": "ap15_17",
+    "name": "AP15",
+    "series": "AP",
+    "grade": "I. Bezpečnostná trieda",
+    "gradeBadge": "I. Trieda",
+    "insurance": "do 40 000 €",
+    "fire": true,
+    "fireBadge": "LFS 30P (30 min)",
+    "fireDetails": "Certifikovaná požiarna ochrana podľa EN 15659 (LFS 30P (30 min)) testovaná pri teplote 1 090 °C pre dokumenty.",
+    "type": "Ohňovzdorný certifikovaný trezor",
+    "price": "2 034 €",
+    "priceNum": 2034,
+    "vonkajsieRozmery": "629 x 605 x 522 mm",
+    "vnutorneRozmery": "515 x 495 x 310 mm",
+    "objem": "79 l",
+    "volumeNum": 79,
+    "vaha": "220 kg",
+    "weightNum": 220,
+    "dobaDodania": "3-4 týždne",
+    "img": "https://katalog.eurotrezor.com/425-home_default/ap15.jpg",
+    "localImg": "images/ap15.jpg",
+    "tags": [
+      "Ťažká pancierová ochrana",
+      "Ohňovzdorný"
+    ],
+    "features": [
+      "Certifikované VdS Nemecko & ECB•S podľa normy EN 1143-1",
+      "Viacplášťové pancierovanie dverí a korpusu s mangánovou ochranou zámku",
+      "Príprava na ukotvenie do podlahy / steny vrátane certifikovaných kotiev",
+      "Trojstranný masívny závorový rozvorový mechanizmus s pasívnym relockerom",
+      "Štandardne dodávané s certifikovaným trezorovým zámkom na kľúč (2 kľúče)"
+    ]
+  },
+  {
+    "id": "ap20_18",
+    "name": "AP20",
+    "series": "AP",
+    "grade": "I. Bezpečnostná trieda",
+    "gradeBadge": "I. Trieda",
+    "insurance": "do 40 000 €",
+    "fire": true,
+    "fireBadge": "LFS 30P (30 min)",
+    "fireDetails": "Certifikovaná požiarna ochrana podľa EN 15659 (LFS 30P (30 min)) testovaná pri teplote 1 090 °C pre dokumenty.",
+    "type": "Ohňovzdorný certifikovaný trezor",
+    "price": "2 461 €",
+    "priceNum": 2461,
+    "vonkajsieRozmery": "799 x 605 x 522 mm",
+    "vnutorneRozmery": "685 x 495 x 310 mm",
+    "objem": "105 l",
+    "volumeNum": 105,
+    "vaha": "260 kg",
+    "weightNum": 260,
+    "dobaDodania": "3-4 týždne",
+    "img": "https://katalog.eurotrezor.com/429-home_default/ap20.jpg",
+    "localImg": "images/ap20.jpg",
+    "tags": [
+      "Ťažká pancierová ochrana",
+      "Ohňovzdorný"
+    ],
+    "features": [
+      "Certifikované VdS Nemecko & ECB•S podľa normy EN 1143-1",
+      "Viacplášťové pancierovanie dverí a korpusu s mangánovou ochranou zámku",
+      "Príprava na ukotvenie do podlahy / steny vrátane certifikovaných kotiev",
+      "Trojstranný masívny závorový rozvorový mechanizmus s pasívnym relockerom",
+      "Štandardne dodávané s certifikovaným trezorovým zámkom na kľúč (2 kľúče)"
+    ]
+  },
+  {
+    "id": "ap25_19",
+    "name": "AP25",
+    "series": "AP",
+    "grade": "I. Bezpečnostná trieda",
+    "gradeBadge": "I. Trieda",
+    "insurance": "do 40 000 €",
+    "fire": true,
+    "fireBadge": "LFS 30P (30 min)",
+    "fireDetails": "Certifikovaná požiarna ochrana podľa EN 15659 (LFS 30P (30 min)) testovaná pri teplote 1 090 °C pre dokumenty.",
+    "type": "Ohňovzdorný certifikovaný trezor",
+    "price": "2 833 €",
+    "priceNum": 2833,
+    "vonkajsieRozmery": "969 x 605 x 522 mm",
+    "vnutorneRozmery": "855 x 495 x 310 mm",
+    "objem": "131 l",
+    "volumeNum": 131,
+    "vaha": "305 kg",
+    "weightNum": 305,
+    "dobaDodania": "3-4 týždne",
+    "img": "https://katalog.eurotrezor.com/432-home_default/ap25.jpg",
+    "localImg": "images/ap25.jpg",
+    "tags": [
+      "Ťažká pancierová ochrana",
+      "Ohňovzdorný"
+    ],
+    "features": [
+      "Certifikované VdS Nemecko & ECB•S podľa normy EN 1143-1",
+      "Viacplášťové pancierovanie dverí a korpusu s mangánovou ochranou zámku",
+      "Príprava na ukotvenie do podlahy / steny vrátane certifikovaných kotiev",
+      "Trojstranný masívny závorový rozvorový mechanizmus s pasívnym relockerom",
+      "Štandardne dodávané s certifikovaným trezorovým zámkom na kľúč (2 kľúče)"
+    ]
+  },
+  {
+    "id": "ap30_20",
+    "name": "AP30",
+    "series": "AP",
+    "grade": "I. Bezpečnostná trieda",
+    "gradeBadge": "I. Trieda",
+    "insurance": "do 40 000 €",
+    "fire": true,
+    "fireBadge": "LFS 30P (30 min)",
+    "fireDetails": "Certifikovaná požiarna ochrana podľa EN 15659 (LFS 30P (30 min)) testovaná pri teplote 1 090 °C pre dokumenty.",
+    "type": "Ohňovzdorný certifikovaný trezor",
+    "price": "3 070 €",
+    "priceNum": 3070,
+    "vonkajsieRozmery": "1139 x 605 x 522 mm",
+    "vnutorneRozmery": "1025 x 495 x 310 mm",
+    "objem": "157 l",
+    "volumeNum": 157,
+    "vaha": "350 kg",
+    "weightNum": 350,
+    "dobaDodania": "3-4 týždne",
+    "img": "https://katalog.eurotrezor.com/436-home_default/ap30.jpg",
+    "localImg": "images/ap30.jpg",
+    "tags": [
+      "Ťažká pancierová ochrana",
+      "Ohňovzdorný"
+    ],
+    "features": [
+      "Certifikované VdS Nemecko & ECB•S podľa normy EN 1143-1",
+      "Viacplášťové pancierovanie dverí a korpusu s mangánovou ochranou zámku",
+      "Príprava na ukotvenie do podlahy / steny vrátane certifikovaných kotiev",
+      "Trojstranný masívny závorový rozvorový mechanizmus s pasívnym relockerom",
+      "Štandardne dodávané s certifikovaným trezorovým zámkom na kľúč (2 kľúče)"
+    ]
+  },
+  {
+    "id": "ap35_21",
+    "name": "AP35",
+    "series": "AP",
+    "grade": "I. Bezpečnostná trieda",
+    "gradeBadge": "I. Trieda",
+    "insurance": "do 40 000 €",
+    "fire": true,
+    "fireBadge": "LFS 30P (30 min)",
+    "fireDetails": "Certifikovaná požiarna ochrana podľa EN 15659 (LFS 30P (30 min)) testovaná pri teplote 1 090 °C pre dokumenty.",
+    "type": "Ohňovzdorný certifikovaný trezor",
+    "price": "3 386 €",
+    "priceNum": 3386,
+    "vonkajsieRozmery": "1309 x 605 x 522 mm",
+    "vnutorneRozmery": "1195 x 495 x 310 mm",
+    "objem": "183 l",
+    "volumeNum": 183,
+    "vaha": "390 kg",
+    "weightNum": 390,
+    "dobaDodania": "3-4 týždne",
+    "img": "https://katalog.eurotrezor.com/439-home_default/ap35.jpg",
+    "localImg": "images/ap35.jpg",
+    "tags": [
+      "Ťažká pancierová ochrana",
+      "Ohňovzdorný"
+    ],
+    "features": [
+      "Certifikované VdS Nemecko & ECB•S podľa normy EN 1143-1",
+      "Viacplášťové pancierovanie dverí a korpusu s mangánovou ochranou zámku",
+      "Príprava na ukotvenie do podlahy / steny vrátane certifikovaných kotiev",
+      "Trojstranný masívny závorový rozvorový mechanizmus s pasívnym relockerom",
+      "Štandardne dodávané s certifikovaným trezorovým zámkom na kľúč (2 kľúče)"
+    ]
+  },
+  {
+    "id": "ap40_22",
+    "name": "AP40",
+    "series": "AP",
+    "grade": "I. Bezpečnostná trieda",
+    "gradeBadge": "I. Trieda",
+    "insurance": "do 40 000 €",
+    "fire": true,
+    "fireBadge": "LFS 30P (30 min)",
+    "fireDetails": "Certifikovaná požiarna ochrana podľa EN 15659 (LFS 30P (30 min)) testovaná pri teplote 1 090 °C pre dokumenty.",
+    "type": "Ohňovzdorný certifikovaný trezor",
+    "price": "3 614 €",
+    "priceNum": 3614,
+    "vonkajsieRozmery": "1479 x 605 x 522 mm",
+    "vnutorneRozmery": "1365 x 495 x 310 mm",
+    "objem": "209 l",
+    "volumeNum": 209,
+    "vaha": "435 kg",
+    "weightNum": 435,
+    "dobaDodania": "3-4 týždne",
+    "img": "https://katalog.eurotrezor.com/441-home_default/ap40.jpg",
+    "localImg": "images/ap40.jpg",
+    "tags": [
+      "Ťažká pancierová ochrana",
+      "Ohňovzdorný"
+    ],
+    "features": [
+      "Certifikované VdS Nemecko & ECB•S podľa normy EN 1143-1",
+      "Viacplášťové pancierovanie dverí a korpusu s mangánovou ochranou zámku",
+      "Príprava na ukotvenie do podlahy / steny vrátane certifikovaných kotiev",
+      "Trojstranný masívny závorový rozvorový mechanizmus s pasívnym relockerom",
+      "Štandardne dodávané s certifikovaným trezorovým zámkom na kľúč (2 kľúče)"
+    ]
+  },
+  {
+    "id": "bg10_23",
+    "name": "BG10",
+    "series": "BG",
+    "grade": "II. Bezpečnostná trieda",
+    "gradeBadge": "II. Trieda",
+    "insurance": "do 80 000 €",
+    "fire": false,
+    "fireBadge": null,
+    "fireDetails": "Konštrukčná ochrana pred sálavým teplom a dymom.",
+    "type": "Vysoko odolný bezpečnostný trezor",
+    "price": "1 755 €",
+    "priceNum": 1755,
+    "vonkajsieRozmery": "395 x 450 x 442 mm",
+    "vnutorneRozmery": "345 x 400 x 310 mm",
+    "objem": "43 l",
+    "volumeNum": 43,
+    "vaha": "120 kg",
+    "weightNum": 120,
+    "dobaDodania": "3-4 týždne",
+    "img": "https://katalog.eurotrezor.com/456-home_default/bg10.jpg",
+    "localImg": "images/bg10.jpg",
+    "tags": [
+      "Univerzálny"
+    ],
+    "features": [
+      "Certifikované VdS Nemecko & ECB•S podľa normy EN 1143-1",
+      "Viacplášťové pancierovanie dverí a korpusu s mangánovou ochranou zámku",
+      "Príprava na ukotvenie do podlahy / steny vrátane certifikovaných kotiev",
+      "Trojstranný masívny závorový rozvorový mechanizmus s pasívnym relockerom",
+      "Štandardne dodávané s certifikovaným trezorovým zámkom na kľúč (2 kľúče)"
+    ]
+  },
+  {
+    "id": "bg15_24",
+    "name": "BG15",
+    "series": "BG",
+    "grade": "II. Bezpečnostná trieda",
+    "gradeBadge": "II. Trieda",
+    "insurance": "do 80 000 €",
+    "fire": false,
+    "fireBadge": null,
+    "fireDetails": "Konštrukčná ochrana pred sálavým teplom a dymom.",
+    "type": "Vysoko odolný bezpečnostný trezor",
+    "price": "2 064 €",
+    "priceNum": 2064,
+    "vonkajsieRozmery": "565 x 450 x 442 mm",
+    "vnutorneRozmery": "515 x 400 x 310 mm",
+    "objem": "64 l",
+    "volumeNum": 64,
+    "vaha": "150 kg",
+    "weightNum": 150,
+    "dobaDodania": "3-4 týždne",
+    "img": "https://katalog.eurotrezor.com/462-home_default/bg15.jpg",
+    "localImg": "images/bg15.jpg",
+    "tags": [
+      "Univerzálny"
+    ],
+    "features": [
+      "Certifikované VdS Nemecko & ECB•S podľa normy EN 1143-1",
+      "Viacplášťové pancierovanie dverí a korpusu s mangánovou ochranou zámku",
+      "Príprava na ukotvenie do podlahy / steny vrátane certifikovaných kotiev",
+      "Trojstranný masívny závorový rozvorový mechanizmus s pasívnym relockerom",
+      "Štandardne dodávané s certifikovaným trezorovým zámkom na kľúč (2 kľúče)"
+    ]
+  },
+  {
+    "id": "bg20_25",
+    "name": "BG20",
+    "series": "BG",
+    "grade": "II. Bezpečnostná trieda",
+    "gradeBadge": "II. Trieda",
+    "insurance": "do 80 000 €",
+    "fire": false,
+    "fireBadge": null,
+    "fireDetails": "Konštrukčná ochrana pred sálavým teplom a dymom.",
+    "type": "Vysoko odolný bezpečnostný trezor",
+    "price": "2 321 €",
+    "priceNum": 2321,
+    "vonkajsieRozmery": "735 x 450 x 442 mm",
+    "vnutorneRozmery": "685 x 400 x 310 mm",
+    "objem": "85 l",
+    "volumeNum": 85,
+    "vaha": "180 kg",
+    "weightNum": 180,
+    "dobaDodania": "3-4 týždne",
+    "img": "https://katalog.eurotrezor.com/466-home_default/bg20.jpg",
+    "localImg": "images/bg20.jpg",
+    "tags": [
+      "Univerzálny"
+    ],
+    "features": [
+      "Certifikované VdS Nemecko & ECB•S podľa normy EN 1143-1",
+      "Viacplášťové pancierovanie dverí a korpusu s mangánovou ochranou zámku",
+      "Príprava na ukotvenie do podlahy / steny vrátane certifikovaných kotiev",
+      "Trojstranný masívny závorový rozvorový mechanizmus s pasívnym relockerom",
+      "Štandardne dodávané s certifikovaným trezorovým zámkom na kľúč (2 kľúče)"
+    ]
+  },
+  {
+    "id": "bg25_26",
+    "name": "BG25",
+    "series": "BG",
+    "grade": "II. Bezpečnostná trieda",
+    "gradeBadge": "II. Trieda",
+    "insurance": "do 80 000 €",
+    "fire": false,
+    "fireBadge": null,
+    "fireDetails": "Konštrukčná ochrana pred sálavým teplom a dymom.",
+    "type": "Vysoko odolný bezpečnostný trezor",
+    "price": "2 592 €",
+    "priceNum": 2592,
+    "vonkajsieRozmery": "905 x 450 x 442 mm",
+    "vnutorneRozmery": "855 x 400 x 310 mm",
+    "objem": "106 l",
+    "volumeNum": 106,
+    "vaha": "215 kg",
+    "weightNum": 215,
+    "dobaDodania": "3-4 týždne",
+    "img": "https://katalog.eurotrezor.com/470-home_default/bg25.jpg",
+    "localImg": "images/bg25.jpg",
+    "tags": [
+      "Ťažká pancierová ochrana"
+    ],
+    "features": [
+      "Certifikované VdS Nemecko & ECB•S podľa normy EN 1143-1",
+      "Viacplášťové pancierovanie dverí a korpusu s mangánovou ochranou zámku",
+      "Príprava na ukotvenie do podlahy / steny vrátane certifikovaných kotiev",
+      "Trojstranný masívny závorový rozvorový mechanizmus s pasívnym relockerom",
+      "Štandardne dodávané s certifikovaným trezorovým zámkom na kľúč (2 kľúče)"
+    ]
+  },
+  {
+    "id": "bg30_27",
+    "name": "BG30",
+    "series": "BG",
+    "grade": "II. Bezpečnostná trieda",
+    "gradeBadge": "II. Trieda",
+    "insurance": "do 80 000 €",
+    "fire": false,
+    "fireBadge": null,
+    "fireDetails": "Konštrukčná ochrana pred sálavým teplom a dymom.",
+    "type": "Vysoko odolný bezpečnostný trezor",
+    "price": "2 818 €",
+    "priceNum": 2818,
+    "vonkajsieRozmery": "1075 x 450 x 442 mm",
+    "vnutorneRozmery": "1025 x 400 x 310 mm",
+    "objem": "127 l",
+    "volumeNum": 127,
+    "vaha": "245 kg",
+    "weightNum": 245,
+    "dobaDodania": "3-4 týždne",
+    "img": "https://katalog.eurotrezor.com/473-home_default/bg30.jpg",
+    "localImg": "images/bg30.jpg",
+    "tags": [
+      "Ťažká pancierová ochrana"
+    ],
+    "features": [
+      "Certifikované VdS Nemecko & ECB•S podľa normy EN 1143-1",
+      "Viacplášťové pancierovanie dverí a korpusu s mangánovou ochranou zámku",
+      "Príprava na ukotvenie do podlahy / steny vrátane certifikovaných kotiev",
+      "Trojstranný masívny závorový rozvorový mechanizmus s pasívnym relockerom",
+      "Štandardne dodávané s certifikovaným trezorovým zámkom na kľúč (2 kľúče)"
+    ]
+  },
+  {
+    "id": "bg35_28",
+    "name": "BG35",
+    "series": "BG",
+    "grade": "II. Bezpečnostná trieda",
+    "gradeBadge": "II. Trieda",
+    "insurance": "do 80 000 €",
+    "fire": false,
+    "fireBadge": null,
+    "fireDetails": "Konštrukčná ochrana pred sálavým teplom a dymom.",
+    "type": "Vysoko odolný bezpečnostný trezor",
+    "price": "3 150 €",
+    "priceNum": 3150,
+    "vonkajsieRozmery": "1245 x 450 x 44 mm",
+    "vnutorneRozmery": "1195 x 400 x 310 mm",
+    "objem": "148 l",
+    "volumeNum": 148,
+    "vaha": "280 kg",
+    "weightNum": 280,
+    "dobaDodania": "3-4 týždne",
+    "img": "https://katalog.eurotrezor.com/476-home_default/bg35.jpg",
+    "localImg": "images/bg35.jpg",
+    "tags": [
+      "Ťažká pancierová ochrana"
+    ],
+    "features": [
+      "Certifikované VdS Nemecko & ECB•S podľa normy EN 1143-1",
+      "Viacplášťové pancierovanie dverí a korpusu s mangánovou ochranou zámku",
+      "Príprava na ukotvenie do podlahy / steny vrátane certifikovaných kotiev",
+      "Trojstranný masívny závorový rozvorový mechanizmus s pasívnym relockerom",
+      "Štandardne dodávané s certifikovaným trezorovým zámkom na kľúč (2 kľúče)"
+    ]
+  },
+  {
+    "id": "bg40_29",
+    "name": "BG40",
+    "series": "BG",
+    "grade": "II. Bezpečnostná trieda",
+    "gradeBadge": "II. Trieda",
+    "insurance": "do 80 000 €",
+    "fire": false,
+    "fireBadge": null,
+    "fireDetails": "Konštrukčná ochrana pred sálavým teplom a dymom.",
+    "type": "Vysoko odolný bezpečnostný trezor",
+    "price": "3 373 €",
+    "priceNum": 3373,
+    "vonkajsieRozmery": "1415 x 450 x 442 mm",
+    "vnutorneRozmery": "1365 x 400 x 310 mm",
+    "objem": "169 l",
+    "volumeNum": 169,
+    "vaha": "310 kg",
+    "weightNum": 310,
+    "dobaDodania": "3-4 týždne",
+    "img": "https://katalog.eurotrezor.com/479-home_default/bg40.jpg",
+    "localImg": "images/bg40.jpg",
+    "tags": [
+      "Ťažká pancierová ochrana"
+    ],
+    "features": [
+      "Certifikované VdS Nemecko & ECB•S podľa normy EN 1143-1",
+      "Viacplášťové pancierovanie dverí a korpusu s mangánovou ochranou zámku",
+      "Príprava na ukotvenie do podlahy / steny vrátane certifikovaných kotiev",
+      "Trojstranný masívny závorový rozvorový mechanizmus s pasívnym relockerom",
+      "Štandardne dodávané s certifikovaným trezorovým zámkom na kľúč (2 kľúče)"
+    ]
+  },
+  {
+    "id": "bm10_30",
+    "name": "BM10",
+    "series": "BM",
+    "grade": "II. Bezpečnostná trieda",
+    "gradeBadge": "II. Trieda",
+    "insurance": "do 80 000 €",
+    "fire": false,
+    "fireBadge": null,
+    "fireDetails": "Konštrukčná ochrana pred sálavým teplom a dymom.",
+    "type": "Bezpečnostný trezor vyššej kategórie",
+    "price": "1 910 €",
+    "priceNum": 1910,
+    "vonkajsieRozmery": "395 x 545 x 442 mm",
+    "vnutorneRozmery": "345 x 495 x 310 mm",
+    "objem": "53 l",
+    "volumeNum": 53,
+    "vaha": "135 kg",
+    "weightNum": 135,
+    "dobaDodania": "3-4 týždne",
+    "img": "https://katalog.eurotrezor.com/527-home_default/bm10.jpg",
+    "localImg": "images/bm10.jpg",
+    "tags": [
+      "Univerzálny"
+    ],
+    "features": [
+      "Certifikované VdS Nemecko & ECB•S podľa normy EN 1143-1",
+      "Viacplášťové pancierovanie dverí a korpusu s mangánovou ochranou zámku",
+      "Príprava na ukotvenie do podlahy / steny vrátane certifikovaných kotiev",
+      "Trojstranný masívny závorový rozvorový mechanizmus s pasívnym relockerom",
+      "Štandardne dodávané s certifikovaným trezorovým zámkom na kľúč (2 kľúče)"
+    ]
+  },
+  {
+    "id": "bm15_31",
+    "name": "BM15",
+    "series": "BM",
+    "grade": "II. Bezpečnostná trieda",
+    "gradeBadge": "II. Trieda",
+    "insurance": "do 80 000 €",
+    "fire": false,
+    "fireBadge": null,
+    "fireDetails": "Konštrukčná ochrana pred sálavým teplom a dymom.",
+    "type": "Bezpečnostný trezor vyššej kategórie",
+    "price": "2 235 €",
+    "priceNum": 2235,
+    "vonkajsieRozmery": "565 x 545 x 442 mm",
+    "vnutorneRozmery": "515 x 495 x 310 mm",
+    "objem": "79 l",
+    "volumeNum": 79,
+    "vaha": "170 kg",
+    "weightNum": 170,
+    "dobaDodania": "3-4 týždne",
+    "img": "https://katalog.eurotrezor.com/529-home_default/bm15.jpg",
+    "localImg": "images/bm15.jpg",
+    "tags": [
+      "Univerzálny"
+    ],
+    "features": [
+      "Certifikované VdS Nemecko & ECB•S podľa normy EN 1143-1",
+      "Viacplášťové pancierovanie dverí a korpusu s mangánovou ochranou zámku",
+      "Príprava na ukotvenie do podlahy / steny vrátane certifikovaných kotiev",
+      "Trojstranný masívny závorový rozvorový mechanizmus s pasívnym relockerom",
+      "Štandardne dodávané s certifikovaným trezorovým zámkom na kľúč (2 kľúče)"
+    ]
+  },
+  {
+    "id": "bm20_32",
+    "name": "BM20",
+    "series": "BM",
+    "grade": "II. Bezpečnostná trieda",
+    "gradeBadge": "II. Trieda",
+    "insurance": "do 80 000 €",
+    "fire": false,
+    "fireBadge": null,
+    "fireDetails": "Konštrukčná ochrana pred sálavým teplom a dymom.",
+    "type": "Bezpečnostný trezor vyššej kategórie",
+    "price": "2 524 €",
+    "priceNum": 2524,
+    "vonkajsieRozmery": "735 x 545 x 442 mm",
+    "vnutorneRozmery": "685 x 495 x 310 mm",
+    "objem": "105 l",
+    "volumeNum": 105,
+    "vaha": "205 kg",
+    "weightNum": 205,
+    "dobaDodania": "3-4 týždne",
+    "img": "https://katalog.eurotrezor.com/531-home_default/bm20.jpg",
+    "localImg": "images/bm20.jpg",
+    "tags": [
+      "Ťažká pancierová ochrana"
+    ],
+    "features": [
+      "Certifikované VdS Nemecko & ECB•S podľa normy EN 1143-1",
+      "Viacplášťové pancierovanie dverí a korpusu s mangánovou ochranou zámku",
+      "Príprava na ukotvenie do podlahy / steny vrátane certifikovaných kotiev",
+      "Trojstranný masívny závorový rozvorový mechanizmus s pasívnym relockerom",
+      "Štandardne dodávané s certifikovaným trezorovým zámkom na kľúč (2 kľúče)"
+    ]
+  },
+  {
+    "id": "bm25_33",
+    "name": "BM25",
+    "series": "BM",
+    "grade": "II. Bezpečnostná trieda",
+    "gradeBadge": "II. Trieda",
+    "insurance": "do 80 000 €",
+    "fire": false,
+    "fireBadge": null,
+    "fireDetails": "Konštrukčná ochrana pred sálavým teplom a dymom.",
+    "type": "Bezpečnostný trezor vyššej kategórie",
+    "price": "2 823 €",
+    "priceNum": 2823,
+    "vonkajsieRozmery": "905 x 545 x 442 mm",
+    "vnutorneRozmery": "855 x 495 x 310 mm",
+    "objem": "134 l",
+    "volumeNum": 134,
+    "vaha": "240 kg",
+    "weightNum": 240,
+    "dobaDodania": "3-4 týždne",
+    "img": "https://katalog.eurotrezor.com/533-home_default/bm25.jpg",
+    "localImg": "images/bm25.jpg",
+    "tags": [
+      "Ťažká pancierová ochrana"
+    ],
+    "features": [
+      "Certifikované VdS Nemecko & ECB•S podľa normy EN 1143-1",
+      "Viacplášťové pancierovanie dverí a korpusu s mangánovou ochranou zámku",
+      "Príprava na ukotvenie do podlahy / steny vrátane certifikovaných kotiev",
+      "Trojstranný masívny závorový rozvorový mechanizmus s pasívnym relockerom",
+      "Štandardne dodávané s certifikovaným trezorovým zámkom na kľúč (2 kľúče)"
+    ]
+  },
+  {
+    "id": "bm30_34",
+    "name": "BM30",
+    "series": "BM",
+    "grade": "II. Bezpečnostná trieda",
+    "gradeBadge": "II. Trieda",
+    "insurance": "do 80 000 €",
+    "fire": false,
+    "fireBadge": null,
+    "fireDetails": "Konštrukčná ochrana pred sálavým teplom a dymom.",
+    "type": "Bezpečnostný trezor vyššej kategórie",
+    "price": "3 080 €",
+    "priceNum": 3080,
+    "vonkajsieRozmery": "1075 x 545 x 442 mm",
+    "vnutorneRozmery": "1025 x 495 x 310 mm",
+    "objem": "157 l",
+    "volumeNum": 157,
+    "vaha": "275 kg",
+    "weightNum": 275,
+    "dobaDodania": "3-4 týždne",
+    "img": "https://katalog.eurotrezor.com/535-home_default/bm30.jpg",
+    "localImg": "images/bm30.jpg",
+    "tags": [
+      "Ťažká pancierová ochrana"
+    ],
+    "features": [
+      "Certifikované VdS Nemecko & ECB•S podľa normy EN 1143-1",
+      "Viacplášťové pancierovanie dverí a korpusu s mangánovou ochranou zámku",
+      "Príprava na ukotvenie do podlahy / steny vrátane certifikovaných kotiev",
+      "Trojstranný masívny závorový rozvorový mechanizmus s pasívnym relockerom",
+      "Štandardne dodávané s certifikovaným trezorovým zámkom na kľúč (2 kľúče)"
+    ]
+  },
+  {
+    "id": "bm35_35",
+    "name": "BM35",
+    "series": "BM",
+    "grade": "II. Bezpečnostná trieda",
+    "gradeBadge": "II. Trieda",
+    "insurance": "do 80 000 €",
+    "fire": false,
+    "fireBadge": null,
+    "fireDetails": "Konštrukčná ochrana pred sálavým teplom a dymom.",
+    "type": "Bezpečnostný trezor vyššej kategórie",
+    "price": "3 430 €",
+    "priceNum": 3430,
+    "vonkajsieRozmery": "1245 x 545 x 442 mm",
+    "vnutorneRozmery": "1195 x 495 x 310 mm",
+    "objem": "183 l",
+    "volumeNum": 183,
+    "vaha": "310 kg",
+    "weightNum": 310,
+    "dobaDodania": "3-4 týždne",
+    "img": "https://katalog.eurotrezor.com/537-home_default/bm35.jpg",
+    "localImg": "images/bm35.jpg",
+    "tags": [
+      "Ťažká pancierová ochrana"
+    ],
+    "features": [
+      "Certifikované VdS Nemecko & ECB•S podľa normy EN 1143-1",
+      "Viacplášťové pancierovanie dverí a korpusu s mangánovou ochranou zámku",
+      "Príprava na ukotvenie do podlahy / steny vrátane certifikovaných kotiev",
+      "Trojstranný masívny závorový rozvorový mechanizmus s pasívnym relockerom",
+      "Štandardne dodávané s certifikovaným trezorovým zámkom na kľúč (2 kľúče)"
+    ]
+  },
+  {
+    "id": "bm40_36",
+    "name": "BM40",
+    "series": "BM",
+    "grade": "II. Bezpečnostná trieda",
+    "gradeBadge": "II. Trieda",
+    "insurance": "do 80 000 €",
+    "fire": false,
+    "fireBadge": null,
+    "fireDetails": "Konštrukčná ochrana pred sálavým teplom a dymom.",
+    "type": "Bezpečnostný trezor vyššej kategórie",
+    "price": "3 695 €",
+    "priceNum": 3695,
+    "vonkajsieRozmery": "1415 x 545 x 442 mm",
+    "vnutorneRozmery": "1365 x 495 x 310 mm",
+    "objem": "209 l",
+    "volumeNum": 209,
+    "vaha": "345 kg",
+    "weightNum": 345,
+    "dobaDodania": "3-4 týždne",
+    "img": "https://katalog.eurotrezor.com/539-home_default/bm40.jpg",
+    "localImg": "images/bm40.jpg",
+    "tags": [
+      "Ťažká pancierová ochrana"
+    ],
+    "features": [
+      "Certifikované VdS Nemecko & ECB•S podľa normy EN 1143-1",
+      "Viacplášťové pancierovanie dverí a korpusu s mangánovou ochranou zámku",
+      "Príprava na ukotvenie do podlahy / steny vrátane certifikovaných kotiev",
+      "Trojstranný masívny závorový rozvorový mechanizmus s pasívnym relockerom",
+      "Štandardne dodávané s certifikovaným trezorovým zámkom na kľúč (2 kľúče)"
+    ]
+  },
+  {
+    "id": "cm15_37",
+    "name": "CM15",
+    "series": "CM",
+    "grade": "III. Bezpečnostná trieda",
+    "gradeBadge": "II. Trieda",
+    "insurance": "do 80 000 €",
+    "fire": false,
+    "fireBadge": null,
+    "fireDetails": "Konštrukčná ochrana pred sálavým teplom a dymom.",
+    "type": "Bankový a komerčný trezor najvyššej bezpečnosti",
+    "price": "2 806 €",
+    "priceNum": 2806,
+    "vonkajsieRozmery": "595 x 575 x 495 mm",
+    "vnutorneRozmery": "515 x 495 x 310 mm",
+    "objem": "79 l",
+    "volumeNum": 79,
+    "vaha": "280 kg",
+    "weightNum": 280,
+    "dobaDodania": "3-4 týždne",
+    "img": "https://katalog.eurotrezor.com/482-home_default/cm15.jpg",
+    "localImg": "images/cm15.jpg",
+    "tags": [
+      "Ťažká pancierová ochrana"
+    ],
+    "features": [
+      "Certifikované VdS Nemecko & ECB•S podľa normy EN 1143-1",
+      "Viacplášťové pancierovanie dverí a korpusu s mangánovou ochranou zámku",
+      "Príprava na ukotvenie do podlahy / steny vrátane certifikovaných kotiev",
+      "Trojstranný masívny závorový rozvorový mechanizmus s pasívnym relockerom",
+      "Štandardne dodávané s certifikovaným trezorovým zámkom na kľúč (2 kľúče)"
+    ]
+  },
+  {
+    "id": "cm20_38",
+    "name": "CM20",
+    "series": "CM",
+    "grade": "III. Bezpečnostná trieda",
+    "gradeBadge": "II. Trieda",
+    "insurance": "do 80 000 €",
+    "fire": false,
+    "fireBadge": null,
+    "fireDetails": "Konštrukčná ochrana pred sálavým teplom a dymom.",
+    "type": "Bankový a komerčný trezor najvyššej bezpečnosti",
+    "price": "3 130 €",
+    "priceNum": 3130,
+    "vonkajsieRozmery": "765 x 575 x 495 mm",
+    "vnutorneRozmery": "685 x 495 x 310 mm",
+    "objem": "105 l",
+    "volumeNum": 105,
+    "vaha": "335 kg",
+    "weightNum": 335,
+    "dobaDodania": "3-4 týždne",
+    "img": "https://katalog.eurotrezor.com/486-home_default/cm20.jpg",
+    "localImg": "images/cm20.jpg",
+    "tags": [
+      "Ťažká pancierová ochrana"
+    ],
+    "features": [
+      "Certifikované VdS Nemecko & ECB•S podľa normy EN 1143-1",
+      "Viacplášťové pancierovanie dverí a korpusu s mangánovou ochranou zámku",
+      "Príprava na ukotvenie do podlahy / steny vrátane certifikovaných kotiev",
+      "Trojstranný masívny závorový rozvorový mechanizmus s pasívnym relockerom",
+      "Štandardne dodávané s certifikovaným trezorovým zámkom na kľúč (2 kľúče)"
+    ]
+  },
+  {
+    "id": "cm25_39",
+    "name": "CM25",
+    "series": "CM",
+    "grade": "III. Bezpečnostná trieda",
+    "gradeBadge": "II. Trieda",
+    "insurance": "do 80 000 €",
+    "fire": false,
+    "fireBadge": null,
+    "fireDetails": "Konštrukčná ochrana pred sálavým teplom a dymom.",
+    "type": "Bankový a komerčný trezor najvyššej bezpečnosti",
+    "price": "3 461 €",
+    "priceNum": 3461,
+    "vonkajsieRozmery": "935 x 575 x 495 mm",
+    "vnutorneRozmery": "855 x 495 x 310 mm",
+    "objem": "131 l",
+    "volumeNum": 131,
+    "vaha": "390 kg",
+    "weightNum": 390,
+    "dobaDodania": "3-4 týždne",
+    "img": "https://katalog.eurotrezor.com/488-home_default/cm25.jpg",
+    "localImg": "images/cm25.jpg",
+    "tags": [
+      "Ťažká pancierová ochrana"
+    ],
+    "features": [
+      "Certifikované VdS Nemecko & ECB•S podľa normy EN 1143-1",
+      "Viacplášťové pancierovanie dverí a korpusu s mangánovou ochranou zámku",
+      "Príprava na ukotvenie do podlahy / steny vrátane certifikovaných kotiev",
+      "Trojstranný masívny závorový rozvorový mechanizmus s pasívnym relockerom",
+      "Štandardne dodávané s certifikovaným trezorovým zámkom na kľúč (2 kľúče)"
+    ]
+  },
+  {
+    "id": "cm30_40",
+    "name": "CM30",
+    "series": "CM",
+    "grade": "III. Bezpečnostná trieda",
+    "gradeBadge": "II. Trieda",
+    "insurance": "do 80 000 €",
+    "fire": false,
+    "fireBadge": null,
+    "fireDetails": "Konštrukčná ochrana pred sálavým teplom a dymom.",
+    "type": "Bankový a komerčný trezor najvyššej bezpečnosti",
+    "price": "4 521 €",
+    "priceNum": 4521,
+    "vonkajsieRozmery": "1105 x 735 x 555 mm",
+    "vnutorneRozmery": "1025 x 655 x 370 mm",
+    "objem": "248 l",
+    "volumeNum": 248,
+    "vaha": "565 kg",
+    "weightNum": 565,
+    "dobaDodania": "3-4 týždne",
+    "img": "https://katalog.eurotrezor.com/490-home_default/cm30.jpg",
+    "localImg": "images/cm30.jpg",
+    "tags": [
+      "Ťažká pancierová ochrana"
+    ],
+    "features": [
+      "Certifikované VdS Nemecko & ECB•S podľa normy EN 1143-1",
+      "Viacplášťové pancierovanie dverí a korpusu s mangánovou ochranou zámku",
+      "Príprava na ukotvenie do podlahy / steny vrátane certifikovaných kotiev",
+      "Trojstranný masívny závorový rozvorový mechanizmus s pasívnym relockerom",
+      "Štandardne dodávané s certifikovaným trezorovým zámkom na kľúč (2 kľúče)"
+    ]
+  },
+  {
+    "id": "cm35_41",
+    "name": "CM35",
+    "series": "CM",
+    "grade": "III. Bezpečnostná trieda",
+    "gradeBadge": "II. Trieda",
+    "insurance": "do 80 000 €",
+    "fire": false,
+    "fireBadge": null,
+    "fireDetails": "Konštrukčná ochrana pred sálavým teplom a dymom.",
+    "type": "Bankový a komerčný trezor najvyššej bezpečnosti",
+    "price": "5 028 €",
+    "priceNum": 5028,
+    "vonkajsieRozmery": "1275 x 735 x 555 mm",
+    "vnutorneRozmery": "1195 x 655 x 370 mm",
+    "objem": "290 l",
+    "volumeNum": 290,
+    "vaha": "635 kg",
+    "weightNum": 635,
+    "dobaDodania": "3-4 týždne",
+    "img": "https://katalog.eurotrezor.com/492-home_default/cm35.jpg",
+    "localImg": "images/cm35.jpg",
+    "tags": [
+      "Ťažká pancierová ochrana"
+    ],
+    "features": [
+      "Certifikované VdS Nemecko & ECB•S podľa normy EN 1143-1",
+      "Viacplášťové pancierovanie dverí a korpusu s mangánovou ochranou zámku",
+      "Príprava na ukotvenie do podlahy / steny vrátane certifikovaných kotiev",
+      "Trojstranný masívny závorový rozvorový mechanizmus s pasívnym relockerom",
+      "Štandardne dodávané s certifikovaným trezorovým zámkom na kľúč (2 kľúče)"
+    ]
+  },
+  {
+    "id": "cm40_42",
+    "name": "CM40",
+    "series": "CM",
+    "grade": "III. Bezpečnostná trieda",
+    "gradeBadge": "II. Trieda",
+    "insurance": "do 80 000 €",
+    "fire": false,
+    "fireBadge": null,
+    "fireDetails": "Konštrukčná ochrana pred sálavým teplom a dymom.",
+    "type": "Bankový a komerčný trezor najvyššej bezpečnosti",
+    "price": "5 342 €",
+    "priceNum": 5342,
+    "vonkajsieRozmery": "1445 x 735 x 555 mm",
+    "vnutorneRozmery": "1365 x 655 x 370 mm",
+    "objem": "331 l",
+    "volumeNum": 331,
+    "vaha": "705 kg",
+    "weightNum": 705,
+    "dobaDodania": "3-4 týždne",
+    "img": "https://katalog.eurotrezor.com/494-home_default/cm40.jpg",
+    "localImg": "images/cm40.jpg",
+    "tags": [
+      "Ťažká pancierová ochrana"
+    ],
+    "features": [
+      "Certifikované VdS Nemecko & ECB•S podľa normy EN 1143-1",
+      "Viacplášťové pancierovanie dverí a korpusu s mangánovou ochranou zámku",
+      "Príprava na ukotvenie do podlahy / steny vrátane certifikovaných kotiev",
+      "Trojstranný masívny závorový rozvorový mechanizmus s pasívnym relockerom",
+      "Štandardne dodávané s certifikovaným trezorovým zámkom na kľúč (2 kľúče)"
+    ]
+  },
+  {
+    "id": "ams0400_43",
+    "name": "AMS0400",
+    "series": "Stenové",
+    "grade": "I. / II. Bezpečnostná trieda",
+    "gradeBadge": "II. Trieda",
+    "insurance": "do 80 000 €",
+    "fire": false,
+    "fireBadge": null,
+    "fireDetails": "Konštrukčná ochrana pred sálavým teplom a dymom.",
+    "type": "Zabudovateľný stenový trezor",
+    "price": "1 049 €",
+    "priceNum": 1049,
+    "vonkajsieRozmery": "410 x 510 x 380 mm",
+    "vnutorneRozmery": "360 x 460 x 295 mm",
+    "objem": "49 l",
+    "volumeNum": 49,
+    "vaha": "50 kg",
+    "weightNum": 50,
+    "dobaDodania": "3-4 týždne",
+    "img": "https://katalog.eurotrezor.com/568-home_default/ams0400.jpg",
+    "localImg": "images/ams0400.jpg",
+    "tags": [
+      "Kompaktný",
+      "Zabudovateľný do steny"
+    ],
+    "features": [
+      "Certifikované VdS Nemecko & ECB•S podľa normy EN 1143-1",
+      "Viacplášťové pancierovanie dverí a korpusu s mangánovou ochranou zámku",
+      "Príprava na ukotvenie do podlahy / steny vrátane certifikovaných kotiev",
+      "Trojstranný masívny závorový rozvorový mechanizmus s pasívnym relockerom",
+      "Štandardne dodávané s certifikovaným trezorovým zámkom na kľúč (2 kľúče)"
+    ]
+  },
+  {
+    "id": "ams0401_44",
+    "name": "AMS0401",
+    "series": "Stenové",
+    "grade": "I. / II. Bezpečnostná trieda",
+    "gradeBadge": "II. Trieda",
+    "insurance": "do 80 000 €",
+    "fire": false,
+    "fireBadge": null,
+    "fireDetails": "Konštrukčná ochrana pred sálavým teplom a dymom.",
+    "type": "Zabudovateľný stenový trezor",
+    "price": "984 €",
+    "priceNum": 984,
+    "vonkajsieRozmery": "410 x 510 x 230 mm",
+    "vnutorneRozmery": "360 x 460 x 145 mm",
+    "objem": "24 l",
+    "volumeNum": 24,
+    "vaha": "45 kg",
+    "weightNum": 45,
+    "dobaDodania": "3-4 týždne",
+    "img": "https://katalog.eurotrezor.com/570-home_default/ams0401.jpg",
+    "localImg": "images/ams0401.jpg",
+    "tags": [
+      "Kompaktný",
+      "Zabudovateľný do steny"
+    ],
+    "features": [
+      "Certifikované VdS Nemecko & ECB•S podľa normy EN 1143-1",
+      "Viacplášťové pancierovanie dverí a korpusu s mangánovou ochranou zámku",
+      "Príprava na ukotvenie do podlahy / steny vrátane certifikovaných kotiev",
+      "Trojstranný masívny závorový rozvorový mechanizmus s pasívnym relockerom",
+      "Štandardne dodávané s certifikovaným trezorovým zámkom na kľúč (2 kľúče)"
+    ]
+  },
+  {
+    "id": "ams0600_45",
+    "name": "AMS0600",
+    "series": "Stenové",
+    "grade": "I. / II. Bezpečnostná trieda",
+    "gradeBadge": "II. Trieda",
+    "insurance": "do 80 000 €",
+    "fire": false,
+    "fireBadge": null,
+    "fireDetails": "Konštrukčná ochrana pred sálavým teplom a dymom.",
+    "type": "Zabudovateľný stenový trezor",
+    "price": "1 176 €",
+    "priceNum": 1176,
+    "vonkajsieRozmery": "590 x 510 x 380 mm",
+    "vnutorneRozmery": "540 x 460 x 295 mm",
+    "objem": "73 l",
+    "volumeNum": 73,
+    "vaha": "65 kg",
+    "weightNum": 65,
+    "dobaDodania": "3-4 týždne",
+    "img": "https://katalog.eurotrezor.com/571-home_default/ams0600.jpg",
+    "localImg": "images/ams0600.jpg",
+    "tags": [
+      "Kompaktný",
+      "Zabudovateľný do steny"
+    ],
+    "features": [
+      "Certifikované VdS Nemecko & ECB•S podľa normy EN 1143-1",
+      "Viacplášťové pancierovanie dverí a korpusu s mangánovou ochranou zámku",
+      "Príprava na ukotvenie do podlahy / steny vrátane certifikovaných kotiev",
+      "Trojstranný masívny závorový rozvorový mechanizmus s pasívnym relockerom",
+      "Štandardne dodávané s certifikovaným trezorovým zámkom na kľúč (2 kľúče)"
+    ]
+  },
+  {
+    "id": "ams0601_46",
+    "name": "AMS0601",
+    "series": "Stenové",
+    "grade": "I. / II. Bezpečnostná trieda",
+    "gradeBadge": "II. Trieda",
+    "insurance": "do 80 000 €",
+    "fire": false,
+    "fireBadge": null,
+    "fireDetails": "Konštrukčná ochrana pred sálavým teplom a dymom.",
+    "type": "Zabudovateľný stenový trezor",
+    "price": "1 109 €",
+    "priceNum": 1109,
+    "vonkajsieRozmery": "590 x 510 x 230 mm",
+    "vnutorneRozmery": "540 x 460 x 145 mm",
+    "objem": "36 l",
+    "volumeNum": 36,
+    "vaha": "60 kg",
+    "weightNum": 60,
+    "dobaDodania": "3-4 týždne",
+    "img": "https://katalog.eurotrezor.com/573-home_default/ams0601.jpg",
+    "localImg": "images/ams0601.jpg",
+    "tags": [
+      "Kompaktný",
+      "Zabudovateľný do steny"
+    ],
+    "features": [
+      "Certifikované VdS Nemecko & ECB•S podľa normy EN 1143-1",
+      "Viacplášťové pancierovanie dverí a korpusu s mangánovou ochranou zámku",
+      "Príprava na ukotvenie do podlahy / steny vrátane certifikovaných kotiev",
+      "Trojstranný masívny závorový rozvorový mechanizmus s pasívnym relockerom",
+      "Štandardne dodávané s certifikovaným trezorovým zámkom na kľúč (2 kľúče)"
+    ]
+  },
+  {
+    "id": "ams0800_47",
+    "name": "AMS0800",
+    "series": "Stenové",
+    "grade": "I. / II. Bezpečnostná trieda",
+    "gradeBadge": "II. Trieda",
+    "insurance": "do 80 000 €",
+    "fire": false,
+    "fireBadge": null,
+    "fireDetails": "Konštrukčná ochrana pred sálavým teplom a dymom.",
+    "type": "Zabudovateľný stenový trezor",
+    "price": "1 330 €",
+    "priceNum": 1330,
+    "vonkajsieRozmery": "770 x 510 x 380 mm",
+    "vnutorneRozmery": "720 x 460 x 295 mm",
+    "objem": "98 l",
+    "volumeNum": 98,
+    "vaha": "80 kg",
+    "weightNum": 80,
+    "dobaDodania": "3-4 týždne",
+    "img": "https://katalog.eurotrezor.com/575-home_default/ams0800.jpg",
+    "localImg": "images/ams0800.jpg",
+    "tags": [
+      "Univerzálny",
+      "Zabudovateľný do steny"
+    ],
+    "features": [
+      "Certifikované VdS Nemecko & ECB•S podľa normy EN 1143-1",
+      "Viacplášťové pancierovanie dverí a korpusu s mangánovou ochranou zámku",
+      "Príprava na ukotvenie do podlahy / steny vrátane certifikovaných kotiev",
+      "Trojstranný masívny závorový rozvorový mechanizmus s pasívnym relockerom",
+      "Štandardne dodávané s certifikovaným trezorovým zámkom na kľúč (2 kľúče)"
+    ]
+  },
+  {
+    "id": "ams0801_48",
+    "name": "AMS0801",
+    "series": "Stenové",
+    "grade": "I. / II. Bezpečnostná trieda",
+    "gradeBadge": "II. Trieda",
+    "insurance": "do 80 000 €",
+    "fire": false,
+    "fireBadge": null,
+    "fireDetails": "Konštrukčná ochrana pred sálavým teplom a dymom.",
+    "type": "Zabudovateľný stenový trezor",
+    "price": "1 247 €",
+    "priceNum": 1247,
+    "vonkajsieRozmery": "770 x 510 x 230 mm",
+    "vnutorneRozmery": "720 x 460 x 145 mm",
+    "objem": "48 l",
+    "volumeNum": 48,
+    "vaha": "70 kg",
+    "weightNum": 70,
+    "dobaDodania": "3-4 týždne",
+    "img": "https://katalog.eurotrezor.com/577-home_default/ams0801.jpg",
+    "localImg": "images/ams0801.jpg",
+    "tags": [
+      "Kompaktný",
+      "Zabudovateľný do steny"
+    ],
+    "features": [
+      "Certifikované VdS Nemecko & ECB•S podľa normy EN 1143-1",
+      "Viacplášťové pancierovanie dverí a korpusu s mangánovou ochranou zámku",
+      "Príprava na ukotvenie do podlahy / steny vrátane certifikovaných kotiev",
+      "Trojstranný masívny závorový rozvorový mechanizmus s pasívnym relockerom",
+      "Štandardne dodávané s certifikovaným trezorovým zámkom na kľúč (2 kľúče)"
+    ]
+  },
+  {
+    "id": "ams1000_49",
+    "name": "AMS1000",
+    "series": "Stenové",
+    "grade": "I. / II. Bezpečnostná trieda",
+    "gradeBadge": "II. Trieda",
+    "insurance": "do 80 000 €",
+    "fire": false,
+    "fireBadge": null,
+    "fireDetails": "Konštrukčná ochrana pred sálavým teplom a dymom.",
+    "type": "Zabudovateľný stenový trezor",
+    "price": "1 501 €",
+    "priceNum": 1501,
+    "vonkajsieRozmery": "950 x 510 x 380 mm",
+    "vnutorneRozmery": "900 x 460 x 295 mm",
+    "objem": "122 l",
+    "volumeNum": 122,
+    "vaha": "95 kg",
+    "weightNum": 95,
+    "dobaDodania": "3-4 týždne",
+    "img": "https://katalog.eurotrezor.com/579-home_default/ams1000.jpg",
+    "localImg": "images/ams1000.jpg",
+    "tags": [
+      "Univerzálny",
+      "Zabudovateľný do steny"
+    ],
+    "features": [
+      "Certifikované VdS Nemecko & ECB•S podľa normy EN 1143-1",
+      "Viacplášťové pancierovanie dverí a korpusu s mangánovou ochranou zámku",
+      "Príprava na ukotvenie do podlahy / steny vrátane certifikovaných kotiev",
+      "Trojstranný masívny závorový rozvorový mechanizmus s pasívnym relockerom",
+      "Štandardne dodávané s certifikovaným trezorovým zámkom na kľúč (2 kľúče)"
+    ]
+  },
+  {
+    "id": "ams1001_50",
+    "name": "AMS1001",
+    "series": "Stenové",
+    "grade": "I. / II. Bezpečnostná trieda",
+    "gradeBadge": "II. Trieda",
+    "insurance": "do 80 000 €",
+    "fire": false,
+    "fireBadge": null,
+    "fireDetails": "Konštrukčná ochrana pred sálavým teplom a dymom.",
+    "type": "Zabudovateľný stenový trezor",
+    "price": "1 406 €",
+    "priceNum": 1406,
+    "vonkajsieRozmery": "950 x 510 x 230 mm",
+    "vnutorneRozmery": "900 x 460 x 145 mm",
+    "objem": "60 l",
+    "volumeNum": 60,
+    "vaha": "85 kg",
+    "weightNum": 85,
+    "dobaDodania": "3-4 týždne",
+    "img": "https://katalog.eurotrezor.com/581-home_default/ams1001.jpg",
+    "localImg": "images/ams1001.jpg",
+    "tags": [
+      "Univerzálny",
+      "Zabudovateľný do steny"
+    ],
+    "features": [
+      "Certifikované VdS Nemecko & ECB•S podľa normy EN 1143-1",
+      "Viacplášťové pancierovanie dverí a korpusu s mangánovou ochranou zámku",
+      "Príprava na ukotvenie do podlahy / steny vrátane certifikovaných kotiev",
+      "Trojstranný masívny závorový rozvorový mechanizmus s pasívnym relockerom",
+      "Štandardne dodávané s certifikovaným trezorovým zámkom na kľúč (2 kľúče)"
+    ]
+  },
+  {
+    "id": "zs01_51",
+    "name": "ZS01",
+    "series": "Nábytkové",
+    "grade": "Základná / I. Bezpečnostná trieda",
+    "gradeBadge": "Nábytkový",
+    "insurance": "do 15 000 €",
+    "fire": true,
+    "fireBadge": "Protipožiarna izolácia",
+    "fireDetails": "Ohňovzdorná izolačná výplň chrániaca obsah pred požiarom a dymom.",
+    "type": "Nábytkový ohňovzdorný trezor",
+    "price": "728 €",
+    "priceNum": 728,
+    "vonkajsieRozmery": "378 x 523 x 475 mm",
+    "vnutorneRozmery": "255 x 403 x 310 mm",
+    "objem": "32 l",
+    "volumeNum": 32,
+    "vaha": "66 kg",
+    "weightNum": 66,
+    "dobaDodania": "2-3 týždne",
+    "img": "https://katalog.eurotrezor.com/557-home_default/zs01.jpg",
+    "localImg": "images/zs01.jpg",
+    "tags": [
+      "Kompaktný",
+      "Ohňovzdorný"
+    ],
+    "features": [
+      "Certifikované VdS Nemecko & ECB•S podľa normy EN 1143-1",
+      "Viacplášťové pancierovanie dverí a korpusu s mangánovou ochranou zámku",
+      "Príprava na ukotvenie do podlahy / steny vrátane certifikovaných kotiev",
+      "Trojstranný masívny závorový rozvorový mechanizmus s pasívnym relockerom",
+      "Štandardne dodávané s certifikovaným trezorovým zámkom na kľúč (2 kľúče)"
+    ]
+  },
+  {
+    "id": "zs02_52",
+    "name": "ZS02",
+    "series": "Nábytkové",
+    "grade": "Základná / I. Bezpečnostná trieda",
+    "gradeBadge": "Nábytkový",
+    "insurance": "do 15 000 €",
+    "fire": true,
+    "fireBadge": "Protipožiarna izolácia",
+    "fireDetails": "Ohňovzdorná izolačná výplň chrániaca obsah pred požiarom a dymom.",
+    "type": "Nábytkový ohňovzdorný trezor",
+    "price": "884 €",
+    "priceNum": 884,
+    "vonkajsieRozmery": "508 x 523 x 475 mm",
+    "vnutorneRozmery": "385 x 403 x 310 mm",
+    "objem": "48 l",
+    "volumeNum": 48,
+    "vaha": "80 kg",
+    "weightNum": 80,
+    "dobaDodania": "2-3 týždne",
+    "img": "https://katalog.eurotrezor.com/563-home_default/zs02.jpg",
+    "localImg": "images/zs02.jpg",
+    "tags": [
+      "Univerzálny",
+      "Ohňovzdorný"
+    ],
+    "features": [
+      "Certifikované VdS Nemecko & ECB•S podľa normy EN 1143-1",
+      "Viacplášťové pancierovanie dverí a korpusu s mangánovou ochranou zámku",
+      "Príprava na ukotvenie do podlahy / steny vrátane certifikovaných kotiev",
+      "Trojstranný masívny závorový rozvorový mechanizmus s pasívnym relockerom",
+      "Štandardne dodávané s certifikovaným trezorovým zámkom na kľúč (2 kľúče)"
+    ]
+  },
+  {
+    "id": "zs03_53",
+    "name": "ZS03",
+    "series": "Nábytkové",
+    "grade": "Základná / I. Bezpečnostná trieda",
+    "gradeBadge": "Nábytkový",
+    "insurance": "do 15 000 €",
+    "fire": true,
+    "fireBadge": "Protipožiarna izolácia",
+    "fireDetails": "Ohňovzdorná izolačná výplň chrániaca obsah pred požiarom a dymom.",
+    "type": "Nábytkový ohňovzdorný trezor",
+    "price": "1 042 €",
+    "priceNum": 1042,
+    "vonkajsieRozmery": "698 x 523 x 475 mm",
+    "vnutorneRozmery": "575 x 403 x 310 mm",
+    "objem": "72 l",
+    "volumeNum": 72,
+    "vaha": "97 kg",
+    "weightNum": 97,
+    "dobaDodania": "",
+    "img": "https://katalog.eurotrezor.com/565-home_default/zs03.jpg",
+    "localImg": "images/zs03.jpg",
+    "tags": [
+      "Univerzálny",
+      "Ohňovzdorný"
+    ],
+    "features": [
+      "Certifikované VdS Nemecko & ECB•S podľa normy EN 1143-1",
+      "Viacplášťové pancierovanie dverí a korpusu s mangánovou ochranou zámku",
+      "Príprava na ukotvenie do podlahy / steny vrátane certifikovaných kotiev",
+      "Trojstranný masívny závorový rozvorový mechanizmus s pasívnym relockerom",
+      "Štandardne dodávané s certifikovaným trezorovým zámkom na kľúč (2 kľúče)"
+    ]
+  }
+];
+
+    // App State
+    let currentSeries = 'ALL';
+    let currentGrade = 'ALL';
+    let currentSort = 'price_asc';
+    let fireOnly = false;
+    let searchQuery = '';
+    let viewMode = 'grid';
+
+    let compareList = [];
+    let cartList = [];
+    let selectedServices = null;
+
+    // SIMULATOR STATE
+    let simCode = '';
+
+    // Initialize on load
+    document.addEventListener('DOMContentLoaded', () => {
+      renderProducts();
+      updateCompareBadge();
+      updateCartBadge();
+    });
+
+    // Filtering logic
+    function applyFilters() {
+      searchQuery = document.getElementById('catalogSearch').value.trim().toLowerCase();
+      fireOnly = document.getElementById('fireOnlyFilter').checked;
+      currentGrade = document.getElementById('gradeSelect').value;
+      currentSort = document.getElementById('sortSelect').value;
+
+      document.getElementById('clearSearchBtn').classList.toggle('hidden', searchQuery.length === 0);
+
+      renderProducts();
+    }
+
+    function setSeriesFilter(series) {
+      currentSeries = series;
+      document.querySelectorAll('.series-btn').forEach(btn => {
+        btn.classList.remove('active', 'bg-gold-500', 'text-vault-950');
+        btn.classList.add('bg-vault-850', 'text-slate-300');
+      });
+      event.target.classList.add('active', 'bg-gold-500', 'text-vault-950');
+      event.target.classList.remove('bg-vault-850', 'text-slate-300');
+      applyFilters();
+    }
+
+    function filterByGrade(grade) {
+      document.getElementById('gradeSelect').value = grade;
+      currentGrade = grade;
+      document.getElementById('katalog').scrollIntoView({ behavior: 'smooth' });
+      applyFilters();
+    }
+
+    function clearSearch() {
+      document.getElementById('catalogSearch').value = '';
+      applyFilters();
+    }
+
+    function resetAllFilters() {
+      currentSeries = 'ALL';
+      currentGrade = 'ALL';
+      document.getElementById('gradeSelect').value = 'ALL';
+      document.getElementById('catalogSearch').value = '';
+      document.getElementById('fireOnlyFilter').checked = false;
+      document.getElementById('sortSelect').value = 'price_asc';
+      document.querySelectorAll('.series-btn').forEach(btn => {
+        btn.classList.remove('active', 'bg-gold-500', 'text-vault-950');
+        btn.classList.add('bg-vault-850', 'text-slate-300');
+      });
+      document.querySelector('#seriesFilters button').classList.add('active', 'bg-gold-500', 'text-vault-950');
+      applyFilters();
+    }
+
+    function setViewMode(mode) {
+      viewMode = mode;
+      const gridBtn = document.getElementById('viewGridBtn');
+      const listBtn = document.getElementById('viewListBtn');
+      if (mode === 'grid') {
+        gridBtn.className = 'p-1.5 rounded bg-vault-700 text-white';
+        listBtn.className = 'p-1.5 rounded text-slate-400 hover:text-white';
+      } else {
+        listBtn.className = 'p-1.5 rounded bg-vault-700 text-white';
+        gridBtn.className = 'p-1.5 rounded text-slate-400 hover:text-white';
+      }
+      renderProducts();
+    }
+
+    function getFilteredProducts() {
+      return ALL_PRODUCTS.filter(p => {
+        // Series match
+        if (currentSeries !== 'ALL') {
+          if (currentSeries === 'Stenové' && p.series !== 'Stenové') return false;
+          if (currentSeries === 'Nábytkové' && p.series !== 'Nábytkové') return false;
+          if (['AL','AN','AP','BG','BM','CM'].includes(currentSeries) && p.series !== currentSeries) return false;
+        }
+        // Grade match
+        if (currentGrade !== 'ALL') {
+          if (currentGrade === 'Stenové' && p.series !== 'Stenové') return false;
+          if (currentGrade === 'Nábytkové' && p.series !== 'Nábytkové') return false;
+          if (currentGrade.includes('I.') && !p.grade.includes('I.')) return false;
+          if (currentGrade.includes('II.') && !p.grade.includes('II.')) return false;
+          if (currentGrade.includes('III.') && !p.grade.includes('III.')) return false;
+        }
+        // Fire match
+        if (fireOnly && !p.fire) return false;
+        // Search query
+        if (searchQuery) {
+          const hay = (p.name + ' ' + p.series + ' ' + p.grade + ' ' + p.vonkajsieRozmery + ' ' + p.vaha + ' ' + (p.fireBadge || '')).toLowerCase();
+          if (!hay.includes(searchQuery)) return false;
+        }
+        return true;
+      }).sort((a, b) => {
+        if (currentSort === 'price_asc') return a.priceNum - b.priceNum;
+        if (currentSort === 'price_desc') return b.priceNum - a.priceNum;
+        if (currentSort === 'weight_asc') return a.weightNum - b.weightNum;
+        if (currentSort === 'weight_desc') return b.weightNum - a.weightNum;
+        if (currentSort === 'volume_desc') return b.volumeNum - a.volumeNum;
+        if (currentSort === 'name_asc') return a.name.localeCompare(b.name);
+        return 0;
+      });
+    }
+
+    function renderProducts() {
+      const container = document.getElementById('productsGrid');
+      const filtered = getFilteredProducts();
+
+      document.getElementById('catalogResultsCount').textContent = `${filtered.length} z ${ALL_PRODUCTS.length}`;
+      document.getElementById('noProductsFound').classList.toggle('hidden', filtered.length > 0);
+
+      if (filtered.length === 0) {
+        container.innerHTML = '';
+        return;
+      }
+
+      if (viewMode === 'grid') {
+        container.className = 'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6';
+        container.innerHTML = filtered.map(p => `
+          <div class="glass-card rounded-2xl overflow-hidden flex flex-col justify-between border-glow group transition-all duration-300">
+            <div>
+              <!-- Image & Badges Header -->
+              <div class="relative h-52 bg-gradient-to-b from-vault-800 to-vault-900 flex items-center justify-center p-4 border-b border-white/5 overflow-hidden">
+                <img src="${p.localImg || p.img}" alt="${p.name}" loading="lazy" class="max-h-full max-w-full object-contain filter drop-shadow-[0_8px_16px_rgba(0,0,0,0.6)] group-hover:scale-105 transition-transform duration-300">
+                
+                <!-- Grade Badge Top Left -->
+                <div class="absolute top-3 left-3 flex flex-col gap-1.5">
+                  <span class="px-2 py-0.5 rounded text-[10px] font-bold font-mono tracking-wider ${
+                    p.gradeBadge === 'III. Trieda' ? 'bg-gold-500 text-vault-950' : 
+                    p.gradeBadge === 'II. Trieda' ? 'bg-amber-500/20 text-amber-300 border border-amber-500/30' : 
+                    'bg-blue-500/20 text-blue-300 border border-blue-500/30'
+                  }">
+                    ${p.gradeBadge}
+                  </span>
+                  ${p.fireBadge ? `
+                    <span class="px-2 py-0.5 rounded text-[10px] font-bold font-mono bg-red-950/90 text-red-300 border border-red-800 flex items-center gap-1">
+                      🔥 ${p.fireBadge}
+                    </span>
+                  ` : ''}
+                </div>
+
+                <!-- Compare Action Button Top Right -->
+                <button onclick="toggleCompareItem('${p.id}')" title="Porovnať" class="absolute top-3 right-3 p-1.5 rounded-lg bg-vault-950/80 hover:bg-gold-500 hover:text-vault-950 text-slate-300 border border-white/10 transition-colors">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                </button>
+              </div>
+
+              <!-- Product Info -->
+              <div class="p-5 space-y-3">
+                <div class="flex items-start justify-between gap-2">
+                  <div>
+                    <span class="text-[10px] font-mono text-slate-400 uppercase tracking-widest">Séria ${p.series}</span>
+                    <h3 class="text-xl font-display font-extrabold text-white group-hover:text-gold-400 transition-colors">${p.name}</h3>
+                  </div>
+                  <div class="text-right">
+                    <span class="text-[10px] text-slate-400 block">Cena s DPH</span>
+                    <div class="text-lg font-tech font-bold text-white">${p.price}</div>
+                  </div>
+                </div>
+
+                <!-- Dimensions & Specs Pill Grid -->
+                <div class="space-y-1.5 text-xs bg-vault-950/70 p-3 rounded-xl border border-white/5">
+                  <div class="flex justify-between">
+                    <span class="text-slate-400">Rozmery:</span>
+                    <span class="font-mono text-slate-200 text-[11px]">${p.vonkajsieRozmery}</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="text-slate-400">Hmotnosť:</span>
+                    <span class="font-mono text-slate-200 font-semibold">${p.vaha}</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="text-slate-400">Objem:</span>
+                    <span class="font-mono text-slate-200">${p.objem}</span>
+                  </div>
+                  <div class="flex justify-between pt-1 border-t border-white/5 text-[11px]">
+                    <span class="text-slate-400">Krytie:</span>
+                    <span class="text-emerald-400 font-medium">${p.insurance}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Footer Buttons -->
+            <div class="p-5 pt-0 flex gap-2">
+              <button onclick="openProductModal('${p.id}')" class="flex-1 py-2 rounded-xl bg-vault-800 hover:bg-vault-700 text-slate-200 text-xs font-semibold transition-colors">
+                Detail
+              </button>
+              <button onclick="addToCart('${p.id}')" class="px-3.5 py-2 rounded-xl bg-gold-500 hover:bg-gold-400 text-vault-950 font-bold text-xs transition-colors flex items-center gap-1" title="Pridať do dopytu">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"></path></svg>
+                <span>Dopyt</span>
+              </button>
+            </div>
+          </div>
+        `).join('');
+      } else {
+        // List View Mode
+        container.className = 'space-y-3';
+        container.innerHTML = filtered.map(p => `
+          <div class="glass-card rounded-xl p-4 flex flex-col md:flex-row items-center justify-between gap-4 border-glow">
+            <div class="flex items-center gap-4 w-full md:w-auto">
+              <div class="w-16 h-16 rounded-lg bg-vault-900 border border-white/5 flex items-center justify-center p-1 shrink-0">
+                <img src="${p.localImg || p.img}" alt="${p.name}" class="max-h-full max-w-full object-contain">
+              </div>
+              <div>
+                <div class="flex items-center gap-2">
+                  <h4 class="font-display font-bold text-white text-lg">${p.name}</h4>
+                  <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-slate-800 text-slate-300">${p.gradeBadge}</span>
+                  ${p.fireBadge ? '<span class="text-[10px] px-1.5 py-0.5 rounded bg-red-950 text-red-300">🔥 Ohňovzdorný</span>' : ''}
+                </div>
+                <div class="text-xs text-slate-400 flex flex-wrap gap-4 mt-1 font-mono">
+                  <span>Rozmery: ${p.vonkajsieRozmery}</span>
+                  <span>Váha: ${p.vaha}</span>
+                  <span>Objem: ${p.objem}</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex items-center justify-between md:justify-end gap-5 w-full md:w-auto">
+              <div class="text-right">
+                <div class="text-lg font-tech font-bold text-gold-400">${p.price}</div>
+                <span class="text-[10px] text-slate-400">s DPH</span>
+              </div>
+              <div class="flex gap-2">
+                <button onclick="toggleCompareItem('${p.id}')" class="p-2 rounded-lg bg-vault-800 hover:bg-vault-700 text-slate-300 text-xs">
+                  Porovnať
+                </button>
+                <button onclick="openProductModal('${p.id}')" class="px-3.5 py-2 rounded-lg bg-vault-700 hover:bg-vault-600 text-white text-xs font-medium">
+                  Detail
+                </button>
+                <button onclick="addToCart('${p.id}')" class="px-4 py-2 rounded-lg bg-gold-500 hover:bg-gold-400 text-vault-950 font-bold text-xs uppercase">
+                  Dopyt
+                </button>
+              </div>
+            </div>
+          </div>
+        `).join('');
+      }
+    }
+
+    // Modal Details
+    function openProductModal(id) {
+      const p = ALL_PRODUCTS.find(item => item.id === id);
+      if (!p) return;
+
+      const modal = document.getElementById('quickViewModal');
+      const content = document.getElementById('modalContent');
+
+      content.innerHTML = `
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <!-- Image -->
+          <div class="h-80 bg-vault-900 rounded-xl border border-white/5 flex items-center justify-center p-6 relative overflow-hidden">
+            <img src="${p.localImg || p.img}" alt="${p.name}" class="max-h-full max-w-full object-contain filter drop-shadow-[0_12px_24px_rgba(0,0,0,0.8)]">
+            <div class="absolute top-3 left-3 flex flex-col gap-1.5">
+              <span class="px-2.5 py-1 rounded bg-gold-500 text-vault-950 font-mono font-bold text-xs">${p.gradeBadge}</span>
+              ${p.fireBadge ? `<span class="px-2 py-0.5 rounded bg-red-950 text-red-300 border border-red-800 font-bold text-xs">🔥 ${p.fireBadge}</span>` : ''}
+            </div>
+          </div>
+
+          <!-- Specs & Config -->
+          <div class="space-y-4">
+            <div>
+              <span class="text-xs font-mono text-gold-400 uppercase tracking-widest">Séria ${p.series} | ${p.type}</span>
+              <h2 class="text-3xl font-display font-extrabold text-white mt-1">Wertheim ${p.name}</h2>
+              <div class="flex items-center gap-3 mt-2">
+                <span class="text-2xl font-tech font-bold text-gold-400">${p.price}</span>
+                <span class="text-xs text-slate-400">vrátane DPH 20%</span>
+              </div>
+            </div>
+
+            <!-- Parameters Grid -->
+            <div class="grid grid-cols-2 gap-2 text-xs bg-vault-900 p-3.5 rounded-xl border border-white/5 font-mono">
+              <div><span class="text-slate-400 block font-sans">Vonkajšie rozmery:</span> ${p.vonkajsieRozmery}</div>
+              <div><span class="text-slate-400 block font-sans">Vnútorné rozmery:</span> ${p.vnutorneRozmery}</div>
+              <div><span class="text-slate-400 block font-sans">Hmotnosť:</span> ${p.vaha}</div>
+              <div><span class="text-slate-400 block font-sans">Objem:</span> ${p.objem}</div>
+              <div><span class="text-slate-400 block font-sans">Poistné krytie:</span> ${p.insurance}</div>
+              <div><span class="text-slate-400 block font-sans">Doba dodania:</span> ${p.dobaDodania}</div>
+            </div>
+
+            <!-- Features -->
+            <div class="space-y-1.5 text-xs text-slate-300">
+              <div class="font-semibold text-white">Bezpečnostná výbava:</div>
+              ${p.features.map(f => `<div class="flex items-start gap-1.5"><span class="text-gold-500">✓</span><span>${f}</span></div>`).join('')}
+            </div>
+
+            <!-- Lock Options inside modal -->
+            <div class="pt-2">
+              <label class="block text-xs font-medium text-slate-300 mb-1">Voľba zámkového mechanizmu:</label>
+              <select id="modalLockSelect_${p.id}" class="w-full bg-vault-850 border border-white/10 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-gold-500">
+                <option value="key">Motýlkový kľúčový zámok CAWI (2 kľúče) [V cene 0 €]</option>
+                <option value="electronic">Elektronický kódový zámok M-LOCKS EM3520 (+240 €)</option>
+                <option value="dial">Mechanický otočný kombinačný číselník (+180 €)</option>
+                <option value="dual">Duálny systém (Kľúč + Elektronický kód) (+390 €)</option>
+              </select>
+            </div>
+
+            <!-- Modal Action Buttons -->
+            <div class="pt-2 flex gap-3">
+              <button onclick="addConfiguredToCart('${p.id}')" class="flex-1 py-3 rounded-xl bg-gold-500 hover:bg-gold-400 text-vault-950 font-bold text-xs uppercase tracking-wider transition-colors">
+                Pridať do dopytového košíka
+              </button>
+              <button onclick="toggleCompareItem('${p.id}')" class="px-4 py-3 rounded-xl bg-vault-800 hover:bg-vault-700 text-slate-200 text-xs font-semibold">
+                Porovnať
+              </button>
+            </div>
+
+          </div>
+        </div>
+      `;
+
+      modal.classList.remove('hidden');
+    }
+
+    function closeProductModal() {
+      document.getElementById('quickViewModal').classList.add('hidden');
+    }
+
+    // Comparison Drawer
+    function toggleCompareItem(id) {
+      const idx = compareList.indexOf(id);
+      if (idx > -1) {
+        compareList.splice(idx, 1);
+        showToast('Model odobraný z porovnávača');
+      } else {
+        if (compareList.length >= 3) {
+          alert('Môžete porovnávať maximálne 3 modely súčasne.');
+          return;
+        }
+        compareList.push(id);
+        showToast('Model pridaný do porovnávača');
+      }
+      updateCompareBadge();
+      if (!document.getElementById('compareDrawer').classList.contains('hidden')) {
+        renderCompareTable();
+      }
+    }
+
+    function updateCompareBadge() {
+      document.getElementById('compareCount').textContent = compareList.length;
+    }
+
+    function toggleCompareDrawer() {
+      const drawer = document.getElementById('compareDrawer');
+      drawer.classList.toggle('hidden');
+      if (!drawer.classList.contains('hidden')) {
+        renderCompareTable();
+      }
+    }
+
+    function renderCompareTable() {
+      const container = document.getElementById('compareTableContainer');
+      if (compareList.length === 0) {
+        container.innerHTML = '<div class="text-center py-10 text-slate-400 text-sm">Zatiaľ ste nevybrali žiadne modely na porovnanie. Kliknite na ikonu porovnania pri ľubovoľných 2 až 3 modeloch.</div>';
+        return;
+      }
+
+      const items = compareList.map(id => ALL_PRODUCTS.find(p => p.id === id)).filter(Boolean);
+
+      container.innerHTML = `
+        <table class="w-full text-left text-xs border-collapse">
+          <thead>
+            <tr class="border-b border-white/10">
+              <th class="p-3 bg-vault-900 text-slate-400 font-medium w-40">Parameter</th>
+              ${items.map(p => `
+                <th class="p-3 bg-vault-850 text-white font-bold text-center border-l border-white/5">
+                  <div class="h-24 flex items-center justify-center p-2 mb-2">
+                    <img src="${p.localImg || p.img}" alt="${p.name}" class="max-h-full max-w-full object-contain">
+                  </div>
+                  <div class="text-sm font-display text-white">${p.name}</div>
+                  <div class="text-gold-400 font-tech font-bold text-base mt-1">${p.price}</div>
+                  <button onclick="toggleCompareItem('${p.id}')" class="text-[10px] text-red-400 hover:underline mt-1">Odobrať</button>
+                </th>
+              `).join('')}
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-white/5 font-mono">
+            <tr>
+              <td class="p-3 text-slate-400 font-sans">Bezpečnostná trieda</td>
+              ${items.map(p => `<td class="p-3 text-center text-slate-200 border-l border-white/5">${p.gradeBadge}</td>`).join('')}
+            </tr>
+            <tr>
+              <td class="p-3 text-slate-400 font-sans">Požiarna odolnosť</td>
+              ${items.map(p => `<td class="p-3 text-center border-l border-white/5 ${p.fireBadge ? 'text-red-400 font-bold' : 'text-slate-400'}">${p.fireBadge || 'Základná'}</td>`).join('')}
+            </tr>
+            <tr>
+              <td class="p-3 text-slate-400 font-sans">Vonkajšie rozmery (VxŠxH)</td>
+              ${items.map(p => `<td class="p-3 text-center text-slate-200 border-l border-white/5">${p.vonkajsieRozmery}</td>`).join('')}
+            </tr>
+            <tr>
+              <td class="p-3 text-slate-400 font-sans">Vnútorné rozmery (VxŠxH)</td>
+              ${items.map(p => `<td class="p-3 text-center text-slate-200 border-l border-white/5">${p.vnutorneRozmery}</td>`).join('')}
+            </tr>
+            <tr>
+              <td class="p-3 text-slate-400 font-sans">Hmotnosť</td>
+              ${items.map(p => `<td class="p-3 text-center text-emerald-400 font-bold border-l border-white/5">${p.vaha}</td>`).join('')}
+            </tr>
+            <tr>
+              <td class="p-3 text-slate-400 font-sans">Vnútorný objem</td>
+              ${items.map(p => `<td class="p-3 text-center text-slate-200 border-l border-white/5">${p.objem}</td>`).join('')}
+            </tr>
+            <tr>
+              <td class="p-3 text-slate-400 font-sans">Odporúčané poistné krytie</td>
+              ${items.map(p => `<td class="p-3 text-center text-gold-400 border-l border-white/5">${p.insurance}</td>`).join('')}
+            </tr>
+            <tr>
+              <td class="p-3 text-slate-400 font-sans">Dodacia lehota</td>
+              ${items.map(p => `<td class="p-3 text-center text-slate-300 border-l border-white/5 font-sans">${p.dobaDodania}</td>`).join('')}
+            </tr>
+            <tr>
+              <td class="p-3 text-slate-400 font-sans">Akcia</td>
+              ${items.map(p => `
+                <td class="p-3 text-center border-l border-white/5">
+                  <button onclick="addToCart('${p.id}')" class="px-3 py-1.5 rounded-lg bg-gold-500 hover:bg-gold-400 text-vault-950 font-bold font-sans text-xs uppercase">
+                    Dopyt
+                  </button>
+                </td>
+              `).join('')}
+            </tr>
+          </tbody>
+        </table>
+      `;
+    }
+
+    // Inquiry Cart System
+    function addToCart(id) {
+      const p = ALL_PRODUCTS.find(item => item.id === id);
+      if (!p) return;
+
+      cartList.push({
+        id: p.id,
+        name: p.name,
+        priceNum: p.priceNum,
+        lockName: 'Motýlkový kľúčový zámok CAWI (štandard)',
+        lockPrice: 0
+      });
+
+      updateCartBadge();
+      showToast(`${p.name} bol pridaný do dopytu`);
+    }
+
+    function addConfiguredToCart(id) {
+      const p = ALL_PRODUCTS.find(item => item.id === id);
+      if (!p) return;
+
+      const sel = document.getElementById(`modalLockSelect_${p.id}`);
+      const val = sel ? sel.value : 'key';
+      
+      let lockName = 'Motýlkový kľúčový zámok CAWI (štandard)';
+      let lockPrice = 0;
+      if (val === 'electronic') {
+        lockName = 'Elektronický zámok M-LOCKS EM3520 (+240 €)';
+        lockPrice = 240;
+      } else if (val === 'dial') {
+        lockName = 'Mechanický kombinačný číselník (+180 €)';
+        lockPrice = 180;
+      } else if (val === 'dual') {
+        lockName = 'Duálny systém Kľúč + Kód (+390 €)';
+        lockPrice = 390;
+      }
+
+      cartList.push({
+        id: p.id,
+        name: p.name,
+        priceNum: p.priceNum + lockPrice,
+        lockName,
+        lockPrice
+      });
+
+      closeProductModal();
+      updateCartBadge();
+      showToast(`${p.name} s výbavou bol pridaný do dopytu`);
+    }
+
+    function removeFromCart(index) {
+      cartList.splice(index, 1);
+      updateCartBadge();
+      renderCartItems();
+    }
+
+    function updateCartBadge() {
+      const count = cartList.length + (selectedServices ? 1 : 0);
+      document.getElementById('cartCountBadge').textContent = count;
+    }
+
+    function toggleInquiryModal() {
+      const modal = document.getElementById('inquiryModal');
+      modal.classList.toggle('hidden');
+      if (!modal.classList.contains('hidden')) {
+        renderCartItems();
+      }
+    }
+
+    function renderCartItems() {
+      const container = document.getElementById('cartItemsList');
+      if (cartList.length === 0 && !selectedServices) {
+        container.innerHTML = '<div class="text-center py-8 text-slate-400 text-sm">Váš dopytový košík je prázdny. Vyberte si ľubovoľný trezor z katalógu.</div>';
+        document.getElementById('cartSubtotal').textContent = '0 €';
+        document.getElementById('cartVat').textContent = '0 €';
+        document.getElementById('cartTotal').textContent = '0 €';
+        return;
+      }
+
+      container.innerHTML = cartList.map((item, idx) => `
+        <div class="py-3 flex items-center justify-between gap-4">
+          <div>
+            <div class="font-display font-bold text-white text-sm">Wertheim ${item.name}</div>
+            <div class="text-xs text-slate-400">${item.lockName}</div>
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="font-mono font-bold text-gold-400 text-sm">${item.priceNum.toLocaleString()} €</span>
+            <button type="button" onclick="removeFromCart(${idx})" class="text-red-400 hover:text-red-300 text-xs">✕</button>
+          </div>
+        </div>
+      `).join('');
+
+      // Services row
+      const servBox = document.getElementById('cartServices');
+      if (selectedServices) {
+        servBox.classList.remove('hidden');
+        document.getElementById('cartServicesLabel').textContent = selectedServices.label;
+        document.getElementById('cartServicesPrice').textContent = `${selectedServices.price} €`;
+      } else {
+        servBox.classList.add('hidden');
+      }
+
+      // Calculate totals
+      let total = cartList.reduce((sum, item) => sum + item.priceNum, 0);
+      if (selectedServices) total += selectedServices.price;
+
+      const subtotal = Math.round(total / 1.2);
+      const vat = total - subtotal;
+
+      document.getElementById('cartSubtotal').textContent = `${subtotal.toLocaleString()} €`;
+      document.getElementById('cartVat').textContent = `${vat.toLocaleString()} €`;
+      document.getElementById('cartTotal').textContent = `${total.toLocaleString()} €`;
+    }
+
+    // Delivery & Installation Calculator Logic
+    function calculateDelivery() {
+      const weight = parseInt(document.getElementById('calcWeight').value, 10);
+      const floor = parseInt(document.getElementById('calcFloor').value, 10);
+      const anchor = parseInt(document.getElementById('calcAnchor').value, 10);
+      const region = parseInt(document.getElementById('calcRegion').value, 10);
+
+      let base = 75;
+      if (weight > 200) base += 50;
+      if (weight > 400) base += 100;
+
+      const total = base + floor + anchor + region;
+      document.getElementById('calcTotal').textContent = `${total} € s DPH`;
+    }
+
+    function addServicesToCart() {
+      const anchor = document.getElementById('calcAnchor').selectedOptions[0].text;
+      const total = parseInt(document.getElementById('calcTotal').textContent, 10);
+
+      selectedServices = {
+        label: `Doprava a inštalácia: ${anchor}`,
+        price: total
+      };
+
+      updateCartBadge();
+      showToast('Doprava a montáž pridané do dopytu');
+      toggleInquiryModal();
+    }
+
+    // Direct Form Submission
+    function handleDirectInquiry(e) {
+      e.preventDefault();
+      const name = document.getElementById('directName').value;
+      const phone = document.getElementById('directPhone').value;
+      const email = document.getElementById('directEmail').value;
+      const msg = document.getElementById('directMsg').value;
+
+      const mailBody = encodeURIComponent(`Dobrý deň,\n\nMám záujem o cenovú ponuku na trezor.\nMeno: ${name}\nTelefón: ${phone}\nE-mail: ${email}\nPoznámka: ${msg}`);
+      window.location.href = `mailto:office@eurotrezor.com?subject=Dopyt z webu Eurotrezor: ${encodeURIComponent(name)}&body=${mailBody}`;
+
+      alert('Ďakujeme za Váš dopyt! Pripravili sme e-mailovú správu pre našich špecialistov.');
+    }
+
+    function submitInquiryCart(e) {
+      e.preventDefault();
+      const name = document.getElementById('cartName').value;
+      const phone = document.getElementById('cartPhone').value;
+      const email = document.getElementById('cartEmail').value;
+      const addr = document.getElementById('cartAddress').value;
+      const notes = document.getElementById('cartNotes').value;
+
+      const itemsText = cartList.map(item => `- Wertheim ${item.name} (${item.lockName}) -> ${item.priceNum} €`).join('\n');
+      const servText = selectedServices ? `\nSlužby: ${selectedServices.label} (${selectedServices.price} €)` : '';
+      const totalText = document.getElementById('cartTotal').textContent;
+
+      const body = encodeURIComponent(
+        `Dobrý deň,\n\nZasielam nezáväzný dopyt na trezorovú techniku Wertheim:\n\n` +
+        `ZÁKAZNÍK:\n` +
+        `Meno / Spoločnosť: ${name}\n` +
+        `Telefón: ${phone}\n` +
+        `E-mail: ${email}\n` +
+        `Miesto inštalácie: ${addr}\n\n` +
+        `VYBRANÉ POLOŽKY:\n${itemsText}${servText}\n\n` +
+        `PREDPOKLADANÁ CENA: ${totalText}\n\n` +
+        `POZNÁMKA:\n${notes}`
+      );
+
+      window.location.href = `mailto:office@eurotrezor.com?subject=Dopytová ponuka Wertheim - ${encodeURIComponent(name)}&body=${body}`;
+      alert('Váš dopyt bol pripravený na odoslanie cez e-mail. Ďakujeme!');
+    }
+
+    function printQuote() {
+      window.print();
+    }
+
+    // Interactive SIMULATOR
+    function pressSimKey(num) {
+      if (simCode.length < 6) {
+        simCode += num;
+        document.getElementById('simDisplay').textContent = simCode.padEnd(6, '-');
+      }
+    }
+    function clearSimKey() {
+      simCode = '';
+      document.getElementById('simDisplay').textContent = '------';
+      document.getElementById('simStatus').textContent = 'Kód vymazaný';
+      document.getElementById('simStatus').className = 'mt-3 text-[11px] font-mono text-slate-400';
+    }
+    function checkSimCode() {
+      const status = document.getElementById('simStatus');
+      if (simCode === '123456') {
+        status.textContent = '🔓 ZÁMOK ODOMKNUTÝ (Správny kód)';
+        status.className = 'mt-3 text-[11px] font-mono text-emerald-400 font-bold';
+      } else {
+        status.textContent = '⛔ CHYBNÝ KÓD (Opakujte zadanie)';
+        status.className = 'mt-3 text-[11px] font-mono text-red-400 font-bold';
+      }
+    }
+
+    // Interactive WIZARD
+    let wizardAnswers = {};
+    function selectWizardOption(key, val) {
+      wizardAnswers[key] = val;
+      if (key === 'purpose') {
+        document.getElementById('step1').classList.add('hidden');
+        document.getElementById('step2').classList.remove('hidden');
+        document.getElementById('wizardStepNumber').textContent = '2';
+        document.getElementById('wizardStepTitle').textContent = 'Akú poistnú hodnotu požadujete?';
+        document.getElementById('wizardDots').children[1].classList.replace('bg-slate-800', 'bg-gold-500');
+      } else if (key === 'limit') {
+        document.getElementById('step2').classList.add('hidden');
+        document.getElementById('step3').classList.remove('hidden');
+        document.getElementById('wizardStepNumber').textContent = '3';
+        document.getElementById('wizardStepTitle').textContent = 'Kde má byť trezor osadený?';
+        document.getElementById('wizardDots').children[2].classList.replace('bg-slate-800', 'bg-gold-500');
+      } else if (key === 'install') {
+        document.getElementById('step3').classList.add('hidden');
+        showWizardResult();
+      }
+    }
+
+    function showWizardResult() {
+      const res = document.getElementById('wizardResult');
+      res.classList.remove('hidden');
+
+      const title = document.getElementById('wizardRecTitle');
+      const desc = document.getElementById('wizardRecDesc');
+      const grade = document.getElementById('wizardRecGrade');
+      const ins = document.getElementById('wizardRecInsurance');
+      const fire = document.getElementById('wizardRecFire');
+
+      if (wizardAnswers.purpose === 'commercial' || wizardAnswers.limit === 'high') {
+        title.textContent = 'Wertheim Séria CM (III. Bezpečnostná trieda)';
+        desc.textContent = 'Bankový a komerčný trezor najvyššej kategórie s pancierovaním odolným voči autogénu a jadrovým vrtákom.';
+        grade.textContent = 'III. Bezpečnostná trieda (VdS / ECB•S)';
+        ins.textContent = 'do 160 000 €+';
+        fire.textContent = 'Možnosť ohňovzdornej verzie CP';
+      } else if (wizardAnswers.install === 'wall') {
+        title.textContent = 'Wertheim Stenový Trezor Séria AMS';
+        desc.textContent = 'Diskrétny stenový trezor zabudovateľný do muriva s certifikáciou I. bezpečnostnej triedy.';
+        grade.textContent = 'I. Bezpečnostná trieda (VdS)';
+        ins.textContent = 'do 30 000 €';
+        fire.textContent = 'Chránené masívnym betónovým lôžkom';
+      } else if (wizardAnswers.purpose === 'office' || wizardAnswers.limit === 'mid') {
+        title.textContent = 'Wertheim Séria AP (Certifikovaná ohňovzdornosť)';
+        desc.textContent = 'Certifikovaná ochrana proti vlámaniu I. triedy kombinovaná s laboratórnou požiarnou ochranou LFS 60P (60 minút pri 1 090 °C).';
+        grade.textContent = 'I. Bezpečnostná trieda (EN 1143-1)';
+        ins.textContent = 'do 40 000 €';
+        fire.textContent = 'LFS 60P (60 minút požiarny test)';
+      } else {
+        title.textContent = 'Wertheim Séria AL / AN (I. Bezpečnostná trieda)';
+        desc.textContent = 'Najpredávanejší rodinný a kancelársky trezor v SR s perfektným pomerom hmotnosti, rozmerov a ceny.';
+        grade.textContent = 'I. Bezpečnostná trieda (EN 1143-1)';
+        ins.textContent = 'do 40 000 €';
+        fire.textContent = 'Základná požiarna izolácia';
+      }
+    }
+
+    function applyWizardFilter() {
+      if (wizardAnswers.purpose === 'commercial' || wizardAnswers.limit === 'high') {
+        setSeriesFilter('CM');
+      } else if (wizardAnswers.install === 'wall') {
+        setSeriesFilter('Stenové');
+      } else if (wizardAnswers.purpose === 'office') {
+        setSeriesFilter('AP');
+      } else {
+        setSeriesFilter('AL');
+      }
+      document.getElementById('katalog').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function resetWizard() {
+      wizardAnswers = {};
+      document.getElementById('wizardResult').classList.add('hidden');
+      document.getElementById('step3').classList.add('hidden');
+      document.getElementById('step2').classList.add('hidden');
+      document.getElementById('step1').classList.remove('hidden');
+      document.getElementById('wizardStepNumber').textContent = '1';
+      document.getElementById('wizardStepTitle').textContent = 'Aký je primárny účel trezoru?';
+      document.getElementById('wizardDots').children[1].classList.replace('bg-gold-500', 'bg-slate-800');
+      document.getElementById('wizardDots').children[2].classList.replace('bg-gold-500', 'bg-slate-800');
+    }
+
+    // FAQ Accordion
+    function toggleFaq(num) {
+      const content = document.getElementById(`faqContent${num}`);
+      const icon = document.getElementById(`faqIcon${num}`);
+      content.classList.toggle('hidden');
+      icon.textContent = content.classList.contains('hidden') ? '+' : '−';
+    }
+
+    // Mobile Menu
+    function toggleMobileMenu() {
+      document.getElementById('mobileMenu').classList.toggle('hidden');
+    }
+
+    // Toast helper
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      document.getElementById('toastMsg').textContent = msg;
+      toast.classList.remove('hidden');
+      toast.classList.remove('translate-y-2');
+      setTimeout(() => {
+        toast.classList.add('hidden');
+      }, 3000);
+    }
+  </script>
+</body>
+</html>
