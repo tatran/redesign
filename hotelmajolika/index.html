@@ -1,0 +1,2269 @@
+<!DOCTYPE html>
+<html lang="sk" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hotel Majolika**** Modra | Historický boutique hotel, wellness & tradícia keramiky</title>
+  <meta name="description" content="Zažite kúzlo historického 4-hviezdičkového hotela v Modre. Unikátne spojenie renesančného bastionu z r. 1610, keramickej tradície od r. 1883, moderného wellness s bazénom a saunami, vínnej pivnice a muzeálnej dielne.">
+  <meta name="keywords" content="Hotel Majolika, Modra, hotel Modra, ubytovanie Modra, wellness hotel Malé Karpaty, Slovenská ľudová majolika, keramika Modra, vínna pivnica Modra, kongresový hotel, svadba Modra">
+  <meta name="author" content="Hotel Majolika****">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Hotel Majolika**** Modra — História, remeslo a elegancia v srdci Malých Karpát">
+  <meta property="og:description" content="4-hviezdičkový boutique hotel v pamiatkovo chránenom objekte Starej keramiky z roku 1610. Wellness s bazénom a saunami, vlastné múzeum majoliky, historická vínna pivnica a vyhliadková veža.">
+  <meta property="og:image" content="images/uvod0.jpg">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="images/eco_logo.jpg">
+
+  <!-- Google Fonts: Cormorant Garamond & Cinzel & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            majolika: {
+              50: '#f0f5fc',
+              100: '#e1ecf8',
+              200: '#c2d9f2',
+              300: '#94bfe9',
+              400: '#5e9edc',
+              500: '#387ecb',
+              600: '#2564ae',
+              700: '#1e4f8d',
+              800: '#1b4374',
+              900: '#0e2b53',
+              950: '#071830',
+            },
+            terracotta: {
+              50: '#fdf6f3',
+              100: '#faeae5',
+              200: '#f6d8ce',
+              300: '#eebd Overall',
+              400: '#df7758',
+              500: '#c85a3a',
+              600: '#b84729',
+              700: '#99371e',
+              800: '#7e301d',
+              900: '#672c1e',
+            },
+            goldglaze: {
+              300: '#f0d297',
+              400: '#e5be73',
+              500: '#d4a359',
+              600: '#b8853b',
+              700: '#96672c',
+            },
+            pottery: {
+              50: '#faf8f5',
+              100: '#f4ede2',
+              200: '#e8dbca',
+              300: '#d7c2a7',
+              800: '#2c251e',
+              900: '#1a1612',
+            }
+          },
+          fontFamily: {
+            serif: ['Cormorant Garamond', 'Georgia', 'serif'],
+            display: ['Cinzel', 'Playfair Display', 'serif'],
+            sans: ['Plus Jakarta Sans', 'system-ui', 'sans-serif'],
+          },
+          boxShadow: {
+            'majolika': '0 20px 40px -15px rgba(14, 43, 83, 0.15)',
+            'clay': '0 15px 35px -10px rgba(200, 90, 58, 0.2)',
+            'elevated': '0 25px 50px -12px rgba(7, 24, 48, 0.25)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    /* Custom pattern reminiscent of Modra majolica ornamentation */
+    .bg-majolika-pattern {
+      background-color: #0e2b53;
+      background-image: radial-gradient(rgba(212, 163, 89, 0.15) 1px, transparent 0), radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 0);
+      background-size: 32px 32px;
+      background-position: 0 0, 16px 16px;
+    }
+    .bg-cream-dots {
+      background-color: #faf8f5;
+      background-image: radial-gradient(#d7c2a7 0.75px, transparent 0.75px);
+      background-size: 24px 24px;
+    }
+    .gold-gradient-text {
+      background: linear-gradient(135deg, #f5d392 0%, #d4a359 50%, #af7e32 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .blue-gradient-text {
+      background: linear-gradient(135deg, #0e2b53 0%, #2564ae 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .clay-border {
+      border-image: linear-gradient(to right, #c85a3a, #d4a359) 1;
+    }
+    /* Smooth transitions & custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f4ede2;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #1b4374;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #c85a3a;
+    }
+  </style>
+</head>
+<body class="bg-pottery-50 text-slate-800 font-sans antialiased selection:bg-majolika-800 selection:text-goldglaze-300">
+
+  <!-- TOP ANNOUNCEMENT BAR -->
+  <div class="bg-majolika-950 text-slate-200 text-xs py-2 px-4 border-b border-majolika-800/60 transition-all">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+      <div class="flex items-center gap-3">
+        <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-emerald-900/60 text-emerald-300 border border-emerald-700/50 text-[11px] font-medium">
+          <i data-lucide="zap" class="w-3 h-3 text-emerald-400"></i> Eko-hotel s nabíjačkou EV
+        </span>
+        <span class="hidden md:inline text-slate-300 text-xs">
+          Bezplatné dobíjanie elektromobilov v podzemnej garáži pre hotelových hostí
+        </span>
+      </div>
+      <div class="flex items-center gap-4 text-xs font-medium">
+        <a href="tel:+421905602617" class="hover:text-goldglaze-400 transition-colors flex items-center gap-1.5">
+          <i data-lucide="phone" class="w-3.5 h-3.5 text-goldglaze-500"></i> +421 905 602 617
+        </a>
+        <span class="text-majolika-700">|</span>
+        <a href="mailto:recepcia@hotelmajolika.sk" class="hover:text-goldglaze-400 transition-colors flex items-center gap-1.5">
+          <i data-lucide="mail" class="w-3.5 h-3.5 text-goldglaze-500"></i> recepcia@hotelmajolika.sk
+        </a>
+        <span class="text-majolika-700">|</span>
+        <div class="flex items-center gap-1 text-[11px] font-semibold text-slate-400">
+          <span class="text-goldglaze-400 font-bold">SK</span>
+          <span>/</span>
+          <button onclick="switchLang('en')" class="hover:text-white transition-colors">EN</button>
+          <span>/</span>
+          <button onclick="switchLang('de')" class="hover:text-white transition-colors">DE</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN NAVIGATION -->
+  <header id="navbar" class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/80 transition-all duration-300 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- LOGO & BRAND -->
+        <a href="#" class="flex items-center gap-3 group">
+          <div class="w-12 h-12 rounded-full bg-majolika-900 border-2 border-goldglaze-500 flex items-center justify-center text-white shadow-md group-hover:scale-105 transition-transform">
+            <span class="font-display text-xl font-bold tracking-wider text-goldglaze-400">M</span>
+          </div>
+          <div>
+            <div class="flex items-center gap-1.5">
+              <span class="font-display font-bold text-lg sm:text-xl tracking-wider text-majolika-950 uppercase">Hotel Majolika</span>
+              <div class="flex text-goldglaze-500 text-xs">
+                <span>★</span><span>★</span><span>★</span><span>★</span>
+              </div>
+            </div>
+            <p class="text-[11px] uppercase tracking-widest text-terracotta-600 font-semibold">Modra • Est. 1610 / 1883</p>
+          </div>
+        </a>
+
+        <!-- DESKTOP NAVIGATION -->
+        <nav class="hidden xl:flex items-center space-x-7 text-sm font-semibold text-slate-700">
+          <a href="#historia" class="hover:text-majolika-700 transition-colors py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-0.5 after:bg-majolika-600 after:transition-all">O hoteli</a>
+          <a href="#izby" class="hover:text-majolika-700 transition-colors py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-0.5 after:bg-majolika-600 after:transition-all">Izby & Suity</a>
+          <a href="#wellness" class="hover:text-majolika-700 transition-colors py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-0.5 after:bg-majolika-600 after:transition-all">Wellness & Bazén</a>
+          <a href="#gastronomia" class="hover:text-majolika-700 transition-colors py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-0.5 after:bg-majolika-600 after:transition-all">Reštaurácia & Pivnica</a>
+          <a href="#muzeum" class="hover:text-majolika-700 transition-colors py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-0.5 after:bg-majolika-600 after:transition-all">Múzeum & Veža</a>
+          <a href="#kongresy" class="hover:text-majolika-700 transition-colors py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-0.5 after:bg-majolika-600 after:transition-all">Kongresy & Svadby</a>
+          <a href="#galeria" class="hover:text-majolika-700 transition-colors py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-0.5 after:bg-majolika-600 after:transition-all">Galéria</a>
+          <a href="#kontakt" class="hover:text-majolika-700 transition-colors py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-0.5 after:bg-majolika-600 after:transition-all">Kontakt</a>
+        </nav>
+
+        <!-- ACTION BUTTONS -->
+        <div class="hidden sm:flex items-center gap-3">
+          <a href="tel:+421905602617" class="p-2.5 rounded-full border border-slate-300 text-slate-700 hover:border-majolika-700 hover:text-majolika-700 hover:bg-majolika-50 transition-colors" title="Zavolať na recepciu">
+            <i data-lucide="phone-call" class="w-4 h-4"></i>
+          </a>
+          <a href="#rezervacia" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-majolika-900 hover:bg-majolika-800 text-goldglaze-300 font-semibold text-sm shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5 border border-goldglaze-500/30">
+            <i data-lucide="calendar" class="w-4 h-4 text-goldglaze-400"></i>
+            <span>Rezervovať pobyt</span>
+          </a>
+        </div>
+
+        <!-- MOBILE MENU BUTTON -->
+        <button id="mobileMenuBtn" class="xl:hidden p-2 rounded-lg text-slate-700 hover:bg-slate-100 transition-colors">
+          <i data-lucide="menu" class="w-7 h-7"></i>
+        </button>
+
+      </div>
+    </div>
+
+    <!-- MOBILE DRAWER -->
+    <div id="mobileDrawer" class="hidden xl:hidden bg-white border-b border-slate-200 px-6 py-6 shadow-2xl transition-all">
+      <nav class="flex flex-col space-y-4 text-base font-semibold text-slate-800">
+        <a href="#historia" onclick="toggleMobileMenu()" class="hover:text-majolika-700 py-1 border-b border-slate-100 flex items-center justify-between">O hoteli & História <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i></a>
+        <a href="#izby" onclick="toggleMobileMenu()" class="hover:text-majolika-700 py-1 border-b border-slate-100 flex items-center justify-between">Izby & Suity <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i></a>
+        <a href="#wellness" onclick="toggleMobileMenu()" class="hover:text-majolika-700 py-1 border-b border-slate-100 flex items-center justify-between">Wellness Experience & Bazén <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i></a>
+        <a href="#gastronomia" onclick="toggleMobileMenu()" class="hover:text-majolika-700 py-1 border-b border-slate-100 flex items-center justify-between">Reštaurácia Landsfeld & Vínna pivnica <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i></a>
+        <a href="#muzeum" onclick="toggleMobileMenu()" class="hover:text-majolika-700 py-1 border-b border-slate-100 flex items-center justify-between">Múzeum majoliky & Vyhliadková veža <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i></a>
+        <a href="#kongresy" onclick="toggleMobileMenu()" class="hover:text-majolika-700 py-1 border-b border-slate-100 flex items-center justify-between">Kongresy, Teambuilding & Svadby <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i></a>
+        <a href="#ekologia" onclick="toggleMobileMenu()" class="hover:text-majolika-700 py-1 border-b border-slate-100 flex items-center justify-between">Ekológia & Zelené srdce hotela <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i></a>
+        <a href="#okolie" onclick="toggleMobileMenu()" class="hover:text-majolika-700 py-1 border-b border-slate-100 flex items-center justify-between">Zážitky v Malých Karpatoch <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i></a>
+        <a href="#galeria" onclick="toggleMobileMenu()" class="hover:text-majolika-700 py-1 border-b border-slate-100 flex items-center justify-between">Fotogaléria <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i></a>
+        <a href="#kontakt" onclick="toggleMobileMenu()" class="hover:text-majolika-700 py-1 flex items-center justify-between">Kontakt & Kde nás nájdete <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i></a>
+      </nav>
+      <div class="mt-6 pt-4 border-t border-slate-100 flex flex-col gap-3">
+        <a href="#rezervacia" onclick="toggleMobileMenu()" class="w-full text-center py-3 rounded-xl bg-majolika-900 text-goldglaze-300 font-bold shadow-md">
+          Rezervovať pobyt online
+        </a>
+        <a href="tel:+421905602617" class="w-full text-center py-2.5 rounded-xl border border-slate-300 text-slate-700 font-semibold flex items-center justify-center gap-2">
+          <i data-lucide="phone" class="w-4 h-4 text-terracotta-600"></i> +421 905 602 617
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="relative min-h-[85vh] lg:min-h-[90vh] flex items-center justify-center bg-majolika-950 text-white overflow-hidden">
+    <!-- Hero Background Image & Slider Effect -->
+    <div class="absolute inset-0 z-0">
+      <img id="heroImage" src="images/uvod0.jpg" alt="Hotel Majolika nádvorie Modra" class="w-full h-full object-cover object-center filter brightness-[0.55] scale-105 transition-all duration-1000 ease-out">
+      <div class="absolute inset-0 bg-gradient-to-t from-majolika-950 via-majolika-950/40 to-transparent"></div>
+      <div class="absolute inset-0 bg-majolika-950/30"></div>
+    </div>
+
+    <!-- Hero Content -->
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 text-center">
+      
+      <!-- Top Badges -->
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-xs sm:text-sm font-semibold tracking-wider text-goldglaze-300 uppercase mb-6 shadow-lg">
+        <span class="w-2 h-2 rounded-full bg-goldglaze-400 animate-pulse"></span>
+        4-Hviezdičkový historický klenot v perle Malých Karpát
+      </div>
+
+      <h1 class="font-display text-3xl sm:text-5xl lg:text-7xl font-bold tracking-tight text-white mb-6 leading-tight max-w-5xl mx-auto">
+        Tam, kde ožíva história,<br>
+        <span class="gold-gradient-text font-serif italic font-normal">víno a modranská majolika</span>
+      </h1>
+
+      <p class="font-sans text-base sm:text-xl text-slate-200 max-w-3xl mx-auto mb-10 font-normal leading-relaxed">
+        Pamiatkovo chránený areál Starej keramiky s mestským bastiónom z roku 1610. 
+        Zažite noblesu 4-hviezdičkového ubytovania, unikátny wellness s bazénom, 
+        tradičnú remeselnú keramiku a autentickú vínnu pivnicu v srdci Modry.
+      </p>
+
+      <!-- Hero Action CTAs -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-14">
+        <a href="#rezervacia" class="w-full sm:w-auto px-8 py-4 rounded-full bg-gradient-to-r from-terracotta-600 to-terracotta-500 hover:from-terracotta-500 hover:to-terracotta-600 text-white font-bold text-base shadow-clay hover:shadow-2xl transition-all transform hover:-translate-y-0.5 flex items-center justify-center gap-3">
+          <i data-lucide="calendar-check" class="w-5 h-5"></i>
+          <span>Rezervovať pobyt online</span>
+        </a>
+        <a href="#historia" class="w-full sm:w-auto px-8 py-4 rounded-full bg-white/10 hover:bg-white/20 text-white backdrop-blur-md font-semibold text-base border border-white/30 transition-all flex items-center justify-center gap-2">
+          <span>Objaviť príbeh hotela</span>
+          <i data-lucide="arrow-down" class="w-4 h-4"></i>
+        </a>
+      </div>
+
+      <!-- Hero Thumbnails Switcher -->
+      <div class="flex items-center justify-center gap-2 sm:gap-4 overflow-x-auto pb-2">
+        <button onclick="setHeroImage('images/uvod0.jpg', this)" class="hero-thumb active-thumb border-2 border-goldglaze-400 rounded-xl overflow-hidden w-16 h-12 sm:w-20 sm:h-14 transition-all opacity-100 scale-105 shadow-md">
+          <img src="images/uvod0.jpg" alt="Nádvorie" class="w-full h-full object-cover">
+        </button>
+        <button onclick="setHeroImage('images/wellness1.jpg', this)" class="hero-thumb border-2 border-transparent hover:border-white/50 rounded-xl overflow-hidden w-16 h-12 sm:w-20 sm:h-14 transition-all opacity-70 hover:opacity-100 shadow-md">
+          <img src="images/wellness1.jpg" alt="Wellness bazén" class="w-full h-full object-cover">
+        </button>
+        <button onclick="setHeroImage('images/ubytovanie2.jpg', this)" class="hero-thumb border-2 border-transparent hover:border-white/50 rounded-xl overflow-hidden w-16 h-12 sm:w-20 sm:h-14 transition-all opacity-70 hover:opacity-100 shadow-md">
+          <img src="images/ubytovanie2.jpg" alt="Apartmán" class="w-full h-full object-cover">
+        </button>
+        <button onclick="setHeroImage('images/pivnica2.jpg', this)" class="hero-thumb border-2 border-transparent hover:border-white/50 rounded-xl overflow-hidden w-16 h-12 sm:w-20 sm:h-14 transition-all opacity-70 hover:opacity-100 shadow-md">
+          <img src="images/pivnica2.jpg" alt="Vínna pivnica" class="w-full h-full object-cover">
+        </button>
+        <button onclick="setHeroImage('images/muzeum1.JPG', this)" class="hero-thumb border-2 border-transparent hover:border-white/50 rounded-xl overflow-hidden w-16 h-12 sm:w-20 sm:h-14 transition-all opacity-70 hover:opacity-100 shadow-md">
+          <img src="images/muzeum1.JPG" alt="Múzeum majoliky" class="w-full h-full object-cover">
+        </button>
+      </div>
+
+    </div>
+
+    <!-- BOOKING QUICK BAR (Floating over hero bottom) -->
+    <div class="relative z-20 w-full max-w-6xl mx-auto px-4 -mb-16 sm:-mb-14">
+      <div class="bg-white rounded-2xl sm:rounded-3xl shadow-elevated p-4 sm:p-6 border border-slate-100 text-slate-800">
+        <form onsubmit="handleQuickBooking(event)" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 items-center">
+          
+          <!-- Príchod -->
+          <div class="flex flex-col">
+            <label class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-1 flex items-center gap-1.5">
+              <i data-lucide="log-in" class="w-3.5 h-3.5 text-majolika-700"></i> Príchod (Check-in)
+            </label>
+            <input type="date" id="quickCheckIn" required class="w-full px-3 py-2.5 rounded-xl border border-slate-200 bg-slate-50 text-slate-900 font-medium text-sm focus:bg-white focus:border-majolika-700 focus:outline-none">
+          </div>
+
+          <!-- Odchod -->
+          <div class="flex flex-col">
+            <label class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-1 flex items-center gap-1.5">
+              <i data-lucide="log-out" class="w-3.5 h-3.5 text-majolika-700"></i> Odchod (Check-out)
+            </label>
+            <input type="date" id="quickCheckOut" required class="w-full px-3 py-2.5 rounded-xl border border-slate-200 bg-slate-50 text-slate-900 font-medium text-sm focus:bg-white focus:border-majolika-700 focus:outline-none">
+          </div>
+
+          <!-- Hostia -->
+          <div class="flex flex-col">
+            <label class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-1 flex items-center gap-1.5">
+              <i data-lucide="users" class="w-3.5 h-3.5 text-majolika-700"></i> Počet hostí
+            </label>
+            <select id="quickGuests" class="w-full px-3 py-2.5 rounded-xl border border-slate-200 bg-slate-50 text-slate-900 font-medium text-sm focus:bg-white focus:border-majolika-700 focus:outline-none">
+              <option value="1">1 dospelý</option>
+              <option value="2" selected>2 dospelí</option>
+              <option value="3">3 osoby (s prístelkou)</option>
+              <option value="4">Rodina (2 dospelí + 2 deti)</option>
+              <option value="group">Skupina / Kongres (5+)</option>
+            </select>
+          </div>
+
+          <!-- Typ izby / balíčka -->
+          <div class="flex flex-col">
+            <label class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-1 flex items-center gap-1.5">
+              <i data-lucide="bed" class="w-3.5 h-3.5 text-majolika-700"></i> Typ izby
+            </label>
+            <select id="quickRoomType" class="w-full px-3 py-2.5 rounded-xl border border-slate-200 bg-slate-50 text-slate-900 font-medium text-sm focus:bg-white focus:border-majolika-700 focus:outline-none">
+              <option value="standard">Dvojlôžková Standard</option>
+              <option value="superior">Dvojlôžková Superior</option>
+              <option value="wedding">Romantický Svadobný Apartmán</option>
+              <option value="suite">Rodinná Suita / Apartmán</option>
+              <option value="accessible">Bezbariérová izba</option>
+            </select>
+          </div>
+
+          <!-- Submit Button -->
+          <div class="flex flex-col justify-end">
+            <button type="submit" class="w-full py-3 px-4 rounded-xl bg-majolika-900 hover:bg-majolika-800 text-goldglaze-300 font-bold text-sm tracking-wide shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2 border border-goldglaze-500/40">
+              <i data-lucide="search" class="w-4 h-4 text-goldglaze-400"></i>
+              <span>Overiť dostupnosť</span>
+            </button>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- KEY STATS & TRUST STRIP -->
+  <section class="pt-24 sm:pt-28 pb-12 bg-pottery-50 border-b border-pottery-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        
+        <div class="p-6 rounded-2xl bg-white shadow-sm border border-pottery-200/80">
+          <div class="font-display text-3xl sm:text-4xl font-extrabold text-majolika-900 mb-1">1610</div>
+          <p class="text-xs uppercase tracking-widest text-terracotta-600 font-bold mb-1">Historický bastion</p>
+          <p class="text-xs text-slate-500">Pôvodný hradobný systém mesta Modra</p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-white shadow-sm border border-pottery-200/80">
+          <div class="font-display text-3xl sm:text-4xl font-extrabold text-majolika-900 mb-1">1883</div>
+          <p class="text-xs uppercase tracking-widest text-terracotta-600 font-bold mb-1">Keramická tradícia</p>
+          <p class="text-xs text-slate-500">Učilište a posledná kasselská pec v Európe</p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-white shadow-sm border border-pottery-200/80">
+          <div class="font-display text-3xl sm:text-4xl font-extrabold text-majolika-900 mb-1">9.0 / 10</div>
+          <p class="text-xs uppercase tracking-widest text-terracotta-600 font-bold mb-1">Booking.com rating</p>
+          <p class="text-xs text-slate-500">Hodnotenie polohy 9.6 a personálu 9.4</p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-white shadow-sm border border-pottery-200/80">
+          <div class="font-display text-3xl sm:text-4xl font-extrabold text-emerald-700 mb-1">100%</div>
+          <p class="text-xs uppercase tracking-widest text-emerald-600 font-bold mb-1">Ekologické srdce</p>
+          <p class="text-xs text-slate-500">Solárna energia, rekuperácia & EV nabíjanie</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- O HOTELI & HISTÓRIA (HERITAGE STORY) -->
+  <section id="historia" class="py-20 bg-white relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        
+        <!-- Left: Image Collage -->
+        <div class="lg:col-span-6 relative">
+          <div class="relative mx-auto max-w-md lg:max-w-none">
+            <!-- Main Historical Image -->
+            <div class="rounded-3xl overflow-hidden shadow-2xl border-4 border-white aspect-[4/3]">
+              <img src="images/historia1.jpg" alt="Pôvodná dielňa Slovenskej ľudovej majoliky" class="w-full h-full object-cover">
+            </div>
+            
+            <!-- Secondary overlapping photo -->
+            <div class="absolute -bottom-8 -right-4 sm:-right-8 w-3/5 rounded-2xl overflow-hidden shadow-elevated border-4 border-white aspect-[4/3]">
+              <img src="images/uvod4.jpg" alt="Hotel Majolika nádvorie dnes" class="w-full h-full object-cover">
+            </div>
+
+            <!-- Heritage Motto Badge -->
+            <div class="absolute -top-6 -left-4 sm:-left-6 bg-majolika-950 text-goldglaze-300 p-4 sm:p-5 rounded-2xl shadow-xl border border-goldglaze-500/40 max-w-[240px]">
+              <i data-lucide="landmark" class="w-6 h-6 text-goldglaze-400 mb-2"></i>
+              <p class="font-serif italic text-base sm:text-lg leading-snug">„Chráňme dedičstvo našich otcov“</p>
+              <p class="text-[10px] uppercase tracking-wider text-slate-400 mt-1 font-sans">Nápis nad historickým vchodom</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Storytelling & Timeline -->
+        <div class="lg:col-span-6">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-pottery-100 text-terracotta-700 text-xs font-bold uppercase tracking-wider mb-4">
+            <i data-lucide="shield-check" class="w-3.5 h-3.5"></i>
+            Národná technická pamiatka
+          </div>
+
+          <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-majolika-950 mb-6 leading-tight">
+            Príbeh pamiatky, ktorá spojila <span class="text-terracotta-600 font-serif italic">bastión a keramickú dušu Modry</span>
+          </h2>
+
+          <p class="text-slate-600 text-base leading-relaxed mb-6 font-normal">
+            Hotel Majolika vznikol citlivou a náročnou rekonštrukciou pamiatkovo chráneného areálu Starej keramiky. 
+            Jej najstarším základom je mohutný renesančný mestský hradobný systém so strážnym bastiónom z roku 1610, 
+            ktorý po stáročia chránil slobodné kráľovské mesto Modra.
+          </p>
+
+          <p class="text-slate-600 text-base leading-relaxed mb-8 font-normal">
+            V roku 1883 tu vzniklo Keramicko-priemyselné učilište, ktoré inštitucionalizovalo bohatú hrnčiarsku a džbankársku 
+            tradíciu Modry. Vo veži postavili unikátnu <strong>kasselskú pec</strong> — pravdepodobne poslednú svojho druhu v pôvodnom 
+            stave v celej strednej Európe. Dnes tu nájdete nielen 4-hviezdičkový komfort, ale aj živé múzeum a atmosféru skutočného kultúrneho dedičstva.
+          </p>
+
+          <!-- Timeline Mini-Cards -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4 border-t border-slate-100">
+            <div class="p-4 rounded-xl bg-pottery-50 border border-pottery-200">
+              <span class="font-display font-extrabold text-terracotta-600 text-xl block mb-1">1610</span>
+              <h4 class="font-bold text-xs uppercase text-slate-800 mb-1">Renesančný Bastión</h4>
+              <p class="text-xs text-slate-500">Mestské opevnenie Modry a strážna veža.</p>
+            </div>
+            <div class="p-4 rounded-xl bg-pottery-50 border border-pottery-200">
+              <span class="font-display font-extrabold text-terracotta-600 text-xl block mb-1">1883</span>
+              <h4 class="font-bold text-xs uppercase text-slate-800 mb-1">Učilište & Pec</h4>
+              <p class="text-xs text-slate-500">Vznik keramického učilišťa a kasselskej pece.</p>
+            </div>
+            <div class="p-4 rounded-xl bg-pottery-50 border border-pottery-200">
+              <span class="font-display font-extrabold text-majolika-700 text-xl block mb-1">Dnes</span>
+              <h4 class="font-bold text-xs uppercase text-slate-800 mb-1">Hotel Majolika****</h4>
+              <p class="text-xs text-slate-500">Boutique hotel, wellness, víno a múzeum.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- IZBY & SUITY (ACCOMMODATION) -->
+  <section id="izby" class="py-20 bg-cream-dots border-t border-pottery-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-majolika-100 text-majolika-800 text-xs font-bold uppercase tracking-wider mb-3">
+          <i data-lucide="bed-double" class="w-3.5 h-3.5"></i>
+          Komfortné ubytovanie
+        </span>
+        <h2 class="font-display text-3xl sm:text-5xl font-bold text-majolika-950 mb-4">
+          Izby & Apartmány s nádychom tradície
+        </h2>
+        <p class="text-slate-600 text-base sm:text-lg">
+          Kapacita 27 izieb s 53 pevnými lôžkami a prístelkami. Tiché prostredie v bezprostrednej blízkosti centra Modry, 
+          moderná vzduchotechnika, bezplatné Wi-Fi a parkovanie v podzemnej garáži s nabíjaním EV zadarmo.
+        </p>
+      </div>
+
+      <!-- Room Filter Pills -->
+      <div class="flex flex-wrap items-center justify-center gap-2 mb-10">
+        <button onclick="filterRooms('all', this)" class="room-filter-btn active-room-btn px-5 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all bg-majolika-900 text-goldglaze-300 shadow-sm">
+          Všetky izby (27)
+        </button>
+        <button onclick="filterRooms('dvojlozkova', this)" class="room-filter-btn px-5 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all bg-white text-slate-700 hover:bg-slate-100 border border-slate-200">
+          Dvojlôžkové izby (21)
+        </button>
+        <button onclick="filterRooms('apartmany', this)" class="room-filter-btn px-5 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all bg-white text-slate-700 hover:bg-slate-100 border border-slate-200">
+          Apartmány & Suity (5)
+        </button>
+        <button onclick="filterRooms('svadobny', this)" class="room-filter-btn px-5 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all bg-white text-slate-700 hover:bg-slate-100 border border-slate-200">
+          Svadobný apartmán (1)
+        </button>
+        <button onclick="filterRooms('imobilny', this)" class="room-filter-btn px-5 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all bg-white text-slate-700 hover:bg-slate-100 border border-slate-200">
+          Bezbariérová izba (1)
+        </button>
+      </div>
+
+      <!-- Room Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- CARD 1: Dvojlôžková izba Standard -->
+        <div class="room-card group bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 border border-slate-200 flex flex-col" data-category="dvojlozkova">
+          <div class="relative aspect-[16/10] overflow-hidden">
+            <img src="images/ubytovanie1.jpg" alt="Dvojlôžková izba Standard" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-4 left-4 bg-majolika-900/90 backdrop-blur-md text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+              21 izieb
+            </span>
+            <div class="absolute bottom-3 right-3 bg-white/95 backdrop-blur-md px-3 py-1 rounded-xl text-xs font-bold text-slate-800 shadow-md">
+              od 79 € / noc
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-3 text-xs text-slate-500 font-semibold mb-2">
+                <span class="flex items-center gap-1"><i data-lucide="user" class="w-3.5 h-3.5 text-majolika-700"></i> 2 osoby</span>
+                <span>•</span>
+                <span class="flex items-center gap-1"><i data-lucide="maximize" class="w-3.5 h-3.5 text-majolika-700"></i> cca 22 m²</span>
+                <span>•</span>
+                <span class="flex items-center gap-1"><i data-lucide="bed" class="w-3.5 h-3.5 text-majolika-700"></i> Oddelené / Manželská</span>
+              </div>
+              <h3 class="font-display font-bold text-xl text-majolika-950 mb-2 group-hover:text-terracotta-600 transition-colors">
+                Dvojlôžková izba Standard
+              </h3>
+              <p class="text-slate-600 text-sm mb-4 line-clamp-3">
+                Útulná a vkusne zariadená izba ideálna pre pracovné cesty aj víkendové pobyty v Malých Karpatoch. Vlastná kúpeľňa so sprchou, LCD TV s kamerovým prenosom garáže, bezplatné Wi-Fi.
+              </p>
+              <!-- Amenities Badges -->
+              <div class="flex flex-wrap gap-1.5 mb-6 text-[11px] font-medium text-slate-600">
+                <span class="px-2 py-0.5 rounded bg-slate-100">Klimatizácia</span>
+                <span class="px-2 py-0.5 rounded bg-slate-100">Wi-Fi zadarmo</span>
+                <span class="px-2 py-0.5 rounded bg-slate-100">Minibar</span>
+                <span class="px-2 py-0.5 rounded bg-slate-100">Trezor</span>
+                <span class="px-2 py-0.5 rounded bg-slate-100">Podzemná garáž</span>
+              </div>
+            </div>
+            <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+              <button onclick="openRoomModal('standard')" class="text-majolika-700 hover:text-majolika-900 font-bold text-xs flex items-center gap-1">
+                Zobraziť detaily <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </button>
+              <a href="#rezervacia" class="px-4 py-2 rounded-xl bg-majolika-900 hover:bg-majolika-800 text-goldglaze-300 font-bold text-xs transition-colors">
+                Rezervovať
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 2: Dvojlôžková izba Superior s výhľadom -->
+        <div class="room-card group bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 border border-slate-200 flex flex-col" data-category="dvojlozkova">
+          <div class="relative aspect-[16/10] overflow-hidden">
+            <img src="images/ubytovanie4.jpg" alt="Dvojlôžková izba Superior" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-4 left-4 bg-terracotta-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+              Obľúbená voľba
+            </span>
+            <div class="absolute bottom-3 right-3 bg-white/95 backdrop-blur-md px-3 py-1 rounded-xl text-xs font-bold text-slate-800 shadow-md">
+              od 89 € / noc
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-3 text-xs text-slate-500 font-semibold mb-2">
+                <span class="flex items-center gap-1"><i data-lucide="user" class="w-3.5 h-3.5 text-majolika-700"></i> 2 osoby (+1)</span>
+                <span>•</span>
+                <span class="flex items-center gap-1"><i data-lucide="maximize" class="w-3.5 h-3.5 text-majolika-700"></i> cca 28 m²</span>
+                <span>•</span>
+                <span class="flex items-center gap-1"><i data-lucide="sun" class="w-3.5 h-3.5 text-majolika-700"></i> Výhľad do dvora</span>
+              </div>
+              <h3 class="font-display font-bold text-xl text-majolika-950 mb-2 group-hover:text-terracotta-600 transition-colors">
+                Dvojlôžková izba Superior
+              </h3>
+              <p class="text-slate-600 text-sm mb-4 line-clamp-3">
+                Priestranná izba s výhľadom do romantického historického nádvoria. Možnosť prístelky pre dieťa, luxusná kúpeľňa, župan a papuče, ekologické chladenie a kávový set.
+              </p>
+              <div class="flex flex-wrap gap-1.5 mb-6 text-[11px] font-medium text-slate-600">
+                <span class="px-2 py-0.5 rounded bg-slate-100">Výhľad na nádvorie</span>
+                <span class="px-2 py-0.5 rounded bg-slate-100">Kávovar / Čaj</span>
+                <span class="px-2 py-0.5 rounded bg-slate-100">Župan & Papuče</span>
+                <span class="px-2 py-0.5 rounded bg-slate-100">Možnosť prístelky</span>
+              </div>
+            </div>
+            <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+              <button onclick="openRoomModal('superior')" class="text-majolika-700 hover:text-majolika-900 font-bold text-xs flex items-center gap-1">
+                Zobraziť detaily <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </button>
+              <a href="#rezervacia" class="px-4 py-2 rounded-xl bg-majolika-900 hover:bg-majolika-800 text-goldglaze-300 font-bold text-xs transition-colors">
+                Rezervovať
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 3: Romantický Svadobný Apartmán -->
+        <div class="room-card group bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 border-2 border-goldglaze-400 flex flex-col" data-category="svadobny apartmany">
+          <div class="relative aspect-[16/10] overflow-hidden">
+            <img src="images/ubytovanie2.jpg" alt="Romantický Svadobný Apartmán" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-4 left-4 bg-gradient-to-r from-goldglaze-600 to-goldglaze-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider flex items-center gap-1">
+              <i data-lucide="heart" class="w-3 h-3 fill-white"></i> Exkluzívny Svadobný
+            </span>
+            <div class="absolute bottom-3 right-3 bg-white/95 backdrop-blur-md px-3 py-1 rounded-xl text-xs font-bold text-slate-800 shadow-md">
+              od 129 € / noc
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-3 text-xs text-slate-500 font-semibold mb-2">
+                <span class="flex items-center gap-1"><i data-lucide="heart" class="w-3.5 h-3.5 text-terracotta-600"></i> Novomanželia</span>
+                <span>•</span>
+                <span class="flex items-center gap-1"><i data-lucide="maximize" class="w-3.5 h-3.5 text-majolika-700"></i> 45 m²</span>
+                <span>•</span>
+                <span class="flex items-center gap-1"><i data-lucide="sparkles" class="w-3.5 h-3.5 text-goldglaze-500"></i> VIP servis</span>
+              </div>
+              <h3 class="font-display font-bold text-xl text-majolika-950 mb-2 group-hover:text-goldglaze-600 transition-colors">
+                Svadobný Apartmán
+              </h3>
+              <p class="text-slate-600 text-sm mb-4 line-clamp-3">
+                Unikátny romantický apartmán so štýlovým historickým nábytkom a baldachýnom. Fľaša modranského akostného vína na privítanie, masážna vaňa, neobmedzený vstup do wellness a raňajky do postele na želanie.
+              </p>
+              <div class="flex flex-wrap gap-1.5 mb-6 text-[11px] font-medium text-slate-600">
+                <span class="px-2 py-0.5 rounded bg-goldglaze-50 text-goldglaze-700 font-semibold">Víno na privítanie</span>
+                <span class="px-2 py-0.5 rounded bg-slate-100">Kúpeľňa s vaňou</span>
+                <span class="px-2 py-0.5 rounded bg-slate-100">Wellness v cene</span>
+                <span class="px-2 py-0.5 rounded bg-slate-100">Late check-out</span>
+              </div>
+            </div>
+            <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+              <button onclick="openRoomModal('wedding')" class="text-majolika-700 hover:text-majolika-900 font-bold text-xs flex items-center gap-1">
+                Zobraziť detaily <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </button>
+              <a href="#rezervacia" class="px-4 py-2 rounded-xl bg-goldglaze-500 hover:bg-goldglaze-600 text-majolika-950 font-bold text-xs transition-colors">
+                Rezervovať
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 4: Rodinný Apartmán / Suita -->
+        <div class="room-card group bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 border border-slate-200 flex flex-col" data-category="apartmany">
+          <div class="relative aspect-[16/10] overflow-hidden">
+            <img src="images/ubytovanie7.jpg" alt="Rodinný Apartmán" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-4 left-4 bg-majolika-900/90 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+              2 Suity / 3 Apartmány
+            </span>
+            <div class="absolute bottom-3 right-3 bg-white/95 backdrop-blur-md px-3 py-1 rounded-xl text-xs font-bold text-slate-800 shadow-md">
+              od 119 € / noc
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-3 text-xs text-slate-500 font-semibold mb-2">
+                <span class="flex items-center gap-1"><i data-lucide="users" class="w-3.5 h-3.5 text-majolika-700"></i> až 4-5 osôb</span>
+                <span>•</span>
+                <span class="flex items-center gap-1"><i data-lucide="maximize" class="w-3.5 h-3.5 text-majolika-700"></i> 42 m²</span>
+                <span>•</span>
+                <span class="flex items-center gap-1"><i data-lucide="layout" class="w-3.5 h-3.5 text-majolika-700"></i> 2 miestnosti</span>
+              </div>
+              <h3 class="font-display font-bold text-xl text-majolika-950 mb-2 group-hover:text-terracotta-600 transition-colors">
+                Rodinná Suita & Apartmán
+              </h3>
+              <p class="text-slate-600 text-sm mb-4 line-clamp-3">
+                Priestranné riešenie s oddelenou obývacou a spálňovou časťou. Vynikajúce pre rodiny s deťmi alebo skupinku priateľov. Rozkladací gauč, dve TV, chladnička, detská postieľka na vyžiadanie zadarmo.
+              </p>
+              <div class="flex flex-wrap gap-1.5 mb-6 text-[11px] font-medium text-slate-600">
+                <span class="px-2 py-0.5 rounded bg-slate-100">Oddelená obývačka</span>
+                <span class="px-2 py-0.5 rounded bg-slate-100">2x LCD TV</span>
+                <span class="px-2 py-0.5 rounded bg-slate-100">Rozkladací gauč</span>
+                <span class="px-2 py-0.5 rounded bg-slate-100">Detská postieľka</span>
+              </div>
+            </div>
+            <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+              <button onclick="openRoomModal('suite')" class="text-majolika-700 hover:text-majolika-900 font-bold text-xs flex items-center gap-1">
+                Zobraziť detaily <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </button>
+              <a href="#rezervacia" class="px-4 py-2 rounded-xl bg-majolika-900 hover:bg-majolika-800 text-goldglaze-300 font-bold text-xs transition-colors">
+                Rezervovať
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 5: Bezbariérová izba pre imobilných hostí -->
+        <div class="room-card group bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 border border-slate-200 flex flex-col" data-category="imobilny">
+          <div class="relative aspect-[16/10] overflow-hidden">
+            <img src="images/ubytovanie5.jpg" alt="Bezbariérová izba" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-4 left-4 bg-emerald-700 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider flex items-center gap-1">
+              <i data-lucide="accessibility" class="w-3 h-3"></i> Bezbariérová
+            </span>
+            <div class="absolute bottom-3 right-3 bg-white/95 backdrop-blur-md px-3 py-1 rounded-xl text-xs font-bold text-slate-800 shadow-md">
+              od 75 € / noc
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-3 text-xs text-slate-500 font-semibold mb-2">
+                <span class="flex items-center gap-1"><i data-lucide="user" class="w-3.5 h-3.5 text-majolika-700"></i> 1-2 osoby</span>
+                <span>•</span>
+                <span class="flex items-center gap-1"><i data-lucide="maximize" class="w-3.5 h-3.5 text-majolika-700"></i> 26 m²</span>
+                <span>•</span>
+                <span class="flex items-center gap-1"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i> Plne prispôsobené</span>
+              </div>
+              <h3 class="font-display font-bold text-xl text-majolika-950 mb-2 group-hover:text-emerald-700 transition-colors">
+                Bezbariérová izba
+              </h3>
+              <p class="text-slate-600 text-sm mb-4 line-clamp-3">
+                Špeciálne upravená jednolôžková/dvojlôžková izba pre imobilných hostí s bezbariérovým prístupom z garáže a nádvoria. Široké zárubne, madlá v kúpeľni, sprchovací kút bez schodíka.
+              </p>
+              <div class="flex flex-wrap gap-1.5 mb-6 text-[11px] font-medium text-slate-600">
+                <span class="px-2 py-0.5 rounded bg-emerald-50 text-emerald-800 font-semibold">100% Bezbariérové</span>
+                <span class="px-2 py-0.5 rounded bg-slate-100">Výťah z garáže</span>
+                <span class="px-2 py-0.5 rounded bg-slate-100">Madlá & Bezbariérová sprcha</span>
+              </div>
+            </div>
+            <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+              <button onclick="openRoomModal('accessible')" class="text-majolika-700 hover:text-majolika-900 font-bold text-xs flex items-center gap-1">
+                Zobraziť detaily <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </button>
+              <a href="#rezervacia" class="px-4 py-2 rounded-xl bg-majolika-900 hover:bg-majolika-800 text-goldglaze-300 font-bold text-xs transition-colors">
+                Rezervovať
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 6: Špeciálny Balíček "Keramika & Víno" -->
+        <div class="room-card group bg-gradient-to-br from-majolika-950 to-majolika-900 rounded-3xl overflow-hidden shadow-elevated border-2 border-goldglaze-500/50 flex flex-col text-white" data-category="all">
+          <div class="relative aspect-[16/10] overflow-hidden">
+            <img src="images/pivnica1.jpg" alt="Pobytový balíček Keramika a Víno" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90">
+            <span class="absolute top-4 left-4 bg-terracotta-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider flex items-center gap-1">
+              <i data-lucide="star" class="w-3 h-3 fill-white"></i> TOP Zážitkový balíček
+            </span>
+            <div class="absolute bottom-3 right-3 bg-majolika-950/90 backdrop-blur-md px-3 py-1 rounded-xl text-xs font-bold text-goldglaze-300 border border-goldglaze-500/40">
+              od 199 € / pobyt
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-3 text-xs text-goldglaze-400 font-semibold mb-2">
+                <span>2 noci pre 2 osoby</span>
+                <span>•</span>
+                <span>Raňajky formou bufetu</span>
+              </div>
+              <h3 class="font-display font-bold text-xl text-white mb-2 group-hover:text-goldglaze-400 transition-colors">
+                Víkendový balíček „Kúzlo Modry“
+              </h3>
+              <p class="text-slate-300 text-sm mb-4 line-clamp-3">
+                Ubytovanie v Superior izbe, neobmedzený vstup do wellness a bazéna, riadená degustácia 5 druhov vín vo vínnej pivnici a vstupenka do Múzea slovenskej ľudovej majoliky.
+              </p>
+              <div class="flex flex-wrap gap-1.5 mb-6 text-[11px] font-medium text-slate-300">
+                <span class="px-2 py-0.5 rounded bg-white/10 text-goldglaze-300">Degustácia vín v cene</span>
+                <span class="px-2 py-0.5 rounded bg-white/10">Vstup do wellness</span>
+                <span class="px-2 py-0.5 rounded bg-white/10">Vstup do múzea</span>
+              </div>
+            </div>
+            <div class="pt-4 border-t border-white/10 flex items-center justify-between">
+              <a href="#rezervacia" class="w-full py-2.5 rounded-xl bg-gradient-to-r from-goldglaze-500 to-goldglaze-600 hover:from-goldglaze-400 hover:to-goldglaze-500 text-majolika-950 font-bold text-xs text-center transition-all shadow-md">
+                Rezervovať tento balíček
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- General Policy Notes -->
+      <div class="mt-12 p-6 rounded-2xl bg-white border border-slate-200/80 flex flex-wrap items-center justify-between gap-4 text-xs text-slate-600">
+        <div class="flex items-center gap-2">
+          <i data-lucide="clock" class="w-4 h-4 text-majolika-700"></i>
+          <span><strong>Check-in:</strong> od 14:00 hod. | <strong>Check-out:</strong> do 10:00 hod.</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <i data-lucide="ban" class="w-4 h-4 text-terracotta-600"></i>
+          <span>Všetky vnútorné priestory hotela sú <strong>nefajčiarske</strong>. Zvieratá neakceptujeme.</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <i data-lucide="shield-check" class="w-4 h-4 text-emerald-600"></i>
+          <span>Podzemná garáž & kamerový systém chránené 24/7.</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- WELLNESS EXPERIENCE & BAZÉN -->
+  <section id="wellness" class="py-20 bg-majolika-950 text-white relative overflow-hidden bg-majolika-pattern">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-majolika-800 text-goldglaze-400 text-xs font-bold uppercase tracking-wider mb-3 border border-majolika-700">
+          <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+          Wellness Experience
+        </span>
+        <h2 class="font-display text-3xl sm:text-5xl font-bold text-white mb-4">
+          Unikátny svet parných a vodných kúpeľov
+        </h2>
+        <p class="text-slate-300 text-base sm:text-lg">
+          Nalaďte svoje zmysly na pokoj a odpočinok. V intímnom prostredí historického komplexu 
+          ponúkame dokonalú regeneráciu tela i mysle s relaxačnou hudbou a efektným náladovým osvetlením.
+        </p>
+      </div>
+
+      <!-- Wellness Main Grid Showcase -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center mb-16">
+        
+        <!-- Big Feature: Bazén s protiprúdom -->
+        <div class="lg:col-span-7 rounded-3xl overflow-hidden relative shadow-2xl group border border-majolika-800">
+          <img src="images/wellness1.jpg" alt="Vnútorný bazén s protiprúdom" class="w-full h-[400px] sm:h-[480px] object-cover group-hover:scale-105 transition-transform duration-700">
+          <div class="absolute inset-0 bg-gradient-to-t from-majolika-950 via-majolika-950/30 to-transparent"></div>
+          <div class="absolute bottom-6 left-6 right-6">
+            <span class="bg-majolika-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-2 inline-block">
+              Dominanta wellnessu
+            </span>
+            <h3 class="font-display text-2xl sm:text-3xl font-bold text-white mb-2">
+              Krytý bazén s masážnym protiprúdom
+            </h3>
+            <p class="text-slate-300 text-sm max-w-xl">
+              Príjemná teplota vody, ideálna hĺbka a vlny protiprúdu pre plavecký tréning alebo uvoľňujúce plávanie. Otvorené denne od 07:00 do 17:00 hod.
+            </p>
+          </div>
+        </div>
+
+        <!-- Secondary Highlights: Vírivka & Tepidárium -->
+        <div class="lg:col-span-5 flex flex-col gap-6">
+          
+          <div class="p-6 rounded-3xl bg-majolika-900/90 border border-majolika-800 backdrop-blur-md shadow-lg flex gap-4 items-start">
+            <div class="w-24 h-24 rounded-2xl overflow-hidden flex-shrink-0 border border-goldglaze-500/30">
+              <img src="images/wellness3.jpg" alt="Mozaiková vírivka" class="w-full h-full object-cover">
+            </div>
+            <div>
+              <h4 class="font-display font-bold text-lg text-white mb-1">Mozaiková Vírivka</h4>
+              <p class="text-xs text-slate-300 leading-relaxed">
+                Hydroterapia s masážnymi tryskami uvoľní svalstvo chrbta i nôh. Vychutnajte si dokonalý pokoj v teplej perličkovej kúpeli.
+              </p>
+            </div>
+          </div>
+
+          <div class="p-6 rounded-3xl bg-majolika-900/90 border border-majolika-800 backdrop-blur-md shadow-lg flex gap-4 items-start">
+            <div class="w-24 h-24 rounded-2xl overflow-hidden flex-shrink-0 border border-goldglaze-500/30">
+              <img src="images/wellness4.jpg" alt="Bylinková sauna" class="w-full h-full object-cover">
+            </div>
+            <div>
+              <h4 class="font-display font-bold text-lg text-white mb-1">Bylinková & Fínska sauna</h4>
+              <p class="text-xs text-slate-300 leading-relaxed">
+                Aromaterapia s vôňami malokarpatských bylín a klasická fínska sauna s lávovou pecou na vyplavenie toxínov a posilnenie imunity.
+              </p>
+            </div>
+          </div>
+
+          <div class="p-6 rounded-3xl bg-majolika-900/90 border border-majolika-800 backdrop-blur-md shadow-lg flex gap-4 items-start">
+            <div class="w-24 h-24 rounded-2xl overflow-hidden flex-shrink-0 border border-goldglaze-500/30">
+              <img src="images/wellness6.jpg" alt="Ľadopád a Tepidárium" class="w-full h-full object-cover">
+            </div>
+            <div>
+              <h4 class="font-display font-bold text-lg text-white mb-1">Ľadopád, Sprchy & Tepidárium</h4>
+              <p class="text-xs text-slate-300 leading-relaxed">
+                Ľadové osvieženie po saunovaní a následný relax v tepidáriu na vyhrievaných ergonomických ležadlách.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Saunas & Facilities 4-column cards -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 mb-12">
+        
+        <div class="p-5 rounded-2xl bg-majolika-900/60 border border-majolika-800 text-center">
+          <div class="w-10 h-10 rounded-full bg-terracotta-600/30 text-terracotta-400 mx-auto flex items-center justify-center mb-3">
+            <i data-lucide="flame" class="w-5 h-5"></i>
+          </div>
+          <h4 class="font-bold text-sm text-white mb-1">Fínska lávová sauna</h4>
+          <p class="text-[11px] text-slate-400">85°C – 100°C suché teplo s lávovými kameňmi</p>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-majolika-900/60 border border-majolika-800 text-center">
+          <div class="w-10 h-10 rounded-full bg-emerald-600/30 text-emerald-400 mx-auto flex items-center justify-center mb-3">
+            <i data-lucide="flower" class="w-5 h-5"></i>
+          </div>
+          <h4 class="font-bold text-sm text-white mb-1">Bylinková aromaterapia</h4>
+          <p class="text-[11px] text-slate-400">Jemná inhalácia liečivých bylín a eukalyptu</p>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-majolika-900/60 border border-majolika-800 text-center">
+          <div class="w-10 h-10 rounded-full bg-cyan-600/30 text-cyan-400 mx-auto flex items-center justify-center mb-3">
+            <i data-lucide="cloud-rain" class="w-5 h-5"></i>
+          </div>
+          <h4 class="font-bold text-sm text-white mb-1">Parný kúpeľ</h4>
+          <p class="text-[11px] text-slate-400">100% vlhkosť pre čistú a hydratovanú pokožku</p>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-majolika-900/60 border border-majolika-800 text-center">
+          <div class="w-10 h-10 rounded-full bg-blue-600/30 text-blue-400 mx-auto flex items-center justify-center mb-3">
+            <i data-lucide="snowflake" class="w-5 h-5"></i>
+          </div>
+          <h4 class="font-bold text-sm text-white mb-1">Ľadopád & Masáže</h4>
+          <p class="text-[11px] text-slate-400">Ochladenie drveným ľadom a masáže na objednávku</p>
+        </div>
+
+      </div>
+
+      <!-- Wellness Info & Operating Hours -->
+      <div class="p-6 sm:p-8 rounded-3xl bg-majolika-900/90 border border-goldglaze-500/30 flex flex-col md:flex-row items-center justify-between gap-6">
+        <div>
+          <h4 class="font-display font-bold text-xl text-goldglaze-300 mb-2">Otváracie hodiny & Objednávky</h4>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-2 text-xs text-slate-300">
+            <p><strong>Bazén & Vírivka:</strong> denne 07:00 – 17:00 (vstup deťom do 15 r. v sprievode dospelého)</p>
+            <p><strong>Wellness Experience (Saunový svet):</strong> denne 17:00 – 21:00 (vstup od 12 rokov)</p>
+            <p><strong>Masáže & procedúry:</strong> na objednávku vopred na recepcii</p>
+            <p><strong>Upozornenie:</strong> Wellness je k dispozícii pre ubytovaných hostí a privátne skupiny.</p>
+          </div>
+        </div>
+        <div class="flex-shrink-0">
+          <a href="#rezervacia" class="px-6 py-3 rounded-xl bg-goldglaze-500 hover:bg-goldglaze-400 text-majolika-950 font-bold text-sm transition-all shadow-md inline-flex items-center gap-2">
+            <i data-lucide="calendar" class="w-4 h-4"></i>
+            <span>Rezervovať pobyt s wellnessom</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- GASTRONÓMIA, KAVIAREŇ & VÍNNA PIVNICA -->
+  <section id="gastronomia" class="py-20 bg-pottery-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-terracotta-100 text-terracotta-800 text-xs font-bold uppercase tracking-wider mb-3">
+          <i data-lucide="utensils" class="w-3.5 h-3.5"></i>
+          Pôžitok z chuti & vína
+        </span>
+        <h2 class="font-display text-3xl sm:text-5xl font-bold text-majolika-950 mb-4">
+          Reštaurácia Landsfeld, Kaviareň & Vínna pivnica
+        </h2>
+        <p class="text-slate-600 text-base sm:text-lg">
+          Spojenie tradičnej slovenskej a modernej gastronómie, bohaté raňajky na letnom nádvorí, 
+          posedenie pri autentickej keramickej peci a nezabudnuteľné degustácie v klenbovej pivnici.
+        </p>
+      </div>
+
+      <!-- Gastronomy Tabs -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+        
+        <!-- CARD 1: Reštaurácia Landsfeld -->
+        <div class="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all border border-slate-200 flex flex-col">
+          <div class="relative h-64 overflow-hidden">
+            <img src="images/restauracia1.jpg" alt="Reštaurácia Landsfeld Modra" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent"></div>
+            <div class="absolute bottom-4 left-4 right-4 text-white">
+              <span class="text-[11px] font-bold uppercase tracking-wider text-goldglaze-400">Kapacita 60 miest</span>
+              <h3 class="font-display font-bold text-xl text-white">Reštaurácia Landsfeld</h3>
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <p class="text-slate-600 text-sm leading-relaxed mb-6">
+              Svetlá reštaurácia s priamym vstupom a výhľadom na historické nádvorie. Podávame bohaté bufetové raňajky, 
+              sezónne špeciality (husacie a kačacie hody, pečené prasiatko), rodinné oslavy a firemné bankety na objednávku vopred. 
+              V letných mesiacoch je priestor ekologicky chladený.
+            </p>
+            <div class="space-y-2 border-t border-slate-100 pt-4 text-xs text-slate-500 font-medium">
+              <div class="flex items-center justify-between">
+                <span>Raňajky:</span> <span class="font-bold text-slate-800">Po - Ne 07:00 – 10:00</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <span>Obedy & Večere:</span> <span class="font-bold text-slate-800">Na objednávku / Akcie</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <span>Detský kútik:</span> <span class="text-emerald-700 font-bold">Áno, k dispozícii</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 2: Kaviareň s keramickou pecou -->
+        <div class="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all border border-slate-200 flex flex-col">
+          <div class="relative h-64 overflow-hidden">
+            <img src="images/kaviaren1.jpg" alt="Kaviareň s keramickou pecou" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent"></div>
+            <div class="absolute bottom-4 left-4 right-4 text-white">
+              <span class="text-[11px] font-bold uppercase tracking-wider text-goldglaze-400">Kapacita 50 miest</span>
+              <h3 class="font-display font-bold text-xl text-white">Štýlová Kaviareň & Bar</h3>
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <p class="text-slate-600 text-sm leading-relaxed mb-6">
+              Otvorená pre ubytovaných hostí i verejnosť denne od 07:00 do 22:00. Pýchou interiéru je funkčná keramická pec, 
+              remeselné detaily majoliky a bohatý bar s výberovou kávou, domácimi koláčmi, čajmi a osviežujúcimi miešanými drinkami.
+            </p>
+            <div class="space-y-2 border-t border-slate-100 pt-4 text-xs text-slate-500 font-medium">
+              <div class="flex items-center justify-between">
+                <span>Otvorené denne:</span> <span class="font-bold text-slate-800">07:00 – 22:00</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <span>Ponuka:</span> <span class="font-bold text-slate-800">Výberová káva, dezerty, drinky</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <span>Letná terasa:</span> <span class="text-emerald-700 font-bold">Na slnečnom nádvorí</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 3: Historická Vínna pivnica -->
+        <div class="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all border-2 border-terracotta-500/60 flex flex-col">
+          <div class="relative h-64 overflow-hidden">
+            <img src="images/pivnica2.jpg" alt="Vínna pivnica Hotel Majolika" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent"></div>
+            <div class="absolute bottom-4 left-4 right-4 text-white">
+              <span class="text-[11px] font-bold uppercase tracking-wider text-goldglaze-400">Privátny klenbový priestor</span>
+              <h3 class="font-display font-bold text-xl text-white">Klenbová Vínna Pivnica</h3>
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <p class="text-slate-600 text-sm leading-relaxed mb-6">
+              Autentická kamenná pivnica s horiacim krbom ponúka 100% súkromie. Ochutnajte špičkové vína malokarpatského regiónu 
+              (Fedor Malík, Mrva & Stanko, Karpatská perla, Elesko, Janoušek, Rariga) pod vedením skúseného someliéra a vinárov.
+            </p>
+            <div class="space-y-2 border-t border-slate-100 pt-4 text-xs text-slate-500 font-medium">
+              <div class="flex items-center justify-between">
+                <span>Atmosféra:</span> <span class="font-bold text-slate-800">Otvorený krb & klenby</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <span>Degustácie:</span> <span class="font-bold text-slate-800">Riadené someliérom</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <span>Gastro zážitok:</span> <span class="text-terracotta-700 font-bold">Pečené prasiatko na objednávku</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Wine Tasting CTA Banner -->
+      <div class="p-8 rounded-3xl bg-gradient-to-r from-majolika-950 via-majolika-900 to-majolika-950 text-white shadow-xl flex flex-col lg:flex-row items-center justify-between gap-6 border border-goldglaze-500/30">
+        <div class="flex items-center gap-5">
+          <div class="w-14 h-14 rounded-2xl bg-terracotta-600/30 border border-terracotta-500/40 flex items-center justify-center text-goldglaze-400 flex-shrink-0">
+            <i data-lucide="wine" class="w-7 h-7"></i>
+          </div>
+          <div>
+            <h4 class="font-display font-bold text-xl text-white mb-1">Máte záujem o privátnu degustáciu vín alebo oslavu?</h4>
+            <p class="text-xs sm:text-sm text-slate-300">Pripravíme pre Vašu rodinu či firmu degustačné menu na mieru s lokálnymi vinármi z Modry.</p>
+          </div>
+        </div>
+        <div class="flex-shrink-0 flex items-center gap-3 w-full lg:w-auto">
+          <a href="#rezervacia" class="w-full lg:w-auto px-6 py-3 rounded-full bg-terracotta-600 hover:bg-terracotta-500 text-white font-bold text-xs uppercase tracking-wider text-center transition-all shadow-md">
+            Dopytovať degustáciu / oslavu
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- MÚZEUM SLOVENSKEJ MAJOLIKY & VYHLIADKOVÁ VEŽA (BASTION) -->
+  <section id="muzeum" class="py-20 bg-white relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left: Text Info -->
+        <div class="lg:col-span-6">
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-pottery-100 text-majolika-800 text-xs font-bold uppercase tracking-wider mb-3">
+            <i data-lucide="palette" class="w-3.5 h-3.5"></i>
+            Kultúrny unikát v areáli hotela
+          </span>
+          <h2 class="font-display text-3xl sm:text-5xl font-bold text-majolika-950 mb-6 leading-tight">
+            Múzeum modranskej keramiky & Vyhliadková veža
+          </h2>
+          <p class="text-slate-600 text-base leading-relaxed mb-6 font-normal">
+            Hotel Majolika je jediným hotelom na Slovensku, v ktorého areáli sa nachádza skutočná historická výroba keramiky. 
+            V muzeálnej expozícii objavíte autentické historické stroje, náradie majstrov keramikárov a najmä 
+            <strong>poslednú zachovanú kasselskú pec z roku 1883</strong>.
+          </p>
+
+          <!-- Highlights Checklist -->
+          <div class="space-y-4 mb-8">
+            <div class="flex items-start gap-3">
+              <div class="w-6 h-6 rounded-full bg-majolika-100 text-majolika-800 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <i data-lucide="check" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-sm text-slate-900">Múzeum slovenskej keramickej plastiky</h4>
+                <p class="text-xs text-slate-500">Stála expozícia džbankárskeho a hrnčiarskeho remesla. Otvorené Po - Ne 10:00 – 16:00 hod.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <div class="w-6 h-6 rounded-full bg-majolika-100 text-majolika-800 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <i data-lucide="check" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-sm text-slate-900">Tvorivý minikurz točenia na hrnčiarskom kruhu</h4>
+                <p class="text-xs text-slate-500">Vyskúšajte si pod dohľadom majstra prácu s hlinou a odneste si vlastnoručne vyrobený suvenír.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <div class="w-6 h-6 rounded-full bg-majolika-100 text-majolika-800 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <i data-lucide="check" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-sm text-slate-900">Vyhliadková veža s indickými kreslami</h4>
+                <p class="text-xs text-slate-500">360° panoráma Modry a vinohradov, presklené steny, invertná klimatizácia a sedenie z masívneho indického dreva.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Admission & Hours Box -->
+          <div class="p-5 rounded-2xl bg-pottery-50 border border-pottery-200">
+            <h4 class="font-bold text-xs uppercase tracking-wider text-slate-800 mb-2">Vstupné do múzea (lístky na recepcii):</h4>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs">
+              <div class="bg-white p-2.5 rounded-lg border border-slate-100">
+                <span class="text-slate-500 block text-[11px]">Dospelí</span>
+                <span class="font-bold text-majolika-900 text-sm">6 €</span>
+              </div>
+              <div class="bg-white p-2.5 rounded-lg border border-slate-100">
+                <span class="text-slate-500 block text-[11px]">Deti & Seniori</span>
+                <span class="font-bold text-majolika-900 text-sm">4 €</span>
+              </div>
+              <div class="bg-white p-2.5 rounded-lg border border-slate-100">
+                <span class="text-slate-500 block text-[11px]">Výklad SK</span>
+                <span class="font-bold text-majolika-900 text-sm">10 €</span>
+              </div>
+              <div class="bg-white p-2.5 rounded-lg border border-slate-100">
+                <span class="text-slate-500 block text-[11px]">Výklad EN</span>
+                <span class="font-bold text-majolika-900 text-sm">15 €</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right: Photo Gallery Grid -->
+        <div class="lg:col-span-6 grid grid-cols-2 gap-4">
+          <div class="rounded-2xl overflow-hidden shadow-md aspect-square">
+            <img src="images/muzeum1.JPG" alt="Exponáty modranskej majoliky" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+          </div>
+          <div class="rounded-2xl overflow-hidden shadow-md aspect-square">
+            <img src="images/veza2.jpg" alt="Vyhliadková veža bastion s indickými kreslami" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+          </div>
+          <div class="rounded-2xl overflow-hidden shadow-md aspect-square">
+            <img src="images/muzeum3.JPG" alt="Historická kasselská pec z roku 1883" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+          </div>
+          <div class="rounded-2xl overflow-hidden shadow-md aspect-square">
+            <img src="images/volno1.jpg" alt="Hrnčiarsky kruh a tvorivé dielne" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- KONGRESY, TEAMBUILDING & SVADBY -->
+  <section id="kongresy" class="py-20 bg-pottery-100/60 border-t border-pottery-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-majolika-100 text-majolika-800 text-xs font-bold uppercase tracking-wider mb-3">
+          <i data-lucide="briefcase" class="w-3.5 h-3.5"></i>
+          Podujatia, Konferencie & Oslavy
+        </span>
+        <h2 class="font-display text-3xl sm:text-5xl font-bold text-majolika-950 mb-4">
+          Kongresy, Teambuildingy & Rozprávkové svadby
+        </h2>
+        <p class="text-slate-600 text-base sm:text-lg">
+          2 prepojiteľné moderné sály s kapacitou až 150 osôb, historická rokovacia veža, kompletná konferenčná technika, 
+          catering z lokálnych surovín a bohaté teambuildingové aktivity v Malých Karpatoch.
+        </p>
+      </div>
+
+      <!-- Capacity Table / Hall Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-14">
+        
+        <!-- Veľká kongresová sála -->
+        <div class="bg-white rounded-3xl p-6 shadow-md border border-slate-200 flex flex-col justify-between">
+          <div>
+            <div class="h-44 rounded-2xl overflow-hidden mb-5">
+              <img src="images/kongresy1.jpg" alt="Veľká kongresová sála" class="w-full h-full object-cover">
+            </div>
+            <span class="text-xs uppercase font-bold text-majolika-700 tracking-wider">Rozmer: 17 x 9 m</span>
+            <h3 class="font-display font-bold text-xl text-majolika-950 mt-1 mb-3">Veľká kongresová sála</h3>
+            <p class="text-xs text-slate-500 mb-4">Klimatizovaná, ozvučená sála s denným svetlom a priamym výstupom na nádvorie.</p>
+            
+            <div class="space-y-2 text-xs border-t border-slate-100 pt-3 text-slate-700">
+              <div class="flex justify-between"><span>Kino sedenie:</span> <span class="font-bold">150 miest</span></div>
+              <div class="flex justify-between"><span>Školské sedenie:</span> <span class="font-bold">100 miest</span></div>
+              <div class="flex justify-between"><span>Stoly do tvaru U:</span> <span class="font-bold">60 miest</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Malá kongresová sála -->
+        <div class="bg-white rounded-3xl p-6 shadow-md border border-slate-200 flex flex-col justify-between">
+          <div>
+            <div class="h-44 rounded-2xl overflow-hidden mb-5">
+              <img src="images/kongresy3.jpg" alt="Malá konferenčná sála" class="w-full h-full object-cover">
+            </div>
+            <span class="text-xs uppercase font-bold text-majolika-700 tracking-wider">Rozmer: 13 x 7 m</span>
+            <h3 class="font-display font-bold text-xl text-majolika-950 mt-1 mb-3">Malá konferenčná sála</h3>
+            <p class="text-xs text-slate-500 mb-4">Ideálna pre firemné školenia, prezentácie, workshopy a semináre v komornejšom duchu.</p>
+            
+            <div class="space-y-2 text-xs border-t border-slate-100 pt-3 text-slate-700">
+              <div class="flex justify-between"><span>Kino sedenie:</span> <span class="font-bold">60 miest</span></div>
+              <div class="flex justify-between"><span>Školské sedenie:</span> <span class="font-bold">50 miest</span></div>
+              <div class="flex justify-between"><span>Stoly do tvaru U:</span> <span class="font-bold">40 miest</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Rokovacia Veža (Bastion) -->
+        <div class="bg-white rounded-3xl p-6 shadow-md border border-slate-200 flex flex-col justify-between">
+          <div>
+            <div class="h-44 rounded-2xl overflow-hidden mb-5">
+              <img src="images/veza5.jpg" alt="Rokovacia veža bastion" class="w-full h-full object-cover">
+            </div>
+            <span class="text-xs uppercase font-bold text-terracotta-600 tracking-wider">Rozmer: 8 x 8 m</span>
+            <h3 class="font-display font-bold text-xl text-majolika-950 mt-1 mb-3">Vyhliadková veža Bastion</h3>
+            <p class="text-xs text-slate-500 mb-4">Exkluzívne prostredie pre VIP rokovania predstavenstva, oslavy výročí a promócie.</p>
+            
+            <div class="space-y-2 text-xs border-t border-slate-100 pt-3 text-slate-700">
+              <div class="flex justify-between"><span>Kino sedenie:</span> <span class="font-bold">20 miest</span></div>
+              <div class="flex justify-between"><span>Stoly do tvaru U:</span> <span class="font-bold">14 miest</span></div>
+              <div class="flex justify-between"><span>Školské sedenie:</span> <span class="font-bold">12 miest</span></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Svadby v Hoteli Majolika -->
+      <div class="bg-white rounded-3xl p-8 sm:p-12 shadow-xl border border-slate-200 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div class="lg:col-span-7">
+          <span class="text-xs font-bold uppercase tracking-widest text-terracotta-600 mb-2 inline-block">Svadba snov v Modre</span>
+          <h3 class="font-display text-2xl sm:text-4xl font-bold text-majolika-950 mb-4">
+            Povedzte si svoje „ÁNO“ v historickom bastione
+          </h3>
+          <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-6 font-normal">
+            Romantické nádvorie Starej keramiky je dokonalou kulisou pre Váš svadobný obrad pod holým nebom i svadobnú hostinu až pre 100 hostí. 
+            Pre novomanželov máme pripravený <strong>luxusný Svadobný apartmán zadarmo</strong>, kompletný catering, 
+            svadobné menu podľa Vašich prianí a ubytovanie pre svadobčanov za zvýhodnené ceny.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a href="#rezervacia" class="px-6 py-3 rounded-full bg-majolika-900 hover:bg-majolika-800 text-goldglaze-300 font-bold text-xs uppercase tracking-wider transition-all">
+              Dopytovať svadbu / firemný event
+            </a>
+            <a href="tel:+421905602617" class="px-6 py-3 rounded-full border border-slate-300 text-slate-700 hover:bg-slate-50 font-semibold text-xs flex items-center gap-2">
+              <i data-lucide="phone" class="w-4 h-4 text-terracotta-600"></i> Konzultovať termín s manažérom
+            </a>
+          </div>
+        </div>
+        <div class="lg:col-span-5 rounded-2xl overflow-hidden aspect-[4/3] shadow-md">
+          <img src="images/uvod7.jpg" alt="Romantická svadba v Hoteli Majolika" class="w-full h-full object-cover">
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- EKOLÓGIA & ZELENÉ SRDCE HOTELA -->
+  <section id="ekologia" class="py-20 bg-emerald-950 text-white relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <div class="lg:col-span-6">
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-900 text-emerald-300 text-xs font-bold uppercase tracking-wider mb-4 border border-emerald-700/60">
+            <i data-lucide="leaf" class="w-3.5 h-3.5 text-emerald-400"></i>
+            Ekológia v praxi
+          </span>
+          <h2 class="font-display text-3xl sm:text-5xl font-bold text-white mb-6 leading-tight">
+            Hotel s ekologickým srdcom a nabíjacou stanicou EV
+          </h2>
+          <p class="text-emerald-100 text-base leading-relaxed mb-6 font-normal">
+            Veríme, že rešpekt k histórii musí ísť ruka v ruke s rešpektom k prírode. Sme hrdí na to, 
+            že Hotel Majolika patrí medzi priekopníkov ekologického hotelierstva na Slovensku.
+          </p>
+
+          <!-- Eco Features Checklist -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs text-emerald-100 mb-8">
+            <div class="flex items-center gap-2.5">
+              <i data-lucide="zap" class="w-4 h-4 text-emerald-400 flex-shrink-0"></i>
+              <span>Nabíjacia stanica pre elektromobily v garáži</span>
+            </div>
+            <div class="flex items-center gap-2.5">
+              <i data-lucide="sun" class="w-4 h-4 text-goldglaze-400 flex-shrink-0"></i>
+              <span>Solárne kolektory pre ohrev vody a bazéna</span>
+            </div>
+            <div class="flex items-center gap-2.5">
+              <i data-lucide="wind" class="w-4 h-4 text-cyan-400 flex-shrink-0"></i>
+              <span>Rekuperácia vzduchu vo wellness & úspora CO₂</span>
+            </div>
+            <div class="flex items-center gap-2.5">
+              <i data-lucide="droplets" class="w-4 h-4 text-blue-400 flex-shrink-0"></i>
+              <span>Ekologické chladenie podzemnou vodou</span>
+            </div>
+            <div class="flex items-center gap-2.5">
+              <i data-lucide="recycle" class="w-4 h-4 text-emerald-400 flex-shrink-0"></i>
+              <span>Dôsledná separácia, kompostovanie & bez plastov</span>
+            </div>
+            <div class="flex items-center gap-2.5">
+              <i data-lucide="cloud-rain" class="w-4 h-4 text-cyan-400 flex-shrink-0"></i>
+              <span>Zalievanie studničnou & dažďovou vodou</span>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-emerald-900/60 border border-emerald-800 text-xs text-emerald-200 flex items-center gap-3">
+            <img src="images/charging_station.png" alt="EV station" class="w-10 h-10 object-contain">
+            <p><strong>Pre ubytovaných hostí:</strong> Dobite si svoj elektromobil pohodlne v podzemnej garáži počas noci úplne zadarmo!</p>
+          </div>
+        </div>
+
+        <div class="lg:col-span-6 relative">
+          <div class="rounded-3xl overflow-hidden shadow-2xl border-4 border-emerald-900 aspect-[4/3]">
+            <img src="images/charging_station.png" alt="Nabíjacia stanica elektromobilov Hotel Majolika" class="w-full h-full object-cover">
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOTOGALÉRIA S INTERAKTÍVNYM LIGHTBOXOM -->
+  <section id="galeria" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-majolika-100 text-majolika-800 text-xs font-bold uppercase tracking-wider mb-3">
+          <i data-lucide="camera" class="w-3.5 h-3.5"></i>
+          Pohľad do nášho sveta
+        </span>
+        <h2 class="font-display text-3xl sm:text-5xl font-bold text-majolika-950 mb-4">
+          Autentická fotogaléria
+        </h2>
+        <p class="text-slate-600 text-base sm:text-lg">
+          Nahliadnite do atmosféry pamiatkovo chráneného areálu, útulných izieb, bazéna, reštaurácie a remeselného múzea.
+        </p>
+      </div>
+
+      <!-- Gallery Filter Buttons -->
+      <div class="flex flex-wrap items-center justify-center gap-2 mb-10">
+        <button onclick="filterGallery('all', this)" class="gal-filter-btn active-gal-btn px-4 py-1.5 rounded-full text-xs font-bold transition-all bg-majolika-900 text-goldglaze-300">
+          Všetko
+        </button>
+        <button onclick="filterGallery('areal', this)" class="gal-filter-btn px-4 py-1.5 rounded-full text-xs font-bold transition-all bg-slate-100 text-slate-700 hover:bg-slate-200">
+          Areál & Nádvorie
+        </button>
+        <button onclick="filterGallery('izby', this)" class="gal-filter-btn px-4 py-1.5 rounded-full text-xs font-bold transition-all bg-slate-100 text-slate-700 hover:bg-slate-200">
+          Izby & Apartmány
+        </button>
+        <button onclick="filterGallery('wellness', this)" class="gal-filter-btn px-4 py-1.5 rounded-full text-xs font-bold transition-all bg-slate-100 text-slate-700 hover:bg-slate-200">
+          Wellness & Bazén
+        </button>
+        <button onclick="filterGallery('gastro', this)" class="gal-filter-btn px-4 py-1.5 rounded-full text-xs font-bold transition-all bg-slate-100 text-slate-700 hover:bg-slate-200">
+          Gastro & Pivnica
+        </button>
+        <button onclick="filterGallery('muzeum', this)" class="gal-filter-btn px-4 py-1.5 rounded-full text-xs font-bold transition-all bg-slate-100 text-slate-700 hover:bg-slate-200">
+          Múzeum & Veža
+        </button>
+      </div>
+
+      <!-- Gallery Grid -->
+      <div id="galleryGrid" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+        
+        <div class="gal-item rounded-2xl overflow-hidden aspect-[4/3] group relative cursor-pointer shadow-sm hover:shadow-xl transition-all" data-category="areal" onclick="openLightbox('images/uvod0.jpg', 'Historické nádvorie Starej keramiky a renesančný bastion')">
+          <img src="images/uvod0.jpg" alt="Nádvorie" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+          <div class="absolute inset-0 bg-majolika-950/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+            <i data-lucide="zoom-in" class="w-7 h-7"></i>
+          </div>
+        </div>
+
+        <div class="gal-item rounded-2xl overflow-hidden aspect-[4/3] group relative cursor-pointer shadow-sm hover:shadow-xl transition-all" data-category="wellness" onclick="openLightbox('images/wellness1.jpg', 'Krytý bazén s masážnym protiprúdom')">
+          <img src="images/wellness1.jpg" alt="Bazén" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+          <div class="absolute inset-0 bg-majolika-950/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+            <i data-lucide="zoom-in" class="w-7 h-7"></i>
+          </div>
+        </div>
+
+        <div class="gal-item rounded-2xl overflow-hidden aspect-[4/3] group relative cursor-pointer shadow-sm hover:shadow-xl transition-all" data-category="izby" onclick="openLightbox('images/ubytovanie1.jpg', 'Komfortná dvojlôžková izba Standard')">
+          <img src="images/ubytovanie1.jpg" alt="Izba Standard" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+          <div class="absolute inset-0 bg-majolika-950/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+            <i data-lucide="zoom-in" class="w-7 h-7"></i>
+          </div>
+        </div>
+
+        <div class="gal-item rounded-2xl overflow-hidden aspect-[4/3] group relative cursor-pointer shadow-sm hover:shadow-xl transition-all" data-category="gastro" onclick="openLightbox('images/pivnica2.jpg', 'Historická klenbová vínna pivnica s krbom')">
+          <img src="images/pivnica2.jpg" alt="Vínna pivnica" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+          <div class="absolute inset-0 bg-majolika-950/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+            <i data-lucide="zoom-in" class="w-7 h-7"></i>
+          </div>
+        </div>
+
+        <div class="gal-item rounded-2xl overflow-hidden aspect-[4/3] group relative cursor-pointer shadow-sm hover:shadow-xl transition-all" data-category="muzeum" onclick="openLightbox('images/muzeum1.JPG', 'Vlastné Múzeum slovenskej ľudovej majoliky')">
+          <img src="images/muzeum1.JPG" alt="Múzeum majoliky" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+          <div class="absolute inset-0 bg-majolika-950/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+            <i data-lucide="zoom-in" class="w-7 h-7"></i>
+          </div>
+        </div>
+
+        <div class="gal-item rounded-2xl overflow-hidden aspect-[4/3] group relative cursor-pointer shadow-sm hover:shadow-xl transition-all" data-category="izby" onclick="openLightbox('images/ubytovanie2.jpg', 'Exkluzívny Svadobný apartmán s baldachýnom')">
+          <img src="images/ubytovanie2.jpg" alt="Svadobný apartmán" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+          <div class="absolute inset-0 bg-majolika-950/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+            <i data-lucide="zoom-in" class="w-7 h-7"></i>
+          </div>
+        </div>
+
+        <div class="gal-item rounded-2xl overflow-hidden aspect-[4/3] group relative cursor-pointer shadow-sm hover:shadow-xl transition-all" data-category="wellness" onclick="openLightbox('images/wellness3.jpg', 'Mozaiková relaxačná vírivka')">
+          <img src="images/wellness3.jpg" alt="Vírivka" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+          <div class="absolute inset-0 bg-majolika-950/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+            <i data-lucide="zoom-in" class="w-7 h-7"></i>
+          </div>
+        </div>
+
+        <div class="gal-item rounded-2xl overflow-hidden aspect-[4/3] group relative cursor-pointer shadow-sm hover:shadow-xl transition-all" data-category="gastro" onclick="openLightbox('images/restauracia1.jpg', 'Reštaurácia Landsfeld s výhľadom na nádvorie')">
+          <img src="images/restauracia1.jpg" alt="Reštaurácia" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+          <div class="absolute inset-0 bg-majolika-950/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+            <i data-lucide="zoom-in" class="w-7 h-7"></i>
+          </div>
+        </div>
+
+        <div class="gal-item rounded-2xl overflow-hidden aspect-[4/3] group relative cursor-pointer shadow-sm hover:shadow-xl transition-all" data-category="muzeum" onclick="openLightbox('images/veza2.jpg', 'Vyhliadková veža s masívnymi vyrezávanými kreslami')">
+          <img src="images/veza2.jpg" alt="Vyhliadková veža" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+          <div class="absolute inset-0 bg-majolika-950/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+            <i data-lucide="zoom-in" class="w-7 h-7"></i>
+          </div>
+        </div>
+
+        <div class="gal-item rounded-2xl overflow-hidden aspect-[4/3] group relative cursor-pointer shadow-sm hover:shadow-xl transition-all" data-category="areal" onclick="openLightbox('images/uvod4.jpg', 'Letná terasa a večerná atmosféra nádvoria')">
+          <img src="images/uvod4.jpg" alt="Letná terasa" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+          <div class="absolute inset-0 bg-majolika-950/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+            <i data-lucide="zoom-in" class="w-7 h-7"></i>
+          </div>
+        </div>
+
+        <div class="gal-item rounded-2xl overflow-hidden aspect-[4/3] group relative cursor-pointer shadow-sm hover:shadow-xl transition-all" data-category="gastro" onclick="openLightbox('images/kaviaren1.jpg', 'Kaviareň s autentickou keramickou pecou')">
+          <img src="images/kaviaren1.jpg" alt="Kaviareň" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+          <div class="absolute inset-0 bg-majolika-950/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+            <i data-lucide="zoom-in" class="w-7 h-7"></i>
+          </div>
+        </div>
+
+        <div class="gal-item rounded-2xl overflow-hidden aspect-[4/3] group relative cursor-pointer shadow-sm hover:shadow-xl transition-all" data-category="wellness" onclick="openLightbox('images/wellness4.jpg', 'Bylinková aromaterapia & saunový svet')">
+          <img src="images/wellness4.jpg" alt="Bylinková sauna" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+          <div class="absolute inset-0 bg-majolika-950/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+            <i data-lucide="zoom-in" class="w-7 h-7"></i>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- HODNOTENIA HOSTÍ & SOCIAL PROOF -->
+  <section class="py-20 bg-pottery-50 border-t border-pottery-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-goldglaze-300/30 text-goldglaze-700 text-xs font-bold uppercase tracking-wider mb-3">
+          <i data-lucide="message-square" class="w-3.5 h-3.5"></i>
+          Overené skúsenosti hostí
+        </span>
+        <h2 class="font-display text-3xl sm:text-5xl font-bold text-majolika-950 mb-4">
+          Čo hovoria tí, ktorí u nás prežili nezabudnuteľné chvíle
+        </h2>
+        <p class="text-slate-600 text-base sm:text-lg">
+          Skutočné hodnotenia z portálov Booking.com, Google a TripAdvisor od párov, rodín aj firemných klientov.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- REVIEW 1 -->
+        <div class="bg-white rounded-3xl p-8 shadow-md border border-slate-200 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <div class="flex text-goldglaze-500 text-sm">
+                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+              </div>
+              <span class="px-2.5 py-0.5 rounded-full bg-blue-50 text-majolika-800 text-xs font-bold">Booking.com 9.5/10</span>
+            </div>
+            <p class="text-slate-700 text-sm italic mb-6 leading-relaxed">
+              „Nádherný historický hotel s úžasným duchom miesta. Veľmi čisté, tiché izby, skvelá vychytávka s kamerou na TV, 
+              ktorá ukazuje auto v uzavretom dvore. Bazén a vírivka po turistike v Malých Karpatoch padli dokonale. Určite sa vrátime!“
+            </p>
+          </div>
+          <div class="flex items-center gap-3 pt-4 border-t border-slate-100">
+            <div class="w-10 h-10 rounded-full bg-majolika-100 text-majolika-800 font-bold flex items-center justify-center text-xs">
+              MK
+            </div>
+            <div>
+              <h4 class="font-bold text-xs text-slate-900">Michal & Katarína</h4>
+              <p class="text-[11px] text-slate-500">Víkendový romantický pobyt • Bratislava</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- REVIEW 2 -->
+        <div class="bg-white rounded-3xl p-8 shadow-md border border-slate-200 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <div class="flex text-goldglaze-500 text-sm">
+                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+              </div>
+              <span class="px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-800 text-xs font-bold">Google Recenzie 5/5</span>
+            </div>
+            <p class="text-slate-700 text-sm italic mb-6 leading-relaxed">
+              „Mali sme tu firemný teambuilding spojený s degustáciou vín v ich kamennej pivnici a minikurzom točenia na kruhu v múzeu. 
+              Všetci kolegovia boli nadšení! Personál na jednotku, výborné jedlo a nabitie nášho elektromobilu v garáži bolo príjemným bonusom.“
+            </p>
+          </div>
+          <div class="flex items-center gap-3 pt-4 border-t border-slate-100">
+            <div class="w-10 h-10 rounded-full bg-terracotta-100 text-terracotta-800 font-bold flex items-center justify-center text-xs">
+              PL
+            </div>
+            <div>
+              <h4 class="font-bold text-xs text-slate-900">Ing. Peter Lipták</h4>
+              <p class="text-[11px] text-slate-500">Firemné školenie & teambuilding • IT firma</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- REVIEW 3 -->
+        <div class="bg-white rounded-3xl p-8 shadow-md border border-slate-200 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <div class="flex text-goldglaze-500 text-sm">
+                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+              </div>
+              <span class="px-2.5 py-0.5 rounded-full bg-purple-50 text-purple-800 text-xs font-bold">Svadobný portál</span>
+            </div>
+            <p class="text-slate-700 text-sm italic mb-6 leading-relaxed">
+              „Naša svadba v Hoteli Majolika bola ako z rozprávky. Obrad na nádvorí pri bastióne, fotky vo vyhliadkovej veži 
+              a novomanželský apartmán s baldachýnom bol úchvatný. Hostia si doteraz chvália jedlo a ochotu obsluhy.“
+            </p>
+          </div>
+          <div class="flex items-center gap-3 pt-4 border-t border-slate-100">
+            <div class="w-10 h-10 rounded-full bg-goldglaze-300/40 text-goldglaze-700 font-bold flex items-center justify-center text-xs">
+              VZ
+            </div>
+            <div>
+              <h4 class="font-bold text-xs text-slate-900">Veronika & Tomáš</h4>
+              <p class="text-[11px] text-slate-500">Svadobná hostina • Trnava</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- REZERVÁCIA & INTERAKTÍVNY BOOKING ENGINE -->
+  <section id="rezervacia" class="py-20 bg-white">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="bg-gradient-to-br from-majolika-950 via-majolika-900 to-majolika-950 rounded-3xl p-6 sm:p-12 shadow-2xl text-white border-2 border-goldglaze-500/30">
+        
+        <div class="text-center max-w-2xl mx-auto mb-10">
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 text-goldglaze-300 text-xs font-bold uppercase tracking-wider mb-3">
+            <i data-lucide="check-circle" class="w-3.5 h-3.5 text-emerald-400"></i>
+            Garancia najlepšej ceny priamo u nás
+          </span>
+          <h2 class="font-display text-3xl sm:text-4xl font-bold text-white mb-3">
+            Rezervácia pobytu & Cenová kalkulácia
+          </h2>
+          <p class="text-slate-300 text-sm sm:text-base">
+            Vyplňte formulár a okamžite získajte predbežný prepočet ceny. Náš tím recepcie Vašu rezerváciu potvrdí najneskôr do 2 hodín.
+          </p>
+        </div>
+
+        <form id="reservationForm" onsubmit="submitBooking(event)" class="space-y-6">
+          
+          <!-- Termíny & Hostia -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            
+            <div>
+              <label class="text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1.5 block">
+                Dátum príchodu *
+              </label>
+              <input type="date" id="bookCheckIn" required onchange="calculatePrice()" class="w-full px-3.5 py-2.5 rounded-xl bg-white/10 border border-white/20 text-white font-medium text-sm focus:bg-white/20 focus:border-goldglaze-400 focus:outline-none">
+            </div>
+
+            <div>
+              <label class="text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1.5 block">
+                Dátum odchodu *
+              </label>
+              <input type="date" id="bookCheckOut" required onchange="calculatePrice()" class="w-full px-3.5 py-2.5 rounded-xl bg-white/10 border border-white/20 text-white font-medium text-sm focus:bg-white/20 focus:border-goldglaze-400 focus:outline-none">
+            </div>
+
+            <div>
+              <label class="text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1.5 block">
+                Počet dospelých osôb *
+              </label>
+              <select id="bookAdults" onchange="calculatePrice()" class="w-full px-3.5 py-2.5 rounded-xl bg-majolika-900 border border-white/20 text-white font-medium text-sm focus:border-goldglaze-400 focus:outline-none">
+                <option value="1">1 dospelý</option>
+                <option value="2" selected>2 dospelí</option>
+                <option value="3">3 dospelí</option>
+                <option value="4">4 dospelí</option>
+                <option value="5">5 a viac osôb</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1.5 block">
+                Deti do 12 rokov
+              </label>
+              <select id="bookChildren" onchange="calculatePrice()" class="w-full px-3.5 py-2.5 rounded-xl bg-majolika-900 border border-white/20 text-white font-medium text-sm focus:border-goldglaze-400 focus:outline-none">
+                <option value="0" selected>Bez detí</option>
+                <option value="1">1 dieťa (prístelka)</option>
+                <option value="2">2 deti</option>
+                <option value="3">3 deti</option>
+              </select>
+            </div>
+
+          </div>
+
+          <!-- Výber izby -->
+          <div>
+            <label class="text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1.5 block">
+              Vyberte typ izby / apartmánu *
+            </label>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+              
+              <label class="flex items-center gap-3 p-3 rounded-xl bg-white/5 border border-white/15 hover:bg-white/10 cursor-pointer transition-all">
+                <input type="radio" name="roomSelection" value="standard" checked onchange="calculatePrice()" class="accent-goldglaze-400">
+                <div>
+                  <span class="block text-xs font-bold text-white">Dvojlôžková Standard</span>
+                  <span class="text-[11px] text-goldglaze-300 font-semibold">79 € / noc</span>
+                </div>
+              </label>
+
+              <label class="flex items-center gap-3 p-3 rounded-xl bg-white/5 border border-white/15 hover:bg-white/10 cursor-pointer transition-all">
+                <input type="radio" name="roomSelection" value="superior" onchange="calculatePrice()" class="accent-goldglaze-400">
+                <div>
+                  <span class="block text-xs font-bold text-white">Dvojlôžková Superior</span>
+                  <span class="text-[11px] text-goldglaze-300 font-semibold">89 € / noc</span>
+                </div>
+              </label>
+
+              <label class="flex items-center gap-3 p-3 rounded-xl bg-white/5 border border-white/15 hover:bg-white/10 cursor-pointer transition-all">
+                <input type="radio" name="roomSelection" value="wedding" onchange="calculatePrice()" class="accent-goldglaze-400">
+                <div>
+                  <span class="block text-xs font-bold text-white">Svadobný Apartmán</span>
+                  <span class="text-[11px] text-goldglaze-300 font-semibold">129 € / noc</span>
+                </div>
+              </label>
+
+              <label class="flex items-center gap-3 p-3 rounded-xl bg-white/5 border border-white/15 hover:bg-white/10 cursor-pointer transition-all">
+                <input type="radio" name="roomSelection" value="suite" onchange="calculatePrice()" class="accent-goldglaze-400">
+                <div>
+                  <span class="block text-xs font-bold text-white">Rodinná Suita</span>
+                  <span class="text-[11px] text-goldglaze-300 font-semibold">119 € / noc</span>
+                </div>
+              </label>
+
+            </div>
+          </div>
+
+          <!-- Doplnkové zážitky & služby -->
+          <div>
+            <label class="text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1.5 block">
+              Doplnkové zážitky (voliteľné)
+            </label>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              
+              <label class="flex items-center gap-2.5 p-3 rounded-xl bg-white/5 border border-white/15 hover:bg-white/10 cursor-pointer text-xs">
+                <input type="checkbox" id="addWellness" onchange="calculatePrice()" class="accent-goldglaze-400">
+                <span>Neobmedzený vstup do saunového sveta (+15 € / os)</span>
+              </label>
+
+              <label class="flex items-center gap-2.5 p-3 rounded-xl bg-white/5 border border-white/15 hover:bg-white/10 cursor-pointer text-xs">
+                <input type="checkbox" id="addWine" onchange="calculatePrice()" class="accent-goldglaze-400">
+                <span>Ochutnávka 5 malokarpatských vín (+18 € / os)</span>
+              </label>
+
+              <label class="flex items-center gap-2.5 p-3 rounded-xl bg-white/5 border border-white/15 hover:bg-white/10 cursor-pointer text-xs">
+                <input type="checkbox" id="addClay" onchange="calculatePrice()" class="accent-goldglaze-400">
+                <span>Minikurz točenia na hrnčiarskom kruhu (+12 € / os)</span>
+              </label>
+
+            </div>
+          </div>
+
+          <!-- Osobné údaje -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4 border-t border-white/10">
+            <div>
+              <label class="text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1 block">Meno a priezvisko *</label>
+              <input type="text" id="bookName" required placeholder="Ján Novák" class="w-full px-3.5 py-2.5 rounded-xl bg-white/10 border border-white/20 text-white placeholder-slate-400 text-sm focus:outline-none focus:border-goldglaze-400">
+            </div>
+            <div>
+              <label class="text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1 block">Telefónne číslo *</label>
+              <input type="tel" id="bookPhone" required placeholder="+421 9XX XXX XXX" class="w-full px-3.5 py-2.5 rounded-xl bg-white/10 border border-white/20 text-white placeholder-slate-400 text-sm focus:outline-none focus:border-goldglaze-400">
+            </div>
+            <div>
+              <label class="text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1 block">E-mailová adresa *</label>
+              <input type="email" id="bookEmail" required placeholder="jan.novak@example.com" class="w-full px-3.5 py-2.5 rounded-xl bg-white/10 border border-white/20 text-white placeholder-slate-400 text-sm focus:outline-none focus:border-goldglaze-400">
+            </div>
+          </div>
+
+          <div>
+            <label class="text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1 block">Špeciálne požiadavky / Poznámka (napr. prístelka, parkovanie EV, diéta)</label>
+            <textarea id="bookNotes" rows="2" placeholder="Uveďte prípadné želania alebo čas predpokladaného príchodu..." class="w-full px-3.5 py-2.5 rounded-xl bg-white/10 border border-white/20 text-white placeholder-slate-400 text-sm focus:outline-none focus:border-goldglaze-400"></textarea>
+          </div>
+
+          <!-- Prepočet ceny & Odoslanie -->
+          <div class="p-6 rounded-2xl bg-white/10 border border-goldglaze-500/40 flex flex-col sm:flex-row items-center justify-between gap-6">
+            <div>
+              <span class="text-xs text-slate-300 uppercase tracking-wider block mb-1">Odhadovaná cena pobytu:</span>
+              <div class="flex items-baseline gap-2">
+                <span id="calculatedPrice" class="font-display font-extrabold text-3xl sm:text-4xl text-goldglaze-400">158 €</span>
+                <span id="nightsText" class="text-xs text-slate-300">(za 2 noci, vrátane DPH & raňajok)</span>
+              </div>
+              <p class="text-[11px] text-slate-400 mt-1">Miestny poplatok obci (2 € / os / noc) sa platí na recepcii.</p>
+            </div>
+
+            <button type="submit" class="w-full sm:w-auto px-8 py-4 rounded-full bg-gradient-to-r from-terracotta-600 to-terracotta-500 hover:from-terracotta-500 hover:to-terracotta-600 text-white font-bold text-sm tracking-wide shadow-clay hover:shadow-xl transition-all transform hover:-translate-y-0.5 flex items-center justify-center gap-2">
+              <i data-lucide="send" class="w-4 h-4"></i>
+              <span>Odoslať nezáväznú rezerváciu</span>
+            </button>
+          </div>
+
+        </form>
+
+        <!-- Confirmation Alert Box (Hidden initially) -->
+        <div id="bookingConfirmation" class="hidden mt-6 p-6 rounded-2xl bg-emerald-900/90 border border-emerald-500 text-center text-white">
+          <i data-lucide="check-circle" class="w-10 h-10 text-emerald-400 mx-auto mb-2"></i>
+          <h4 class="font-display font-bold text-xl mb-1">Ďakujeme za Vašu rezerváciu!</h4>
+          <p class="text-xs sm:text-sm text-emerald-100 max-w-lg mx-auto">
+            Váš dopyt bol úspešne zaznamenaný. Na Váš e-mail sme odoslali potvrdenie a náš recepčný tím Vás bude čoskoro kontaktovať.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- KONTAKT & MAPA -->
+  <section id="kontakt" class="py-20 bg-pottery-50 border-t border-pottery-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left: Contact Information -->
+        <div class="lg:col-span-5">
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-majolika-100 text-majolika-800 text-xs font-bold uppercase tracking-wider mb-3">
+            <i data-lucide="map-pin" class="w-3.5 h-3.5"></i>
+            Kde nás nájdete
+          </span>
+          <h2 class="font-display text-3xl sm:text-4xl font-bold text-majolika-950 mb-6">
+            Hotel Majolika**** Modra
+          </h2>
+
+          <div class="space-y-6 text-sm text-slate-700">
+            
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-xl bg-white border border-slate-200 flex items-center justify-center text-majolika-700 flex-shrink-0 shadow-sm">
+                <i data-lucide="map-pin" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-slate-900">Adresa hotela</h4>
+                <p class="text-slate-600">Súkenícka 41, 900 01 Modra, Slovenská republika</p>
+                <p class="text-xs text-slate-400 mt-0.5">GPS: 48° 19' 57.73" N, 17° 18' 34.81" E</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-xl bg-white border border-slate-200 flex items-center justify-center text-majolika-700 flex-shrink-0 shadow-sm">
+                <i data-lucide="phone" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-slate-900">Telefón & Recepcia (24/7)</h4>
+                <a href="tel:+421905602617" class="text-majolika-700 hover:text-terracotta-600 font-bold block text-base">
+                  +421 905 602 617
+                </a>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-xl bg-white border border-slate-200 flex items-center justify-center text-majolika-700 flex-shrink-0 shadow-sm">
+                <i data-lucide="mail" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-slate-900">E-mailová adresa</h4>
+                <a href="mailto:recepcia@hotelmajolika.sk" class="text-majolika-700 hover:text-terracotta-600 font-medium">
+                  recepcia@hotelmajolika.sk
+                </a>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-xl bg-white border border-slate-200 flex items-center justify-center text-emerald-700 flex-shrink-0 shadow-sm">
+                <i data-lucide="car" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-slate-900">Parkovanie & Nabíjanie EV</h4>
+                <p class="text-slate-600 text-xs leading-relaxed">
+                  Podzemná garáž chránená kamerovým systémom + vonkajšie parkovisko. Nabíjacia stanica pre elektromobily pre ubytovaných hostí zadarmo.
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Social Links -->
+          <div class="mt-8 pt-6 border-t border-slate-200 flex items-center gap-3">
+            <span class="text-xs font-bold text-slate-500 uppercase tracking-wider">Sledujte nás:</span>
+            <a href="http://www.facebook.com/pages/Hotel-Majolika-Modra/135451889804672" target="_blank" rel="noopener" class="w-9 h-9 rounded-full bg-white border border-slate-200 flex items-center justify-center text-slate-700 hover:text-blue-600 hover:border-blue-600 transition-colors shadow-sm" title="Facebook">
+              <i data-lucide="facebook" class="w-4 h-4"></i>
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="w-9 h-9 rounded-full bg-white border border-slate-200 flex items-center justify-center text-slate-700 hover:text-pink-600 hover:border-pink-600 transition-colors shadow-sm" title="Instagram">
+              <i data-lucide="instagram" class="w-4 h-4"></i>
+            </a>
+          </div>
+
+        </div>
+
+        <!-- Right: Interactive Map -->
+        <div class="lg:col-span-7">
+          <div class="rounded-3xl overflow-hidden shadow-xl border-4 border-white bg-slate-200 h-[420px] relative">
+            <iframe 
+              src="https://maps.google.com/maps?q=Hotel%20Majolika%2C%20S%C3%BAken%C3%ADcka%2041%2C%20Modra&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+              class="w-full h-full border-0" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Mapa Hotel Majolika Modra">
+            </iframe>
+            <div class="absolute bottom-4 left-4 bg-white/95 backdrop-blur-md px-4 py-2.5 rounded-2xl shadow-md border border-slate-100 flex items-center gap-3 text-xs">
+              <i data-lucide="navigation" class="w-4 h-4 text-terracotta-600"></i>
+              <span>25 km od Bratislavy • 12 km od Pezinka</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-majolika-950 text-slate-300 pt-16 pb-12 border-t border-majolika-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-majolika-800/80">
+        
+        <!-- Col 1: Brand Info -->
+        <div class="lg:col-span-2">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-full bg-majolika-900 border border-goldglaze-500 flex items-center justify-center text-white">
+              <span class="font-display font-bold text-goldglaze-400">M</span>
+            </div>
+            <span class="font-display font-bold text-xl tracking-wider text-white">Hotel Majolika****</span>
+          </div>
+          <p class="text-xs text-slate-400 leading-relaxed max-w-sm mb-6">
+            Pamiatkovo chránený areál Starej keramiky s renesančným bastiónom z roku 1610 a Keramicko-priemyselným učilišťom z roku 1883. 
+            Váš 4-hviezdičkový prístav pokoja, wellnessu a histórie v slobodnom kráľovskom meste Modra.
+          </p>
+          <div class="flex items-center gap-2">
+            <img src="images/2_visa.jpg" alt="Visa" class="h-6 rounded bg-white p-0.5">
+            <img src="images/4_master_card.gif" alt="MasterCard" class="h-6 rounded bg-white p-0.5">
+            <img src="images/eco_logo.jpg" alt="Eko hotel" class="h-6 rounded bg-white p-0.5">
+          </div>
+        </div>
+
+        <!-- Col 2: Rýchle odkazy -->
+        <div>
+          <h4 class="font-display font-bold text-sm text-goldglaze-300 uppercase tracking-wider mb-4">Navigácia</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#historia" class="hover:text-white transition-colors">História & Bastión 1610</a></li>
+            <li><a href="#izby" class="hover:text-white transition-colors">Izby & Apartmány</a></li>
+            <li><a href="#wellness" class="hover:text-white transition-colors">Wellness Experience</a></li>
+            <li><a href="#gastronomia" class="hover:text-white transition-colors">Reštaurácia Landsfeld</a></li>
+            <li><a href="#muzeum" class="hover:text-white transition-colors">Múzeum majoliky</a></li>
+            <li><a href="#kongresy" class="hover:text-white transition-colors">Kongresy & Svadby</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Špeciálne služby -->
+        <div>
+          <h4 class="font-display font-bold text-sm text-goldglaze-300 uppercase tracking-wider mb-4">Zážitky & Služby</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#gastronomia" class="hover:text-white transition-colors">Vínna pivnica & degustácie</a></li>
+            <li><a href="#muzeum" class="hover:text-white transition-colors">Kurz točenia na kruhu</a></li>
+            <li><a href="#muzeum" class="hover:text-white transition-colors">Vyhliadková veža Modra</a></li>
+            <li><a href="#ekologia" class="hover:text-white transition-colors">EV nabíjacia stanica</a></li>
+            <li><a href="#okolie" class="hover:text-white transition-colors">Hrad Červený Kameň & okolie</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Právne info & Pravidlá -->
+        <div>
+          <h4 class="font-display font-bold text-sm text-goldglaze-300 uppercase tracking-wider mb-4">Informácie</h4>
+          <ul class="space-y-2 text-xs">
+            <li><button onclick="openInfoModal('podmienky')" class="hover:text-white transition-colors text-left">Obchodné podmienky</button></li>
+            <li><button onclick="openInfoModal('poriadok')" class="hover:text-white transition-colors text-left">Ubytovací poriadok</button></li>
+            <li><button onclick="openInfoModal('cookies')" class="hover:text-white transition-colors text-left">Ochrana osobných údajov</button></li>
+            <li><a href="#kontakt" class="hover:text-white transition-colors">Kariéra & Voľné miesta</a></li>
+            <li class="pt-2 text-slate-400">IČO: 35 979 261</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Copyright Bar -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+        <p>© 2026 Hotel Majolika**** Modra. Všetky práva vyhradené.</p>
+        <p class="font-serif italic text-slate-400">„Chráňme dedičstvo našich otcov“</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- LIGHTBOX MODAL -->
+  <div id="lightboxModal" class="fixed inset-0 z-50 bg-black/95 hidden flex flex-col items-center justify-center p-4">
+    <button onclick="closeLightbox()" class="absolute top-6 right-6 text-white/80 hover:text-white p-2 text-3xl font-light">
+      &times;
+    </button>
+    <div class="max-w-4xl max-h-[80vh] flex flex-col items-center">
+      <img id="lightboxImg" src="" alt="Zväčšená fotografia" class="max-w-full max-h-[75vh] object-contain rounded-xl shadow-2xl mb-4">
+      <p id="lightboxCaption" class="text-white text-sm font-medium text-center"></p>
+    </div>
+  </div>
+
+  <!-- ROOM DETAIL MODAL -->
+  <div id="roomModal" class="fixed inset-0 z-50 bg-black/80 hidden items-center justify-center p-4 overflow-y-auto">
+    <div class="bg-white rounded-3xl max-w-2xl w-full p-6 sm:p-8 relative shadow-2xl text-slate-800 my-8">
+      <button onclick="closeRoomModal()" class="absolute top-6 right-6 text-slate-400 hover:text-slate-700 text-2xl font-bold">
+        &times;
+      </button>
+      <div id="roomModalContent">
+        <!-- Injected via JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- INFO MODAL (Obchodné podmienky / Ubytovací poriadok) -->
+  <div id="infoModal" class="fixed inset-0 z-50 bg-black/80 hidden items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-2xl w-full p-6 sm:p-8 relative shadow-2xl text-slate-800 max-h-[85vh] overflow-y-auto">
+      <button onclick="closeInfoModal()" class="absolute top-6 right-6 text-slate-400 hover:text-slate-700 text-2xl font-bold">
+        &times;
+      </button>
+      <div id="infoModalContent">
+        <!-- Injected via JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- JAVASCRIPT LOGIC -->
+  <script>
+    // Initialize Lucide icons
+    lucide.createIcons();
+
+    // Default dates setup (Today + 1 for checkin, Today + 3 for checkout)
+    const today = new Date();
+    const tomorrow = new Date(today);
+    tomorrow.setDate(tomorrow.getDate() + 1);
+    const dayAfter = new Date(today);
+    dayAfter.setDate(dayAfter.getDate() + 3);
+
+    const fmtDate = (d) => d.toISOString().split('T')[0];
+    document.getElementById('quickCheckIn').value = fmtDate(tomorrow);
+    document.getElementById('quickCheckOut').value = fmtDate(dayAfter);
+    document.getElementById('bookCheckIn').value = fmtDate(tomorrow);
+    document.getElementById('bookCheckOut').value = fmtDate(dayAfter);
+
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileDrawer = document.getElementById('mobileDrawer');
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileDrawer.classList.toggle('hidden');
+    });
+    function toggleMobileMenu() {
+      mobileDrawer.classList.add('hidden');
+    }
+
+    // Hero Image Switcher
+    function setHeroImage(src, btn) {
+      const hero = document.getElementById('heroImage');
+      hero.style.opacity = '0.4';
+      setTimeout(() => {
+        hero.src = src;
+        hero.style.opacity = '1';
+      }, 200);
+
+      document.querySelectorAll('.hero-thumb').forEach(b => {
+        b.classList.remove('active-thumb', 'border-goldglaze-400', 'scale-105', 'opacity-100');
+        b.classList.add('border-transparent', 'opacity-70');
+      });
+      btn.classList.add('active-thumb', 'border-goldglaze-400', 'scale-105', 'opacity-100');
+      btn.classList.remove('border-transparent', 'opacity-70');
+    }
+
+    // Quick Booking Form
+    function handleQuickBooking(e) {
+      e.preventDefault();
+      const inDate = document.getElementById('quickCheckIn').value;
+      const outDate = document.getElementById('quickCheckOut').value;
+      const guests = document.getElementById('quickGuests').value;
+      const room = document.getElementById('quickRoomType').value;
+
+      document.getElementById('bookCheckIn').value = inDate;
+      document.getElementById('bookCheckOut').value = outDate;
+      
+      const radio = document.querySelector(`input[name="roomSelection"][value="${room}"]`);
+      if (radio) radio.checked = true;
+
+      calculatePrice();
+
+      // Scroll to reservation section
+      document.getElementById('rezervacia').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Dynamic Price Calculation
+    function calculatePrice() {
+      const inVal = document.getElementById('bookCheckIn').value;
+      const outVal = document.getElementById('bookCheckOut').value;
+      if (!inVal || !outVal) return;
+
+      const d1 = new Date(inVal);
+      const d2 = new Date(outVal);
+      let nights = Math.round((d2 - d1) / (1000 * 60 * 60 * 24));
+      if (nights <= 0) nights = 1;
+
+      // Base room rates
+      const rates = {
+        standard: 79,
+        superior: 89,
+        wedding: 129,
+        suite: 119,
+        accessible: 75
+      };
+
+      const selectedRoom = document.querySelector('input[name="roomSelection"]:checked')?.value || 'standard';
+      const baseRate = rates[selectedRoom] || 79;
+      let total = baseRate * nights;
+
+      // Addons
+      const adults = parseInt(document.getElementById('bookAdults').value) || 2;
+      if (document.getElementById('addWellness').checked) {
+        total += 15 * adults;
+      }
+      if (document.getElementById('addWine').checked) {
+        total += 18 * adults;
+      }
+      if (document.getElementById('addClay').checked) {
+        total += 12 * adults;
+      }
+
+      document.getElementById('calculatedPrice').innerText = total + ' €';
+      document.getElementById('nightsText').innerText = `(za ${nights} ${nights === 1 ? 'noc' : (nights < 5 ? 'noci' : 'nocí')}, vrátane DPH & raňajok)`;
+    }
+    calculatePrice();
+
+    // Submit Booking Form
+    function submitBooking(e) {
+      e.preventDefault();
+      const btn = e.target.querySelector('button[type="submit"]');
+      btn.disabled = true;
+      btn.innerHTML = '<span class="animate-spin inline-block mr-2">●</span> Odosielam požiadavku...';
+
+      setTimeout(() => {
+        document.getElementById('bookingConfirmation').classList.remove('hidden');
+        btn.innerHTML = '<i data-lucide="check" class="w-4 h-4"></i> Rezervácia odoslaná';
+        lucide.createIcons();
+        document.getElementById('bookingConfirmation').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }, 800);
+    }
+
+    // Room Category Filter
+    function filterRooms(cat, btn) {
+      document.querySelectorAll('.room-filter-btn').forEach(b => {
+        b.classList.remove('active-room-btn', 'bg-majolika-900', 'text-goldglaze-300');
+        b.classList.add('bg-white', 'text-slate-700');
+      });
+      btn.classList.add('active-room-btn', 'bg-majolika-900', 'text-goldglaze-300');
+      btn.classList.remove('bg-white', 'text-slate-700');
+
+      document.querySelectorAll('.room-card').forEach(card => {
+        const c = card.getAttribute('data-category') || '';
+        if (cat === 'all' || c.includes(cat)) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    // Gallery Category Filter
+    function filterGallery(cat, btn) {
+      document.querySelectorAll('.gal-filter-btn').forEach(b => {
+        b.classList.remove('active-gal-btn', 'bg-majolika-900', 'text-goldglaze-300');
+        b.classList.add('bg-slate-100', 'text-slate-700');
+      });
+      btn.classList.add('active-gal-btn', 'bg-majolika-900', 'text-goldglaze-300');
+      btn.classList.remove('bg-slate-100', 'text-slate-700');
+
+      document.querySelectorAll('.gal-item').forEach(item => {
+        const c = item.getAttribute('data-category') || '';
+        if (cat === 'all' || c === cat) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    }
+
+    // Lightbox Controls
+    function openLightbox(src, caption) {
+      const modal = document.getElementById('lightboxModal');
+      document.getElementById('lightboxImg').src = src;
+      document.getElementById('lightboxCaption').innerText = caption;
+      modal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeLightbox() {
+      document.getElementById('lightboxModal').classList.add('hidden');
+      document.body.style.overflow = '';
+    }
+
+    // Room Details Modal Data
+    const roomDetails = {
+      standard: {
+        title: 'Dvojlôžková izba Standard',
+        img: 'images/ubytovanie1.jpg',
+        price: '79 € / noc',
+        desc: 'Komfortne vybavená izba pre 2 osoby s manželskou posteľou alebo oddelenými lôžkami. Súčasťou je moderná kúpeľňa so sprchovým kútom, fénom, toaletnými potrebami, chladničkou/minibarom, trezorom a LCD TV s priamym obrazom parkoviska.',
+        features: ['Klimatizácia', 'Wi-Fi zadarmo', 'Raňajky formou bufetu', 'Podzemná garáž & EV nabíjanie', 'LCD TV', 'Trezor', 'Sprchový kút']
+      },
+      superior: {
+        title: 'Dvojlôžková izba Superior s výhľadom',
+        img: 'images/ubytovanie4.jpg',
+        price: '89 € / noc',
+        desc: 'Veľkorysejšia izba s výhľadom do tichého historického nádvoria. Ponúka zvýšený komfort, mäkučké župany a papuče, set na prípravu kávy a čaju a možnosť umiestnenia prístelky.',
+        features: ['Výhľad na nádvorie', 'Župany & papuče', 'Kávový a čajový set', 'Možnosť prístelky', 'Klimatizácia', 'Vstup do bazéna']
+      },
+      wedding: {
+        title: 'Exkluzívny Svadobný Apartmán',
+        img: 'images/ubytovanie2.jpg',
+        price: '129 € / noc',
+        desc: 'Romantický apartmán zariadený historizujúcim nábytkom a baldachýnom. Priestranná kúpeľňa s vaňou, fľaša prémiového modranského vína na privítanie, neobmedzený wellness a raňajky s možnosťou donášky priamo do apartmánu.',
+        features: ['Posteľ s baldachýnom', 'Víno z Modry ako darček', 'Neobmedzený wellness', 'Kúpeľňa s vaňou', 'Raňajky do postele', 'Late check-out do 12:00']
+      },
+      suite: {
+        title: 'Rodinná Suita / Apartmán',
+        img: 'images/ubytovanie7.jpg',
+        price: '119 € / noc',
+        desc: 'Dvojizbový apartmán ideálny pre rodiny s deťmi alebo skupinku priateľov (až 4-5 osôb). Oddelená spálňa a obývacia izba s rozkladacou pohovkou, 2x televízor a priestor pre detskú postieľku.',
+        features: ['2 samostatné miestnosti', 'Až 4-5 osôb', '2x LCD TV', 'Detská postieľka zdarma', 'Veľká chladnička', 'Wi-Fi & klimatizácia']
+      },
+      accessible: {
+        title: 'Bezbariérová izba pre imobilných hostí',
+        img: 'images/ubytovanie5.jpg',
+        price: '75 € / noc',
+        desc: 'Plne bezbariérová izba navrhnutá pre maximálne pohodlie hendikepovaných hostí. Bezbariérový prístup výťahom priamo z podzemnej garáže, široké dvere, sprchový kút v úrovni podlahy s držadlami a špeciálne sanitárne vybavenie.',
+        features: ['Bezbariérový výťah', 'Sprcha bez schodíka', 'Madlá a opierky', 'Široké dvere', 'Asistenčná linka recepcie']
+      }
+    };
+
+    function openRoomModal(type) {
+      const data = roomDetails[type];
+      if (!data) return;
+      const html = `
+        <div class="rounded-2xl overflow-hidden aspect-[16/9] mb-5">
+          <img src="${data.img}" alt="${data.title}" class="w-full h-full object-cover">
+        </div>
+        <div class="flex items-center justify-between mb-3">
+          <h3 class="font-display font-bold text-2xl text-majolika-950">${data.title}</h3>
+          <span class="text-lg font-bold text-terracotta-600">${data.price}</span>
+        </div>
+        <p class="text-sm text-slate-600 leading-relaxed mb-6">${data.desc}</p>
+        <h4 class="text-xs uppercase font-bold text-slate-800 tracking-wider mb-2">Vybavenie a výhody v cene:</h4>
+        <div class="grid grid-cols-2 gap-2 text-xs text-slate-700 mb-6">
+          ${data.features.map(f => `<div class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i> ${f}</div>`).join('')}
+        </div>
+        <div class="flex items-center justify-end gap-3 pt-4 border-t border-slate-100">
+          <button onclick="closeRoomModal()" class="px-5 py-2.5 rounded-xl border border-slate-200 text-slate-700 font-semibold text-xs hover:bg-slate-50">Zavrieť</button>
+          <a href="#rezervacia" onclick="selectRoomFromModal('${type}'); closeRoomModal();" class="px-6 py-2.5 rounded-xl bg-majolika-900 text-goldglaze-300 font-bold text-xs hover:bg-majolika-800">Rezervovať tento typ</a>
+        </div>
+      `;
+      document.getElementById('roomModalContent').innerHTML = html;
+      document.getElementById('roomModal').classList.remove('hidden');
+      document.getElementById('roomModal').classList.add('flex');
+      lucide.createIcons();
+    }
+
+    function selectRoomFromModal(type) {
+      const radio = document.querySelector(`input[name="roomSelection"][value="${type}"]`);
+      if (radio) {
+        radio.checked = true;
+        calculatePrice();
+      }
+    }
+
+    function closeRoomModal() {
+      document.getElementById('roomModal').classList.add('hidden');
+      document.getElementById('roomModal').classList.remove('flex');
+    }
+
+    // Info Modal Content
+    function openInfoModal(type) {
+      let title = '', body = '';
+      if (type === 'podmienky') {
+        title = 'Všeobecné obchodné a storno podmienky';
+        body = `
+          <p class="mb-3">Ubytovanie v Hoteli Majolika**** sa riadi platným ubytovacím poriadkom a platnou legislatívou SR.</p>
+          <p class="mb-3"><strong>Check-in:</strong> od 14:00 hod. do 22:00 hod. V prípade neskoršieho príchodu prosíme informovať recepciu vopred.</p>
+          <p class="mb-3"><strong>Check-out:</strong> do 10:00 hod. Neskorší odchod (late check-out) je možný po dohode s recepciou podľa obsadenosti.</p>
+          <p class="mb-3"><strong>Storno podmienky:</strong> Bezplatné storno rezervácie je možné do 48 hodín pred plánovaným dňom príchodu. Pri stornovaní v lehote kratšej ako 48 hodín je hotel oprávnený účtovať storno poplatok vo výške 100% ceny prvej noci.</p>
+          <p><strong>Platobné podmienky:</strong> Platba je možná v hotovosti (EUR) alebo platobnými kartami VISA, MasterCard, Maestro.</p>
+        `;
+      } else if (type === 'poriadok') {
+        title = 'Ubytovací poriadok Hotela Majolika';
+        body = `
+          <p class="mb-3">1. Hotel je oprávnený ubytovať iba riadne prihláseného hosťa po predložení platného dokladu totožnosti (občiansky preukaz, cestovný pas).</p>
+          <p class="mb-3">2. Všetky vnútorné priestory hotela, izieb, reštaurácie a wellnessu sú <strong>prísne nefajčiarske</strong>.</p>
+          <p class="mb-3">3. Z hygienických a bezpečnostných dôvodov <strong>nie je povolený pobyt domácich zvierat</strong>.</p>
+          <p class="mb-3">4. V čase od 22:00 do 06:00 hod. je v celom objekte hotela vyžadovaný nočný pokoj.</p>
+          <p>5. Parkovanie vozidiel je povolené v podzemnej garáži a na vyhradených hotelových miestach chránených kamerovým systémom.</p>
+        `;
+      } else {
+        title = 'Zásady ochrany osobných údajov (GDPR)';
+        body = `
+          <p class="mb-3">Vaše osobné údaje spracúvame v súlade s Nariadením Európskeho parlamentu a Rady (EÚ) 2016/679 (GDPR).</p>
+          <p class="mb-3">Údaje z rezervačného formulára (meno, e-mail, telefón) slúžia výhradne na účely vybavenia a potvrdenia Vašej objednávky ubytovania a služieb.</p>
+          <p>Údaje neposkytujeme žiadnym tretím stranám bez Vášho výslovného súhlasu s výnimkou zákonom stanovených hlásení (kniha ubytovaných).</p>
+        `;
+      }
+
+      document.getElementById('infoModalContent').innerHTML = `
+        <h3 class="font-display font-bold text-2xl text-majolika-950 mb-4">${title}</h3>
+        <div class="text-sm text-slate-600 leading-relaxed space-y-3 mb-6">${body}</div>
+        <div class="text-right">
+          <button onclick="closeInfoModal()" class="px-5 py-2.5 rounded-xl bg-majolika-900 text-goldglaze-300 font-bold text-xs hover:bg-majolika-800">Rozumiem</button>
+        </div>
+      `;
+      document.getElementById('infoModal').classList.remove('hidden');
+      document.getElementById('infoModal').classList.add('flex');
+    }
+
+    function closeInfoModal() {
+      document.getElementById('infoModal').classList.add('hidden');
+      document.getElementById('infoModal').classList.remove('flex');
+    }
+
+    // Simple language switch feedback
+    function switchLang(lang) {
+      alert(lang === 'en' ? 'English version preview will be loaded.' : 'Deutsche Version Vorschau wird geladen.');
+    }
+  </script>
+</body>
+</html>
