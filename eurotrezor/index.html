@@ -7,12 +7,25 @@
   <meta name="description" content="Oficiálny predajca rakúskych trezorov Wertheim na Slovensku. Certifikované trezory I. až III. bezpečnostnej triedy (VdS, ECB•S, EN 1143-1), ohňovzdorné a stenové trezory. Maximálna diskrétnosť a 53 rokov strojárskej tradície.">
   <meta name="keywords" content="trezory wertheim, certifikované trezory, ohňovzdorné trezory, stenové trezory, trezory na zbrane, vds trezory, bezpecnostna trieda 1 2 3, eurotrezor, industry nwt, surany">
 
+  <!-- Theme Init Script (Must run before render to avoid FOUC) -->
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('eurotrezor_theme');
+      // DEFAULT IS LIGHT THEME: Only add 'dark' class if user explicitly saved 'dark'
+      if (savedTheme === 'dark') {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    })();
+  </script>
+
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
 
-  <!-- Tailwind CSS -->
+  <!-- Tailwind CSS with DarkMode: Class -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -37,11 +50,16 @@
               700: '#b45309',
             },
             steel: {
+              50: '#f8fafc',
               100: '#f1f5f9',
               200: '#e2e8f0',
               300: '#cbd5e1',
               400: '#94a3b8',
               500: '#64748b',
+              600: '#475569',
+              700: '#334155',
+              800: '#1e293b',
+              900: '#0f172a'
             }
           },
           fontFamily: {
@@ -62,17 +80,32 @@
       height: 8px;
     }
     ::-webkit-scrollbar-track {
+      background: #f1f5f9;
+    }
+    .dark ::-webkit-scrollbar-track {
       background: #0b0f19;
     }
     ::-webkit-scrollbar-thumb {
-      background: #1e2d4a;
+      background: #cbd5e1;
       border-radius: 4px;
+    }
+    .dark ::-webkit-scrollbar-thumb {
+      background: #1e2d4a;
     }
     ::-webkit-scrollbar-thumb:hover {
       background: #d97706;
     }
 
-    .bg-vault-pattern {
+    /* Patterns & Glows */
+    .bg-hero-light {
+      background-color: #f8fafc;
+      background-image: 
+        radial-gradient(at 0% 0%, rgba(217, 119, 6, 0.08) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(203, 213, 225, 0.6) 0px, transparent 50%),
+        radial-gradient(at 50% 50%, rgba(241, 245, 249, 0.9) 0px, transparent 100%);
+    }
+
+    .dark .bg-hero-dark {
       background-color: #0b0f19;
       background-image: 
         radial-gradient(at 0% 0%, rgba(217, 119, 6, 0.1) 0px, transparent 50%),
@@ -80,21 +113,31 @@
         radial-gradient(at 50% 50%, rgba(15, 23, 42, 0.85) 0px, transparent 100%);
     }
 
-    .border-glow:hover {
-      box-shadow: 0 0 30px -5px rgba(245, 158, 11, 0.28);
+    /* Card Styling */
+    .theme-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.06);
     }
-
-    .glass-card {
-      background: rgba(16, 23, 38, 0.8);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
+    .dark .theme-card {
+      background: rgba(16, 23, 38, 0.85);
       border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.5);
     }
 
-    .glass-card-gold {
+    .theme-card-gold {
+      background: #fffbeb;
+      border: 1px solid rgba(245, 158, 11, 0.35);
+      box-shadow: 0 4px 20px -2px rgba(245, 158, 11, 0.1);
+    }
+    .dark .theme-card-gold {
       background: rgba(26, 21, 14, 0.85);
-      backdrop-filter: blur(12px);
       border: 1px solid rgba(245, 158, 11, 0.3);
+      box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.5);
+    }
+
+    .border-glow:hover {
+      box-shadow: 0 10px 25px -5px rgba(217, 119, 6, 0.2);
     }
 
     @keyframes dial-turn {
@@ -112,7 +155,7 @@
         background: white !important;
         color: black !important;
       }
-      header, footer, #sprievodca, #zamky, #doprava-montaz, #o-firme, #faq, #kontakt, .series-btn, #seriesFilters, #sortSelect, #gradeSelect {
+      header, footer, #sprievodca, #zamky, #doprava-montaz, #o-firme, #faq, #kontakt, .series-btn, #seriesFilters, #sortSelect, #gradeSelect, #themeToggleBtn {
         display: none !important;
       }
       #inquiryModal {
@@ -122,29 +165,26 @@
         padding: 0 !important;
         display: block !important;
       }
-      .glass-card {
+      .theme-card {
         background: white !important;
         border: 1px solid #ccc !important;
-        color: black !important;
-      }
-      .text-white, .text-slate-200, .text-slate-300 {
         color: black !important;
       }
     }
   </style>
 </head>
-<body class="bg-vault-950 text-slate-200 font-sans antialiased selection:bg-gold-500 selection:text-vault-950">
+<body class="bg-slate-50 dark:bg-vault-950 text-slate-800 dark:text-slate-200 font-sans antialiased selection:bg-gold-500 selection:text-white transition-colors duration-200">
 
   <!-- ==================== TOP ANNOUNCEMENT & TRUST BAR ==================== -->
-  <div class="bg-vault-900 border-b border-white/5 py-2.5 px-4 text-xs tracking-wide">
+  <div class="bg-slate-900 text-slate-300 dark:bg-vault-900 dark:text-slate-300 border-b border-slate-800 dark:border-white/5 py-2.5 px-4 text-xs tracking-wide">
     <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-2">
       <div class="flex items-center gap-3">
-        <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-gold-500/10 text-gold-400 font-medium border border-gold-500/20">
+        <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-gold-500/20 text-gold-400 font-medium border border-gold-500/30">
           <svg class="w-3.5 h-3.5 text-gold-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 1.944A11.954 11.954 0 012.166 5C2.056 5.649 2 6.319 2 7c0 5.225 3.34 9.67 8 11.317C14.66 16.67 18 12.225 18 7c0-.682-.057-1.35-.166-2.001A11.954 11.954 0 0110 1.944zM11 14a1 1 0 11-2 0 1 1 0 012 0zm0-7a1 1 0 10-2 0v3a1 1 0 102 0V7z" clip-rule="evenodd"></path></svg>
           Oficiálny partner Wertheim Rakúsko od roku 1998
         </span>
-        <span class="text-slate-400 hidden sm:inline">|</span>
-        <span class="text-slate-400 hidden sm:inline">Certifikácia podľa európskej normy <strong>EN 1143-1</strong> (VdS Nemecko & ECB•S)</span>
+        <span class="text-slate-500 hidden sm:inline">|</span>
+        <span class="text-slate-300 hidden sm:inline">Certifikácia podľa európskej normy <strong>EN 1143-1</strong> (VdS Nemecko & ECB•S)</span>
       </div>
       <div class="flex items-center gap-5 text-slate-300">
         <a href="tel:+421908750500" class="hover:text-gold-400 transition-colors flex items-center gap-1.5 font-mono">
@@ -155,20 +195,20 @@
           <svg class="w-3.5 h-3.5 text-gold-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
           office@eurotrezor.com
         </a>
-        <span class="text-slate-500 hidden md:inline">Šurany, SR</span>
+        <span class="text-slate-400 hidden md:inline">Šurany, SR</span>
       </div>
     </div>
   </div>
 
   <!-- ==================== MAIN NAVIGATION ==================== -->
-  <header class="sticky top-0 z-40 bg-vault-950/90 backdrop-blur-md border-b border-white/10 transition-all duration-200" id="mainHeader">
+  <header class="sticky top-0 z-40 bg-white/95 dark:bg-vault-950/90 backdrop-blur-md border-b border-slate-200 dark:border-white/10 transition-colors duration-200 shadow-sm dark:shadow-none" id="mainHeader">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-20">
         
         <!-- Logo & Brand -->
         <a href="#top" class="flex items-center gap-3.5 group">
-          <div class="relative w-12 h-12 rounded-xl bg-gradient-to-br from-gold-500/20 to-vault-800 border border-gold-500/30 flex items-center justify-center p-2 group-hover:border-gold-500 transition-all shadow-lg shadow-gold-500/5">
-            <svg class="w-7 h-7 text-gold-500 animate-dial" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <div class="relative w-12 h-12 rounded-xl bg-gradient-to-br from-gold-500/10 to-slate-100 dark:from-gold-500/20 dark:to-vault-800 border border-gold-500/30 flex items-center justify-center p-2 group-hover:border-gold-500 transition-all shadow-md shadow-gold-500/5">
+            <svg class="w-7 h-7 text-gold-600 dark:text-gold-500 animate-dial" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <circle cx="12" cy="12" r="9"></circle>
               <circle cx="12" cy="12" r="4"></circle>
               <line x1="12" y1="3" x2="12" y2="6"></line>
@@ -179,45 +219,52 @@
           </div>
           <div>
             <div class="flex items-center gap-2">
-              <span class="font-display font-extrabold text-2xl tracking-tight text-white group-hover:text-gold-400 transition-colors">EUROTREZOR</span>
-              <span class="text-[10px] font-mono tracking-widest px-1.5 py-0.5 rounded bg-slate-800 text-slate-300 uppercase">Wertheim</span>
+              <span class="font-display font-extrabold text-2xl tracking-tight text-slate-900 dark:text-white group-hover:text-gold-600 dark:group-hover:text-gold-400 transition-colors">EUROTREZOR</span>
+              <span class="text-[10px] font-mono tracking-widest px-1.5 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 uppercase font-semibold">Wertheim</span>
             </div>
-            <div class="text-[11px] text-slate-400 tracking-wider">INDUSTRY NWT | RODINNÁ TRADÍCIA OD 1998</div>
+            <div class="text-[11px] text-slate-500 dark:text-slate-400 tracking-wider">INDUSTRY NWT | RODINNÁ TRADÍCIA OD 1998</div>
           </div>
         </a>
 
         <!-- Desktop Navigation -->
-        <nav class="hidden lg:flex items-center gap-7 text-sm font-medium text-slate-300">
-          <a href="#katalog" class="hover:text-gold-400 transition-colors">Katalóg (54 modelov)</a>
-          <a href="#triedy" class="hover:text-gold-400 transition-colors">Bezpečnostné triedy</a>
-          <a href="#sprievodca" class="hover:text-gold-400 transition-colors flex items-center gap-1.5 text-gold-400 font-semibold">
-            <span class="w-2 h-2 rounded-full bg-gold-400 animate-pulse"></span>
+        <nav class="hidden lg:flex items-center gap-7 text-sm font-medium text-slate-700 dark:text-slate-300">
+          <a href="#katalog" class="hover:text-gold-600 dark:hover:text-gold-400 transition-colors">Katalóg (54 modelov)</a>
+          <a href="#triedy" class="hover:text-gold-600 dark:hover:text-gold-400 transition-colors">Bezpečnostné triedy</a>
+          <a href="#sprievodca" class="hover:text-gold-600 dark:hover:text-gold-400 transition-colors flex items-center gap-1.5 text-gold-600 dark:text-gold-400 font-semibold">
+            <span class="w-2 h-2 rounded-full bg-gold-500 animate-pulse"></span>
             Sprievodca výberom
           </a>
-          <a href="#zamky" class="hover:text-gold-400 transition-colors">Zámky</a>
-          <a href="#doprava-montaz" class="hover:text-gold-400 transition-colors">Doprava & Montáž</a>
-          <a href="#o-firme" class="hover:text-gold-400 transition-colors">O firme</a>
-          <a href="#kontakt" class="hover:text-gold-400 transition-colors">Kontakt</a>
+          <a href="#zamky" class="hover:text-gold-600 dark:hover:text-gold-400 transition-colors">Zámky</a>
+          <a href="#doprava-montaz" class="hover:text-gold-600 dark:hover:text-gold-400 transition-colors">Doprava & Montáž</a>
+          <a href="#o-firme" class="hover:text-gold-600 dark:hover:text-gold-400 transition-colors">O firme</a>
+          <a href="#kontakt" class="hover:text-gold-600 dark:hover:text-gold-400 transition-colors">Kontakt</a>
         </nav>
 
         <!-- Action Buttons -->
         <div class="flex items-center gap-3">
+          
+          <!-- Theme Toggle Button (Light / Dark) -->
+          <button onclick="toggleTheme()" id="themeToggleBtn" class="p-2.5 rounded-xl bg-slate-100 dark:bg-vault-850 hover:bg-slate-200 dark:hover:bg-vault-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/10 transition-all flex items-center gap-1.5 text-xs font-semibold" title="Prepnúť Svetlý / Tmavý režim">
+            <span id="themeIcon">🌙</span>
+            <span class="hidden xl:inline" id="themeText">Tmavý režim</span>
+          </button>
+
           <!-- Compare Trigger -->
-          <button onclick="toggleCompareDrawer()" id="compareBtn" class="relative p-2.5 rounded-xl bg-vault-850 hover:bg-vault-800 text-slate-300 hover:text-white border border-white/5 transition-all text-xs font-medium flex items-center gap-1.5" title="Porovnanie modelov">
-            <svg class="w-4 h-4 text-gold-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+          <button onclick="toggleCompareDrawer()" id="compareBtn" class="relative p-2.5 rounded-xl bg-slate-100 dark:bg-vault-850 hover:bg-slate-200 dark:hover:bg-vault-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/10 transition-all text-xs font-medium flex items-center gap-1.5" title="Porovnanie modelov">
+            <svg class="w-4 h-4 text-gold-600 dark:text-gold-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
             <span class="hidden sm:inline">Porovnať</span>
-            <span id="compareCount" class="w-5 h-5 rounded-full bg-slate-700 text-slate-200 text-[10px] flex items-center justify-center font-bold">0</span>
+            <span id="compareCount" class="w-5 h-5 rounded-full bg-slate-200 dark:bg-slate-700 text-slate-800 dark:text-slate-200 text-[10px] flex items-center justify-center font-bold">0</span>
           </button>
 
           <!-- Inquiry Cart Trigger -->
-          <button onclick="toggleInquiryModal()" id="cartBtn" class="relative px-4 py-2.5 rounded-xl bg-gradient-to-r from-gold-600 to-gold-500 hover:from-gold-500 hover:to-gold-400 text-vault-950 font-display font-bold text-xs uppercase tracking-wider flex items-center gap-2 shadow-lg shadow-gold-500/20 hover:shadow-gold-500/40 transition-all transform hover:-translate-y-0.5">
+          <button onclick="toggleInquiryModal()" id="cartBtn" class="relative px-4 py-2.5 rounded-xl bg-gradient-to-r from-gold-600 to-gold-500 hover:from-gold-500 hover:to-gold-400 text-white font-display font-bold text-xs uppercase tracking-wider flex items-center gap-2 shadow-md shadow-gold-500/20 hover:shadow-gold-500/30 transition-all transform hover:-translate-y-0.5">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
-            <span>Dopytový košík</span>
-            <span id="cartCountBadge" class="w-5 h-5 rounded-full bg-vault-950 text-gold-400 text-[11px] font-mono flex items-center justify-center font-extrabold">0</span>
+            <span>Dopyt</span>
+            <span id="cartCountBadge" class="w-5 h-5 rounded-full bg-slate-900 text-gold-400 text-[11px] font-mono flex items-center justify-center font-extrabold">0</span>
           </button>
 
           <!-- Mobile Menu Button -->
-          <button onclick="toggleMobileMenu()" class="lg:hidden p-2.5 rounded-xl bg-vault-850 text-slate-300 hover:text-white border border-white/5">
+          <button onclick="toggleMobileMenu()" class="lg:hidden p-2.5 rounded-xl bg-slate-100 dark:bg-vault-850 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/10">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
           </button>
         </div>
@@ -226,37 +273,40 @@
     </div>
 
     <!-- Mobile Navigation Drawer -->
-    <div id="mobileMenu" class="hidden lg:hidden bg-vault-900 border-b border-white/10 px-6 py-6 space-y-4">
-      <a href="#katalog" onclick="toggleMobileMenu()" class="block text-base font-medium text-slate-200 hover:text-gold-400">Katalóg trezorov (54 modelov)</a>
-      <a href="#triedy" onclick="toggleMobileMenu()" class="block text-base font-medium text-slate-200 hover:text-gold-400">Bezpečnostné triedy & Poistné limity</a>
-      <a href="#sprievodca" onclick="toggleMobileMenu()" class="block text-base font-medium text-gold-400">Sprievodca výberom na mieru</a>
-      <a href="#zamky" onclick="toggleMobileMenu()" class="block text-base font-medium text-slate-200 hover:text-gold-400">Zámkové systémy (Kľúč vs Kód)</a>
-      <a href="#doprava-montaz" onclick="toggleMobileMenu()" class="block text-base font-medium text-slate-200 hover:text-gold-400">Kalkulačka dopravy & montáže</a>
-      <a href="#o-firme" onclick="toggleMobileMenu()" class="block text-base font-medium text-slate-200 hover:text-gold-400">O rodinnej firme Industry NWT</a>
-      <a href="#kontakt" onclick="toggleMobileMenu()" class="block text-base font-medium text-slate-200 hover:text-gold-400">Kontaktné údaje & Showroom</a>
-      <div class="pt-4 border-t border-white/10 flex flex-col gap-3">
-        <a href="tel:+421908750500" class="text-center py-2.5 rounded-lg bg-vault-800 text-gold-400 font-mono font-medium">+421 908 750 500</a>
-        <a href="mailto:office@eurotrezor.com" class="text-center text-xs text-slate-400">office@eurotrezor.com</a>
+    <div id="mobileMenu" class="hidden lg:hidden bg-white dark:bg-vault-900 border-b border-slate-200 dark:border-white/10 px-6 py-6 space-y-4">
+      <a href="#katalog" onclick="toggleMobileMenu()" class="block text-base font-medium text-slate-800 dark:text-slate-200 hover:text-gold-600 dark:hover:text-gold-400">Katalóg trezorov (54 modelov)</a>
+      <a href="#triedy" onclick="toggleMobileMenu()" class="block text-base font-medium text-slate-800 dark:text-slate-200 hover:text-gold-600 dark:hover:text-gold-400">Bezpečnostné triedy & Poistné limity</a>
+      <a href="#sprievodca" onclick="toggleMobileMenu()" class="block text-base font-medium text-gold-600 dark:text-gold-400">Sprievodca výberom na mieru</a>
+      <a href="#zamky" onclick="toggleMobileMenu()" class="block text-base font-medium text-slate-800 dark:text-slate-200 hover:text-gold-600 dark:hover:text-gold-400">Zámkové systémy (Kľúč vs Kód)</a>
+      <a href="#doprava-montaz" onclick="toggleMobileMenu()" class="block text-base font-medium text-slate-800 dark:text-slate-200 hover:text-gold-600 dark:hover:text-gold-400">Kalkulačka dopravy & montáže</a>
+      <a href="#o-firme" onclick="toggleMobileMenu()" class="block text-base font-medium text-slate-800 dark:text-slate-200 hover:text-gold-600 dark:hover:text-gold-400">O rodinnej firme Industry NWT</a>
+      <a href="#kontakt" onclick="toggleMobileMenu()" class="block text-base font-medium text-slate-800 dark:text-slate-200 hover:text-gold-600 dark:hover:text-gold-400">Kontaktné údaje & Showroom</a>
+      <div class="pt-4 border-t border-slate-200 dark:border-white/10 flex flex-col gap-3">
+        <button onclick="toggleTheme()" class="py-2.5 rounded-lg bg-slate-100 dark:bg-vault-800 text-slate-800 dark:text-slate-200 font-semibold text-xs flex items-center justify-center gap-2">
+          <span>Prepnúť režim (Svetlý / Tmavý)</span>
+        </button>
+        <a href="tel:+421908750500" class="text-center py-2.5 rounded-lg bg-slate-900 text-gold-400 font-mono font-medium">+421 908 750 500</a>
+        <a href="mailto:office@eurotrezor.com" class="text-center text-xs text-slate-500 dark:text-slate-400">office@eurotrezor.com</a>
       </div>
     </div>
   </header>
 
   <!-- ==================== HERO SECTION ==================== -->
-  <section class="relative pt-12 pb-24 overflow-hidden bg-vault-pattern" id="top">
+  <section class="relative pt-12 pb-24 overflow-hidden bg-hero-light dark:bg-hero-dark transition-colors duration-200" id="top">
     <!-- Ambient Glows -->
-    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] bg-gradient-to-tr from-gold-600/10 to-blue-600/10 blur-[140px] pointer-events-none"></div>
+    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] bg-gradient-to-tr from-gold-500/10 to-blue-500/10 blur-[140px] pointer-events-none"></div>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       
       <!-- Brand Co-branding banner -->
-      <div class="mb-8 flex flex-wrap items-center justify-between gap-4 py-3 px-5 rounded-2xl bg-vault-850/60 border border-white/5 backdrop-blur-sm">
+      <div class="mb-8 flex flex-wrap items-center justify-between gap-4 py-3 px-5 rounded-2xl bg-white/80 dark:bg-vault-850/60 border border-slate-200 dark:border-white/5 backdrop-blur-sm shadow-sm">
         <div class="flex items-center gap-4">
-          <img src="images/logo.png" alt="Wertheim Logo" class="h-8 w-auto filter brightness-90">
-          <div class="h-6 w-px bg-white/10 hidden sm:block"></div>
-          <span class="text-xs text-slate-300 hidden sm:inline">Oficiálny slovenský predajca trezorov <strong>Wertheim</strong></span>
+          <img src="images/logo.png" alt="Wertheim Logo" class="h-8 w-auto">
+          <div class="h-6 w-px bg-slate-200 dark:bg-white/10 hidden sm:block"></div>
+          <span class="text-xs text-slate-600 dark:text-slate-300 hidden sm:inline">Oficiálny slovenský predajca trezorov <strong>Wertheim</strong></span>
         </div>
         <div class="flex items-center gap-3">
-          <img src="images/wertheim-slogan.png" alt="Wertheim Slogan" class="h-5 w-auto opacity-70">
+          <img src="images/wertheim-slogan.png" alt="Wertheim Slogan" class="h-5 w-auto opacity-75">
         </div>
       </div>
 
@@ -265,51 +315,51 @@
         <!-- Left Hero Content -->
         <div class="lg:col-span-7 space-y-7">
           
-          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-800/80 border border-slate-700/80 text-xs font-medium text-slate-300">
-            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700/80 text-xs font-semibold text-slate-700 dark:text-slate-300 shadow-sm">
+            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
             <span>Výhradné zastúpenie rakúskej trezorovej techniky Wertheim</span>
           </div>
 
-          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-display font-extrabold tracking-tight text-white leading-[1.12]">
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-display font-extrabold tracking-tight text-slate-900 dark:text-white leading-[1.12]">
             Nekompromisná ochrana <br>
-            <span class="text-transparent bg-clip-text bg-gradient-to-r from-gold-400 via-amber-300 to-gold-500">
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-gold-600 via-amber-500 to-gold-600 dark:from-gold-400 dark:via-amber-300 dark:to-gold-500">
               toho najcennejšieho.
             </span>
           </h1>
 
-          <p class="text-lg text-slate-300 leading-relaxed max-w-2xl">
+          <p class="text-lg text-slate-600 dark:text-slate-300 leading-relaxed max-w-2xl">
             Trezory svetového lídra <strong>Wertheim</strong> s certifikáciou najprestížnejšej nemeckej skúšobne <strong>VdS</strong> a <strong>ECB•S</strong>. Využite výhodu malej rodinnej firmy Industry NWT — <strong>maximálnu diskrétnosť</strong>, 53 rokov strojárskej precíznosti a profesionálnu montáž priamo u Vás.
           </p>
 
           <!-- Hero CTAs -->
           <div class="flex flex-wrap items-center gap-4 pt-2">
-            <a href="#sprievodca" class="px-7 py-4 rounded-xl bg-gradient-to-r from-gold-500 to-amber-600 hover:from-gold-400 hover:to-amber-500 text-vault-950 font-display font-bold text-sm uppercase tracking-wider shadow-xl shadow-gold-500/25 hover:shadow-gold-500/40 transition-all flex items-center gap-3">
+            <a href="#sprievodca" class="px-7 py-4 rounded-xl bg-gradient-to-r from-gold-500 to-amber-600 hover:from-gold-400 hover:to-amber-500 text-white font-display font-bold text-sm uppercase tracking-wider shadow-lg shadow-gold-500/25 hover:shadow-gold-500/40 transition-all flex items-center gap-3">
               <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
               <span>Inteligentný poradca výberu</span>
             </a>
-            <a href="#katalog" class="px-7 py-4 rounded-xl bg-vault-850 hover:bg-vault-800 border border-slate-700 hover:border-slate-500 text-white font-display font-semibold text-sm transition-all flex items-center gap-2.5">
+            <a href="#katalog" class="px-7 py-4 rounded-xl bg-white dark:bg-vault-850 hover:bg-slate-50 dark:hover:bg-vault-800 border border-slate-300 dark:border-slate-700 text-slate-800 dark:text-white font-display font-semibold text-sm transition-all flex items-center gap-2.5 shadow-sm">
               <span>Prezrieť 54 modelov</span>
               <svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
             </a>
           </div>
 
           <!-- Quick Trust Badges -->
-          <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-6 border-t border-white/10">
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-6 border-t border-slate-200 dark:border-white/10">
             <div class="space-y-1">
-              <div class="font-tech font-bold text-2xl text-gold-400">170+</div>
-              <div class="text-xs text-slate-400">Rokov tradície Wertheim (od 1852)</div>
+              <div class="font-tech font-bold text-2xl text-gold-600 dark:text-gold-400">170+</div>
+              <div class="text-xs text-slate-500 dark:text-slate-400">Rokov tradície Wertheim (od 1852)</div>
             </div>
             <div class="space-y-1">
-              <div class="font-tech font-bold text-2xl text-gold-400">53 r.</div>
-              <div class="text-xs text-slate-400">Strojárskej praxe Industry NWT</div>
+              <div class="font-tech font-bold text-2xl text-gold-600 dark:text-gold-400">53 r.</div>
+              <div class="text-xs text-slate-500 dark:text-slate-400">Strojárskej praxe Industry NWT</div>
             </div>
             <div class="space-y-1">
-              <div class="font-tech font-bold text-2xl text-gold-400">VdS</div>
-              <div class="text-xs text-slate-400">Nemecká skúšobňa & ECB•S</div>
+              <div class="font-tech font-bold text-2xl text-gold-600 dark:text-gold-400">VdS</div>
+              <div class="text-xs text-slate-500 dark:text-slate-400">Nemecká skúšobňa & ECB•S</div>
             </div>
             <div class="space-y-1">
-              <div class="font-tech font-bold text-2xl text-emerald-400">100%</div>
-              <div class="text-xs text-slate-400">Diskrétne dodanie a kotvenie</div>
+              <div class="font-tech font-bold text-2xl text-emerald-600 dark:text-emerald-400">100%</div>
+              <div class="text-xs text-slate-500 dark:text-slate-400">Diskrétne dodanie a kotvenie</div>
             </div>
           </div>
 
@@ -317,9 +367,9 @@
 
         <!-- Right Hero Interactive Showcase -->
         <div class="lg:col-span-5">
-          <div class="relative glass-card rounded-2xl p-6 border-glow shadow-2xl">
+          <div class="relative theme-card rounded-2xl p-6 border-glow shadow-xl">
             <!-- Badge -->
-            <div class="absolute -top-3.5 right-6 px-3.5 py-1 rounded-full bg-gold-500 text-vault-950 font-bold text-xs uppercase tracking-wider shadow">
+            <div class="absolute -top-3.5 right-6 px-3.5 py-1 rounded-full bg-gold-500 text-white font-bold text-xs uppercase tracking-wider shadow">
               Bestseller v SR
             </div>
 
@@ -327,60 +377,60 @@
             <div class="space-y-5">
               <div class="flex items-center justify-between">
                 <div>
-                  <span class="text-xs font-mono text-gold-400 tracking-wider">I. BEZPEČNOSTNÁ TRIEDA + OHEŇ</span>
-                  <h3 class="text-2xl font-display font-extrabold text-white">Wertheim AP10</h3>
+                  <span class="text-xs font-mono text-gold-600 dark:text-gold-400 font-bold tracking-wider">I. BEZPEČNOSTNÁ TRIEDA + OHEŇ</span>
+                  <h3 class="text-2xl font-display font-extrabold text-slate-900 dark:text-white">Wertheim AP10</h3>
                 </div>
                 <div class="text-right">
-                  <span class="text-xs text-slate-400">Cena s DPH</span>
-                  <div class="text-2xl font-tech font-bold text-white">1 708 €</div>
+                  <span class="text-xs text-slate-500 dark:text-slate-400">Cena s DPH</span>
+                  <div class="text-2xl font-tech font-bold text-slate-900 dark:text-white">1 708 €</div>
                 </div>
               </div>
 
               <!-- Image with interactive 3D effect -->
-              <div class="relative h-64 rounded-xl bg-gradient-to-b from-vault-800 to-vault-900 border border-white/5 flex items-center justify-center p-4 overflow-hidden group">
-                <img src="images/ap10.jpg" alt="Wertheim AP10" class="max-h-full object-contain filter drop-shadow-[0_15px_25px_rgba(0,0,0,0.8)] group-hover:scale-105 transition-transform duration-500">
+              <div class="relative h-64 rounded-xl bg-slate-100 dark:bg-gradient-to-b dark:from-vault-800 dark:to-vault-900 border border-slate-200 dark:border-white/5 flex items-center justify-center p-4 overflow-hidden group">
+                <img src="images/ap10.jpg" alt="Wertheim AP10" class="max-h-full object-contain filter drop-shadow-[0_10px_20px_rgba(0,0,0,0.15)] dark:drop-shadow-[0_15px_25px_rgba(0,0,0,0.8)] group-hover:scale-105 transition-transform duration-500">
                 
                 <!-- Floating Spec Badges -->
                 <div class="absolute bottom-3 left-3 flex gap-2">
-                  <span class="px-2 py-1 rounded bg-red-950/80 text-red-300 border border-red-800 text-[10px] font-bold flex items-center gap-1">
-                    <svg class="w-3 h-3 text-red-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.316.492-.633.985-.95 1.477a17.56 17.56 0 01-1.69 2.193c-.42.474-.863.923-1.332 1.344-.658.59-1.39 1.137-2.124 1.706C3.21 10.428 2.5 11.536 2.5 13a7.5 7.5 0 0015 0c0-1.954-1.077-3.69-2.705-4.877-.85-.62-1.782-1.12-2.7-1.62-.258-.14-.52-.28-.7-.45z" clip-rule="evenodd"></path></svg>
+                  <span class="px-2 py-1 rounded bg-red-100 dark:bg-red-950/80 text-red-700 dark:text-red-300 border border-red-200 dark:border-red-800 text-[10px] font-bold flex items-center gap-1">
+                    <svg class="w-3 h-3 text-red-600 dark:text-red-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.316.492-.633.985-.95 1.477a17.56 17.56 0 01-1.69 2.193c-.42.474-.863.923-1.332 1.344-.658.59-1.39 1.137-2.124 1.706C3.21 10.428 2.5 11.536 2.5 13a7.5 7.5 0 0015 0c0-1.954-1.077-3.69-2.705-4.877-.85-.62-1.782-1.12-2.7-1.62-.258-.14-.52-.28-.7-.45z" clip-rule="evenodd"></path></svg>
                     LFS 60P (60 min)
                   </span>
-                  <span class="px-2 py-1 rounded bg-blue-950/80 text-blue-300 border border-blue-800 text-[10px] font-bold">
+                  <span class="px-2 py-1 rounded bg-blue-100 dark:bg-blue-950/80 text-blue-800 dark:text-blue-300 border border-blue-200 dark:border-blue-800 text-[10px] font-bold">
                     Váha 180 kg
                   </span>
-                  <span class="px-2 py-1 rounded bg-slate-800 text-slate-300 text-[10px] font-mono">
+                  <span class="px-2 py-1 rounded bg-white dark:bg-slate-800 text-slate-800 dark:text-slate-300 border border-slate-200 dark:border-slate-700 text-[10px] font-mono">
                     Objem 55 l
                   </span>
                 </div>
               </div>
 
               <!-- Quick Specs Matrix -->
-              <div class="grid grid-cols-2 gap-3 text-xs bg-vault-900/80 p-3.5 rounded-xl border border-white/5">
+              <div class="grid grid-cols-2 gap-3 text-xs bg-slate-100 dark:bg-vault-900/80 p-3.5 rounded-xl border border-slate-200 dark:border-white/5">
                 <div>
-                  <span class="text-slate-400 block">Vonkajšie rozmery:</span>
-                  <span class="font-mono text-slate-200">474 × 605 × 522 mm</span>
+                  <span class="text-slate-500 dark:text-slate-400 block">Vonkajšie rozmery:</span>
+                  <span class="font-mono text-slate-900 dark:text-slate-200 font-semibold">474 × 605 × 522 mm</span>
                 </div>
                 <div>
-                  <span class="text-slate-400 block">Poistné krytie:</span>
-                  <span class="font-semibold text-emerald-400">do 40 000 €</span>
+                  <span class="text-slate-500 dark:text-slate-400 block">Poistné krytie:</span>
+                  <span class="font-semibold text-emerald-600 dark:text-emerald-400">do 40 000 €</span>
                 </div>
                 <div>
-                  <span class="text-slate-400 block">Zámok:</span>
-                  <span class="text-slate-200">Motýlkový obojstranný / kód</span>
+                  <span class="text-slate-500 dark:text-slate-400 block">Zámok:</span>
+                  <span class="text-slate-800 dark:text-slate-200">Motýlkový obojstranný / kód</span>
                 </div>
                 <div>
-                  <span class="text-slate-400 block">Dodanie:</span>
-                  <span class="font-medium text-amber-400">3 - 4 týždne</span>
+                  <span class="text-slate-500 dark:text-slate-400 block">Dodanie:</span>
+                  <span class="font-medium text-amber-600 dark:text-amber-400">3 - 4 týždne</span>
                 </div>
               </div>
 
               <!-- Quick Action in Hero -->
               <div class="flex gap-2.5">
-                <button onclick="openProductModal('ap10_2')" class="flex-1 py-2.5 rounded-xl bg-vault-700 hover:bg-vault-600 text-white text-xs font-semibold transition-colors">
+                <button onclick="openProductModal('ap10_2')" class="flex-1 py-2.5 rounded-xl bg-slate-200 dark:bg-vault-700 hover:bg-slate-300 dark:hover:bg-vault-600 text-slate-800 dark:text-white text-xs font-semibold transition-colors">
                   Detail a parametre
                 </button>
-                <button onclick="addToCart('ap10_2')" class="px-4 py-2.5 rounded-xl bg-gold-500 hover:bg-gold-400 text-vault-950 text-xs font-bold transition-colors flex items-center gap-1.5">
+                <button onclick="addToCart('ap10_2')" class="px-4 py-2.5 rounded-xl bg-gold-500 hover:bg-gold-400 text-white font-bold text-xs transition-colors flex items-center gap-1.5 shadow-sm">
                   <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
                   <span>Dopyt</span>
                 </button>
@@ -395,80 +445,80 @@
   </section>
 
   <!-- ==================== WIZARD / SAFE ADVISOR ==================== -->
-  <section class="py-20 bg-vault-900 border-y border-white/5 relative" id="sprievodca">
+  <section class="py-20 bg-white dark:bg-vault-900 border-y border-slate-200 dark:border-white/5 relative transition-colors duration-200" id="sprievodca">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="text-center max-w-3xl mx-auto space-y-4 mb-14">
-        <span class="text-xs font-mono uppercase tracking-widest text-gold-400 bg-gold-500/10 border border-gold-500/20 px-3 py-1 rounded-full">
+        <span class="text-xs font-mono uppercase tracking-widest text-gold-600 dark:text-gold-400 bg-gold-500/10 border border-gold-500/20 px-3 py-1 rounded-full font-bold">
           Interaktívny Konfigurátor
         </span>
-        <h2 class="text-3xl sm:text-4xl font-display font-extrabold text-white">
+        <h2 class="text-3xl sm:text-4xl font-display font-extrabold text-slate-900 dark:text-white">
           Neviete, ktorý trezor je pre Vás ten pravý?
         </h2>
-        <p class="text-slate-300 text-sm sm:text-base">
+        <p class="text-slate-600 dark:text-slate-300 text-sm sm:text-base">
           Odpovedzte na 3 jednoduché otázky a náš algoritmus Vám okamžite odporučí optimálnu bezpečnostnú triedu, model a certifikáciu podľa požiadaviek slovenských poisťovní.
         </p>
       </div>
 
-      <div class="max-w-4xl mx-auto glass-card rounded-2xl p-6 sm:p-10 border border-white/10 shadow-2xl">
+      <div class="max-w-4xl mx-auto theme-card rounded-2xl p-6 sm:p-10 shadow-xl">
         
         <!-- Step Progress Bar -->
-        <div class="flex items-center justify-between mb-8 pb-6 border-b border-white/10">
+        <div class="flex items-center justify-between mb-8 pb-6 border-b border-slate-200 dark:border-white/10">
           <div class="flex items-center gap-3">
-            <span class="w-8 h-8 rounded-full bg-gold-500 text-vault-950 font-bold flex items-center justify-center font-mono text-sm" id="wizardStepNumber">1</span>
+            <span class="w-8 h-8 rounded-full bg-gold-500 text-white font-bold flex items-center justify-center font-mono text-sm" id="wizardStepNumber">1</span>
             <div>
-              <div class="text-xs text-slate-400 uppercase font-mono">Krok z 3</div>
-              <div class="text-sm font-bold text-white" id="wizardStepTitle">Aký je primárny účel trezoru?</div>
+              <div class="text-xs text-slate-500 dark:text-slate-400 uppercase font-mono">Krok z 3</div>
+              <div class="text-sm font-bold text-slate-900 dark:text-white" id="wizardStepTitle">Aký je primárny účel trezoru?</div>
             </div>
           </div>
           <div class="flex gap-1.5" id="wizardDots">
             <div class="w-8 h-2 rounded-full bg-gold-500"></div>
-            <div class="w-8 h-2 rounded-full bg-slate-800"></div>
-            <div class="w-8 h-2 rounded-full bg-slate-800"></div>
+            <div class="w-8 h-2 rounded-full bg-slate-200 dark:bg-slate-800"></div>
+            <div class="w-8 h-2 rounded-full bg-slate-200 dark:bg-slate-800"></div>
           </div>
         </div>
 
         <!-- Step 1: Purpose -->
         <div id="step1" class="wizard-step space-y-4">
-          <label class="block text-sm text-slate-300 font-medium mb-3">Vyberte, čo budete v trezore najčastejšie uchovávať:</label>
+          <label class="block text-sm text-slate-700 dark:text-slate-300 font-medium mb-3">Vyberte, čo budete v trezore najčastejšie uchovávať:</label>
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
             
-            <button onclick="selectWizardOption('purpose', 'home')" class="wizard-opt text-left p-4 rounded-xl bg-vault-850 hover:bg-vault-800 border border-white/5 hover:border-gold-500/50 transition-all group">
+            <button onclick="selectWizardOption('purpose', 'home')" class="wizard-opt text-left p-4 rounded-xl bg-slate-50 dark:bg-vault-850 hover:bg-slate-100 dark:hover:bg-vault-800 border border-slate-200 dark:border-white/5 hover:border-gold-500/50 transition-all group shadow-sm">
               <div class="flex items-start gap-3.5">
-                <div class="w-10 h-10 rounded-lg bg-gold-500/10 text-gold-400 flex items-center justify-center text-xl shrink-0 group-hover:scale-110 transition-transform">🏡</div>
+                <div class="w-10 h-10 rounded-lg bg-gold-500/10 text-gold-600 dark:text-gold-400 flex items-center justify-center text-xl shrink-0 group-hover:scale-110 transition-transform">🏡</div>
                 <div>
-                  <div class="font-bold text-white text-sm group-hover:text-gold-400 transition-colors">Domácnosť & rodinné cennosti</div>
-                  <div class="text-xs text-slate-400 mt-1">Šperky, pasy, hotovosť, rodinné dokumenty v rodinnom dome či byte.</div>
+                  <div class="font-bold text-slate-900 dark:text-white text-sm group-hover:text-gold-600 dark:group-hover:text-gold-400 transition-colors">Domácnosť & rodinné cennosti</div>
+                  <div class="text-xs text-slate-500 dark:text-slate-400 mt-1">Šperky, pasy, hotovosť, rodinné dokumenty v rodinnom dome či byte.</div>
                 </div>
               </div>
             </button>
 
-            <button onclick="selectWizardOption('purpose', 'office')" class="wizard-opt text-left p-4 rounded-xl bg-vault-850 hover:bg-vault-800 border border-white/5 hover:border-gold-500/50 transition-all group">
+            <button onclick="selectWizardOption('purpose', 'office')" class="wizard-opt text-left p-4 rounded-xl bg-slate-50 dark:bg-vault-850 hover:bg-slate-100 dark:hover:bg-vault-800 border border-slate-200 dark:border-white/5 hover:border-gold-500/50 transition-all group shadow-sm">
               <div class="flex items-start gap-3.5">
-                <div class="w-10 h-10 rounded-lg bg-blue-500/10 text-blue-400 flex items-center justify-center text-xl shrink-0 group-hover:scale-110 transition-transform">🏢</div>
+                <div class="w-10 h-10 rounded-lg bg-blue-500/10 text-blue-600 dark:text-blue-400 flex items-center justify-center text-xl shrink-0 group-hover:scale-110 transition-transform">🏢</div>
                 <div>
-                  <div class="font-bold text-white text-sm group-hover:text-gold-400 transition-colors">Firma & zmluvy (ohňovzdorné)</div>
-                  <div class="text-xs text-slate-400 mt-1">Dôležité firemné zmluvy, účtovníctvo, dátové nosiče s ochranou pred požiarom.</div>
+                  <div class="font-bold text-slate-900 dark:text-white text-sm group-hover:text-gold-600 dark:group-hover:text-gold-400 transition-colors">Firma & zmluvy (ohňovzdorné)</div>
+                  <div class="text-xs text-slate-500 dark:text-slate-400 mt-1">Dôležité firemné zmluvy, účtovníctvo, dátové nosiče s ochranou pred požiarom.</div>
                 </div>
               </div>
             </button>
 
-            <button onclick="selectWizardOption('purpose', 'guns')" class="wizard-opt text-left p-4 rounded-xl bg-vault-850 hover:bg-vault-800 border border-white/5 hover:border-gold-500/50 transition-all group">
+            <button onclick="selectWizardOption('purpose', 'guns')" class="wizard-opt text-left p-4 rounded-xl bg-slate-50 dark:bg-vault-850 hover:bg-slate-100 dark:hover:bg-vault-800 border border-slate-200 dark:border-white/5 hover:border-gold-500/50 transition-all group shadow-sm">
               <div class="flex items-start gap-3.5">
-                <div class="w-10 h-10 rounded-lg bg-red-500/10 text-red-400 flex items-center justify-center text-xl shrink-0 group-hover:scale-110 transition-transform">🎯</div>
+                <div class="w-10 h-10 rounded-lg bg-red-500/10 text-red-600 dark:text-red-400 flex items-center justify-center text-xl shrink-0 group-hover:scale-110 transition-transform">🎯</div>
                 <div>
-                  <div class="font-bold text-white text-sm group-hover:text-gold-400 transition-colors">Zbrane, strelivo & poľovníctvo</div>
-                  <div class="text-xs text-slate-400 mt-1">Splnenie zákona SR o zbraniach a strelive (I. trieda s vnútornou schránkou).</div>
+                  <div class="font-bold text-slate-900 dark:text-white text-sm group-hover:text-gold-600 dark:group-hover:text-gold-400 transition-colors">Zbrane, strelivo & poľovníctvo</div>
+                  <div class="text-xs text-slate-500 dark:text-slate-400 mt-1">Splnenie zákona SR o zbraniach a strelive (I. trieda s vnútornou schránkou).</div>
                 </div>
               </div>
             </button>
 
-            <button onclick="selectWizardOption('purpose', 'commercial')" class="wizard-opt text-left p-4 rounded-xl bg-vault-850 hover:bg-vault-800 border border-white/5 hover:border-gold-500/50 transition-all group">
+            <button onclick="selectWizardOption('purpose', 'commercial')" class="wizard-opt text-left p-4 rounded-xl bg-slate-50 dark:bg-vault-850 hover:bg-slate-100 dark:hover:bg-vault-800 border border-slate-200 dark:border-white/5 hover:border-gold-500/50 transition-all group shadow-sm">
               <div class="flex items-start gap-3.5">
-                <div class="w-10 h-10 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-xl shrink-0 group-hover:scale-110 transition-transform">💎</div>
+                <div class="w-10 h-10 rounded-lg bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-xl shrink-0 group-hover:scale-110 transition-transform">💎</div>
                 <div>
-                  <div class="font-bold text-white text-sm group-hover:text-gold-400 transition-colors">Vysoké hodnoty, zlato & klenoty</div>
-                  <div class="text-xs text-slate-400 mt-1">Obchodná hotovosť, investičné zlato, bankové a klenotnícke zabezpečenie.</div>
+                  <div class="font-bold text-slate-900 dark:text-white text-sm group-hover:text-gold-600 dark:group-hover:text-gold-400 transition-colors">Vysoké hodnoty, zlato & klenoty</div>
+                  <div class="text-xs text-slate-500 dark:text-slate-400 mt-1">Obchodná hotovosť, investičné zlato, bankové a klenotnícke zabezpečenie.</div>
                 </div>
               </div>
             </button>
@@ -478,25 +528,25 @@
 
         <!-- Step 2: Value Limit -->
         <div id="step2" class="wizard-step hidden space-y-4">
-          <label class="block text-sm text-slate-300 font-medium mb-3">Aká je orientačná hodnota majetku pre poistné krytie?</label>
+          <label class="block text-sm text-slate-700 dark:text-slate-300 font-medium mb-3">Aká je orientačná hodnota majetku pre poistné krytie?</label>
           <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
             
-            <button onclick="selectWizardOption('limit', 'low')" class="wizard-opt text-left p-5 rounded-xl bg-vault-850 hover:bg-vault-800 border border-white/5 hover:border-gold-500 transition-all">
-              <span class="text-xs font-mono text-slate-400 block mb-1">Základné krytie</span>
-              <div class="text-xl font-bold text-white font-tech">do 15 000 €</div>
-              <p class="text-xs text-slate-400 mt-2">Dostačujúce pre menšie úspory a bežné dokumenty.</p>
+            <button onclick="selectWizardOption('limit', 'low')" class="wizard-opt text-left p-5 rounded-xl bg-slate-50 dark:bg-vault-850 hover:bg-slate-100 dark:hover:bg-vault-800 border border-slate-200 dark:border-white/5 hover:border-gold-500 transition-all shadow-sm">
+              <span class="text-xs font-mono text-slate-500 dark:text-slate-400 block mb-1">Základné krytie</span>
+              <div class="text-xl font-bold text-slate-900 dark:text-white font-tech">do 15 000 €</div>
+              <p class="text-xs text-slate-500 dark:text-slate-400 mt-2">Dostačujúce pre menšie úspory a bežné dokumenty.</p>
             </button>
 
-            <button onclick="selectWizardOption('limit', 'mid')" class="wizard-opt text-left p-5 rounded-xl bg-vault-850 hover:bg-vault-800 border border-white/5 hover:border-gold-500 transition-all">
-              <span class="text-xs font-mono text-gold-400 block mb-1">I. Bezpečnostná trieda</span>
-              <div class="text-xl font-bold text-white font-tech">do 40 000 €</div>
-              <p class="text-xs text-slate-400 mt-2">Najpopulárnejšia trieda pre domy a malé/stredné firmy.</p>
+            <button onclick="selectWizardOption('limit', 'mid')" class="wizard-opt text-left p-5 rounded-xl bg-slate-50 dark:bg-vault-850 hover:bg-slate-100 dark:hover:bg-vault-800 border border-slate-200 dark:border-white/5 hover:border-gold-500 transition-all shadow-sm">
+              <span class="text-xs font-mono text-gold-600 dark:text-gold-400 font-bold block mb-1">I. Bezpečnostná trieda</span>
+              <div class="text-xl font-bold text-slate-900 dark:text-white font-tech">do 40 000 €</div>
+              <p class="text-xs text-slate-500 dark:text-slate-400 mt-2">Najpopulárnejšia trieda pre domy a malé/stredné firmy.</p>
             </button>
 
-            <button onclick="selectWizardOption('limit', 'high')" class="wizard-opt text-left p-5 rounded-xl bg-vault-850 hover:bg-vault-800 border border-white/5 hover:border-gold-500 transition-all">
-              <span class="text-xs font-mono text-emerald-400 block mb-1">II. & III. Bezpečnostná trieda</span>
-              <div class="text-xl font-bold text-white font-tech">do 160 000 €+</div>
-              <p class="text-xs text-slate-400 mt-2">Maximálna pancierová odolnosť pre banky a luxusné tovary.</p>
+            <button onclick="selectWizardOption('limit', 'high')" class="wizard-opt text-left p-5 rounded-xl bg-slate-50 dark:bg-vault-850 hover:bg-slate-100 dark:hover:bg-vault-800 border border-slate-200 dark:border-white/5 hover:border-gold-500 transition-all shadow-sm">
+              <span class="text-xs font-mono text-emerald-600 dark:text-emerald-400 font-bold block mb-1">II. & III. Bezpečnostná trieda</span>
+              <div class="text-xl font-bold text-slate-900 dark:text-white font-tech">do 160 000 €+</div>
+              <p class="text-xs text-slate-500 dark:text-slate-400 mt-2">Maximálna pancierová odolnosť pre banky a luxusné tovary.</p>
             </button>
 
           </div>
@@ -504,25 +554,25 @@
 
         <!-- Step 3: Installation Type -->
         <div id="step3" class="wizard-step hidden space-y-4">
-          <label class="block text-sm text-slate-300 font-medium mb-3">Kde má byť trezor umiestnený?</label>
+          <label class="block text-sm text-slate-700 dark:text-slate-300 font-medium mb-3">Kde má byť trezor umiestnený?</label>
           <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
             
-            <button onclick="selectWizardOption('install', 'stand')" class="wizard-opt text-left p-5 rounded-xl bg-vault-850 hover:bg-vault-800 border border-white/5 hover:border-gold-500 transition-all">
+            <button onclick="selectWizardOption('install', 'stand')" class="wizard-opt text-left p-5 rounded-xl bg-slate-50 dark:bg-vault-850 hover:bg-slate-100 dark:hover:bg-vault-800 border border-slate-200 dark:border-white/5 hover:border-gold-500 transition-all shadow-sm">
               <span class="text-2xl mb-2 block">🚪</span>
-              <div class="font-bold text-white text-sm">Voľne stojaci v miestnosti</div>
-              <p class="text-xs text-slate-400 mt-1">Ukotvený do podlahy, jednoduchý prístup a masívna ochrana.</p>
+              <div class="font-bold text-slate-900 dark:text-white text-sm">Voľne stojaci v miestnosti</div>
+              <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Ukotvený do podlahy, jednoduchý prístup a masívna ochrana.</p>
             </button>
 
-            <button onclick="selectWizardOption('install', 'wall')" class="wizard-opt text-left p-5 rounded-xl bg-vault-850 hover:bg-vault-800 border border-white/5 hover:border-gold-500 transition-all">
+            <button onclick="selectWizardOption('install', 'wall')" class="wizard-opt text-left p-5 rounded-xl bg-slate-50 dark:bg-vault-850 hover:bg-slate-100 dark:hover:bg-vault-800 border border-slate-200 dark:border-white/5 hover:border-gold-500 transition-all shadow-sm">
               <span class="text-2xl mb-2 block">🧱</span>
-              <div class="font-bold text-white text-sm">Zabudovateľný do steny</div>
-              <p class="text-xs text-slate-400 mt-1">Neviditeľný trezor zabetónovaný do nosného múru (AMS séria).</p>
+              <div class="font-bold text-slate-900 dark:text-white text-sm">Zabudovateľný do steny</div>
+              <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Neviditeľný trezor zabetónovaný do nosného múru (AMS séria).</p>
             </button>
 
-            <button onclick="selectWizardOption('install', 'furniture')" class="wizard-opt text-left p-5 rounded-xl bg-vault-850 hover:bg-vault-800 border border-white/5 hover:border-gold-500 transition-all">
+            <button onclick="selectWizardOption('install', 'furniture')" class="wizard-opt text-left p-5 rounded-xl bg-slate-50 dark:bg-vault-850 hover:bg-slate-100 dark:hover:bg-vault-800 border border-slate-200 dark:border-white/5 hover:border-gold-500 transition-all shadow-sm">
               <span class="text-2xl mb-2 block">🗄️</span>
-              <div class="font-bold text-white text-sm">Nábytkový trezor do skrine</div>
-              <p class="text-xs text-slate-400 mt-1">Kompaktnejšie rozmery, kotvenie cez zadnú aj spodnú stenu.</p>
+              <div class="font-bold text-slate-900 dark:text-white text-sm">Nábytkový trezor do skrine</div>
+              <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Kompaktnejšie rozmery, kotvenie cez zadnú aj spodnú stenu.</p>
             </button>
 
           </div>
@@ -530,34 +580,34 @@
 
         <!-- Result Box -->
         <div id="wizardResult" class="hidden pt-4 space-y-6">
-          <div class="p-6 rounded-2xl bg-gradient-to-br from-vault-800 to-vault-850 border border-gold-500/40 shadow-xl">
-            <div class="flex items-center gap-2 text-xs font-mono text-gold-400 uppercase tracking-widest mb-2">
-              <svg class="w-4 h-4 text-gold-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+          <div class="p-6 rounded-2xl bg-amber-50 dark:bg-gradient-to-br dark:from-vault-800 dark:to-vault-850 border border-gold-500/40 shadow-lg">
+            <div class="flex items-center gap-2 text-xs font-mono text-gold-600 dark:text-gold-400 uppercase tracking-widest mb-2 font-bold">
+              <svg class="w-4 h-4 text-gold-600 dark:text-gold-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
               Vaša odporúčaná konfigurácia
             </div>
-            <h3 class="text-2xl font-display font-extrabold text-white" id="wizardRecTitle">Séria Wertheim AP (Ohňovzdorné)</h3>
-            <p class="text-slate-300 text-sm mt-1" id="wizardRecDesc">Kombinácia certifikácie proti vlámaniu I. triedy a certifikovanej požiarnej odolnosti LFS 60P.</p>
+            <h3 class="text-2xl font-display font-extrabold text-slate-900 dark:text-white" id="wizardRecTitle">Séria Wertheim AP (Ohňovzdorné)</h3>
+            <p class="text-slate-600 dark:text-slate-300 text-sm mt-1" id="wizardRecDesc">Kombinácia certifikácie proti vlámaniu I. triedy a certifikovanej požiarnej odolnosti LFS 60P.</p>
             
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mt-5 pt-4 border-t border-white/10 text-xs">
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mt-5 pt-4 border-t border-amber-200 dark:border-white/10 text-xs">
               <div>
-                <span class="text-slate-400 block">Bezpečnostná trieda:</span>
-                <span class="font-bold text-white font-mono" id="wizardRecGrade">I. Bezpečnostná trieda (EN 1143-1)</span>
+                <span class="text-slate-500 dark:text-slate-400 block">Bezpečnostná trieda:</span>
+                <span class="font-bold text-slate-900 dark:text-white font-mono" id="wizardRecGrade">I. Bezpečnostná trieda (EN 1143-1)</span>
               </div>
               <div>
-                <span class="text-slate-400 block">Doporučené krytie:</span>
-                <span class="font-bold text-emerald-400 font-mono" id="wizardRecInsurance">do 40 000 €</span>
+                <span class="text-slate-500 dark:text-slate-400 block">Doporučené krytie:</span>
+                <span class="font-bold text-emerald-600 dark:text-emerald-400 font-mono" id="wizardRecInsurance">do 40 000 €</span>
               </div>
               <div>
-                <span class="text-slate-400 block">Požiarna skúška:</span>
-                <span class="font-bold text-red-300 font-mono" id="wizardRecFire">LFS 30P / 60P (1 090 °C)</span>
+                <span class="text-slate-500 dark:text-slate-400 block">Požiarna skúška:</span>
+                <span class="font-bold text-red-600 dark:text-red-300 font-mono" id="wizardRecFire">LFS 30P / 60P (1 090 °C)</span>
               </div>
             </div>
 
             <div class="mt-6 flex flex-wrap gap-3">
-              <button onclick="applyWizardFilter()" class="px-6 py-2.5 rounded-xl bg-gold-500 hover:bg-gold-400 text-vault-950 font-bold text-xs uppercase tracking-wider transition-all">
+              <button onclick="applyWizardFilter()" class="px-6 py-2.5 rounded-xl bg-gold-500 hover:bg-gold-400 text-white font-bold text-xs uppercase tracking-wider transition-all shadow-sm">
                 Zobraziť odporúčané modely v katalógu
               </button>
-              <button onclick="resetWizard()" class="px-5 py-2.5 rounded-xl bg-vault-700 hover:bg-vault-600 text-slate-300 text-xs transition-colors">
+              <button onclick="resetWizard()" class="px-5 py-2.5 rounded-xl bg-slate-200 dark:bg-vault-700 hover:bg-slate-300 dark:hover:bg-vault-600 text-slate-700 dark:text-slate-300 text-xs transition-colors">
                 Začať znova
               </button>
             </div>
@@ -570,22 +620,22 @@
   </section>
 
   <!-- ==================== SECURITY GRADES EXPLANATION ==================== -->
-  <section class="py-20 bg-vault-950" id="triedy">
+  <section class="py-20 bg-slate-50 dark:bg-vault-950 transition-colors duration-200" id="triedy">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
         <div class="space-y-3 max-w-2xl">
-          <span class="text-xs font-mono uppercase tracking-widest text-gold-400">Certifikačné Normy</span>
-          <h2 class="text-3xl sm:text-4xl font-display font-extrabold text-white">
+          <span class="text-xs font-mono uppercase tracking-widest text-gold-600 dark:text-gold-400 font-bold">Certifikačné Normy</span>
+          <h2 class="text-3xl sm:text-4xl font-display font-extrabold text-slate-900 dark:text-white">
             Prehľad bezpečnostných tried a limitov
           </h2>
-          <p class="text-slate-400 text-sm">
+          <p class="text-slate-600 dark:text-slate-400 text-sm">
             Každý trezor Wertheim je podrobený deštrukčným skúškam v nemeckej skúšobni <strong>VdS</strong>. Na základe odporu voči mechanickým, termickým a elektronickým vlámacím nástrojom sú zaradené do prísnych európskych tried podľa <strong>EN 1143-1</strong>.
           </p>
         </div>
         <div class="flex items-center gap-2">
-          <span class="text-xs text-slate-400">Oficiálny katalóg Wertheim:</span>
-          <a href="https://katalog.eurotrezor.com/img/cms/Wertheim_Safe-Collection_EN.pdf" target="_blank" class="px-4 py-2 rounded-lg bg-vault-850 hover:bg-vault-800 text-gold-400 border border-gold-500/30 text-xs font-semibold flex items-center gap-1.5 transition-colors">
+          <span class="text-xs text-slate-500 dark:text-slate-400">Oficiálny katalóg Wertheim:</span>
+          <a href="https://katalog.eurotrezor.com/img/cms/Wertheim_Safe-Collection_EN.pdf" target="_blank" class="px-4 py-2 rounded-lg bg-white dark:bg-vault-850 hover:bg-slate-100 dark:hover:bg-vault-800 text-gold-600 dark:text-gold-400 border border-slate-200 dark:border-gold-500/30 text-xs font-semibold flex items-center gap-1.5 transition-colors shadow-sm">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
             Stiahnuť PDF (EN)
           </a>
@@ -596,109 +646,109 @@
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         
         <!-- Grade 1 -->
-        <div class="glass-card rounded-2xl p-6 space-y-4 hover:border-gold-500/50 transition-all group">
+        <div class="theme-card rounded-2xl p-6 space-y-4 hover:border-gold-500/50 transition-all group">
           <div class="flex items-center justify-between">
-            <span class="px-3 py-1 rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/20 text-xs font-mono font-bold">
+            <span class="px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-500/10 text-blue-700 dark:text-blue-400 border border-blue-200 dark:border-blue-500/20 text-xs font-mono font-bold">
               EN 1143-1: Trieda I
             </span>
-            <span class="text-xs text-slate-400">VdS / ECB•S</span>
+            <span class="text-xs text-slate-500 dark:text-slate-400">VdS / ECB•S</span>
           </div>
           <div>
-            <h3 class="text-xl font-display font-bold text-white group-hover:text-gold-400 transition-colors">I. Bezpečnostná trieda</h3>
-            <p class="text-xs text-slate-300 mt-1">Série: <strong>AL, AN, AP (ohňovzdorné), AWS</strong></p>
+            <h3 class="text-xl font-display font-bold text-slate-900 dark:text-white group-hover:text-gold-600 dark:group-hover:text-gold-400 transition-colors">I. Bezpečnostná trieda</h3>
+            <p class="text-xs text-slate-600 dark:text-slate-300 mt-1">Série: <strong>AL, AN, AP (ohňovzdorné), AWS</strong></p>
           </div>
-          <div class="p-3.5 rounded-xl bg-vault-900 border border-white/5 space-y-1">
-            <span class="text-[11px] text-slate-400">Odporúčané poistné krytie:</span>
-            <div class="text-xl font-tech font-bold text-emerald-400">do 40 000 €</div>
-            <span class="text-[10px] text-slate-400">(Pre podnikateľské subjekty do cca 20 000 €)</span>
+          <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-vault-900 border border-slate-200 dark:border-white/5 space-y-1">
+            <span class="text-[11px] text-slate-500 dark:text-slate-400">Odporúčané poistné krytie:</span>
+            <div class="text-xl font-tech font-bold text-emerald-600 dark:text-emerald-400">do 40 000 €</div>
+            <span class="text-[10px] text-slate-500 dark:text-slate-400">(Pre podnikateľské subjekty do cca 20 000 €)</span>
           </div>
-          <ul class="text-xs text-slate-300 space-y-2">
+          <ul class="text-xs text-slate-600 dark:text-slate-300 space-y-2">
             <li class="flex items-start gap-2">
-              <span class="text-gold-500 font-bold">✓</span>
+              <span class="text-gold-600 dark:text-gold-500 font-bold">✓</span>
               <span>Viacplášťové pancierovanie korpusu s hrúbkou dverí 65 mm.</span>
             </li>
             <li class="flex items-start gap-2">
-              <span class="text-gold-500 font-bold">✓</span>
+              <span class="text-gold-600 dark:text-gold-500 font-bold">✓</span>
               <span>Splnenie zákona SR o držaní a úschove zbraní a streliva.</span>
             </li>
             <li class="flex items-start gap-2">
-              <span class="text-gold-500 font-bold">✓</span>
+              <span class="text-gold-600 dark:text-gold-500 font-bold">✓</span>
               <span>Možnosť certifikovanej požiarnej ochrany LFS 30P / 60P (séria AP).</span>
             </li>
           </ul>
-          <button onclick="filterByGrade('I. Bezpečnostná trieda')" class="w-full py-2.5 rounded-xl bg-vault-800 hover:bg-gold-500 hover:text-vault-950 text-slate-300 text-xs font-semibold transition-all">
+          <button onclick="filterByGrade('I. Bezpečnostná trieda')" class="w-full py-2.5 rounded-xl bg-slate-100 dark:bg-vault-800 hover:bg-gold-500 hover:text-white text-slate-800 dark:text-slate-300 text-xs font-semibold transition-all">
             Zobraziť trezory I. triedy
           </button>
         </div>
 
         <!-- Grade 2 -->
-        <div class="glass-card rounded-2xl p-6 space-y-4 hover:border-gold-500/50 transition-all group">
+        <div class="theme-card rounded-2xl p-6 space-y-4 hover:border-gold-500/50 transition-all group">
           <div class="flex items-center justify-between">
-            <span class="px-3 py-1 rounded-full bg-amber-500/10 text-amber-400 border border-amber-500/20 text-xs font-mono font-bold">
+            <span class="px-3 py-1 rounded-full bg-amber-50 dark:bg-amber-500/10 text-amber-700 dark:text-amber-400 border border-amber-200 dark:border-amber-500/20 text-xs font-mono font-bold">
               EN 1143-1: Trieda II
             </span>
-            <span class="text-xs text-slate-400">VdS / ECB•S</span>
+            <span class="text-xs text-slate-500 dark:text-slate-400">VdS / ECB•S</span>
           </div>
           <div>
-            <h3 class="text-xl font-display font-bold text-white group-hover:text-gold-400 transition-colors">II. Bezpečnostná trieda</h3>
-            <p class="text-xs text-slate-300 mt-1">Série: <strong>BG, BM, BP (ohňovzdorné), BWS</strong></p>
+            <h3 class="text-xl font-display font-bold text-slate-900 dark:text-white group-hover:text-gold-600 dark:group-hover:text-gold-400 transition-colors">II. Bezpečnostná trieda</h3>
+            <p class="text-xs text-slate-600 dark:text-slate-300 mt-1">Série: <strong>BG, BM, BP (ohňovzdorné), BWS</strong></p>
           </div>
-          <div class="p-3.5 rounded-xl bg-vault-900 border border-white/5 space-y-1">
-            <span class="text-[11px] text-slate-400">Odporúčané poistné krytie:</span>
-            <div class="text-xl font-tech font-bold text-emerald-400">do 80 000 €</div>
-            <span class="text-[10px] text-slate-400">(Pre podnikateľské subjekty do cca 40 000 €)</span>
+          <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-vault-900 border border-slate-200 dark:border-white/5 space-y-1">
+            <span class="text-[11px] text-slate-500 dark:text-slate-400">Odporúčané poistné krytie:</span>
+            <div class="text-xl font-tech font-bold text-emerald-600 dark:text-emerald-400">do 80 000 €</div>
+            <span class="text-[10px] text-slate-500 dark:text-slate-400">(Pre podnikateľské subjekty do cca 40 000 €)</span>
           </div>
-          <ul class="text-xs text-slate-300 space-y-2">
+          <ul class="text-xs text-slate-600 dark:text-slate-300 space-y-2">
             <li class="flex items-start gap-2">
-              <span class="text-gold-500 font-bold">✓</span>
+              <span class="text-gold-600 dark:text-gold-500 font-bold">✓</span>
               <span>Zosilnená pancierová bariéra proti diamantovým korunkovým vrtákom.</span>
             </li>
             <li class="flex items-start gap-2">
-              <span class="text-gold-500 font-bold">✓</span>
+              <span class="text-gold-600 dark:text-gold-500 font-bold">✓</span>
               <span>Viacnásobné pasívne sklenené relockery blokujúce rozvory pri napadnutí.</span>
             </li>
             <li class="flex items-start gap-2">
-              <span class="text-gold-500 font-bold">✓</span>
+              <span class="text-gold-600 dark:text-gold-500 font-bold">✓</span>
               <span>Podpora montáže dvoch nezávislých certifikovaných zámkov (kľúč + kód).</span>
             </li>
           </ul>
-          <button onclick="filterByGrade('II. Bezpečnostná trieda')" class="w-full py-2.5 rounded-xl bg-vault-800 hover:bg-gold-500 hover:text-vault-950 text-slate-300 text-xs font-semibold transition-all">
+          <button onclick="filterByGrade('II. Bezpečnostná trieda')" class="w-full py-2.5 rounded-xl bg-slate-100 dark:bg-vault-800 hover:bg-gold-500 hover:text-white text-slate-800 dark:text-slate-300 text-xs font-semibold transition-all">
             Zobraziť trezory II. triedy
           </button>
         </div>
 
         <!-- Grade 3 -->
-        <div class="glass-card-gold rounded-2xl p-6 space-y-4 hover:border-gold-400 transition-all group">
+        <div class="theme-card-gold rounded-2xl p-6 space-y-4 hover:border-gold-500 transition-all group">
           <div class="flex items-center justify-between">
-            <span class="px-3 py-1 rounded-full bg-gold-500/20 text-gold-400 border border-gold-500/30 text-xs font-mono font-bold">
+            <span class="px-3 py-1 rounded-full bg-gold-500/20 text-gold-700 dark:text-gold-400 border border-gold-500/30 text-xs font-mono font-bold">
               EN 1143-1: Trieda III
             </span>
-            <span class="text-xs text-gold-400 font-semibold">Bankový Štandard</span>
+            <span class="text-xs text-gold-700 dark:text-gold-400 font-semibold">Bankový Štandard</span>
           </div>
           <div>
-            <h3 class="text-xl font-display font-bold text-white group-hover:text-gold-400 transition-colors">III. Bezpečnostná trieda</h3>
-            <p class="text-xs text-slate-300 mt-1">Série: <strong>CM, CP (ohňovzdorné)</strong></p>
+            <h3 class="text-xl font-display font-bold text-slate-900 dark:text-white group-hover:text-gold-600 dark:group-hover:text-gold-400 transition-colors">III. Bezpečnostná trieda</h3>
+            <p class="text-xs text-slate-600 dark:text-slate-300 mt-1">Série: <strong>CM, CP (ohňovzdorné)</strong></p>
           </div>
-          <div class="p-3.5 rounded-xl bg-vault-900 border border-gold-500/20 space-y-1">
-            <span class="text-[11px] text-slate-400">Odporúčané poistné krytie:</span>
-            <div class="text-xl font-tech font-bold text-gold-400">do 160 000 €+</div>
-            <span class="text-[10px] text-slate-400">(Klenotníctva, záložne, hotovosť, numizmatika)</span>
+          <div class="p-3.5 rounded-xl bg-amber-100/60 dark:bg-vault-900 border border-gold-500/20 space-y-1">
+            <span class="text-[11px] text-slate-600 dark:text-slate-400">Odporúčané poistné krytie:</span>
+            <div class="text-xl font-tech font-bold text-gold-700 dark:text-gold-400">do 160 000 €+</div>
+            <span class="text-[10px] text-slate-500 dark:text-slate-400">(Klenotníctva, záložne, hotovosť, numizmatika)</span>
           </div>
-          <ul class="text-xs text-slate-300 space-y-2">
+          <ul class="text-xs text-slate-600 dark:text-slate-300 space-y-2">
             <li class="flex items-start gap-2">
-              <span class="text-gold-500 font-bold">✓</span>
+              <span class="text-gold-600 dark:text-gold-500 font-bold">✓</span>
               <span>Masívne pancierovanie s odolnosťou proti rezaniu kyslíkom a autogénu.</span>
             </li>
             <li class="flex items-start gap-2">
-              <span class="text-gold-500 font-bold">✓</span>
+              <span class="text-gold-600 dark:text-gold-500 font-bold">✓</span>
               <span>Hmotnosti modelov až do 705 kg (CM40) garantujú extrémny odpor.</span>
             </li>
             <li class="flex items-start gap-2">
-              <span class="text-gold-500 font-bold">✓</span>
+              <span class="text-gold-600 dark:text-gold-500 font-bold">✓</span>
               <span>Príprava na napojenie na priemyselné poplachové systémy (PCO / EMA).</span>
             </li>
           </ul>
-          <button onclick="filterByGrade('III. Bezpečnostná trieda')" class="w-full py-2.5 rounded-xl bg-gold-500 hover:bg-gold-400 text-vault-950 text-xs font-bold uppercase tracking-wider transition-all">
+          <button onclick="filterByGrade('III. Bezpečnostná trieda')" class="w-full py-2.5 rounded-xl bg-gold-500 hover:bg-gold-400 text-white text-xs font-bold uppercase tracking-wider transition-all shadow-sm">
             Zobraziť trezory III. triedy
           </button>
         </div>
@@ -706,14 +756,14 @@
       </div>
 
       <!-- Door Boltwork Engineering Showcase Banner -->
-      <div class="mt-12 glass-card rounded-2xl p-6 sm:p-8 border border-white/10 flex flex-col lg:flex-row items-center gap-8">
+      <div class="mt-12 theme-card rounded-2xl p-6 sm:p-8 flex flex-col lg:flex-row items-center gap-8 shadow-md">
         <div class="lg:w-1/3 shrink-0">
-          <img src="images/blok-dvere.jpg" alt="Wertheim masívne dvere" class="rounded-xl border border-white/10 shadow-xl max-h-56 mx-auto object-cover">
+          <img src="images/blok-dvere.jpg" alt="Wertheim masívne dvere" class="rounded-xl border border-slate-200 dark:border-white/10 shadow-lg max-h-56 mx-auto object-cover">
         </div>
         <div class="space-y-3 lg:w-2/3">
-          <span class="text-xs font-mono text-gold-400 uppercase tracking-widest">Inžinierska Dokonalosť</span>
-          <h3 class="text-2xl font-display font-bold text-white">Trojstranný masívny rozvorový systém s tvrdenými čapmi</h3>
-          <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+          <span class="text-xs font-mono text-gold-600 dark:text-gold-400 uppercase tracking-widest font-bold">Inžinierska Dokonalosť</span>
+          <h3 class="text-2xl font-display font-bold text-slate-900 dark:text-white">Trojstranný masívny rozvorový systém s tvrdenými čapmi</h3>
+          <p class="text-slate-600 dark:text-slate-300 text-xs sm:text-sm leading-relaxed">
             Dvere trezorov Wertheim sú osadené kruhovými oceľovými závorami s priemerom až 32 mm, chránenými špeciálnym mangánovým plechom proti odvŕtaniu. Pasívne relockery okamžite a nezvratne zablokujú rozvory pri akomkoľvek pokuse o násilný atak autogénom alebo kladivom.
           </p>
         </div>
@@ -723,32 +773,32 @@
   </section>
 
   <!-- ==================== MAIN PRODUCT CATALOG (54 PRODUCTS) ==================== -->
-  <section class="py-20 bg-vault-900 border-t border-white/5" id="katalog">
+  <section class="py-20 bg-white dark:bg-vault-900 border-t border-slate-200 dark:border-white/5 transition-colors duration-200" id="katalog">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <!-- Catalog Header -->
       <div class="space-y-4 mb-8">
         <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
           <div>
-            <span class="text-xs font-mono uppercase tracking-widest text-gold-400">Kompletná ponuka</span>
-            <h2 class="text-3xl sm:text-4xl font-display font-extrabold text-white">
+            <span class="text-xs font-mono uppercase tracking-widest text-gold-600 dark:text-gold-400 font-bold">Kompletná ponuka</span>
+            <h2 class="text-3xl sm:text-4xl font-display font-extrabold text-slate-900 dark:text-white">
               Katalóg trezorov Wertheim
             </h2>
-            <p class="text-slate-400 text-sm mt-1">
+            <p class="text-slate-600 dark:text-slate-400 text-sm mt-1">
               Filtrujte medzi 54 certifikovanými modelmi podľa bezpečnostnej triedy, rozmerov, hmotnosti a požiarnej odolnosti.
             </p>
           </div>
 
           <!-- Quick stats counter -->
           <div class="text-right">
-            <div class="text-xs text-slate-400">Zobrazených modelov:</div>
-            <div class="text-2xl font-tech font-bold text-gold-400" id="catalogResultsCount">54 z 54</div>
+            <div class="text-xs text-slate-500 dark:text-slate-400">Zobrazených modelov:</div>
+            <div class="text-2xl font-tech font-bold text-gold-600 dark:text-gold-400" id="catalogResultsCount">54 z 54</div>
           </div>
         </div>
       </div>
 
       <!-- Filter Controls Bar -->
-      <div class="glass-card rounded-2xl p-5 mb-8 border border-white/10 space-y-4">
+      <div class="theme-card rounded-2xl p-5 mb-8 space-y-4">
         
         <!-- Search & Quick Series Buttons -->
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-4 items-center">
@@ -756,45 +806,45 @@
           <!-- Live Search Bar -->
           <div class="lg:col-span-4 relative">
             <input type="text" id="catalogSearch" oninput="applyFilters()" placeholder="Hľadať model (napr. AP10, CM, 55 kg, 600 mm)..." 
-                   class="w-full pl-10 pr-4 py-3 rounded-xl bg-vault-850 border border-white/10 focus:border-gold-500 focus:outline-none text-sm text-white placeholder-slate-500 transition-colors">
+                   class="w-full pl-10 pr-4 py-3 rounded-xl bg-slate-50 dark:bg-vault-850 border border-slate-200 dark:border-white/10 focus:border-gold-500 focus:outline-none text-sm text-slate-900 dark:text-white placeholder-slate-400 transition-colors">
             <svg class="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
-            <button onclick="clearSearch()" id="clearSearchBtn" class="hidden absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-white text-xs">✕</button>
+            <button onclick="clearSearch()" id="clearSearchBtn" class="hidden absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 dark:hover:text-white text-xs">✕</button>
           </div>
 
           <!-- Series Selector Pills -->
           <div class="lg:col-span-8 flex flex-wrap items-center gap-2" id="seriesFilters">
-            <button onclick="setSeriesFilter('ALL')" class="series-btn active px-3.5 py-2 rounded-xl text-xs font-semibold bg-gold-500 text-vault-950 transition-all">Všetky</button>
-            <button onclick="setSeriesFilter('AL')" class="series-btn px-3 py-2 rounded-xl text-xs font-semibold bg-vault-850 hover:bg-vault-800 text-slate-300 border border-white/5 transition-all">Séria AL (I. tr)</button>
-            <button onclick="setSeriesFilter('AN')" class="series-btn px-3 py-2 rounded-xl text-xs font-semibold bg-vault-850 hover:bg-vault-800 text-slate-300 border border-white/5 transition-all">Séria AN (I. tr)</button>
-            <button onclick="setSeriesFilter('AP')" class="series-btn px-3 py-2 rounded-xl text-xs font-semibold bg-vault-850 hover:bg-vault-800 text-slate-300 border border-white/5 transition-all flex items-center gap-1">
+            <button onclick="setSeriesFilter('ALL')" class="series-btn active px-3.5 py-2 rounded-xl text-xs font-semibold bg-gold-500 text-white transition-all shadow-sm">Všetky</button>
+            <button onclick="setSeriesFilter('AL')" class="series-btn px-3 py-2 rounded-xl text-xs font-semibold bg-slate-100 dark:bg-vault-850 hover:bg-slate-200 dark:hover:bg-vault-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/5 transition-all">Séria AL (I. tr)</button>
+            <button onclick="setSeriesFilter('AN')" class="series-btn px-3 py-2 rounded-xl text-xs font-semibold bg-slate-100 dark:bg-vault-850 hover:bg-slate-200 dark:hover:bg-vault-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/5 transition-all">Séria AN (I. tr)</button>
+            <button onclick="setSeriesFilter('AP')" class="series-btn px-3 py-2 rounded-xl text-xs font-semibold bg-slate-100 dark:bg-vault-850 hover:bg-slate-200 dark:hover:bg-vault-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/5 transition-all flex items-center gap-1">
               <span>Séria AP</span>
-              <span class="w-1.5 h-1.5 rounded-full bg-red-400"></span>
+              <span class="w-1.5 h-1.5 rounded-full bg-red-500"></span>
             </button>
-            <button onclick="setSeriesFilter('BG')" class="series-btn px-3 py-2 rounded-xl text-xs font-semibold bg-vault-850 hover:bg-vault-800 text-slate-300 border border-white/5 transition-all">Séria BG (II. tr)</button>
-            <button onclick="setSeriesFilter('BM')" class="series-btn px-3 py-2 rounded-xl text-xs font-semibold bg-vault-850 hover:bg-vault-800 text-slate-300 border border-white/5 transition-all">Séria BM (II. tr)</button>
-            <button onclick="setSeriesFilter('CM')" class="series-btn px-3 py-2 rounded-xl text-xs font-semibold bg-vault-850 hover:bg-vault-800 text-slate-300 border border-white/5 transition-all text-gold-400">Séria CM (III. tr)</button>
-            <button onclick="setSeriesFilter('Stenové')" class="series-btn px-3 py-2 rounded-xl text-xs font-semibold bg-vault-850 hover:bg-vault-800 text-slate-300 border border-white/5 transition-all">Stenové (AMS)</button>
-            <button onclick="setSeriesFilter('Nábytkové')" class="series-btn px-3 py-2 rounded-xl text-xs font-semibold bg-vault-850 hover:bg-vault-800 text-slate-300 border border-white/5 transition-all">Nábytkové (ZS)</button>
+            <button onclick="setSeriesFilter('BG')" class="series-btn px-3 py-2 rounded-xl text-xs font-semibold bg-slate-100 dark:bg-vault-850 hover:bg-slate-200 dark:hover:bg-vault-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/5 transition-all">Séria BG (II. tr)</button>
+            <button onclick="setSeriesFilter('BM')" class="series-btn px-3 py-2 rounded-xl text-xs font-semibold bg-slate-100 dark:bg-vault-850 hover:bg-slate-200 dark:hover:bg-vault-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/5 transition-all">Séria BM (II. tr)</button>
+            <button onclick="setSeriesFilter('CM')" class="series-btn px-3 py-2 rounded-xl text-xs font-semibold bg-slate-100 dark:bg-vault-850 hover:bg-slate-200 dark:hover:bg-vault-800 text-gold-700 dark:text-gold-400 border border-slate-200 dark:border-white/5 transition-all">Séria CM (III. tr)</button>
+            <button onclick="setSeriesFilter('Stenové')" class="series-btn px-3 py-2 rounded-xl text-xs font-semibold bg-slate-100 dark:bg-vault-850 hover:bg-slate-200 dark:hover:bg-vault-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/5 transition-all">Stenové (AMS)</button>
+            <button onclick="setSeriesFilter('Nábytkové')" class="series-btn px-3 py-2 rounded-xl text-xs font-semibold bg-slate-100 dark:bg-vault-850 hover:bg-slate-200 dark:hover:bg-vault-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/5 transition-all">Nábytkové (ZS)</button>
           </div>
 
         </div>
 
         <!-- Secondary Filters Row (Fireproof, Sort, View) -->
-        <div class="pt-4 border-t border-white/10 flex flex-wrap items-center justify-between gap-4 text-xs">
+        <div class="pt-4 border-t border-slate-200 dark:border-white/10 flex flex-wrap items-center justify-between gap-4 text-xs">
           
           <div class="flex flex-wrap items-center gap-4">
             <!-- Fireproof Checkbox -->
             <label class="flex items-center gap-2 cursor-pointer select-none">
-              <input type="checkbox" id="fireOnlyFilter" onchange="applyFilters()" class="w-4 h-4 rounded bg-vault-800 border-slate-700 text-red-500 focus:ring-0 focus:ring-offset-0">
-              <span class="text-slate-300 font-medium flex items-center gap-1.5">
-                <span class="text-red-400">🔥</span> Len certifikované ohňovzdorné (LFS 30P / 60P)
+              <input type="checkbox" id="fireOnlyFilter" onchange="applyFilters()" class="w-4 h-4 rounded bg-white dark:bg-vault-800 border-slate-300 dark:border-slate-700 text-red-600 focus:ring-0">
+              <span class="text-slate-700 dark:text-slate-300 font-medium flex items-center gap-1.5">
+                <span class="text-red-500">🔥</span> Len certifikované ohňovzdorné (LFS 30P / 60P)
               </span>
             </label>
 
             <!-- Grade Dropdown Filter -->
             <div class="flex items-center gap-1.5">
-              <span class="text-slate-400">Trieda:</span>
-              <select id="gradeSelect" onchange="applyFilters()" class="bg-vault-850 border border-white/10 text-white rounded-lg px-2.5 py-1.5 focus:outline-none focus:border-gold-500">
+              <span class="text-slate-500 dark:text-slate-400">Trieda:</span>
+              <select id="gradeSelect" onchange="applyFilters()" class="bg-slate-50 dark:bg-vault-850 border border-slate-200 dark:border-white/10 text-slate-800 dark:text-white rounded-lg px-2.5 py-1.5 focus:outline-none focus:border-gold-500">
                 <option value="ALL">Všetky triedy</option>
                 <option value="I. Bezpečnostná trieda">I. Bezpečnostná trieda</option>
                 <option value="II. Bezpečnostná trieda">II. Bezpečnostná trieda</option>
@@ -808,8 +858,8 @@
           <div class="flex items-center gap-4">
             <!-- Sort dropdown -->
             <div class="flex items-center gap-1.5">
-              <span class="text-slate-400">Zoradiť:</span>
-              <select id="sortSelect" onchange="applyFilters()" class="bg-vault-850 border border-white/10 text-white rounded-lg px-2.5 py-1.5 focus:outline-none focus:border-gold-500">
+              <span class="text-slate-500 dark:text-slate-400">Zoradiť:</span>
+              <select id="sortSelect" onchange="applyFilters()" class="bg-slate-50 dark:bg-vault-850 border border-slate-200 dark:border-white/10 text-slate-800 dark:text-white rounded-lg px-2.5 py-1.5 focus:outline-none focus:border-gold-500">
                 <option value="price_asc">Cena: od najnižšej</option>
                 <option value="price_desc">Cena: od najvyššej</option>
                 <option value="weight_asc">Hmotnosť: najľahšie</option>
@@ -820,11 +870,11 @@
             </div>
 
             <!-- Grid vs List View -->
-            <div class="flex rounded-lg bg-vault-850 p-1 border border-white/5">
-              <button onclick="setViewMode('grid')" id="viewGridBtn" class="p-1.5 rounded bg-vault-700 text-white" title="Dlaždice">
+            <div class="flex rounded-lg bg-slate-100 dark:bg-vault-850 p-1 border border-slate-200 dark:border-white/5">
+              <button onclick="setViewMode('grid')" id="viewGridBtn" class="p-1.5 rounded bg-white dark:bg-vault-700 text-slate-900 dark:text-white shadow-sm" title="Dlaždice">
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg>
               </button>
-              <button onclick="setViewMode('list')" id="viewListBtn" class="p-1.5 rounded text-slate-400 hover:text-white" title="Zoznam">
+              <button onclick="setViewMode('list')" id="viewListBtn" class="p-1.5 rounded text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white" title="Zoznam">
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
               </button>
             </div>
@@ -842,9 +892,9 @@
       <!-- Empty State -->
       <div id="noProductsFound" class="hidden text-center py-16 space-y-4">
         <div class="text-4xl">🔍</div>
-        <h3 class="text-xl font-bold text-white">Nenašli sa žiadne trezory</h3>
-        <p class="text-slate-400 text-sm">Skúste upraviť parametre vyhľadávania alebo zrušiť niektoré filtre.</p>
-        <button onclick="resetAllFilters()" class="px-5 py-2.5 rounded-xl bg-gold-500 text-vault-950 font-bold text-xs uppercase">
+        <h3 class="text-xl font-bold text-slate-900 dark:text-white">Nenašli sa žiadne trezory</h3>
+        <p class="text-slate-500 dark:text-slate-400 text-sm">Skúste upraviť parametre vyhľadávania alebo zrušiť niektoré filtre.</p>
+        <button onclick="resetAllFilters()" class="px-5 py-2.5 rounded-xl bg-gold-500 text-white font-bold text-xs uppercase shadow">
           Zresetovať filtre
         </button>
       </div>
@@ -853,17 +903,17 @@
   </section>
 
   <!-- ==================== LOCK TECHNOLOGY GUIDE ==================== -->
-  <section class="py-20 bg-vault-950 border-t border-white/5" id="zamky">
+  <section class="py-20 bg-slate-50 dark:bg-vault-950 border-t border-slate-200 dark:border-white/5 transition-colors duration-200" id="zamky">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
-        <span class="text-xs font-mono uppercase tracking-widest text-gold-400 bg-gold-500/10 border border-gold-500/20 px-3 py-1 rounded-full">
+        <span class="text-xs font-mono uppercase tracking-widest text-gold-600 dark:text-gold-400 bg-gold-500/10 border border-gold-500/20 px-3 py-1 rounded-full font-bold">
           Zabezpečenie Vstupu
         </span>
-        <h2 class="text-3xl sm:text-4xl font-display font-extrabold text-white">
+        <h2 class="text-3xl sm:text-4xl font-display font-extrabold text-slate-900 dark:text-white">
           Zámkové systémy Wertheim
         </h2>
-        <p class="text-slate-300 text-sm sm:text-base">
+        <p class="text-slate-600 dark:text-slate-300 text-sm sm:text-base">
           Trezor je len tak bezpečný, ako jeho zámkový mechanizmus. Porovnajte výhody kľúčových, elektronických kódových a mechanických kombinačných zámkov.
         </p>
       </div>
@@ -871,107 +921,107 @@
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
         
         <!-- Key Lock [K] -->
-        <div class="glass-card rounded-2xl p-6 sm:p-8 space-y-5 flex flex-col justify-between border-glow">
+        <div class="theme-card rounded-2xl p-6 sm:p-8 space-y-5 flex flex-col justify-between border-glow">
           <div class="space-y-4">
-            <div class="w-14 h-14 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 text-2xl">
+            <div class="w-14 h-14 rounded-xl bg-blue-50 dark:bg-blue-500/10 border border-blue-200 dark:border-blue-500/20 flex items-center justify-center text-blue-600 dark:text-blue-400 text-2xl">
               🔑
             </div>
             <div>
-              <span class="text-xs font-mono text-blue-400 uppercase tracking-widest">[K] Štandardná Výbava</span>
-              <h3 class="text-2xl font-display font-bold text-white mt-1">Motýlkový obojstranný kľúč</h3>
-              <p class="text-xs text-slate-400 mt-1">Zámok CAWI / Mauer (VdS trieda 1 / EN 1300 trieda A)</p>
+              <span class="text-xs font-mono text-blue-700 dark:text-blue-400 uppercase tracking-widest font-bold">[K] Štandardná Výbava</span>
+              <h3 class="text-2xl font-display font-bold text-slate-900 dark:text-white mt-1">Motýlkový obojstranný kľúč</h3>
+              <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Zámok CAWI / Mauer (VdS trieda 1 / EN 1300 trieda A)</p>
             </div>
-            <p class="text-slate-300 text-xs leading-relaxed">
+            <p class="text-slate-600 dark:text-slate-300 text-xs leading-relaxed">
               Dodáva sa štandardne ku každému trezoru Wertheim v cene s 2 kusmi masívnych obojstranných kľúčov. Maximálna mechanická spoľahlivosť bez akejkoľvek elektroniky.
             </p>
-            <div class="space-y-2 pt-2 border-t border-white/10 text-xs">
-              <div class="flex items-center gap-2 text-emerald-400 font-medium">
+            <div class="space-y-2 pt-2 border-t border-slate-200 dark:border-white/10 text-xs">
+              <div class="flex items-center gap-2 text-emerald-600 dark:text-emerald-400 font-medium">
                 <span>+</span> 100% nezávislé od batérií a napájania
               </div>
-              <div class="flex items-center gap-2 text-emerald-400 font-medium">
+              <div class="flex items-center gap-2 text-emerald-600 dark:text-emerald-400 font-medium">
                 <span>+</span> Žiadne príplatky (zahrnuté v základnej cene)
               </div>
-              <div class="flex items-center gap-2 text-amber-400 font-medium">
+              <div class="flex items-center gap-2 text-amber-700 dark:text-amber-400 font-medium">
                 <span>!</span> Nutnosť prísne strážiť kľúč (poisťovňa neplní pri krádeži kľúčom)
               </div>
             </div>
           </div>
-          <div class="p-3 rounded-xl bg-vault-900 text-center font-mono text-xs text-slate-300 border border-white/5">
-            Cena výbavy: <strong class="text-emerald-400">V cene (0 €)</strong>
+          <div class="p-3 rounded-xl bg-slate-100 dark:bg-vault-900 text-center font-mono text-xs text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/5">
+            Cena výbavy: <strong class="text-emerald-600 dark:text-emerald-400">V cene (0 €)</strong>
           </div>
         </div>
 
         <!-- Electronic Lock [E] -->
-        <div class="glass-card-gold rounded-2xl p-6 sm:p-8 space-y-5 flex flex-col justify-between border-gold-500/40 shadow-xl">
+        <div class="theme-card-gold rounded-2xl p-6 sm:p-8 space-y-5 flex flex-col justify-between shadow-lg">
           <div class="space-y-4">
-            <div class="w-14 h-14 rounded-xl bg-gold-500/20 border border-gold-500/30 flex items-center justify-center text-gold-400 text-2xl">
+            <div class="w-14 h-14 rounded-xl bg-amber-100 dark:bg-gold-500/20 border border-amber-300 dark:border-gold-500/30 flex items-center justify-center text-gold-700 dark:text-gold-400 text-2xl">
               🔢
             </div>
             <div>
-              <span class="text-xs font-mono text-gold-400 uppercase tracking-widest">[E] Najobľúbenejšia Voľba</span>
-              <h3 class="text-2xl font-display font-bold text-white mt-1">Elektronický kód M-LOCKS</h3>
-              <p class="text-xs text-gold-300 mt-1">Model EM3520 (VdS trieda 2 / EN 1300 trieda B)</p>
+              <span class="text-xs font-mono text-gold-700 dark:text-gold-400 uppercase tracking-widest font-bold">[E] Najobľúbenejšia Voľba</span>
+              <h3 class="text-2xl font-display font-bold text-slate-900 dark:text-white mt-1">Elektronický kód M-LOCKS</h3>
+              <p class="text-xs text-gold-800 dark:text-gold-300 mt-1">Model EM3520 (VdS trieda 2 / EN 1300 trieda B)</p>
             </div>
-            <p class="text-slate-300 text-xs leading-relaxed">
+            <p class="text-slate-600 dark:text-slate-300 text-xs leading-relaxed">
               Maximálny komfort. Otvorenie 6-miestnym kódom (1 milión kombinácií). Manažérsky kód + užívateľský kód. Pamäť nestrácate ani pri vybití batérie!
             </p>
-            <div class="space-y-2 pt-2 border-t border-white/10 text-xs">
-              <div class="flex items-center gap-2 text-emerald-400 font-medium">
+            <div class="space-y-2 pt-2 border-t border-amber-200 dark:border-white/10 text-xs">
+              <div class="flex items-center gap-2 text-emerald-600 dark:text-emerald-400 font-medium">
                 <span>+</span> Netreba nikam schovávať fyzický kľúč
               </div>
-              <div class="flex items-center gap-2 text-emerald-400 font-medium">
+              <div class="flex items-center gap-2 text-emerald-600 dark:text-emerald-400 font-medium">
                 <span>+</span> Jednoduchá zmena kódu kedykoľvek
               </div>
-              <div class="flex items-center gap-2 text-emerald-400 font-medium">
+              <div class="flex items-center gap-2 text-emerald-600 dark:text-emerald-400 font-medium">
                 <span>+</span> Núdzové kontakty na 9V batériu priamo na klávesnici
               </div>
             </div>
           </div>
-          <div class="p-3 rounded-xl bg-vault-900 text-center font-mono text-xs text-slate-300 border border-gold-500/20">
-            Doplatok: <strong class="text-gold-400">+ cca 240 € s DPH</strong>
+          <div class="p-3 rounded-xl bg-white dark:bg-vault-900 text-center font-mono text-xs text-slate-700 dark:text-slate-300 border border-amber-300 dark:border-gold-500/20 shadow-sm">
+            Doplatok: <strong class="text-gold-700 dark:text-gold-400">+ cca 240 € s DPH</strong>
           </div>
         </div>
 
         <!-- Mechanical Dial [N/Z] -->
-        <div class="glass-card rounded-2xl p-6 sm:p-8 space-y-5 flex flex-col justify-between border-glow">
+        <div class="theme-card rounded-2xl p-6 sm:p-8 space-y-5 flex flex-col justify-between border-glow">
           <div class="space-y-4">
-            <div class="w-14 h-14 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400 text-2xl">
+            <div class="w-14 h-14 rounded-xl bg-purple-50 dark:bg-purple-500/10 border border-purple-200 dark:border-purple-500/20 flex items-center justify-center text-purple-600 dark:text-purple-400 text-2xl">
               ⚙️
             </div>
             <div>
-              <span class="text-xs font-mono text-purple-400 uppercase tracking-widest">[N/Z] Klasický Číselník</span>
-              <h3 class="text-2xl font-display font-bold text-white mt-1">Mechanický kombinačný zámok</h3>
-              <p class="text-xs text-slate-400 mt-1">Sargent & Greenleaf (VdS trieda 2 / EN 1300 trieda B)</p>
+              <span class="text-xs font-mono text-purple-700 dark:text-purple-400 uppercase tracking-widest font-bold">[N/Z] Klasický Číselník</span>
+              <h3 class="text-2xl font-display font-bold text-slate-900 dark:text-white mt-1">Mechanický kombinačný zámok</h3>
+              <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Sargent & Greenleaf (VdS trieda 2 / EN 1300 trieda B)</p>
             </div>
-            <p class="text-slate-300 text-xs leading-relaxed">
+            <p class="text-slate-600 dark:text-slate-300 text-xs leading-relaxed">
               Klasický filmový trezorový otočný číselník. Vytáčaním 3 alebo 4 číselných kombinácií v presnom poradí otvárate závorový mechanizmus bez akejkoľvek batérie.
             </p>
-            <div class="space-y-2 pt-2 border-t border-white/10 text-xs">
-              <div class="flex items-center gap-2 text-emerald-400 font-medium">
+            <div class="space-y-2 pt-2 border-t border-slate-200 dark:border-white/10 text-xs">
+              <div class="flex items-center gap-2 text-emerald-600 dark:text-emerald-400 font-medium">
                 <span>+</span> Čisto mechanický, nezávislý od elektroniky
               </div>
-              <div class="flex items-center gap-2 text-emerald-400 font-medium">
+              <div class="flex items-center gap-2 text-emerald-600 dark:text-emerald-400 font-medium">
                 <span>+</span> Na kód pri zadávaní nikto nevidí
               </div>
-              <div class="flex items-center gap-2 text-amber-400 font-medium">
+              <div class="flex items-center gap-2 text-amber-700 dark:text-amber-400 font-medium">
                 <span>!</span> Vyžaduje precízne otáčanie (pri chybe sa musí začať odznova)
               </div>
             </div>
           </div>
-          <div class="p-3 rounded-xl bg-vault-900 text-center font-mono text-xs text-slate-300 border border-white/5">
-            Doplatok: <strong class="text-slate-200">+ cca 180 € s DPH</strong>
+          <div class="p-3 rounded-xl bg-slate-100 dark:bg-vault-900 text-center font-mono text-xs text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/5">
+            Doplatok: <strong class="text-slate-800 dark:text-slate-200">+ cca 180 € s DPH</strong>
           </div>
         </div>
 
       </div>
 
       <!-- Interactive Lock Simulator Box -->
-      <div class="mt-12 glass-card rounded-2xl p-6 sm:p-8 max-w-2xl mx-auto border border-gold-500/30 text-center">
-        <h4 class="text-lg font-display font-bold text-white">Vyskúšajte si simulátor klávesnice M-LOCKS</h4>
-        <p class="text-xs text-slate-400 mt-1">Zadajte testovací kód <span class="font-mono text-gold-400 font-bold">1 2 3 4 5 6</span> a sledujte odozvu elektronického zámku:</p>
+      <div class="mt-12 theme-card rounded-2xl p-6 sm:p-8 max-w-2xl mx-auto border-gold-500/30 text-center shadow-lg">
+        <h4 class="text-lg font-display font-bold text-slate-900 dark:text-white">Vyskúšajte si simulátor klávesnice M-LOCKS</h4>
+        <p class="text-xs text-slate-600 dark:text-slate-400 mt-1">Zadajte testovací kód <span class="font-mono text-gold-600 dark:text-gold-400 font-bold">1 2 3 4 5 6</span> a sledujte odozvu elektronického zámku:</p>
         
-        <div class="mt-5 inline-block bg-vault-950 p-5 rounded-2xl border border-slate-700 shadow-2xl">
-          <div class="h-10 bg-slate-900 border border-slate-700 rounded-lg mb-4 flex items-center justify-center font-mono text-xl tracking-widest text-gold-400" id="simDisplay">
+        <div class="mt-5 inline-block bg-slate-900 dark:bg-vault-950 p-5 rounded-2xl border border-slate-700 shadow-2xl">
+          <div class="h-10 bg-slate-950 border border-slate-700 rounded-lg mb-4 flex items-center justify-center font-mono text-xl tracking-widest text-gold-400" id="simDisplay">
             ------
           </div>
           <div class="grid grid-cols-3 gap-2 w-48 mx-auto">
@@ -984,9 +1034,9 @@
             <button onclick="pressSimKey('7')" class="h-10 rounded bg-slate-800 hover:bg-slate-700 text-white font-mono font-bold">7</button>
             <button onclick="pressSimKey('8')" class="h-10 rounded bg-slate-800 hover:bg-slate-700 text-white font-mono font-bold">8</button>
             <button onclick="pressSimKey('9')" class="h-10 rounded bg-slate-800 hover:bg-slate-700 text-white font-mono font-bold">9</button>
-            <button onclick="clearSimKey()" class="h-10 rounded bg-red-950/60 hover:bg-red-900 text-red-300 font-mono text-xs">C</button>
+            <button onclick="clearSimKey()" class="h-10 rounded bg-red-950/80 hover:bg-red-900 text-red-300 font-mono text-xs">C</button>
             <button onclick="pressSimKey('0')" class="h-10 rounded bg-slate-800 hover:bg-slate-700 text-white font-mono font-bold">0</button>
-            <button onclick="checkSimCode()" class="h-10 rounded bg-gold-600 hover:bg-gold-500 text-vault-950 font-mono font-bold">↵</button>
+            <button onclick="checkSimCode()" class="h-10 rounded bg-gold-600 hover:bg-gold-500 text-white font-mono font-bold">↵</button>
           </div>
           <div class="mt-3 text-[11px] font-mono text-slate-400" id="simStatus">Pripravený na zadanie kódu</div>
         </div>
@@ -996,41 +1046,41 @@
   </section>
 
   <!-- ==================== DELIVERY, RIGGING & ANCHORING CALCULATOR ==================== -->
-  <section class="py-20 bg-vault-900 border-t border-white/5" id="doprava-montaz">
+  <section class="py-20 bg-white dark:bg-vault-900 border-t border-slate-200 dark:border-white/5 transition-colors duration-200" id="doprava-montaz">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         
         <div class="lg:col-span-6 space-y-6">
-          <span class="text-xs font-mono uppercase tracking-widest text-gold-400 bg-gold-500/10 border border-gold-500/20 px-3 py-1 rounded-full">
+          <span class="text-xs font-mono uppercase tracking-widest text-gold-600 dark:text-gold-400 bg-gold-500/10 border border-gold-500/20 px-3 py-1 rounded-full font-bold">
             Diskrétna Logistika & Inštalácia
           </span>
-          <h2 class="text-3xl sm:text-4xl font-display font-extrabold text-white">
+          <h2 class="text-3xl sm:text-4xl font-display font-extrabold text-slate-900 dark:text-white">
             Prevoz, vynáška po schodoch a certifikované kotvenie
           </h2>
-          <p class="text-slate-300 text-sm leading-relaxed">
+          <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
             Bezpečnostný trezor s hmotnosťou 100 kg až 700 kg si vyžaduje špecializovanú ťažkú techniku a pásový schodolez. Poisťovne navyše <strong>striktne vyžadujú ukotvenie</strong> každého trezoru s hmotnosťou pod 1 000 kg certifikovanými oceľovými kotvami.
           </p>
 
-          <div class="space-y-3.5 text-xs text-slate-300">
-            <div class="flex items-start gap-3 p-3.5 rounded-xl bg-vault-850 border border-white/5">
-              <div class="text-gold-500 text-lg">🛡️</div>
+          <div class="space-y-3.5 text-xs text-slate-700 dark:text-slate-300">
+            <div class="flex items-start gap-3 p-3.5 rounded-xl bg-slate-50 dark:bg-vault-850 border border-slate-200 dark:border-white/5 shadow-sm">
+              <div class="text-gold-600 dark:text-gold-500 text-lg">🛡️</div>
               <div>
-                <strong class="text-white block">Absolútna diskrétnosť prevozu</strong>
+                <strong class="text-slate-900 dark:text-white block">Absolútna diskrétnosť prevozu</strong>
                 Vozidlá a oblečenie technikov sú neutrálne bez reklamných nápisov. O existencii Vášho trezoru nevie susedstvo ani externá kuriérska služba.
               </div>
             </div>
-            <div class="flex items-start gap-3 p-3.5 rounded-xl bg-vault-850 border border-white/5">
-              <div class="text-gold-500 text-lg">⚙️</div>
+            <div class="flex items-start gap-3 p-3.5 rounded-xl bg-slate-50 dark:bg-vault-850 border border-slate-200 dark:border-white/5 shadow-sm">
+              <div class="text-gold-600 dark:text-gold-500 text-lg">⚙️</div>
               <div>
-                <strong class="text-white block">Ťažká technika & schodolez</strong>
+                <strong class="text-slate-900 dark:text-white block">Ťažká technika & schodolez</strong>
                 Zvládame aj úzke točité schodiská, historické objekty a nosnosti podláh bez poškodenia dlažby či parkiet.
               </div>
             </div>
-            <div class="flex items-start gap-3 p-3.5 rounded-xl bg-vault-850 border border-white/5">
-              <div class="text-gold-500 text-lg">📜</div>
+            <div class="flex items-start gap-3 p-3.5 rounded-xl bg-slate-50 dark:bg-vault-850 border border-slate-200 dark:border-white/5 shadow-sm">
+              <div class="text-gold-600 dark:text-gold-500 text-lg">📜</div>
               <div>
-                <strong class="text-white block">Protokol o certifikovanom ukotvení</strong>
+                <strong class="text-slate-900 dark:text-white block">Protokol o certifikovanom ukotvení</strong>
                 Vystavíme revízny doklad o kotvení potrebný pre poisťovňu pri uzatváraní poistnej zmluvy.
               </div>
             </div>
@@ -1039,16 +1089,16 @@
 
         <!-- Interactive Calculator Widget -->
         <div class="lg:col-span-6">
-          <div class="glass-card rounded-2xl p-6 sm:p-8 border border-white/10 shadow-2xl space-y-5">
-            <div class="flex items-center justify-between pb-4 border-b border-white/10">
-              <h3 class="font-display font-bold text-white text-lg">Kalkulátor dopravy a montáže</h3>
-              <span class="text-xs font-mono text-gold-400">Orientačný odhad</span>
+          <div class="theme-card rounded-2xl p-6 sm:p-8 space-y-5 shadow-xl">
+            <div class="flex items-center justify-between pb-4 border-b border-slate-200 dark:border-white/10">
+              <h3 class="font-display font-bold text-slate-900 dark:text-white text-lg">Kalkulátor dopravy a montáže</h3>
+              <span class="text-xs font-mono text-gold-600 dark:text-gold-400 font-bold">Orientačný odhad</span>
             </div>
 
             <!-- Weight Bracket -->
             <div>
-              <label class="block text-xs font-medium text-slate-300 mb-1.5">Hmotnosť trezoru:</label>
-              <select id="calcWeight" onchange="calculateDelivery()" class="w-full bg-vault-850 border border-white/10 rounded-xl px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-gold-500">
+              <label class="block text-xs font-medium text-slate-700 dark:text-slate-300 mb-1.5">Hmotnosť trezoru:</label>
+              <select id="calcWeight" onchange="calculateDelivery()" class="w-full bg-slate-50 dark:bg-vault-850 border border-slate-200 dark:border-white/10 rounded-xl px-3.5 py-2.5 text-sm text-slate-900 dark:text-white focus:outline-none focus:border-gold-500">
                 <option value="50">Do 70 kg (Kompaktný - napr. AL03, AL05)</option>
                 <option value="120" selected>70 - 150 kg (Stredný - napr. AL10, AL20, BG10)</option>
                 <option value="250">150 - 300 kg (Ťažký / Ohňovzdorný - napr. AP10, CM15)</option>
@@ -1058,8 +1108,8 @@
 
             <!-- Access & Floor -->
             <div>
-              <label class="block text-xs font-medium text-slate-300 mb-1.5">Prístup & Poschodie:</label>
-              <select id="calcFloor" onchange="calculateDelivery()" class="w-full bg-vault-850 border border-white/10 rounded-xl px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-gold-500">
+              <label class="block text-xs font-medium text-slate-700 dark:text-slate-300 mb-1.5">Prístup & Poschodie:</label>
+              <select id="calcFloor" onchange="calculateDelivery()" class="w-full bg-slate-50 dark:bg-vault-850 border border-slate-200 dark:border-white/10 rounded-xl px-3.5 py-2.5 text-sm text-slate-900 dark:text-white focus:outline-none focus:border-gold-500">
                 <option value="0">Prízemie bez schodov / nákladný výťah</option>
                 <option value="35">1. poschodie bez výťahu (+35 €)</option>
                 <option value="70">2. až 3. poschodie bez výťahu (+70 €)</option>
@@ -1069,8 +1119,8 @@
 
             <!-- Anchoring Type -->
             <div>
-              <label class="block text-xs font-medium text-slate-300 mb-1.5">Typ montáže / kotvenia:</label>
-              <select id="calcAnchor" onchange="calculateDelivery()" class="w-full bg-vault-850 border border-white/10 rounded-xl px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-gold-500">
+              <label class="block text-xs font-medium text-slate-700 dark:text-slate-300 mb-1.5">Typ montáže / kotvenia:</label>
+              <select id="calcAnchor" onchange="calculateDelivery()" class="w-full bg-slate-50 dark:bg-vault-850 border border-slate-200 dark:border-white/10 rounded-xl px-3.5 py-2.5 text-sm text-slate-900 dark:text-white focus:outline-none focus:border-gold-500">
                 <option value="0">Iba doručenie za prvé uzamykateľné dvere (0 € montáž)</option>
                 <option value="75" selected>Certifikované kotvenie do betónu s protokolom (+75 €)</option>
                 <option value="120">Chemická kotva do dutých tehál / špeciálny podklad (+120 €)</option>
@@ -1080,8 +1130,8 @@
 
             <!-- Distance from Šurany -->
             <div>
-              <label class="block text-xs font-medium text-slate-300 mb-1.5">Lokalita doručenia:</label>
-              <select id="calcRegion" onchange="calculateDelivery()" class="w-full bg-vault-850 border border-white/10 rounded-xl px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-gold-500">
+              <label class="block text-xs font-medium text-slate-700 dark:text-slate-300 mb-1.5">Lokalita doručenia:</label>
+              <select id="calcRegion" onchange="calculateDelivery()" class="w-full bg-slate-50 dark:bg-vault-850 border border-slate-200 dark:border-white/10 rounded-xl px-3.5 py-2.5 text-sm text-slate-900 dark:text-white focus:outline-none focus:border-gold-500">
                 <option value="40">Západoslovenský kraj (BA, TT, NR, Šurany okolie)</option>
                 <option value="70">Stredné Slovensko (BB, ZA, TN)</option>
                 <option value="100">Východné Slovensko (KE, PO)</option>
@@ -1089,12 +1139,12 @@
             </div>
 
             <!-- Calculation Output -->
-            <div class="p-4 rounded-xl bg-vault-950 border border-gold-500/30 flex items-center justify-between">
+            <div class="p-4 rounded-xl bg-slate-100 dark:bg-vault-950 border border-gold-500/30 flex items-center justify-between">
               <div>
-                <span class="text-xs text-slate-400 block">Odhadovaná cena služieb:</span>
-                <span class="text-2xl font-tech font-bold text-gold-400" id="calcTotal">190 € s DPH</span>
+                <span class="text-xs text-slate-500 dark:text-slate-400 block">Odhadovaná cena služieb:</span>
+                <span class="text-2xl font-tech font-bold text-gold-600 dark:text-gold-400" id="calcTotal">190 € s DPH</span>
               </div>
-              <button onclick="addServicesToCart()" class="px-4 py-2 rounded-lg bg-gold-500 hover:bg-gold-400 text-vault-950 text-xs font-bold uppercase tracking-wider transition-colors">
+              <button onclick="addServicesToCart()" class="px-4 py-2 rounded-lg bg-gold-500 hover:bg-gold-400 text-white text-xs font-bold uppercase tracking-wider transition-colors shadow">
                 Pridať k dopytu
               </button>
             </div>
@@ -1108,51 +1158,51 @@
   </section>
 
   <!-- ==================== ABOUT INDUSTRY NWT & WERTHEIM STORY ==================== -->
-  <section class="py-20 bg-vault-950 border-t border-white/5" id="o-firme">
+  <section class="py-20 bg-slate-50 dark:bg-vault-950 border-t border-slate-200 dark:border-white/5 transition-colors duration-200" id="o-firme">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="max-w-3xl mx-auto text-center space-y-4 mb-16">
-        <span class="text-xs font-mono uppercase tracking-widest text-gold-400 bg-gold-500/10 border border-gold-500/20 px-3 py-1 rounded-full">
+        <span class="text-xs font-mono uppercase tracking-widest text-gold-600 dark:text-gold-400 bg-gold-500/10 border border-gold-500/20 px-3 py-1 rounded-full font-bold">
           Dôvera & Precíznosť
         </span>
-        <h2 class="text-3xl sm:text-4xl font-display font-extrabold text-white">
+        <h2 class="text-3xl sm:text-4xl font-display font-extrabold text-slate-900 dark:text-white">
           Prečo zveriť bezpečnosť rodinnej firme Industry NWT?
         </h2>
-        <p class="text-slate-300 text-sm sm:text-base">
+        <p class="text-slate-600 dark:text-slate-300 text-sm sm:text-base">
           Pri kúpe trezora je najväčším rizikom únik informácií. Kto vie, že máte trezor? Kde je umiestnený? Aký kľúč či kód používa?
         </p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         
-        <div class="glass-card rounded-2xl p-6 space-y-3 border-glow">
+        <div class="theme-card rounded-2xl p-6 space-y-3 border-glow">
           <div class="text-3xl">🤫</div>
-          <h3 class="text-lg font-display font-bold text-white">Minimálny okruh osôb</h3>
-          <p class="text-xs text-slate-400 leading-relaxed">
+          <h3 class="text-lg font-display font-bold text-slate-900 dark:text-white">Minimálny okruh osôb</h3>
+          <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
             Sme rodinná firma so sídlom v Šuranoch. O vašom trezore a inštalácii vie iba majiteľ a technik. Žiadne call-centrá, žiadne nezabezpečené databázy kuriérov.
           </p>
         </div>
 
-        <div class="glass-card rounded-2xl p-6 space-y-3 border-glow">
+        <div class="theme-card rounded-2xl p-6 space-y-3 border-glow">
           <div class="text-3xl">⚙️</div>
-          <h3 class="text-lg font-display font-bold text-white">53 rokov v strojárstve</h3>
-          <p class="text-xs text-slate-400 leading-relaxed">
+          <h3 class="text-lg font-display font-bold text-slate-900 dark:text-white">53 rokov v strojárstve</h3>
+          <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
             Spájame vyše polstoročnú prax v nástrojárstve a kovoobrábaní s 20-ročnými skúsenosťami v oblasti bezpečnosti osôb a ochrany majetku.
           </p>
         </div>
 
-        <div class="glass-card rounded-2xl p-6 space-y-3 border-glow">
+        <div class="theme-card rounded-2xl p-6 space-y-3 border-glow">
           <div class="text-3xl">🤝</div>
-          <h3 class="text-lg font-display font-bold text-white">Partner Wertheim od 1998</h3>
-          <p class="text-xs text-slate-400 leading-relaxed">
+          <h3 class="text-lg font-display font-bold text-slate-900 dark:text-white">Partner Wertheim od 1998</h3>
+          <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
             S firmou Wertheim spolupracujeme od roku 1998 a od februára 2014 máme podpísanú oficiálnu zmluvu o obchodnom zastúpení. Poznáme každý detail konštrukcie.
           </p>
         </div>
 
-        <div class="glass-card rounded-2xl p-6 space-y-3 border-glow">
+        <div class="theme-card rounded-2xl p-6 space-y-3 border-glow">
           <div class="text-3xl">🏛️</div>
-          <h3 class="text-lg font-display font-bold text-white">Tradícia Wertheim od 1852</h3>
-          <p class="text-xs text-slate-400 leading-relaxed">
+          <h3 class="text-lg font-display font-bold text-slate-900 dark:text-white">Tradícia Wertheim od 1852</h3>
+          <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
             Rakúsky priemyselník Franz Wertheim vyrobil prvý trezor v roku 1852. Dnes je synonymom pre bankové trezory a trezorové dvere najvyšších svetových tried.
           </p>
         </div>
@@ -1163,12 +1213,12 @@
   </section>
 
   <!-- ==================== FAQ & KNOWLEDGE BASE ==================== -->
-  <section class="py-20 bg-vault-900 border-t border-white/5" id="faq">
+  <section class="py-20 bg-white dark:bg-vault-900 border-t border-slate-200 dark:border-white/5 transition-colors duration-200" id="faq">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="text-center space-y-3 mb-14">
-        <span class="text-xs font-mono uppercase tracking-widest text-gold-400">Poradňa & Otázky</span>
-        <h2 class="text-3xl sm:text-4xl font-display font-extrabold text-white">
+        <span class="text-xs font-mono uppercase tracking-widest text-gold-600 dark:text-gold-400 font-bold">Poradňa & Otázky</span>
+        <h2 class="text-3xl sm:text-4xl font-display font-extrabold text-slate-900 dark:text-white">
           Často kladené otázky k trezorom
         </h2>
       </div>
@@ -1176,56 +1226,56 @@
       <div class="space-y-4">
         
         <!-- FAQ 1 -->
-        <div class="glass-card rounded-xl border border-white/5 overflow-hidden">
-          <button onclick="toggleFaq(1)" class="w-full text-left p-5 flex items-center justify-between text-sm sm:text-base font-bold text-white hover:text-gold-400 transition-colors">
+        <div class="theme-card rounded-xl overflow-hidden">
+          <button onclick="toggleFaq(1)" class="w-full text-left p-5 flex items-center justify-between text-sm sm:text-base font-bold text-slate-900 dark:text-white hover:text-gold-600 dark:hover:text-gold-400 transition-colors">
             <span>Prečo poisťovňa vyžaduje certifikát VdS a ukotvenie trezora?</span>
-            <span id="faqIcon1" class="text-gold-500 font-mono text-xl">+</span>
+            <span id="faqIcon1" class="text-gold-600 dark:text-gold-500 font-mono text-xl">+</span>
           </button>
-          <div id="faqContent1" class="hidden px-5 pb-5 text-xs sm:text-sm text-slate-300 border-t border-white/5 pt-3 leading-relaxed">
+          <div id="faqContent1" class="hidden px-5 pb-5 text-xs sm:text-sm text-slate-600 dark:text-slate-300 border-t border-slate-200 dark:border-white/5 pt-3 leading-relaxed">
             V prípade poistnej udalosti (vlámanie) poisťovňa skúma, či bol trezor certifikovaný v príslušnej bezpečnostnej triede (EN 1143-1) a či bol odborne ukotvený. Ak má trezor menej ako 1 000 kg a nie je ukotvený, zlodeji ho môžu odniesť celý. Všetky certifikované trezory Wertheim do 1 000 kg sa dodávajú s kotviacimi otvormi a certifikovaným kotviacim materiálom.
           </div>
         </div>
 
         <!-- FAQ 2 -->
-        <div class="glass-card rounded-xl border border-white/5 overflow-hidden">
-          <button onclick="toggleFaq(2)" class="w-full text-left p-5 flex items-center justify-between text-sm sm:text-base font-bold text-white hover:text-gold-400 transition-colors">
+        <div class="theme-card rounded-xl overflow-hidden">
+          <button onclick="toggleFaq(2)" class="w-full text-left p-5 flex items-center justify-between text-sm sm:text-base font-bold text-slate-900 dark:text-white hover:text-gold-600 dark:hover:text-gold-400 transition-colors">
             <span>Čo sa stane, ak sa v elektronickom zámku vybijú batérie?</span>
-            <span id="faqIcon2" class="text-gold-500 font-mono text-xl">+</span>
+            <span id="faqIcon2" class="text-gold-600 dark:text-gold-500 font-mono text-xl">+</span>
           </button>
-          <div id="faqContent2" class="hidden px-5 pb-5 text-xs sm:text-sm text-slate-300 border-t border-white/5 pt-3 leading-relaxed">
+          <div id="faqContent2" class="hidden px-5 pb-5 text-xs sm:text-sm text-slate-600 dark:text-slate-300 border-t border-slate-200 dark:border-white/5 pt-3 leading-relaxed">
             Elektronické zámky (ako M-LOCKS EM3520) využívajú energeticky nezávislú mikroprocesorovú pamäť EEPROM. Kód sa pri vybití batérie <strong>nikdy nevymaže</strong>. Zámok navyše vopred signalizuje slabú batériu akustickým pípnutím. Ak sa batéria vybije úplne, z vonkajšej strany klávesnice sú umiestnené núdzové kontakty, na ktoré stačí priložiť bežnú 9V batériu a trezor otvoriť vaším obvyklým kódom.
           </div>
         </div>
 
         <!-- FAQ 3 -->
-        <div class="glass-card rounded-xl border border-white/5 overflow-hidden">
-          <button onclick="toggleFaq(3)" class="w-full text-left p-5 flex items-center justify-between text-sm sm:text-base font-bold text-white hover:text-gold-400 transition-colors">
+        <div class="theme-card rounded-xl overflow-hidden">
+          <button onclick="toggleFaq(3)" class="w-full text-left p-5 flex items-center justify-between text-sm sm:text-base font-bold text-slate-900 dark:text-white hover:text-gold-600 dark:hover:text-gold-400 transition-colors">
             <span>Aký trezor potrebujem na úschovu zbraní a streliva podľa zákona SR?</span>
-            <span id="faqIcon3" class="text-gold-500 font-mono text-xl">+</span>
+            <span id="faqIcon3" class="text-gold-600 dark:text-gold-500 font-mono text-xl">+</span>
           </button>
-          <div id="faqContent3" class="hidden px-5 pb-5 text-xs sm:text-sm text-slate-300 border-t border-white/5 pt-3 leading-relaxed">
+          <div id="faqContent3" class="hidden px-5 pb-5 text-xs sm:text-sm text-slate-600 dark:text-slate-300 border-t border-slate-200 dark:border-white/5 pt-3 leading-relaxed">
             Podľa zákona č. 190/2003 Z. z. o strelných zbraniach a strelive musí byť držanie zbraní a streliva zabezpečené v uzamykateľnej oceľovej schránke alebo trezore. Pre väčší počet zbraní (kategória A, B) polícia a zákon vyžadujú trezor s certifikáciou minimálne I. bezpečnostnej triedy (napríklad séria AL, AN alebo AP) s oddelenou uzamykateľnou vnútornou schránkou na strelivo.
           </div>
         </div>
 
         <!-- FAQ 4 -->
-        <div class="glass-card rounded-xl border border-white/5 overflow-hidden">
-          <button onclick="toggleFaq(4)" class="w-full text-left p-5 flex items-center justify-between text-sm sm:text-base font-bold text-white hover:text-gold-400 transition-colors">
+        <div class="theme-card rounded-xl overflow-hidden">
+          <button onclick="toggleFaq(4)" class="w-full text-left p-5 flex items-center justify-between text-sm sm:text-base font-bold text-slate-900 dark:text-white hover:text-gold-600 dark:hover:text-gold-400 transition-colors">
             <span>Aký je rozdiel medzi bežným a ohňovzdorným trezorom?</span>
-            <span id="faqIcon4" class="text-gold-500 font-mono text-xl">+</span>
+            <span id="faqIcon4" class="text-gold-600 dark:text-gold-500 font-mono text-xl">+</span>
           </button>
-          <div id="faqContent4" class="hidden px-5 pb-5 text-xs sm:text-sm text-slate-300 border-t border-white/5 pt-3 leading-relaxed">
+          <div id="faqContent4" class="hidden px-5 pb-5 text-xs sm:text-sm text-slate-600 dark:text-slate-300 border-t border-slate-200 dark:border-white/5 pt-3 leading-relaxed">
             Bežný trezor má oceľovú konštrukciu chrániacu pred odvŕtaním a páčením, no oceľ je výborný vodič tepla. Pri požiari by papierové dokumenty vo vnútri zhoreli samovznietením už pri 170 °C. Ohňovzdorné trezory (napr. séria Wertheim AP) majú medzi plášťami špeciálnu žiaruvzdornú výplň a expandujúce požiarne pásky, ktoré prešli certifikačnou skúškou LFS 30P / 60P podľa EN 15659 pri teplote až 1 090 °C.
           </div>
         </div>
 
         <!-- FAQ 5 -->
-        <div class="glass-card rounded-xl border border-white/5 overflow-hidden">
-          <button onclick="toggleFaq(5)" class="w-full text-left p-5 flex items-center justify-between text-sm sm:text-base font-bold text-white hover:text-gold-400 transition-colors">
+        <div class="theme-card rounded-xl overflow-hidden">
+          <button onclick="toggleFaq(5)" class="w-full text-left p-5 flex items-center justify-between text-sm sm:text-base font-bold text-slate-900 dark:text-white hover:text-gold-600 dark:hover:text-gold-400 transition-colors">
             <span>Ako prebieha montáž stenového trezoru (séria AMS)?</span>
-            <span id="faqIcon5" class="text-gold-500 font-mono text-xl">+</span>
+            <span id="faqIcon5" class="text-gold-600 dark:text-gold-500 font-mono text-xl">+</span>
           </button>
-          <div id="faqContent5" class="hidden px-5 pb-5 text-xs sm:text-sm text-slate-300 border-t border-white/5 pt-3 leading-relaxed">
+          <div id="faqContent5" class="hidden px-5 pb-5 text-xs sm:text-sm text-slate-600 dark:text-slate-300 border-t border-slate-200 dark:border-white/5 pt-3 leading-relaxed">
             Stenový trezor musí byť zabetónovaný do nosnej steny tak, aby okolo neho vznikol betónový plášť hrúbky minimálne 100 mm z betónu triedy C20/25 s armovacou oceľou. Tým sa zabráni vytrhnutiu trezora zo steny. Dvere trezora musia byť osadené presne vodorovne s omietkou.
           </div>
         </div>
@@ -1236,53 +1286,53 @@
   </section>
 
   <!-- ==================== CONTACT & COMPANY INFO ==================== -->
-  <section class="py-20 bg-vault-950 border-t border-white/5" id="kontakt">
+  <section class="py-20 bg-slate-50 dark:bg-vault-950 border-t border-slate-200 dark:border-white/5 transition-colors duration-200" id="kontakt">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
         
         <!-- Company Credentials -->
         <div class="lg:col-span-5 space-y-6">
-          <span class="text-xs font-mono uppercase tracking-widest text-gold-400 bg-gold-500/10 border border-gold-500/20 px-3 py-1 rounded-full">
+          <span class="text-xs font-mono uppercase tracking-widest text-gold-600 dark:text-gold-400 bg-gold-500/10 border border-gold-500/20 px-3 py-1 rounded-full font-bold">
             Oficiálny Kontakt
           </span>
-          <h2 class="text-3xl font-display font-extrabold text-white">
+          <h2 class="text-3xl font-display font-extrabold text-slate-900 dark:text-white">
             Industry NWT, s. r. o.
           </h2>
-          <p class="text-slate-300 text-sm leading-relaxed">
+          <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
             Neváhajte nás kontaktovať pre odbornú konzultáciu, vypracovanie nezáväznej cenovej ponuky, alebo dohodnutie obhliadky a montáže trezoru.
           </p>
 
-          <div class="space-y-4 pt-2 text-sm text-slate-300">
+          <div class="space-y-4 pt-2 text-sm text-slate-700 dark:text-slate-300">
             <div class="flex items-center gap-3.5">
-              <div class="w-10 h-10 rounded-xl bg-gold-500/10 text-gold-400 flex items-center justify-center shrink-0">📍</div>
+              <div class="w-10 h-10 rounded-xl bg-gold-500/10 text-gold-600 dark:text-gold-400 flex items-center justify-center shrink-0">📍</div>
               <div>
-                <span class="text-xs text-slate-400 block">Sídlo spoločnosti:</span>
-                <span class="text-white font-medium">ul. Chalúpkova 501/4, 942 01 Šurany</span>
+                <span class="text-xs text-slate-500 dark:text-slate-400 block">Sídlo spoločnosti:</span>
+                <span class="text-slate-900 dark:text-white font-medium">ul. Chalúpkova 501/4, 942 01 Šurany</span>
               </div>
             </div>
 
             <div class="flex items-center gap-3.5">
-              <div class="w-10 h-10 rounded-xl bg-gold-500/10 text-gold-400 flex items-center justify-center shrink-0">📞</div>
+              <div class="w-10 h-10 rounded-xl bg-gold-500/10 text-gold-600 dark:text-gold-400 flex items-center justify-center shrink-0">📞</div>
               <div>
-                <span class="text-xs text-slate-400 block">Infolinka & osobná konzultácia:</span>
-                <a href="tel:+421908750500" class="text-gold-400 font-mono font-bold text-base hover:underline">+421 908 750 500</a>
+                <span class="text-xs text-slate-500 dark:text-slate-400 block">Infolinka & osobná konzultácia:</span>
+                <a href="tel:+421908750500" class="text-gold-600 dark:text-gold-400 font-mono font-bold text-base hover:underline">+421 908 750 500</a>
               </div>
             </div>
 
             <div class="flex items-center gap-3.5">
-              <div class="w-10 h-10 rounded-xl bg-gold-500/10 text-gold-400 flex items-center justify-center shrink-0">✉️</div>
+              <div class="w-10 h-10 rounded-xl bg-gold-500/10 text-gold-600 dark:text-gold-400 flex items-center justify-center shrink-0">✉️</div>
               <div>
-                <span class="text-xs text-slate-400 block">E-mailové dopyty:</span>
-                <a href="mailto:office@eurotrezor.com" class="text-white font-medium hover:text-gold-400 transition-colors">office@eurotrezor.com</a>
+                <span class="text-xs text-slate-500 dark:text-slate-400 block">E-mailové dopyty:</span>
+                <a href="mailto:office@eurotrezor.com" class="text-slate-900 dark:text-white font-medium hover:text-gold-600 dark:hover:text-gold-400 transition-colors">office@eurotrezor.com</a>
               </div>
             </div>
 
             <div class="flex items-center gap-3.5">
-              <div class="w-10 h-10 rounded-xl bg-gold-500/10 text-gold-400 flex items-center justify-center shrink-0">🏢</div>
+              <div class="w-10 h-10 rounded-xl bg-gold-500/10 text-gold-600 dark:text-gold-400 flex items-center justify-center shrink-0">🏢</div>
               <div>
-                <span class="text-xs text-slate-400 block">Fakturačné údaje:</span>
-                <div class="text-xs text-slate-300 font-mono">
+                <span class="text-xs text-slate-500 dark:text-slate-400 block">Fakturačné údaje:</span>
+                <div class="text-xs text-slate-700 dark:text-slate-300 font-mono">
                   IČO: 46471570 | IČ DPH: SK2023390710 (Platca DPH)<br>
                   OR Okresného súdu Nitra, oddiel Sro, vložka č. 30454/N<br>
                   Tatra banka: 2927867952 / 1100
@@ -1295,43 +1345,43 @@
 
         <!-- Direct Quick Inquiry Form -->
         <div class="lg:col-span-7">
-          <div class="glass-card rounded-2xl p-6 sm:p-8 border border-white/10 shadow-2xl space-y-5">
-            <h3 class="text-xl font-display font-bold text-white">Rýchly dopyt alebo otázka</h3>
-            <p class="text-xs text-slate-400">Vyplňte formulár a náš špecialista sa Vám ozve do 24 hodín s diskrétnym návrhom riešenia.</p>
+          <div class="theme-card rounded-2xl p-6 sm:p-8 space-y-5 shadow-xl">
+            <h3 class="text-xl font-display font-bold text-slate-900 dark:text-white">Rýchly dopyt alebo otázka</h3>
+            <p class="text-xs text-slate-500 dark:text-slate-400">Vyplňte formulár a náš špecialista sa Vám ozve do 24 hodín s diskrétnym návrhom riešenia.</p>
 
             <form onsubmit="handleDirectInquiry(event)" class="space-y-4">
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label class="block text-xs font-medium text-slate-300 mb-1">Vaše meno / Názov firmy *</label>
-                  <input type="text" id="directName" required placeholder="Ján Novák" class="w-full bg-vault-850 border border-white/10 rounded-xl px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-gold-500">
+                  <label class="block text-xs font-medium text-slate-700 dark:text-slate-300 mb-1">Vaše meno / Názov firmy *</label>
+                  <input type="text" id="directName" required placeholder="Ján Novák" class="w-full bg-slate-50 dark:bg-vault-850 border border-slate-200 dark:border-white/10 rounded-xl px-3.5 py-2.5 text-sm text-slate-900 dark:text-white focus:outline-none focus:border-gold-500">
                 </div>
                 <div>
-                  <label class="block text-xs font-medium text-slate-300 mb-1">Telefónne číslo *</label>
-                  <input type="tel" id="directPhone" required placeholder="+421 900 000 000" class="w-full bg-vault-850 border border-white/10 rounded-xl px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-gold-500">
+                  <label class="block text-xs font-medium text-slate-700 dark:text-slate-300 mb-1">Telefónne číslo *</label>
+                  <input type="tel" id="directPhone" required placeholder="+421 900 000 000" class="w-full bg-slate-50 dark:bg-vault-850 border border-slate-200 dark:border-white/10 rounded-xl px-3.5 py-2.5 text-sm text-slate-900 dark:text-white focus:outline-none focus:border-gold-500">
                 </div>
               </div>
 
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label class="block text-xs font-medium text-slate-300 mb-1">E-mailová adresa *</label>
-                  <input type="email" id="directEmail" required placeholder="jan@novak.sk" class="w-full bg-vault-850 border border-white/10 rounded-xl px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-gold-500">
+                  <label class="block text-xs font-medium text-slate-700 dark:text-slate-300 mb-1">E-mailová adresa *</label>
+                  <input type="email" id="directEmail" required placeholder="jan@novak.sk" class="w-full bg-slate-50 dark:bg-vault-850 border border-slate-200 dark:border-white/10 rounded-xl px-3.5 py-2.5 text-sm text-slate-900 dark:text-white focus:outline-none focus:border-gold-500">
                 </div>
                 <div>
-                  <label class="block text-xs font-medium text-slate-300 mb-1">Mesto / Obec doručenia</label>
-                  <input type="text" id="directCity" placeholder="Napr. Bratislava, Nitra..." class="w-full bg-vault-850 border border-white/10 rounded-xl px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-gold-500">
+                  <label class="block text-xs font-medium text-slate-700 dark:text-slate-300 mb-1">Mesto / Obec doručenia</label>
+                  <input type="text" id="directCity" placeholder="Napr. Bratislava, Nitra..." class="w-full bg-slate-50 dark:bg-vault-850 border border-slate-200 dark:border-white/10 rounded-xl px-3.5 py-2.5 text-sm text-slate-900 dark:text-white focus:outline-none focus:border-gold-500">
                 </div>
               </div>
 
               <div>
-                <label class="block text-xs font-medium text-slate-300 mb-1">Máte záujem o konkrétny model alebo požiadavku?</label>
-                <textarea id="directMsg" rows="3" placeholder="Napr. mám záujem o trezor Wertheim AP10 s elektronickým zámkom a montážou na 1. poschodie rodinného domu..." class="w-full bg-vault-850 border border-white/10 rounded-xl px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-gold-500"></textarea>
+                <label class="block text-xs font-medium text-slate-700 dark:text-slate-300 mb-1">Máte záujem o konkrétny model alebo požiadavku?</label>
+                <textarea id="directMsg" rows="3" placeholder="Napr. mám záujem o trezor Wertheim AP10 s elektronickým zámkom a montážou na 1. poschodie rodinného domu..." class="w-full bg-slate-50 dark:bg-vault-850 border border-slate-200 dark:border-white/10 rounded-xl px-3.5 py-2.5 text-sm text-slate-900 dark:text-white focus:outline-none focus:border-gold-500"></textarea>
               </div>
 
-              <div class="text-[11px] text-slate-400">
+              <div class="text-[11px] text-slate-500 dark:text-slate-400">
                 Odoslaním formulára súhlasíte so spracovaním osobných údajov v súlade s GDPR za účelom vypracovania ponuky. Vaše údaje nikde nezverejňujeme ani neposkytujeme tretím stranám.
               </div>
 
-              <button type="submit" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-gold-500 to-amber-600 hover:from-gold-400 hover:to-amber-500 text-vault-950 font-display font-bold text-xs uppercase tracking-wider shadow-lg shadow-gold-500/20 transition-all">
+              <button type="submit" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-gold-500 to-amber-600 hover:from-gold-400 hover:to-amber-500 text-white font-display font-bold text-xs uppercase tracking-wider shadow-md shadow-gold-500/20 transition-all">
                 Odoslať nezáväzný dopyt
               </button>
             </form>
@@ -1344,9 +1394,9 @@
   </section>
 
   <!-- ==================== FOOTER ==================== -->
-  <footer class="bg-vault-950 border-t border-white/10 py-12 text-slate-400 text-xs">
+  <footer class="bg-slate-900 text-slate-400 py-12 text-xs">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8 pb-8 border-b border-white/5">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8 pb-8 border-b border-slate-800">
         
         <div class="space-y-3">
           <div class="flex items-center gap-2">
@@ -1392,11 +1442,11 @@
 
       </div>
 
-      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-slate-400">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-slate-500">
         <div>
           © 2026 Industry NWT, s. r. o. | Všetky práva vyhradené. Oficiálny partner Wertheim.
         </div>
-        <div class="flex gap-4 text-slate-400">
+        <div class="flex gap-4">
           <a href="#top" class="hover:text-slate-300">Hore ↑</a>
           <span>|</span>
           <span>GDPR & Ochrana súkromia</span>
@@ -1406,9 +1456,9 @@
   </footer>
 
   <!-- ==================== QUICK VIEW MODAL ==================== -->
-  <div id="quickViewModal" class="hidden fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
-    <div class="glass-card rounded-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto border border-white/10 shadow-2xl p-6 sm:p-8 relative">
-      <button onclick="closeProductModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white p-2 text-xl font-bold">✕</button>
+  <div id="quickViewModal" class="hidden fixed inset-0 z-50 bg-black/70 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="theme-card rounded-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto shadow-2xl p-6 sm:p-8 relative">
+      <button onclick="closeProductModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-700 dark:hover:text-white p-2 text-xl font-bold">✕</button>
       
       <div id="modalContent">
         <!-- Rendered dynamically -->
@@ -1417,14 +1467,14 @@
   </div>
 
   <!-- ==================== COMPARISON DRAWER / MODAL ==================== -->
-  <div id="compareDrawer" class="hidden fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
-    <div class="glass-card rounded-2xl max-w-5xl w-full max-h-[90vh] overflow-y-auto border border-white/10 shadow-2xl p-6 sm:p-8 relative">
-      <div class="flex items-center justify-between pb-4 border-b border-white/10 mb-6">
+  <div id="compareDrawer" class="hidden fixed inset-0 z-50 bg-black/70 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="theme-card rounded-2xl max-w-5xl w-full max-h-[90vh] overflow-y-auto shadow-2xl p-6 sm:p-8 relative">
+      <div class="flex items-center justify-between pb-4 border-b border-slate-200 dark:border-white/10 mb-6">
         <div>
-          <span class="text-xs font-mono text-gold-400 uppercase">Porovnávač modelov</span>
-          <h3 class="text-2xl font-display font-bold text-white">Technické porovnanie trezorov</h3>
+          <span class="text-xs font-mono text-gold-600 dark:text-gold-400 uppercase font-bold">Porovnávač modelov</span>
+          <h3 class="text-2xl font-display font-bold text-slate-900 dark:text-white">Technické porovnanie trezorov</h3>
         </div>
-        <button onclick="toggleCompareDrawer()" class="text-slate-400 hover:text-white p-2 text-xl font-bold">✕</button>
+        <button onclick="toggleCompareDrawer()" class="text-slate-400 hover:text-slate-700 dark:hover:text-white p-2 text-xl font-bold">✕</button>
       </div>
 
       <div id="compareTableContainer" class="overflow-x-auto">
@@ -1434,63 +1484,63 @@
   </div>
 
   <!-- ==================== INQUIRY / CART DRAWER ==================== -->
-  <div id="inquiryModal" class="hidden fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
-    <div class="glass-card rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto border border-white/10 shadow-2xl p-6 sm:p-8 relative space-y-6">
+  <div id="inquiryModal" class="hidden fixed inset-0 z-50 bg-black/70 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="theme-card rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl p-6 sm:p-8 relative space-y-6">
       
-      <div class="flex items-center justify-between pb-4 border-b border-white/10">
+      <div class="flex items-center justify-between pb-4 border-b border-slate-200 dark:border-white/10">
         <div>
-          <span class="text-xs font-mono text-gold-400 uppercase">Dopytový Košík</span>
-          <h3 class="text-2xl font-display font-bold text-white">Vaša nezáväzná cenová ponuka</h3>
+          <span class="text-xs font-mono text-gold-600 dark:text-gold-400 uppercase font-bold">Dopytový Košík</span>
+          <h3 class="text-2xl font-display font-bold text-slate-900 dark:text-white">Vaša nezáväzná cenová ponuka</h3>
         </div>
-        <button onclick="toggleInquiryModal()" class="text-slate-400 hover:text-white p-2 text-xl font-bold">✕</button>
+        <button onclick="toggleInquiryModal()" class="text-slate-400 hover:text-slate-700 dark:hover:text-white p-2 text-xl font-bold">✕</button>
       </div>
 
       <!-- Items List -->
-      <div id="cartItemsList" class="space-y-3 divide-y divide-white/5">
+      <div id="cartItemsList" class="space-y-3 divide-y divide-slate-100 dark:divide-white/5">
         <!-- Rendered by JS -->
       </div>
 
       <!-- Services in Cart -->
-      <div id="cartServices" class="p-3.5 rounded-xl bg-vault-900 border border-white/5 text-xs text-slate-300 hidden">
+      <div id="cartServices" class="p-3.5 rounded-xl bg-slate-100 dark:bg-vault-900 border border-slate-200 dark:border-white/5 text-xs text-slate-700 dark:text-slate-300 hidden">
         <div class="flex items-center justify-between">
           <span class="font-medium" id="cartServicesLabel">Doprava a kotvenie</span>
-          <span class="font-mono font-bold text-gold-400" id="cartServicesPrice">0 €</span>
+          <span class="font-mono font-bold text-gold-600 dark:text-gold-400" id="cartServicesPrice">0 €</span>
         </div>
       </div>
 
       <!-- Cart Totals -->
-      <div class="p-4 rounded-xl bg-vault-950 border border-gold-500/30 space-y-2">
-        <div class="flex justify-between text-xs text-slate-400">
+      <div class="p-4 rounded-xl bg-slate-50 dark:bg-vault-950 border border-gold-500/30 space-y-2">
+        <div class="flex justify-between text-xs text-slate-500 dark:text-slate-400">
           <span>Suma bez DPH:</span>
-          <span class="font-mono text-slate-300" id="cartSubtotal">0 €</span>
+          <span class="font-mono text-slate-700 dark:text-slate-300" id="cartSubtotal">0 €</span>
         </div>
-        <div class="flex justify-between text-xs text-slate-400">
+        <div class="flex justify-between text-xs text-slate-500 dark:text-slate-400">
           <span>DPH (20%):</span>
-          <span class="font-mono text-slate-300" id="cartVat">0 €</span>
+          <span class="font-mono text-slate-700 dark:text-slate-300" id="cartVat">0 €</span>
         </div>
-        <div class="flex justify-between text-base font-bold text-white pt-2 border-t border-white/10">
+        <div class="flex justify-between text-base font-bold text-slate-900 dark:text-white pt-2 border-t border-slate-200 dark:border-white/10">
           <span>Predpokladaná cena s DPH:</span>
-          <span class="font-mono text-gold-400 text-xl" id="cartTotal">0 €</span>
+          <span class="font-mono text-gold-600 dark:text-gold-400 text-xl font-extrabold" id="cartTotal">0 €</span>
         </div>
       </div>
 
       <!-- Inquiry Submission Form -->
       <form onsubmit="submitInquiryCart(event)" class="space-y-4 pt-2">
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-          <input type="text" id="cartName" required placeholder="Vaše Meno / Spoločnosť *" class="bg-vault-850 border border-white/10 rounded-xl px-3.5 py-2.5 text-xs text-white focus:outline-none focus:border-gold-500">
-          <input type="tel" id="cartPhone" required placeholder="Telefón *" class="bg-vault-850 border border-white/10 rounded-xl px-3.5 py-2.5 text-xs text-white focus:outline-none focus:border-gold-500">
+          <input type="text" id="cartName" required placeholder="Vaše Meno / Spoločnosť *" class="bg-slate-50 dark:bg-vault-850 border border-slate-200 dark:border-white/10 rounded-xl px-3.5 py-2.5 text-xs text-slate-900 dark:text-white focus:outline-none focus:border-gold-500">
+          <input type="tel" id="cartPhone" required placeholder="Telefón *" class="bg-slate-50 dark:bg-vault-850 border border-slate-200 dark:border-white/10 rounded-xl px-3.5 py-2.5 text-xs text-slate-900 dark:text-white focus:outline-none focus:border-gold-500">
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-          <input type="email" id="cartEmail" required placeholder="E-mail *" class="bg-vault-850 border border-white/10 rounded-xl px-3.5 py-2.5 text-xs text-white focus:outline-none focus:border-gold-500">
-          <input type="text" id="cartAddress" placeholder="Mesto / PSČ doručenia" class="bg-vault-850 border border-white/10 rounded-xl px-3.5 py-2.5 text-xs text-white focus:outline-none focus:border-gold-500">
+          <input type="email" id="cartEmail" required placeholder="E-mail *" class="bg-slate-50 dark:bg-vault-850 border border-slate-200 dark:border-white/10 rounded-xl px-3.5 py-2.5 text-xs text-slate-900 dark:text-white focus:outline-none focus:border-gold-500">
+          <input type="text" id="cartAddress" placeholder="Mesto / PSČ doručenia" class="bg-slate-50 dark:bg-vault-850 border border-slate-200 dark:border-white/10 rounded-xl px-3.5 py-2.5 text-xs text-slate-900 dark:text-white focus:outline-none focus:border-gold-500">
         </div>
-        <textarea id="cartNotes" rows="2" placeholder="Doplňujúca poznámka (požadovaný zámok, termín, poschodie...)" class="w-full bg-vault-850 border border-white/10 rounded-xl px-3.5 py-2.5 text-xs text-white focus:outline-none focus:border-gold-500"></textarea>
+        <textarea id="cartNotes" rows="2" placeholder="Doplňujúca poznámka (požadovaný zámok, termín, poschodie...)" class="w-full bg-slate-50 dark:bg-vault-850 border border-slate-200 dark:border-white/10 rounded-xl px-3.5 py-2.5 text-xs text-slate-900 dark:text-white focus:outline-none focus:border-gold-500"></textarea>
 
         <div class="flex gap-3">
-          <button type="submit" class="flex-1 py-3 rounded-xl bg-gold-500 hover:bg-gold-400 text-vault-950 font-bold text-xs uppercase tracking-wider transition-colors">
+          <button type="submit" class="flex-1 py-3 rounded-xl bg-gold-500 hover:bg-gold-400 text-white font-bold text-xs uppercase tracking-wider transition-colors shadow-sm">
             Odoslať dopyt na ponuku
           </button>
-          <button type="button" onclick="printQuote()" class="px-4 py-3 rounded-xl bg-vault-800 hover:bg-vault-700 text-slate-300 text-xs font-semibold flex items-center gap-1.5 transition-colors" title="Vytlačiť ponuku">
+          <button type="button" onclick="printQuote()" class="px-4 py-3 rounded-xl bg-slate-200 dark:bg-vault-800 hover:bg-slate-300 dark:hover:bg-vault-700 text-slate-700 dark:text-slate-300 text-xs font-semibold flex items-center gap-1.5 transition-colors" title="Vytlačiť ponuku">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path></svg>
             Tlačiť
           </button>
@@ -1501,7 +1551,7 @@
   </div>
 
   <!-- Notification Toast -->
-  <div id="toast" class="fixed bottom-5 right-5 z-50 hidden px-5 py-3 rounded-xl bg-vault-800 border border-gold-500/50 text-white text-xs font-medium shadow-2xl flex items-center gap-2 transform translate-y-2 transition-all">
+  <div id="toast" class="fixed bottom-5 right-5 z-50 hidden px-5 py-3 rounded-xl bg-slate-900 text-white dark:bg-vault-800 dark:text-white border border-gold-500/50 text-xs font-medium shadow-2xl flex items-center gap-2 transform translate-y-2 transition-all">
     <span class="text-gold-400">✓</span>
     <span id="toastMsg">Produkt pridaný do dopytu</span>
   </div>
@@ -3332,7 +3382,23 @@
       renderProducts();
       updateCompareBadge();
       updateCartBadge();
+      updateThemeUI();
     });
+
+    // THEME MANAGEMENT (Default is Light)
+    function toggleTheme() {
+      const isDark = document.documentElement.classList.toggle('dark');
+      localStorage.setItem('eurotrezor_theme', isDark ? 'dark' : 'light');
+      updateThemeUI();
+    }
+
+    function updateThemeUI() {
+      const isDark = document.documentElement.classList.contains('dark');
+      const icon = document.getElementById('themeIcon');
+      const text = document.getElementById('themeText');
+      if (icon) icon.textContent = isDark ? '☀️' : '🌙';
+      if (text) text.textContent = isDark ? 'Svetlý režim' : 'Tmavý režim';
+    }
 
     // Filtering logic
     function applyFilters() {
@@ -3349,11 +3415,11 @@
     function setSeriesFilter(series) {
       currentSeries = series;
       document.querySelectorAll('.series-btn').forEach(btn => {
-        btn.classList.remove('active', 'bg-gold-500', 'text-vault-950');
-        btn.classList.add('bg-vault-850', 'text-slate-300');
+        btn.classList.remove('active', 'bg-gold-500', 'text-white');
+        btn.classList.add('bg-slate-100', 'dark:bg-vault-850', 'text-slate-700', 'dark:text-slate-300');
       });
-      event.target.classList.add('active', 'bg-gold-500', 'text-vault-950');
-      event.target.classList.remove('bg-vault-850', 'text-slate-300');
+      event.target.classList.add('active', 'bg-gold-500', 'text-white');
+      event.target.classList.remove('bg-slate-100', 'dark:bg-vault-850', 'text-slate-700', 'dark:text-slate-300');
       applyFilters();
     }
 
@@ -3377,10 +3443,10 @@
       document.getElementById('fireOnlyFilter').checked = false;
       document.getElementById('sortSelect').value = 'price_asc';
       document.querySelectorAll('.series-btn').forEach(btn => {
-        btn.classList.remove('active', 'bg-gold-500', 'text-vault-950');
-        btn.classList.add('bg-vault-850', 'text-slate-300');
+        btn.classList.remove('active', 'bg-gold-500', 'text-white');
+        btn.classList.add('bg-slate-100', 'dark:bg-vault-850', 'text-slate-700', 'dark:text-slate-300');
       });
-      document.querySelector('#seriesFilters button').classList.add('active', 'bg-gold-500', 'text-vault-950');
+      document.querySelector('#seriesFilters button').classList.add('active', 'bg-gold-500', 'text-white');
       applyFilters();
     }
 
@@ -3389,24 +3455,22 @@
       const gridBtn = document.getElementById('viewGridBtn');
       const listBtn = document.getElementById('viewListBtn');
       if (mode === 'grid') {
-        gridBtn.className = 'p-1.5 rounded bg-vault-700 text-white';
-        listBtn.className = 'p-1.5 rounded text-slate-400 hover:text-white';
+        gridBtn.className = 'p-1.5 rounded bg-white dark:bg-vault-700 text-slate-900 dark:text-white shadow-sm';
+        listBtn.className = 'p-1.5 rounded text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white';
       } else {
-        listBtn.className = 'p-1.5 rounded bg-vault-700 text-white';
-        gridBtn.className = 'p-1.5 rounded text-slate-400 hover:text-white';
+        listBtn.className = 'p-1.5 rounded bg-white dark:bg-vault-700 text-slate-900 dark:text-white shadow-sm';
+        gridBtn.className = 'p-1.5 rounded text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white';
       }
       renderProducts();
     }
 
     function getFilteredProducts() {
       return ALL_PRODUCTS.filter(p => {
-        // Series match
         if (currentSeries !== 'ALL') {
           if (currentSeries === 'Stenové' && p.series !== 'Stenové') return false;
           if (currentSeries === 'Nábytkové' && p.series !== 'Nábytkové') return false;
           if (['AL','AN','AP','BG','BM','CM'].includes(currentSeries) && p.series !== currentSeries) return false;
         }
-        // Grade match
         if (currentGrade !== 'ALL') {
           if (currentGrade === 'Stenové' && p.series !== 'Stenové') return false;
           if (currentGrade === 'Nábytkové' && p.series !== 'Nábytkové') return false;
@@ -3414,9 +3478,7 @@
           if (currentGrade.includes('II.') && !p.grade.includes('II.')) return false;
           if (currentGrade.includes('III.') && !p.grade.includes('III.')) return false;
         }
-        // Fire match
         if (fireOnly && !p.fire) return false;
-        // Search query
         if (searchQuery) {
           const hay = (p.name + ' ' + p.series + ' ' + p.grade + ' ' + p.vonkajsieRozmery + ' ' + p.vaha + ' ' + (p.fireBadge || '')).toLowerCase();
           if (!hay.includes(searchQuery)) return false;
@@ -3448,30 +3510,30 @@
       if (viewMode === 'grid') {
         container.className = 'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6';
         container.innerHTML = filtered.map(p => `
-          <div class="glass-card rounded-2xl overflow-hidden flex flex-col justify-between border-glow group transition-all duration-300">
+          <div class="theme-card rounded-2xl overflow-hidden flex flex-col justify-between border-glow group transition-all duration-300">
             <div>
               <!-- Image & Badges Header -->
-              <div class="relative h-52 bg-gradient-to-b from-vault-800 to-vault-900 flex items-center justify-center p-4 border-b border-white/5 overflow-hidden">
-                <img src="${p.localImg || p.img}" alt="${p.name}" loading="lazy" class="max-h-full max-w-full object-contain filter drop-shadow-[0_8px_16px_rgba(0,0,0,0.6)] group-hover:scale-105 transition-transform duration-300">
+              <div class="relative h-52 bg-slate-100 dark:bg-gradient-to-b dark:from-vault-800 dark:to-vault-900 flex items-center justify-center p-4 border-b border-slate-200 dark:border-white/5 overflow-hidden">
+                <img src="${p.localImg || p.img}" alt="${p.name}" loading="lazy" class="max-h-full max-w-full object-contain filter drop-shadow-[0_4px_10px_rgba(0,0,0,0.1)] dark:drop-shadow-[0_8px_16px_rgba(0,0,0,0.6)] group-hover:scale-105 transition-transform duration-300">
                 
                 <!-- Grade Badge Top Left -->
                 <div class="absolute top-3 left-3 flex flex-col gap-1.5">
                   <span class="px-2 py-0.5 rounded text-[10px] font-bold font-mono tracking-wider ${
-                    p.gradeBadge === 'III. Trieda' ? 'bg-gold-500 text-vault-950' : 
-                    p.gradeBadge === 'II. Trieda' ? 'bg-amber-500/20 text-amber-300 border border-amber-500/30' : 
-                    'bg-blue-500/20 text-blue-300 border border-blue-500/30'
+                    p.gradeBadge === 'III. Trieda' ? 'bg-gold-500 text-white' : 
+                    p.gradeBadge === 'II. Trieda' ? 'bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 border border-amber-300 dark:border-amber-500/30' : 
+                    'bg-blue-100 dark:bg-blue-500/20 text-blue-800 dark:text-blue-300 border border-blue-200 dark:border-blue-500/30'
                   }">
                     ${p.gradeBadge}
                   </span>
                   ${p.fireBadge ? `
-                    <span class="px-2 py-0.5 rounded text-[10px] font-bold font-mono bg-red-950/90 text-red-300 border border-red-800 flex items-center gap-1">
+                    <span class="px-2 py-0.5 rounded text-[10px] font-bold font-mono bg-red-100 dark:bg-red-950/90 text-red-700 dark:text-red-300 border border-red-200 dark:border-red-800 flex items-center gap-1">
                       🔥 ${p.fireBadge}
                     </span>
                   ` : ''}
                 </div>
 
                 <!-- Compare Action Button Top Right -->
-                <button onclick="toggleCompareItem('${p.id}')" title="Porovnať" class="absolute top-3 right-3 p-1.5 rounded-lg bg-vault-950/80 hover:bg-gold-500 hover:text-vault-950 text-slate-300 border border-white/10 transition-colors">
+                <button onclick="toggleCompareItem('${p.id}')" title="Porovnať" class="absolute top-3 right-3 p-1.5 rounded-lg bg-white/90 dark:bg-vault-950/80 hover:bg-gold-500 hover:text-white text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-white/10 transition-colors shadow-sm">
                   <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
                 </button>
               </div>
@@ -3480,32 +3542,32 @@
               <div class="p-5 space-y-3">
                 <div class="flex items-start justify-between gap-2">
                   <div>
-                    <span class="text-[10px] font-mono text-slate-400 uppercase tracking-widest">Séria ${p.series}</span>
-                    <h3 class="text-xl font-display font-extrabold text-white group-hover:text-gold-400 transition-colors">${p.name}</h3>
+                    <span class="text-[10px] font-mono text-slate-500 dark:text-slate-400 uppercase tracking-widest">Séria ${p.series}</span>
+                    <h3 class="text-xl font-display font-extrabold text-slate-900 dark:text-white group-hover:text-gold-600 dark:group-hover:text-gold-400 transition-colors">${p.name}</h3>
                   </div>
                   <div class="text-right">
-                    <span class="text-[10px] text-slate-400 block">Cena s DPH</span>
-                    <div class="text-lg font-tech font-bold text-white">${p.price}</div>
+                    <span class="text-[10px] text-slate-500 dark:text-slate-400 block">Cena s DPH</span>
+                    <div class="text-lg font-tech font-bold text-slate-900 dark:text-white">${p.price}</div>
                   </div>
                 </div>
 
                 <!-- Dimensions & Specs Pill Grid -->
-                <div class="space-y-1.5 text-xs bg-vault-950/70 p-3 rounded-xl border border-white/5">
+                <div class="space-y-1.5 text-xs bg-slate-50 dark:bg-vault-950/70 p-3 rounded-xl border border-slate-200 dark:border-white/5">
                   <div class="flex justify-between">
-                    <span class="text-slate-400">Rozmery:</span>
-                    <span class="font-mono text-slate-200 text-[11px]">${p.vonkajsieRozmery}</span>
+                    <span class="text-slate-500 dark:text-slate-400">Rozmery:</span>
+                    <span class="font-mono text-slate-800 dark:text-slate-200 text-[11px] font-semibold">${p.vonkajsieRozmery}</span>
                   </div>
                   <div class="flex justify-between">
-                    <span class="text-slate-400">Hmotnosť:</span>
-                    <span class="font-mono text-slate-200 font-semibold">${p.vaha}</span>
+                    <span class="text-slate-500 dark:text-slate-400">Hmotnosť:</span>
+                    <span class="font-mono text-slate-800 dark:text-slate-200 font-semibold">${p.vaha}</span>
                   </div>
                   <div class="flex justify-between">
-                    <span class="text-slate-400">Objem:</span>
-                    <span class="font-mono text-slate-200">${p.objem}</span>
+                    <span class="text-slate-500 dark:text-slate-400">Objem:</span>
+                    <span class="font-mono text-slate-800 dark:text-slate-200">${p.objem}</span>
                   </div>
-                  <div class="flex justify-between pt-1 border-t border-white/5 text-[11px]">
-                    <span class="text-slate-400">Krytie:</span>
-                    <span class="text-emerald-400 font-medium">${p.insurance}</span>
+                  <div class="flex justify-between pt-1 border-t border-slate-200 dark:border-white/5 text-[11px]">
+                    <span class="text-slate-500 dark:text-slate-400">Krytie:</span>
+                    <span class="text-emerald-600 dark:text-emerald-400 font-medium">${p.insurance}</span>
                   </div>
                 </div>
               </div>
@@ -3513,10 +3575,10 @@
 
             <!-- Footer Buttons -->
             <div class="p-5 pt-0 flex gap-2">
-              <button onclick="openProductModal('${p.id}')" class="flex-1 py-2 rounded-xl bg-vault-800 hover:bg-vault-700 text-slate-200 text-xs font-semibold transition-colors">
+              <button onclick="openProductModal('${p.id}')" class="flex-1 py-2 rounded-xl bg-slate-100 dark:bg-vault-800 hover:bg-slate-200 dark:hover:bg-vault-700 text-slate-800 dark:text-slate-200 text-xs font-semibold transition-colors">
                 Detail
               </button>
-              <button onclick="addToCart('${p.id}')" class="px-3.5 py-2 rounded-xl bg-gold-500 hover:bg-gold-400 text-vault-950 font-bold text-xs transition-colors flex items-center gap-1" title="Pridať do dopytu">
+              <button onclick="addToCart('${p.id}')" class="px-3.5 py-2 rounded-xl bg-gold-500 hover:bg-gold-400 text-white font-bold text-xs transition-colors flex items-center gap-1 shadow-sm" title="Pridať do dopytu">
                 <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"></path></svg>
                 <span>Dopyt</span>
               </button>
@@ -3527,18 +3589,18 @@
         // List View Mode
         container.className = 'space-y-3';
         container.innerHTML = filtered.map(p => `
-          <div class="glass-card rounded-xl p-4 flex flex-col md:flex-row items-center justify-between gap-4 border-glow">
+          <div class="theme-card rounded-xl p-4 flex flex-col md:flex-row items-center justify-between gap-4 border-glow">
             <div class="flex items-center gap-4 w-full md:w-auto">
-              <div class="w-16 h-16 rounded-lg bg-vault-900 border border-white/5 flex items-center justify-center p-1 shrink-0">
+              <div class="w-16 h-16 rounded-lg bg-slate-100 dark:bg-vault-900 border border-slate-200 dark:border-white/5 flex items-center justify-center p-1 shrink-0">
                 <img src="${p.localImg || p.img}" alt="${p.name}" class="max-h-full max-w-full object-contain">
               </div>
               <div>
                 <div class="flex items-center gap-2">
-                  <h4 class="font-display font-bold text-white text-lg">${p.name}</h4>
-                  <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-slate-800 text-slate-300">${p.gradeBadge}</span>
-                  ${p.fireBadge ? '<span class="text-[10px] px-1.5 py-0.5 rounded bg-red-950 text-red-300">🔥 Ohňovzdorný</span>' : ''}
+                  <h4 class="font-display font-bold text-slate-900 dark:text-white text-lg">${p.name}</h4>
+                  <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-slate-200 dark:bg-slate-800 text-slate-800 dark:text-slate-300">${p.gradeBadge}</span>
+                  ${p.fireBadge ? '<span class="text-[10px] px-1.5 py-0.5 rounded bg-red-100 dark:bg-red-950 text-red-700 dark:text-red-300 font-bold">🔥 Ohňovzdorný</span>' : ''}
                 </div>
-                <div class="text-xs text-slate-400 flex flex-wrap gap-4 mt-1 font-mono">
+                <div class="text-xs text-slate-500 dark:text-slate-400 flex flex-wrap gap-4 mt-1 font-mono">
                   <span>Rozmery: ${p.vonkajsieRozmery}</span>
                   <span>Váha: ${p.vaha}</span>
                   <span>Objem: ${p.objem}</span>
@@ -3548,17 +3610,17 @@
 
             <div class="flex items-center justify-between md:justify-end gap-5 w-full md:w-auto">
               <div class="text-right">
-                <div class="text-lg font-tech font-bold text-gold-400">${p.price}</div>
-                <span class="text-[10px] text-slate-400">s DPH</span>
+                <div class="text-lg font-tech font-bold text-gold-600 dark:text-gold-400">${p.price}</div>
+                <span class="text-[10px] text-slate-500 dark:text-slate-400">s DPH</span>
               </div>
               <div class="flex gap-2">
-                <button onclick="toggleCompareItem('${p.id}')" class="p-2 rounded-lg bg-vault-800 hover:bg-vault-700 text-slate-300 text-xs">
+                <button onclick="toggleCompareItem('${p.id}')" class="p-2 rounded-lg bg-slate-100 dark:bg-vault-800 hover:bg-slate-200 dark:hover:bg-vault-700 text-slate-700 dark:text-slate-300 text-xs">
                   Porovnať
                 </button>
-                <button onclick="openProductModal('${p.id}')" class="px-3.5 py-2 rounded-lg bg-vault-700 hover:bg-vault-600 text-white text-xs font-medium">
+                <button onclick="openProductModal('${p.id}')" class="px-3.5 py-2 rounded-lg bg-slate-200 dark:bg-vault-700 hover:bg-slate-300 dark:hover:bg-vault-600 text-slate-800 dark:text-white text-xs font-medium">
                   Detail
                 </button>
-                <button onclick="addToCart('${p.id}')" class="px-4 py-2 rounded-lg bg-gold-500 hover:bg-gold-400 text-vault-950 font-bold text-xs uppercase">
+                <button onclick="addToCart('${p.id}')" class="px-4 py-2 rounded-lg bg-gold-500 hover:bg-gold-400 text-white font-bold text-xs uppercase shadow-sm">
                   Dopyt
                 </button>
               </div>
@@ -3579,45 +3641,45 @@
       content.innerHTML = `
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <!-- Image -->
-          <div class="h-80 bg-vault-900 rounded-xl border border-white/5 flex items-center justify-center p-6 relative overflow-hidden">
-            <img src="${p.localImg || p.img}" alt="${p.name}" class="max-h-full max-w-full object-contain filter drop-shadow-[0_12px_24px_rgba(0,0,0,0.8)]">
+          <div class="h-80 bg-slate-100 dark:bg-vault-900 rounded-xl border border-slate-200 dark:border-white/5 flex items-center justify-center p-6 relative overflow-hidden">
+            <img src="${p.localImg || p.img}" alt="${p.name}" class="max-h-full max-w-full object-contain filter drop-shadow-[0_8px_16px_rgba(0,0,0,0.15)] dark:drop-shadow-[0_12px_24px_rgba(0,0,0,0.8)]">
             <div class="absolute top-3 left-3 flex flex-col gap-1.5">
-              <span class="px-2.5 py-1 rounded bg-gold-500 text-vault-950 font-mono font-bold text-xs">${p.gradeBadge}</span>
-              ${p.fireBadge ? `<span class="px-2 py-0.5 rounded bg-red-950 text-red-300 border border-red-800 font-bold text-xs">🔥 ${p.fireBadge}</span>` : ''}
+              <span class="px-2.5 py-1 rounded bg-gold-500 text-white font-mono font-bold text-xs">${p.gradeBadge}</span>
+              ${p.fireBadge ? `<span class="px-2 py-0.5 rounded bg-red-100 dark:bg-red-950 text-red-700 dark:text-red-300 border border-red-200 dark:border-red-800 font-bold text-xs">🔥 ${p.fireBadge}</span>` : ''}
             </div>
           </div>
 
           <!-- Specs & Config -->
           <div class="space-y-4">
             <div>
-              <span class="text-xs font-mono text-gold-400 uppercase tracking-widest">Séria ${p.series} | ${p.type}</span>
-              <h2 class="text-3xl font-display font-extrabold text-white mt-1">Wertheim ${p.name}</h2>
+              <span class="text-xs font-mono text-gold-600 dark:text-gold-400 font-bold uppercase tracking-widest">Séria ${p.series} | ${p.type}</span>
+              <h2 class="text-3xl font-display font-extrabold text-slate-900 dark:text-white mt-1">Wertheim ${p.name}</h2>
               <div class="flex items-center gap-3 mt-2">
-                <span class="text-2xl font-tech font-bold text-gold-400">${p.price}</span>
-                <span class="text-xs text-slate-400">vrátane DPH 20%</span>
+                <span class="text-2xl font-tech font-bold text-gold-600 dark:text-gold-400">${p.price}</span>
+                <span class="text-xs text-slate-500 dark:text-slate-400">vrátane DPH 20%</span>
               </div>
             </div>
 
             <!-- Parameters Grid -->
-            <div class="grid grid-cols-2 gap-2 text-xs bg-vault-900 p-3.5 rounded-xl border border-white/5 font-mono">
-              <div><span class="text-slate-400 block font-sans">Vonkajšie rozmery:</span> ${p.vonkajsieRozmery}</div>
-              <div><span class="text-slate-400 block font-sans">Vnútorné rozmery:</span> ${p.vnutorneRozmery}</div>
-              <div><span class="text-slate-400 block font-sans">Hmotnosť:</span> ${p.vaha}</div>
-              <div><span class="text-slate-400 block font-sans">Objem:</span> ${p.objem}</div>
-              <div><span class="text-slate-400 block font-sans">Poistné krytie:</span> ${p.insurance}</div>
-              <div><span class="text-slate-400 block font-sans">Doba dodania:</span> ${p.dobaDodania}</div>
+            <div class="grid grid-cols-2 gap-2 text-xs bg-slate-100 dark:bg-vault-900 p-3.5 rounded-xl border border-slate-200 dark:border-white/5 font-mono">
+              <div><span class="text-slate-500 dark:text-slate-400 block font-sans">Vonkajšie rozmery:</span> ${p.vonkajsieRozmery}</div>
+              <div><span class="text-slate-500 dark:text-slate-400 block font-sans">Vnútorné rozmery:</span> ${p.vnutorneRozmery}</div>
+              <div><span class="text-slate-500 dark:text-slate-400 block font-sans">Hmotnosť:</span> ${p.vaha}</div>
+              <div><span class="text-slate-500 dark:text-slate-400 block font-sans">Objem:</span> ${p.objem}</div>
+              <div><span class="text-slate-500 dark:text-slate-400 block font-sans">Poistné krytie:</span> ${p.insurance}</div>
+              <div><span class="text-slate-500 dark:text-slate-400 block font-sans">Doba dodania:</span> ${p.dobaDodania}</div>
             </div>
 
             <!-- Features -->
-            <div class="space-y-1.5 text-xs text-slate-300">
-              <div class="font-semibold text-white">Bezpečnostná výbava:</div>
-              ${p.features.map(f => `<div class="flex items-start gap-1.5"><span class="text-gold-500">✓</span><span>${f}</span></div>`).join('')}
+            <div class="space-y-1.5 text-xs text-slate-600 dark:text-slate-300">
+              <div class="font-semibold text-slate-900 dark:text-white">Bezpečnostná výbava:</div>
+              ${p.features.map(f => `<div class="flex items-start gap-1.5"><span class="text-gold-600 dark:text-gold-500">✓</span><span>${f}</span></div>`).join('')}
             </div>
 
             <!-- Lock Options inside modal -->
             <div class="pt-2">
-              <label class="block text-xs font-medium text-slate-300 mb-1">Voľba zámkového mechanizmu:</label>
-              <select id="modalLockSelect_${p.id}" class="w-full bg-vault-850 border border-white/10 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-gold-500">
+              <label class="block text-xs font-medium text-slate-700 dark:text-slate-300 mb-1">Voľba zámkového mechanizmu:</label>
+              <select id="modalLockSelect_${p.id}" class="w-full bg-slate-50 dark:bg-vault-850 border border-slate-200 dark:border-white/10 rounded-xl px-3 py-2 text-xs text-slate-900 dark:text-white focus:outline-none focus:border-gold-500">
                 <option value="key">Motýlkový kľúčový zámok CAWI (2 kľúče) [V cene 0 €]</option>
                 <option value="electronic">Elektronický kódový zámok M-LOCKS EM3520 (+240 €)</option>
                 <option value="dial">Mechanický otočný kombinačný číselník (+180 €)</option>
@@ -3627,10 +3689,10 @@
 
             <!-- Modal Action Buttons -->
             <div class="pt-2 flex gap-3">
-              <button onclick="addConfiguredToCart('${p.id}')" class="flex-1 py-3 rounded-xl bg-gold-500 hover:bg-gold-400 text-vault-950 font-bold text-xs uppercase tracking-wider transition-colors">
+              <button onclick="addConfiguredToCart('${p.id}')" class="flex-1 py-3 rounded-xl bg-gold-500 hover:bg-gold-400 text-white font-bold text-xs uppercase tracking-wider transition-colors shadow">
                 Pridať do dopytového košíka
               </button>
-              <button onclick="toggleCompareItem('${p.id}')" class="px-4 py-3 rounded-xl bg-vault-800 hover:bg-vault-700 text-slate-200 text-xs font-semibold">
+              <button onclick="toggleCompareItem('${p.id}')" class="px-4 py-3 rounded-xl bg-slate-100 dark:bg-vault-800 hover:bg-slate-200 dark:hover:bg-vault-700 text-slate-800 dark:text-slate-200 text-xs font-semibold">
                 Porovnať
               </button>
             </div>
@@ -3681,7 +3743,7 @@
     function renderCompareTable() {
       const container = document.getElementById('compareTableContainer');
       if (compareList.length === 0) {
-        container.innerHTML = '<div class="text-center py-10 text-slate-400 text-sm">Zatiaľ ste nevybrali žiadne modely na porovnanie. Kliknite na ikonu porovnania pri ľubovoľných 2 až 3 modeloch.</div>';
+        container.innerHTML = '<div class="text-center py-10 text-slate-500 dark:text-slate-400 text-sm">Zatiaľ ste nevybrali žiadne modely na porovnanie. Kliknite na ikonu porovnania pri ľubovoľných 2 až 3 modeloch.</div>';
         return;
       }
 
@@ -3690,58 +3752,58 @@
       container.innerHTML = `
         <table class="w-full text-left text-xs border-collapse">
           <thead>
-            <tr class="border-b border-white/10">
-              <th class="p-3 bg-vault-900 text-slate-400 font-medium w-40">Parameter</th>
+            <tr class="border-b border-slate-200 dark:border-white/10">
+              <th class="p-3 bg-slate-100 dark:bg-vault-900 text-slate-600 dark:text-slate-400 font-medium w-40">Parameter</th>
               ${items.map(p => `
-                <th class="p-3 bg-vault-850 text-white font-bold text-center border-l border-white/5">
+                <th class="p-3 bg-slate-50 dark:bg-vault-850 text-slate-900 dark:text-white font-bold text-center border-l border-slate-200 dark:border-white/5">
                   <div class="h-24 flex items-center justify-center p-2 mb-2">
                     <img src="${p.localImg || p.img}" alt="${p.name}" class="max-h-full max-w-full object-contain">
                   </div>
-                  <div class="text-sm font-display text-white">${p.name}</div>
-                  <div class="text-gold-400 font-tech font-bold text-base mt-1">${p.price}</div>
-                  <button onclick="toggleCompareItem('${p.id}')" class="text-[10px] text-red-400 hover:underline mt-1">Odobrať</button>
+                  <div class="text-sm font-display">${p.name}</div>
+                  <div class="text-gold-600 dark:text-gold-400 font-tech font-bold text-base mt-1">${p.price}</div>
+                  <button onclick="toggleCompareItem('${p.id}')" class="text-[10px] text-red-600 dark:text-red-400 hover:underline mt-1">Odobrať</button>
                 </th>
               `).join('')}
             </tr>
           </thead>
-          <tbody class="divide-y divide-white/5 font-mono">
+          <tbody class="divide-y divide-slate-200 dark:divide-white/5 font-mono">
             <tr>
-              <td class="p-3 text-slate-400 font-sans">Bezpečnostná trieda</td>
-              ${items.map(p => `<td class="p-3 text-center text-slate-200 border-l border-white/5">${p.gradeBadge}</td>`).join('')}
+              <td class="p-3 text-slate-600 dark:text-slate-400 font-sans">Bezpečnostná trieda</td>
+              ${items.map(p => `<td class="p-3 text-center text-slate-800 dark:text-slate-200 border-l border-slate-200 dark:border-white/5">${p.gradeBadge}</td>`).join('')}
             </tr>
             <tr>
-              <td class="p-3 text-slate-400 font-sans">Požiarna odolnosť</td>
-              ${items.map(p => `<td class="p-3 text-center border-l border-white/5 ${p.fireBadge ? 'text-red-400 font-bold' : 'text-slate-400'}">${p.fireBadge || 'Základná'}</td>`).join('')}
+              <td class="p-3 text-slate-600 dark:text-slate-400 font-sans">Požiarna odolnosť</td>
+              ${items.map(p => `<td class="p-3 text-center border-l border-slate-200 dark:border-white/5 ${p.fireBadge ? 'text-red-600 dark:text-red-400 font-bold' : 'text-slate-500'}>${p.fireBadge || 'Základná'}</td>`).join('')}
             </tr>
             <tr>
-              <td class="p-3 text-slate-400 font-sans">Vonkajšie rozmery (VxŠxH)</td>
-              ${items.map(p => `<td class="p-3 text-center text-slate-200 border-l border-white/5">${p.vonkajsieRozmery}</td>`).join('')}
+              <td class="p-3 text-slate-600 dark:text-slate-400 font-sans">Vonkajšie rozmery (VxŠxH)</td>
+              ${items.map(p => `<td class="p-3 text-center text-slate-800 dark:text-slate-200 border-l border-slate-200 dark:border-white/5">${p.vonkajsieRozmery}</td>`).join('')}
             </tr>
             <tr>
-              <td class="p-3 text-slate-400 font-sans">Vnútorné rozmery (VxŠxH)</td>
-              ${items.map(p => `<td class="p-3 text-center text-slate-200 border-l border-white/5">${p.vnutorneRozmery}</td>`).join('')}
+              <td class="p-3 text-slate-600 dark:text-slate-400 font-sans">Vnútorné rozmery (VxŠxH)</td>
+              ${items.map(p => `<td class="p-3 text-center text-slate-800 dark:text-slate-200 border-l border-slate-200 dark:border-white/5">${p.vnutorneRozmery}</td>`).join('')}
             </tr>
             <tr>
-              <td class="p-3 text-slate-400 font-sans">Hmotnosť</td>
-              ${items.map(p => `<td class="p-3 text-center text-emerald-400 font-bold border-l border-white/5">${p.vaha}</td>`).join('')}
+              <td class="p-3 text-slate-600 dark:text-slate-400 font-sans">Hmotnosť</td>
+              ${items.map(p => `<td class="p-3 text-center text-emerald-600 dark:text-emerald-400 font-bold border-l border-slate-200 dark:border-white/5">${p.vaha}</td>`).join('')}
             </tr>
             <tr>
-              <td class="p-3 text-slate-400 font-sans">Vnútorný objem</td>
-              ${items.map(p => `<td class="p-3 text-center text-slate-200 border-l border-white/5">${p.objem}</td>`).join('')}
+              <td class="p-3 text-slate-600 dark:text-slate-400 font-sans">Vnútorný objem</td>
+              ${items.map(p => `<td class="p-3 text-center text-slate-800 dark:text-slate-200 border-l border-slate-200 dark:border-white/5">${p.objem}</td>`).join('')}
             </tr>
             <tr>
-              <td class="p-3 text-slate-400 font-sans">Odporúčané poistné krytie</td>
-              ${items.map(p => `<td class="p-3 text-center text-gold-400 border-l border-white/5">${p.insurance}</td>`).join('')}
+              <td class="p-3 text-slate-600 dark:text-slate-400 font-sans">Odporúčané poistné krytie</td>
+              ${items.map(p => `<td class="p-3 text-center text-gold-600 dark:text-gold-400 border-l border-slate-200 dark:border-white/5 font-bold">${p.insurance}</td>`).join('')}
             </tr>
             <tr>
-              <td class="p-3 text-slate-400 font-sans">Dodacia lehota</td>
-              ${items.map(p => `<td class="p-3 text-center text-slate-300 border-l border-white/5 font-sans">${p.dobaDodania}</td>`).join('')}
+              <td class="p-3 text-slate-600 dark:text-slate-400 font-sans">Dodacia lehota</td>
+              ${items.map(p => `<td class="p-3 text-center text-slate-700 dark:text-slate-300 border-l border-slate-200 dark:border-white/5 font-sans">${p.dobaDodania}</td>`).join('')}
             </tr>
             <tr>
-              <td class="p-3 text-slate-400 font-sans">Akcia</td>
+              <td class="p-3 text-slate-600 dark:text-slate-400 font-sans">Akcia</td>
               ${items.map(p => `
-                <td class="p-3 text-center border-l border-white/5">
-                  <button onclick="addToCart('${p.id}')" class="px-3 py-1.5 rounded-lg bg-gold-500 hover:bg-gold-400 text-vault-950 font-bold font-sans text-xs uppercase">
+                <td class="p-3 text-center border-l border-slate-200 dark:border-white/5">
+                  <button onclick="addToCart('${p.id}')" class="px-3 py-1.5 rounded-lg bg-gold-500 hover:bg-gold-400 text-white font-bold font-sans text-xs uppercase shadow-sm">
                     Dopyt
                   </button>
                 </td>
@@ -3824,7 +3886,7 @@
     function renderCartItems() {
       const container = document.getElementById('cartItemsList');
       if (cartList.length === 0 && !selectedServices) {
-        container.innerHTML = '<div class="text-center py-8 text-slate-400 text-sm">Váš dopytový košík je prázdny. Vyberte si ľubovoľný trezor z katalógu.</div>';
+        container.innerHTML = '<div class="text-center py-8 text-slate-500 dark:text-slate-400 text-sm">Váš dopytový košík je prázdny. Vyberte si ľubovoľný trezor z katalógu.</div>';
         document.getElementById('cartSubtotal').textContent = '0 €';
         document.getElementById('cartVat').textContent = '0 €';
         document.getElementById('cartTotal').textContent = '0 €';
@@ -3834,12 +3896,12 @@
       container.innerHTML = cartList.map((item, idx) => `
         <div class="py-3 flex items-center justify-between gap-4">
           <div>
-            <div class="font-display font-bold text-white text-sm">Wertheim ${item.name}</div>
-            <div class="text-xs text-slate-400">${item.lockName}</div>
+            <div class="font-display font-bold text-slate-900 dark:text-white text-sm">Wertheim ${item.name}</div>
+            <div class="text-xs text-slate-500 dark:text-slate-400">${item.lockName}</div>
           </div>
           <div class="flex items-center gap-3">
-            <span class="font-mono font-bold text-gold-400 text-sm">${item.priceNum.toLocaleString()} €</span>
-            <button type="button" onclick="removeFromCart(${idx})" class="text-red-400 hover:text-red-300 text-xs">✕</button>
+            <span class="font-mono font-bold text-gold-600 dark:text-gold-400 text-sm">${item.priceNum.toLocaleString()} €</span>
+            <button type="button" onclick="removeFromCart(${idx})" class="text-red-500 hover:text-red-700 text-xs">✕</button>
           </div>
         </div>
       `).join('');
@@ -3974,13 +4036,13 @@
         document.getElementById('step2').classList.remove('hidden');
         document.getElementById('wizardStepNumber').textContent = '2';
         document.getElementById('wizardStepTitle').textContent = 'Akú poistnú hodnotu požadujete?';
-        document.getElementById('wizardDots').children[1].classList.replace('bg-slate-800', 'bg-gold-500');
+        document.getElementById('wizardDots').children[1].className = 'w-8 h-2 rounded-full bg-gold-500';
       } else if (key === 'limit') {
         document.getElementById('step2').classList.add('hidden');
         document.getElementById('step3').classList.remove('hidden');
         document.getElementById('wizardStepNumber').textContent = '3';
         document.getElementById('wizardStepTitle').textContent = 'Kde má byť trezor osadený?';
-        document.getElementById('wizardDots').children[2].classList.replace('bg-slate-800', 'bg-gold-500');
+        document.getElementById('wizardDots').children[2].className = 'w-8 h-2 rounded-full bg-gold-500';
       } else if (key === 'install') {
         document.getElementById('step3').classList.add('hidden');
         showWizardResult();
@@ -4045,8 +4107,8 @@
       document.getElementById('step1').classList.remove('hidden');
       document.getElementById('wizardStepNumber').textContent = '1';
       document.getElementById('wizardStepTitle').textContent = 'Aký je primárny účel trezoru?';
-      document.getElementById('wizardDots').children[1].classList.replace('bg-gold-500', 'bg-slate-800');
-      document.getElementById('wizardDots').children[2].classList.replace('bg-gold-500', 'bg-slate-800');
+      document.getElementById('wizardDots').children[1].className = 'w-8 h-2 rounded-full bg-slate-200 dark:bg-slate-800';
+      document.getElementById('wizardDots').children[2].className = 'w-8 h-2 rounded-full bg-slate-200 dark:bg-slate-800';
     }
 
     // FAQ Accordion

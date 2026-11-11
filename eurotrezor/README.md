@@ -23,7 +23,7 @@ Moderný, responzívny a technologicky vycibrený redizajn oficiálneho slovensk
 
 | Oblasť | Pôvodný stav (PrestaShop 1.6) | Nový Redizajn 2026 |
 |---|---|---|
-| **Vizuálna identita** | Zastaraný e-shopový layout z roku 2014, sivé pozadia, malé písmo, neprehľadný ľavý stĺpec kategórií. | **Moderný High-Security vizuál** inšpirovaný titánom, pancierovou oceľou a trezorovým zlatom (*Vault Obsidian, Titanium Slate, Security Gold*). |
+| **Vizuálna identita** | Zastaraný e-shopový layout z roku 2014, sivé pozadia, malé písmo, neprehľadný ľavý stĺpec kategórií. | **Moderný High-Security vizuál s predvolenou Svetlou témou (Light Theme Default)** a prepínateľným Tmavým režimom (*Vault Obsidian & Titanium Slate*), animovaným trezorovým ciferníkom a skleneným morfizmom. |
 | **Prehliadanie produktov** | Pomalé preklikávanie medzi kategóriami, chýbajúce dynamické filtre, nutnosť otvárať každú podstránku. | **Bleskový dynamický katalóg všetkých 54 certifikovaných modelov Wertheim** s okamžitým filtrovaním podľa série, triedy, požiarnej odolnosti, hmotnosti a ceny. |
 | **Sprievodca výberom trezoru** | Žiadna interaktívna pomoc — zákazník musel vopred poznať bezpečnostné triedy a normy. | **Inteligentný 3-krokový Sprievodca (Wizard)**: podľa účelu (dom, firma, zbrane, klenoty), požadovanej poistnej hodnoty a typu osadenia okamžite odporučí optimálny model a triedu. |
 | **Zámkové technológie** | Iba statický text s málo zrozumiteľným vysvetlením rozdielov. | **Interaktívny showcase zámkov (Kľúč vs. Kód vs. Číselník)** vrátane **funkčného simulátora klávesnice M-LOCKS EM3520** s testovacím kódom `123456`. |
@@ -34,13 +34,20 @@ Moderný, responzívny a technologicky vycibrený redizajn oficiálneho slovensk
 
 ---
 
-## 🎨 Dizajnový systém
+## 🎨 Dizajnový systém & Režimy zobrazenia
 
-- **Farby:**
+- **Svetlý režim (Light Theme — Predvolený):**
+  - Čisté biele a titánovo-strieborné plochy (`#ffffff`, `#f8fafc`, `#f1f5f9`).
+  - Hlboké antracitové a tmavomodré písmo pre maximálnu čitateľnosť (`#0f172a`, `#1e293b`).
+  - Zlaté bezpečnostné akcenty Wertheim (`#d97706`, `#b45309`).
+  - Jemné tiene zvýrazňujúce masívnosť a 3D hĺbku trezorov.
+- **Tmavý režim (Dark Theme):**
   - `Vault Slate / Obsidian` (`#070a12`, `#0b0f19`, `#162035`) — Hlboká pancierová čerň a titánovo-grafitové odtiene.
   - `Security Gold / Brass` (`#f59e0b`, `#d97706`, `#b45309`) — Zlaté a mosadzné akcenty trezorových rozvorov a certifikácií.
   - `Fire Shield Red` (`#ef4444`, `#991b1b`) — Protipožiarne štítky LFS 30P / 60P testované do 1 090 °C.
   - `Safety Emerald` (`#10b981`) — Garantované poistné krytia a schválené certifikácie.
+- **Prepínač tém:**
+  - Umiestnený priamo v hlavičke s okamžitým prepínaním (ikony ☀️ / 🌙) a automatickým ukladaním preferencie do `localStorage`.
 - **Typografia:**
   - `Plus Jakarta Sans` — Moderné, inžiniersky čisté nadpisy s prémiovou váhou.
   - `Space Grotesk` — Technické číselné hodnoty cien a rozmerov.
