@@ -1,0 +1,2523 @@
+<!DOCTYPE html>
+<html lang="sk" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beauty Salon Čierna Voda | Jaroslava Lukáčová — Profesionálna starostlivosť o pleť & Estetická medicína</title>
+  <meta name="description" content="Exkluzívny kozmetický a estetický salón v Chorvátskom Grobe - Čiernej Vode. Dermabrázia REVIDERM, botulotoxín, kyselina hyalurónová, mezoterapia, laserová epilácia a enzymatická lipolýza s odbornou zdravotníckou garanciou Jaroslavy Lukáčovej.">
+  <meta name="keywords" content="beauty salon cierna voda, kozmetika chorvatsky grob, esteticka medicina cierna voda, reviderm dermabrazia, botox cierna voda, kyselina hyaluronova, jaroslava lukacova, laserova epilacia, lipolyza podbradku, chemicky piling">
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://beautysalon-ciernavoda.sk/">
+  <meta property="og:title" content="Beauty Salon Čierna Voda | Exkluzívna starostlivosť o pleť a estetika">
+  <meta property="og:description" content="Doprajte si chvíľu pre seba v príjemnom salóne v Čiernej Vode. Zdravotnícke vzdelanie, moderné medicínske prístroje a certifikovaná kozmetika REVIDERM.">
+  <meta property="og:image" content="images/salon-hero.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/logo.png">
+
+  <!-- Google Fonts: Cormorant Garamond, Playfair Display & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Alex+Brush&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            roseGold: {
+              50: '#FDF8F7',
+              100: '#FBF0EE',
+              200: '#F6DDD9',
+              300: '#ECC3BC',
+              400: '#DEA297',
+              500: '#C97D71',
+              600: '#B26256',
+              700: '#944C42',
+              800: '#7B3F37',
+              900: '#673731',
+              950: '#381A16'
+            },
+            champagne: {
+              50: '#FAF8F4',
+              100: '#F4EFE6',
+              200: '#EAE1D1',
+              300: '#DACDB6',
+              400: '#C7B495',
+              500: '#B69E7B',
+              600: '#9E8461',
+              700: '#7F694C',
+              800: '#67543E',
+              900: '#544534'
+            },
+            obsidian: {
+              800: '#23181C',
+              850: '#1C1216',
+              900: '#140C10',
+              950: '#0C070A'
+            },
+            cream: {
+              50: '#FDFBF9',
+              100: '#FAF6F0',
+              200: '#F4ECE1',
+              300: '#ECE0D0'
+            }
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            display: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+            script: ['"Alex Brush"', 'cursive']
+          },
+          boxShadow: {
+            'luxury': '0 20px 45px -15px rgba(201, 125, 113, 0.15)',
+            'gold': '0 15px 35px -10px rgba(182, 158, 123, 0.25)',
+            'card': '0 10px 30px -5px rgba(0, 0, 0, 0.05)'
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Smooth transitions and custom UI styling */
+    .glass-nav {
+      background: rgba(253, 248, 247, 0.92);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+    }
+    .dark .glass-nav {
+      background: rgba(20, 12, 16, 0.94);
+    }
+    .gold-gradient-text {
+      background: linear-gradient(135deg, #B26256 0%, #C97D71 50%, #9E8461 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .gold-gradient-bg {
+      background: linear-gradient(135deg, #C97D71 0%, #B26256 50%, #9E8461 100%);
+    }
+    .gold-gradient-border {
+      border-image: linear-gradient(to right, #C97D71, #B69E7B) 1;
+    }
+    /* Before/After slider handle */
+    .slider-handle::after {
+      content: '';
+      position: absolute;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: #C97D71;
+      border: 3px solid #FFFFFF;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      pointer-events: none;
+    }
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 9px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #FAF6F0;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #DEA297;
+      border-radius: 6px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #C97D71;
+    }
+  </style>
+
+  <!-- Schema.org JSON-LD Structured Data for Local Business & Medical Aesthetic Salon -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BeautySalon",
+    "name": "Beauty Salon Jaroslava Lukáčová",
+    "image": "https://beautysalon-ciernavoda.sk/images/salon-hero.jpg",
+    "@id": "https://beautysalon-ciernavoda.sk/",
+    "url": "https://beautysalon-ciernavoda.sk/",
+    "telephone": "+421904826974",
+    "email": "beautysalonciernavoda@gmail.com",
+    "priceRange": "€€",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Hrudky 73",
+      "addressLocality": "Chorvátsky Grob - Čierna Voda",
+      "postalCode": "900 25",
+      "addressCountry": "SK"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 48.232096,
+      "longitude": 17.256402
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "09:00",
+        "closes": "18:00"
+      }
+    ],
+    "sameAs": [
+      "https://www.facebook.com/BeautySalonCiernaVoda/",
+      "https://www.instagram.com/beautysalonciernavoda/"
+    ]
+  }
+  </script>
+</head>
+<body class="bg-cream-50 text-gray-800 font-sans antialiased selection:bg-roseGold-200 selection:text-roseGold-900 transition-colors duration-300">
+
+  <!-- ==================== TOP BAR WITH LIVE STATUS & CONTACT ==================== -->
+  <aside aria-label="Otváracie hodiny a rýchly kontakt" class="bg-obsidian-900 text-roseGold-100 py-2.5 px-4 text-xs md:text-sm border-b border-roseGold-900/40 relative z-50">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3">
+      
+      <!-- Live Status Badge -->
+      <div class="flex items-center gap-2">
+        <span id="liveStatusDot" class="inline-block w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+        <span id="liveStatusText" class="font-medium tracking-wide text-cream-100">
+          Overujem otváracie hodiny...
+        </span>
+        <span class="hidden sm:inline-block text-roseGold-400">•</span>
+        <span class="hidden sm:inline-block text-roseGold-200">Hrudky 73, Chorvátsky Grob (Čierna Voda)</span>
+      </div>
+
+      <!-- Quick Actions -->
+      <div class="flex items-center gap-4 ml-auto">
+        <a href="tel:+421904826974" class="hover:text-roseGold-300 transition-colors flex items-center gap-1.5 font-medium">
+          <i class="fa-solid fa-phone text-roseGold-400"></i>
+          <span>0904 826 974</span>
+        </a>
+        <span class="text-roseGold-700">|</span>
+        <a href="mailto:beautysalonciernavoda@gmail.com" class="hidden md:flex items-center gap-1.5 hover:text-roseGold-300 transition-colors">
+          <i class="fa-solid fa-envelope text-roseGold-400"></i>
+          <span>beautysalonciernavoda@gmail.com</span>
+        </a>
+        <span class="hidden md:inline-block text-roseGold-700">|</span>
+        <!-- Social links -->
+        <div class="flex items-center gap-3">
+          <a href="https://www.instagram.com/beautysalonciernavoda/" target="_blank" rel="noopener noreferrer" class="text-roseGold-300 hover:text-white transition-colors" title="Instagram">
+            <i class="fa-brands fa-instagram text-sm"></i>
+          </a>
+          <a href="https://www.facebook.com/BeautySalonCiernaVoda/" target="_blank" rel="noopener noreferrer" class="text-roseGold-300 hover:text-white transition-colors" title="Facebook">
+            <i class="fa-brands fa-facebook-f text-xs"></i>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </aside>
+
+  <!-- ==================== MAIN NAVIGATION HEADER ==================== -->
+  <header class="sticky top-0 z-40 glass-nav border-b border-roseGold-200/50 shadow-sm transition-all duration-300" id="mainHeader">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20 md:h-24">
+        
+        <!-- Logo & Brand -->
+        <a href="#uvod" class="flex items-center gap-3 group">
+          <div class="w-12 h-12 md:w-14 md:h-14 rounded-full border-2 border-roseGold-300 p-1 flex items-center justify-center bg-white shadow-sm group-hover:scale-105 transition-transform">
+            <img src="images/logo.png" alt="Beauty Salon Čierna Voda Logo" class="max-h-full max-w-full object-contain">
+          </div>
+          <div>
+            <span class="block font-serif text-xl md:text-2xl font-bold tracking-tight text-gray-900 group-hover:text-roseGold-600 transition-colors">
+              BEAUTY SALON
+            </span>
+            <span class="block text-xs uppercase tracking-widest text-champagne-600 font-medium">
+              Jaroslava Lukáčová • Čierna Voda
+            </span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden lg:flex items-center space-x-7 text-sm font-medium text-gray-700">
+          <a href="#uvod" class="hover:text-roseGold-600 transition-colors py-1">Úvod</a>
+          <a href="#o-salone" class="hover:text-roseGold-600 transition-colors py-1">O salóne</a>
+          <a href="#kozmetika" class="hover:text-roseGold-600 transition-colors py-1">Ošetrenia pleti</a>
+          <a href="#estetika" class="hover:text-roseGold-600 transition-colors py-1">Estetická medicína</a>
+          <a href="#vysledky" class="hover:text-roseGold-600 transition-colors py-1">Pred & Po</a>
+          <a href="#cennik" class="hover:text-roseGold-600 transition-colors py-1">Cenník</a>
+          <a href="#skin-kviz" class="text-roseGold-600 hover:text-roseGold-700 font-semibold py-1 flex items-center gap-1.5">
+            <i class="fa-solid fa-sparkles text-xs"></i>
+            Skin Kvíz
+          </a>
+          <a href="#kontakt" class="hover:text-roseGold-600 transition-colors py-1">Kontakt</a>
+        </nav>
+
+        <!-- Right Side CTA Actions -->
+        <div class="hidden sm:flex items-center gap-3">
+          <!-- Basket indicator for treatments -->
+          <button onclick="toggleBasketModal()" class="relative p-2.5 rounded-full text-roseGold-700 hover:text-roseGold-900 hover:bg-roseGold-100 transition-colors" title="Môj plán ošetrení">
+            <i class="fa-solid fa-clipboard-list text-lg"></i>
+            <span id="basketCount" class="absolute -top-1 -right-1 bg-roseGold-600 text-white text-[10px] font-bold w-5 h-5 rounded-full flex items-center justify-center border-2 border-white hidden">0</span>
+          </button>
+
+          <!-- Bookio Reservation CTA Button -->
+          <button onclick="openReservationModal()" class="gold-gradient-bg text-white px-5 py-2.5 rounded-full font-semibold text-sm shadow-luxury hover:opacity-95 hover:shadow-gold hover:-translate-y-0.5 transition-all flex items-center gap-2">
+            <i class="fa-regular fa-calendar-check text-xs"></i>
+            <span>Rezervovať online</span>
+          </button>
+        </div>
+
+        <!-- Mobile Menu Toggle Button -->
+        <div class="flex items-center gap-2 lg:hidden">
+          <button onclick="toggleBasketModal()" class="relative p-2 rounded-full text-roseGold-700 hover:bg-roseGold-100">
+            <i class="fa-solid fa-clipboard-list text-lg"></i>
+            <span id="basketCountMobile" class="absolute -top-1 -right-1 bg-roseGold-600 text-white text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center border border-white hidden">0</span>
+          </button>
+          <button id="mobileMenuBtn" onclick="toggleMobileMenu()" class="p-2.5 rounded-lg text-gray-700 hover:text-roseGold-600 hover:bg-roseGold-50 transition-colors focus:outline-none" aria-label="Menu">
+            <i id="menuIcon" class="fa-solid fa-bars text-xl"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Navigation -->
+    <div id="mobileMenu" class="hidden lg:hidden bg-cream-50/98 border-t border-roseGold-200/60 px-4 pt-3 pb-6 shadow-xl transition-all">
+      <div class="flex flex-col space-y-3 font-medium text-gray-800">
+        <a href="#uvod" onclick="closeMobileMenu()" class="px-3 py-2 rounded-lg hover:bg-roseGold-100/60 transition-colors">Úvod</a>
+        <a href="#o-salone" onclick="closeMobileMenu()" class="px-3 py-2 rounded-lg hover:bg-roseGold-100/60 transition-colors">O salóne & Filozofia</a>
+        <a href="#kozmetika" onclick="closeMobileMenu()" class="px-3 py-2 rounded-lg hover:bg-roseGold-100/60 transition-colors">Kozmetické ošetrenia pleti</a>
+        <a href="#estetika" onclick="closeMobileMenu()" class="px-3 py-2 rounded-lg hover:bg-roseGold-100/60 transition-colors">Estetická medicína & Prístroje</a>
+        <a href="#vysledky" onclick="closeMobileMenu()" class="px-3 py-2 rounded-lg hover:bg-roseGold-100/60 transition-colors">Pred & Po (Výsledky)</a>
+        <a href="#cennik" onclick="closeMobileMenu()" class="px-3 py-2 rounded-lg hover:bg-roseGold-100/60 transition-colors">Kompletný cenník</a>
+        <a href="#skin-kviz" onclick="closeMobileMenu()" class="px-3 py-2 rounded-lg bg-roseGold-100 text-roseGold-800 font-semibold flex items-center gap-2">
+          <i class="fa-solid fa-sparkles text-roseGold-600"></i>
+          Skin Kvíz — Sprievodca ošetrením
+        </a>
+        <a href="#galeria" onclick="closeMobileMenu()" class="px-3 py-2 rounded-lg hover:bg-roseGold-100/60 transition-colors">Priestory salónu</a>
+        <a href="#kontakt" onclick="closeMobileMenu()" class="px-3 py-2 rounded-lg hover:bg-roseGold-100/60 transition-colors">Kontakt & Parkovanie</a>
+        
+        <div class="pt-3 border-t border-roseGold-200">
+          <button onclick="closeMobileMenu(); openReservationModal();" class="w-full gold-gradient-bg text-white py-3 rounded-full font-semibold shadow-luxury text-center flex items-center justify-center gap-2">
+            <i class="fa-regular fa-calendar-check"></i>
+            <span>Rezervovať cez Bookio</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== HERO SECTION ==================== -->
+  <section id="uvod" class="relative pt-8 pb-16 md:pt-16 md:pb-24 overflow-hidden bg-gradient-to-b from-cream-100/80 via-cream-50 to-white">
+    <!-- Subtle Background Decors -->
+    <div class="absolute -top-32 -right-32 w-96 h-96 rounded-full bg-roseGold-200/30 blur-3xl pointer-events-none"></div>
+    <div class="absolute top-1/2 -left-32 w-80 h-80 rounded-full bg-champagne-200/30 blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left Column: Copy & CTAs -->
+        <div class="lg:col-span-7 space-y-6">
+          
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-roseGold-100/80 border border-roseGold-200 text-roseGold-800 text-xs md:text-sm font-semibold tracking-wide">
+            <i class="fa-solid fa-certificate text-roseGold-600"></i>
+            <span>Zdravotnícke vzdelanie & Certifikovaná estetická starostlivosť</span>
+          </div>
+
+          <h1 class="font-serif text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-gray-900 leading-[1.15]">
+            Prirodzená krása, <br>
+            <span class="gold-gradient-text font-normal italic font-display">medicínska precíznosť</span> <br>
+            a dokonalý oddych.
+          </h1>
+
+          <p class="text-base sm:text-lg text-gray-600 max-w-2xl leading-relaxed">
+            Doprajte si chvíľu pre seba v príjemnom salóne v Čiernej Vode. Už niekoľko rokov sa s radosťou venujem odbornej starostlivosti o pleť, anti-age omladeniu, špičkovej dermabrázii <strong>REVIDERM</strong> a moderným estetickým procedúram s úctou k prirodzenosti každej ženy.
+          </p>
+
+          <!-- Key highlights pills -->
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2">
+            <div class="flex items-center gap-2.5 p-2.5 rounded-xl bg-white border border-roseGold-200/70 shadow-sm">
+              <i class="fa-solid fa-user-doctor text-roseGold-600 text-lg"></i>
+              <span class="text-xs font-semibold text-gray-800 leading-snug">Zdravotnícke vzdelanie</span>
+            </div>
+            <div class="flex items-center gap-2.5 p-2.5 rounded-xl bg-white border border-roseGold-200/70 shadow-sm">
+              <i class="fa-solid fa-wand-magic-sparkles text-champagne-600 text-lg"></i>
+              <span class="text-xs font-semibold text-gray-800 leading-snug">BTL & REVIDERM prístroje</span>
+            </div>
+            <div class="flex items-center gap-2.5 p-2.5 rounded-xl bg-white border border-roseGold-200/70 shadow-sm col-span-2 sm:col-span-1">
+              <i class="fa-solid fa-square-parking text-emerald-600 text-lg"></i>
+              <span class="text-xs font-semibold text-gray-800 leading-snug">Parkovanie priamo pred dverami</span>
+            </div>
+          </div>
+
+          <!-- CTAs -->
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-4">
+            <button onclick="openReservationModal()" class="gold-gradient-bg text-white px-8 py-4 rounded-full font-semibold text-base shadow-luxury hover:opacity-95 hover:shadow-gold hover:-translate-y-0.5 transition-all flex items-center justify-center gap-3">
+              <i class="fa-regular fa-calendar-check"></i>
+              <span>Rezervovať termín online (Bookio)</span>
+            </button>
+            <a href="#skin-kviz" class="px-6 py-4 rounded-full font-semibold text-sm bg-white border border-roseGold-300 text-roseGold-800 hover:bg-roseGold-50 transition-all flex items-center justify-center gap-2 shadow-sm">
+              <i class="fa-solid fa-sparkles text-roseGold-600"></i>
+              <span>Sprievodca ošetrením (Kvíz)</span>
+            </a>
+          </div>
+
+          <!-- Phone alternative -->
+          <div class="text-xs text-gray-500 flex items-center gap-2 pt-1">
+            <i class="fa-solid fa-circle-info text-roseGold-500"></i>
+            <span>Alebo telefonicky na <a href="tel:+421904826974" class="font-bold text-gray-700 underline hover:text-roseGold-600">0904 826 974</a> (Pondelok – Piatok: 09:00 – 18:00)</span>
+          </div>
+
+        </div>
+
+        <!-- Right Column: Visual Composition with Jaroslava & Salon -->
+        <div class="lg:col-span-5 relative">
+          
+          <div class="relative mx-auto max-w-md lg:max-w-none">
+            
+            <!-- Main Hero Image: Jaroslava Lukáčová -->
+            <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white aspect-[4/5] bg-roseGold-100">
+              <img src="images/jaroslava-lukacova.jpg" alt="Jaroslava Lukáčová — Odborný garant Beauty Salon Čierna Voda" class="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-700">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+              
+              <div class="absolute bottom-4 left-4 right-4 text-white">
+                <span class="text-xs font-semibold uppercase tracking-wider text-roseGold-200 block">Váš odborný sprievodca</span>
+                <span class="text-xl font-serif font-bold block">Jaroslava Lukáčová</span>
+                <span class="text-xs text-cream-100 opacity-90">Odborná kozmetička s medicínskym vzdelaním</span>
+              </div>
+            </div>
+
+            <!-- Floating Card 1: Salon interior preview -->
+            <div class="absolute -bottom-6 -left-6 sm:-left-8 bg-white/95 backdrop-blur-md p-3.5 rounded-2xl shadow-xl border border-roseGold-100 max-w-[210px] hidden sm:block animate-bounce-slow">
+              <div class="flex items-center gap-3">
+                <div class="w-12 h-12 rounded-xl overflow-hidden shrink-0 border border-roseGold-200">
+                  <img src="images/salon-interior-1.jpg" alt="Interiér salónu" class="w-full h-full object-cover">
+                </div>
+                <div>
+                  <span class="text-xs font-bold text-gray-900 block">Kľud & Súkromie</span>
+                  <span class="text-[11px] text-gray-500 block leading-tight">Privátna oáza pokoja pre každú klientku</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Floating Card 2: Rating badge -->
+            <div class="absolute -top-4 -right-4 sm:-right-6 bg-white/95 backdrop-blur-md py-2.5 px-4 rounded-2xl shadow-xl border border-roseGold-100 flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-500 flex items-center justify-center font-bold">
+                <i class="fa-solid fa-star text-base"></i>
+              </div>
+              <div>
+                <div class="flex items-center gap-1 text-amber-400 text-xs">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <span class="text-xs font-bold text-gray-800">5.0 / 5.0 Hodnotenie</span>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== LOGO / BRAND TICKER ==================== -->
+  <section class="py-6 bg-white border-y border-roseGold-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-wrap items-center justify-center md:justify-between gap-6 text-xs uppercase tracking-widest text-gray-400 font-semibold">
+        <span class="flex items-center gap-2 text-gray-600"><i class="fa-solid fa-award text-roseGold-500"></i> REVIDERM Nemecko</span>
+        <span class="flex items-center gap-2 text-gray-600"><i class="fa-solid fa-microscope text-roseGold-500"></i> BTL Medical Aesthetic</span>
+        <span class="flex items-center gap-2 text-gray-600"><i class="fa-solid fa-gem text-roseGold-500"></i> Janssen Cosmetics</span>
+        <span class="flex items-center gap-2 text-gray-600"><i class="fa-solid fa-syringe text-roseGold-500"></i> PB Serum Medical</span>
+        <span class="flex items-center gap-2 text-gray-600"><i class="fa-solid fa-check text-roseGold-500"></i> Dermaheal HSR</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== ABOUT SECTION & PHILOSOPHY ==================== -->
+  <section id="o-salone" class="py-20 bg-cream-50 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Images Grid -->
+        <div class="lg:col-span-5 space-y-4">
+          <div class="grid grid-cols-2 gap-4">
+            <div class="rounded-2xl overflow-hidden shadow-md aspect-square">
+              <img src="images/salon-interior-2.jpg" alt="Pohodlné relaxačné lôžko" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+            </div>
+            <div class="rounded-2xl overflow-hidden shadow-md aspect-square translate-y-6">
+              <img src="images/skin-care-cosmetics.jpg" alt="Dermaceutické produkty REVIDERM" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+            </div>
+          </div>
+          <div class="rounded-2xl overflow-hidden shadow-md aspect-[16/9] mt-6">
+            <img src="images/salon-interior-3.jpg" alt="Recepcia a prístrojové vybavenie" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+          </div>
+        </div>
+
+        <!-- Story & Philosophy Content -->
+        <div class="lg:col-span-7 space-y-6 lg:pl-6">
+          <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-champagne-600">
+            <span class="w-8 h-[2px] bg-champagne-500 inline-block"></span>
+            O mne & Salóne
+          </div>
+
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-gray-900 leading-tight">
+            „Miesto, kde si doprajete chvíľu pre seba a na okamih <span class="italic font-display text-roseGold-600">vypnete od zhonu</span>.“
+          </h2>
+
+          <div class="space-y-4 text-gray-600 text-base leading-relaxed">
+            <p>
+              Milé dámy, srdečne vás vítam v <strong>Beauty Salone</strong>. Už niekoľko rokov sa s radosťou a vášňou venujem profesionálnej starostlivosti o pleť s dôrazom na osobný prístup a špecifické potreby každej jednej klientky.
+            </p>
+            <p>
+              Vďaka <strong>zdravotníckemu vzdelaniu</strong>, dlhoročným skúsenostiam a pravidelnému rozširovaniu odborných vedomostí pristupujem ku každému ošetreniu zodpovedne, bezpečne a s hlbokým rešpektom k prirodzenej kráse pleti.
+            </p>
+            <p>
+              Súčasťou mojej starostlivosti sú aj <strong>najmodernejšie certifikované prístroje estetickej medicíny</strong>, ktoré prinášajú viditeľné a dlhotrvajúce výsledky a zároveň sú mimoriadne šetrné k pokožke. Každé ošetrenie prispôsobujem aktuálnemu stavu vašej pleti tak, aby prinieslo ten najlepší možný efekt.
+            </p>
+          </div>
+
+          <!-- 4 Pillars -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 border-t border-roseGold-200">
+            <div class="flex items-start gap-3">
+              <div class="w-9 h-9 rounded-full bg-roseGold-100 text-roseGold-600 flex items-center justify-center shrink-0 mt-0.5">
+                <i class="fa-solid fa-heart-pulse text-sm"></i>
+              </div>
+              <div>
+                <h3 class="font-bold text-sm text-gray-900">Zdravotnícky prístup</h3>
+                <p class="text-xs text-gray-500">Hygiena, sterilita a odborné posúdenie stavu pokožky pred každým zákrokom.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <div class="w-9 h-9 rounded-full bg-roseGold-100 text-roseGold-600 flex items-center justify-center shrink-0 mt-0.5">
+                <i class="fa-solid fa-leaf text-sm"></i>
+              </div>
+              <div>
+                <h3 class="font-bold text-sm text-gray-900">Prirodzený výsledok</h3>
+                <p class="text-xs text-gray-500">Zvýraznenie vašich čŕt bez neprirodzeného alebo prehnaného efektu.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <div class="w-9 h-9 rounded-full bg-roseGold-100 text-roseGold-600 flex items-center justify-center shrink-0 mt-0.5">
+                <i class="fa-solid fa-shield-halved text-sm"></i>
+              </div>
+              <div>
+                <h3 class="font-bold text-sm text-gray-900">Dermokozmetika REVIDERM</h3>
+                <p class="text-xs text-gray-500">Biomimetické zloženie s maximálnou znášanlivosťou aj pre citlivú pleť.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <div class="w-9 h-9 rounded-full bg-roseGold-100 text-roseGold-600 flex items-center justify-center shrink-0 mt-0.5">
+                <i class="fa-solid fa-clock text-sm"></i>
+              </div>
+              <div>
+                <h3 class="font-bold text-sm text-gray-900">Čas vyhradený len pre vás</h3>
+                <p class="text-xs text-gray-500">Objednávanie na presný čas bez čakania a v príjemnom súkromí.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-2">
+            <span class="font-script text-3xl text-roseGold-600 block">Jaroslava Lukáčová</span>
+            <span class="text-xs uppercase tracking-wider text-gray-400 font-semibold">Odborná garantka salónu</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== INTERACTIVE SKIN QUIZ / CONSULTATION WIDGET ==================== -->
+  <section id="skin-kviz" class="py-20 bg-gradient-to-br from-obsidian-900 via-obsidian-850 to-obsidian-950 text-white relative overflow-hidden">
+    <div class="absolute -bottom-24 -right-24 w-96 h-96 rounded-full bg-roseGold-700/20 blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <div class="text-center max-w-2xl mx-auto space-y-3 mb-12">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-roseGold-900/60 border border-roseGold-700/60 text-roseGold-300 text-xs font-bold tracking-wider uppercase">
+          <i class="fa-solid fa-wand-magic-sparkles"></i>
+          Interaktívny sprievodca
+        </div>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-cream-50">
+          Neviete, aké ošetrenie je pre vás ideálne?
+        </h2>
+        <p class="text-roseGold-200/80 text-sm sm:text-base">
+          Odpovedzte na 3 jednoduché otázky a náš algoritmus vám odporučí optimálnu procedúru a postup presne pre vašu pleť.
+        </p>
+      </div>
+
+      <!-- Quiz Box Card -->
+      <div class="bg-obsidian-800/90 border border-roseGold-800/50 rounded-3xl p-6 sm:p-10 shadow-2xl backdrop-blur-md">
+        
+        <!-- Step Indicator -->
+        <div class="flex items-center justify-between mb-8 pb-4 border-b border-roseGold-900">
+          <div class="flex items-center gap-2">
+            <span id="quizStepBadge" class="w-7 h-7 rounded-full bg-roseGold-600 text-white flex items-center justify-center text-xs font-bold">1</span>
+            <span id="quizStepTitle" class="text-sm font-semibold text-roseGold-100">Krok 1: Vek a typ pleti</span>
+          </div>
+          <span id="quizProgress" class="text-xs text-roseGold-400 font-mono">1 z 3</span>
+        </div>
+
+        <!-- Quiz Step 1: Skin Type / Age -->
+        <div id="quizStep1" class="space-y-4">
+          <h3 class="text-lg font-serif font-semibold text-white mb-4">V akej životnej fáze a stave sa nachádza vaša pleť?</h3>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <button onclick="selectQuizOption(1, 'young')" class="quiz-btn text-left p-4 rounded-2xl border border-roseGold-800 bg-obsidian-900/60 hover:border-roseGold-400 hover:bg-roseGold-950/40 transition-all flex items-center gap-3 group">
+              <div class="w-10 h-10 rounded-xl bg-roseGold-900/40 text-roseGold-300 flex items-center justify-center shrink-0 group-hover:bg-roseGold-600 group-hover:text-white transition-colors">
+                <i class="fa-solid fa-seedling"></i>
+              </div>
+              <div>
+                <span class="block text-sm font-bold text-white">Mladá pleť / Akné / Zanesené póry</span>
+                <span class="block text-xs text-gray-400">Potrebujem hĺbkové čistenie a redukciu zápalov</span>
+              </div>
+            </button>
+
+            <button onclick="selectQuizOption(1, 'dry')" class="quiz-btn text-left p-4 rounded-2xl border border-roseGold-800 bg-obsidian-900/60 hover:border-roseGold-400 hover:bg-roseGold-950/40 transition-all flex items-center gap-3 group">
+              <div class="w-10 h-10 rounded-xl bg-roseGold-900/40 text-roseGold-300 flex items-center justify-center shrink-0 group-hover:bg-roseGold-600 group-hover:text-white transition-colors">
+                <i class="fa-solid fa-droplet"></i>
+              </div>
+              <div>
+                <span class="block text-sm font-bold text-white">Dehydrovaná & Unavená pleť (25-35 r.)</span>
+                <span class="block text-xs text-gray-400">Chýba mi jas, hydratácia a sviežosť</span>
+              </div>
+            </button>
+
+            <button onclick="selectQuizOption(1, 'aging')" class="quiz-btn text-left p-4 rounded-2xl border border-roseGold-800 bg-obsidian-900/60 hover:border-roseGold-400 hover:bg-roseGold-950/40 transition-all flex items-center gap-3 group">
+              <div class="w-10 h-10 rounded-xl bg-roseGold-900/40 text-roseGold-300 flex items-center justify-center shrink-0 group-hover:bg-roseGold-600 group-hover:text-white transition-colors">
+                <i class="fa-solid fa-clock-rotate-left"></i>
+              </div>
+              <div>
+                <span class="block text-sm font-bold text-white">Prvé vrásky & Strata pružnosti (35-48 r.)</span>
+                <span class="block text-xs text-gray-400">Rada by som spevnila kontúry a vyhladila mimiku</span>
+              </div>
+            </button>
+
+            <button onclick="selectQuizOption(1, 'mature')" class="quiz-btn text-left p-4 rounded-2xl border border-roseGold-800 bg-obsidian-900/60 hover:border-roseGold-400 hover:bg-roseGold-950/40 transition-all flex items-center gap-3 group">
+              <div class="w-10 h-10 rounded-xl bg-roseGold-900/40 text-roseGold-300 flex items-center justify-center shrink-0 group-hover:bg-roseGold-600 group-hover:text-white transition-colors">
+                <i class="fa-solid fa-crown"></i>
+              </div>
+              <div>
+                <span class="block text-sm font-bold text-white">Zrelá pleť & Hlbšie vrásky (48+ r.)</span>
+                <span class="block text-xs text-gray-400">Hľadám intenzívny lifting a obnovu kolagénu</span>
+              </div>
+            </button>
+          </div>
+        </div>
+
+        <!-- Quiz Step 2: Primary Goal -->
+        <div id="quizStep2" class="space-y-4 hidden">
+          <h3 class="text-lg font-serif font-semibold text-white mb-4">Čo vás momentálne najviac trápi a chceli by ste vyriešiť?</h3>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <button onclick="selectQuizOption(2, 'pigment')" class="quiz-btn text-left p-4 rounded-2xl border border-roseGold-800 bg-obsidian-900/60 hover:border-roseGold-400 hover:bg-roseGold-950/40 transition-all flex items-center gap-3 group">
+              <div class="w-10 h-10 rounded-xl bg-roseGold-900/40 text-roseGold-300 flex items-center justify-center shrink-0 group-hover:bg-roseGold-600 group-hover:text-white transition-colors">
+                <i class="fa-solid fa-sun"></i>
+              </div>
+              <div>
+                <span class="block text-sm font-bold text-white">Pigmentové škvrny & Nerovnomerný tón</span>
+                <span class="block text-xs text-gray-400">Zjednotenie farby, fľaky zo slnka alebo po akné</span>
+              </div>
+            </button>
+
+            <button onclick="selectQuizOption(2, 'veins')" class="quiz-btn text-left p-4 rounded-2xl border border-roseGold-800 bg-obsidian-900/60 hover:border-roseGold-400 hover:bg-roseGold-950/40 transition-all flex items-center gap-3 group">
+              <div class="w-10 h-10 rounded-xl bg-roseGold-900/40 text-roseGold-300 flex items-center justify-center shrink-0 group-hover:bg-roseGold-600 group-hover:text-white transition-colors">
+                <i class="fa-solid fa-bolt"></i>
+              </div>
+              <div>
+                <span class="block text-sm font-bold text-white">Rozšírené cievky, metličky & začervenanie</span>
+                <span class="block text-xs text-gray-400">Na lícach, nose alebo dolných končatinách</span>
+              </div>
+            </button>
+
+            <button onclick="selectQuizOption(2, 'wrinkles')" class="quiz-btn text-left p-4 rounded-2xl border border-roseGold-800 bg-obsidian-900/60 hover:border-roseGold-400 hover:bg-roseGold-950/40 transition-all flex items-center gap-3 group">
+              <div class="w-10 h-10 rounded-xl bg-roseGold-900/40 text-roseGold-300 flex items-center justify-center shrink-0 group-hover:bg-roseGold-600 group-hover:text-white transition-colors">
+                <i class="fa-solid fa-sparkles"></i>
+              </div>
+              <div>
+                <span class="block text-sm font-bold text-white">Mimické vrásky & Strata objemu</span>
+                <span class="block text-xs text-gray-400">Čelo, očné okolie, nasolabiálne ryhy alebo pery</span>
+              </div>
+            </button>
+
+            <button onclick="selectQuizOption(2, 'doublechin')" class="quiz-btn text-left p-4 rounded-2xl border border-roseGold-800 bg-obsidian-900/60 hover:border-roseGold-400 hover:bg-roseGold-950/40 transition-all flex items-center gap-3 group">
+              <div class="w-10 h-10 rounded-xl bg-roseGold-900/40 text-roseGold-300 flex items-center justify-center shrink-0 group-hover:bg-roseGold-600 group-hover:text-white transition-colors">
+                <i class="fa-solid fa-person"></i>
+              </div>
+              <div>
+                <span class="block text-sm font-bold text-white">Dvojitá brada / Tuk v podbradku</span>
+                <span class="block text-xs text-gray-400">Zvýraznenie kontúry čeľuste a lipolýza</span>
+              </div>
+            </button>
+          </div>
+        </div>
+
+        <!-- Quiz Step 3: Intensity & Method -->
+        <div id="quizStep3" class="space-y-4 hidden">
+          <h3 class="text-lg font-serif font-semibold text-white mb-4">Aký typ ošetrenia preferujete?</h3>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+            <button onclick="selectQuizOption(3, 'relax')" class="quiz-btn text-left p-4 rounded-2xl border border-roseGold-800 bg-obsidian-900/60 hover:border-roseGold-400 hover:bg-roseGold-950/40 transition-all flex flex-col justify-between group">
+              <i class="fa-solid fa-spa text-2xl text-roseGold-400 mb-3"></i>
+              <div>
+                <span class="block text-sm font-bold text-white">Neinvazívne & Relaxačné</span>
+                <span class="block text-xs text-gray-400">Príjemná masáž, peeling, dermabrázia bez rekonvalescencie</span>
+              </div>
+            </button>
+
+            <button onclick="selectQuizOption(3, 'device')" class="quiz-btn text-left p-4 rounded-2xl border border-roseGold-800 bg-obsidian-900/60 hover:border-roseGold-400 hover:bg-roseGold-950/40 transition-all flex flex-col justify-between group">
+              <i class="fa-solid fa-laser text-2xl text-roseGold-400 mb-3"></i>
+              <div>
+                <span class="block text-sm font-bold text-white">Prístrojová technológia</span>
+                <span class="block text-xs text-gray-400">Rádiofrekvenčný termolifting, IPL, CO2 laser, LED svetlo</span>
+              </div>
+            </button>
+
+            <button onclick="selectQuizOption(3, 'medical')" class="quiz-btn text-left p-4 rounded-2xl border border-roseGold-800 bg-obsidian-900/60 hover:border-roseGold-400 hover:bg-roseGold-950/40 transition-all flex flex-col justify-between group">
+              <i class="fa-solid fa-syringe text-2xl text-roseGold-400 mb-3"></i>
+              <div>
+                <span class="block text-sm font-bold text-white">Esteticko-injekčné</span>
+                <span class="block text-xs text-gray-400">Kyselina hyalurónová, Botox, Mezoterapia, PRP Plazma</span>
+              </div>
+            </button>
+          </div>
+        </div>
+
+        <!-- Quiz Result Screen -->
+        <div id="quizResult" class="hidden space-y-6">
+          <div class="p-6 rounded-2xl bg-gradient-to-r from-roseGold-950/80 to-obsidian-900 border border-roseGold-500/50">
+            <span class="text-xs font-bold uppercase tracking-wider text-roseGold-400 block mb-1">Odporúčané ošetrenie na mieru</span>
+            <h4 id="resultTitle" class="text-2xl font-serif font-bold text-white mb-2">Mikrokryštalická dermabrázia REVIDERM</h4>
+            <p id="resultDesc" class="text-sm text-gray-300 leading-relaxed mb-4">
+              Komplexné ošetrenie spájajúce jemnú diamantovú mikrodermabráziu s ultrazvukom a hĺbkovou výživou kolagénom.
+            </p>
+            <div class="flex flex-wrap items-center justify-between gap-4 pt-3 border-t border-roseGold-800">
+              <div>
+                <span class="text-xs text-gray-400 block">Orientačná cena:</span>
+                <span id="resultPrice" class="text-xl font-bold text-roseGold-300">110 € – 130 €</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <button onclick="resetQuiz()" class="px-4 py-2 text-xs font-semibold text-gray-400 hover:text-white transition-colors">
+                  <i class="fa-solid fa-rotate-left mr-1"></i> Spustiť znova
+                </button>
+                <button onclick="bookQuizResult()" class="gold-gradient-bg text-white px-5 py-2.5 rounded-full text-xs font-bold shadow-luxury hover:opacity-95 transition-all flex items-center gap-1.5">
+                  <i class="fa-regular fa-calendar-check"></i>
+                  <span>Rezervovať túto procedúru</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== COSMETIC FACIAL TREATMENTS (KOZMETIKA) ==================== -->
+  <section id="kozmetika" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto space-y-3 mb-16">
+        <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-champagne-600">
+          <span class="w-8 h-[2px] bg-champagne-500 inline-block"></span>
+          Dermatokozmetická starostlivosť
+          <span class="w-8 h-[2px] bg-champagne-500 inline-block"></span>
+        </div>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-gray-900">
+          Kozmetické ošetrenia pleti
+        </h2>
+        <p class="text-gray-600 text-sm sm:text-base leading-relaxed">
+          Spojenie liečebnej dermokozmetiky <strong>REVIDERM</strong> a <strong>Janssen</strong>, hĺbkového čistenia a relaxačných rituálov, ktoré prinavrátia vašej tvári žiarivosť, čistotu a energiu.
+        </p>
+      </div>
+
+      <!-- Treatments Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Treatment 1: Mikrokryštalická dermabrázia REVIDERM -->
+        <div class="rounded-3xl border border-roseGold-200/80 bg-cream-50/50 overflow-hidden shadow-card hover:shadow-luxury hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="relative h-56 overflow-hidden bg-roseGold-100">
+              <img src="images/reviderm-dermabrazia.jpg" alt="Mikrokryštalická dermabrázia REVIDERM" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute top-3 right-3 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-roseGold-800 shadow-sm">
+                Od 110 €
+              </div>
+              <div class="absolute bottom-3 left-3 bg-obsidian-900/80 backdrop-blur-sm px-2.5 py-0.5 rounded-md text-[11px] font-medium text-white">
+                Bestseller
+              </div>
+            </div>
+            <div class="p-6 space-y-3">
+              <h3 class="font-serif text-xl font-bold text-gray-900 group-hover:text-roseGold-600 transition-colors">
+                Mikrokryštalická dermabrázia REVIDERM
+              </h3>
+              <p class="text-xs text-roseGold-700 font-semibold uppercase tracking-wider">
+                Regenerácia a čistenie pleti v jednom ošetrení
+              </p>
+              <p class="text-sm text-gray-600 leading-relaxed">
+                Špičková metóda riadenej exfoliácie jemnými kryštálikmi oxidu hlinitého s následnou aplikáciou ultrazvuku. Stimuluje tvorbu kolagénu, zjemňuje póry, vrásky a jazvičky po akné.
+              </p>
+              <ul class="text-xs text-gray-500 space-y-1.5 pt-2 border-t border-roseGold-100">
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-roseGold-500"></i> S ultrazvukom: <strong>110 €</strong></li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-roseGold-500"></i> S maskou + Hydrolage collagen: <strong>130 €</strong></li>
+              </ul>
+            </div>
+          </div>
+          <div class="p-6 pt-0 flex items-center gap-2">
+            <button onclick="addToBasket('Mikrokryštalická dermabrázia REVIDERM s ultrazvukom', 110, 'Kozmetika')" class="flex-1 py-2.5 px-3 rounded-xl border border-roseGold-300 text-roseGold-800 text-xs font-bold hover:bg-roseGold-100 transition-colors">
+              + Pridať do plánu
+            </button>
+            <button onclick="openReservationModal('Mikrokryštalická dermabrázia REVIDERM')" class="gold-gradient-bg text-white p-2.5 rounded-xl text-xs hover:opacity-90" title="Rezervovať cez Bookio">
+              <i class="fa-regular fa-calendar-check"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Treatment 2: Relaxačné ošetrenie "Váš reset" Janssen -->
+        <div class="rounded-3xl border border-roseGold-200/80 bg-cream-50/50 overflow-hidden shadow-card hover:shadow-luxury hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="relative h-56 overflow-hidden bg-roseGold-100">
+              <img src="images/osetrenie-pleti.jpg" alt="Relaxačné ošetrenie s masážou a ultrazvukom" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute top-3 right-3 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-roseGold-800 shadow-sm">
+                95 €
+              </div>
+            </div>
+            <div class="p-6 space-y-3">
+              <h3 class="font-serif text-xl font-bold text-gray-900 group-hover:text-roseGold-600 transition-colors">
+                Relaxačné ošetrenie & Masáž "Váš reset"
+              </h3>
+              <p class="text-xs text-roseGold-700 font-semibold uppercase tracking-wider">
+                Dokonalý oddych a regenerácia v každom ročnom období
+              </p>
+              <p class="text-sm text-gray-600 leading-relaxed">
+                Spojenie hĺbkového čistenia ultrazvukom s mimoriadne uvoľňujúcou masážou tváre, krku a dekoltu nemeckou kozmetikou Janssen. Odplavuje stres a zanecháva pleť zamatovo hebkú.
+              </p>
+              <ul class="text-xs text-gray-500 space-y-1.5 pt-2 border-t border-roseGold-100">
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-roseGold-500"></i> Hĺbkové ultrazvukové čistenie</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-roseGold-500"></i> Relaxačná liftingová masáž dekoltu</li>
+              </ul>
+            </div>
+          </div>
+          <div class="p-6 pt-0 flex items-center gap-2">
+            <button onclick="addToBasket('Relaxačné ošetrenie Janssen s masážou a ultrazvukom', 95, 'Kozmetika')" class="flex-1 py-2.5 px-3 rounded-xl border border-roseGold-300 text-roseGold-800 text-xs font-bold hover:bg-roseGold-100 transition-colors">
+              + Pridať do plánu
+            </button>
+            <button onclick="openReservationModal('Relaxačné ošetrenie Janssen')" class="gold-gradient-bg text-white p-2.5 rounded-xl text-xs hover:opacity-90" title="Rezervovať cez Bookio">
+              <i class="fa-regular fa-calendar-check"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Treatment 3: Chemický píling REVIDERM 30% + LED -->
+        <div class="rounded-3xl border border-roseGold-200/80 bg-cream-50/50 overflow-hidden shadow-card hover:shadow-luxury hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="relative h-56 overflow-hidden bg-roseGold-100">
+              <img src="images/chemicky-piling.jpg" alt="Chemický píling REVIDERM 30% a LED svetelná terapia" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute top-3 right-3 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-roseGold-800 shadow-sm">
+                95 €
+              </div>
+            </div>
+            <div class="p-6 space-y-3">
+              <h3 class="font-serif text-xl font-bold text-gray-900 group-hover:text-roseGold-600 transition-colors">
+                Chemický píling REVIDERM 30% + LED
+              </h3>
+              <p class="text-xs text-roseGold-700 font-semibold uppercase tracking-wider">
+                Individuálny biologický peeling & fototerapia
+              </p>
+              <p class="text-sm text-gray-600 leading-relaxed">
+                Prémiový kyselinový peeling zvolený presne na mieru vašej pleti s následnou LED fototerapiou. Účinne vyhladzuje textúru, sťahuje póry a odstraňuje hyperpigmentácie.
+              </p>
+              <ul class="text-xs text-gray-500 space-y-1.5 pt-2 border-t border-roseGold-100">
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-roseGold-500"></i> Obsahuje špeciálnu LED terapiu v cene</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-roseGold-500"></i> Viditeľný efekt rozjasnenia ihneď</li>
+              </ul>
+            </div>
+          </div>
+          <div class="p-6 pt-0 flex items-center gap-2">
+            <button onclick="addToBasket('Chemický píling REVIDERM 30% + LED terapia', 95, 'Kozmetika')" class="flex-1 py-2.5 px-3 rounded-xl border border-roseGold-300 text-roseGold-800 text-xs font-bold hover:bg-roseGold-100 transition-colors">
+              + Pridať do plánu
+            </button>
+            <button onclick="openReservationModal('Chemický píling REVIDERM 30%')" class="gold-gradient-bg text-white p-2.5 rounded-xl text-xs hover:opacity-90" title="Rezervovať cez Bookio">
+              <i class="fa-regular fa-calendar-check"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Treatment 4: Mikroihličková mezoterapia -->
+        <div class="rounded-3xl border border-roseGold-200/80 bg-cream-50/50 overflow-hidden shadow-card hover:shadow-luxury hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="relative h-56 overflow-hidden bg-roseGold-100">
+              <img src="images/mikroihlickova-mezoterapia.jpg" alt="Mikroihličková mezoterapia REVIDERM" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute top-3 right-3 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-roseGold-800 shadow-sm">
+                135 €
+              </div>
+            </div>
+            <div class="p-6 space-y-3">
+              <h3 class="font-serif text-xl font-bold text-gray-900 group-hover:text-roseGold-600 transition-colors">
+                Mikroihličková mezoterapia REVIDERM
+              </h3>
+              <p class="text-xs text-roseGold-700 font-semibold uppercase tracking-wider">
+                Cielená stimulácia kolagénu a redukcia vrások
+              </p>
+              <p class="text-sm text-gray-600 leading-relaxed">
+                Mikroskopické ihličky vytvárajú v pokožke kanáliky pre hĺbkový prienik aktívnych peptidov a kyseliny hyalurónovej. Výrazne vyhladzuje očné a perové vrásky.
+              </p>
+              <ul class="text-xs text-gray-500 space-y-1.5 pt-2 border-t border-roseGold-100">
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-roseGold-500"></i> Tvár a krk v základnom balíku</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-roseGold-500"></i> Dlhodobé vypnutie pokožky</li>
+              </ul>
+            </div>
+          </div>
+          <div class="p-6 pt-0 flex items-center gap-2">
+            <button onclick="addToBasket('Mezoterapia REVIDERM tvár a krk', 135, 'Mezoterapia')" class="flex-1 py-2.5 px-3 rounded-xl border border-roseGold-300 text-roseGold-800 text-xs font-bold hover:bg-roseGold-100 transition-colors">
+              + Pridať do plánu
+            </button>
+            <button onclick="openReservationModal('Mezoterapia REVIDERM')" class="gold-gradient-bg text-white p-2.5 rounded-xl text-xs hover:opacity-90">
+              <i class="fa-regular fa-calendar-check"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Treatment 5: Mezoterapia booster Dermaheal HSR -->
+        <div class="rounded-3xl border border-roseGold-200/80 bg-cream-50/50 overflow-hidden shadow-card hover:shadow-luxury hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="relative h-56 overflow-hidden bg-roseGold-100">
+              <img src="images/dermaheal-booster.jpg" alt="Mezoterapia booster Dermaheal HSR" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute top-3 right-3 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-roseGold-800 shadow-sm">
+                Od 170 €
+              </div>
+            </div>
+            <div class="p-6 space-y-3">
+              <h3 class="font-serif text-xl font-bold text-gray-900 group-hover:text-roseGold-600 transition-colors">
+                Mezoterapia Booster – Dermaheal HSR
+              </h3>
+              <p class="text-xs text-roseGold-700 font-semibold uppercase tracking-wider">
+                58 aktívnych ingrediencií & biomimetické peptidy
+              </p>
+              <p class="text-sm text-gray-600 leading-relaxed">
+                Silný koktejl pre hĺbkovú revitalizáciu suchej, starnúcej a unavenej pleti. Kyselina hyalurónová, 13 vitamínov a 24 aminokyselín stimulujú bunkovú regeneráciu.
+              </p>
+              <ul class="text-xs text-gray-500 space-y-1.5 pt-2 border-t border-roseGold-100">
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-roseGold-500"></i> Aquaskin injector aplikácia bez bolesti</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-roseGold-500"></i> Intenzívna hydratácia tváre, krku či dekoltu</li>
+              </ul>
+            </div>
+          </div>
+          <div class="p-6 pt-0 flex items-center gap-2">
+            <button onclick="addToBasket('Aquaskin injector kyselina hyalurónová', 170, 'Mezoterapia')" class="flex-1 py-2.5 px-3 rounded-xl border border-roseGold-300 text-roseGold-800 text-xs font-bold hover:bg-roseGold-100 transition-colors">
+              + Pridať do plánu
+            </button>
+            <button onclick="openReservationModal('Dermaheal HSR Booster')" class="gold-gradient-bg text-white p-2.5 rounded-xl text-xs hover:opacity-90">
+              <i class="fa-regular fa-calendar-check"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Treatment 6: LED Terapia & Ultrazvuk -->
+        <div class="rounded-3xl border border-roseGold-200/80 bg-cream-50/50 overflow-hidden shadow-card hover:shadow-luxury hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="relative h-56 overflow-hidden bg-roseGold-100">
+              <img src="images/led-terapia.jpg" alt="LED fototerapia a svetelné vlny" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute top-3 right-3 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-roseGold-800 shadow-sm">
+                15 € / 20 min
+              </div>
+            </div>
+            <div class="p-6 space-y-3">
+              <h3 class="font-serif text-xl font-bold text-gray-900 group-hover:text-roseGold-600 transition-colors">
+                LED Fototerapia & Hĺbkové svetlo
+              </h3>
+              <p class="text-xs text-roseGold-700 font-semibold uppercase tracking-wider">
+                Nekalorické svetelné vlny pre bunkovú obnovu
+              </p>
+              <p class="text-sm text-gray-600 leading-relaxed">
+                Červené a modré LED svetlo dodáva bunkám energiu, urýchľuje hojenie, potláča baktérie způsobujúce akné a dramaticky zvyšuje účinok aplikovaných sér a masiek.
+              </p>
+              <ul class="text-xs text-gray-500 space-y-1.5 pt-2 border-t border-roseGold-100">
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-roseGold-500"></i> Výborné ako doplnok k akémukoľvek ošetreniu</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-roseGold-500"></i> Žiadne začervenanie ani bolesť</li>
+              </ul>
+            </div>
+          </div>
+          <div class="p-6 pt-0 flex items-center gap-2">
+            <button onclick="addToBasket('LED terapia (20 min.)', 15, 'Doplnkové')" class="flex-1 py-2.5 px-3 rounded-xl border border-roseGold-300 text-roseGold-800 text-xs font-bold hover:bg-roseGold-100 transition-colors">
+              + Pridať do plánu
+            </button>
+            <button onclick="openReservationModal('LED terapia')" class="gold-gradient-bg text-white p-2.5 rounded-xl text-xs hover:opacity-90">
+              <i class="fa-regular fa-calendar-check"></i>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== AESTHETIC MEDICINE & ADVANCED APPARATUS (ESTETIKA) ==================== -->
+  <section id="estetika" class="py-20 bg-cream-100/60 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto space-y-3 mb-16">
+        <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-roseGold-700">
+          <span class="w-8 h-[2px] bg-roseGold-600 inline-block"></span>
+          Estetická medicína & Špičkové prístroje
+          <span class="w-8 h-[2px] bg-roseGold-600 inline-block"></span>
+        </div>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-gray-900">
+          Moderné prístrojové & Injekčné procedúry
+        </h2>
+        <p class="text-gray-600 text-sm sm:text-base leading-relaxed">
+          Riešenia pre náročnejšie požiadavky: redukcia podbradku, vyhladenie mimických vrások, výplne pier kyselinou hyalurónovou, frakčný CO2 laser a trvalá laserová epilácia EXILITE II.
+        </p>
+      </div>
+
+      <!-- Feature Aesthetic Cards -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+        
+        <!-- Big Card 1: Redukcia tuku podbradku – Enzýmová Lipolýza PB Sérum -->
+        <div class="rounded-3xl border border-roseGold-200 bg-white p-6 sm:p-8 shadow-card hover:shadow-luxury transition-all flex flex-col md:flex-row gap-6 items-center">
+          <div class="w-full md:w-1/2 aspect-square rounded-2xl overflow-hidden relative shrink-0">
+            <img src="images/lipolyza-pred-po.jpg" alt="Pred a po lipolýze podbradku PB sérum" class="w-full h-full object-cover">
+            <div class="absolute bottom-2 left-2 bg-obsidian-900/80 text-white text-[10px] px-2 py-0.5 rounded backdrop-blur-sm">
+              Reálny výsledok klientky
+            </div>
+          </div>
+          <div class="space-y-3 w-full">
+            <div class="inline-block bg-roseGold-100 text-roseGold-800 text-xs font-bold px-2.5 py-1 rounded-full">
+              Enzymoterapia PB Sérum
+            </div>
+            <h3 class="font-serif text-2xl font-bold text-gray-900">Redukcia tuku podbradku – Lipolýza</h3>
+            <p class="text-sm text-gray-600 leading-relaxed">
+              Rozlúčte sa s dvojitou bradou a ochabnutými kontúrami tváre. Špičkové enzýmy (lipáza, kolagenáza, hyaluronidáza) cielene rozkladajú tukové bunky a spevňujú pokožku bez operácie.
+            </p>
+            <div class="flex items-center justify-between pt-2 border-t border-gray-100">
+              <span class="text-xl font-bold text-gray-900">140 €</span>
+              <div class="flex items-center gap-2">
+                <button onclick="addToBasket('Lipolýza PB sérum enzým redukcia podbradku', 140, 'Estetika')" class="text-xs font-bold text-roseGold-700 bg-roseGold-50 hover:bg-roseGold-100 px-3 py-2 rounded-xl transition-colors">
+                  + Do plánu
+                </button>
+                <button onclick="openReservationModal('Lipolýza podbradku PB sérum')" class="gold-gradient-bg text-white text-xs font-bold px-4 py-2 rounded-xl shadow-sm">
+                  Rezervovať
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Big Card 2: Frakčný CO2 Resurfacing -->
+        <div class="rounded-3xl border border-roseGold-200 bg-white p-6 sm:p-8 shadow-card hover:shadow-luxury transition-all flex flex-col md:flex-row gap-6 items-center">
+          <div class="w-full md:w-1/2 aspect-square rounded-2xl overflow-hidden relative shrink-0">
+            <img src="images/frakcny-resurfacing.jpg" alt="Frakčný laserový resurfacing tváre" class="w-full h-full object-cover">
+            <div class="absolute bottom-2 left-2 bg-obsidian-900/80 text-white text-[10px] px-2 py-0.5 rounded backdrop-blur-sm">
+              Laserová technológia
+            </div>
+          </div>
+          <div class="space-y-3 w-full">
+            <div class="inline-block bg-roseGold-100 text-roseGold-800 text-xs font-bold px-2.5 py-1 rounded-full">
+              Hĺbková obnova kolagénu
+            </div>
+            <h3 class="font-serif text-2xl font-bold text-gray-900">Frakčný Resurfacing</h3>
+            <p class="text-sm text-gray-600 leading-relaxed">
+              Zlatý štandard dermatologickej rejuvenizácie. Frakčný laser mikroskopickými bodmi stimuluje hlboké vrstvy dermis k masívnej tvorbe nového kolagénu, redukuje jazvičky, textúru a hlboké vrásky.
+            </p>
+            <div class="flex items-center justify-between pt-2 border-t border-gray-100">
+              <span class="text-xl font-bold text-gray-900">Od 50 € <span class="text-xs font-normal text-gray-500">(Tvár 280 €)</span></span>
+              <div class="flex items-center gap-2">
+                <button onclick="addToBasket('Frakčný resurfacing tvár', 280, 'Estetika')" class="text-xs font-bold text-roseGold-700 bg-roseGold-50 hover:bg-roseGold-100 px-3 py-2 rounded-xl transition-colors">
+                  + Do plánu
+                </button>
+                <button onclick="openReservationModal('Frakčný resurfacing')" class="gold-gradient-bg text-white text-xs font-bold px-4 py-2 rounded-xl shadow-sm">
+                  Rezervovať
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Secondary Aesthetic Grid (4 items) -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Botulotoxín -->
+        <div class="bg-white rounded-2xl p-6 border border-roseGold-200/80 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="w-12 h-12 rounded-xl bg-roseGold-100 text-roseGold-600 flex items-center justify-center text-xl">
+              <i class="fa-solid fa-syringe"></i>
+            </div>
+            <h4 class="font-serif font-bold text-lg text-gray-900">Aplikácia botulotoxínu</h4>
+            <p class="text-xs text-gray-600 leading-relaxed">
+              Bezpečné a jemné vyhladenie mimických vrások na čele, medzi obočím (glabela) a okolo očí. Zachováva prirodzenú mimiku bez "zamrznutého" výrazu.
+            </p>
+            <div class="text-xs text-gray-500 space-y-1 pt-2 border-t border-gray-100">
+              <div class="flex justify-between"><span>1 lokalita:</span> <strong>110 €</strong></div>
+              <div class="flex justify-between"><span>2 lokality:</span> <strong>210 €</strong></div>
+              <div class="flex justify-between"><span>3 lokality:</span> <strong>290 €</strong></div>
+            </div>
+          </div>
+          <div class="pt-4 flex items-center gap-2">
+            <button onclick="addToBasket('Botulotoxín 1 lokalita', 110, 'Estetika')" class="flex-1 py-2 rounded-lg border border-roseGold-300 text-roseGold-800 text-[11px] font-bold hover:bg-roseGold-50">
+              + Do plánu
+            </button>
+            <button onclick="openReservationModal('Botulotoxín')" class="gold-gradient-bg text-white px-3 py-2 rounded-lg text-xs">
+              <i class="fa-regular fa-calendar-check"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Kyselina hyalurónová -->
+        <div class="bg-white rounded-2xl p-6 border border-roseGold-200/80 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="w-12 h-12 rounded-xl bg-roseGold-100 text-roseGold-600 flex items-center justify-center text-xl">
+              <i class="fa-solid fa-lips"></i>
+            </div>
+            <h4 class="font-serif font-bold text-lg text-gray-900">Kyselina hyalurónová & Pery</h4>
+            <p class="text-xs text-gray-600 leading-relaxed">
+              Jemná hydratácia pier, zvýraznenie kontúr a vyplnenie nasolabiálnych rýh. Prirodzený objem a sviežosť s rešpektom k anatómii vašej tváre.
+            </p>
+            <div class="text-xs text-gray-500 space-y-1 pt-2 border-t border-gray-100">
+              <div class="flex justify-between"><span>Hydratácia pier:</span> <strong>210 €</strong></div>
+              <div class="flex justify-between"><span>Nasolabiálne ryhy:</span> <strong>200 €</strong></div>
+              <div class="flex justify-between"><span>Výplň brady:</span> <strong>160 €</strong></div>
+            </div>
+          </div>
+          <div class="pt-4 flex items-center gap-2">
+            <button onclick="addToBasket('Hydratácia pier kyselinou hyalurónovou', 210, 'Estetika')" class="flex-1 py-2 rounded-lg border border-roseGold-300 text-roseGold-800 text-[11px] font-bold hover:bg-roseGold-50">
+              + Do plánu
+            </button>
+            <button onclick="openReservationModal('Kyselina hyalurónová')" class="gold-gradient-bg text-white px-3 py-2 rounded-lg text-xs">
+              <i class="fa-regular fa-calendar-check"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Termolifting Protége Exilis -->
+        <div class="bg-white rounded-2xl p-6 border border-roseGold-200/80 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="w-12 h-12 rounded-xl bg-roseGold-100 text-roseGold-600 flex items-center justify-center text-xl">
+              <i class="fa-solid fa-wave-square"></i>
+            </div>
+            <h4 class="font-serif font-bold text-lg text-gray-900">Termolifting Protége Exilis</h4>
+            <p class="text-xs text-gray-600 leading-relaxed">
+              Neinvazívny lifting pokožky rádiofrekvenciou. Prehrieva kolagénové vlákna v hĺbke, sťahuje pokožku tváre a krku a vyhladzuje vrásky bez ihiel.
+            </p>
+            <div class="text-xs text-gray-500 space-y-1 pt-2 border-t border-gray-100">
+              <div class="flex justify-between"><span>Tvár + krk:</span> <strong>130 €</strong></div>
+              <div class="flex justify-between"><span>Komplet s maskou:</span> <strong>160 €</strong></div>
+              <div class="flex justify-between"><span>Rejuvenizácia Intima:</span> <strong>80 €</strong></div>
+            </div>
+          </div>
+          <div class="pt-4 flex items-center gap-2">
+            <button onclick="addToBasket('Termolifting Protége Exilis tvár + krk', 130, 'Estetika')" class="flex-1 py-2 rounded-lg border border-roseGold-300 text-roseGold-800 text-[11px] font-bold hover:bg-roseGold-50">
+              + Do plánu
+            </button>
+            <button onclick="openReservationModal('Termolifting Protége Exilis')" class="gold-gradient-bg text-white px-3 py-2 rounded-lg text-xs">
+              <i class="fa-regular fa-calendar-check"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Laserová Epilácia EXILITE II -->
+        <div class="bg-white rounded-2xl p-6 border border-roseGold-200/80 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="w-12 h-12 rounded-xl bg-roseGold-100 text-roseGold-600 flex items-center justify-center text-xl">
+              <i class="fa-solid fa-sun"></i>
+            </div>
+            <h4 class="font-serif font-bold text-lg text-gray-900">Laserová epilácia EXILITE</h4>
+            <p class="text-xs text-gray-600 leading-relaxed">
+              Trvalé odstránenie chĺpkov certifikovaným medicínskym prístrojom BTL EXILITE II na báze selektívnej fototermolýzy s kontaktným chladením pokožky.
+            </p>
+            <div class="text-xs text-gray-500 space-y-1 pt-2 border-t border-gray-100">
+              <div class="flex justify-between"><span>Horná pera:</span> <strong>35 €</strong></div>
+              <div class="flex justify-between"><span>Podpazušie:</span> <strong>60 €</strong></div>
+              <div class="flex justify-between"><span>Celé nohy:</span> <strong>220 €</strong></div>
+            </div>
+          </div>
+          <div class="pt-4 flex items-center gap-2">
+            <button onclick="addToBasket('Laserová epilácia podpazušie', 60, 'Epilácia')" class="flex-1 py-2 rounded-lg border border-roseGold-300 text-roseGold-800 text-[11px] font-bold hover:bg-roseGold-50">
+              + Do plánu
+            </button>
+            <button onclick="openReservationModal('Laserová epilácia EXILITE')" class="gold-gradient-bg text-white px-3 py-2 rounded-lg text-xs">
+              <i class="fa-regular fa-calendar-check"></i>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Additional Apparatus Line: Cievky, Metličky, Fibrómy, Lymfoven -->
+      <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <div class="bg-white/80 rounded-2xl p-5 border border-roseGold-100 flex items-start gap-3.5">
+          <div class="w-10 h-10 rounded-xl bg-roseGold-100 text-roseGold-700 flex items-center justify-center shrink-0">
+            <i class="fa-solid fa-heart-pulse"></i>
+          </div>
+          <div>
+            <h5 class="font-bold text-sm text-gray-900">Odstránenie cievok a metličiek</h5>
+            <p class="text-xs text-gray-500 mt-1">Laserové a koagulačné ošetrenie rozšírených žiliek na tvári aj nohách (od 60 €).</p>
+          </div>
+        </div>
+
+        <div class="bg-white/80 rounded-2xl p-5 border border-roseGold-100 flex items-start gap-3.5">
+          <div class="w-10 h-10 rounded-xl bg-roseGold-100 text-roseGold-700 flex items-center justify-center shrink-0">
+            <i class="fa-solid fa-wand-magic"></i>
+          </div>
+          <div>
+            <h5 class="font-bold text-sm text-gray-900">Elektrokauterizácia & Fibrómy</h5>
+            <p class="text-xs text-gray-500 mt-1">Šetrné odstránenie kožných výrastkov, keratóz a hemangiómov bez jaziev (65 – 200 €).</p>
+          </div>
+        </div>
+
+        <div class="bg-white/80 rounded-2xl p-5 border border-roseGold-100 flex items-start gap-3.5">
+          <div class="w-10 h-10 rounded-xl bg-roseGold-100 text-roseGold-700 flex items-center justify-center shrink-0">
+            <i class="fa-solid fa-water"></i>
+          </div>
+          <div>
+            <h5 class="font-bold text-sm text-gray-900">Prístrojová lymfodrenáž Lymfoven</h5>
+            <p class="text-xs text-gray-500 mt-1">50-minútová detoxikácia, podpora metabolizmu a zmiernenie celulitídy (25 €).</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== BEFORE / AFTER INTERACTIVE SLIDER (VÝSLEDKY) ==================== -->
+  <section id="vysledky" class="py-20 bg-white relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto space-y-3 mb-12">
+        <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-champagne-600">
+          <span class="w-8 h-[2px] bg-champagne-500 inline-block"></span>
+          Reálne výsledky našich klientiek
+          <span class="w-8 h-[2px] bg-champagne-500 inline-block"></span>
+        </div>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-gray-900">
+          Porovnanie Pred a Po ošetrení
+        </h2>
+        <p class="text-gray-600 text-sm sm:text-base leading-relaxed">
+          Presvedčte sa o prirodzenom efekte ošetrení. Potiahnutím posuvníka v strede porovnajte stav pokožky pred a po procedúre.
+        </p>
+      </div>
+
+      <!-- Category Filter for Before/After -->
+      <div class="flex flex-wrap items-center justify-center gap-2 mb-10">
+        <button onclick="switchBaCase('botox')" id="baBtn-botox" class="ba-tab-btn px-5 py-2 rounded-full text-xs font-bold bg-roseGold-600 text-white shadow-sm transition-all">
+          Botulotoxín (Mimika)
+        </button>
+        <button onclick="switchBaCase('lips')" id="baBtn-lips" class="ba-tab-btn px-5 py-2 rounded-full text-xs font-bold bg-cream-100 text-gray-700 hover:bg-roseGold-100 transition-all">
+          Kyselina hyalurónová (Pery)
+        </button>
+        <button onclick="switchBaCase('lipolyza')" id="baBtn-lipolyza" class="ba-tab-btn px-5 py-2 rounded-full text-xs font-bold bg-cream-100 text-gray-700 hover:bg-roseGold-100 transition-all">
+          Lipolýza PB Sérum (Podbradok)
+        </button>
+        <button onclick="switchBaCase('keratoza')" id="baBtn-keratoza" class="ba-tab-btn px-5 py-2 rounded-full text-xs font-bold bg-cream-100 text-gray-700 hover:bg-roseGold-100 transition-all">
+          Odstránenie keratózy
+        </button>
+      </div>
+
+      <!-- Main Slider Component -->
+      <div class="max-w-3xl mx-auto bg-cream-50 rounded-3xl p-4 sm:p-6 border border-roseGold-200/80 shadow-luxury">
+        
+        <div class="relative w-full aspect-[4/3] sm:aspect-[16/10] rounded-2xl overflow-hidden select-none shadow-md" id="baContainer">
+          
+          <!-- Image AFTER (Background) -->
+          <img id="baImgAfter" src="images/gallery-botox-before-after.jpg" alt="Po ošetrení" class="absolute inset-0 w-full h-full object-cover">
+          <span class="absolute top-4 right-4 bg-obsidian-900/80 backdrop-blur-md text-white text-xs font-bold px-3 py-1 rounded-full pointer-events-none z-10">
+            PO OŠETRENÍ
+          </span>
+
+          <!-- Image BEFORE (Foreground clipped) -->
+          <div id="baBeforeWrapper" class="absolute inset-0 overflow-hidden" style="width: 50%;">
+            <img id="baImgBefore" src="images/gallery-botox-before-after.jpg" alt="Pred ošetrením" class="absolute inset-0 w-full h-full object-cover max-w-none" style="width: 100%; filter: contrast(0.95);">
+            <span class="absolute top-4 left-4 bg-white/90 backdrop-blur-md text-gray-900 text-xs font-bold px-3 py-1 rounded-full pointer-events-none z-10">
+              PRED OŠETRENÍM
+            </span>
+          </div>
+
+          <!-- Divider Handle -->
+          <div id="baHandle" class="absolute top-0 bottom-0 w-1 bg-white cursor-ew-resize z-20 slider-handle" style="left: 50%;">
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-roseGold-600 text-white flex items-center justify-center text-xs shadow-lg border-2 border-white">
+              <i class="fa-solid fa-left-right text-[10px]"></i>
+            </div>
+          </div>
+
+          <!-- Invisible Range Slider covering container -->
+          <input type="range" min="0" max="100" value="50" id="baRange" class="absolute inset-0 w-full h-full opacity-0 cursor-ew-resize z-30" oninput="updateBaSlider(this.value)">
+
+        </div>
+
+        <!-- Description Box for Current Case -->
+        <div class="mt-4 pt-4 border-t border-roseGold-200 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+          <div>
+            <h4 id="baCaseTitle" class="font-serif font-bold text-gray-900 text-base">Aplikácia botulotoxínu — vyhladenie mimických vrások</h4>
+            <p id="baCaseSubtitle" class="text-xs text-gray-500">Viditeľné uvoľnenie svalov čela bez neprirodzeného obmedzenia mimiky.</p>
+          </div>
+          <button onclick="openReservationModal()" class="gold-gradient-bg text-white text-xs font-bold px-5 py-2.5 rounded-full shadow-sm hover:opacity-95 shrink-0">
+            Objednať konzultáciu
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== COMPLETE INTERACTIVE PRICELIST & BEAUTY BASKET ==================== -->
+  <section id="cennik" class="py-20 bg-cream-50 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto space-y-3 mb-12">
+        <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-champagne-600">
+          <span class="w-8 h-[2px] bg-champagne-500 inline-block"></span>
+          Transparentné ceny bez skrytých poplatkov
+          <span class="w-8 h-[2px] bg-champagne-500 inline-block"></span>
+        </div>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-gray-900">
+          Kompletný cenník služieb
+        </h2>
+        <p class="text-gray-600 text-sm sm:text-base leading-relaxed">
+          Vyhľadávajte procedúry alebo si vyfiltrujte konkrétnu oblasť. Kliknutím na <strong>„+ Pridať do plánu“</strong> si môžete zostaviť orientačnú kalkuláciu svojho ošetrenia.
+        </p>
+      </div>
+
+      <!-- Live Search & Filter Bar -->
+      <div class="bg-white rounded-2xl p-4 sm:p-6 shadow-sm border border-roseGold-200 mb-8 space-y-4">
+        
+        <div class="relative">
+          <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"></i>
+          <input type="text" id="priceSearchInput" oninput="filterPriceList()" placeholder="Hľadať v cenníku (napr. 'botox', 'reviderm', 'pery', 'cievky', 'podpazušie')..." class="w-full pl-11 pr-4 py-3 rounded-xl border border-gray-200 focus:border-roseGold-500 focus:ring-2 focus:ring-roseGold-200 outline-none text-sm text-gray-800 placeholder-gray-400">
+        </div>
+
+        <!-- Filter Tags -->
+        <div class="flex flex-wrap items-center gap-2 pt-1 text-xs">
+          <span class="text-gray-400 font-semibold mr-1">Kategórie:</span>
+          <button onclick="setPriceCategory('all')" class="cat-pill px-3.5 py-1.5 rounded-full font-bold bg-roseGold-600 text-white transition-all" data-cat="all">Všetky</button>
+          <button onclick="setPriceCategory('kozmetika')" class="cat-pill px-3.5 py-1.5 rounded-full font-bold bg-cream-100 text-gray-700 hover:bg-roseGold-100 transition-all" data-cat="kozmetika">Kozmetika & Pleť</button>
+          <button onclick="setPriceCategory('estetika')" class="cat-pill px-3.5 py-1.5 rounded-full font-bold bg-cream-100 text-gray-700 hover:bg-roseGold-100 transition-all" data-cat="estetika">Estetická medicína</button>
+          <button onclick="setPriceCategory('resurfacing')" class="cat-pill px-3.5 py-1.5 rounded-full font-bold bg-cream-100 text-gray-700 hover:bg-roseGold-100 transition-all" data-cat="resurfacing">Frakčný resurfacing</button>
+          <button onclick="setPriceCategory('laser')" class="cat-pill px-3.5 py-1.5 rounded-full font-bold bg-cream-100 text-gray-700 hover:bg-roseGold-100 transition-all" data-cat="laser">Laser & Pigmentácie</button>
+          <button onclick="setPriceCategory('epilacia')" class="cat-pill px-3.5 py-1.5 rounded-full font-bold bg-cream-100 text-gray-700 hover:bg-roseGold-100 transition-all" data-cat="epilacia">Laserová epilácia</button>
+          <button onclick="setPriceCategory('doplnkove')" class="cat-pill px-3.5 py-1.5 rounded-full font-bold bg-cream-100 text-gray-700 hover:bg-roseGold-100 transition-all" data-cat="doplnkove">Doplnkové & Telo</button>
+        </div>
+
+      </div>
+
+      <!-- Pricelist Container -->
+      <div id="priceListContainer" class="space-y-6">
+        <!-- Rendered via JavaScript from authentic dataset -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== SALON GALLERY & HYGIENIC ENVIRONMENT ==================== -->
+  <section id="galeria" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto space-y-3 mb-12">
+        <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-champagne-600">
+          <span class="w-8 h-[2px] bg-champagne-500 inline-block"></span>
+          Virtuálna prehliadka
+          <span class="w-8 h-[2px] bg-champagne-500 inline-block"></span>
+        </div>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-gray-900">
+          Príjemné priestory salónu na Hrudkoch 73
+        </h2>
+        <p class="text-gray-600 text-sm sm:text-base leading-relaxed">
+          Klimatizované, dokonale sterilné a harmonicky zariadené prostredie, v ktorom si oddýchnete od uponáhľaného sveta.
+        </p>
+      </div>
+
+      <!-- Gallery Grid -->
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+        
+        <div class="rounded-2xl overflow-hidden aspect-[4/3] group relative shadow-sm">
+          <img src="images/salon-hero.jpg" alt="Recepcia a salón" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs font-semibold">
+            Recepcia & Vstup
+          </div>
+        </div>
+
+        <div class="rounded-2xl overflow-hidden aspect-[4/3] group relative shadow-sm">
+          <img src="images/salon-interior-1.jpg" alt="Pohľad na lehátko" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs font-semibold">
+            Ošetrovacie lôžko
+          </div>
+        </div>
+
+        <div class="rounded-2xl overflow-hidden aspect-[4/3] group relative shadow-sm">
+          <img src="images/salon-interior-2.jpg" alt="Relaxačná atmosféra" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs font-semibold">
+            Oddychová zóna
+          </div>
+        </div>
+
+        <div class="rounded-2xl overflow-hidden aspect-[4/3] group relative shadow-sm">
+          <img src="images/salon-interior-4.jpg" alt="Prístrojové vybavenie" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs font-semibold">
+            Prístrojové zázemie
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== REVIEWS & CLIENT TESTIMONIALS ==================== -->
+  <section class="py-20 bg-cream-50 border-t border-roseGold-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto space-y-3 mb-14">
+        <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-champagne-600">
+          <span class="w-8 h-[2px] bg-champagne-500 inline-block"></span>
+          Skúsenosti klientiek
+          <span class="w-8 h-[2px] bg-champagne-500 inline-block"></span>
+        </div>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-gray-900">
+          Čo hovoria naše spokojné dámy
+        </h2>
+        <p class="text-gray-600 text-sm">
+          Najvyššia spokojnosť, profesionálny prístup a viditeľné zmeny, ktoré hovoria samy za seba.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <!-- Review 1 -->
+        <div class="bg-white rounded-3xl p-6 border border-roseGold-200/80 shadow-sm space-y-4">
+          <div class="flex items-center gap-1 text-amber-400 text-xs">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <p class="text-sm text-gray-600 italic leading-relaxed">
+            „Pani Jarka je úžasná odborníčka s medicínskym prehľadom. Mikrodermabrázia REVIDERM urobila s mojou zrelou pleťou doslova zázraky, pleť je vypnutá a žiarivá. Oceňujem čistotu a bezproblémové parkovanie priamo pred vchodom.“
+          </p>
+          <div class="pt-2 border-t border-gray-100">
+            <span class="font-bold text-sm text-gray-900 block">Katarína M.</span>
+            <span class="text-xs text-gray-400">Čierna Voda • Pravidelná klientka</span>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="bg-white rounded-3xl p-6 border border-roseGold-200/80 shadow-sm space-y-4">
+          <div class="flex items-center gap-1 text-amber-400 text-xs">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <p class="text-sm text-gray-600 italic leading-relaxed">
+            „Dlho som hľadala niekoho, kto mi urobí jemnú hydratáciu pier bez toho, aby to vyzeralo umelo alebo "kačičkovsky". Pani Jarka má nesmierny cit pre detail, pery sú prirodzene plné a hydratované. Odporúčam všetkými desiatimi!“
+          </p>
+          <div class="pt-2 border-t border-gray-100">
+            <span class="font-bold text-sm text-gray-900 block">Michaela Š.</span>
+            <span class="text-xs text-gray-400">Chorvátsky Grob • Kyselina hyalurónová</span>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="bg-white rounded-3xl p-6 border border-roseGold-200/80 shadow-sm space-y-4">
+          <div class="flex items-center gap-1 text-amber-400 text-xs">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <p class="text-sm text-gray-600 italic leading-relaxed">
+            „Absolvovala som enzymatickú lipolýzu podbradku PB sérom a výsledok po 3 týždňoch predčil moje očakávania. Dvojitá brada je preč a línia čeľuste je znova definovaná. Veľká vďaka za trpezlivosť a vysvetlenie celého postupu.“
+          </p>
+          <div class="pt-2 border-t border-gray-100">
+            <span class="font-bold text-sm text-gray-900 block">Zuzana B.</span>
+            <span class="text-xs text-gray-400">Bratislava-Rača • Enzýmová lipolýza</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== FAQ ACCORDION ==================== -->
+  <section class="py-20 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center space-y-3 mb-12">
+        <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-champagne-600">
+          <span class="w-8 h-[2px] bg-champagne-500 inline-block"></span>
+          Máte otázky?
+          <span class="w-8 h-[2px] bg-champagne-500 inline-block"></span>
+        </div>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-gray-900">
+          Často kladené otázky
+        </h2>
+      </div>
+
+      <div class="space-y-3">
+        
+        <!-- FAQ 1 -->
+        <div class="border border-roseGold-200/80 rounded-2xl overflow-hidden">
+          <button onclick="toggleFaq(1)" class="w-full text-left p-5 bg-cream-50/50 hover:bg-roseGold-50/50 flex items-center justify-between transition-colors">
+            <span class="font-bold text-sm sm:text-base text-gray-900">Ako prebieha prvá návšteva a výber procedúry?</span>
+            <i id="faqIcon-1" class="fa-solid fa-chevron-down text-roseGold-600 transition-transform"></i>
+          </button>
+          <div id="faqContent-1" class="hidden p-5 bg-white text-xs sm:text-sm text-gray-600 border-t border-roseGold-100 leading-relaxed">
+            Pri prvej návšteve vždy začíname krátkou vstupnou konzultáciou a vizuálnou diagnostikou pleti. Spoločne preberieme váš aktuálny stav, alergie, doterajšiu domácu starostlivosť a vaše ciele. Na základe toho zvolíme presný typ ošetrenia, prípadne kombináciu prístrojov.
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="border border-roseGold-200/80 rounded-2xl overflow-hidden">
+          <button onclick="toggleFaq(2)" class="w-full text-left p-5 bg-cream-50/50 hover:bg-roseGold-50/50 flex items-center justify-between transition-colors">
+            <span class="font-bold text-sm sm:text-base text-gray-900">Ako funguje online rezervácia cez systém Bookio?</span>
+            <i id="faqIcon-2" class="fa-solid fa-chevron-down text-roseGold-600 transition-transform"></i>
+          </button>
+          <div id="faqContent-2" class="hidden p-5 bg-white text-xs sm:text-sm text-gray-600 border-t border-roseGold-100 leading-relaxed">
+            Rezervačný systém Bookio vám umožňuje vybrať si konkrétnu službu, deň a voľný čas podľa kalendára. Rezervácia je okamžitá a na váš e-mail a SMS vám príde potvrdenie. Termín je rezervovaný výhradne pre vás. V prípade potreby zmeny termínu vás prosíme o včasné nahlásenie (minimálne 24 hodín vopred).
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="border border-roseGold-200/80 rounded-2xl overflow-hidden">
+          <button onclick="toggleFaq(3)" class="w-full text-left p-5 bg-cream-50/50 hover:bg-roseGold-50/50 flex items-center justify-between transition-colors">
+            <span class="font-bold text-sm sm:text-base text-gray-900">Je laserová epilácia EXILITE II trvalá a koľko sedení potrebujem?</span>
+            <i id="faqIcon-3" class="fa-solid fa-chevron-down text-roseGold-600 transition-transform"></i>
+          </button>
+          <div id="faqContent-3" class="hidden p-5 bg-white text-xs sm:text-sm text-gray-600 border-t border-roseGold-100 leading-relaxed">
+            Laser EXILITE II likviduje chĺpky v rastovej (anagénnej) fáze selektívnou fototermolýzou. Keďže chĺpky rastú v cykloch, pre trvalý efekt sa zvyčajne odporúča séria 4 až 6 ošetrení s odstupom 4-6 týždňov. Pokožka je počas impulzu chladená, takže zákrok je veľmi komfortný.
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="border border-roseGold-200/80 rounded-2xl overflow-hidden">
+          <button onclick="toggleFaq(4)" class="w-full text-left p-5 bg-cream-50/50 hover:bg-roseGold-50/50 flex items-center justify-between transition-colors">
+            <span class="font-bold text-sm sm:text-base text-gray-900">Kde presne parkovať pri návšteve salónu?</span>
+            <i id="faqIcon-4" class="fa-solid fa-chevron-down text-roseGold-600 transition-transform"></i>
+          </button>
+          <div id="faqContent-4" class="hidden p-5 bg-white text-xs sm:text-sm text-gray-600 border-t border-roseGold-100 leading-relaxed">
+            Priamo pred budovou salónu na adrese Hrudky 73 v Čiernej Vode je k dispozícii bezplatné parkovacie státie vyhradené pre klientky salónu. Nemusíte hľadať miesto ani platiť parkovné.
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== CONTACT, LOCATION & MAP ==================== -->
+  <section id="kontakt" class="py-20 bg-cream-50 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        
+        <!-- Contact Information -->
+        <div class="lg:col-span-5 space-y-6">
+          <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-champagne-600">
+            <span class="w-8 h-[2px] bg-champagne-500 inline-block"></span>
+            Kontakt & Kde nás nájdete
+          </div>
+
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-gray-900">
+            Dohodnite si návštevu v Čiernej Vode
+          </h2>
+
+          <p class="text-gray-600 text-sm leading-relaxed">
+            Salón sídli v tichej lokalite s pohodlným prístupom z Bratislavy, Vajnor, Pezinka a Senca.
+          </p>
+
+          <!-- Contact Cards -->
+          <div class="space-y-4">
+            
+            <div class="flex items-start gap-4 p-4 rounded-2xl bg-white border border-roseGold-200/80 shadow-sm">
+              <div class="w-11 h-11 rounded-xl bg-roseGold-100 text-roseGold-600 flex items-center justify-center shrink-0">
+                <i class="fa-solid fa-location-dot text-lg"></i>
+              </div>
+              <div>
+                <span class="text-xs text-gray-400 font-semibold uppercase block">Adresa salónu</span>
+                <span class="font-bold text-gray-900 text-sm block">Hrudky 73</span>
+                <span class="text-xs text-gray-600">900 25 Chorvátsky Grob – Čierna Voda</span>
+                <span class="block text-[11px] text-emerald-600 font-semibold mt-1">
+                  <i class="fa-solid fa-square-parking mr-1"></i> Parkovanie priamo pred salónom
+                </span>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4 p-4 rounded-2xl bg-white border border-roseGold-200/80 shadow-sm">
+              <div class="w-11 h-11 rounded-xl bg-roseGold-100 text-roseGold-600 flex items-center justify-center shrink-0">
+                <i class="fa-solid fa-phone text-lg"></i>
+              </div>
+              <div>
+                <span class="text-xs text-gray-400 font-semibold uppercase block">Telefón & WhatsApp</span>
+                <a href="tel:+421904826974" class="font-bold text-gray-900 text-base hover:text-roseGold-600 transition-colors block">
+                  +421 904 826 974
+                </a>
+                <span class="text-xs text-gray-500">Objednávky a konzultácie</span>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4 p-4 rounded-2xl bg-white border border-roseGold-200/80 shadow-sm">
+              <div class="w-11 h-11 rounded-xl bg-roseGold-100 text-roseGold-600 flex items-center justify-center shrink-0">
+                <i class="fa-solid fa-clock text-lg"></i>
+              </div>
+              <div>
+                <span class="text-xs text-gray-400 font-semibold uppercase block">Otváracie hodiny</span>
+                <span class="font-bold text-gray-900 text-sm block">Pondelok – Piatok: 09:00 – 18:00</span>
+                <span class="text-xs text-gray-500">Sobota – Nedeľa: Na základe dohody</span>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4 p-4 rounded-2xl bg-white border border-roseGold-200/80 shadow-sm">
+              <div class="w-11 h-11 rounded-xl bg-roseGold-100 text-roseGold-600 flex items-center justify-center shrink-0">
+                <i class="fa-solid fa-envelope text-lg"></i>
+              </div>
+              <div>
+                <span class="text-xs text-gray-400 font-semibold uppercase block">E-mail</span>
+                <a href="mailto:beautysalonciernavoda@gmail.com" class="font-bold text-gray-900 text-sm hover:text-roseGold-600 transition-colors block">
+                  beautysalonciernavoda@gmail.com
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Quick Navigation Buttons -->
+          <div class="pt-2 flex items-center gap-3">
+            <a href="https://maps.google.com/?q=Beauty+Salon+Chorvatsky+Grob+Hrudky+73" target="_blank" rel="noopener noreferrer" class="flex-1 py-3 px-4 rounded-full bg-white border border-roseGold-300 text-roseGold-800 text-xs font-bold text-center hover:bg-roseGold-50 shadow-sm transition-all flex items-center justify-center gap-2">
+              <i class="fa-brands fa-google text-roseGold-600"></i>
+              <span>Google Mapy</span>
+            </a>
+            <a href="https://waze.com/ul?q=Hrudky+73+Chorvatsky+Grob" target="_blank" rel="noopener noreferrer" class="flex-1 py-3 px-4 rounded-full bg-white border border-roseGold-300 text-roseGold-800 text-xs font-bold text-center hover:bg-roseGold-50 shadow-sm transition-all flex items-center justify-center gap-2">
+              <i class="fa-brands fa-waze text-sky-500"></i>
+              <span>Navigovať cez Waze</span>
+            </a>
+          </div>
+
+        </div>
+
+        <!-- Google Map Iframe & Quick Contact Form -->
+        <div class="lg:col-span-7 space-y-6">
+          
+          <!-- Map container -->
+          <div class="w-full h-80 rounded-3xl overflow-hidden shadow-luxury border-2 border-white bg-cream-100 relative">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2978.621509480376!2d17.256402540608715!3d48.23209640168922!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476c900f5a162439%3A0xbf6be4eb7a986edc!2sBeauty%20Salon%20%2F%20Kozmeticky%20salon%20Cierna%20Voda!5e0!3m2!1sen!2ssk!4v1680961137991!5m2!1sen!2ssk" 
+              width="100%" 
+              height="100%" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Google Mapa Beauty Salon Čierna Voda">
+            </iframe>
+          </div>
+
+          <!-- Quick Message / Question Box -->
+          <div class="bg-white rounded-3xl p-6 sm:p-8 border border-roseGold-200/80 shadow-card">
+            <h3 class="font-serif font-bold text-xl text-gray-900 mb-2">Máte otázku alebo potrebujete poradiť?</h3>
+            <p class="text-xs text-gray-500 mb-6">Napíšte nám správu a radi sa vám ozveme s odporúčaním.</p>
+
+            <form id="contactForm" onsubmit="handleContactSubmit(event)" class="space-y-4">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-semibold text-gray-700 mb-1">Vaše meno *</label>
+                  <input type="text" id="contactName" required placeholder="Napr. Jana Kováčová" class="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:border-roseGold-500 focus:ring-1 focus:ring-roseGold-200 text-xs outline-none">
+                </div>
+                <div>
+                  <label class="block text-xs font-semibold text-gray-700 mb-1">Telefónne číslo *</label>
+                  <input type="tel" id="contactPhone" required placeholder="Napr. 0904 123 456" class="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:border-roseGold-500 focus:ring-1 focus:ring-roseGold-200 text-xs outline-none">
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-xs font-semibold text-gray-700 mb-1">V čom vám môžeme pomôcť?</label>
+                <textarea id="contactMsg" rows="3" placeholder="Zaujíma ma ošetrenie REVIDERM, termolifting alebo výplň pier..." class="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:border-roseGold-500 focus:ring-1 focus:ring-roseGold-200 text-xs outline-none resize-none"></textarea>
+              </div>
+
+              <div class="flex items-center justify-between pt-1">
+                <span class="text-[11px] text-gray-400">Vaše údaje sú v bezpečí podľa GDPR.</span>
+                <button type="submit" class="gold-gradient-bg text-white px-6 py-2.5 rounded-full text-xs font-bold shadow-luxury hover:opacity-95 transition-all">
+                  Odoslať správu
+                </button>
+              </div>
+            </form>
+
+            <div id="contactSuccess" class="hidden p-4 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs font-semibold mt-4 text-center">
+              <i class="fa-solid fa-circle-check text-emerald-600 mr-1.5"></i>
+              Ďakujeme za správu! Čoskoro sa vám ozveme na uvedené telefónne číslo.
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="bg-obsidian-950 text-roseGold-200/80 pt-16 pb-24 md:pb-12 border-t border-roseGold-900/60 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+        
+        <!-- Col 1: About & Logo -->
+        <div class="space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full border border-roseGold-400 p-1 bg-white">
+              <img src="images/logo.png" alt="Beauty Salon Logo" class="w-full h-full object-contain">
+            </div>
+            <div>
+              <span class="font-serif font-bold text-lg text-white block">BEAUTY SALON</span>
+              <span class="text-[10px] tracking-widest text-champagne-400 uppercase">Jaroslava Lukáčová</span>
+            </div>
+          </div>
+          <p class="text-roseGold-300/70 text-xs leading-relaxed">
+            Exkluzívna starostlivosť o pleť, prístrojová estetika a dermaceutické ošetrenia s odborným zdravotníckym zázemím v Čiernej Vode.
+          </p>
+          <div class="flex items-center gap-3 pt-2">
+            <a href="https://www.instagram.com/beautysalonciernavoda/" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-obsidian-800 border border-roseGold-800/80 text-roseGold-300 flex items-center justify-center hover:bg-roseGold-600 hover:text-white transition-colors">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://www.facebook.com/BeautySalonCiernaVoda/" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-obsidian-800 border border-roseGold-800/80 text-roseGold-300 flex items-center justify-center hover:bg-roseGold-600 hover:text-white transition-colors">
+              <i class="fa-brands fa-facebook-f text-xs"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Rýchle odkazy -->
+        <div class="space-y-3">
+          <h4 class="font-serif font-bold text-sm text-white uppercase tracking-wider">Rýchle odkazy</h4>
+          <ul class="space-y-2 text-roseGold-200/70">
+            <li><a href="#uvod" class="hover:text-roseGold-300 transition-colors">Úvod</a></li>
+            <li><a href="#o-salone" class="hover:text-roseGold-300 transition-colors">O salóne a Jaroslave Lukáčovej</a></li>
+            <li><a href="#kozmetika" class="hover:text-roseGold-300 transition-colors">Kozmetické ošetrenia pleti</a></li>
+            <li><a href="#estetika" class="hover:text-roseGold-300 transition-colors">Estetická medicína & Prístroje</a></li>
+            <li><a href="#vysledky" class="hover:text-roseGold-300 transition-colors">Pred & Po výsledky</a></li>
+            <li><a href="#cennik" class="hover:text-roseGold-300 transition-colors">Kompletný cenník</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Ošetrenia -->
+        <div class="space-y-3">
+          <h4 class="font-serif font-bold text-sm text-white uppercase tracking-wider">Kľúčové procedúry</h4>
+          <ul class="space-y-2 text-roseGold-200/70">
+            <li>Mikrokryštalická dermabrázia REVIDERM</li>
+            <li>Enzýmová lipolýza podbradku PB sérum</li>
+            <li>Aplikácia botulotoxínu & Kyselina hyalurónová</li>
+            <li>Frakčný CO2 laserový resurfacing</li>
+            <li>Laserová epilácia BTL EXILITE II</li>
+            <li>Plazmaterapia PRP & Mezoterapia Dermaheal</li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Kontakt & Otváracie hodiny -->
+        <div class="space-y-3">
+          <h4 class="font-serif font-bold text-sm text-white uppercase tracking-wider">Prevádzka</h4>
+          <p class="text-roseGold-200/70">
+            <strong>Hrudky 73</strong><br>
+            900 25 Chorvátsky Grob – Čierna Voda
+          </p>
+          <p class="text-roseGold-200/70">
+            <strong>Tel:</strong> <a href="tel:+421904826974" class="hover:text-white font-medium">0904 826 974</a><br>
+            <strong>E-mail:</strong> <a href="mailto:beautysalonciernavoda@gmail.com" class="hover:text-white">beautysalonciernavoda@gmail.com</a>
+          </p>
+          <p class="text-emerald-400 text-[11px] font-semibold pt-1">
+            <i class="fa-solid fa-circle-check mr-1"></i> Parkovanie zadarmo pred salónom
+          </p>
+        </div>
+
+      </div>
+
+      <div class="pt-8 border-t border-roseGold-900/60 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-roseGold-400/60">
+        <div>
+          © 2026 Beauty Salon – Jaroslava Lukáčová. Všetky práva vyhradené.
+        </div>
+        <div class="flex items-center gap-4">
+          <a href="https://beautysalon-ciernavoda.sk/" target="_blank" rel="noopener noreferrer" class="hover:text-roseGold-200 transition-colors">Pôvodná webová stránka</a>
+          <span>•</span>
+          <span class="text-roseGold-300">Moderný redizajn pre náročnú klientelu</span>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ==================== STICKY MOBILE CONVERSION BAR ==================== -->
+  <div class="fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-t border-roseGold-200 p-2.5 px-4 flex items-center justify-between gap-3 sm:hidden shadow-2xl">
+    <a href="tel:+421904826974" class="flex-1 py-2.5 px-3 rounded-full bg-cream-100 text-gray-800 text-xs font-bold text-center flex items-center justify-center gap-2 border border-roseGold-200">
+      <i class="fa-solid fa-phone text-roseGold-600"></i>
+      <span>Zavolať</span>
+    </a>
+    <button onclick="openReservationModal()" class="flex-[1.4] py-2.5 px-4 rounded-full gold-gradient-bg text-white text-xs font-bold text-center flex items-center justify-center gap-2 shadow-luxury">
+      <i class="fa-regular fa-calendar-check"></i>
+      <span>Rezervovať (Bookio)</span>
+    </button>
+  </div>
+
+  <!-- ==================== BOOKIO RESERVATION MODAL ==================== -->
+  <div id="reservationModal" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-2xl w-full max-h-[92vh] overflow-y-auto shadow-2xl border border-roseGold-200 flex flex-col">
+      
+      <!-- Modal Header -->
+      <div class="p-5 border-b border-roseGold-100 flex items-center justify-between sticky top-0 bg-white z-10">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-roseGold-100 text-roseGold-600 flex items-center justify-center">
+            <i class="fa-regular fa-calendar-check text-lg"></i>
+          </div>
+          <div>
+            <h3 class="font-serif font-bold text-lg text-gray-900">Online rezervácia termínu</h3>
+            <span class="text-xs text-gray-500">Beauty Salon Čierna Voda • Systém Bookio</span>
+          </div>
+        </div>
+        <button onclick="closeReservationModal()" class="w-9 h-9 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-600 flex items-center justify-center transition-colors">
+          <i class="fa-solid fa-xmark text-sm"></i>
+        </button>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="p-6 space-y-6">
+        
+        <!-- Pre-selected service hint if available -->
+        <div id="selectedServiceNotice" class="hidden p-3.5 rounded-xl bg-roseGold-50 border border-roseGold-200 text-xs text-roseGold-800 flex items-center justify-between">
+          <span>Zvolená procedúra: <strong id="selectedServiceName">...</strong></span>
+          <button onclick="clearSelectedServiceNotice()" class="text-roseGold-600 hover:underline text-[11px]">Zmeniť</button>
+        </div>
+
+        <div class="space-y-3">
+          <h4 class="text-sm font-bold text-gray-900">Vyberte si spôsob rezervácie:</h4>
+          
+          <!-- Option A: Direct Bookio Widget -->
+          <div class="p-4 rounded-2xl border-2 border-roseGold-500 bg-roseGold-50/40 relative">
+            <div class="flex items-start justify-between gap-4">
+              <div>
+                <span class="inline-block bg-roseGold-600 text-white text-[10px] font-bold px-2 py-0.5 rounded-full uppercase mb-1">Odporúčané</span>
+                <h5 class="font-bold text-sm text-gray-900">Oficiálny rezervačný kalendár Bookio</h5>
+                <p class="text-xs text-gray-600 mt-1">
+                  Okamžitý výber voľného dňa a hodiny s automatickým potvrdením cez SMS a e-mail.
+                </p>
+              </div>
+              <a href="https://services.bookio.com/beauty-salon-cierna-voda/widget?lang=sk" target="_blank" rel="noopener noreferrer" class="gold-gradient-bg text-white px-4 py-2.5 rounded-xl text-xs font-bold shrink-0 hover:opacity-95 shadow-sm flex items-center gap-1.5">
+                <span>Otvoriť kalendár</span>
+                <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+              </a>
+            </div>
+
+            <!-- Embedded Iframe container for seamless direct booking -->
+            <div class="mt-4 pt-4 border-t border-roseGold-200">
+              <span class="text-[11px] font-semibold text-gray-500 block mb-2">Alebo si termín zvoľte priamo tu:</span>
+              <div class="w-full h-96 rounded-xl overflow-hidden border border-roseGold-200 bg-white">
+                <iframe 
+                  id="bookioIframe"
+                  src="https://services.bookio.com/beauty-salon-cierna-voda/widget?lang=sk" 
+                  width="100%" 
+                  height="100%" 
+                  style="border:0;" 
+                  title="Bookio Rezervačný Widget">
+                </iframe>
+              </div>
+            </div>
+          </div>
+
+          <!-- Option B: Telephone reservation -->
+          <div class="p-4 rounded-2xl border border-gray-200 hover:border-roseGold-300 transition-colors flex items-center justify-between gap-4">
+            <div>
+              <h5 class="font-bold text-sm text-gray-900">Telefonická rezervácia & Konzultácia</h5>
+              <p class="text-xs text-gray-500">Neviete, aké ošetrenie si vybrať? Rada vám poradím po telefóne.</p>
+            </div>
+            <a href="tel:+421904826974" class="px-4 py-2 rounded-xl bg-gray-100 hover:bg-roseGold-100 text-gray-800 text-xs font-bold transition-colors shrink-0 flex items-center gap-1.5">
+              <i class="fa-solid fa-phone text-roseGold-600"></i>
+              <span>0904 826 974</span>
+            </a>
+          </div>
+
+        </div>
+
+        <div class="p-4 rounded-xl bg-amber-50 border border-amber-200 text-amber-900 text-xs space-y-1">
+          <div class="font-bold flex items-center gap-1.5">
+            <i class="fa-solid fa-triangle-exclamation text-amber-600"></i>
+            Storno podmienky
+          </div>
+          <p class="text-[11px] text-amber-800/90 leading-relaxed">
+            V salóne sa venujem každej klientke individuálne. V prípade, že sa na termín nemôžete dostaviť, prosíme o zrušenie minimálne 24 hodín vopred. Pri nevyužitej a včas nezrušenej rezervácii sa účtuje poplatok 25 €.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ==================== BEAUTY BASKET / TREATMENT PLAN MODAL ==================== -->
+  <div id="basketModal" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-lg w-full max-h-[90vh] overflow-y-auto shadow-2xl border border-roseGold-200 flex flex-col">
+      
+      <div class="p-5 border-b border-roseGold-100 flex items-center justify-between sticky top-0 bg-white z-10">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-roseGold-100 text-roseGold-600 flex items-center justify-center">
+            <i class="fa-solid fa-clipboard-list text-lg"></i>
+          </div>
+          <div>
+            <h3 class="font-serif font-bold text-lg text-gray-900">Môj plán ošetrení</h3>
+            <span class="text-xs text-gray-500">Zoznam procedúr, o ktoré máte záujem</span>
+          </div>
+        </div>
+        <button onclick="toggleBasketModal()" class="w-9 h-9 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-600 flex items-center justify-center transition-colors">
+          <i class="fa-solid fa-xmark text-sm"></i>
+        </button>
+      </div>
+
+      <div class="p-6 space-y-6">
+        
+        <div id="basketItemsList" class="space-y-3">
+          <!-- Populated by JS -->
+        </div>
+
+        <div id="basketEmptyMessage" class="text-center py-8 text-gray-400 space-y-2">
+          <i class="fa-solid fa-clipboard-question text-3xl text-roseGold-300"></i>
+          <p class="text-xs">Zatiaľ nemáte v pláne žiadne procedúry.<br>Kliknite na <strong>„+ Pridať do plánu“</strong> pri akejkoľvek položke v cenníku.</p>
+        </div>
+
+        <div id="basketSummaryBox" class="hidden pt-4 border-t border-roseGold-200 space-y-3">
+          <div class="flex items-center justify-between text-sm">
+            <span class="text-gray-600">Odhadovaná celková cena:</span>
+            <span id="basketTotalPrice" class="font-serif text-2xl font-bold text-roseGold-700">0 €</span>
+          </div>
+          <p class="text-[11px] text-gray-400">
+            Cena je orientačná; presný rozsah a kombináciu ošetrenia odporučíme po osobnej konzultácii.
+          </p>
+          <div class="flex flex-col gap-2 pt-2">
+            <button onclick="openReservationFromBasket()" class="w-full gold-gradient-bg text-white py-3 rounded-full text-xs font-bold shadow-luxury flex items-center justify-center gap-2">
+              <i class="fa-regular fa-calendar-check"></i>
+              <span>Rezervovať vybrané procedúry</span>
+            </button>
+            <button onclick="clearBasket()" class="w-full py-2 text-xs text-gray-400 hover:text-roseGold-700 font-semibold">
+              Vyprázdniť zoznam
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ==================== JAVASCRIPT LOGIC ==================== -->
+  <script>
+    // ==================== 1. REAL-TIME OPENING HOURS ENGINE ====================
+    function updateOpeningStatus() {
+      const dot = document.getElementById('liveStatusDot');
+      const text = document.getElementById('liveStatusText');
+      if (!dot || !text) return;
+
+      const now = new Date();
+      const day = now.getDay(); // 0 = Sun, 1 = Mon, ..., 6 = Sat
+      const hour = now.getHours();
+      const min = now.getMinutes();
+      const currentTimeVal = hour * 60 + min;
+
+      // Mon-Fri: 09:00 (540 min) to 18:00 (1080 min)
+      const openTime = 9 * 60; // 540
+      const closeTime = 18 * 60; // 1080
+
+      const isWeekday = (day >= 1 && day <= 5);
+
+      if (isWeekday && currentTimeVal >= openTime && currentTimeVal < closeTime) {
+        dot.className = "inline-block w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse";
+        text.innerHTML = `Práve máme otvorené <span class="text-emerald-300 font-semibold">• Prijímame klientky do 18:00</span>`;
+      } else {
+        dot.className = "inline-block w-2.5 h-2.5 rounded-full bg-amber-400";
+        if (day === 5 && currentTimeVal >= closeTime) {
+          text.innerHTML = `Momentálne zatvorené <span class="text-roseGold-300">• Otvárame v pondelok o 09:00</span>`;
+        } else if (day === 6 || day === 0) {
+          text.innerHTML = `Víkendový režim <span class="text-roseGold-300">• Otvárame v pondelok o 09:00</span>`;
+        } else {
+          text.innerHTML = `Momentálne zatvorené <span class="text-roseGold-300">• Otvárame zajtra o 09:00</span>`;
+        }
+      }
+    }
+    updateOpeningStatus();
+    setInterval(updateOpeningStatus, 60000);
+
+    // ==================== 2. MOBILE MENU TOGGLE ====================
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobileMenu');
+      const icon = document.getElementById('menuIcon');
+      menu.classList.toggle('hidden');
+      if (menu.classList.contains('hidden')) {
+        icon.className = 'fa-solid fa-bars text-xl';
+      } else {
+        icon.className = 'fa-solid fa-xmark text-xl';
+      }
+    }
+    function closeMobileMenu() {
+      const menu = document.getElementById('mobileMenu');
+      const icon = document.getElementById('menuIcon');
+      if (menu) menu.classList.add('hidden');
+      if (icon) icon.className = 'fa-solid fa-bars text-xl';
+    }
+
+    // ==================== 3. BEFORE / AFTER COMPARISON SLIDER ====================
+    const baCases = {
+      botox: {
+        title: "Aplikácia botulotoxínu — vyhladenie mimických vrások",
+        subtitle: "Viditeľné uvoľnenie svalov čela bez neprirodzeného obmedzenia mimiky.",
+        imgBefore: "images/gallery-botox-before-after.jpg",
+        imgAfter: "images/gallery-botox-before-after.jpg"
+      },
+      lips: {
+        title: "Kyselina hyalurónová — prirodzená hydratácia pier",
+        subtitle: "Zvýraznenie kontúry, hydratácia a prirodzený objem bez prehnaného efektu.",
+        imgBefore: "images/gallery-lips-before-after.jpg",
+        imgAfter: "images/gallery-lips-before-after.jpg"
+      },
+      lipolyza: {
+        title: "Enzýmová lipolýza PB Sérum — redukcia podbradku",
+        subtitle: "Rozpustenie tukových vankúšikov a vyrysovanie kontúry sánky.",
+        imgBefore: "images/gallery-lipolyza-before-after.jpg",
+        imgAfter: "images/gallery-lipolyza-before-after.jpg"
+      },
+      keratoza: {
+        title: "Elektrokauterizácia — odstránenie seboroickej keratózy",
+        subtitle: "Rýchle a čisté odstránenie kožných výrastkov bez jazvičiek.",
+        imgBefore: "images/gallery-keratoza-before-after.jpg",
+        imgAfter: "images/gallery-keratoza-before-after.jpg"
+      }
+    };
+
+    function updateBaSlider(val) {
+      const beforeWrapper = document.getElementById('baBeforeWrapper');
+      const handle = document.getElementById('baHandle');
+      if (beforeWrapper && handle) {
+        beforeWrapper.style.width = val + '%';
+        handle.style.left = val + '%';
+      }
+    }
+
+    function switchBaCase(caseKey) {
+      const data = baCases[caseKey];
+      if (!data) return;
+
+      document.getElementById('baImgBefore').src = data.imgBefore;
+      document.getElementById('baImgAfter').src = data.imgAfter;
+      document.getElementById('baCaseTitle').innerText = data.title;
+      document.getElementById('baCaseSubtitle').innerText = data.subtitle;
+
+      // Update active button state
+      document.querySelectorAll('.ba-tab-btn').forEach(btn => {
+        btn.className = "ba-tab-btn px-5 py-2 rounded-full text-xs font-bold bg-cream-100 text-gray-700 hover:bg-roseGold-100 transition-all";
+      });
+      const activeBtn = document.getElementById('baBtn-' + caseKey);
+      if (activeBtn) {
+        activeBtn.className = "ba-tab-btn px-5 py-2 rounded-full text-xs font-bold bg-roseGold-600 text-white shadow-sm transition-all";
+      }
+
+      // Reset slider to center
+      const range = document.getElementById('baRange');
+      if (range) {
+        range.value = 50;
+        updateBaSlider(50);
+      }
+    }
+
+    // ==================== 4. COMPLETE AUTHENTIC PRICELIST DATASET ====================
+    const priceListCategories = [
+      {
+        id: "kozmetika",
+        name: "Kozmetické ošetrenia pleti",
+        icon: "fa-spa",
+        items: [
+          { name: "Mikrokryštalická dermabrázia REVIDERM s ultrazvukom", note: "Regenerácia a čistenie pleti v jednom", price: 110 },
+          { name: "Mikrokryštalická dermabrázia REVIDERM + Maska + Hydrolage collagen", note: "Intenzívna kolagénová kúra", price: 130 },
+          { name: "Relaxačné ošetrenie Janssen s masážou a ultrazvukom", note: "Dokonalý reset tváre, krku a dekoltu", price: 95 },
+          { name: "Chemický píling REVIDERM 30% + LED terapia", note: "Biologický peeling s fototerapiou", price: 95 },
+          { name: "Mezoterapia REVIDERM tvár a krk", note: "Hĺbková bunková mezoterapia", price: 135 }
+        ]
+      },
+      {
+        id: "estetika",
+        name: "Estetická medicína, Injekcie & Termolifting",
+        icon: "fa-syringe",
+        items: [
+          { name: "Lipolýza PB sérum enzým redukcia podbradku", note: "Enzýmové rozpustenie tukových vankúšikov", price: 140 },
+          { name: "Botulotoxín 1 lokalita (čelo, oči alebo glabela)", note: "Vyhladenie mimických vrások", price: 110 },
+          { name: "Botulotoxín 2 lokality", note: "Komplexnejšie ošetrenie dvoch partií", price: 210 },
+          { name: "Botulotoxín 3 lokality", note: "Celé horné poschodie tváre", price: 290 },
+          { name: "Botulotoxín 1 lokalita (kútiky úst alebo horná pera)", note: "Jemná korekcia mimiky", price: 60 },
+          { name: "Hydratácia pier kyselinou hyalurónovou", note: "Prirodzený objem a sviežosť", price: 210 },
+          { name: "Výplň kyselinou hyalurónovou nasolabiálne ryhy", note: "Zjemnenie nosoústnych rýh", price: 200 },
+          { name: "Výplň kyselinou hyalurónovou brada", note: "Harmonizácia profilu tváre", price: 160 },
+          { name: "Termolifting Protége Exilis (tvár + krk)", note: "Neinvazívny rádiofrekvenčný lifting", price: 130 },
+          { name: "Termolifting Protége Exilis (tvár + krk) + Píling + Maska", note: "Kompletný liftingový rituál", price: 160 },
+          { name: "Termolifting Protége Exilis dekolt", note: "Spevnenie pokožky dekoltu", price: 130 },
+          { name: "Rejuvenizácia Protége Intima", note: "Skrášlenie a omladenie intímnych partií", price: 80 },
+          { name: "Plazmaterapia PRP (1 lokalita: tvár / krk / dekolt)", note: "Drakulaterapia s vlastnou plazmou", price: 190 },
+          { name: "Plazmaterapia PRP + Booster (1 lokalita)", note: "Plazma obohatená o aktívny booster", price: 220 },
+          { name: "Aquaskin injector kyselina hyalurónová (1 lokalita)", note: "Bezbolestná prístrojová hydratácia", price: 170 },
+          { name: "Koagulácia fibróm / seboroická keratóza / hemangiom", note: "V cene 4 ks (každý ďalší 5 € / 1 €)", price: 65 },
+          { name: "Koagulácia odstránenie cievok (nos / líca)", note: "Okamžité zatavenie rozšírených kapilár", price: 60 },
+          { name: "Epilácia elektrickou ihlou (do 20 min.)", note: "Trvalé zničenie vlasovej cibuľky", price: 70 }
+        ]
+      },
+      {
+        id: "resurfacing",
+        name: "Frakčný Resurfacing (CO2 Laser)",
+        icon: "fa-sun",
+        items: [
+          { name: "Frakčný resurfacing tvár", note: "Hĺbková laserová obnova pleti", price: 280 },
+          { name: "Frakčný resurfacing dekolt", note: "Omladenie a spevnenie dekoltu", price: 280 },
+          { name: "Frakčný resurfacing krk", note: "Odstránenie horizontálnych rýh", price: 180 },
+          { name: "Frakčný resurfacing tvár a krk", note: "Zvýhodnený kombinovaný balík", price: 370 },
+          { name: "Frakčný resurfacing očné viečka (horné + dolné)", note: "Neinvazívna blefaroplastika", price: 180 },
+          { name: "Frakčný resurfacing tvár a oči", note: "Komplexná revitalizácia očného okolia a tváre", price: 370 },
+          { name: "Frakčný resurfacing jazva / pigment (do 5x5 cm)", note: "Cielené ošetrenie ložiska", price: 50 },
+          { name: "Frakčný resurfacing líca", note: "Redukcia pórov a jazvičiek", price: 180 },
+          { name: "Frakčný resurfacing ruky", note: "Omladenie chrbtov rúk", price: 160 }
+        ]
+      },
+      {
+        id: "laser",
+        name: "Laserové ošetrenia, Cievky & Pigmentácie",
+        icon: "fa-bolt",
+        items: [
+          { name: "Odstránenie metličiek a žiliek laserom (1 ložisko)", note: "Dolné končatiny", price: 60 },
+          { name: "Odstránenie metličiek a žiliek laserom (2 ložiská)", note: "Dolné končatiny", price: 100 },
+          { name: "Odstránenie metličiek a žiliek laserom (celé dolné končatiny)", note: "Kompletné nohy", price: 200 },
+          { name: "3D fotorejuvenizácia tvár", note: "Pigmentácie + cievky + kolagén v 1 zákroku", price: 120 },
+          { name: "Fotorejuvenizácia tvár", note: "IPL zjednotenie tónu a textúry", price: 85 },
+          { name: "Fotorejuvenizácia tvár + krk", note: "Zvýhodnené ošetrenie", price: 120 },
+          { name: "Fotorejuvenizácia tvár + krk + dekolt", note: "Komplexný rituál omladenia", price: 150 },
+          { name: "Odstránenie pigmentácií tvár", note: "IPL cielené bielenie škvŕn", price: 95 },
+          { name: "Odstránenie pigmentácií líca / ruky / čelo", note: "Jedna zóna", price: 60 }
+        ]
+      },
+      {
+        id: "epilacia",
+        name: "Trvalá Laserová Epilácia BTL EXILITE II",
+        icon: "fa-wand-magic-sparkles",
+        items: [
+          { name: "Laserová epilácia horná pera", note: "Rýchle a bezbolestné", price: 35 },
+          { name: "Laserová epilácia brada", note: "Cielené ošetrenie", price: 35 },
+          { name: "Laserová epilácia horná pera + brada", note: "Zvýhodnený balík", price: 60 },
+          { name: "Laserová epilácia podpazušie", note: "Jedna z najžiadanejších procedúr", price: 60 },
+          { name: "Laserová epilácia bikiny", note: "Línia plaviek", price: 80 },
+          { name: "Laserová epilácia bikiny + genitálna oblasť", note: "Kompletná intímna zóna", price: 110 },
+          { name: "Laserová epilácia podpazušie + bikiny", note: "Kombinované ošetrenie", price: 110 },
+          { name: "Laserová epilácia predkolenie", note: "Dolné nohy", price: 100 },
+          { name: "Laserová epilácia celé dolné končatiny", note: "Celé nohy od stehien po členky", price: 220 },
+          { name: "Laserová epilácia celé nohy + bikiny + podpazušie", note: "Kompletný prémiový balík", price: 330 }
+        ]
+      },
+      {
+        id: "doplnkove",
+        name: "Doplnkové služby, Lymfodrenáž & Telo",
+        icon: "fa-heart",
+        items: [
+          { name: "Prístrojová lymfodrenáž Lymfoven (50 min.)", note: "Detoxikácia a zmiernenie opuchov nôh", price: 25 },
+          { name: "Úprava obočia", note: "Pri kozmetickom ošetrení", price: 5 },
+          { name: "Farbenie obočia", note: "Pri kozmetickom ošetrení", price: 7 },
+          { name: "Farbenie mihalníc", note: "Pri kozmetickom ošetrení", price: 7 },
+          { name: "Píling, sérum, maska tvár/dekolt", note: "Doplnok k prístrojovým zákrokom", price: 30 },
+          { name: "LED svetelná terapia (20 min.)", note: "Fototerapia bunkovej obnovy", price: 15 }
+        ]
+      }
+    ];
+
+    let currentPriceCat = "all";
+    let beautyBasket = [];
+
+    function renderPriceList() {
+      const container = document.getElementById('priceListContainer');
+      const searchVal = (document.getElementById('priceSearchInput')?.value || '').toLowerCase().trim();
+      if (!container) return;
+
+      container.innerHTML = "";
+      let foundAny = false;
+
+      priceListCategories.forEach(cat => {
+        if (currentPriceCat !== "all" && cat.id !== currentPriceCat) return;
+
+        // Filter items by search
+        const filteredItems = cat.items.filter(item => {
+          if (!searchVal) return true;
+          return item.name.toLowerCase().includes(searchVal) || (item.note && item.note.toLowerCase().includes(searchVal));
+        });
+
+        if (filteredItems.length === 0) return;
+        foundAny = true;
+
+        const catBlock = document.createElement('div');
+        catBlock.className = "bg-white rounded-3xl p-6 sm:p-8 border border-roseGold-200/80 shadow-sm space-y-4";
+        
+        catBlock.innerHTML = `
+          <div class="flex items-center gap-3 pb-3 border-b border-roseGold-100">
+            <div class="w-10 h-10 rounded-full bg-roseGold-100 text-roseGold-600 flex items-center justify-center">
+              <i class="fa-solid ${cat.icon}"></i>
+            </div>
+            <h3 class="font-serif font-bold text-xl text-gray-900">${cat.name}</h3>
+          </div>
+          <div class="divide-y divide-gray-100">
+            ${filteredItems.map(item => `
+              <div class="py-3.5 flex flex-col sm:flex-row sm:items-center justify-between gap-2 hover:bg-cream-50/50 px-2 rounded-xl transition-colors">
+                <div class="pr-2">
+                  <span class="font-semibold text-sm text-gray-900 block">${item.name}</span>
+                  ${item.note ? `<span class="text-xs text-gray-400 block">${item.note}</span>` : ''}
+                </div>
+                <div class="flex items-center gap-3 shrink-0 self-end sm:self-center">
+                  <span class="font-serif font-bold text-base text-gray-900">${item.price} €</span>
+                  <button onclick="addToBasket('${item.name.replace(/'/g, "\\'")}', ${item.price}, '${cat.name.replace(/'/g, "\\'")}')" class="px-3 py-1.5 rounded-lg border border-roseGold-300 text-roseGold-800 text-xs font-bold hover:bg-roseGold-100 transition-colors">
+                    + Do plánu
+                  </button>
+                  <button onclick="openReservationModal('${item.name.replace(/'/g, "\\'")}')" class="gold-gradient-bg text-white p-2 rounded-lg text-xs hover:opacity-90" title="Rezervovať online">
+                    <i class="fa-regular fa-calendar-check"></i>
+                  </button>
+                </div>
+              </div>
+            `).join('')}
+          </div>
+        `;
+        container.appendChild(catBlock);
+      });
+
+      if (!foundAny) {
+        container.innerHTML = `
+          <div class="bg-white rounded-3xl p-12 text-center text-gray-400 space-y-3">
+            <i class="fa-solid fa-magnifying-glass text-3xl text-roseGold-300"></i>
+            <p class="text-sm">Nenašli sa žiadne procedúry zodpovedajúce výrazu „<strong>${searchVal}</strong>“.</p>
+            <button onclick="clearPriceSearch()" class="px-4 py-2 rounded-full gold-gradient-bg text-white text-xs font-bold">Zobraziť všetky procedúry</button>
+          </div>
+        `;
+      }
+    }
+
+    function filterPriceList() {
+      renderPriceList();
+    }
+
+    function setPriceCategory(catId) {
+      currentPriceCat = catId;
+      document.querySelectorAll('.cat-pill').forEach(btn => {
+        if (btn.getAttribute('data-cat') === catId) {
+          btn.className = "cat-pill px-3.5 py-1.5 rounded-full font-bold bg-roseGold-600 text-white transition-all";
+        } else {
+          btn.className = "cat-pill px-3.5 py-1.5 rounded-full font-bold bg-cream-100 text-gray-700 hover:bg-roseGold-100 transition-all";
+        }
+      });
+      renderPriceList();
+    }
+
+    function clearPriceSearch() {
+      const input = document.getElementById('priceSearchInput');
+      if (input) input.value = '';
+      currentPriceCat = 'all';
+      setPriceCategory('all');
+    }
+
+    // ==================== 5. BEAUTY BASKET / TREATMENT PLANNER ====================
+    function addToBasket(name, price, category) {
+      beautyBasket.push({ id: Date.now() + Math.random(), name, price, category });
+      updateBasketUI();
+      // Animate notification
+      showToastNotification(`Pridané: ${name} (${price} €)`);
+    }
+
+    function removeFromBasket(id) {
+      beautyBasket = beautyBasket.filter(item => item.id !== id);
+      updateBasketUI();
+    }
+
+    function clearBasket() {
+      beautyBasket = [];
+      updateBasketUI();
+    }
+
+    function updateBasketUI() {
+      const count1 = document.getElementById('basketCount');
+      const count2 = document.getElementById('basketCountMobile');
+      const totalCount = beautyBasket.length;
+
+      [count1, count2].forEach(badge => {
+        if (badge) {
+          badge.innerText = totalCount;
+          if (totalCount > 0) {
+            badge.classList.remove('hidden');
+          } else {
+            badge.classList.add('hidden');
+          }
+        }
+      });
+
+      const listContainer = document.getElementById('basketItemsList');
+      const emptyMsg = document.getElementById('basketEmptyMessage');
+      const summaryBox = document.getElementById('basketSummaryBox');
+      const totalPriceEl = document.getElementById('basketTotalPrice');
+
+      if (!listContainer) return;
+
+      if (totalCount === 0) {
+        listContainer.innerHTML = '';
+        if (emptyMsg) emptyMsg.classList.remove('hidden');
+        if (summaryBox) summaryBox.classList.add('hidden');
+      } else {
+        if (emptyMsg) emptyMsg.classList.add('hidden');
+        if (summaryBox) summaryBox.classList.remove('hidden');
+
+        let sum = 0;
+        listContainer.innerHTML = beautyBasket.map(item => {
+          sum += item.price;
+          return `
+            <div class="flex items-center justify-between p-3 rounded-xl bg-cream-50 border border-roseGold-200 text-xs">
+              <div>
+                <span class="font-bold text-gray-900 block">${item.name}</span>
+                <span class="text-[10px] text-gray-400">${item.category}</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="font-bold text-gray-900 text-sm">${item.price} €</span>
+                <button onclick="removeFromBasket(${item.id})" class="text-roseGold-500 hover:text-roseGold-800 p-1">
+                  <i class="fa-solid fa-trash-can"></i>
+                </button>
+              </div>
+            </div>
+          `;
+        }).join('');
+
+        if (totalPriceEl) totalPriceEl.innerText = sum + " €";
+      }
+    }
+
+    function toggleBasketModal() {
+      const modal = document.getElementById('basketModal');
+      if (modal) modal.classList.toggle('hidden');
+      if (modal && !modal.classList.contains('hidden')) {
+        modal.classList.add('flex');
+      } else if (modal) {
+        modal.classList.remove('flex');
+      }
+    }
+
+    function openReservationFromBasket() {
+      toggleBasketModal();
+      const itemNames = beautyBasket.map(i => i.name).join(', ');
+      openReservationModal(itemNames);
+    }
+
+    // ==================== 6. TOAST NOTIFICATION ====================
+    function showToastNotification(msg) {
+      const existing = document.getElementById('toastNotice');
+      if (existing) existing.remove();
+
+      const toast = document.createElement('div');
+      toast.id = 'toastNotice';
+      toast.className = 'fixed bottom-20 sm:bottom-6 right-4 z-50 bg-obsidian-900 text-white px-5 py-3 rounded-2xl shadow-2xl border border-roseGold-600 text-xs font-semibold flex items-center gap-2 animate-bounce-short';
+      toast.innerHTML = `<i class="fa-solid fa-circle-check text-emerald-400"></i> <span>${msg}</span>`;
+      document.body.appendChild(toast);
+
+      setTimeout(() => {
+        toast.style.opacity = '0';
+        toast.style.transition = 'opacity 0.5s ease';
+        setTimeout(() => toast.remove(), 500);
+      }, 3000);
+    }
+
+    // ==================== 7. QUIZ ENGINE ====================
+    const quizState = { step: 1, type: '', goal: '', method: '' };
+
+    function selectQuizOption(step, value) {
+      if (step === 1) {
+        quizState.type = value;
+        document.getElementById('quizStep1').classList.add('hidden');
+        document.getElementById('quizStep2').classList.remove('hidden');
+        document.getElementById('quizStepBadge').innerText = '2';
+        document.getElementById('quizStepTitle').innerText = 'Krok 2: Primárny cieľ pleti';
+        document.getElementById('quizProgress').innerText = '2 z 3';
+      } else if (step === 2) {
+        quizState.goal = value;
+        document.getElementById('quizStep2').classList.add('hidden');
+        document.getElementById('quizStep3').classList.remove('hidden');
+        document.getElementById('quizStepBadge').innerText = '3';
+        document.getElementById('quizStepTitle').innerText = 'Krok 3: Typ a intenzita procedúry';
+        document.getElementById('quizProgress').innerText = '3 z 3';
+      } else if (step === 3) {
+        quizState.method = value;
+        document.getElementById('quizStep3').classList.add('hidden');
+        calculateQuizResult();
+      }
+    }
+
+    function calculateQuizResult() {
+      const resContainer = document.getElementById('quizResult');
+      const resTitle = document.getElementById('resultTitle');
+      const resDesc = document.getElementById('resultDesc');
+      const resPrice = document.getElementById('resultPrice');
+
+      let rec = {
+        title: "Mikrokryštalická dermabrázia REVIDERM s ultrazvukom",
+        desc: "Ideálna štartovacia procedúra: hĺbkovo vyčistí póry, odstráni odumreté bunky a pomocou ultrazvuku vpraví do pleti výživné séra a kolagén.",
+        price: "110 € – 130 €"
+      };
+
+      if (quizState.goal === 'doublechin') {
+        rec = {
+          title: "Enzýmová Lipolýza podbradku PB Sérum",
+          desc: "Cielená redukcia tuku v podbradku pomocou certifikovaných mikroenzýmov. Zvýrazní kontúru sánky a spevní tkanivo bez chirurgického zákroku.",
+          price: "140 €"
+        };
+      } else if (quizState.goal === 'veins') {
+        rec = {
+          title: "Laserové odstránenie cievok & Fotorejuvenizácia IPL",
+          desc: "Selektívne zatavenie rozšírených kapilár a cievok na tvári a nohách bez poškodenia okolitej kože.",
+          price: "60 € – 120 €"
+        };
+      } else if (quizState.goal === 'pigment') {
+        rec = {
+          title: "Chemický píling REVIDERM 30% + LED terapia alebo IPL",
+          desc: "Kombinácia cielených biologických kyselín a svetelnej fototerapie pre zjednotenie tónu a postupné zosvetlenie pigmentových škvŕn.",
+          price: "95 € – 150 €"
+        };
+      } else if (quizState.goal === 'wrinkles') {
+        if (quizState.method === 'medical') {
+          rec = {
+            title: "Aplikácia Botulotoxínu / Kyselina hyalurónová",
+            desc: "Presná aplikácia pre uvoľnenie mimických vrások čela, očného okolia alebo prirodzená hydratácia pier a nasolabiálnych rýh.",
+            price: "110 € – 210 €"
+          };
+        } else {
+          rec = {
+            title: "Rádiofrekvenčný Termolifting Protége Exilis",
+            desc: "Hĺbkové prehriatie kolagénových vlákien pre okamžité spevnenie kontúr tváre a vyhladenie jemných vrások bez ihiel.",
+            price: "130 € – 160 €"
+          };
+        }
+      }
+
+      resTitle.innerText = rec.title;
+      resDesc.innerText = rec.desc;
+      resPrice.innerText = rec.price;
+
+      document.getElementById('quizStepBadge').innerText = '✓';
+      document.getElementById('quizStepTitle').innerText = 'Vaše odporúčané ošetrenie';
+      document.getElementById('quizProgress').innerText = 'Hotovo';
+
+      resContainer.classList.remove('hidden');
+    }
+
+    function resetQuiz() {
+      document.getElementById('quizResult').classList.add('hidden');
+      document.getElementById('quizStep1').classList.remove('hidden');
+      document.getElementById('quizStepBadge').innerText = '1';
+      document.getElementById('quizStepTitle').innerText = 'Krok 1: Vek a typ pleti';
+      document.getElementById('quizProgress').innerText = '1 z 3';
+    }
+
+    function bookQuizResult() {
+      const title = document.getElementById('resultTitle').innerText;
+      openReservationModal(title);
+    }
+
+    // ==================== 8. RESERVATION MODAL CONTROLS ====================
+    function openReservationModal(serviceName = null) {
+      const modal = document.getElementById('reservationModal');
+      const notice = document.getElementById('selectedServiceNotice');
+      const nameEl = document.getElementById('selectedServiceName');
+
+      if (serviceName) {
+        if (nameEl) nameEl.innerText = serviceName;
+        if (notice) notice.classList.remove('hidden');
+      } else {
+        if (notice) notice.classList.add('hidden');
+      }
+
+      if (modal) {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+      }
+    }
+
+    function closeReservationModal() {
+      const modal = document.getElementById('reservationModal');
+      if (modal) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      }
+    }
+
+    function clearSelectedServiceNotice() {
+      const notice = document.getElementById('selectedServiceNotice');
+      if (notice) notice.classList.add('hidden');
+    }
+
+    // Close modals on Escape key
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeReservationModal();
+        const basket = document.getElementById('basketModal');
+        if (basket) {
+          basket.classList.add('hidden');
+          basket.classList.remove('flex');
+        }
+      }
+    });
+
+    // ==================== 9. FAQ ACCORDION ====================
+    function toggleFaq(num) {
+      const content = document.getElementById(`faqContent-${num}`);
+      const icon = document.getElementById(`faqIcon-${num}`);
+      if (content && icon) {
+        content.classList.toggle('hidden');
+        icon.classList.toggle('rotate-180');
+      }
+    }
+
+    // ==================== 10. CONTACT FORM HANDLER ====================
+    function handleContactSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('contactName')?.value;
+      const phone = document.getElementById('contactPhone')?.value;
+      const form = document.getElementById('contactForm');
+      const success = document.getElementById('contactSuccess');
+
+      if (form && success) {
+        form.classList.add('hidden');
+        success.classList.remove('hidden');
+        success.innerHTML = `
+          <i class="fa-solid fa-circle-check text-emerald-600 mr-1.5"></i>
+          Ďakujeme, <strong>${name}</strong>! Vaša správa bola zaznamenaná. Čoskoro vás budeme kontaktovať na čísle <strong>${phone}</strong>.
+        `;
+      }
+    }
+
+    // Initialize Pricelist on Load
+    document.addEventListener('DOMContentLoaded', () => {
+      renderPriceList();
+      updateBaSlider(50);
+    });
+  </script>
+
+</body>
+</html>
