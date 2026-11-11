@@ -1,0 +1,2177 @@
+<!DOCTYPE html>
+<html lang="sk" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kaviareň Vežička Levice | Výberová káva, remeselné koláče a terasa s výhľadom</title>
+  <meta name="description" content="Útulná kaviareň s presklenou rotundou a krytou terasou na 1. poschodí OC Dituria v Leviciach. Výberová káva (Specialty Coffee), čerstvé domáce koláče, limonády, detský kútik a pet-friendly atmosféra.">
+  <meta name="keywords" content="Kaviareň Vežička, Kaviareň Levice, OC Dituria Levice, výberová káva Levice, terasa Levice, koláče Levice, cheesecake, specialty coffee Slovakia, European Coffee Trip">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="http://kaviarenvezicka.sk/">
+  <meta property="og:title" content="Kaviareň Vežička Levice | Váš ostrovček pokoja nad mestom">
+  <meta property="og:description" content="Výberová káva, remeselné dezerty a krytá terasa s panoramatickým výhľadom na námestie v OC Dituria.">
+  <meta property="og:image" content="images/hero-bg.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☕</text></svg>">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Tailwind Configuration for Coffee & Tower Palette -->
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            roast: {
+              950: '#120d0a',
+              900: '#1e1510',
+              850: '#261b14',
+              800: '#34241b',
+              700: '#4a3326',
+              600: '#644634',
+              500: '#8b634b',
+            },
+            caramel: {
+              50: '#fdfaf5',
+              100: '#f9f1e5',
+              200: '#f1dec2',
+              300: '#e5c497',
+              400: '#d7a66b',
+              500: '#c88a45',
+              600: '#b07034',
+            },
+            cream: {
+              50: '#fdfcf9',
+              100: '#f9f6ef',
+              200: '#f3eedf',
+              300: '#e7ddc5',
+            },
+            sage: {
+              500: '#4a6b53',
+              600: '#3c5743',
+            }
+          },
+          fontFamily: {
+            serif: ['Playfair Display', 'serif'],
+            display: ['Cinzel', 'serif'],
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom Scrollbar & Aesthetics */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #1e1510;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #d7a66b;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #c88a45;
+    }
+
+    .glass-nav {
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+
+    .glass-card {
+      background: rgba(30, 21, 16, 0.7);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(215, 166, 107, 0.15);
+    }
+
+    .light .glass-card {
+      background: rgba(255, 255, 255, 0.88);
+      border: 1px solid rgba(200, 138, 69, 0.2);
+    }
+
+    .gold-gradient-text {
+      background: linear-gradient(135deg, #f9f1e5 0%, #d7a66b 50%, #c88a45 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .glow-gold {
+      box-shadow: 0 0 25px rgba(215, 166, 107, 0.25);
+    }
+
+    /* Subtle steam animation */
+    @keyframes steamFloat {
+      0% { transform: translateY(0) scaleX(1); opacity: 0; }
+      50% { transform: translateY(-8px) scaleX(1.15); opacity: 0.6; }
+      100% { transform: translateY(-18px) scaleX(1.3); opacity: 0; }
+    }
+    .steam-effect {
+      animation: steamFloat 3s ease-in-out infinite;
+    }
+  </style>
+</head>
+<body class="bg-roast-950 text-cream-100 font-sans antialiased selection:bg-caramel-500 selection:text-roast-950 transition-colors duration-300">
+
+  <!-- ================= TOP NOTICE & LIVE STATUS BAR ================= -->
+  <div id="liveStatusBar" class="bg-roast-900/90 border-b border-caramel-500/20 text-xs py-2 px-4 sticky top-0 z-50 glass-nav transition-all duration-300">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3">
+      
+      <!-- Live Status & Hours Indicator -->
+      <div class="flex items-center gap-2">
+        <span id="statusIndicatorDot" class="relative flex h-2.5 w-2.5">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+        </span>
+        <span id="statusText" class="font-medium text-emerald-400">Práve máme otvorené</span>
+        <span class="text-roast-600 hidden sm:inline">•</span>
+        <span class="text-cream-300 hidden sm:inline">Pondelok – Nedeľa: 09:00 – 20:00</span>
+        <span class="text-roast-600 hidden md:inline">•</span>
+        <span class="text-cream-300 hidden md:inline">1. poschodie OC Dituria, Levice</span>
+      </div>
+
+      <!-- Quick Badges & Direct Actions -->
+      <div class="flex items-center gap-4 text-xs">
+        <a href="https://www.facebook.com/kaviarenvezicka" target="_blank" rel="noopener" class="flex items-center gap-1.5 text-caramel-300 hover:text-white transition">
+          <i data-lucide="facebook" class="w-3.5 h-3.5 text-blue-400"></i>
+          <span class="hidden lg:inline">FB @kaviarenvezicka</span>
+        </a>
+        <a href="tel:+421911125398" class="flex items-center gap-1.5 font-semibold text-caramel-400 hover:text-caramel-300 transition">
+          <i data-lucide="phone-call" class="w-3.5 h-3.5"></i>
+          <span>+421 911 125 398</span>
+        </a>
+        <!-- Theme Toggle -->
+        <button id="themeToggleBtn" onclick="toggleTheme()" class="p-1 rounded-full bg-roast-800 hover:bg-roast-700 text-caramel-300 transition flex items-center justify-center w-7 h-7" title="Prepnúť tmavý/svetlý kaviarenský režim">
+          <i id="themeIcon" data-lucide="sun" class="w-3.5 h-3.5"></i>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ================= MAIN HEADER & NAVIGATION ================= -->
+  <header class="sticky top-9 z-40 bg-roast-950/85 border-b border-white/5 glass-nav transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo with Tower Icon -->
+      <a href="#" class="flex items-center gap-3.5 group">
+        <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-caramel-400 via-caramel-500 to-roast-800 p-0.5 shadow-lg shadow-caramel-500/20 group-hover:scale-105 transition-transform duration-300 flex items-center justify-center">
+          <div class="w-full h-full bg-roast-900 rounded-[14px] flex items-center justify-center relative overflow-hidden">
+            <i data-lucide="coffee" class="w-6 h-6 text-caramel-300 transition-transform group-hover:rotate-6"></i>
+            <span class="absolute top-1 right-1 text-[8px] font-bold text-caramel-400">☕</span>
+          </div>
+        </div>
+        <div class="flex flex-col">
+          <span class="font-display text-xl sm:text-2xl font-bold tracking-wider text-white group-hover:text-caramel-300 transition">
+            KAVIAREŇ <span class="text-caramel-400">VEŽIČKA</span>
+          </span>
+          <span class="text-[10px] tracking-widest uppercase text-cream-300 font-medium flex items-center gap-1.5">
+            <span>Specialty Coffee</span>
+            <span class="w-1 h-1 rounded-full bg-caramel-400"></span>
+            <span>Terasa OC Dituria Levice</span>
+          </span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden lg:flex items-center gap-8 text-sm font-medium">
+        <a href="#ponuka" class="text-cream-200 hover:text-caramel-400 transition-colors">Nápojový lístok</a>
+        <a href="#speciality" class="text-cream-200 hover:text-caramel-400 transition-colors">Výberová káva</a>
+        <a href="#terasa" class="text-cream-200 hover:text-caramel-400 transition-colors">Terasa & Výhľad</a>
+        <a href="#torty" class="text-cream-200 hover:text-caramel-400 transition-colors">Torty & Oslavy</a>
+        <a href="#rezervacia" class="text-cream-200 hover:text-caramel-400 transition-colors">Rezervácia stola</a>
+        <a href="#recenzie" class="text-cream-200 hover:text-caramel-400 transition-colors">Recenzie</a>
+        <a href="#kontakt" class="text-cream-200 hover:text-caramel-400 transition-colors">Kontakt</a>
+      </nav>
+
+      <!-- Header Action Buttons -->
+      <div class="flex items-center gap-3">
+        <!-- Wishlist Tray Indicator -->
+        <button onclick="toggleTrayModal()" class="relative p-2.5 rounded-xl bg-roast-900 hover:bg-roast-850 border border-caramel-500/30 text-caramel-300 hover:text-white transition flex items-center gap-2 group" title="Váš ochutnávkový výber">
+          <i data-lucide="shopping-bag" class="w-5 h-5"></i>
+          <span id="trayCountBadge" class="w-5 h-5 rounded-full bg-caramel-500 text-roast-950 font-bold text-xs flex items-center justify-center">0</span>
+          <span class="hidden sm:inline text-xs font-semibold">Môj výber</span>
+        </button>
+
+        <!-- CTA Reservation Button -->
+        <a href="#rezervacia" class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-caramel-500 to-caramel-600 hover:from-caramel-400 hover:to-caramel-500 text-roast-950 font-semibold text-sm shadow-lg shadow-caramel-500/25 hover:shadow-caramel-500/40 hover:-translate-y-0.5 transition-all">
+          <i data-lucide="calendar" class="w-4 h-4"></i>
+          <span>Rezervovať stôl</span>
+        </a>
+
+        <!-- Mobile Menu Hamburger Button -->
+        <button onclick="toggleMobileMenu()" class="lg:hidden p-2 rounded-xl bg-roast-900 text-cream-200 hover:text-white border border-white/10" aria-label="Menu">
+          <i id="mobileMenuIcon" data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobileMenuDrawer" class="hidden lg:hidden border-b border-caramel-500/20 bg-roast-950/98 px-6 py-6 transition-all duration-300">
+      <div class="flex flex-col gap-4 text-base font-medium">
+        <a href="#ponuka" onclick="toggleMobileMenu()" class="py-2 text-cream-200 hover:text-caramel-400 border-b border-white/5 flex items-center justify-between">
+          <span>Nápojový & koláčový lístok</span>
+          <i data-lucide="chevron-right" class="w-4 h-4 text-caramel-400"></i>
+        </a>
+        <a href="#speciality" onclick="toggleMobileMenu()" class="py-2 text-cream-200 hover:text-caramel-400 border-b border-white/5 flex items-center justify-between">
+          <span>Výberová káva & Pôvod zŕn</span>
+          <i data-lucide="chevron-right" class="w-4 h-4 text-caramel-400"></i>
+        </a>
+        <a href="#terasa" onclick="toggleMobileMenu()" class="py-2 text-cream-200 hover:text-caramel-400 border-b border-white/5 flex items-center justify-between">
+          <span>Presklená Vežička & Terasa</span>
+          <i data-lucide="chevron-right" class="w-4 h-4 text-caramel-400"></i>
+        </a>
+        <a href="#torty" onclick="toggleMobileMenu()" class="py-2 text-cream-200 hover:text-caramel-400 border-b border-white/5 flex items-center justify-between">
+          <span>Kalkulačka torty & Oslavy</span>
+          <i data-lucide="chevron-right" class="w-4 h-4 text-caramel-400"></i>
+        </a>
+        <a href="#rezervacia" onclick="toggleMobileMenu()" class="py-2 text-cream-200 hover:text-caramel-400 border-b border-white/5 flex items-center justify-between">
+          <span>Rezervácia stola</span>
+          <i data-lucide="chevron-right" class="w-4 h-4 text-caramel-400"></i>
+        </a>
+        <a href="#recenzie" onclick="toggleMobileMenu()" class="py-2 text-cream-200 hover:text-caramel-400 border-b border-white/5 flex items-center justify-between">
+          <span>Hodnotenia hostí</span>
+          <i data-lucide="chevron-right" class="w-4 h-4 text-caramel-400"></i>
+        </a>
+        <a href="#kontakt" onclick="toggleMobileMenu()" class="py-2 text-cream-200 hover:text-caramel-400 flex items-center justify-between">
+          <span>Kontakt, Mapa & Parkovanie</span>
+          <i data-lucide="chevron-right" class="w-4 h-4 text-caramel-400"></i>
+        </a>
+        
+        <div class="pt-4 flex flex-col gap-3">
+          <a href="#rezervacia" onclick="toggleMobileMenu()" class="w-full py-3 text-center rounded-xl bg-caramel-500 text-roast-950 font-bold flex items-center justify-center gap-2">
+            <i data-lucide="calendar" class="w-5 h-5"></i>
+            <span>Rezervovať stôl na terase</span>
+          </a>
+          <a href="tel:+421911125398" class="w-full py-3 text-center rounded-xl bg-roast-900 border border-caramel-500/30 text-caramel-300 font-semibold flex items-center justify-center gap-2">
+            <i data-lucide="phone" class="w-4 h-4"></i>
+            <span>Zavolať: +421 911 125 398</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= HERO SECTION ================= -->
+  <section class="relative min-h-[90vh] flex items-center justify-center overflow-hidden py-20 lg:py-28">
+    <!-- Hero Background Image with Rich Vignette and Parallax Effect -->
+    <div class="absolute inset-0 z-0">
+      <img src="images/hero-bg.jpg" alt="Kaviareň Vežička interiér a terasa Levice" class="w-full h-full object-cover object-center scale-105 filter brightness-[0.42] contrast-[1.1] transition-transform duration-1000 ease-out" id="heroBgImage">
+      <div class="absolute inset-0 bg-gradient-to-t from-roast-950 via-roast-950/60 to-roast-950/80"></div>
+      <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-transparent via-roast-950/50 to-roast-950"></div>
+    </div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      
+      <!-- Prestigious Verification Badge -->
+      <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-roast-900/80 border border-caramel-500/40 backdrop-blur-md mb-8 animate-fade-in shadow-xl">
+        <span class="flex items-center text-amber-400 text-xs gap-1">
+          <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+          <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+          <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+          <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+          <i data-lucide="star-half" class="w-3.5 h-3.5 fill-amber-400"></i>
+        </span>
+        <span class="text-xs font-semibold text-cream-100">4.6 / 5.0 Hodnotenie</span>
+        <span class="text-roast-600">•</span>
+        <span class="text-xs text-caramel-300 font-medium">Zaradená v European Coffee Trip</span>
+      </div>
+
+      <!-- Main Heading with Golden Shimmer -->
+      <h1 class="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.15] text-white max-w-5xl mx-auto mb-6">
+        Váš ostrovček pokoja s <br class="hidden sm:inline">
+        <span class="gold-gradient-text">výhľadom na pulz Levíc</span>
+      </h1>
+
+      <!-- Subtitle -->
+      <p class="font-serif text-lg sm:text-xl md:text-2xl text-cream-200/90 font-light max-w-3xl mx-auto mb-10 leading-relaxed italic">
+        „Kde sa stretáva poctivá výberová káva, voňavé remeselné koláče a presklená krytá terasa v srdci mesta.“
+      </p>
+
+      <!-- Key Value Pillars -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 max-w-4xl mx-auto mb-12">
+        <div class="p-3.5 rounded-2xl glass-card text-center hover:border-caramel-400/40 transition">
+          <div class="w-8 h-8 mx-auto mb-2 rounded-xl bg-caramel-500/20 flex items-center justify-center text-caramel-400">
+            <i data-lucide="cup-soda" class="w-4 h-4"></i>
+          </div>
+          <span class="block text-xs sm:text-sm font-bold text-white">Specialty Coffee</span>
+          <span class="text-[11px] text-cream-300">Výberové espresso & filter</span>
+        </div>
+
+        <div class="p-3.5 rounded-2xl glass-card text-center hover:border-caramel-400/40 transition">
+          <div class="w-8 h-8 mx-auto mb-2 rounded-xl bg-caramel-500/20 flex items-center justify-center text-caramel-400">
+            <i data-lucide="sun-medium" class="w-4 h-4"></i>
+          </div>
+          <span class="block text-xs sm:text-sm font-bold text-white">Krytá terasa</span>
+          <span class="text-[11px] text-cream-300">Panoráma námestia</span>
+        </div>
+
+        <div class="p-3.5 rounded-2xl glass-card text-center hover:border-caramel-400/40 transition">
+          <div class="w-8 h-8 mx-auto mb-2 rounded-xl bg-caramel-500/20 flex items-center justify-center text-caramel-400">
+            <i data-lucide="cake" class="w-4 h-4"></i>
+          </div>
+          <span class="block text-xs sm:text-sm font-bold text-white">Domáce koláče</span>
+          <span class="text-[11px] text-cream-300">Cheesecake & croissanty</span>
+        </div>
+
+        <div class="p-3.5 rounded-2xl glass-card text-center hover:border-caramel-400/40 transition">
+          <div class="w-8 h-8 mx-auto mb-2 rounded-xl bg-caramel-500/20 flex items-center justify-center text-caramel-400">
+            <i data-lucide="heart" class="w-4 h-4"></i>
+          </div>
+          <span class="block text-xs sm:text-sm font-bold text-white">Pet & Family Friendly</span>
+          <span class="text-[11px] text-cream-300">Detský kútik & psíkovia</span>
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-md mx-auto">
+        <a href="#ponuka" class="w-full sm:w-auto px-8 py-4 rounded-2xl bg-gradient-to-r from-caramel-500 via-caramel-400 to-caramel-600 text-roast-950 font-bold text-base shadow-xl shadow-caramel-500/30 hover:shadow-caramel-500/50 hover:scale-[1.02] active:scale-95 transition-all flex items-center justify-center gap-3">
+          <i data-lucide="book-open" class="w-5 h-5"></i>
+          <span>Pozrieť lístok a ceny</span>
+        </a>
+        <a href="#rezervacia" class="w-full sm:w-auto px-8 py-4 rounded-2xl bg-roast-900/90 hover:bg-roast-850 text-cream-100 font-semibold text-base border border-caramel-500/40 hover:border-caramel-400 transition-all flex items-center justify-center gap-3 backdrop-blur-md">
+          <i data-lucide="calendar" class="w-5 h-5 text-caramel-400"></i>
+          <span>Rezervovať stôl</span>
+        </a>
+      </div>
+
+      <!-- Live Coffee on Grinder Teaser -->
+      <div class="mt-12 inline-flex items-center gap-3 px-5 py-2.5 rounded-full bg-roast-900/70 border border-white/10 text-xs text-cream-300 backdrop-blur-sm">
+        <span class="w-2 h-2 rounded-full bg-caramel-400"></span>
+        <span class="text-white font-medium">Dnes na mlynčeku:</span>
+        <span class="text-caramel-300">100% Arabica Specialty • Brazília Fazenda Rainha (čokoládovo-orieškové tóny)</span>
+      </div>
+
+    </div>
+
+    <!-- Scroll down prompt -->
+    <a href="#ponuka" class="absolute bottom-6 left-1/2 -translate-x-1/2 text-cream-300/60 hover:text-caramel-400 transition flex flex-col items-center gap-1 text-xs">
+      <span>Preskúmať ponuku</span>
+      <i data-lucide="chevron-down" class="w-4 h-4 animate-bounce"></i>
+    </a>
+  </section>
+
+  <!-- ================= HIGHLIGHT BANNER: THE VEŽIČKA EXPERIENCE ================= -->
+  <section class="py-12 bg-roast-900/50 border-y border-caramel-500/15 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+        
+        <div class="flex items-center gap-5">
+          <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-caramel-500/20 to-roast-800 border border-caramel-500/30 flex items-center justify-center text-caramel-400 shrink-0">
+            <i data-lucide="map-pin" class="w-8 h-8"></i>
+          </div>
+          <div>
+            <h3 class="font-display text-xl font-bold text-white">1. poschodie OC DITURIA Levice</h3>
+            <p class="text-sm text-cream-300">Ul. sv. Michala 5 • Výťah priamo z parkoviska • Presklená vyhliadková veža</p>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-4 text-xs">
+          <div class="flex items-center gap-2 px-4 py-2 rounded-xl bg-roast-950/60 border border-white/5">
+            <i data-lucide="wifi" class="w-4 h-4 text-caramel-400"></i>
+            <span>Vysokorýchlostné Wi-Fi</span>
+          </div>
+          <div class="flex items-center gap-2 px-4 py-2 rounded-xl bg-roast-950/60 border border-white/5">
+            <i data-lucide="credit-card" class="w-4 h-4 text-caramel-400"></i>
+            <span>Platba kartou</span>
+          </div>
+          <div class="flex items-center gap-2 px-4 py-2 rounded-xl bg-roast-950/60 border border-white/5">
+            <i data-lucide="sparkles" class="w-4 h-4 text-caramel-400"></i>
+            <span>Bezbariérový prístup</span>
+          </div>
+          <div class="flex items-center gap-2 px-4 py-2 rounded-xl bg-roast-950/60 border border-white/5">
+            <i data-lucide="dog" class="w-4 h-4 text-caramel-400"></i>
+            <span>Pet-Friendly miska s vodou</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= INTERACTIVE MENU EXPLORER SECTION ================= -->
+  <section id="ponuka" class="py-24 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <div class="inline-flex items-center gap-2 text-caramel-400 text-xs font-bold tracking-widest uppercase mb-3">
+          <i data-lucide="sparkles" class="w-4 h-4"></i>
+          <span>Poctivá gastronómia & baristika</span>
+        </div>
+        <h2 class="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
+          Nápojový & koláčový lístok
+        </h2>
+        <p class="text-cream-300 text-base sm:text-lg font-light">
+          Vyberte si svoju obľúbenú kávovú špecialitu, osviežujúcu domácu limonádu alebo čerstvo upečený dezert. Kliknutím na <strong>„+ Pridať“</strong> si zostavíte vlastný ochutnávkový podnos.
+        </p>
+      </div>
+
+      <!-- Menu Controls: Live Search & Category Tabs -->
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6 mb-10">
+        
+        <!-- Category Filter Tabs -->
+        <div class="flex items-center gap-2 overflow-x-auto w-full md:w-auto pb-2 scrollbar-none" id="categoryTabContainer">
+          <button onclick="filterMenuCategory('all')" class="menu-tab-btn active px-4 py-2.5 rounded-xl font-semibold text-xs sm:text-sm whitespace-nowrap bg-caramel-500 text-roast-950 transition-all">
+            Všetko
+          </button>
+          <button onclick="filterMenuCategory('kava')" class="menu-tab-btn px-4 py-2.5 rounded-xl font-semibold text-xs sm:text-sm whitespace-nowrap bg-roast-900 text-cream-200 hover:text-caramel-300 hover:bg-roast-850 border border-white/5 transition-all">
+            Výberová káva
+          </button>
+          <button onclick="filterMenuCategory('mliecne')" class="menu-tab-btn px-4 py-2.5 rounded-xl font-semibold text-xs sm:text-sm whitespace-nowrap bg-roast-900 text-cream-200 hover:text-caramel-300 hover:bg-roast-850 border border-white/5 transition-all">
+            Cappuccino & Flat White
+          </button>
+          <button onclick="filterMenuCategory('kolace')" class="menu-tab-btn px-4 py-2.5 rounded-xl font-semibold text-xs sm:text-sm whitespace-nowrap bg-roast-900 text-cream-200 hover:text-caramel-300 hover:bg-roast-850 border border-white/5 transition-all">
+            Koláče & Cheesecakes
+          </button>
+          <button onclick="filterMenuCategory('limonady')" class="menu-tab-btn px-4 py-2.5 rounded-xl font-semibold text-xs sm:text-sm whitespace-nowrap bg-roast-900 text-cream-200 hover:text-caramel-300 hover:bg-roast-850 border border-white/5 transition-all">
+            Domáce limonády
+          </button>
+          <button onclick="filterMenuCategory('teple')" class="menu-tab-btn px-4 py-2.5 rounded-xl font-semibold text-xs sm:text-sm whitespace-nowrap bg-roast-900 text-cream-200 hover:text-caramel-300 hover:bg-roast-850 border border-white/5 transition-all">
+            Čokoláda & BIO Čaje
+          </button>
+          <button onclick="filterMenuCategory('drinky')" class="menu-tab-btn px-4 py-2.5 rounded-xl font-semibold text-xs sm:text-sm whitespace-nowrap bg-roast-900 text-cream-200 hover:text-caramel-300 hover:bg-roast-850 border border-white/5 transition-all">
+            Aperitív & Víno
+          </button>
+          <button onclick="filterMenuCategory('ranajky')" class="menu-tab-btn px-4 py-2.5 rounded-xl font-semibold text-xs sm:text-sm whitespace-nowrap bg-roast-900 text-cream-200 hover:text-caramel-300 hover:bg-roast-850 border border-white/5 transition-all">
+            Croissanty & Snack
+          </button>
+        </div>
+
+        <!-- Real-Time Search Bar -->
+        <div class="relative w-full md:w-72 shrink-0">
+          <i data-lucide="search" class="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-caramel-400"></i>
+          <input type="text" id="menuSearchInput" oninput="handleMenuSearch(this.value)" placeholder="Hľadať v ponuke..." class="w-full bg-roast-900/90 border border-caramel-500/25 rounded-xl pl-10 pr-4 py-2.5 text-xs sm:text-sm text-cream-100 placeholder-cream-300/50 focus:outline-none focus:border-caramel-400 focus:ring-1 focus:ring-caramel-400 transition">
+        </div>
+
+      </div>
+
+      <!-- Menu Items Grid -->
+      <div id="menuItemsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Rendered dynamically by JavaScript -->
+      </div>
+
+      <!-- Active Wishlist Floating Dock (Appears when items are added) -->
+      <div id="trayFloatingBar" class="hidden mt-12 p-6 rounded-3xl bg-gradient-to-r from-roast-900 via-roast-850 to-roast-900 border-2 border-caramel-500/40 shadow-2xl flex flex-col sm:flex-row items-center justify-between gap-6 animate-fade-in">
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 rounded-2xl bg-caramel-500 text-roast-950 flex items-center justify-center font-bold text-lg">
+            <i data-lucide="shopping-bag" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <h4 class="font-bold text-white text-base">Váš ochutnávkový výber: <span id="trayTotalCountText" class="text-caramel-400">0 položiek</span></h4>
+            <p class="text-xs text-cream-300">Približná hodnota objednávky: <span id="trayTotalPriceText" class="text-caramel-300 font-bold text-sm">0.00 €</span></p>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-3 w-full sm:w-auto">
+          <button onclick="clearTray()" class="px-4 py-2.5 rounded-xl bg-roast-800 hover:bg-roast-700 text-cream-300 text-xs font-medium transition">
+            Vyčistiť
+          </button>
+          <button onclick="openReservationWithTray()" class="flex-1 sm:flex-none px-6 py-2.5 rounded-xl bg-caramel-500 hover:bg-caramel-400 text-roast-950 font-bold text-xs sm:text-sm shadow-lg shadow-caramel-500/25 transition flex items-center justify-center gap-2">
+            <i data-lucide="calendar" class="w-4 h-4"></i>
+            <span>Rezervovať stôl s týmto výberom</span>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= SPECIALTY COFFEE SPOTLIGHT ================= -->
+  <section id="speciality" class="py-24 bg-roast-900/60 border-t border-caramel-500/20 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        
+        <!-- Left: Image Showcase with Golden Badges -->
+        <div class="relative group">
+          <div class="relative rounded-3xl overflow-hidden border border-caramel-500/30 shadow-2xl">
+            <img src="images/barista-craft.jpg" alt="Barista pripravuje výberovú kávu Kaviareň Vežička Levice" class="w-full h-[480px] object-cover group-hover:scale-105 transition-transform duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-roast-950 via-roast-950/20 to-transparent"></div>
+            
+            <!-- Floating Badge: European Coffee Trip -->
+            <div class="absolute bottom-6 left-6 right-6 p-5 rounded-2xl glass-card border border-caramel-400/40">
+              <div class="flex items-center gap-4">
+                <div class="w-12 h-12 rounded-xl bg-caramel-500/20 text-caramel-400 flex items-center justify-center shrink-0">
+                  <i data-lucide="award" class="w-6 h-6"></i>
+                </div>
+                <div>
+                  <h4 class="font-display font-bold text-white text-sm">European Coffee Trip Recommended</h4>
+                  <p class="text-xs text-cream-300">Zaradená medzi odporúčané kaviarenské destinácie s výberovou kávou na Slovensku.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Secondary Image Peek -->
+          <div class="absolute -top-6 -right-6 w-36 h-36 rounded-2xl overflow-hidden border-2 border-caramel-400 shadow-xl hidden sm:block">
+            <img src="images/coffee-latte-art.jpg" alt="Latte art cappuccino" class="w-full h-full object-cover">
+          </div>
+        </div>
+
+        <!-- Right: Story & Coffee Philosophy -->
+        <div>
+          <div class="inline-flex items-center gap-2 text-caramel-400 text-xs font-bold tracking-widest uppercase mb-3">
+            <i data-lucide="flame" class="w-4 h-4"></i>
+            <span>Zrnko po zrnku</span>
+          </div>
+          <h2 class="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
+            Výberová káva, ktorá má svoj príbeh a charakter
+          </h2>
+          <p class="text-cream-200 text-base sm:text-lg font-light mb-6 leading-relaxed">
+            Vo Vežičke kávu nevnímame len ako ranný budíček, ale ako gastronomický zážitok. Každý deň starostlivo nastavujeme mletie podľa vlhkosti a teploty vzduchu, kontrolujeme gramáž a čas extrakcie, aby ste v každej šálke cítili plný potenciál zŕn.
+          </p>
+
+          <!-- Philosophy Grid -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+            <div class="p-4 rounded-2xl bg-roast-950/70 border border-white/5">
+              <div class="flex items-center gap-3 mb-2">
+                <div class="w-8 h-8 rounded-lg bg-caramel-500/20 text-caramel-400 flex items-center justify-center">
+                  <i data-lucide="check-circle" class="w-4 h-4"></i>
+                </div>
+                <h4 class="font-bold text-white text-sm">100% Výberová Arabica</h4>
+              </div>
+              <p class="text-xs text-cream-300">Zrnková káva s transparentným pôvodom z fariem Strednej a Južnej Ameriky a Afriky.</p>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-roast-950/70 border border-white/5">
+              <div class="flex items-center gap-3 mb-2">
+                <div class="w-8 h-8 rounded-lg bg-caramel-500/20 text-caramel-400 flex items-center justify-center">
+                  <i data-lucide="check-circle" class="w-4 h-4"></i>
+                </div>
+                <h4 class="font-bold text-white text-sm">Alternatívne mlieka</h4>
+              </div>
+              <p class="text-xs text-cream-300">Prémiové bezlaktózové mlieko, ovsené mlieko Oatly Barista a mandľové alternatívy.</p>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-roast-950/70 border border-white/5">
+              <div class="flex items-center gap-3 mb-2">
+                <div class="w-8 h-8 rounded-lg bg-caramel-500/20 text-caramel-400 flex items-center justify-center">
+                  <i data-lucide="check-circle" class="w-4 h-4"></i>
+                </div>
+                <h4 class="font-bold text-white text-sm">Bezkofeínová káva</h4>
+              </div>
+              <p class="text-xs text-cream-300">Šetrne dekofeinizovaná Swiss Water procesom bez straty bohatej chuti a cremy.</p>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-roast-950/70 border border-white/5">
+              <div class="flex items-center gap-3 mb-2">
+                <div class="w-8 h-8 rounded-lg bg-caramel-500/20 text-caramel-400 flex items-center justify-center">
+                  <i data-lucide="check-circle" class="w-4 h-4"></i>
+                </div>
+                <h4 class="font-bold text-white text-sm">Filter & Batch Brew</h4>
+              </div>
+              <p class="text-xs text-cream-300">Svieže ovocné tóny pre milovníkov jemnejšej, no komplexnej filtrovanej kávy.</p>
+            </div>
+          </div>
+
+          <!-- Interactive Bean Origin Modal Button -->
+          <div class="flex flex-wrap items-center gap-4">
+            <button onclick="openBeanGuideModal()" class="px-6 py-3 rounded-xl bg-caramel-500 hover:bg-caramel-400 text-roast-950 font-bold text-sm shadow-lg shadow-caramel-500/20 transition flex items-center gap-2">
+              <i data-lucide="compass" class="w-4 h-4"></i>
+              <span>Sprievodca profilmi praženia</span>
+            </button>
+            <a href="#terasa" class="text-sm font-semibold text-caramel-300 hover:text-white transition flex items-center gap-1.5">
+              <span>Pozrieť si prostredie terasy</span>
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= TOWER & PANORAMIC TERRACE EXPERIENCE ================= -->
+  <section id="terasa" class="py-24 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Title -->
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="inline-flex items-center gap-2 text-caramel-400 text-xs font-bold tracking-widest uppercase mb-3">
+          <i data-lucide="eye" class="w-4 h-4"></i>
+          <span>Architektúra & Atmosféra</span>
+        </div>
+        <h2 class="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
+          Presklená Vežička a krytá terasa
+        </h2>
+        <p class="text-cream-300 text-base sm:text-lg font-light">
+          Vyvýšená poloha na 1. poschodí OC Dituria ponúka pokojný odstup od ruchu námestia, no zároveň dokonalý výhľad na život v meste.
+        </p>
+      </div>
+
+      <!-- Interactive 4-Zone Showcase Tabs -->
+      <div class="flex justify-center mb-10 overflow-x-auto pb-2">
+        <div class="inline-flex p-1.5 rounded-2xl bg-roast-900 border border-caramel-500/20 gap-2">
+          <button onclick="switchZone('terasa')" id="zoneBtn-terasa" class="zone-tab-btn active px-5 py-2.5 rounded-xl font-semibold text-xs sm:text-sm bg-caramel-500 text-roast-950 transition">
+            Krytá terasa s výhľadom
+          </button>
+          <button onclick="switchZone('vezicka')" id="zoneBtn-vezicka" class="zone-tab-btn px-5 py-2.5 rounded-xl font-semibold text-xs sm:text-sm text-cream-200 hover:text-caramel-300 transition">
+            Presklená rotunda
+          </button>
+          <button onclick="switchZone('kids')" id="zoneBtn-kids" class="zone-tab-btn px-5 py-2.5 rounded-xl font-semibold text-xs sm:text-sm text-cream-200 hover:text-caramel-300 transition">
+            Detský kútik
+          </button>
+          <button onclick="switchZone('pet')" id="zoneBtn-pet" class="zone-tab-btn px-5 py-2.5 rounded-xl font-semibold text-xs sm:text-sm text-cream-200 hover:text-caramel-300 transition">
+            Pet-Friendly zóna
+          </button>
+        </div>
+      </div>
+
+      <!-- Zone Content Container (Dynamically Switched) -->
+      <div id="zoneContentContainer" class="rounded-3xl border border-caramel-500/30 overflow-hidden glass-card shadow-2xl p-6 sm:p-10">
+        <!-- Default Content: Krytá terasa -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+          <div class="rounded-2xl overflow-hidden h-[340px] sm:h-[400px]">
+            <img id="zoneImage" src="images/terrace-view.jpg" alt="Krytá terasa Kaviareň Vežička Levice" class="w-full h-full object-cover">
+          </div>
+          <div class="space-y-6">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-caramel-500/20 text-caramel-300 text-xs font-semibold">
+              <i data-lucide="sun" class="w-3.5 h-3.5"></i>
+              <span id="zoneBadge">Celoročne prístupná terasa</span>
+            </div>
+            <h3 id="zoneTitle" class="font-display text-2xl sm:text-3xl font-bold text-white">
+              Sedenie s panoramatickým výhľadom na Námestie hrdinov
+            </h3>
+            <p id="zoneDesc" class="text-cream-300 text-sm sm:text-base leading-relaxed">
+              Naša terasa je srdcom Vežičky. V letných dňoch ponúka príjemný tieň a vánok pri popíjaní vychladeného Aperol Spritzu alebo domácej limonády. V chladnejších mesiacoch je krytá, chránená pred vetrom a vybavená mäkkými dekami, aby ste si kávu na čerstvom vzduchu užili v každom ročnom období.
+            </p>
+            <div id="zoneFeatures" class="grid grid-cols-2 gap-3 text-xs sm:text-sm text-cream-200">
+              <div class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-caramel-400"></i>
+                <span>Výhľad na pešiu zónu</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-caramel-400"></i>
+                <span>Vyhrievanie & teplé deky v zime</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-caramel-400"></i>
+                <span>Fajčiarska aj nefajčiarska časť</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-caramel-400"></i>
+                <span>Večerné romantické osvetlenie</span>
+              </div>
+            </div>
+            <div class="pt-2">
+              <a href="#rezervacia" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-caramel-500 hover:bg-caramel-400 text-roast-950 font-bold text-xs sm:text-sm transition">
+                <i data-lucide="calendar" class="w-4 h-4"></i>
+                <span>Rezervovať stôl na terase</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= CAKE ORDER & EVENT CALCULATOR ================= -->
+  <section id="torty" class="py-24 bg-roast-900/40 border-t border-caramel-500/20 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left: Explanatory Content -->
+        <div class="lg:col-span-5 space-y-6">
+          <div class="inline-flex items-center gap-2 text-caramel-400 text-xs font-bold tracking-widest uppercase">
+            <i data-lucide="cake-slice" class="w-4 h-4"></i>
+            <span>Remeselné pečenie na objednávku</span>
+          </div>
+          <h2 class="font-display text-3xl sm:text-4xl font-bold text-white leading-tight">
+            Torta na vašu rodinnú oslavu alebo narodeniny
+          </h2>
+          <p class="text-cream-300 text-sm sm:text-base leading-relaxed">
+            Plánujete narodeniny, rodinné jubileum, krstiny alebo firemné posedenie? Naše overené cheesecakes a remeselné torty pečieme aj celé na objednávku so sebou, alebo priamo s pripraveným slávnostným stolom u nás vo Vežičke.
+          </p>
+          
+          <div class="space-y-3 text-xs sm:text-sm text-cream-200">
+            <div class="flex items-start gap-3">
+              <i data-lucide="check-circle-2" class="w-5 h-5 text-caramel-400 shrink-0 mt-0.5"></i>
+              <span>Poctivé suroviny: pravé mascarpone, belgická čokoláda, pravá vanilka a čerstvé ovocie.</span>
+            </div>
+            <div class="flex items-start gap-3">
+              <i data-lucide="check-circle-2" class="w-5 h-5 text-caramel-400 shrink-0 mt-0.5"></i>
+              <span>Možnosť 100% bezlepkového mandľového korpusu bez príplatku.</span>
+            </div>
+            <div class="flex items-start gap-3">
+              <i data-lucide="check-circle-2" class="w-5 h-5 text-caramel-400 shrink-0 mt-0.5"></i>
+              <span>Objednávka ideálne 48 hodín vopred – torta je vždy čerstvo dopečená.</span>
+            </div>
+          </div>
+
+          <div class="pt-4 flex items-center gap-4">
+            <a href="tel:+421911125398" class="inline-flex items-center gap-2 font-bold text-caramel-400 hover:text-caramel-300 text-sm">
+              <i data-lucide="phone" class="w-4 h-4"></i>
+              <span>Objednať telefonicky: 0911 125 398</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: Interactive Cake Customizer & Cost Estimator Card -->
+        <div class="lg:col-span-7">
+          <div class="p-6 sm:p-8 rounded-3xl glass-card border border-caramel-500/30 shadow-2xl relative">
+            <div class="flex items-center justify-between pb-6 border-b border-white/10 mb-6">
+              <div>
+                <h3 class="font-display font-bold text-xl text-white">Kalkulačka torty na mieru</h3>
+                <p class="text-xs text-cream-300">Nakonfigurujte si príchuť a veľkosť torty</p>
+              </div>
+              <span class="text-2xl">🎂</span>
+            </div>
+
+            <!-- Flavor Selection -->
+            <div class="mb-6">
+              <label class="block text-xs font-bold text-cream-200 uppercase tracking-wider mb-2">Vyberte príchuť:</label>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                <button type="button" onclick="selectCakeFlavor('pistacia', 38)" class="cake-flavor-btn active p-3 rounded-xl border border-caramel-500 bg-caramel-500/20 text-left text-xs font-semibold text-white transition flex items-center justify-between">
+                  <span>Pistáciový sen s bielou čokoládou</span>
+                  <span class="text-caramel-300">Bestseller</span>
+                </button>
+                <button type="button" onclick="selectCakeFlavor('malina', 34)" class="cake-flavor-btn p-3 rounded-xl border border-white/10 bg-roast-950/60 text-left text-xs font-semibold text-cream-200 hover:border-caramel-400 transition flex items-center justify-between">
+                  <span>Malinový cheesecake s mascarpone</span>
+                  <span class="text-cream-300">Svieži</span>
+                </button>
+                <button type="button" onclick="selectCakeFlavor('karamel', 36)" class="cake-flavor-btn p-3 rounded-xl border border-white/10 bg-roast-950/60 text-left text-xs font-semibold text-cream-200 hover:border-caramel-400 transition flex items-center justify-between">
+                  <span>Slaný karamel s pekanovými orechmi</span>
+                  <span class="text-amber-400">Gourmet</span>
+                </button>
+                <button type="button" onclick="selectCakeFlavor('mango', 38)" class="cake-flavor-btn p-3 rounded-xl border border-white/10 bg-roast-950/60 text-left text-xs font-semibold text-cream-200 hover:border-caramel-400 transition flex items-center justify-between">
+                  <span>Mango & Marakuja (Tropický)</span>
+                  <span class="text-yellow-400">Exotika</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Size / Portions Selector -->
+            <div class="mb-6">
+              <div class="flex items-center justify-between mb-2">
+                <label class="text-xs font-bold text-cream-200 uppercase tracking-wider">Veľkosť a počet porcií:</label>
+                <span id="cakePortionsLabel" class="text-xs font-bold text-caramel-400">12 porcií (priemer 24 cm)</span>
+              </div>
+              <input type="range" id="cakePortionsRange" min="8" max="24" step="4" value="12" oninput="updateCakeSize(this.value)" class="w-full accent-caramel-500 cursor-pointer">
+              <div class="flex justify-between text-[11px] text-cream-300/70 mt-1">
+                <span>8 porcií (20 cm)</span>
+                <span>12 porcií (24 cm)</span>
+                <span>16 porcií (28 cm)</span>
+                <span>24 porcií (2-poschodová)</span>
+              </div>
+            </div>
+
+            <!-- Options: Gluten-free & Inscription -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
+              <label class="flex items-center gap-3 p-3 rounded-xl bg-roast-950/60 border border-white/10 cursor-pointer hover:border-caramel-500/40">
+                <input type="checkbox" id="cakeGlutenFreeCheck" onchange="calculateCakePrice()" class="rounded text-caramel-500 focus:ring-caramel-400">
+                <span class="text-xs text-cream-200 font-medium">100% Bezlepkový korpus (+0 €)</span>
+              </label>
+              <label class="flex items-center gap-3 p-3 rounded-xl bg-roast-950/60 border border-white/10 cursor-pointer hover:border-caramel-500/40">
+                <input type="checkbox" id="cakeInscriptionCheck" onchange="calculateCakePrice()" class="rounded text-caramel-500 focus:ring-caramel-400">
+                <span class="text-xs text-cream-200 font-medium">Slávnostný nápis z čokolády (+3 €)</span>
+              </label>
+            </div>
+
+            <!-- Total Price & Quick Action -->
+            <div class="pt-4 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
+              <div>
+                <span class="block text-xs text-cream-300">Orientačná cena celej torty:</span>
+                <span id="cakeFinalPrice" class="text-3xl font-display font-extrabold text-white">38.00 €</span>
+                <span class="text-[11px] text-cream-300/80 block">vrátane krabice na prepravu</span>
+              </div>
+
+              <button type="button" onclick="orderCakeFromCalculator()" class="w-full sm:w-auto px-6 py-3 rounded-xl bg-gradient-to-r from-caramel-500 to-caramel-600 hover:from-caramel-400 hover:to-caramel-500 text-roast-950 font-bold text-xs sm:text-sm shadow-lg shadow-caramel-500/25 transition flex items-center justify-center gap-2">
+                <i data-lucide="send" class="w-4 h-4"></i>
+                <span>Nezáväzne objednať tortu</span>
+              </button>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= TABLE RESERVATION & OCCASION BOOKING ================= -->
+  <section id="rezervacia" class="py-24 relative">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Title -->
+      <div class="text-center mb-12">
+        <div class="inline-flex items-center gap-2 text-caramel-400 text-xs font-bold tracking-widest uppercase mb-3">
+          <i data-lucide="bookmark" class="w-4 h-4"></i>
+          <span>Bezstarostné posedenie</span>
+        </div>
+        <h2 class="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
+          Rezervácia stola vo Vežičke
+        </h2>
+        <p class="text-cream-300 text-sm sm:text-base font-light">
+          Chcete mať istotu voľného miesta na obľúbenej terase alebo v presklenej rotunde? Vyplňte krátky formulár a stôl pre vás pripravíme.
+        </p>
+      </div>
+
+      <!-- Reservation Form Card -->
+      <div class="rounded-3xl glass-card border border-caramel-500/30 p-6 sm:p-10 shadow-2xl">
+        <form id="reservationForm" onsubmit="handleReservationSubmit(event)" class="space-y-6">
+          
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <!-- Full Name -->
+            <div>
+              <label class="block text-xs font-bold text-cream-200 uppercase tracking-wider mb-2">Vaše meno a priezvisko *</label>
+              <div class="relative">
+                <i data-lucide="user" class="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-caramel-400"></i>
+                <input type="text" id="resName" required placeholder="napr. Mária Kováčová" class="w-full bg-roast-950/70 border border-white/10 rounded-xl pl-10 pr-4 py-3 text-sm text-white placeholder-cream-300/40 focus:outline-none focus:border-caramel-400 transition">
+              </div>
+            </div>
+
+            <!-- Phone Number -->
+            <div>
+              <label class="block text-xs font-bold text-cream-200 uppercase tracking-wider mb-2">Telefónne číslo *</label>
+              <div class="relative">
+                <i data-lucide="phone" class="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-caramel-400"></i>
+                <input type="tel" id="resPhone" required placeholder="napr. 0911 123 456" class="w-full bg-roast-950/70 border border-white/10 rounded-xl pl-10 pr-4 py-3 text-sm text-white placeholder-cream-300/40 focus:outline-none focus:border-caramel-400 transition">
+              </div>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+            <!-- Date -->
+            <div>
+              <label class="block text-xs font-bold text-cream-200 uppercase tracking-wider mb-2">Dátum rezervácie *</label>
+              <div class="relative">
+                <i data-lucide="calendar" class="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-caramel-400"></i>
+                <input type="date" id="resDate" required class="w-full bg-roast-950/70 border border-white/10 rounded-xl pl-10 pr-4 py-3 text-sm text-white focus:outline-none focus:border-caramel-400 transition">
+              </div>
+            </div>
+
+            <!-- Time -->
+            <div>
+              <label class="block text-xs font-bold text-cream-200 uppercase tracking-wider mb-2">Čas príchodu *</label>
+              <div class="relative">
+                <i data-lucide="clock" class="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-caramel-400"></i>
+                <select id="resTime" required class="w-full bg-roast-950/70 border border-white/10 rounded-xl pl-10 pr-4 py-3 text-sm text-white focus:outline-none focus:border-caramel-400 transition">
+                  <option value="09:30">09:30 (Ranná káva)</option>
+                  <option value="11:00">11:00</option>
+                  <option value="13:00">13:00</option>
+                  <option value="14:30">14:30 (Poobedný koláčik)</option>
+                  <option value="16:00" selected>16:00</option>
+                  <option value="17:30">17:30</option>
+                  <option value="18:30">18:30 (Terasový západ slnka)</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Number of Guests -->
+            <div>
+              <label class="block text-xs font-bold text-cream-200 uppercase tracking-wider mb-2">Počet osôb *</label>
+              <div class="relative">
+                <i data-lucide="users" class="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-caramel-400"></i>
+                <select id="resGuests" required class="w-full bg-roast-950/70 border border-white/10 rounded-xl pl-10 pr-4 py-3 text-sm text-white focus:outline-none focus:border-caramel-400 transition">
+                  <option value="1">1 osoba (Práca / Čítanie)</option>
+                  <option value="2" selected>2 osoby (Rande / Priatelia)</option>
+                  <option value="4">3 – 4 osoby</option>
+                  <option value="6">5 – 6 osôb</option>
+                  <option value="8+">8+ osôb (Väčšia oslava)</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- Seating Area Preference -->
+          <div>
+            <label class="block text-xs font-bold text-cream-200 uppercase tracking-wider mb-2">Preferovaná zóna sedenia:</label>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
+              <label class="p-3 rounded-xl bg-roast-950/60 border border-white/10 cursor-pointer flex flex-col items-center text-center gap-1.5 hover:border-caramel-400 transition">
+                <input type="radio" name="resArea" value="Krytá terasa" checked class="text-caramel-500">
+                <span class="text-xs font-semibold text-white">Krytá terasa</span>
+                <span class="text-[10px] text-cream-300">Výhľad na námestie</span>
+              </label>
+
+              <label class="p-3 rounded-xl bg-roast-950/60 border border-white/10 cursor-pointer flex flex-col items-center text-center gap-1.5 hover:border-caramel-400 transition">
+                <input type="radio" name="resArea" value="Presklená rotunda" class="text-caramel-500">
+                <span class="text-xs font-semibold text-white">Presklená Vežička</span>
+                <span class="text-[10px] text-cream-300">Interiér s výhľadom</span>
+              </label>
+
+              <label class="p-3 rounded-xl bg-roast-950/60 border border-white/10 cursor-pointer flex flex-col items-center text-center gap-1.5 hover:border-caramel-400 transition">
+                <input type="radio" name="resArea" value="Pri detskom kútiku" class="text-caramel-500">
+                <span class="text-xs font-semibold text-white">Detský kútik</span>
+                <span class="text-[10px] text-cream-300">Pre rodiny s deťmi</span>
+              </label>
+
+              <label class="p-3 rounded-xl bg-roast-950/60 border border-white/10 cursor-pointer flex flex-col items-center text-center gap-1.5 hover:border-caramel-400 transition">
+                <input type="radio" name="resArea" value="Pokojný pracovný kútik" class="text-caramel-500">
+                <span class="text-xs font-semibold text-white">Pracovný kút</span>
+                <span class="text-[10px] text-cream-300">Zásuvka & pokoj</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Note / Wishlist info -->
+          <div>
+            <label class="block text-xs font-bold text-cream-200 uppercase tracking-wider mb-2">Poznámka / Špeciálne želanie</label>
+            <textarea id="resNotes" rows="3" placeholder="Máte záujem o detskú stoličku, prídete so psíkom, alebo si želáte vopred odložiť konkrétny koláčik?" class="w-full bg-roast-950/70 border border-white/10 rounded-xl p-3.5 text-sm text-white placeholder-cream-300/40 focus:outline-none focus:border-caramel-400 transition"></textarea>
+          </div>
+
+          <!-- Submit Button -->
+          <div class="pt-2">
+            <button type="submit" class="w-full py-4 rounded-2xl bg-gradient-to-r from-caramel-500 via-caramel-400 to-caramel-600 text-roast-950 font-bold text-base shadow-xl shadow-caramel-500/25 hover:shadow-caramel-500/40 hover:scale-[1.01] transition-all flex items-center justify-center gap-3">
+              <i data-lucide="check-circle" class="w-5 h-5"></i>
+              <span>Odoslať požiadavku na rezerváciu</span>
+            </button>
+            <p class="text-center text-xs text-cream-300/70 mt-3">
+              Rezerváciu vám obratom potvrdíme formou SMS alebo telefonicky. Ak potrebujete stôl do 1 hodiny, odporúčame priamo zavolať na <a href="tel:+421911125398" class="text-caramel-400 font-semibold underline">0911 125 398</a>.
+            </p>
+          </div>
+
+        </form>
+
+        <!-- Success Message Container (Hidden by default) -->
+        <div id="reservationSuccessBox" class="hidden p-6 rounded-2xl bg-emerald-950/80 border border-emerald-500/40 text-center animate-fade-in mt-6">
+          <div class="w-12 h-12 mx-auto mb-3 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center">
+            <i data-lucide="check" class="w-6 h-6"></i>
+          </div>
+          <h4 class="font-display font-bold text-xl text-white mb-2">Ďakujeme za vašu rezerváciu!</h4>
+          <p class="text-xs sm:text-sm text-emerald-200/90 mb-4" id="reservationSuccessDetail">
+            Vašu požiadavku sme zaevidovali. Tešíme sa na vašu návštevu vo Vežičke.
+          </p>
+          <div class="flex justify-center gap-3">
+            <button onclick="resetReservationForm()" class="px-5 py-2 rounded-xl bg-roast-900 border border-white/10 text-xs font-semibold text-white">
+              Vytvoriť ďalšiu rezerváciu
+            </button>
+            <a href="https://m.me/kaviarenvezicka" target="_blank" rel="noopener" class="px-5 py-2 rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-xs font-semibold flex items-center gap-1.5">
+              <i data-lucide="message-circle" class="w-3.5 h-3.5"></i>
+              <span>Napísať na Messenger</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= AUTHENTIC REVIEWS & COMMUNITY SECTION ================= -->
+  <section id="recenzie" class="py-24 bg-roast-900/60 border-t border-caramel-500/20 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header with Badges -->
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6 mb-16">
+        <div>
+          <div class="inline-flex items-center gap-2 text-caramel-400 text-xs font-bold tracking-widest uppercase mb-2">
+            <i data-lucide="message-square" class="w-4 h-4"></i>
+            <span>Slová našich návštevníkov</span>
+          </div>
+          <h2 class="font-display text-3xl sm:text-4xl font-bold text-white">
+            Prečo sa k nám hostia radi vracajú
+          </h2>
+        </div>
+
+        <!-- Rating Summary Box -->
+        <div class="flex items-center gap-4 p-4 rounded-2xl glass-card border border-caramel-500/30">
+          <div class="text-3xl font-display font-extrabold text-white">4.6</div>
+          <div>
+            <div class="flex text-amber-400 text-xs gap-1 mb-1">
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star-half" class="w-4 h-4 fill-amber-400"></i>
+            </div>
+            <span class="text-xs text-cream-300">Založené na 250+ recenziách (Google & FB)</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonial Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <!-- Review 1 -->
+        <div class="p-6 rounded-3xl glass-card border border-white/5 flex flex-col justify-between hover:border-caramel-400/30 transition">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <div class="flex text-amber-400 gap-1">
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              </div>
+              <span class="text-[11px] text-cream-300/60">Overená Google recenzia</span>
+            </div>
+            <p class="text-sm text-cream-100 font-light italic mb-6 leading-relaxed">
+              „Jednoznačne najkrajšia terasa v Leviciach! Posedenie vo Vežičke s výhľadom na námestie pri skvelom cappuccine s latte artom a pistáciovom cheesecakeu je môj obľúbený poobedný rituál. Obsluha je neskutočne milá a usmiata.“
+            </p>
+          </div>
+          <div class="flex items-center gap-3 pt-4 border-t border-white/10">
+            <div class="w-10 h-10 rounded-full bg-caramel-500/20 text-caramel-400 font-bold flex items-center justify-center text-sm">
+              LK
+            </div>
+            <div>
+              <h4 class="font-bold text-white text-xs">Lucia Kováčiková</h4>
+              <span class="text-[11px] text-cream-300">Levice • Miestny sprievodca</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="p-6 rounded-3xl glass-card border border-white/5 flex flex-col justify-between hover:border-caramel-400/30 transition">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <div class="flex text-amber-400 gap-1">
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              </div>
+              <span class="text-[11px] text-cream-300/60">Facebook odporúčanie</span>
+            </div>
+            <p class="text-sm text-cream-100 font-light italic mb-6 leading-relaxed">
+              „Oceňujem, že majú v ponuke kvalitnú výberovú kávu a ovsené mlieko bez doplatkov. Často tu pracujem na notebooku – Wi-Fi je stabilná, prostredie tiché a nikto vás nenáhli. A navyše náš psík vždy dostane misku s vodou.“
+            </p>
+          </div>
+          <div class="flex items-center gap-3 pt-4 border-t border-white/10">
+            <div class="w-10 h-10 rounded-full bg-caramel-500/20 text-caramel-400 font-bold flex items-center justify-center text-sm">
+              MB
+            </div>
+            <div>
+              <h4 class="font-bold text-white text-xs">Michal Benko</h4>
+              <span class="text-[11px] text-cream-300">Pravidelný hosť</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="p-6 rounded-3xl glass-card border border-white/5 flex flex-col justify-between hover:border-caramel-400/30 transition">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <div class="flex text-amber-400 gap-1">
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              </div>
+              <span class="text-[11px] text-cream-300/60">European Coffee Trip návštevník</span>
+            </div>
+            <p class="text-sm text-cream-100 font-light italic mb-6 leading-relaxed">
+              „Objednali sme si u nich celú narodeninovú tortu (malinovo-čokoládovú) na oslavu pre rodinu. Všetci hostia boli nadšení – korpus bol vláčny, krém ľahučký a dizajn s ovocím vyzeral ako z cukrárskeho časopisu. Ďakujeme!“
+            </p>
+          </div>
+          <div class="flex items-center gap-3 pt-4 border-t border-white/10">
+            <div class="w-10 h-10 rounded-full bg-caramel-500/20 text-caramel-400 font-bold flex items-center justify-center text-sm">
+              ZT
+            </div>
+            <div>
+              <h4 class="font-bold text-white text-xs">Zuzana Tóthová</h4>
+              <span class="text-[11px] text-cream-300">Levice</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= INTERACTIVE FAQ ACCORDION ================= -->
+  <section class="py-24 relative">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center mb-14">
+        <div class="inline-flex items-center gap-2 text-caramel-400 text-xs font-bold tracking-widest uppercase mb-3">
+          <i data-lucide="help-circle" class="w-4 h-4"></i>
+          <span>Časté otázky</span>
+        </div>
+        <h2 class="font-display text-3xl sm:text-4xl font-bold text-white mb-4">
+          Všetko, čo potrebujete vedieť pred návštevou
+        </h2>
+      </div>
+
+      <div class="space-y-4">
+        
+        <!-- FAQ 1 -->
+        <div class="rounded-2xl glass-card border border-white/5 overflow-hidden transition">
+          <button onclick="toggleFaq(1)" class="w-full p-5 text-left font-bold text-white text-sm sm:text-base flex items-center justify-between gap-4">
+            <span>Kde presne v OC Dituria sa kaviareň nachádza a je prístup bezbariérový?</span>
+            <i id="faqIcon-1" data-lucide="chevron-down" class="w-5 h-5 text-caramel-400 transition-transform duration-300"></i>
+          </button>
+          <div id="faqContent-1" class="hidden px-5 pb-5 text-xs sm:text-sm text-cream-300 leading-relaxed border-t border-white/5 pt-3">
+            Kaviareň Vežička sa nachádza na <strong>1. poschodí nákupného centra OC Dituria</strong> na Ulici sv. Michala 5. Prístup je plne bezbariérový – k dispozícii sú eskalátory aj priestranné výťahy priamo z podzemného a vonkajšieho parkoviska, takže k nám bez problémov prídete s detským kočíkom aj na invalidnom vozíku.
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="rounded-2xl glass-card border border-white/5 overflow-hidden transition">
+          <button onclick="toggleFaq(2)" class="w-full p-5 text-left font-bold text-white text-sm sm:text-base flex items-center justify-between gap-4">
+            <span>Máte v ponuke bezlaktózové mlieko, rastlinné alternatívy a bezkofeínovú kávu?</span>
+            <i id="faqIcon-2" data-lucide="chevron-down" class="w-5 h-5 text-caramel-400 transition-transform duration-300"></i>
+          </button>
+          <div id="faqContent-2" class="hidden px-5 pb-5 text-xs sm:text-sm text-cream-300 leading-relaxed border-t border-white/5 pt-3">
+            Áno, samozrejme. Každý kávový nápoj vám s radosťou pripravíme s <strong>ovseným mliekom Oatly Barista</strong>, mandľovým mliekom alebo bezlaktózovým kravským mliekom. Taktiež máme v stálej ponuke prémiovú <strong>bezkofeínovú kávu</strong> spracovanú vodnou metódou bez chémie.
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="rounded-2xl glass-card border border-white/5 overflow-hidden transition">
+          <button onclick="toggleFaq(3)" class="w-full p-5 text-left font-bold text-white text-sm sm:text-base flex items-center justify-between gap-4">
+            <span>Funguje terasa aj v zime alebo počas daždivého počasia?</span>
+            <i id="faqIcon-3" data-lucide="chevron-down" class="w-5 h-5 text-caramel-400 transition-transform duration-300"></i>
+          </button>
+          <div id="faqContent-3" class="hidden px-5 pb-5 text-xs sm:text-sm text-cream-300 leading-relaxed border-t border-white/5 pt-3">
+            Áno! Terasa je <strong>plne zastrešená a prekrytá</strong>, takže si výhľad na námestie užijete aj pri daždi. V chladnejších jesenných a zimných mesiacoch máme na terase sálavé ohrievače a pre každého hosťa pripravené čisté teplé deky. Navyše môžete sedieť v presklenej vnútornej rotunde s rovnakým panoramatickým výhľadom.
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="rounded-2xl glass-card border border-white/5 overflow-hidden transition">
+          <button onclick="toggleFaq(4)" class="w-full p-5 text-left font-bold text-white text-sm sm:text-base flex items-center justify-between gap-4">
+            <span>Môžem k vám prísť so psíkom (Pet-Friendly)?</span>
+            <i id="faqIcon-4" data-lucide="chevron-down" class="w-5 h-5 text-caramel-400 transition-transform duration-300"></i>
+          </button>
+          <div id="faqContent-4" class="hidden px-5 pb-5 text-xs sm:text-sm text-cream-300 leading-relaxed border-t border-white/5 pt-3">
+            Jednoznačne! Sme <strong>100% pet-friendly kaviareň</strong>. Vychovaní štvornohí miláčikovia všetkých veľkostí sú u nás vítaní na terase aj v interiéri. Na požiadanie vám radi prinesieme misku s čerstvou studenou vodou.
+          </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="rounded-2xl glass-card border border-white/5 overflow-hidden transition">
+          <button onclick="toggleFaq(5)" class="w-full p-5 text-left font-bold text-white text-sm sm:text-base flex items-center justify-between gap-4">
+            <span>Dá sa u vás platiť platobnou kartou a stravovacími kartami?</span>
+            <i id="faqIcon-5" data-lucide="chevron-down" class="w-5 h-5 text-caramel-400 transition-transform duration-300"></i>
+          </button>
+          <div id="faqContent-5" class="hidden px-5 pb-5 text-xs sm:text-sm text-cream-300 leading-relaxed border-t border-white/5 pt-3">
+            Prijímame všetky bežné bezkontaktné platobné karty (Visa, Mastercard, Apple Pay, Google Pay) aj elektronické stravovacie karty (Edenred, Callio, Doxx a ďalšie).
+          </div>
+        </div>
+
+        <!-- FAQ 6 -->
+        <div class="rounded-2xl glass-card border border-white/5 overflow-hidden transition">
+          <button onclick="toggleFaq(6)" class="w-full p-5 text-left font-bold text-white text-sm sm:text-base flex items-center justify-between gap-4">
+            <span>Pečiete aj celé torty na objednávku so sebou?</span>
+            <i id="faqIcon-6" data-lucide="chevron-down" class="w-5 h-5 text-caramel-400 transition-transform duration-300"></i>
+          </button>
+          <div id="faqContent-6" class="hidden px-5 pb-5 text-xs sm:text-sm text-cream-300 leading-relaxed border-t border-white/5 pt-3">
+            Áno, celú tortu alebo cheesecake si môžete jednoducho nakonfigurovať cez našu interaktívnu kalkulačku vyššie alebo telefonicky na čísle <strong>0911 125 398</strong>. Odporúčame objednať aspoň 48 hodín vopred, aby sme stihli zabezpečiť čerstvé suroviny a dokonalé zachladenie.
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= CONTACT, LOCATION & MAP SECTION ================= -->
+  <section id="kontakt" class="py-24 bg-roast-900/60 border-t border-caramel-500/20 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+        
+        <!-- Contact Details -->
+        <div>
+          <div class="inline-flex items-center gap-2 text-caramel-400 text-xs font-bold tracking-widest uppercase mb-3">
+            <i data-lucide="navigation" class="w-4 h-4"></i>
+            <span>Zastavte sa na kávu</span>
+          </div>
+          <h2 class="font-display text-3xl sm:text-4xl font-bold text-white mb-6">
+            Kde nás nájdete & Kontakt
+          </h2>
+          <p class="text-cream-300 text-sm sm:text-base mb-8 leading-relaxed">
+            Nájdete nás v srdci Levíc na 1. poschodí nákupného centra DITURIA. Či už idete okolo na nákupy, hľadáte pokojné miesto na stretnutie s priateľmi alebo si chcete vychutnať západ slnka z terasy, naše dvere sú pre vás otvorené každý deň.
+          </p>
+
+          <div class="space-y-6">
+            
+            <!-- Address -->
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 rounded-2xl bg-caramel-500/20 text-caramel-400 flex items-center justify-center shrink-0">
+                <i data-lucide="map-pin" class="w-6 h-6"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-white text-sm">Adresa prevádzky:</h4>
+                <p class="text-sm text-cream-200">OC DITURIA (1. poschodie, presklená rotunda)</p>
+                <p class="text-xs text-cream-300">Ul. sv. Michala 5, 934 01 Levice, Slovensko</p>
+                <a href="https://maps.google.com/?q=OC+Dituria+Levice" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 text-xs text-caramel-400 hover:text-caramel-300 font-semibold mt-1">
+                  <span>Otvoriť trasu v Google Maps</span>
+                  <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Opening Hours -->
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 rounded-2xl bg-caramel-500/20 text-caramel-400 flex items-center justify-center shrink-0">
+                <i data-lucide="clock" class="w-6 h-6"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-white text-sm">Otváracie hodiny:</h4>
+                <div class="text-sm text-cream-200 space-y-0.5">
+                  <div class="flex justify-between gap-6">
+                    <span>Pondelok – Nedeľa:</span>
+                    <span class="font-semibold text-caramel-300">09:00 – 20:00</span>
+                  </div>
+                  <p class="text-xs text-cream-300 pt-0.5">Otvorené 7 dní v týždni vrátane víkendov</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Phone & Socials -->
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 rounded-2xl bg-caramel-500/20 text-caramel-400 flex items-center justify-center shrink-0">
+                <i data-lucide="phone-call" class="w-6 h-6"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-white text-sm">Telefonický kontakt & Sociálne siete:</h4>
+                <p class="text-sm text-cream-200">
+                  <a href="tel:+421911125398" class="font-bold text-caramel-400 hover:underline">+421 911 125 398</a>
+                </p>
+                <div class="flex items-center gap-3 mt-3">
+                  <a href="https://www.facebook.com/kaviarenvezicka" target="_blank" rel="noopener" class="px-4 py-2 rounded-xl bg-roast-950/80 hover:bg-blue-600 border border-white/10 hover:border-blue-500 text-xs text-cream-100 font-medium transition flex items-center gap-2">
+                    <i data-lucide="facebook" class="w-4 h-4 text-blue-400"></i>
+                    <span>Facebook Stránka</span>
+                  </a>
+                  <a href="https://m.me/kaviarenvezicka" target="_blank" rel="noopener" class="px-4 py-2 rounded-xl bg-roast-950/80 hover:bg-sky-600 border border-white/10 hover:border-sky-500 text-xs text-cream-100 font-medium transition flex items-center gap-2">
+                    <i data-lucide="message-circle" class="w-4 h-4 text-sky-400"></i>
+                    <span>Messenger</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Right: Interactive Map Simulation & Directions Card -->
+        <div class="rounded-3xl glass-card border border-caramel-500/30 overflow-hidden shadow-2xl flex flex-col justify-between">
+          
+          <div class="p-6 border-b border-white/10">
+            <h4 class="font-display font-bold text-lg text-white mb-1">Ako sa k nám dostať & Parkovanie</h4>
+            <p class="text-xs text-cream-300">Pohodlný prístup autom aj pešo z centra Levíc</p>
+          </div>
+
+          <!-- Stylized Map Visualizer -->
+          <div class="relative bg-roast-950 h-72 flex items-center justify-center p-6 text-center">
+            <div class="absolute inset-0 opacity-40 bg-[radial-gradient(#d7a66b_1px,transparent_1px)] [background-size:16px_16px]"></div>
+            
+            <div class="relative z-10 max-w-sm space-y-4">
+              <div class="w-16 h-16 mx-auto rounded-full bg-caramel-500/30 border-2 border-caramel-400 flex items-center justify-center text-caramel-400 animate-pulse">
+                <i data-lucide="navigation-2" class="w-8 h-8"></i>
+              </div>
+              <h5 class="font-bold text-white text-base">OC DITURIA • 1. Poschodie</h5>
+              <p class="text-xs text-cream-300">Bezplatné parkovanie pre zákazníkov v podzemnej garáži a pred nákupným centrom.</p>
+              
+              <a href="https://maps.google.com/?q=OC+Dituria+Sv.+Michala+5+Levice" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl bg-caramel-500 text-roast-950 font-bold text-xs shadow-lg hover:bg-caramel-400 transition">
+                <i data-lucide="map" class="w-4 h-4"></i>
+                <span>Spustiť navigáciu</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Parking tips footer -->
+          <div class="p-6 bg-roast-950/80 border-t border-white/10 grid grid-cols-2 gap-4 text-xs text-cream-300">
+            <div class="flex items-center gap-2">
+              <i data-lucide="car" class="w-4 h-4 text-caramel-400"></i>
+              <span>Garáž & Parkovisko OC Dituria</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i data-lucide="bus" class="w-4 h-4 text-caramel-400"></i>
+              <span>Zastávky MHD v pešej dostupnosti</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-roast-950 border-t border-white/10 py-16 text-cream-300 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-white/10">
+        
+        <!-- Brand Info -->
+        <div class="md:col-span-2 space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-caramel-400 to-roast-800 p-0.5 flex items-center justify-center">
+              <div class="w-full h-full bg-roast-900 rounded-[10px] flex items-center justify-center">
+                <i data-lucide="coffee" class="w-5 h-5 text-caramel-300"></i>
+              </div>
+            </div>
+            <span class="font-display text-xl font-bold text-white tracking-wider">
+              KAVIAREŇ <span class="text-caramel-400">VEŽIČKA</span>
+            </span>
+          </div>
+          <p class="text-xs text-cream-300/80 max-w-md leading-relaxed">
+            Prémiová kaviareň s presklenou rotundou a krytou terasou v OC Dituria Levice. Podávame poctivú výberovú kávu, remeselné koláče, domáce limonády a aperitívy v priateľskom prostredí pre rodiny, psíkov aj digitálnych nomádov.
+          </p>
+          <div class="flex items-center gap-3 text-caramel-400">
+            <a href="https://www.facebook.com/kaviarenvezicka" target="_blank" rel="noopener" class="w-8 h-8 rounded-lg bg-roast-900 border border-white/10 flex items-center justify-center hover:bg-caramel-500 hover:text-roast-950 transition">
+              <i data-lucide="facebook" class="w-4 h-4"></i>
+            </a>
+            <a href="tel:+421911125398" class="w-8 h-8 rounded-lg bg-roast-900 border border-white/10 flex items-center justify-center hover:bg-caramel-500 hover:text-roast-950 transition">
+              <i data-lucide="phone" class="w-4 h-4"></i>
+            </a>
+            <a href="https://maps.google.com/?q=OC+Dituria+Levice" target="_blank" rel="noopener" class="w-8 h-8 rounded-lg bg-roast-900 border border-white/10 flex items-center justify-center hover:bg-caramel-500 hover:text-roast-950 transition">
+              <i data-lucide="map-pin" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="space-y-3">
+          <h5 class="font-display font-bold text-white text-xs uppercase tracking-wider">Rýchle odkazy</h5>
+          <ul class="space-y-2">
+            <li><a href="#ponuka" class="hover:text-caramel-400 transition">Nápojový lístok & Cenník</a></li>
+            <li><a href="#speciality" class="hover:text-caramel-400 transition">Výberová káva (Specialty)</a></li>
+            <li><a href="#terasa" class="hover:text-caramel-400 transition">Presklená terasa s výhľadom</a></li>
+            <li><a href="#torty" class="hover:text-caramel-400 transition">Kalkulačka celej torty</a></li>
+            <li><a href="#rezervacia" class="hover:text-caramel-400 transition">Rezervácia stola</a></li>
+          </ul>
+        </div>
+
+        <!-- Opening Hours & Address -->
+        <div class="space-y-3">
+          <h5 class="font-display font-bold text-white text-xs uppercase tracking-wider">Prevádzka</h5>
+          <p class="text-cream-200">
+            OC DITURIA (1. poschodie)<br>
+            Ul. sv. Michala 5, 934 01 Levice
+          </p>
+          <div class="pt-2 text-caramel-300 font-semibold">
+            Pondelok – Nedeľa:<br>
+            09:00 – 20:00
+          </div>
+          <p class="text-[11px] text-cream-300/70">
+            Telefón: <a href="tel:+421911125398" class="text-white hover:underline">+421 911 125 398</a>
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Bottom Credits -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-cream-300/60 text-[11px]">
+        <p>© 2026 Kaviareň Vežička Levice. Všetky práva vyhradené.</p>
+        <p class="flex items-center gap-1">
+          <span>Moderný redizajn kaviarenskej prezentácie pre</span>
+          <a href="http://kaviarenvezicka.sk" class="text-caramel-400 hover:underline">kaviarenvezicka.sk</a>
+          <span>z podkladov</span>
+          <a href="https://www.facebook.com/kaviarenvezicka" target="_blank" rel="noopener" class="text-caramel-400 hover:underline">FB @kaviarenvezicka</a>
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ================= FLOATING MOBILE ACTION BAR ================= -->
+  <div class="lg:hidden fixed bottom-0 left-0 right-0 z-40 bg-roast-950/95 border-t border-caramel-500/30 backdrop-blur-lg px-4 py-3 flex items-center justify-between gap-2 shadow-2xl">
+    <a href="tel:+421911125398" class="flex-1 py-2.5 px-2 rounded-xl bg-roast-900 border border-caramel-500/40 text-caramel-300 hover:text-white font-semibold text-xs flex items-center justify-center gap-1.5 transition">
+      <i data-lucide="phone-call" class="w-4 h-4 text-caramel-400"></i>
+      <span>Zavolať</span>
+    </a>
+    <a href="#ponuka" class="flex-1 py-2.5 px-2 rounded-xl bg-roast-900 border border-white/10 text-cream-200 hover:text-white font-semibold text-xs flex items-center justify-center gap-1.5 transition">
+      <i data-lucide="coffee" class="w-4 h-4 text-caramel-400"></i>
+      <span>Lístok</span>
+    </a>
+    <a href="#rezervacia" class="flex-1 py-2.5 px-2 rounded-xl bg-gradient-to-r from-caramel-500 to-caramel-600 text-roast-950 font-bold text-xs flex items-center justify-center gap-1.5 shadow-md shadow-caramel-500/20 transition">
+      <i data-lucide="calendar" class="w-4 h-4"></i>
+      <span>Rezervovať</span>
+    </a>
+  </div>
+
+  <!-- ================= TASTING WISHLIST TRAY MODAL ================= -->
+  <div id="trayModal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm animate-fade-in">
+    <div class="bg-roast-900 border border-caramel-500/30 rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl relative max-h-[90vh] flex flex-col">
+      <div class="flex items-center justify-between pb-4 border-b border-white/10 mb-4">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-caramel-500 text-roast-950 flex items-center justify-center font-bold">
+            <i data-lucide="shopping-bag" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <h3 class="font-display font-bold text-lg text-white">Váš ochutnávkový výber</h3>
+            <p class="text-xs text-cream-300">Položky pripravené na vašu návštevu</p>
+          </div>
+        </div>
+        <button onclick="toggleTrayModal()" class="p-2 text-cream-300 hover:text-white">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <!-- Scrollable items list -->
+      <div id="trayModalList" class="flex-1 overflow-y-auto space-y-3 pr-1 my-2">
+        <!-- Rendered by JS -->
+      </div>
+
+      <div class="pt-4 border-t border-white/10 space-y-4">
+        <div class="flex items-center justify-between">
+          <span class="text-sm font-semibold text-cream-200">Odhadovaná suma:</span>
+          <span id="trayModalTotalPrice" class="text-2xl font-display font-bold text-white">0.00 €</span>
+        </div>
+        <div class="grid grid-cols-2 gap-3">
+          <button onclick="clearTray()" class="py-2.5 rounded-xl bg-roast-800 hover:bg-roast-700 text-cream-300 text-xs font-semibold">
+            Vymazať výber
+          </button>
+          <button onclick="transferTrayToReservation()" class="py-2.5 rounded-xl bg-caramel-500 hover:bg-caramel-400 text-roast-950 text-xs font-bold flex items-center justify-center gap-1.5">
+            <i data-lucide="calendar" class="w-4 h-4"></i>
+            <span>Rezervovať stôl</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= COFFEE BEAN GUIDE MODAL ================= -->
+  <div id="beanModal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm animate-fade-in">
+    <div class="bg-roast-900 border border-caramel-500/30 rounded-3xl max-w-xl w-full p-6 sm:p-8 shadow-2xl relative max-h-[90vh] overflow-y-auto">
+      <div class="flex items-center justify-between pb-4 border-b border-white/10 mb-6">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-caramel-500/20 text-caramel-400 flex items-center justify-center">
+            <i data-lucide="compass" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <h3 class="font-display font-bold text-lg text-white">Sprievodca našou kávou</h3>
+            <p class="text-xs text-cream-300">Pôvod, praženie a chuťové profily</p>
+          </div>
+        </div>
+        <button onclick="openBeanGuideModal()" class="p-2 text-cream-300 hover:text-white">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <div class="space-y-4 text-xs sm:text-sm text-cream-200">
+        <div class="p-4 rounded-2xl bg-roast-950/70 border border-white/5 space-y-2">
+          <div class="flex items-center justify-between">
+            <h4 class="font-bold text-white text-sm">Brazília Fazenda Rainha (Espresso profil)</h4>
+            <span class="text-xs text-caramel-400 font-semibold">Stredné praženie</span>
+          </div>
+          <p class="text-cream-300">
+            Klasická kávová elegancia s plným telom, nízkou aciditou a tónmi mliečnej čokolády, lieskových orieškov a karamelu. Ideálny základ pre espresso aj mliečne nápoje ako cappuccino a flat white.
+          </p>
+        </div>
+
+        <div class="p-4 rounded-2xl bg-roast-950/70 border border-white/5 space-y-2">
+          <div class="flex items-center justify-between">
+            <h4 class="font-bold text-white text-sm">Etiópia Yirgacheffe (Filter & Batch brew)</h4>
+            <span class="text-xs text-caramel-400 font-semibold">Svetlé praženie</span>
+          </div>
+          <p class="text-cream-300">
+            Jasná kvetinová aróma s tónmi jazmínu, bergamotu a čierneho čaju so sviežou citrusovou ovocnosťou broskýň a mandarínok.
+          </p>
+        </div>
+
+        <div class="p-4 rounded-2xl bg-roast-950/70 border border-white/5 space-y-2">
+          <div class="flex items-center justify-between">
+            <h4 class="font-bold text-white text-sm">Kolumbia Huila Decaf (Swiss Water)</h4>
+            <span class="text-xs text-caramel-400 font-semibold">Bezkofeínová</span>
+          </div>
+          <p class="text-cream-300">
+            Zbavená kofeínu čisto vodným procesom bez akýchkoľvek chemikálií. Zachováva si prirodzenú sladkosť trstinového cukru a tóny červených jabĺk.
+          </p>
+        </div>
+      </div>
+
+      <div class="mt-6 pt-4 border-t border-white/10 text-center">
+        <button onclick="openBeanGuideModal()" class="px-6 py-2.5 rounded-xl bg-caramel-500 text-roast-950 font-bold text-xs">
+          Zatvoriť sprievodcu
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= JAVASCRIPT LOGIC ================= -->
+  <script>
+    // Initialize Lucide Icons
+    document.addEventListener('DOMContentLoaded', () => {
+      lucide.createIcons();
+      initLiveStatus();
+      renderMenuItems();
+      updateCakeSize(12);
+      setMinReservationDate();
+    });
+
+    // 1. Live Open/Closed Status Logic
+    function initLiveStatus() {
+      const now = new Date();
+      const currentHour = now.getHours();
+      const currentMinute = now.getMinutes();
+      const timeInMinutes = currentHour * 60 + currentMinute;
+      
+      const openTime = 9 * 60; // 09:00
+      const closeTime = 20 * 60; // 20:00
+
+      const dot = document.getElementById('statusIndicatorDot');
+      const text = document.getElementById('statusText');
+
+      if (timeInMinutes >= openTime && timeInMinutes < closeTime) {
+        dot.innerHTML = `
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+        `;
+        text.className = "font-medium text-emerald-400";
+        text.innerText = "Práve máme otvorené • Zatvárame o 20:00";
+      } else {
+        dot.innerHTML = `
+          <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-amber-500"></span>
+        `;
+        text.className = "font-medium text-amber-400";
+        text.innerText = "Momentálne zatvorené • Otvárame o 09:00";
+      }
+    }
+
+    // 2. Mobile Menu Drawer Toggle
+    function toggleMobileMenu() {
+      const drawer = document.getElementById('mobileMenuDrawer');
+      const icon = document.getElementById('mobileMenuIcon');
+      drawer.classList.toggle('hidden');
+      if (drawer.classList.contains('hidden')) {
+        icon.setAttribute('data-lucide', 'menu');
+      } else {
+        icon.setAttribute('data-lucide', 'x');
+      }
+      lucide.createIcons();
+    }
+
+    // 3. Theme Toggle (Dark Roast Mode vs Warm Latte Cream Light Mode)
+    function toggleTheme() {
+      const html = document.documentElement;
+      const themeIcon = document.getElementById('themeIcon');
+      html.classList.toggle('light');
+      
+      if (html.classList.contains('light')) {
+        document.body.classList.remove('bg-roast-950', 'text-cream-100');
+        document.body.classList.add('bg-[#fbf9f4]', 'text-roast-900');
+        themeIcon.setAttribute('data-lucide', 'moon');
+      } else {
+        document.body.classList.remove('bg-[#fbf9f4]', 'text-roast-900');
+        document.body.classList.add('bg-roast-950', 'text-cream-100');
+        themeIcon.setAttribute('data-lucide', 'sun');
+      }
+      lucide.createIcons();
+    }
+
+    // 4. Menu Items Database
+    const menuItems = [
+      // Káva & Espresso
+      {
+        id: 'esp-1',
+        category: 'kava',
+        name: 'Espresso Single / Doppio',
+        desc: 'Čistý extrakt 100% výberovej Arabiky s bohatou lieskovoorieškovou cremou.',
+        price: 2.10,
+        badge: 'Specialty',
+        img: 'images/coffee-espresso.jpg'
+      },
+      {
+        id: 'esp-2',
+        category: 'kava',
+        name: 'Espresso Lungo / Americano',
+        desc: 'Predĺžené espresso s jemnou horúcou vodou, plná aróma bez trpkosti.',
+        price: 2.30,
+        badge: 'Klasika',
+        img: 'images/coffee-espresso.jpg'
+      },
+      {
+        id: 'esp-3',
+        category: 'kava',
+        name: 'Batch Brew / Filter Dňa',
+        desc: 'Filtrovaná káva zo svetlo pražených zŕn, čisté ovocno-kvetinové telo (250 ml).',
+        price: 3.20,
+        badge: 'European Coffee Trip',
+        img: 'images/coffee-filter-v60.jpg'
+      },
+      {
+        id: 'esp-4',
+        category: 'kava',
+        name: 'Bezkofeínové Espresso Swiss Water',
+        desc: '100% chuť pravej kávy bez kofeínu, dekofeinizované výlučne vodným procesom.',
+        price: 2.40,
+        badge: 'Bez kofeínu',
+        img: 'images/coffee-espresso.jpg'
+      },
+
+      // Mliečne kávové špeciality
+      {
+        id: 'mlk-1',
+        category: 'mliecne',
+        name: 'Cappuccino Tradizionale',
+        desc: 'Dokonalá hodvábna mikropena, espresso a precízne latte art srdce.',
+        price: 2.80,
+        badge: 'Bestseller',
+        img: 'images/coffee-latte-art.jpg'
+      },
+      {
+        id: 'mlk-2',
+        category: 'mliecne',
+        name: 'Flat White (Double Shot)',
+        desc: 'Dvojitý shot espressa s tenkou vrstvou zamatového mlieka, intenzívny kávový zážitok.',
+        price: 3.60,
+        badge: 'Favorit',
+        img: 'images/coffee-latte-art.jpg'
+      },
+      {
+        id: 'mlk-3',
+        category: 'mliecne',
+        name: 'Caffè Latte Macchiato',
+        desc: 'Trojvrstvová krása vo vysokom skle s jemným mliečnym záverom (300 ml).',
+        price: 3.20,
+        badge: 'Obľúbené',
+        img: 'images/coffee-latte-art.jpg'
+      },
+      {
+        id: 'mlk-4',
+        category: 'mliecne',
+        name: 'Oatly Barista Cappuccino',
+        desc: 'Pripravené s prémiovým švédskym ovseným mliekom Oatly Barista Edition.',
+        price: 3.30,
+        badge: 'Plant-Based 100%',
+        img: 'images/coffee-latte-art.jpg'
+      },
+
+      // Koláče & Cheesecakes
+      {
+        id: 'cake-1',
+        category: 'kolace',
+        name: 'Pistáciový Cheesecake s bielou čokoládou',
+        desc: 'Hustý krém z pravého mascarpone a 100% sicílskej pistáciovej pasty na maslovom korpuse.',
+        price: 4.60,
+        badge: 'Top Bestseller',
+        img: 'images/dessert-cheesecake.jpg'
+      },
+      {
+        id: 'cake-2',
+        category: 'kolace',
+        name: 'Malinový Cheesecake s mascarpone',
+        desc: 'Svieža kombinácia lesných malín a jemného pečeného tvarohovo-smotanového krému.',
+        price: 4.20,
+        badge: 'Domáci',
+        img: 'images/dessert-cheesecake.jpg'
+      },
+      {
+        id: 'cake-3',
+        category: 'kolace',
+        name: 'Slaný Karamel s pekanovými orechmi',
+        desc: 'Ručne varený karamel s kryštálikmi fleur de sel a chrumkavými praženými pekanmi.',
+        price: 4.50,
+        badge: 'Gourmet',
+        img: 'images/dessert-cheesecake.jpg'
+      },
+      {
+        id: 'cake-4',
+        category: 'kolace',
+        name: 'Mango-Marakuja Raw Torta',
+        desc: '100% bezlepková, bezlaktózová a vegánska torta z kešu orechov a tropického pyré.',
+        price: 4.80,
+        badge: 'Bezlepkové & Vegan',
+        img: 'images/dessert-cheesecake.jpg'
+      },
+
+      // Domáce Limonády
+      {
+        id: 'lim-1',
+        category: 'limonady',
+        name: 'Grepovo-Rozmarínová Limonáda',
+        desc: 'Čerstvá šťava z ružového grepu, sirup z lúhovaného rozmarínu, sóda a drvený ľad (0.5 l).',
+        price: 3.90,
+        badge: 'Osviežujúca',
+        img: 'images/drink-lemonade.jpg'
+      },
+      {
+        id: 'lim-2',
+        category: 'limonady',
+        name: 'Jahoda, Limetka & Čerstvá Mäta',
+        desc: 'Sladké jahodové pyré, limetková šťava a mäta priamo zo záhradky (0.5 l).',
+        price: 3.90,
+        badge: 'Letný hit',
+        img: 'images/drink-lemonade.jpg'
+      },
+      {
+        id: 'lim-3',
+        category: 'limonady',
+        name: 'Mango & Marakuja s chia semienkami',
+        desc: 'Exotický kokteil plný vitamínov a energie s jemným perlením (0.5 l).',
+        price: 4.20,
+        badge: 'Superfood',
+        img: 'images/drink-lemonade.jpg'
+      },
+
+      // Teplé nápoje & Čokoláda
+      {
+        id: 'hot-1',
+        category: 'teple',
+        name: 'Pravá Belgická Horúca Čokoláda',
+        desc: 'Hustá mliečna alebo horká čokoláda podávaná s mini marshmallows a šľahačkou.',
+        price: 3.80,
+        badge: 'Hustá & Sladká',
+        img: 'images/drink-hot-chocolate.jpg'
+      },
+      {
+        id: 'hot-2',
+        category: 'teple',
+        name: 'BIO Sypaný Čaj v konvičke (0.4 l)',
+        desc: 'Výber z lístkových čajov: Sencha zelený, Earl Grey, Lesné ovocie, Harmanček.',
+        price: 3.20,
+        badge: 'BIO Organic',
+        img: 'images/coffee-filter-v60.jpg'
+      },
+      {
+        id: 'hot-3',
+        category: 'teple',
+        name: 'Spiced Chai Latte',
+        desc: 'Indický čierny čaj varený so škoricou, kardamómom, klinčekmi a napeneným mliekom.',
+        price: 3.60,
+        badge: 'Korenisté',
+        img: 'images/coffee-latte-art.jpg'
+      },
+
+      // Aperitív & Víno na terasu
+      {
+        id: 'drk-1',
+        category: 'drinky',
+        name: 'Aperol Spritz Original',
+        desc: 'Aperol, Prosecco D.O.C., sóda, plátok pomaranča a veľa ľadu – terasová ikona.',
+        price: 5.20,
+        badge: 'Terasový hit',
+        img: 'images/drinks-aperol-spritz.jpg'
+      },
+      {
+        id: 'drk-2',
+        category: 'drinky',
+        name: 'Hugo Spritz s bazou & mätou',
+        desc: 'Prosecco, bazový sirup, čerstvá mäta, limetka a sóda. Ľahký a kvetinový drink.',
+        price: 5.20,
+        badge: 'Svieži',
+        img: 'images/drinks-aperol-spritz.jpg'
+      },
+      {
+        id: 'drk-3',
+        category: 'drinky',
+        name: 'Výberové Slovenské Víno (0.1 l)',
+        desc: 'Pálava, Devín alebo Frankovka modrá od lokálnych vinárov z nitrianskej oblasti.',
+        price: 2.60,
+        badge: 'Lokálne víno',
+        img: 'images/drinks-aperol-spritz.jpg'
+      },
+
+      // Raňajky & Snack
+      {
+        id: 'snk-1',
+        category: 'ranajky',
+        name: 'Maslový Croissant s džemom & maslom',
+        desc: 'Čerstvo upečený francúzsky maslový croissant s jahodovým džemom.',
+        price: 2.60,
+        badge: 'Ranné pečenie',
+        img: 'images/dessert-croissant.jpg'
+      },
+      {
+        id: 'snk-2',
+        category: 'ranajky',
+        name: 'Pistáciový plnený Croissant',
+        desc: 'Bohato plnený domácim pistáciovým krémom a posypaný drvenými pistáciami.',
+        price: 3.80,
+        badge: 'Gourmet',
+        img: 'images/dessert-croissant.jpg'
+      },
+      {
+        id: 'snk-3',
+        category: 'ranajky',
+        name: 'Prosciutto & Mozzarella Croissant',
+        desc: 'Zapečený slaný croissant s prosciuttom crudo, mozzarellou a čerstvou rukolou.',
+        price: 4.40,
+        badge: 'Slaný snack',
+        img: 'images/dessert-croissant.jpg'
+      }
+    ];
+
+    let currentCategory = 'all';
+    let searchQuery = '';
+    let trayItems = [];
+
+    // Render Menu Items
+    function renderMenuItems() {
+      const container = document.getElementById('menuItemsGrid');
+      let filtered = menuItems;
+
+      if (currentCategory !== 'all') {
+        filtered = filtered.filter(item => item.category === currentCategory);
+      }
+
+      if (searchQuery.trim() !== '') {
+        const q = searchQuery.toLowerCase();
+        filtered = filtered.filter(item => 
+          item.name.toLowerCase().includes(q) || 
+          item.desc.toLowerCase().includes(q) ||
+          item.badge.toLowerCase().includes(q)
+        );
+      }
+
+      if (filtered.length === 0) {
+        container.innerHTML = `
+          <div class="col-span-full py-12 text-center text-cream-300">
+            <i data-lucide="search-x" class="w-10 h-10 mx-auto mb-3 opacity-40"></i>
+            <p class="text-sm font-semibold">Pre zadaný výraz „${searchQuery}“ sme nič nenašli.</p>
+            <button onclick="clearSearch()" class="mt-3 px-4 py-1.5 rounded-lg bg-roast-900 border border-white/10 text-xs text-caramel-300 hover:text-white">
+              Zobraziť všetky položky
+            </button>
+          </div>
+        `;
+        lucide.createIcons();
+        return;
+      }
+
+      container.innerHTML = filtered.map(item => `
+        <div class="rounded-3xl glass-card border border-white/5 overflow-hidden flex flex-col justify-between hover:border-caramel-400/40 hover:-translate-y-1 transition-all duration-300 group shadow-lg">
+          <div>
+            <div class="relative h-48 overflow-hidden bg-roast-900">
+              <img src="${item.img}" alt="${item.name}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <span class="absolute top-3 left-3 px-3 py-1 rounded-full text-[10px] font-bold tracking-wide uppercase bg-roast-950/80 text-caramel-300 border border-caramel-500/30 backdrop-blur-md">
+                ${item.badge}
+              </span>
+            </div>
+            <div class="p-5">
+              <div class="flex items-start justify-between gap-3 mb-2">
+                <h3 class="font-display font-bold text-white text-base leading-snug group-hover:text-caramel-300 transition-colors">
+                  ${item.name}
+                </h3>
+                <span class="font-bold text-caramel-400 text-base shrink-0">${item.price.toFixed(2)} €</span>
+              </div>
+              <p class="text-xs text-cream-300/80 leading-relaxed font-light">
+                ${item.desc}
+              </p>
+            </div>
+          </div>
+
+          <div class="p-5 pt-0">
+            <button onclick="addToTray('${item.id}')" class="w-full py-2.5 rounded-xl bg-roast-950/80 hover:bg-caramel-500 text-cream-200 hover:text-roast-950 font-semibold text-xs border border-white/10 hover:border-caramel-400 transition-all flex items-center justify-center gap-2 group/btn">
+              <i data-lucide="plus" class="w-4 h-4 text-caramel-400 group-hover/btn:text-roast-950"></i>
+              <span>Pridať do výberu</span>
+            </button>
+          </div>
+        </div>
+      `).join('');
+
+      lucide.createIcons();
+    }
+
+    // Filter Menu Categories
+    function filterMenuCategory(cat) {
+      currentCategory = cat;
+      const buttons = document.querySelectorAll('#categoryTabContainer button');
+      buttons.forEach(btn => {
+        btn.classList.remove('active', 'bg-caramel-500', 'text-roast-950');
+        btn.classList.add('bg-roast-900', 'text-cream-200');
+      });
+
+      const activeBtn = event.currentTarget;
+      activeBtn.classList.add('active', 'bg-caramel-500', 'text-roast-950');
+      activeBtn.classList.remove('bg-roast-900', 'text-cream-200');
+
+      renderMenuItems();
+    }
+
+    // Search Handler
+    function handleMenuSearch(val) {
+      searchQuery = val;
+      renderMenuItems();
+    }
+
+    function clearSearch() {
+      document.getElementById('menuSearchInput').value = '';
+      searchQuery = '';
+      renderMenuItems();
+    }
+
+    // 5. Wishlist Tray Logic
+    function addToTray(id) {
+      const item = menuItems.find(i => i.id === id);
+      if (!item) return;
+
+      const existing = trayItems.find(t => t.id === id);
+      if (existing) {
+        existing.count += 1;
+      } else {
+        trayItems.push({ ...item, count: 1 });
+      }
+
+      updateTrayUI();
+
+      // Small bounce on tray badge
+      const badge = document.getElementById('trayCountBadge');
+      badge.classList.add('scale-125');
+      setTimeout(() => badge.classList.remove('scale-125'), 200);
+    }
+
+    function updateTrayUI() {
+      const totalCount = trayItems.reduce((sum, item) => sum + item.count, 0);
+      const totalPrice = trayItems.reduce((sum, item) => sum + (item.price * item.count), 0);
+
+      document.getElementById('trayCountBadge').innerText = totalCount;
+      document.getElementById('trayTotalCountText').innerText = `${totalCount} položiek`;
+      document.getElementById('trayTotalPriceText').innerText = `${totalPrice.toFixed(2)} €`;
+      document.getElementById('trayModalTotalPrice').innerText = `${totalPrice.toFixed(2)} €`;
+
+      const bar = document.getElementById('trayFloatingBar');
+      if (totalCount > 0) {
+        bar.classList.remove('hidden');
+      } else {
+        bar.classList.add('hidden');
+      }
+
+      // Render Modal list
+      const list = document.getElementById('trayModalList');
+      if (trayItems.length === 0) {
+        list.innerHTML = `<p class="text-xs text-cream-300 py-6 text-center">Váš ochutnávkový výber je zatiaľ prázdny. Kliknite na tlačidlo „+ Pridať“ pri ktorejkoľvek položke v lístku.</p>`;
+      } else {
+        list.innerHTML = trayItems.map(item => `
+          <div class="flex items-center justify-between p-3 rounded-xl bg-roast-950/60 border border-white/5 text-xs">
+            <div>
+              <h5 class="font-bold text-white">${item.name}</h5>
+              <span class="text-cream-300">${item.count} × ${item.price.toFixed(2)} €</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="font-bold text-caramel-400">${(item.price * item.count).toFixed(2)} €</span>
+              <button onclick="removeOneFromTray('${item.id}')" class="p-1 rounded bg-roast-800 text-red-400 hover:bg-roast-700">
+                <i data-lucide="minus" class="w-3.5 h-3.5"></i>
+              </button>
+            </div>
+          </div>
+        `).join('');
+      }
+      lucide.createIcons();
+    }
+
+    function removeOneFromTray(id) {
+      const existing = trayItems.find(t => t.id === id);
+      if (existing) {
+        existing.count -= 1;
+        if (existing.count <= 0) {
+          trayItems = trayItems.filter(t => t.id !== id);
+        }
+      }
+      updateTrayUI();
+    }
+
+    function clearTray() {
+      trayItems = [];
+      updateTrayUI();
+      const modal = document.getElementById('trayModal');
+      if (!modal.classList.contains('hidden')) {
+        toggleTrayModal();
+      }
+    }
+
+    function toggleTrayModal() {
+      const modal = document.getElementById('trayModal');
+      modal.classList.toggle('hidden');
+      updateTrayUI();
+    }
+
+    function transferTrayToReservation() {
+      toggleTrayModal();
+      openReservationWithTray();
+    }
+
+    function openReservationWithTray() {
+      const notes = document.getElementById('resNotes');
+      const itemsList = trayItems.map(i => `${i.count}x ${i.name}`).join(', ');
+      notes.value = `Vybrané položky z ochutnávky: ${itemsList}.`;
+      
+      const resSection = document.getElementById('rezervacia');
+      resSection.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // 6. Interactive Zone Switcher
+    const zonesData = {
+      terasa: {
+        img: 'images/terrace-view.jpg',
+        badge: 'Celoročne prístupná terasa',
+        title: 'Sedenie s panoramatickým výhľadom na Námestie hrdinov',
+        desc: 'Naša terasa je srdcom Vežičky. V letných dňoch ponúka príjemný tieň a vánok pri popíjaní vychladeného Aperol Spritzu alebo domácej limonády. V chladnejších mesiacoch je krytá, chránená pred vetrom a vybavená mäkkými dekami, aby ste si kávu na čerstvom vzduchu užili v každom ročnom období.',
+        features: ['Výhľad na pešiu zónu Levíc', 'Vyhrievanie & teplé deky v zime', 'Fajčiarska aj nefajčiarska zóna', 'Večerné romantické osvetlenie']
+      },
+      vezicka: {
+        img: 'images/interior-cozy.jpg',
+        badge: 'Architektonická dominanta',
+        title: 'Presklená rotunda na 1. poschodí OC Dituria',
+        desc: 'Presklená vežička ponúka veľkorysé prirodzené denné svetlo a útulné kaviarenské stolíky. Je obľúbeným miestom na nerušené rozhovory priateľov, biznis stretnutia alebo prácu s notebookom v sprievode tichej lounge hudby a vône čerstvo zomletej kávy.',
+        features: ['Klimatizovaný moderný interiér', 'Panoramatické presklenie', 'Pohodlné kreslá a zásuvky', 'Rýchla Wi-Fi pre prácu']
+      },
+      kids: {
+        img: 'images/kids-corner.jpg',
+        badge: 'Pre rodiny s deťmi',
+        title: 'Útulný detský kútik s drevenými hračkami',
+        desc: 'Kaviareň Vežička je navrhnutá s myšlienkou na rodinný pokoj. Zatiaľ čo si rodičia vychutnávajú šálku espressa alebo cappuccino s lahodným koláčikom, deti sa môžu bezpečne zabaviť v čistom a vybavenom detskom kútiku s knižkami a drevenými hračkami.',
+        features: ['Kvalitné bezpečné hračky & maľovanky', 'Detské stoličky k dispozícii', 'Prebaľovací pult v OC Dituria', 'Bezbariérový prístup s kočíkom']
+      },
+      pet: {
+        img: 'images/pet-friendly.jpg',
+        badge: '100% Pet-Friendly',
+        title: 'Váš štvornohý priateľ je u nás srdečne vítaný',
+        desc: 'Nenechávajte svojho psíka doma! Sme hrdí na to, že sme plne pet-friendly kaviareň. Pri každej návšteve je pre vášho psíka pripravená čistá miska s čerstvou vodou a priateľský personál, ktorý má zvieratká rád.',
+        features: ['Miska s čerstvou vodou na požiadanie', 'Vítaní psíkovia na terase aj vo vnútri', 'Dostatok miesta pri stole', 'Rešpektujúce a čisté prostredie']
+      }
+    };
+
+    function switchZone(zoneKey) {
+      const data = zonesData[zoneKey];
+      if (!data) return;
+
+      document.querySelectorAll('.zone-tab-btn').forEach(btn => {
+        btn.classList.remove('active', 'bg-caramel-500', 'text-roast-950');
+        btn.classList.add('text-cream-200');
+      });
+
+      const activeBtn = document.getElementById(`zoneBtn-${zoneKey}`);
+      if (activeBtn) {
+        activeBtn.classList.add('active', 'bg-caramel-500', 'text-roast-950');
+        activeBtn.classList.remove('text-cream-200');
+      }
+
+      document.getElementById('zoneImage').src = data.img;
+      document.getElementById('zoneBadge').innerText = data.badge;
+      document.getElementById('zoneTitle').innerText = data.title;
+      document.getElementById('zoneDesc').innerText = data.desc;
+
+      const featContainer = document.getElementById('zoneFeatures');
+      featContainer.innerHTML = data.features.map(f => `
+        <div class="flex items-center gap-2">
+          <i data-lucide="check" class="w-4 h-4 text-caramel-400"></i>
+          <span>${f}</span>
+        </div>
+      `).join('');
+
+      lucide.createIcons();
+    }
+
+    // 7. Cake Customizer & Pricing Calculator
+    let selectedFlavor = 'Pistáciový sen s bielou čokoládou';
+    let baseCakePrice = 38;
+    let cakePortions = 12;
+
+    function selectCakeFlavor(flavorKey, basePrice) {
+      baseCakePrice = basePrice;
+      const buttons = document.querySelectorAll('.cake-flavor-btn');
+      buttons.forEach(b => {
+        b.classList.remove('active', 'border-caramel-500', 'bg-caramel-500/20');
+        b.classList.add('border-white/10', 'bg-roast-950/60');
+      });
+      const target = event.currentTarget;
+      target.classList.add('active', 'border-caramel-500', 'bg-caramel-500/20');
+      target.classList.remove('border-white/10', 'bg-roast-950/60');
+
+      if (flavorKey === 'pistacia') selectedFlavor = 'Pistáciový sen s bielou čokoládou';
+      if (flavorKey === 'malina') selectedFlavor = 'Malinový cheesecake s mascarpone';
+      if (flavorKey === 'karamel') selectedFlavor = 'Slaný karamel s pekanovými orechmi';
+      if (flavorKey === 'mango') selectedFlavor = 'Mango & Marakuja (Tropický raw)';
+
+      calculateCakePrice();
+    }
+
+    function updateCakeSize(val) {
+      cakePortions = parseInt(val);
+      const label = document.getElementById('cakePortionsLabel');
+      if (cakePortions === 8) label.innerText = '8 porcií (priemer 20 cm)';
+      if (cakePortions === 12) label.innerText = '12 porcií (priemer 24 cm)';
+      if (cakePortions === 16) label.innerText = '16 porcií (priemer 28 cm)';
+      if (cakePortions === 24) label.innerText = '24 porcií (2-poschodová slávnostná)';
+      calculateCakePrice();
+    }
+
+    function calculateCakePrice() {
+      let portionMultiplier = cakePortions / 12;
+      let calculated = baseCakePrice * portionMultiplier;
+
+      const inscription = document.getElementById('cakeInscriptionCheck').checked;
+      if (inscription) calculated += 3.00;
+
+      document.getElementById('cakeFinalPrice').innerText = `${calculated.toFixed(2)} €`;
+    }
+
+    function orderCakeFromCalculator() {
+      const inscription = document.getElementById('cakeInscriptionCheck').checked ? 's nápisom z čokolády' : 'bez nápisu';
+      const glutenFree = document.getElementById('cakeGlutenFreeCheck').checked ? '100% bezlepkový korpus' : 'klasický korpus';
+      const price = document.getElementById('cakeFinalPrice').innerText;
+
+      const notes = document.getElementById('resNotes');
+      notes.value = `Objednávka celej torty: ${selectedFlavor}, veľkosť ${cakePortions} porcií (${glutenFree}, ${inscription}). Odhadovaná cena: ${price}.`;
+
+      const resSection = document.getElementById('rezervacia');
+      resSection.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // 8. Reservation Form Submit Simulation
+    function setMinReservationDate() {
+      const today = new Date().toISOString().split('T')[0];
+      const dateInput = document.getElementById('resDate');
+      if (dateInput) {
+        dateInput.min = today;
+        dateInput.value = today;
+      }
+    }
+
+    function handleReservationSubmit(e) {
+      e.preventDefault();
+      
+      const name = document.getElementById('resName').value;
+      const phone = document.getElementById('resPhone').value;
+      const date = document.getElementById('resDate').value;
+      const time = document.getElementById('resTime').value;
+      const guests = document.getElementById('resGuests').value;
+      const area = document.querySelector('input[name="resArea"]:checked')?.value || 'Krytá terasa';
+      const notes = document.getElementById('resNotes').value;
+
+      document.getElementById('reservationForm').classList.add('hidden');
+      const successBox = document.getElementById('reservationSuccessBox');
+      successBox.classList.remove('hidden');
+
+      document.getElementById('reservationSuccessDetail').innerHTML = `
+        Vážená/ý <strong>${name}</strong>, váš stôl pre <strong>${guests} osôb</strong> (${area}) bol úspešne požiadaný na termín <strong>${date} o ${time}</strong>.<br>
+        Potvrdenie vám do niekoľkých minút zašleme na číslo <strong>${phone}</strong>.
+      `;
+    }
+
+    function resetReservationForm() {
+      document.getElementById('reservationForm').reset();
+      document.getElementById('reservationForm').classList.remove('hidden');
+      document.getElementById('reservationSuccessBox').classList.add('hidden');
+      setMinReservationDate();
+    }
+
+    // 9. FAQ Accordion Toggle
+    function toggleFaq(num) {
+      const content = document.getElementById(`faqContent-${num}`);
+      const icon = document.getElementById(`faqIcon-${num}`);
+      content.classList.toggle('hidden');
+      icon.classList.toggle('rotate-180');
+    }
+
+    // 10. Modals
+    function openBeanGuideModal() {
+      const modal = document.getElementById('beanModal');
+      modal.classList.toggle('hidden');
+    }
+  </script>
+
+</body>
+</html>
