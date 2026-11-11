@@ -1,0 +1,2098 @@
+<!DOCTYPE html>
+<html lang="sk" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MARŠO-SK s.r.o. | Tradičné staviteľstvo, klenbové pivnice, krby & rezivo Pezinok</title>
+  <meta name="description" content="Stavebná firma s tradíciou od roku 1989 so sídlom v Pezinku. Špecializujeme sa na majstrovské klenbové pivnice, zákazkové krby a pece, stavbu rodinných domov, predaj stavebného reziva, sibírsky smrekovec a zemné práce JCB.">
+  <meta name="keywords" content="klenbové pivnice, krby pezinok, stavba domov pezinok, stavebné rezivo, sibírsky smrekovec, cech kachliarov, maršo sk, výkopové práce jcb, tatra 815, krov na mieru">
+  <meta name="author" content="MARŠO-SK, s.r.o.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="MARŠO-SK s.r.o. | Majstrovské staviteľstvo Pezinok">
+  <meta property="og:description" content="Špecialisti na klenbové vinné pivnice, krby, rodinné domy a certifikované stavebné rezivo od roku 1989.">
+  <meta property="og:image" content="images/hero_slide2.jpg">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brick: {
+              50: '#fff7ed',
+              100: '#ffedd5',
+              200: '#fed7aa',
+              300: '#fdba74',
+              400: '#fb923c',
+              500: '#f97316',
+              600: '#ea580c',
+              700: '#c2410c', // brick red
+              800: '#9a3412',
+              900: '#7c2d12',
+              950: '#431407',
+            },
+            amberwood: {
+              50: '#fefce8',
+              100: '#fef9c3',
+              200: '#fef08a',
+              300: '#fde047',
+              400: '#facc15',
+              500: '#eab308',
+              600: '#ca8a04',
+              700: '#a16207',
+              800: '#854d0e',
+              900: '#713f12',
+              950: '#422006',
+            },
+            stonecraft: {
+              50: '#f8fafc',
+              100: '#f1f5f9',
+              200: '#e2e8f0',
+              300: '#cbd5e1',
+              400: '#94a3b8',
+              500: '#64748b',
+              600: '#475569',
+              700: '#334155',
+              800: '#1e293b',
+              900: '#0f172a',
+              950: '#020617',
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            serif: ['"Cinzel"', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom Glassmorphism & Accents */
+    .glass-nav {
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+    .hero-gradient {
+      background: linear-gradient(180deg, rgba(15, 23, 42, 0.75) 0%, rgba(15, 23, 42, 0.90) 100%);
+    }
+    .brick-pattern {
+      background-image: radial-gradient(#ea580c 0.75px, transparent 0.75px), radial-gradient(#ea580c 0.75px, #f8fafc 0.75px);
+      background-size: 30px 30px;
+      background-position: 0 0, 15px 15px;
+    }
+    .dark .brick-pattern {
+      background-image: radial-gradient(#9a3412 0.75px, transparent 0.75px), radial-gradient(#9a3412 0.75px, #0f172a 0.75px);
+    }
+    /* Hide scrollbar for tabs */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+    /* Custom image zoom */
+    .card-zoom {
+      overflow: hidden;
+    }
+    .card-zoom img {
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .card-zoom:hover img {
+      transform: scale(1.08);
+    }
+  </style>
+</head>
+<body class="bg-stonecraft-50 text-stonecraft-800 dark:bg-stonecraft-950 dark:text-stonecraft-100 transition-colors duration-300 font-sans antialiased selection:bg-brick-600 selection:text-white">
+
+  <!-- ================= TOP UTILITY ANNOUNCEMENT BAR ================= -->
+  <aside aria-label="Kontaktné informácie a nastavenia" class="bg-stonecraft-900 text-stonecraft-300 text-xs border-b border-stonecraft-800 relative z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2.5 flex flex-wrap items-center justify-between gap-3">
+      <!-- Left: Contact & Location Quick Info -->
+      <div class="flex flex-wrap items-center gap-x-6 gap-y-1.5">
+        <a href="https://maps.google.com/?q=Šenkvická+cesta+24+Pezinok" target="_blank" rel="noopener" class="flex items-center gap-2 hover:text-amberwood-400 transition-colors">
+          <i class="fa-solid fa-location-dot text-brick-500"></i>
+          <span>Šenkvická cesta 24, 902 01 Pezinok</span>
+        </a>
+        <a href="tel:+421905649486" class="flex items-center gap-2 hover:text-amberwood-400 transition-colors font-medium">
+          <i class="fa-solid fa-phone text-brick-500"></i>
+          <span>Predajňa: 0905 649 486</span>
+        </a>
+        <a href="tel:+421903385900" class="hidden md:flex items-center gap-2 hover:text-amberwood-400 transition-colors">
+          <i class="fa-solid fa-user-tie text-amberwood-400"></i>
+          <span>A. Maršo: 0903 385 900</span>
+        </a>
+        <div class="hidden lg:flex items-center gap-2 text-stonecraft-400">
+          <span class="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+          <span id="liveHoursBadge">Po–Pia: 08:00 – 15:00 (Otvorené)</span>
+        </div>
+      </div>
+
+      <!-- Right: Badges, Theme & Language Toggle -->
+      <div class="flex items-center gap-4 ml-auto">
+        <span class="hidden sm:inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-brick-950/80 border border-brick-800 text-brick-300">
+          <i class="fa-solid fa-certificate text-brick-400"></i>
+          <span data-i18n="top_badge">Člen Cechu kachliarov</span>
+        </span>
+
+        <!-- Language Switcher -->
+        <div class="flex items-center bg-stonecraft-800 rounded-lg p-0.5 border border-stonecraft-700">
+          <button id="langSkBtn" onclick="setLanguage('sk')" class="px-2 py-0.5 text-xs font-bold rounded bg-brick-600 text-white transition-all">SK</button>
+          <button id="langEnBtn" onclick="setLanguage('en')" class="px-2 py-0.5 text-xs font-medium text-stonecraft-400 hover:text-white rounded transition-all">EN</button>
+        </div>
+
+        <!-- Dark / Light Theme Toggle -->
+        <button id="themeToggleBtn" onclick="toggleTheme()" aria-label="Prepnúť režim" class="w-8 h-8 rounded-lg bg-stonecraft-800 hover:bg-stonecraft-700 text-amberwood-400 flex items-center justify-center transition-colors border border-stonecraft-700">
+          <i id="themeIcon" class="fa-solid fa-moon"></i>
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ================= MAIN STICKY NAVIGATION ================= -->
+  <header class="sticky top-0 z-40 bg-white/95 dark:bg-stonecraft-900/95 glass-nav border-b border-stonecraft-200 dark:border-stonecraft-800 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <!-- Logo -->
+        <a href="#domov" class="flex items-center gap-3 group">
+          <div class="p-1 rounded-xl bg-white dark:bg-stonecraft-800 border border-stonecraft-200 dark:border-stonecraft-700 shadow-sm transition-transform group-hover:scale-105">
+            <img src="images/logo.png" alt="MARŠO-SK logo" class="h-11 w-auto object-contain">
+          </div>
+          <div>
+            <div class="font-serif text-lg sm:text-xl font-bold tracking-tight text-stonecraft-900 dark:text-white flex items-center gap-2">
+              <span>MARŠO-SK</span>
+              <span class="text-xs font-sans font-semibold px-2 py-0.5 rounded bg-amberwood-100 text-amberwood-800 dark:bg-amberwood-950 dark:text-amberwood-300 border border-amberwood-300 dark:border-amberwood-800">od 1989</span>
+            </div>
+            <p class="text-[11px] text-stonecraft-500 dark:text-stonecraft-400 font-medium tracking-wide" data-i18n="nav_tagline">Stavebná firma & Sklad dreva Pezinok</p>
+          </div>
+        </a>
+
+        <!-- Desktop Nav Links -->
+        <nav class="hidden xl:flex items-center gap-1 font-medium text-sm">
+          <a href="#sluzby" class="px-3 py-2 rounded-lg text-stonecraft-700 dark:text-stonecraft-200 hover:text-brick-600 dark:hover:text-brick-400 hover:bg-stonecraft-100 dark:hover:bg-stonecraft-800 transition-colors" data-i18n="nav_services">Služby</a>
+          <a href="#pivnice" class="px-3 py-2 rounded-lg text-stonecraft-700 dark:text-stonecraft-200 hover:text-brick-600 dark:hover:text-brick-400 hover:bg-stonecraft-100 dark:hover:bg-stonecraft-800 transition-colors" data-i18n="nav_cellars">Klenbové pivnice</a>
+          <a href="#krby" class="px-3 py-2 rounded-lg text-stonecraft-700 dark:text-stonecraft-200 hover:text-brick-600 dark:hover:text-brick-400 hover:bg-stonecraft-100 dark:hover:bg-stonecraft-800 transition-colors" data-i18n="nav_fireplaces">Krby a pece</a>
+          <a href="#drevo" class="px-3 py-2 rounded-lg text-stonecraft-700 dark:text-stonecraft-200 hover:text-brick-600 dark:hover:text-brick-400 hover:bg-stonecraft-100 dark:hover:bg-stonecraft-800 transition-colors" data-i18n="nav_wood">Rezivo & Smrekovec</a>
+          <a href="#galeria" class="px-3 py-2 rounded-lg text-stonecraft-700 dark:text-stonecraft-200 hover:text-brick-600 dark:hover:text-brick-400 hover:bg-stonecraft-100 dark:hover:bg-stonecraft-800 transition-colors" data-i18n="nav_gallery">Realizácie</a>
+          <a href="#kalkulacka" class="px-3 py-2 rounded-lg text-amberwood-700 dark:text-amberwood-400 font-semibold hover:bg-amberwood-50 dark:hover:bg-amberwood-950/50 transition-colors flex items-center gap-1.5" data-i18n="nav_calculator">
+            <i class="fa-solid fa-calculator text-xs"></i>
+            <span>Kalkulačka</span>
+          </a>
+          <a href="#o-nas" class="px-3 py-2 rounded-lg text-stonecraft-700 dark:text-stonecraft-200 hover:text-brick-600 dark:hover:text-brick-400 hover:bg-stonecraft-100 dark:hover:bg-stonecraft-800 transition-colors" data-i18n="nav_about">O nás</a>
+          <a href="#kontakt" class="px-3 py-2 rounded-lg text-stonecraft-700 dark:text-stonecraft-200 hover:text-brick-600 dark:hover:text-brick-400 hover:bg-stonecraft-100 dark:hover:bg-stonecraft-800 transition-colors" data-i18n="nav_contact">Kontakt</a>
+        </nav>
+
+        <!-- Right Action Button & Mobile Trigger -->
+        <div class="flex items-center gap-3">
+          <a href="#kalkulacka" class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-semibold text-sm bg-gradient-to-r from-brick-600 to-brick-700 hover:from-brick-700 hover:to-brick-800 text-white shadow-lg shadow-brick-600/20 hover:shadow-brick-600/30 transition-all transform hover:-translate-y-0.5">
+            <i class="fa-solid fa-file-invoice"></i>
+            <span data-i18n="nav_cta">Cenová ponuka</span>
+          </a>
+
+          <!-- Mobile Hamburger Button -->
+          <button id="mobileMenuBtn" onclick="toggleMobileMenu()" aria-label="Otvoriť menu" class="xl:hidden w-11 h-11 rounded-xl bg-stonecraft-100 dark:bg-stonecraft-800 text-stonecraft-700 dark:text-stonecraft-200 flex items-center justify-center hover:bg-stonecraft-200 dark:hover:bg-stonecraft-700 transition-colors">
+            <i id="mobileMenuIcon" class="fa-solid fa-bars text-lg"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobileMenu" class="hidden xl:hidden border-b border-stonecraft-200 dark:border-stonecraft-800 bg-white dark:bg-stonecraft-900 px-4 pt-3 pb-6 transition-all shadow-xl">
+      <div class="flex flex-col gap-2 font-medium">
+        <a href="#sluzby" onclick="toggleMobileMenu()" class="px-4 py-3 rounded-xl hover:bg-stonecraft-100 dark:hover:bg-stonecraft-800 flex items-center justify-between" data-i18n="nav_services">Služby <i class="fa-solid fa-chevron-right text-xs text-stonecraft-400"></i></a>
+        <a href="#pivnice" onclick="toggleMobileMenu()" class="px-4 py-3 rounded-xl hover:bg-stonecraft-100 dark:hover:bg-stonecraft-800 flex items-center justify-between" data-i18n="nav_cellars">Klenbové pivnice <i class="fa-solid fa-chevron-right text-xs text-stonecraft-400"></i></a>
+        <a href="#krby" onclick="toggleMobileMenu()" class="px-4 py-3 rounded-xl hover:bg-stonecraft-100 dark:hover:bg-stonecraft-800 flex items-center justify-between" data-i18n="nav_fireplaces">Krby a pece <i class="fa-solid fa-chevron-right text-xs text-stonecraft-400"></i></a>
+        <a href="#drevo" onclick="toggleMobileMenu()" class="px-4 py-3 rounded-xl hover:bg-stonecraft-100 dark:hover:bg-stonecraft-800 flex items-center justify-between" data-i18n="nav_wood">Rezivo & Sibírsky smrekovec <i class="fa-solid fa-chevron-right text-xs text-stonecraft-400"></i></a>
+        <a href="#galeria" onclick="toggleMobileMenu()" class="px-4 py-3 rounded-xl hover:bg-stonecraft-100 dark:hover:bg-stonecraft-800 flex items-center justify-between" data-i18n="nav_gallery">Realizácie & Galéria <i class="fa-solid fa-chevron-right text-xs text-stonecraft-400"></i></a>
+        <a href="#kalkulacka" onclick="toggleMobileMenu()" class="px-4 py-3 rounded-xl bg-amberwood-50 dark:bg-amberwood-950/40 text-amberwood-700 dark:text-amberwood-300 font-semibold flex items-center justify-between" data-i18n="nav_calculator">Kalkulačka ponuky <i class="fa-solid fa-calculator text-xs"></i></a>
+        <a href="#o-nas" onclick="toggleMobileMenu()" class="px-4 py-3 rounded-xl hover:bg-stonecraft-100 dark:hover:bg-stonecraft-800 flex items-center justify-between" data-i18n="nav_about">O nás & Certifikáty <i class="fa-solid fa-chevron-right text-xs text-stonecraft-400"></i></a>
+        <a href="#kontakt" onclick="toggleMobileMenu()" class="px-4 py-3 rounded-xl hover:bg-stonecraft-100 dark:hover:bg-stonecraft-800 flex items-center justify-between" data-i18n="nav_contact">Kontakt & Predajňa <i class="fa-solid fa-chevron-right text-xs text-stonecraft-400"></i></a>
+        
+        <div class="pt-4 border-t border-stonecraft-200 dark:border-stonecraft-800 flex flex-col gap-2.5">
+          <a href="tel:+421905649486" class="w-full text-center py-3 rounded-xl font-semibold text-sm bg-stonecraft-100 dark:bg-stonecraft-800 text-stonecraft-800 dark:text-white flex items-center justify-center gap-2">
+            <i class="fa-solid fa-phone text-brick-600"></i> Zavolať do predajne (0905 649 486)
+          </a>
+          <a href="#kalkulacka" onclick="toggleMobileMenu()" class="w-full text-center py-3 rounded-xl font-semibold text-sm bg-brick-600 text-white shadow-lg">
+            Nezáväzná cenová ponuka
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+  <!-- ================= HERO SECTION ================= -->
+  <section id="domov" class="relative min-h-[85vh] flex items-center justify-center overflow-hidden bg-stonecraft-950 text-white">
+    <!-- Background Carousel Images -->
+    <div class="absolute inset-0 z-0">
+      <div id="heroSlide1" class="absolute inset-0 bg-cover bg-center transition-opacity duration-1000 opacity-100" style="background-image: url('images/hero_slide2.jpg');"></div>
+      <div id="heroSlide2" class="absolute inset-0 bg-cover bg-center transition-opacity duration-1000 opacity-0" style="background-image: url('images/pivnica_krizova_3.jpg');"></div>
+      <div id="heroSlide3" class="absolute inset-0 bg-cover bg-center transition-opacity duration-1000 opacity-0" style="background-image: url('images/kozub_exterier_altanok.jpg');"></div>
+      <div id="heroSlide4" class="absolute inset-0 bg-cover bg-center transition-opacity duration-1000 opacity-0" style="background-image: url('images/dom_pezinok_1.jpg');"></div>
+      <!-- Subtle Dark Overlay with brick tint -->
+      <div class="absolute inset-0 bg-gradient-to-r from-stonecraft-950/95 via-stonecraft-950/80 to-stonecraft-950/60 z-10"></div>
+    </div>
+
+    <!-- Hero Content Container -->
+    <div class="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28 flex flex-col justify-center">
+      <div class="max-w-3xl">
+        <!-- Badge -->
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-brick-600/30 border border-brick-500/50 text-brick-300 mb-6 backdrop-blur-md">
+          <i class="fa-solid fa-award text-amberwood-400"></i>
+          <span data-i18n="hero_pill">Tradícia, remeselná poctivosť a spoľahlivosť od roku 1989</span>
+        </div>
+
+        <!-- Main Title -->
+        <h1 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-[1.15] mb-6">
+          <span data-i18n="hero_title_1">Majstrovské staviteľstvo,</span><br>
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-amberwood-300 via-brick-400 to-amberwood-200" data-i18n="hero_title_2">klenbové vinné pivnice</span><br>
+          <span class="text-stonecraft-200" data-i18n="hero_title_3">& poctivé krby v Pezinku.</span>
+        </h1>
+
+        <!-- Subtitle -->
+        <p class="text-base sm:text-lg lg:text-xl text-stonecraft-300 font-normal leading-relaxed mb-10 max-w-2xl" data-i18n="hero_desc">
+          Zhmotňujeme sny o dokonalej rodinnej vile, vinnom archíve z pálenej tehly či krbe sálajúcom domovom. Zároveň prevádzkujeme vlastný sklad stavebného reziva a poskytujeme zemné práce JCB.
+        </p>
+
+        <!-- CTA Buttons -->
+        <div class="flex flex-wrap items-center gap-4">
+          <a href="#kalkulacka" class="px-7 py-3.5 rounded-xl font-bold text-sm sm:text-base bg-gradient-to-r from-brick-600 to-brick-700 hover:from-brick-700 hover:to-brick-800 text-white shadow-xl shadow-brick-600/30 hover:shadow-brick-600/50 transition-all transform hover:-translate-y-0.5 flex items-center gap-2">
+            <i class="fa-solid fa-calculator"></i>
+            <span data-i18n="hero_btn_calc">Vypočítať orientačnú cenu</span>
+          </a>
+          <a href="#galeria" class="px-7 py-3.5 rounded-xl font-bold text-sm sm:text-base bg-stonecraft-800/90 hover:bg-stonecraft-700 border border-stonecraft-700 text-white backdrop-blur-md transition-all flex items-center gap-2">
+            <i class="fa-solid fa-images text-amberwood-400"></i>
+            <span data-i18n="hero_btn_gallery">Prezrieť realizácie (500+)</span>
+          </a>
+        </div>
+
+        <!-- Trust Badges Under Buttons -->
+        <div class="mt-12 pt-8 border-t border-stonecraft-800/80 grid grid-cols-2 sm:grid-cols-4 gap-6 text-stonecraft-300 text-xs sm:text-sm">
+          <div>
+            <div class="font-serif text-2xl sm:text-3xl font-bold text-white mb-1">35+</div>
+            <div class="text-stonecraft-400" data-i18n="stat_1">Rokov praxe (od 1989)</div>
+          </div>
+          <div>
+            <div class="font-serif text-2xl sm:text-3xl font-bold text-white mb-1">500+</div>
+            <div class="text-stonecraft-400" data-i18n="stat_2">Dokončených diel</div>
+          </div>
+          <div>
+            <div class="font-serif text-2xl sm:text-3xl font-bold text-amberwood-400 mb-1">Cech</div>
+            <div class="text-stonecraft-400" data-i18n="stat_3">Akreditovaný kachliar</div>
+          </div>
+          <div>
+            <div class="font-serif text-2xl sm:text-3xl font-bold text-brick-400 mb-1">Sklad</div>
+            <div class="text-stonecraft-400" data-i18n="stat_4">Rezivo ihneď v Pezinku</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Carousel Controls -->
+    <div class="absolute bottom-6 right-6 z-20 hidden md:flex items-center gap-2 bg-stonecraft-900/80 backdrop-blur-md px-3 py-1.5 rounded-full border border-stonecraft-700">
+      <button onclick="prevHeroSlide()" aria-label="Predchádzajúci snímok" class="w-8 h-8 rounded-full hover:bg-stonecraft-700 flex items-center justify-center text-xs text-white transition-colors">
+        <i class="fa-solid fa-arrow-left"></i>
+      </button>
+      <span id="heroSlideIndicator" class="text-xs font-mono px-2 text-stonecraft-300">1 / 4</span>
+      <button onclick="nextHeroSlide()" aria-label="Nasledujúci snímok" class="w-8 h-8 rounded-full hover:bg-stonecraft-700 flex items-center justify-center text-xs text-white transition-colors">
+        <i class="fa-solid fa-arrow-right"></i>
+      </button>
+    </div>
+  </section>
+
+  <!-- ================= 6 CORE PILLARS SECTION ================= -->
+  <section id="sluzby" class="py-20 lg:py-28 bg-white dark:bg-stonecraft-900 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-brick-100 text-brick-800 dark:bg-brick-950 dark:text-brick-300 mb-3 border border-brick-200 dark:border-brick-800">
+          <i class="fa-solid fa-hammer"></i>
+          <span data-i18n="pillars_tag">Komplexné stavebné remeslo</span>
+        </div>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-stonecraft-900 dark:text-white mb-4" data-i18n="pillars_heading">
+          Špecializácie firmy MARŠO-SK
+        </h2>
+        <p class="text-stonecraft-600 dark:text-stonecraft-300 text-base sm:text-lg" data-i18n="pillars_subheading">
+          Od historických klenbových techník po moderné novostavby a vlastný materiálový sklad. Každý projekt vedieme s osobným nasadením skúsených majstrov.
+        </p>
+      </div>
+
+      <!-- Grid of 6 Pillars -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Pillar 1: Klenbové pivnice -->
+        <div class="bg-stonecraft-50 dark:bg-stonecraft-800/60 rounded-2xl overflow-hidden border border-stonecraft-200 dark:border-stonecraft-700 hover:border-brick-500 transition-all duration-300 shadow-sm hover:shadow-xl flex flex-col group">
+          <div class="h-56 card-zoom relative">
+            <img src="images/pivnica_karolina_2.jpg" alt="Klenbová vinná pivnica" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-stonecraft-950/80 via-transparent to-transparent"></div>
+            <span class="absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-bold bg-amberwood-500/90 text-stonecraft-950 backdrop-blur-sm">
+              Majstrovská špecialita
+            </span>
+            <div class="absolute bottom-4 left-4 text-white font-serif text-lg font-bold">
+              Klenbové vinné pivnice
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <p class="text-sm text-stonecraft-600 dark:text-stonecraft-300 leading-relaxed mb-6" data-i18n="p1_desc">
+              Tradičné krížové a valené klenby zo starých pálených tehál a prírodného kameňa. Zabezpečujeme ideálnu mikroklímu, stálu teplotu a vlhkosť pre zrenie vína v regióne Malých Karpát i po celom Slovensku.
+            </p>
+            <div class="space-y-2 mb-6 text-xs text-stonecraft-700 dark:text-stonecraft-300 font-medium">
+              <div class="flex items-center gap-2"><i class="fa-solid fa-check text-brick-600"></i> Krížové aj valené klenby z tehly a kameňa</div>
+              <div class="flex items-center gap-2"><i class="fa-solid fa-check text-brick-600"></i> Kóje na víno, degustačné priestory, archívy</div>
+              <div class="flex items-center gap-2"><i class="fa-solid fa-check text-brick-600"></i> Referencie: Penzión Karolína, Bratislava, Limbach</div>
+            </div>
+            <a href="#pivnice" class="inline-flex items-center gap-2 text-sm font-bold text-brick-600 dark:text-brick-400 hover:text-brick-700 transition-colors group-hover:translate-x-1 duration-200">
+              <span data-i18n="p_more">Zistiť viac a pozrieť galériu</span> <i class="fa-solid fa-arrow-right text-xs"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Pillar 2: Krby, pece & pizza pece -->
+        <div class="bg-stonecraft-50 dark:bg-stonecraft-800/60 rounded-2xl overflow-hidden border border-stonecraft-200 dark:border-stonecraft-700 hover:border-brick-500 transition-all duration-300 shadow-sm hover:shadow-xl flex flex-col group">
+          <div class="h-56 card-zoom relative">
+            <img src="images/kozub_exterier_altanok.jpg" alt="Exteriérový krb s pecou" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-stonecraft-950/80 via-transparent to-transparent"></div>
+            <span class="absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-bold bg-brick-600 text-white backdrop-blur-sm">
+              Cech kachliarov
+            </span>
+            <div class="absolute bottom-4 left-4 text-white font-serif text-lg font-bold">
+              Krby, kachľové & pizza pece
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <p class="text-sm text-stonecraft-600 dark:text-stonecraft-300 leading-relaxed mb-6" data-i18n="p2_desc">
+              Kachliarske remeslo overené generáciami. Staviame interiérové teplovzdušné i akumulačné krby, záhradné altánkové krby s grilom a pravé pece na pizzu a chlieb zo šamotových tvaroviek.
+            </p>
+            <div class="space-y-2 mb-6 text-xs text-stonecraft-700 dark:text-stonecraft-300 font-medium">
+              <div class="flex items-center gap-2"><i class="fa-solid fa-check text-brick-600"></i> Akreditovaný člen Cechu kachliarov</div>
+              <div class="flex items-center gap-2"><i class="fa-solid fa-check text-brick-600"></i> Pece Golem a chlebové pece na bukové drevo</div>
+              <div class="flex items-center gap-2"><i class="fa-solid fa-check text-brick-600"></i> Precízne švajčiarske teplomery do 500 °C</div>
+            </div>
+            <a href="#krby" class="inline-flex items-center gap-2 text-sm font-bold text-brick-600 dark:text-brick-400 hover:text-brick-700 transition-colors group-hover:translate-x-1 duration-200">
+              <span data-i18n="p_more">Zistiť viac a pozrieť galériu</span> <i class="fa-solid fa-arrow-right text-xs"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Pillar 3: Predaj stavebného reziva & Krovy -->
+        <div class="bg-stonecraft-50 dark:bg-stonecraft-800/60 rounded-2xl overflow-hidden border border-stonecraft-200 dark:border-stonecraft-700 hover:border-brick-500 transition-all duration-300 shadow-sm hover:shadow-xl flex flex-col group">
+          <div class="h-56 card-zoom relative">
+            <img src="images/krov_montaz.jpg" alt="Krov a stavebné rezivo" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-stonecraft-950/80 via-transparent to-transparent"></div>
+            <span class="absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-bold bg-amberwood-600 text-white backdrop-blur-sm">
+              Sklad Pezinok
+            </span>
+            <div class="absolute bottom-4 left-4 text-white font-serif text-lg font-bold">
+              Rezivo, krovy na mieru & OSB
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <p class="text-sm text-stonecraft-600 dark:text-stonecraft-300 leading-relaxed mb-6" data-i18n="p3_desc">
+              Predajňa na Šenkvickej 24 v Pezinku. Držíme skladom hranoly, fošne a dosky 4–6m z čerstvej guľatiny, morené strešné laty, OSB dosky Egger, dlážkovicu a vyrobíme krov presne podľa vášho projektu.
+            </p>
+            <div class="space-y-2 mb-6 text-xs text-stonecraft-700 dark:text-stonecraft-300 font-medium">
+              <div class="flex items-center gap-2"><i class="fa-solid fa-check text-brick-600"></i> Hranoly, fošne, dosky 4–6 m ihneď k odberu</div>
+              <div class="flex items-center gap-2"><i class="fa-solid fa-check text-brick-600"></i> Strešné laty 50/50, 50/40, 50/30 s impregnáciou</div>
+              <div class="flex items-center gap-2"><i class="fa-solid fa-check text-brick-600"></i> Dovoz priamo na stavbu Tatrou 815</div>
+            </div>
+            <a href="#drevo" class="inline-flex items-center gap-2 text-sm font-bold text-brick-600 dark:text-brick-400 hover:text-brick-700 transition-colors group-hover:translate-x-1 duration-200">
+              <span data-i18n="p_more">Zistiť viac a pozrieť galériu</span> <i class="fa-solid fa-arrow-right text-xs"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Pillar 4: Sibírsky smrekovec -->
+        <div class="bg-stonecraft-50 dark:bg-stonecraft-800/60 rounded-2xl overflow-hidden border border-stonecraft-200 dark:border-stonecraft-700 hover:border-brick-500 transition-all duration-300 shadow-sm hover:shadow-xl flex flex-col group">
+          <div class="h-56 card-zoom relative">
+            <img src="images/smrekovec_terasa_1.jpg" alt="Sibírsky smrekovec terasa" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-stonecraft-950/80 via-transparent to-transparent"></div>
+            <span class="absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-bold bg-emerald-700 text-white backdrop-blur-sm">
+              Prémiové drevo
+            </span>
+            <div class="absolute bottom-4 left-4 text-white font-serif text-lg font-bold">
+              Sibírsky smrekovec
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <p class="text-sm text-stonecraft-600 dark:text-stonecraft-300 leading-relaxed mb-6" data-i18n="p4_desc">
+              Mimoriadna hustota letokruhov, tvrdosť a odolnosť voči vode bez chemickej úpravy. Dodávame a montujeme terasové dosky, fasádne profily Rhombus, ploty a nerezové skrutky Eurotec.
+            </p>
+            <div class="space-y-2 mb-6 text-xs text-stonecraft-700 dark:text-stonecraft-300 font-medium">
+              <div class="flex items-center gap-2"><i class="fa-solid fa-check text-brick-600"></i> Terasové dosky hladké aj s obojstranným vrúbením</div>
+              <div class="flex items-center gap-2"><i class="fa-solid fa-check text-brick-600"></i> Fasádne rhombus profily a plotové dosky</div>
+              <div class="flex items-center gap-2"><i class="fa-solid fa-check text-brick-600"></i> Odborné poradenstvo, montáž a certifikovaný spojovací materiál</div>
+            </div>
+            <a href="#drevo" class="inline-flex items-center gap-2 text-sm font-bold text-brick-600 dark:text-brick-400 hover:text-brick-700 transition-colors group-hover:translate-x-1 duration-200">
+              <span data-i18n="p_more">Zistiť viac a pozrieť galériu</span> <i class="fa-solid fa-arrow-right text-xs"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Pillar 5: Výstavba rodinných domov -->
+        <div class="bg-stonecraft-50 dark:bg-stonecraft-800/60 rounded-2xl overflow-hidden border border-stonecraft-200 dark:border-stonecraft-700 hover:border-brick-500 transition-all duration-300 shadow-sm hover:shadow-xl flex flex-col group">
+          <div class="h-56 card-zoom relative">
+            <img src="images/dom_pezinok_2.jpg" alt="Výstavba rodinného domu" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-stonecraft-950/80 via-transparent to-transparent"></div>
+            <span class="absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-bold bg-stonecraft-900 text-white backdrop-blur-sm">
+              Od základov po kľúč
+            </span>
+            <div class="absolute bottom-4 left-4 text-white font-serif text-lg font-bold">
+              Výstavba rodinných domov
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <p class="text-sm text-stonecraft-600 dark:text-stonecraft-300 leading-relaxed mb-6" data-i18n="p5_desc">
+              Komplexná realizácia stavieb podľa projektovej dokumentácie. Pripravíme harmonogram, vybudujeme základovú dosku, nosné murivo, krov, krytinu a odovzdáme doklady ku kolaudácii.
+            </p>
+            <div class="space-y-2 mb-6 text-xs text-stonecraft-700 dark:text-stonecraft-300 font-medium">
+              <div class="flex items-center gap-2"><i class="fa-solid fa-check text-brick-600"></i> Hrubé stavby aj stavby na kľúč</div>
+              <div class="flex items-center gap-2"><i class="fa-solid fa-check text-brick-600"></i> Dodržiavanie noriem, termínov a rozpočtu</div>
+              <div class="flex items-center gap-2"><i class="fa-solid fa-check text-brick-600"></i> Desiatky overených domov v Pezinku, Senci a okolí</div>
+            </div>
+            <a href="#galeria" class="inline-flex items-center gap-2 text-sm font-bold text-brick-600 dark:text-brick-400 hover:text-brick-700 transition-colors group-hover:translate-x-1 duration-200">
+              <span data-i18n="p_more">Zistiť viac a pozrieť galériu</span> <i class="fa-solid fa-arrow-right text-xs"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Pillar 6: Mechanizmy JCB & Autodoprava Tatra 815 -->
+        <div class="bg-stonecraft-50 dark:bg-stonecraft-800/60 rounded-2xl overflow-hidden border border-stonecraft-200 dark:border-stonecraft-700 hover:border-brick-500 transition-all duration-300 shadow-sm hover:shadow-xl flex flex-col group">
+          <div class="h-56 card-zoom relative">
+            <img src="images/kamen_plot.jpg" alt="Kameň a ťažká technika" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-stonecraft-950/80 via-transparent to-transparent"></div>
+            <span class="absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-bold bg-amberwood-500 text-stonecraft-950 backdrop-blur-sm">
+              Vlastná technika
+            </span>
+            <div class="absolute bottom-4 left-4 text-white font-serif text-lg font-bold">
+              Zemné práce JCB & Autodoprava
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <p class="text-sm text-stonecraft-600 dark:text-stonecraft-300 leading-relaxed mb-6" data-i18n="p6_desc">
+              Výkopové, zemné a búracie práce modernými mechanizmami JCB. Nákladná autodoprava sklápačom Tatra 815 pre dovoz stavebného materiálu, štrkopieskov a odvoz sute.
+            </p>
+            <div class="space-y-2 mb-6 text-xs text-stonecraft-700 dark:text-stonecraft-300 font-medium">
+              <div class="flex items-center gap-2"><i class="fa-solid fa-check text-brick-600"></i> Výkopy základov, bazénov, inžinierskych sietí</div>
+              <div class="flex items-center gap-2"><i class="fa-solid fa-check text-brick-600"></i> Terénne úpravy a búracie práce</div>
+              <div class="flex items-center gap-2"><i class="fa-solid fa-check text-brick-600"></i> Odvoz a dovoz sypkých materiálov Tatrou</div>
+            </div>
+            <a href="#kontakt" class="inline-flex items-center gap-2 text-sm font-bold text-brick-600 dark:text-brick-400 hover:text-brick-700 transition-colors group-hover:translate-x-1 duration-200">
+              <span data-i18n="p_more">Objednať mechanizmy</span> <i class="fa-solid fa-arrow-right text-xs"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= INTERACTIVE ESTIMATOR / CALCULATOR ================= -->
+  <section id="kalkulacka" class="py-20 lg:py-28 bg-stonecraft-100 dark:bg-stonecraft-950 border-y border-stonecraft-200 dark:border-stonecraft-800 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-amberwood-100 text-amberwood-800 dark:bg-amberwood-950 dark:text-amberwood-300 mb-3 border border-amberwood-200 dark:border-amberwood-800">
+          <i class="fa-solid fa-calculator"></i>
+          <span data-i18n="calc_tag">Okamžitý orientačný odhad</span>
+        </div>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-stonecraft-900 dark:text-white mb-4" data-i18n="calc_heading">
+          Interaktívna kalkulačka stavby & materiálu
+        </h2>
+        <p class="text-stonecraft-600 dark:text-stonecraft-300 text-base" data-i18n="calc_subheading">
+          Zvoľte kategóriu diela, nastavte parametre a získajte okamžitý orientačný prehľad nákladov a harmonogramu. Údaje môžete jedným kliknutím odoslať ako predvyplnený dopyt.
+        </p>
+      </div>
+
+      <!-- Main Calculator Card -->
+      <div class="bg-white dark:bg-stonecraft-900 rounded-3xl shadow-xl border border-stonecraft-200 dark:border-stonecraft-800 overflow-hidden">
+        
+        <!-- Category Selector Tabs -->
+        <div class="flex overflow-x-auto no-scrollbar border-b border-stonecraft-200 dark:border-stonecraft-800 bg-stonecraft-50 dark:bg-stonecraft-900/50 p-2 gap-2">
+          <button onclick="setCalcCategory('pivnica')" id="calcTab_pivnica" class="calc-tab px-5 py-3 rounded-xl font-bold text-sm whitespace-nowrap transition-all bg-brick-600 text-white shadow-md flex items-center gap-2">
+            <i class="fa-solid fa-wine-glass"></i>
+            <span>Klenbová pivnica</span>
+          </button>
+          <button onclick="setCalcCategory('krb')" id="calcTab_krb" class="calc-tab px-5 py-3 rounded-xl font-medium text-sm whitespace-nowrap transition-all text-stonecraft-600 dark:text-stonecraft-300 hover:bg-stonecraft-200 dark:hover:bg-stonecraft-800 flex items-center gap-2">
+            <i class="fa-solid fa-fire"></i>
+            <span>Krb & Pec na pizzu</span>
+          </button>
+          <button onclick="setCalcCategory('rezivo')" id="calcTab_rezivo" class="calc-tab px-5 py-3 rounded-xl font-medium text-sm whitespace-nowrap transition-all text-stonecraft-600 dark:text-stonecraft-300 hover:bg-stonecraft-200 dark:hover:bg-stonecraft-800 flex items-center gap-2">
+            <i class="fa-solid fa-tree"></i>
+            <span>Krov & Rezivo na mieru</span>
+          </button>
+          <button onclick="setCalcCategory('smrekovec')" id="calcTab_smrekovec" class="calc-tab px-5 py-3 rounded-xl font-medium text-sm whitespace-nowrap transition-all text-stonecraft-600 dark:text-stonecraft-300 hover:bg-stonecraft-200 dark:hover:bg-stonecraft-800 flex items-center gap-2">
+            <i class="fa-solid fa-layer-group"></i>
+            <span>Sibírsky smrekovec (Terasa)</span>
+          </button>
+          <button onclick="setCalcCategory('dom')" id="calcTab_dom" class="calc-tab px-5 py-3 rounded-xl font-medium text-sm whitespace-nowrap transition-all text-stonecraft-600 dark:text-stonecraft-300 hover:bg-stonecraft-200 dark:hover:bg-stonecraft-800 flex items-center gap-2">
+            <i class="fa-solid fa-house"></i>
+            <span>Rodinný dom & Hrubá stavba</span>
+          </button>
+        </div>
+
+        <div class="p-6 sm:p-10 grid grid-cols-1 lg:grid-cols-12 gap-10">
+          
+          <!-- Left Column: Controls (7 cols) -->
+          <div class="lg:col-span-7 space-y-8" id="calcControlsContainer">
+            <!-- Dynamic Controls inserted by JavaScript -->
+          </div>
+
+          <!-- Right Column: Live Summary & Quote Receipt (5 cols) -->
+          <div class="lg:col-span-5 bg-stonecraft-50 dark:bg-stonecraft-800/80 rounded-2xl p-6 sm:p-8 border border-stonecraft-200 dark:border-stonecraft-700 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between pb-4 border-b border-stonecraft-200 dark:border-stonecraft-700 mb-6">
+                <div>
+                  <h3 class="font-serif text-lg font-bold text-stonecraft-900 dark:text-white" id="calcSummaryTitle">Klenbová pivnica</h3>
+                  <p class="text-xs text-stonecraft-500 dark:text-stonecraft-400">Položkový prehľad zadania</p>
+                </div>
+                <span class="px-2.5 py-1 rounded bg-amberwood-100 text-amberwood-800 dark:bg-amberwood-950 dark:text-amberwood-300 text-xs font-bold">
+                  Kalkulácia 2026
+                </span>
+              </div>
+
+              <!-- Itemized specs -->
+              <div class="space-y-3 text-xs sm:text-sm text-stonecraft-700 dark:text-stonecraft-300 mb-6" id="calcSummarySpecs">
+                <!-- Injected via JS -->
+              </div>
+
+              <!-- Time Estimate -->
+              <div class="flex items-center gap-3 p-3 rounded-xl bg-white dark:bg-stonecraft-900 border border-stonecraft-200 dark:border-stonecraft-700 mb-6 text-xs sm:text-sm">
+                <i class="fa-solid fa-clock text-amberwood-600 text-base"></i>
+                <div>
+                  <span class="text-stonecraft-500 dark:text-stonecraft-400 block text-xs">Predpokladaná doba realizácie:</span>
+                  <span class="font-bold text-stonecraft-900 dark:text-white" id="calcSummaryTimeline">3 – 5 týždňov</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Price Output Box -->
+            <div class="pt-6 border-t border-stonecraft-200 dark:border-stonecraft-700">
+              <div class="text-xs text-stonecraft-500 dark:text-stonecraft-400 mb-1">Orientačný rozpočet (vrátane DPH):</div>
+              <div class="font-serif text-3xl sm:text-4xl font-extrabold text-brick-600 dark:text-brick-400 mb-2" id="calcTotalPrice">
+                12 400 €
+              </div>
+              <p class="text-[11px] text-stonecraft-500 dark:text-stonecraft-400 leading-normal mb-6">
+                *Cena je informatívna a závisí od presných geologických pomerov, detailu projektu a materiálu. Presnú cenovú ponuku vypracujeme bezplatne.
+              </p>
+
+              <button onclick="transferCalcToContact()" class="w-full py-4 rounded-xl font-bold text-sm bg-gradient-to-r from-brick-600 to-brick-700 hover:from-brick-700 hover:to-brick-800 text-white shadow-lg shadow-brick-600/30 flex items-center justify-center gap-2 transition-all">
+                <i class="fa-solid fa-paper-plane"></i>
+                <span data-i18n="calc_cta_submit">Odoslať dopyt s touto konfiguráciou</span>
+              </button>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= DETAILED SPOTLIGHT: KLENBOVÉ PIVNICE ================= -->
+  <section id="pivnice" class="py-20 lg:py-28 bg-white dark:bg-stonecraft-900 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Text & Story (6 cols) -->
+        <div class="lg:col-span-6 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-brick-100 text-brick-800 dark:bg-brick-950 dark:text-brick-300 border border-brick-200 dark:border-brick-800">
+            <i class="fa-solid fa-wine-bottle"></i>
+            <span>Malokarpatská pýcha</span>
+          </div>
+          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-stonecraft-900 dark:text-white leading-tight">
+            Klenbové pivnice s neopakovateľnou atmosférou
+          </h2>
+          <p class="text-stonecraft-600 dark:text-stonecraft-300 text-base sm:text-lg leading-relaxed">
+            <em class="font-serif italic text-brick-600 dark:text-brick-400">„Neopakovateľná atmosféra skutočných kamenných či tehlových pivníc je ingrediencia, ktorú k dokonalej chuti potrebuje každé víno.“</em>
+          </p>
+          <p class="text-sm sm:text-base text-stonecraft-600 dark:text-stonecraft-300 leading-relaxed">
+            Stavba pravej klenbovej pivnice je vrcholom murárskeho remesla. Vyžaduje hlboké znalosti klenutia oblúkov, statiky masívnych oporných múrov a práce s historickou tehlou. Naše realizácie nájdete u popredných vinárov i náročných súkromných zberateľov.
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+            <div class="p-4 rounded-xl bg-stonecraft-50 dark:bg-stonecraft-800 border border-stonecraft-200 dark:border-stonecraft-700">
+              <i class="fa-solid fa-temperature-half text-brick-600 text-xl mb-2"></i>
+              <h4 class="font-bold text-sm text-stonecraft-900 dark:text-white mb-1">Prirodzená termoregulácia</h4>
+              <p class="text-xs text-stonecraft-500 dark:text-stonecraft-400">Stabilná teplota 10–12 °C a optimálna vlhkosť bez energeticky náročnej klimatizácie.</p>
+            </div>
+            <div class="p-4 rounded-xl bg-stonecraft-50 dark:bg-stonecraft-800 border border-stonecraft-200 dark:border-stonecraft-700">
+              <i class="fa-solid fa-infinity text-amberwood-600 text-xl mb-2"></i>
+              <h4 class="font-bold text-sm text-stonecraft-900 dark:text-white mb-1">Životnosť na stáročia</h4>
+              <p class="text-xs text-stonecraft-500 dark:text-stonecraft-400">Kombinácia ručne čistenej pálenej tehly, vápenných zmesí a trvácneho pieskovca.</p>
+            </div>
+          </div>
+
+          <div class="pt-4 flex flex-wrap gap-3">
+            <a href="#galeria" onclick="filterGallery('pivnice')" class="px-6 py-3 rounded-xl font-bold text-sm bg-stonecraft-900 dark:bg-white text-white dark:text-stonecraft-950 hover:bg-brick-600 dark:hover:bg-brick-400 transition-colors flex items-center gap-2">
+              <i class="fa-solid fa-image"></i>
+              <span>Galéria pivníc (Pezinok, Grob, Nitra...)</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Visual Mosaic of Cellars (6 cols) -->
+        <div class="lg:col-span-6 grid grid-cols-2 gap-4">
+          <div class="space-y-4">
+            <div class="rounded-2xl overflow-hidden card-zoom shadow-md border border-stonecraft-200 dark:border-stonecraft-700 cursor-pointer" onclick="openLightbox('images/pivnica_krizova_2.jpg', 'Krížová klenbová pivnica — detail pálenej tehly')">
+              <img src="images/pivnica_krizova_2.jpg" alt="Krížová klenba detail" class="w-full h-64 object-cover">
+            </div>
+            <div class="rounded-2xl overflow-hidden card-zoom shadow-md border border-stonecraft-200 dark:border-stonecraft-700 cursor-pointer" onclick="openLightbox('images/pivnica_nitra_koje.jpg', 'Archívne kóje na víno s podsvietením, Nitra')">
+              <img src="images/pivnica_nitra_koje.jpg" alt="Archívne kóje na víno Nitra" class="w-full h-44 object-cover">
+            </div>
+          </div>
+          <div class="space-y-4 pt-6">
+            <div class="rounded-2xl overflow-hidden card-zoom shadow-md border border-stonecraft-200 dark:border-stonecraft-700 cursor-pointer" onclick="openLightbox('images/pivnica_karolina_1.jpg', 'Penzión Karolína, Slovenský Grob — degustačná pivnica')">
+              <img src="images/pivnica_karolina_1.jpg" alt="Penzión Karolína pivnica" class="w-full h-44 object-cover">
+            </div>
+            <div class="rounded-2xl overflow-hidden card-zoom shadow-md border border-stonecraft-200 dark:border-stonecraft-700 cursor-pointer" onclick="openLightbox('images/pivnica_vajnory.jpg', 'Klenbová pivnica Vajnory — mohutný oblúk')">
+              <img src="images/pivnica_vajnory.jpg" alt="Pivnica Vajnory" class="w-full h-64 object-cover">
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= DETAILED SPOTLIGHT: KOZUBY, PECE & CECH KACHLIAROV ================= -->
+  <section id="krby" class="py-20 lg:py-28 bg-stonecraft-50 dark:bg-stonecraft-950 transition-colors border-t border-stonecraft-200 dark:border-stonecraft-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left Visuals (6 cols) -->
+        <div class="lg:col-span-6 grid grid-cols-2 gap-4 order-2 lg:order-1">
+          <div class="space-y-4">
+            <div class="rounded-2xl overflow-hidden card-zoom shadow-md border border-stonecraft-200 dark:border-stonecraft-700 cursor-pointer" onclick="openLightbox('images/kozub_interier_1.jpg', 'Interiérový kozub s prírodnou obstavbou a krbovou vložkou')">
+              <img src="images/kozub_interier_1.jpg" alt="Interiérový krb" class="w-full h-60 object-cover">
+            </div>
+            <div class="rounded-2xl overflow-hidden card-zoom shadow-md border border-stonecraft-200 dark:border-stonecraft-700 cursor-pointer" onclick="openLightbox('images/pec_pizza_golem.jpg', 'Pizza pec Golem z poctivého šamotu — chrumkavé pečenie na bukovom dreve')">
+              <img src="images/pec_pizza_golem.jpg" alt="Pizza pec Golem" class="w-full h-48 object-cover">
+            </div>
+          </div>
+          <div class="space-y-4 pt-6">
+            <div class="rounded-2xl overflow-hidden card-zoom shadow-md border border-stonecraft-200 dark:border-stonecraft-700 cursor-pointer" onclick="openLightbox('images/kozub_exterier_pec.jpg', 'Komplexný záhradný krb s udiarňou a pecou')">
+              <img src="images/kozub_exterier_pec.jpg" alt="Exteriérový krb s udiarňou" class="w-full h-48 object-cover">
+            </div>
+            <div class="rounded-2xl overflow-hidden card-zoom shadow-md border border-stonecraft-200 dark:border-stonecraft-700 cursor-pointer" onclick="openLightbox('images/kozub_interier_modern.jpg', 'Moderný interiérový krb s čistou líniou')">
+              <img src="images/kozub_interier_modern.jpg" alt="Moderný krb" class="w-full h-60 object-cover">
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Copy (6 cols) -->
+        <div class="lg:col-span-6 space-y-6 order-1 lg:order-2">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-brick-100 text-brick-800 dark:bg-brick-950 dark:text-brick-300 border border-brick-200 dark:border-brick-800">
+            <i class="fa-solid fa-fire-flame-curved"></i>
+            <span>Kachliarske remeslo</span>
+          </div>
+          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-stonecraft-900 dark:text-white leading-tight">
+            Živý oheň ako bijúce srdce vášho domova
+          </h2>
+          <blockquote class="p-4 rounded-xl bg-white dark:bg-stonecraft-900 border-l-4 border-brick-600 text-stonecraft-700 dark:text-stonecraft-300 italic text-sm">
+            „Kachliar je ten, kto dokáže nielen postaviť nové pece a šporáky, ale dokáže aj zrekonštruovať staré a popraskané. Táto práca je náročnejšia a poradí si s ňou len skutočný odborník s praxou.“
+          </blockquote>
+          <p class="text-sm sm:text-base text-stonecraft-600 dark:text-stonecraft-300 leading-relaxed">
+            Sme hrdým a akreditovaným členom <strong>Cechu kachliarov</strong>. Navrhujeme a realizujeme interiérové krby akumulačné, sálavé i teplovzdušné, s krbovými vložkami najvyššej účinnosti a bezpečnosti (Schiedel komíny, certifikované šamotové obstavby).
+          </p>
+          <p class="text-sm sm:text-base text-stonecraft-600 dark:text-stonecraft-300 leading-relaxed">
+            V exteriéri staviame <strong>záhradné letné kuchyne</strong>: altánkové kozuby s otvoreným i uzavretým ohniskom, grilom, udiarňou a legendárnymi <strong>pizza / chlebovými pecami Golem</strong> osadenými švajčiarskym presným teplomerom do 500 °C.
+          </p>
+
+          <div class="flex items-center gap-4 pt-3">
+            <img src="images/partner_cech_kachliarov.jpg" alt="Cech kachliarov Slovenska" class="h-14 w-auto rounded-lg shadow-sm border border-stonecraft-200 dark:border-stonecraft-700 p-1 bg-white">
+            <div class="text-xs text-stonecraft-600 dark:text-stonecraft-400">
+              <span class="font-bold text-stonecraft-900 dark:text-white block text-sm">Cech kachliarov Slovenska</span>
+              Záruka bezpečnosti spalín, protipožiarnych noriem a energetickej účinnosti.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= DETAILED SPOTLIGHT: REZIVO, KROVY & SIBÍRSKY SMREKOVEC ================= -->
+  <section id="drevo" class="py-20 lg:py-28 bg-white dark:bg-stonecraft-900 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-amberwood-100 text-amberwood-800 dark:bg-amberwood-950 dark:text-amberwood-300 mb-3 border border-amberwood-200 dark:border-amberwood-800">
+          <i class="fa-solid fa-tree"></i>
+          <span>Sklad a predajňa Pezinok</span>
+        </div>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-stonecraft-900 dark:text-white mb-4">
+          Stavebné rezivo, krovy na mieru & Sibírsky smrekovec
+        </h2>
+        <p class="text-stonecraft-600 dark:text-stonecraft-300 text-base sm:text-lg">
+          Na Šenkvickej ceste 24 v Pezinku prevádzkujeme ucelený sklad reziva pre tesárov, pokrývačov i individuálnych stavebníkov.
+        </p>
+      </div>
+
+      <!-- 4 Timber Product Columns -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        
+        <!-- Product 1: Rezivo a Krovy -->
+        <div class="bg-stonecraft-50 dark:bg-stonecraft-800/60 rounded-2xl p-6 border border-stonecraft-200 dark:border-stonecraft-700 flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-amberwood-500/20 text-amberwood-700 dark:text-amberwood-300 flex items-center justify-center text-xl mb-4">
+              <i class="fa-solid fa-ruler-combined"></i>
+            </div>
+            <h3 class="font-serif text-lg font-bold text-stonecraft-900 dark:text-white mb-2">Stavebné rezivo & Krovy</h3>
+            <p class="text-xs text-stonecraft-600 dark:text-stonecraft-300 leading-relaxed mb-4">
+              Hranoly, dosky a fošne rezané z čerstvej guľatiny uhlovými pílami v dĺžkach 4 až 6 metrov. Dodávame a montujeme krovy na mieru podľa vášho výpisu materiálu.
+            </p>
+            <ul class="text-xs text-stonecraft-700 dark:text-stonecraft-300 space-y-1.5 mb-6">
+              <li>• Hranoly 100x100, 120x120, 150x150 mm</li>
+              <li>• Dosky hrúbky 25 mm a fošne 50 mm</li>
+              <li>• Rezivo čerstvé i sušené</li>
+            </ul>
+          </div>
+          <button onclick="addQuickItemToCart('Hranoly a stavebné rezivo na mieru')" class="w-full py-2.5 rounded-lg text-xs font-bold bg-stonecraft-200 dark:bg-stonecraft-700 hover:bg-brick-600 hover:text-white dark:hover:bg-brick-600 transition-colors">
+            + Pridať do dopytu
+          </button>
+        </div>
+
+        <!-- Product 2: Strešné laty s impregnáciou -->
+        <div class="bg-stonecraft-50 dark:bg-stonecraft-800/60 rounded-2xl p-6 border border-stonecraft-200 dark:border-stonecraft-700 flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-brick-500/20 text-brick-700 dark:text-brick-300 flex items-center justify-center text-xl mb-4">
+              <i class="fa-solid fa-shield-virus"></i>
+            </div>
+            <h3 class="font-serif text-lg font-bold text-stonecraft-900 dark:text-white mb-2">Impregnované strešné laty</h3>
+            <p class="text-xs text-stonecraft-600 dark:text-stonecraft-300 leading-relaxed mb-4">
+              Smrekové strešné laty podľa európskych noriem. Na želanie s hĺbkovou certifikovanou impregnáciou proti drevokaznému hmyzu, hubám a plesniam na celú životnosť.
+            </p>
+            <ul class="text-xs text-stonecraft-700 dark:text-stonecraft-300 space-y-1.5 mb-6">
+              <li>• Strešné laty 50 x 50 mm</li>
+              <li>• Strešné laty 50 x 40 mm</li>
+              <li>• Strešné laty 50 x 30 mm</li>
+            </ul>
+          </div>
+          <button onclick="addQuickItemToCart('Strešné laty s impregnáciou 50x40 / 50x50')" class="w-full py-2.5 rounded-lg text-xs font-bold bg-stonecraft-200 dark:bg-stonecraft-700 hover:bg-brick-600 hover:text-white dark:hover:bg-brick-600 transition-colors">
+            + Pridať do dopytu
+          </button>
+        </div>
+
+        <!-- Product 3: OSB dosky EGGER & Dlážkovica -->
+        <div class="bg-stonecraft-50 dark:bg-stonecraft-800/60 rounded-2xl p-6 border border-stonecraft-200 dark:border-stonecraft-700 flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-amberwood-500/20 text-amberwood-700 dark:text-amberwood-300 flex items-center justify-center text-xl mb-4">
+              <i class="fa-solid fa-shapes"></i>
+            </div>
+            <h3 class="font-serif text-lg font-bold text-stonecraft-900 dark:text-white mb-2">OSB dosky Egger & Dlážkovica</h3>
+            <p class="text-xs text-stonecraft-600 dark:text-stonecraft-300 leading-relaxed mb-4">
+              Originálne 3-vrstvové plošne lisované dosky EGGER s vysokou statickou nosnosťou a pravouhlosťou. Tatranský profil a dlážkovica pero-drážka pre podlahy a steny.
+            </p>
+            <ul class="text-xs text-stonecraft-700 dark:text-stonecraft-300 space-y-1.5 mb-6">
+              <li>• OSB 3 dosky pero-drážka / rovná hrana</li>
+              <li>• Dlážkovica a tatranský profil (smrek)</li>
+              <li>• Vhodné do vlhkého prostredia</li>
+            </ul>
+          </div>
+          <button onclick="addQuickItemToCart('OSB dosky Egger & Tatranský profil')" class="w-full py-2.5 rounded-lg text-xs font-bold bg-stonecraft-200 dark:bg-stonecraft-700 hover:bg-brick-600 hover:text-white dark:hover:bg-brick-600 transition-colors">
+            + Pridať do dopytu
+          </button>
+        </div>
+
+        <!-- Product 4: Sibírsky smrekovec -->
+        <div class="bg-stonecraft-50 dark:bg-stonecraft-800/60 rounded-2xl p-6 border border-stonecraft-200 dark:border-stonecraft-700 flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-emerald-500/20 text-emerald-700 dark:text-emerald-300 flex items-center justify-center text-xl mb-4">
+              <i class="fa-solid fa-leaf"></i>
+            </div>
+            <h3 class="font-serif text-lg font-bold text-stonecraft-900 dark:text-white mb-2">Sibírsky smrekovec</h3>
+            <p class="text-xs text-stonecraft-600 dark:text-stonecraft-300 leading-relaxed mb-4">
+              Kráľovské exteriérové drevo s vysokou hustotou letokruhov. Vhodné na terasy k bazénu, fasádne obklady Rhombus a plotové výplne. Nerezové montážne spojivo Eurotec.
+            </p>
+            <ul class="text-xs text-stonecraft-700 dark:text-stonecraft-300 space-y-1.5 mb-6">
+              <li>• Terasové dosky 28 x 145 / 28 x 120 mm</li>
+              <li>• Fasádny profil Rhombus 28 x 95 mm</li>
+              <li>• Hladké brúsené plotové dosky</li>
+            </ul>
+          </div>
+          <button onclick="addQuickItemToCart('Sibírsky smrekovec - terasy & Rhombus fasáda')" class="w-full py-2.5 rounded-lg text-xs font-bold bg-stonecraft-200 dark:bg-stonecraft-700 hover:bg-brick-600 hover:text-white dark:hover:bg-brick-600 transition-colors">
+            + Pridať do dopytu
+          </button>
+        </div>
+
+      </div>
+
+      <!-- Ekologické palivá Banner (Brikety, Pelety, Bukové drevo) -->
+      <div class="rounded-3xl bg-gradient-to-r from-stonecraft-900 to-stonecraft-800 text-white p-8 sm:p-10 border border-stonecraft-700 shadow-xl flex flex-col lg:flex-row items-center justify-between gap-8">
+        <div class="flex items-center gap-6">
+          <img src="images/drevene_brikety.jpg" alt="Drevené brikety" class="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl object-cover border-2 border-amberwood-500/50 shadow-md">
+          <div>
+            <span class="px-2.5 py-0.5 rounded text-[11px] font-bold bg-amberwood-500/20 text-amberwood-300 border border-amberwood-500/30 uppercase tracking-wide">
+              Ekologické vykurovanie
+            </span>
+            <h3 class="font-serif text-xl sm:text-2xl font-bold mt-1 text-white">Drevené brikety, pelety & štiepané palivové drevo</h3>
+            <p class="text-xs sm:text-sm text-stonecraft-300 max-w-xl mt-1">
+              Valcové brikety s dierou s výhrevnosťou <strong>18,9 MJ/kg</strong> (prekonávajúce hnedé uhlie), certifikované pelety a bukové drevo (25, 33, 50 cm) balené v 1 prm boxoch.
+            </p>
+          </div>
+        </div>
+        <div class="flex items-center gap-4">
+          <a href="tel:+421905649486" class="px-6 py-3 rounded-xl font-bold text-sm bg-brick-600 hover:bg-brick-700 text-white transition-all shadow-md flex items-center gap-2 whitespace-nowrap">
+            <i class="fa-solid fa-phone"></i>
+            <span>Zistiť skladové zásoby</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= FILTERABLE PORTFOLIO & REALIZATION GALLERY ================= -->
+  <section id="galeria" class="py-20 lg:py-28 bg-stonecraft-50 dark:bg-stonecraft-950 transition-colors border-t border-stonecraft-200 dark:border-stonecraft-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-brick-100 text-brick-800 dark:bg-brick-950 dark:text-brick-300 mb-3 border border-brick-200 dark:border-brick-800">
+          <i class="fa-solid fa-camera"></i>
+          <span>Autentické referencie</span>
+        </div>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-stonecraft-900 dark:text-white mb-4">
+          Galéria našich realizácií
+        </h2>
+        <p class="text-stonecraft-600 dark:text-stonecraft-300 text-base">
+          Pozrite si ukážky reálnych stavebných diel MARŠO-SK — žiadne fotobanky, len poctivá práca našich remeselníkov.
+        </p>
+      </div>
+
+      <!-- Filter Tabs -->
+      <div class="flex flex-wrap items-center justify-center gap-2 mb-10">
+        <button onclick="filterGallery('vsetko')" id="filterBtn_vsetko" class="gallery-filter-btn px-5 py-2.5 rounded-xl font-bold text-xs sm:text-sm bg-brick-600 text-white transition-all shadow-md">
+          Všetky práce
+        </button>
+        <button onclick="filterGallery('pivnice')" id="filterBtn_pivnice" class="gallery-filter-btn px-5 py-2.5 rounded-xl font-medium text-xs sm:text-sm bg-white dark:bg-stonecraft-800 text-stonecraft-700 dark:text-stonecraft-300 hover:bg-stonecraft-200 dark:hover:bg-stonecraft-700 border border-stonecraft-200 dark:border-stonecraft-700 transition-all">
+          🍷 Klenbové pivnice
+        </button>
+        <button onclick="filterGallery('krby')" id="filterBtn_krby" class="gallery-filter-btn px-5 py-2.5 rounded-xl font-medium text-xs sm:text-sm bg-white dark:bg-stonecraft-800 text-stonecraft-700 dark:text-stonecraft-300 hover:bg-stonecraft-200 dark:hover:bg-stonecraft-700 border border-stonecraft-200 dark:border-stonecraft-700 transition-all">
+          🔥 Krby, pece & grily
+        </button>
+        <button onclick="filterGallery('domy')" id="filterBtn_domy" class="gallery-filter-btn px-5 py-2.5 rounded-xl font-medium text-xs sm:text-sm bg-white dark:bg-stonecraft-800 text-stonecraft-700 dark:text-stonecraft-300 hover:bg-stonecraft-200 dark:hover:bg-stonecraft-700 border border-stonecraft-200 dark:border-stonecraft-700 transition-all">
+          🏗️ Rodinné domy & Krovy
+        </button>
+        <button onclick="filterGallery('drevo')" id="filterBtn_drevo" class="gallery-filter-btn px-5 py-2.5 rounded-xl font-medium text-xs sm:text-sm bg-white dark:bg-stonecraft-800 text-stonecraft-700 dark:text-stonecraft-300 hover:bg-stonecraft-200 dark:hover:bg-stonecraft-700 border border-stonecraft-200 dark:border-stonecraft-700 transition-all">
+          🌲 Terasy & Sibírsky smrekovec
+        </button>
+        <button onclick="filterGallery('kamen')" id="filterBtn_kamen" class="gallery-filter-btn px-5 py-2.5 rounded-xl font-medium text-xs sm:text-sm bg-white dark:bg-stonecraft-800 text-stonecraft-700 dark:text-stonecraft-300 hover:bg-stonecraft-200 dark:hover:bg-stonecraft-700 border border-stonecraft-200 dark:border-stonecraft-700 transition-all">
+          🧱 Kameň & Tehlové ploty
+        </button>
+      </div>
+
+      <!-- Gallery Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" id="galleryContainer">
+        <!-- Rendered via JS -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= ABOUT US & CERTIFICATES ================= -->
+  <section id="o-nas" class="py-20 lg:py-28 bg-white dark:bg-stonecraft-900 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-16">
+        <!-- Left: Story -->
+        <div class="lg:col-span-6 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-amberwood-100 text-amberwood-800 dark:bg-amberwood-950 dark:text-amberwood-300 border border-amberwood-200 dark:border-amberwood-800">
+            <i class="fa-solid fa-history"></i>
+            <span>Príbeh spoločnosti</span>
+          </div>
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-stonecraft-900 dark:text-white leading-tight">
+            Viac ako 35 rokov zodpovedného staviteľstva v Pezinku
+          </h2>
+          <p class="text-sm sm:text-base text-stonecraft-600 dark:text-stonecraft-300 leading-relaxed">
+            Spoločnosť <strong>Maršo-SK, s.r.o.</strong> bola založená v roku 2008 a prirodzene sa pretransformovala z pôvodnej fyzickej osoby <em>Maršo Ondrej – stavebná firma</em>, fungujúcej nepretržite už od roku <strong>1989</strong> na základe živnostenského oprávnenia.
+          </p>
+          <p class="text-sm sm:text-base text-stonecraft-600 dark:text-stonecraft-300 leading-relaxed">
+            Zamestnávame vlastných kvalifikovaných odborníkov a dbáme o ich kontinuálne profesijné vzdelávanie pri zvládaní nových stavebných noriem i technologických postupov. Roky pôsobenia na trhu nás presvedčili, že kvalita prác a solídnosť v prístupe sa odráža v trvalej dôvere našich klientov.
+          </p>
+
+          <!-- Core Team / Management -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 border-t border-stonecraft-200 dark:border-stonecraft-700">
+            <div class="p-4 rounded-xl bg-stonecraft-50 dark:bg-stonecraft-800 border border-stonecraft-200 dark:border-stonecraft-700">
+              <span class="text-xs text-brick-600 dark:text-brick-400 font-bold block mb-1">Vedenie stavieb & realizácie</span>
+              <h4 class="font-bold text-stonecraft-900 dark:text-white">Andrej Maršo</h4>
+              <a href="tel:+421903385900" class="text-xs text-stonecraft-500 hover:text-brick-600 block mt-1"><i class="fa-solid fa-phone mr-1"></i> 0903 385 900</a>
+              <a href="mailto:andrej@marsosk.sk" class="text-xs text-stonecraft-500 hover:text-brick-600 block"><i class="fa-solid fa-envelope mr-1"></i> andrej@marsosk.sk</a>
+            </div>
+            <div class="p-4 rounded-xl bg-stonecraft-50 dark:bg-stonecraft-800 border border-stonecraft-200 dark:border-stonecraft-700">
+              <span class="text-xs text-brick-600 dark:text-brick-400 font-bold block mb-1">Administratíva & Zákazky</span>
+              <h4 class="font-bold text-stonecraft-900 dark:text-white">Mgr. Barbora Maršová</h4>
+              <a href="tel:+421907157575" class="text-xs text-stonecraft-500 hover:text-brick-600 block mt-1"><i class="fa-solid fa-phone mr-1"></i> 0907 157 575</a>
+              <a href="mailto:marsosk@marsosk.sk" class="text-xs text-stonecraft-500 hover:text-brick-600 block"><i class="fa-solid fa-envelope mr-1"></i> marsosk@marsosk.sk</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Official Certificates Cards -->
+        <div class="lg:col-span-6 space-y-4">
+          <h3 class="font-serif text-xl font-bold text-stonecraft-900 dark:text-white mb-2 flex items-center gap-2">
+            <i class="fa-solid fa-certificate text-amberwood-500"></i>
+            <span>Oficiálne certifikácie a oprávnenia</span>
+          </h3>
+          <p class="text-xs text-stonecraft-500 dark:text-stonecraft-400 mb-6">
+            Kliknite na certifikát pre zobrazenie originálneho osvedčenia v plnom rozlíšení.
+          </p>
+
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+            <div class="rounded-xl overflow-hidden border border-stonecraft-200 dark:border-stonecraft-700 shadow-sm cursor-pointer card-zoom bg-stonecraft-50 dark:bg-stonecraft-800 p-2 text-center" onclick="openLightbox('images/certifikat_1.jpg', 'Osvedčenie o odbornej spôsobilosti — Cech kachliarov Slovenska')">
+              <img src="images/certifikat_1.jpg" alt="Certifikát 1" class="w-full h-36 object-contain mb-2">
+              <span class="text-[11px] font-bold text-stonecraft-700 dark:text-stonecraft-300 block">Cech kachliarov</span>
+            </div>
+            <div class="rounded-xl overflow-hidden border border-stonecraft-200 dark:border-stonecraft-700 shadow-sm cursor-pointer card-zoom bg-stonecraft-50 dark:bg-stonecraft-800 p-2 text-center" onclick="openLightbox('images/certifikat_2.jpg', 'Certifikát komínových systémov Schiedel')">
+              <img src="images/certifikat_2.jpg" alt="Certifikát 2" class="w-full h-36 object-contain mb-2">
+              <span class="text-[11px] font-bold text-stonecraft-700 dark:text-stonecraft-300 block">Schiedel komíny</span>
+            </div>
+            <div class="rounded-xl overflow-hidden border border-stonecraft-200 dark:border-stonecraft-700 shadow-sm cursor-pointer card-zoom bg-stonecraft-50 dark:bg-stonecraft-800 p-2 text-center" onclick="openLightbox('images/certifikat_3.jpg', 'Certifikát montáže strešných krytín Bramac')">
+              <img src="images/certifikat_3.jpg" alt="Certifikát 3" class="w-full h-36 object-contain mb-2">
+              <span class="text-[11px] font-bold text-stonecraft-700 dark:text-stonecraft-300 block">Bramac krytiny</span>
+            </div>
+            <div class="rounded-xl overflow-hidden border border-stonecraft-200 dark:border-stonecraft-700 shadow-sm cursor-pointer card-zoom bg-stonecraft-50 dark:bg-stonecraft-800 p-2 text-center" onclick="openLightbox('images/certifikat_4.jpg', 'Osvedčenie montáže stavebných systémov')">
+              <img src="images/certifikat_4.jpg" alt="Certifikát 4" class="w-full h-36 object-contain mb-2">
+              <span class="text-[11px] font-bold text-stonecraft-700 dark:text-stonecraft-300 block">Odborná spôsobilosť</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Partners Grid -->
+      <div class="pt-12 border-t border-stonecraft-200 dark:border-stonecraft-800">
+        <h4 class="text-xs font-bold uppercase tracking-wider text-center text-stonecraft-400 mb-8">
+          Dlhoroční certifikovaní partneri a dodávatelia
+        </h4>
+        <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-4 items-center">
+          <div class="p-3 bg-stonecraft-50 dark:bg-stonecraft-800 rounded-xl border border-stonecraft-200 dark:border-stonecraft-700 flex items-center justify-center h-20 grayscale hover:grayscale-0 transition-all">
+            <img src="images/partner_cech_kachliarov.jpg" alt="Cech kachliarov" class="max-h-12 max-w-full object-contain">
+          </div>
+          <div class="p-3 bg-stonecraft-50 dark:bg-stonecraft-800 rounded-xl border border-stonecraft-200 dark:border-stonecraft-700 flex items-center justify-center h-20 grayscale hover:grayscale-0 transition-all">
+            <img src="images/partner_bramac.jpg" alt="Bramac" class="max-h-12 max-w-full object-contain">
+          </div>
+          <div class="p-3 bg-stonecraft-50 dark:bg-stonecraft-800 rounded-xl border border-stonecraft-200 dark:border-stonecraft-700 flex items-center justify-center h-20 grayscale hover:grayscale-0 transition-all">
+            <img src="images/partner_schiedel.jpg" alt="Schiedel" class="max-h-12 max-w-full object-contain">
+          </div>
+          <div class="p-3 bg-stonecraft-50 dark:bg-stonecraft-800 rounded-xl border border-stonecraft-200 dark:border-stonecraft-700 flex items-center justify-center h-20 grayscale hover:grayscale-0 transition-all">
+            <img src="images/partner_cotto_possagno.jpg" alt="Cotto Possagno" class="max-h-12 max-w-full object-contain">
+          </div>
+          <div class="p-3 bg-stonecraft-50 dark:bg-stonecraft-800 rounded-xl border border-stonecraft-200 dark:border-stonecraft-700 flex items-center justify-center h-20 grayscale hover:grayscale-0 transition-all">
+            <img src="images/partner_semmelrock.jpg" alt="Semmelrock" class="max-h-12 max-w-full object-contain">
+          </div>
+          <div class="p-3 bg-stonecraft-50 dark:bg-stonecraft-800 rounded-xl border border-stonecraft-200 dark:border-stonecraft-700 flex items-center justify-center h-20 grayscale hover:grayscale-0 transition-all">
+            <img src="images/partner_eurotec.jpg" alt="Eurotec" class="max-h-12 max-w-full object-contain">
+          </div>
+          <div class="p-3 bg-stonecraft-50 dark:bg-stonecraft-800 rounded-xl border border-stonecraft-200 dark:border-stonecraft-700 flex items-center justify-center h-20 grayscale hover:grayscale-0 transition-all">
+            <img src="images/partner_denbraven.jpg" alt="Den Braven" class="max-h-12 max-w-full object-contain">
+          </div>
+          <div class="p-3 bg-stonecraft-50 dark:bg-stonecraft-800 rounded-xl border border-stonecraft-200 dark:border-stonecraft-700 flex items-center justify-center h-20 grayscale hover:grayscale-0 transition-all">
+            <img src="images/partner_jpk.jpg" alt="JPK Integral" class="max-h-12 max-w-full object-contain">
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= CONTACT & LOCATION SECTION ================= -->
+  <section id="kontakt" class="py-20 lg:py-28 bg-stonecraft-50 dark:bg-stonecraft-950 transition-colors border-t border-stonecraft-200 dark:border-stonecraft-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        
+        <!-- Left: Contact Details & Info (5 cols) -->
+        <div class="lg:col-span-5 space-y-8">
+          <div>
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-brick-100 text-brick-800 dark:bg-brick-950 dark:text-brick-300 mb-3 border border-brick-200 dark:border-brick-800">
+              <i class="fa-solid fa-comments"></i>
+              <span>Radi vás privítame</span>
+            </div>
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold text-stonecraft-900 dark:text-white mb-4">
+              Kontaktujte MARŠO-SK
+            </h2>
+            <p class="text-stonecraft-600 dark:text-stonecraft-300 text-sm sm:text-base leading-relaxed">
+              Máte otázku, záujem o stavebný rozpočet, klenbovú pivnicu alebo potrebujete doviezť rezivo? Zavolajte nám alebo nás navštívte priamo v našej predajni a sklade v Pezinku.
+            </p>
+          </div>
+
+          <!-- Cards -->
+          <div class="space-y-4 text-sm">
+            <!-- Predajňa a sklad -->
+            <div class="p-5 rounded-2xl bg-white dark:bg-stonecraft-900 border border-stonecraft-200 dark:border-stonecraft-800 shadow-sm flex items-start gap-4">
+              <div class="w-10 h-10 rounded-xl bg-brick-500/10 text-brick-600 dark:text-brick-400 flex items-center justify-center flex-shrink-0 text-lg">
+                <i class="fa-solid fa-shop"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-stonecraft-900 dark:text-white mb-1">Predajňa & Sklad reziva</h4>
+                <p class="text-xs text-stonecraft-500 dark:text-stonecraft-400 mb-2">Šenkvická cesta 24, 902 01 Pezinok</p>
+                <div class="space-y-1 text-xs">
+                  <div><strong>Tel. predajňa:</strong> <a href="tel:+421905649486" class="text-brick-600 dark:text-brick-400 font-bold hover:underline">0905 649 486</a></div>
+                  <div><strong>Email:</strong> <a href="mailto:marsosk@marsosk.sk" class="text-stonecraft-700 dark:text-stonecraft-300 hover:underline">marsosk@marsosk.sk</a></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Otváracie hodiny -->
+            <div class="p-5 rounded-2xl bg-white dark:bg-stonecraft-900 border border-stonecraft-200 dark:border-stonecraft-800 shadow-sm flex items-start gap-4">
+              <div class="w-10 h-10 rounded-xl bg-amberwood-500/10 text-amberwood-600 dark:text-amberwood-400 flex items-center justify-center flex-shrink-0 text-lg">
+                <i class="fa-solid fa-clock"></i>
+              </div>
+              <div class="flex-1">
+                <h4 class="font-bold text-stonecraft-900 dark:text-white mb-1">Otváracie hodiny skladu</h4>
+                <div class="grid grid-cols-2 gap-2 text-xs text-stonecraft-600 dark:text-stonecraft-400">
+                  <div>Pondelok – Piatok:</div>
+                  <div class="font-bold text-stonecraft-900 dark:text-white">08:00 – 15:00</div>
+                  <div>Sobota – Nedeľa:</div>
+                  <div class="text-stonecraft-500">Zatvorené / po dohode</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Fakturačné údaje -->
+            <div class="p-5 rounded-2xl bg-white dark:bg-stonecraft-900 border border-stonecraft-200 dark:border-stonecraft-800 shadow-sm flex items-start gap-4">
+              <div class="w-10 h-10 rounded-xl bg-stonecraft-500/10 text-stonecraft-600 dark:text-stonecraft-400 flex items-center justify-center flex-shrink-0 text-lg">
+                <i class="fa-solid fa-building"></i>
+              </div>
+              <div class="text-xs text-stonecraft-600 dark:text-stonecraft-400">
+                <h4 class="font-bold text-stonecraft-900 dark:text-white text-sm mb-1">Fakturačné údaje</h4>
+                <p>Maršo-SK, s.r.o., Štúrova 49, 902 03 Pezinok</p>
+                <div class="grid grid-cols-2 gap-x-4 gap-y-1 mt-2">
+                  <div>IČO: <strong>44 420 145</strong></div>
+                  <div>DIČ: <strong>2022697270</strong></div>
+                  <div>IČ DPH: <strong>SK2022697270</strong></div>
+                  <div>Zápis: OR OS Bratislava I</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Embedded Map -->
+          <div class="rounded-2xl overflow-hidden border border-stonecraft-200 dark:border-stonecraft-800 shadow-sm h-52 relative">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2656.326233215276!2d17.278912!3d48.293415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476c9b5f25bf9433%3A0xb36f2f01eb0cb0df!2s%C5%A0enkvick%C3%A1+cesta+24%2C+902+01+Pezinok!5e0!3m2!1ssk!2ssk!4v1700000000000!5m2!1ssk!2ssk" 
+              width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="filter dark:contrast-125 dark:brightness-90">
+            </iframe>
+          </div>
+        </div>
+
+        <!-- Right: Contact & RFQ Form (7 cols) -->
+        <div class="lg:col-span-7 bg-white dark:bg-stonecraft-900 rounded-3xl p-8 sm:p-10 border border-stonecraft-200 dark:border-stonecraft-800 shadow-xl">
+          <div class="border-b border-stonecraft-200 dark:border-stonecraft-800 pb-4 mb-6">
+            <h3 class="font-serif text-2xl font-bold text-stonecraft-900 dark:text-white">
+              Nezáväzný dopyt & žiadosť o cenovú ponuku
+            </h3>
+            <p class="text-xs sm:text-sm text-stonecraft-500 dark:text-stonecraft-400 mt-1">
+              Vyplňte formulár a naši majstri vás budú spätne kontaktovať do 24 hodín s konkrétnym návrhom.
+            </p>
+          </div>
+
+          <form id="contactForm" onsubmit="handleFormSubmit(event)" class="space-y-5">
+            <!-- Row 1: Name and Phone -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label for="formName" class="block text-xs font-bold text-stonecraft-700 dark:text-stonecraft-300 mb-1">Meno a priezvisko *</label>
+                <input type="text" id="formName" required placeholder="Ján Novák" class="w-full px-4 py-3 rounded-xl border border-stonecraft-300 dark:border-stonecraft-700 bg-stonecraft-50 dark:bg-stonecraft-800 text-stonecraft-900 dark:text-white text-sm focus:ring-2 focus:ring-brick-500 outline-none transition-all">
+              </div>
+              <div>
+                <label for="formPhone" class="block text-xs font-bold text-stonecraft-700 dark:text-stonecraft-300 mb-1">Telefónne číslo *</label>
+                <input type="tel" id="formPhone" required placeholder="+421 900 000 000" class="w-full px-4 py-3 rounded-xl border border-stonecraft-300 dark:border-stonecraft-700 bg-stonecraft-50 dark:bg-stonecraft-800 text-stonecraft-900 dark:text-white text-sm focus:ring-2 focus:ring-brick-500 outline-none transition-all">
+              </div>
+            </div>
+
+            <!-- Row 2: Email and Location -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label for="formEmail" class="block text-xs font-bold text-stonecraft-700 dark:text-stonecraft-300 mb-1">E-mailová adresa *</label>
+                <input type="email" id="formEmail" required placeholder="jan.novak@example.sk" class="w-full px-4 py-3 rounded-xl border border-stonecraft-300 dark:border-stonecraft-700 bg-stonecraft-50 dark:bg-stonecraft-800 text-stonecraft-900 dark:text-white text-sm focus:ring-2 focus:ring-brick-500 outline-none transition-all">
+              </div>
+              <div>
+                <label for="formLocation" class="block text-xs font-bold text-stonecraft-700 dark:text-stonecraft-300 mb-1">Lokalita realizácie / Stavba</label>
+                <input type="text" id="formLocation" placeholder="Napr. Pezinok, Modra, Senec..." class="w-full px-4 py-3 rounded-xl border border-stonecraft-300 dark:border-stonecraft-700 bg-stonecraft-50 dark:bg-stonecraft-800 text-stonecraft-900 dark:text-white text-sm focus:ring-2 focus:ring-brick-500 outline-none transition-all">
+              </div>
+            </div>
+
+            <!-- Row 3: Service Type -->
+            <div>
+              <label for="formService" class="block text-xs font-bold text-stonecraft-700 dark:text-stonecraft-300 mb-1">O aké dielo / materiál máte záujem? *</label>
+              <select id="formService" required class="w-full px-4 py-3 rounded-xl border border-stonecraft-300 dark:border-stonecraft-700 bg-stonecraft-50 dark:bg-stonecraft-800 text-stonecraft-900 dark:text-white text-sm focus:ring-2 focus:ring-brick-500 outline-none transition-all">
+                <option value="Klenbová vinná pivnica">Klenbová vinná pivnica (tehla / kameň)</option>
+                <option value="Interiérový krb / Kachľová pec">Interiérový krb / Kachľová pec</option>
+                <option value="Záhradný krb / Pizza pec Golem">Záhradný krb s grilom / Pizza pec Golem</option>
+                <option value="Krov na mieru / Stavebné rezivo">Krov na mieru / Stavebné rezivo zo skladu</option>
+                <option value="Sibírsky smrekovec (terasa / fasáda)">Sibírsky smrekovec (terasa / fasáda)</option>
+                <option value="Stavba rodinného domu / Hrubá stavba">Stavba rodinného domu / Hrubá stavba</option>
+                <option value="Zemné práce JCB / Odvoz Tatrou 815">Zemné práce JCB / Odvoz Tatrou 815</option>
+                <option value="Iné / Všeobecná konzultácia">Iné / Všeobecná konzultácia</option>
+              </select>
+            </div>
+
+            <!-- Row 4: Message and Specifications -->
+            <div>
+              <label for="formMessage" class="block text-xs font-bold text-stonecraft-700 dark:text-stonecraft-300 mb-1">Popis projektu alebo požiadavky *</label>
+              <textarea id="formMessage" rows="4" required placeholder="Uveďte približné rozmery, termín začatia prác alebo špecifikácie materiálu..." class="w-full px-4 py-3 rounded-xl border border-stonecraft-300 dark:border-stonecraft-700 bg-stonecraft-50 dark:bg-stonecraft-800 text-stonecraft-900 dark:text-white text-sm focus:ring-2 focus:ring-brick-500 outline-none transition-all"></textarea>
+            </div>
+
+            <!-- Simulated Attachment Dropzone -->
+            <div class="border-2 border-dashed border-stonecraft-300 dark:border-stonecraft-700 rounded-xl p-4 text-center cursor-pointer hover:border-brick-500 transition-colors" onclick="document.getElementById('fileUploadInput').click()">
+              <input type="file" id="fileUploadInput" multiple class="hidden" onchange="handleFileSelect(event)">
+              <i class="fa-solid fa-cloud-arrow-up text-stonecraft-400 text-2xl mb-1"></i>
+              <div class="text-xs font-medium text-stonecraft-700 dark:text-stonecraft-300" id="fileUploadStatus">
+                Máte výkaz výmer alebo výkres krovu? Kliknite pre priloženie súborov (PDF, DWG, JPG)
+              </div>
+            </div>
+
+            <!-- GDPR Checkbox -->
+            <div class="flex items-start gap-2 pt-2">
+              <input type="checkbox" id="formGdpr" required class="mt-1 w-4 h-4 text-brick-600 rounded border-stonecraft-300 focus:ring-brick-500">
+              <label for="formGdpr" class="text-xs text-stonecraft-500 dark:text-stonecraft-400 leading-normal">
+                Súhlasím so spracovaním osobných údajov spoločnosťou Maršo-SK, s.r.o. za účelom vypracovania cenovej ponuky podľa nariadenia GDPR.
+              </label>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" id="submitFormBtn" class="w-full py-4 rounded-xl font-bold text-sm bg-gradient-to-r from-brick-600 to-brick-700 hover:from-brick-700 hover:to-brick-800 text-white shadow-lg shadow-brick-600/30 flex items-center justify-center gap-2 transition-all">
+              <i class="fa-solid fa-paper-plane"></i>
+              <span>Odoslať nezáväzný dopyt</span>
+            </button>
+          </form>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-stonecraft-950 text-stonecraft-400 text-xs border-t border-stonecraft-800 pt-16 pb-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-stonecraft-800">
+        
+        <!-- Col 1: About & Logo -->
+        <div class="space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="p-1 rounded bg-white">
+              <img src="images/logo.png" alt="MARŠO-SK" class="h-8 w-auto">
+            </div>
+            <span class="font-serif text-lg font-bold text-white">MARŠO-SK s.r.o.</span>
+          </div>
+          <p class="text-xs leading-relaxed text-stonecraft-400">
+            Tradičná rodinná stavebná firma s koreňmi od roku 1989. Špecialista na vinné klenbové pivnice, krby, rodinné domy, predaj stavebného reziva a sibírskeho smrekovca.
+          </p>
+          <div class="flex items-center gap-3 pt-2">
+            <a href="https://www.facebook.com/pages/Mar%C5%A1o-Sk-sro/385353804838187" target="_blank" rel="noopener" class="w-8 h-8 rounded-lg bg-stonecraft-900 hover:bg-brick-600 text-white flex items-center justify-center transition-colors">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="mailto:marsosk@marsosk.sk" class="w-8 h-8 rounded-lg bg-stonecraft-900 hover:bg-brick-600 text-white flex items-center justify-center transition-colors">
+              <i class="fa-solid fa-envelope"></i>
+            </a>
+            <a href="tel:+421905649486" class="w-8 h-8 rounded-lg bg-stonecraft-900 hover:bg-brick-600 text-white flex items-center justify-center transition-colors">
+              <i class="fa-solid fa-phone"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Rýchle odkazy -->
+        <div>
+          <h4 class="font-serif text-sm font-bold text-white uppercase tracking-wider mb-4">Navigácia</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#sluzby" class="hover:text-amberwood-400 transition-colors">Služby a remeslá</a></li>
+            <li><a href="#pivnice" class="hover:text-amberwood-400 transition-colors">Klenbové pivnice</a></li>
+            <li><a href="#krby" class="hover:text-amberwood-400 transition-colors">Krby, pece a pizza pece</a></li>
+            <li><a href="#drevo" class="hover:text-amberwood-400 transition-colors">Stavebné rezivo & Smrekovec</a></li>
+            <li><a href="#galeria" class="hover:text-amberwood-400 transition-colors">Fotogaléria realizácií</a></li>
+            <li><a href="#kalkulacka" class="hover:text-amberwood-400 transition-colors">Kalkulačka cenovej ponuky</a></li>
+            <li><a href="#o-nas" class="hover:text-amberwood-400 transition-colors">O spoločnosti & Certifikáty</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Špecializácie -->
+        <div>
+          <h4 class="font-serif text-sm font-bold text-white uppercase tracking-wider mb-4">Sortiment & Práce</h4>
+          <ul class="space-y-2 text-xs">
+            <li>• Krížové klenbové pivnice na víno</li>
+            <li>• Pece Golem na bukové drevo</li>
+            <li>• Krovy na mieru z guľatiny</li>
+            <li>• Impregnované strešné laty</li>
+            <li>• Sibírsky smrekovec Rhombus & terasy</li>
+            <li>• Búracie a zemné práce JCB</li>
+            <li>• Autodoprava Tatra 815 sklápač</li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Sídlo a kontakt -->
+        <div>
+          <h4 class="font-serif text-sm font-bold text-white uppercase tracking-wider mb-4">Predajňa Pezinok</h4>
+          <p class="text-xs text-stonecraft-300 mb-2">Šenkvická cesta 24, 902 01 Pezinok</p>
+          <p class="text-xs mb-1"><strong>Tel. predajňa:</strong> 0905 649 486</p>
+          <p class="text-xs mb-1"><strong>Andrej Maršo:</strong> 0903 385 900</p>
+          <p class="text-xs mb-3"><strong>Email:</strong> marsosk@marsosk.sk</p>
+          <p class="text-[11px] text-stonecraft-500">Po–Pia: 08:00 – 15:00 | So–Ne: Zatvorené</p>
+        </div>
+
+      </div>
+
+      <!-- Bottom Disclaimer & Credits -->
+      <div class="pt-8 flex flex-wrap items-center justify-between gap-4 text-xs">
+        <div>
+          © 1989 – 2026 <strong>Maršo-SK, s.r.o.</strong> Všetky práva vyhradené. Redizajn pre moderný web.
+        </div>
+        <div class="flex items-center gap-4">
+          <button onclick="openModal('cookies')" class="hover:underline">Cookies</button>
+          <button onclick="openModal('gdpr')" class="hover:underline">GDPR a ochrana údajov</button>
+          <button onclick="openModal('obchodne')" class="hover:underline">Obchodné podmienky</button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= LIGHTBOX MODAL ================= -->
+  <div id="lightboxModal" class="fixed inset-0 z-50 bg-stonecraft-950/95 backdrop-blur-md hidden flex flex-col justify-between p-4 sm:p-8" onclick="closeLightbox(event)">
+    <!-- Header of Lightbox -->
+    <div class="flex items-center justify-between text-white z-10">
+      <div id="lightboxCaption" class="font-medium text-sm sm:text-base max-w-xl truncate">Náhľad realizácie</div>
+      <button onclick="closeLightbox()" class="w-10 h-10 rounded-full bg-stonecraft-800 hover:bg-stonecraft-700 flex items-center justify-center text-white transition-colors">
+        <i class="fa-solid fa-xmark text-lg"></i>
+      </button>
+    </div>
+
+    <!-- Center Image Container -->
+    <div class="flex-1 flex items-center justify-center my-4 relative">
+      <img id="lightboxImg" src="" alt="Fullscreen náhľad" class="max-h-[80vh] max-w-full rounded-xl object-contain shadow-2xl transition-transform duration-300">
+    </div>
+
+    <!-- Footer Controls -->
+    <div class="flex items-center justify-center gap-4 text-white z-10">
+      <button onclick="prevLightbox(event)" aria-label="Predchádzajúca fotografia" class="px-5 py-2 rounded-xl bg-stonecraft-800 hover:bg-stonecraft-700 text-sm font-semibold flex items-center gap-2">
+        <i class="fa-solid fa-arrow-left"></i> Predchádzajúca
+      </button>
+      <span id="lightboxCounter" class="text-xs font-mono px-3 text-stonecraft-400">1 / 1</span>
+      <button onclick="nextLightbox(event)" aria-label="Nasledujúca fotografia" class="px-5 py-2 rounded-xl bg-stonecraft-800 hover:bg-stonecraft-700 text-sm font-semibold flex items-center gap-2">
+        Nasledujúca <i class="fa-solid fa-arrow-right"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- ================= TOAST NOTIFICATION ================= -->
+  <div id="toastNotification" class="fixed bottom-6 right-6 z-50 transform translate-y-32 opacity-0 transition-all duration-300 bg-stonecraft-900 text-white px-6 py-4 rounded-2xl shadow-2xl border border-brick-500 flex items-center gap-3">
+    <div class="w-8 h-8 rounded-full bg-brick-600 flex items-center justify-center text-white flex-shrink-0">
+      <i class="fa-solid fa-check"></i>
+    </div>
+    <div>
+      <h4 class="font-bold text-sm" id="toastTitle">Dopyt bol odoslaný!</h4>
+      <p class="text-xs text-stonecraft-300" id="toastMessage">Ďakujeme. Budeme vás kontaktovať do 24 hodín.</p>
+    </div>
+  </div>
+
+  <!-- ================= LEGAL MODAL (COOKIES / GDPR / OBCHODNE) ================= -->
+  <div id="legalModal" class="fixed inset-0 z-50 bg-stonecraft-950/80 backdrop-blur-sm hidden flex items-center justify-center p-4" onclick="closeLegalModal(event)">
+    <div class="bg-white dark:bg-stonecraft-900 rounded-3xl max-w-2xl w-full max-h-[85vh] overflow-y-auto p-6 sm:p-8 shadow-2xl border border-stonecraft-200 dark:border-stonecraft-800 text-stonecraft-800 dark:text-stonecraft-200" onclick="event.stopPropagation()">
+      <div class="flex items-center justify-between pb-4 border-b border-stonecraft-200 dark:border-stonecraft-800 mb-6">
+        <h3 class="font-serif text-xl font-bold text-stonecraft-900 dark:text-white" id="legalModalTitle">Právne informácie</h3>
+        <button onclick="closeLegalModal()" class="w-8 h-8 rounded-full hover:bg-stonecraft-100 dark:hover:bg-stonecraft-800 flex items-center justify-center text-stonecraft-500">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div id="legalModalBody" class="text-xs sm:text-sm space-y-4 leading-relaxed text-stonecraft-600 dark:text-stonecraft-300">
+        <!-- Content inserted dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= CLIENT JAVASCRIPT ================= -->
+  <script>
+    // ---------- DATA & MULTILINGUAL DICTIONARY ----------
+    const translations = {
+      sk: {
+        top_badge: "Člen Cechu kachliarov",
+        nav_tagline: "Stavebná firma & Sklad dreva Pezinok",
+        nav_services: "Služby",
+        nav_cellars: "Klenbové pivnice",
+        nav_fireplaces: "Krby a pece",
+        nav_wood: "Rezivo & Smrekovec",
+        nav_gallery: "Realizácie",
+        nav_calculator: "Kalkulačka",
+        nav_about: "O nás",
+        nav_contact: "Kontakt",
+        nav_cta: "Cenová ponuka",
+        hero_pill: "Tradícia, remeselná poctivosť a spoľahlivosť od roku 1989",
+        hero_title_1: "Majstrovské staviteľstvo,",
+        hero_title_2: "klenbové vinné pivnice",
+        hero_title_3: "& poctivé krby v Pezinku.",
+        hero_desc: "Zhmotňujeme sny o dokonalej rodinnej vile, vinnom archíve z pálenej tehly či krbe sálajúcom domovom. Zároveň prevádzkujeme vlastný sklad stavebného reziva a poskytujeme zemné práce JCB.",
+        hero_btn_calc: "Vypočítať orientačnú cenu",
+        hero_btn_gallery: "Prezrieť realizácie (500+)",
+        stat_1: "Rokov praxe (od 1989)",
+        stat_2: "Dokončených diel",
+        stat_3: "Akreditovaný kachliar",
+        stat_4: "Rezivo ihneď v Pezinku",
+        calc_tag: "Okamžitý orientačný odhad",
+        calc_heading: "Interaktívna kalkulačka stavby & materiálu",
+        calc_subheading: "Zvoľte kategóriu diela, nastavte parametre a získajte okamžitý orientačný prehľad nákladov a harmonogramu.",
+        calc_cta_submit: "Odoslať dopyt s touto konfiguráciou"
+      },
+      en: {
+        top_badge: "Guild of Stove Builders Member",
+        nav_tagline: "Construction Firm & Timber Yard Pezinok",
+        nav_services: "Services",
+        nav_cellars: "Vaulted Cellars",
+        nav_fireplaces: "Fireplaces & Stoves",
+        nav_wood: "Timber & Larch",
+        nav_gallery: "Projects",
+        nav_calculator: "Estimator",
+        nav_about: "About Us",
+        nav_contact: "Contact",
+        nav_cta: "Get a Quote",
+        hero_pill: "Craftsmanship heritage and trust since 1989",
+        hero_title_1: "Master Craftsmanship,",
+        hero_title_2: "Vaulted Wine Cellars",
+        hero_title_3: "& Custom Fireplaces in Pezinok.",
+        hero_desc: "We bring to life dreams of turnkey family residences, historic cross-vaulted brick wine archives, and cozy fireplaces. We also operate a physical timber warehouse in Pezinok with JCB excavation machinery.",
+        hero_btn_calc: "Estimate Project Cost",
+        hero_btn_gallery: "View Portfolio (500+)",
+        stat_1: "Years of Heritage (est. 1989)",
+        stat_2: "Completed Projects",
+        stat_3: "Certified Stove Builder",
+        stat_4: "Timber Yard in Pezinok",
+        calc_tag: "Instant Cost Estimation",
+        calc_heading: "Interactive Construction & Materials Estimator",
+        calc_subheading: "Select your project category, adjust parameters, and get an immediate estimate with project duration.",
+        calc_cta_submit: "Submit Inquiry with This Configuration"
+      }
+    };
+
+    let currentLang = 'sk';
+
+    function setLanguage(lang) {
+      currentLang = lang;
+      const dict = translations[lang] || translations.sk;
+      
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (dict[key]) el.textContent = dict[key];
+      });
+
+      if (lang === 'sk') {
+        document.getElementById('langSkBtn').className = "px-2 py-0.5 text-xs font-bold rounded bg-brick-600 text-white transition-all";
+        document.getElementById('langEnBtn').className = "px-2 py-0.5 text-xs font-medium text-stonecraft-400 hover:text-white rounded transition-all";
+      } else {
+        document.getElementById('langEnBtn').className = "px-2 py-0.5 text-xs font-bold rounded bg-brick-600 text-white transition-all";
+        document.getElementById('langSkBtn').className = "px-2 py-0.5 text-xs font-medium text-stonecraft-400 hover:text-white rounded transition-all";
+      }
+    }
+
+    // ---------- THEME TOGGLE ----------
+    function toggleTheme() {
+      const html = document.documentElement;
+      const isDark = html.classList.toggle('dark');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      updateThemeIcon(isDark);
+    }
+
+    function updateThemeIcon(isDark) {
+      const icon = document.getElementById('themeIcon');
+      if (!icon) return;
+      if (isDark) {
+        icon.className = 'fa-solid fa-sun text-amberwood-400';
+      } else {
+        icon.className = 'fa-solid fa-moon text-amberwood-400';
+      }
+    }
+
+    // Init theme
+    if (localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+      updateThemeIcon(true);
+    } else {
+      document.documentElement.classList.remove('dark');
+      updateThemeIcon(false);
+    }
+
+    // ---------- MOBILE MENU ----------
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobileMenu');
+      const icon = document.getElementById('mobileMenuIcon');
+      if (menu.classList.contains('hidden')) {
+        menu.classList.remove('hidden');
+        icon.className = 'fa-solid fa-xmark text-lg';
+      } else {
+        menu.classList.add('hidden');
+        icon.className = 'fa-solid fa-bars text-lg';
+      }
+    }
+
+    // ---------- HERO CAROUSEL ----------
+    let heroIndex = 0;
+    const heroSlides = ['heroSlide1', 'heroSlide2', 'heroSlide3', 'heroSlide4'];
+    let heroInterval = setInterval(nextHeroSlide, 5000);
+
+    function showHeroSlide(index) {
+      heroSlides.forEach((slideId, i) => {
+        const el = document.getElementById(slideId);
+        if (el) el.style.opacity = i === index ? '1' : '0';
+      });
+      const ind = document.getElementById('heroSlideIndicator');
+      if (ind) ind.textContent = `${index + 1} / ${heroSlides.length}`;
+    }
+
+    function nextHeroSlide() {
+      heroIndex = (heroIndex + 1) % heroSlides.length;
+      showHeroSlide(heroIndex);
+    }
+
+    function prevHeroSlide() {
+      heroIndex = (heroIndex - 1 + heroSlides.length) % heroSlides.length;
+      showHeroSlide(heroIndex);
+    }
+
+    // ---------- GALLERY ITEMS DATA & FILTER ----------
+    const galleryItems = [
+      { id: 1, cat: 'pivnice', title: 'Penzión Karolína, Slovenský Grob', sub: 'Reprezentatívna krížová klenbová pivnica', img: 'images/pivnica_karolina_2.jpg' },
+      { id: 2, cat: 'pivnice', title: 'Krížová klenbová pivnica, Bratislava', sub: 'Majstrovské klenutie z historickej tehly', img: 'images/pivnica_krizova_1.jpg' },
+      { id: 3, cat: 'pivnice', title: 'Klenbová pivnica Pezinok', sub: 'Ručne kladená tehla s archívnymi nikami', img: 'images/pivnica_pezinok_1.jpg' },
+      { id: 4, cat: 'pivnice', title: 'Pivnica s kójami na víno, Nitra', sub: 'Osvetlené tehlové archívne kóje', img: 'images/pivnica_nitra_koje.jpg' },
+      { id: 5, cat: 'pivnice', title: 'Klenbová pivnica Vajnory', sub: 'Masívna valená klenba pre zrenie vína', img: 'images/pivnica_vajnory.jpg' },
+      { id: 6, cat: 'pivnice', title: 'Klenbová pivnica Kaplná', sub: 'Súkromný vinný sklep v rodinnom dome', img: 'images/pivnica_kaplna.jpg' },
+
+      { id: 7, cat: 'krby', title: 'Interiérový kozub s kamennou rímsou', sub: 'Teplovzdušné a sálavé vykurovanie', img: 'images/kozub_interier_1.jpg' },
+      { id: 8, cat: 'krby', title: 'Kozub s prírodnou štiepanou obmurovkou', sub: 'Kachliarske vyhotovenie na mieru', img: 'images/kozub_interier_2.jpg' },
+      { id: 9, cat: 'krby', title: 'Záhradný kozub v drevenom altánku', sub: 'Exteriérové sedenie s otvoreným ohniskom', img: 'images/kozub_exterier_altanok.jpg' },
+      { id: 10, cat: 'krby', title: 'Záhradný krb s grilom a pecou', sub: 'Letná kuchyňa pre gurmánske zážitky', img: 'images/kozub_exterier_gril.jpg' },
+      { id: 11, cat: 'krby', title: 'Pizza pec Golem', sub: 'Šamotová chlebová pec so švajčiarskym teplomerom', img: 'images/pec_pizza_golem.jpg' },
+      { id: 12, cat: 'krby', title: 'Záhradný komplex s pecou a udiarňou', sub: 'Multifunkčný krbový ostrov z pálenej tehly', img: 'images/kozub_exterier_pec.jpg' },
+
+      { id: 13, cat: 'domy', title: 'Rodinný dom Pezinok', sub: 'Kompletná hrubá stavba a nosné murivo', img: 'images/dom_pezinok_1.jpg' },
+      { id: 14, cat: 'domy', title: 'Rodinná vila Čierna Voda', sub: 'Stavba rodinného domu na kľúč', img: 'images/dom_ciernavoda_2.jpg' },
+      { id: 15, cat: 'domy', title: 'Montáž krovu, Slovenský Grob', sub: 'Tesárska väzba krovu z vlastného reziva', img: 'images/krov_montaz.jpg' },
+      { id: 16, cat: 'domy', title: 'Krov a krytina Most pri Bratislave', sub: 'Valbový krov s latovaním a fóliou', img: 'images/krov_most.jpg' },
+      { id: 17, cat: 'domy', title: 'Rodinný dom Vrakúňa', sub: 'Základová doska a poschodová stavba', img: 'images/dom_vrakuna.jpg' },
+
+      { id: 18, cat: 'drevo', title: 'Terasa okolo bazéna zo Sibírskeho smrekovca', sub: 'Hladké a vrúbkované profily, nerezové skrutky', img: 'images/smrekovec_terasa_1.jpg' },
+      { id: 19, cat: 'drevo', title: 'Fasádny profil Rhombus', sub: 'Prírodný sibírsky smrekovec pre moderné fasády', img: 'images/smrekovec_fasada.jpg' },
+      { id: 20, cat: 'drevo', title: 'Drevený altánok a prístrešok', sub: 'Konštrukcia zo sušených smrekových hranolov', img: 'images/pristresok_drevo.jpg' },
+
+      { id: 21, cat: 'kamen', title: 'Plot z prírodného kameňa, Pezinok', sub: 'Masívny andezitový a pieskovcový múr', img: 'images/kamen_plot.jpg' },
+      { id: 22, cat: 'kamen', title: 'Plot z lícovej pálenej tehly', sub: 'Remeselné škárovanie s tehlovými stĺpmi', img: 'images/tehla_plot.jpg' },
+      { id: 23, cat: 'kamen', title: 'Barový pult z kameňa a tehly', sub: 'Interiérový prvok v spoločenskej vinárni', img: 'images/kamen_barpult.jpg' },
+      { id: 24, cat: 'kamen', title: 'Kamenný obklad rodinného domu, Svätý Jur', sub: 'Sokel a detaily z lomového kameňa', img: 'images/kamen_dom_svatyjur.jpg' },
+    ];
+
+    let activeFilter = 'vsetko';
+
+    function renderGallery() {
+      const container = document.getElementById('galleryContainer');
+      if (!container) return;
+      container.innerHTML = '';
+
+      const filtered = activeFilter === 'vsetko' 
+        ? galleryItems 
+        : galleryItems.filter(item => item.cat === activeFilter);
+
+      filtered.forEach((item, index) => {
+        const card = document.createElement('div');
+        card.className = "bg-white dark:bg-stonecraft-900 rounded-2xl overflow-hidden border border-stonecraft-200 dark:border-stonecraft-800 shadow-sm hover:shadow-xl transition-all duration-300 card-zoom cursor-pointer group flex flex-col";
+        card.onclick = () => openLightbox(item.img, `${item.title} — ${item.sub}`);
+        
+        card.innerHTML = `
+          <div class="h-52 relative overflow-hidden">
+            <img src="${item.img}" alt="${item.title}" loading="lazy" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-stonecraft-950/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+              <span class="w-10 h-10 rounded-full bg-white/90 text-stonecraft-900 flex items-center justify-center shadow-lg transform scale-75 group-hover:scale-100 transition-transform">
+                <i class="fa-solid fa-magnifying-glass-plus"></i>
+              </span>
+            </div>
+          </div>
+          <div class="p-4 flex-1 flex flex-col justify-between">
+            <div>
+              <h4 class="font-serif font-bold text-stonecraft-900 dark:text-white text-sm mb-1 group-hover:text-brick-600 transition-colors">${item.title}</h4>
+              <p class="text-xs text-stonecraft-500 dark:text-stonecraft-400 line-clamp-1">${item.sub}</p>
+            </div>
+            <div class="mt-3 pt-2 border-t border-stonecraft-100 dark:border-stonecraft-800 flex items-center justify-between text-[11px] text-stonecraft-400">
+              <span>MARŠO-SK Pezinok</span>
+              <span class="text-brick-600 font-semibold group-hover:underline">Zväčšiť <i class="fa-solid fa-expand ml-1"></i></span>
+            </div>
+          </div>
+        `;
+        container.appendChild(card);
+      });
+    }
+
+    function filterGallery(category) {
+      activeFilter = category;
+      document.querySelectorAll('.gallery-filter-btn').forEach(btn => {
+        btn.className = "gallery-filter-btn px-5 py-2.5 rounded-xl font-medium text-xs sm:text-sm bg-white dark:bg-stonecraft-800 text-stonecraft-700 dark:text-stonecraft-300 hover:bg-stonecraft-200 dark:hover:bg-stonecraft-700 border border-stonecraft-200 dark:border-stonecraft-700 transition-all";
+      });
+      const activeBtn = document.getElementById(`filterBtn_${category}`);
+      if (activeBtn) {
+        activeBtn.className = "gallery-filter-btn px-5 py-2.5 rounded-xl font-bold text-xs sm:text-sm bg-brick-600 text-white transition-all shadow-md";
+      }
+      renderGallery();
+    }
+
+    // ---------- LIGHTBOX SYSTEM ----------
+    let currentLightboxList = [];
+    let currentLightboxIdx = 0;
+
+    function openLightbox(imgSrc, caption) {
+      currentLightboxList = galleryItems.map(g => ({ img: g.img, caption: `${g.title} — ${g.sub}` }));
+      currentLightboxIdx = currentLightboxList.findIndex(g => g.img === imgSrc);
+      if (currentLightboxIdx === -1) {
+        currentLightboxList.push({ img: imgSrc, caption: caption || 'Realizácia MARŠO-SK' });
+        currentLightboxIdx = currentLightboxList.length - 1;
+      }
+
+      updateLightboxDisplay();
+      document.getElementById('lightboxModal').classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function updateLightboxDisplay() {
+      const item = currentLightboxList[currentLightboxIdx];
+      if (!item) return;
+      document.getElementById('lightboxImg').src = item.img;
+      document.getElementById('lightboxCaption').textContent = item.caption;
+      document.getElementById('lightboxCounter').textContent = `${currentLightboxIdx + 1} / ${currentLightboxList.length}`;
+    }
+
+    function nextLightbox(e) {
+      if (e) e.stopPropagation();
+      currentLightboxIdx = (currentLightboxIdx + 1) % currentLightboxList.length;
+      updateLightboxDisplay();
+    }
+
+    function prevLightbox(e) {
+      if (e) e.stopPropagation();
+      currentLightboxIdx = (currentLightboxIdx - 1 + currentLightboxList.length) % currentLightboxList.length;
+      updateLightboxDisplay();
+    }
+
+    function closeLightbox(e) {
+      if (e && e.target !== document.getElementById('lightboxModal') && !e.target.closest('button')) return;
+      document.getElementById('lightboxModal').classList.add('hidden');
+      document.body.style.overflow = '';
+    }
+
+    // Keyboard navigation for Lightbox
+    window.addEventListener('keydown', (e) => {
+      const modal = document.getElementById('lightboxModal');
+      if (modal && !modal.classList.contains('hidden')) {
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowRight') nextLightbox();
+        if (e.key === 'ArrowLeft') prevLightbox();
+      }
+    });
+
+    // ---------- INTERACTIVE ESTIMATOR CONTROLS ----------
+    let currentCalcCat = 'pivnica';
+    let calcState = {
+      // Pivnica
+      pivnica_plocha: 25,
+      pivnica_typ: 'krizova',
+      pivnica_material: 'tehla',
+      pivnica_koje: true,
+      pivnica_bar: true,
+
+      // Krb
+      krb_typ: 'exterier_pec',
+      krb_obstava: 'samot_kamen',
+      krb_teplomer: true,
+
+      // Rezivo
+      rezivo_plocha_strechy: 160,
+      rezivo_laty: '50x40',
+      rezivo_impregnacia: true,
+      rezivo_osb: true,
+      rezivo_dovoz: true,
+
+      // Smrekovec
+      smrekovec_plocha: 35,
+      smrekovec_profil: 'vrubkovana',
+      smrekovec_eurotec: true,
+      smrekovec_montaz: true,
+
+      // Dom
+      dom_plocha: 140,
+      dom_podlazia: 1,
+      dom_faza: 'hruba_stavba',
+      dom_jcb: true
+    };
+
+    function setCalcCategory(cat) {
+      currentCalcCat = cat;
+      document.querySelectorAll('.calc-tab').forEach(b => {
+        b.className = "calc-tab px-5 py-3 rounded-xl font-medium text-sm whitespace-nowrap transition-all text-stonecraft-600 dark:text-stonecraft-300 hover:bg-stonecraft-200 dark:hover:bg-stonecraft-800 flex items-center gap-2";
+      });
+      const activeBtn = document.getElementById(`calcTab_${cat}`);
+      if (activeBtn) {
+        activeBtn.className = "calc-tab px-5 py-3 rounded-xl font-bold text-sm whitespace-nowrap transition-all bg-brick-600 text-white shadow-md flex items-center gap-2";
+      }
+
+      renderCalcControls();
+      updateCalcResults();
+    }
+
+    function renderCalcControls() {
+      const container = document.getElementById('calcControlsContainer');
+      if (!container) return;
+
+      if (currentCalcCat === 'pivnica') {
+        container.innerHTML = `
+          <div>
+            <div class="flex justify-between items-center mb-2">
+              <label class="font-bold text-sm text-stonecraft-900 dark:text-white">Plocha klenbovej pivnice:</label>
+              <span class="font-bold text-base text-brick-600 dark:text-brick-400"><span id="val_pivnica_plocha">${calcState.pivnica_plocha}</span> m²</span>
+            </div>
+            <input type="range" min="10" max="100" step="5" value="${calcState.pivnica_plocha}" oninput="calcState.pivnica_plocha = parseInt(this.value); document.getElementById('val_pivnica_plocha').textContent=this.value; updateCalcResults();" class="w-full accent-brick-600 cursor-pointer">
+            <div class="flex justify-between text-[11px] text-stonecraft-400 mt-1">
+              <span>10 m² (privátna)</span>
+              <span>50 m² (štandard)</span>
+              <span>100 m² (vinárstvo/gastro)</span>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-bold text-stonecraft-700 dark:text-stonecraft-300 mb-1.5">Typ klenby:</label>
+              <select onchange="calcState.pivnica_typ=this.value; updateCalcResults();" class="w-full p-3 rounded-xl border border-stonecraft-300 dark:border-stonecraft-700 bg-stonecraft-50 dark:bg-stonecraft-800 text-sm">
+                <option value="krizova" ${calcState.pivnica_typ==='krizova'?'selected':''}>Krížová klenba (historický luxus)</option>
+                <option value="valena" ${calcState.pivnica_typ==='valena'?'selected':''}>Klasická valená klenba (oblúk)</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-stonecraft-700 dark:text-stonecraft-300 mb-1.5">Materiál klenby:</label>
+              <select onchange="calcState.pivnica_material=this.value; updateCalcResults();" class="w-full p-3 rounded-xl border border-stonecraft-300 dark:border-stonecraft-700 bg-stonecraft-50 dark:bg-stonecraft-800 text-sm">
+                <option value="tehla" ${calcState.pivnica_material==='tehla'?'selected':''}>Tradičná stará pálená tehla</option>
+                <option value="kamen" ${calcState.pivnica_material==='kamen'?'selected':''}>Kombinácia kameň + tehla</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="space-y-3 pt-2">
+            <label class="block text-xs font-bold text-stonecraft-700 dark:text-stonecraft-300">Doplnková výbava pivnice:</label>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <label class="flex items-center gap-3 p-3 rounded-xl border border-stonecraft-200 dark:border-stonecraft-700 bg-stonecraft-50 dark:bg-stonecraft-800 cursor-pointer">
+                <input type="checkbox" ${calcState.pivnica_koje?'checked':''} onchange="calcState.pivnica_koje=this.checked; updateCalcResults();" class="w-4 h-4 accent-brick-600">
+                <span class="text-xs font-medium">Archívne kóje na víno</span>
+              </label>
+              <label class="flex items-center gap-3 p-3 rounded-xl border border-stonecraft-200 dark:border-stonecraft-700 bg-stonecraft-50 dark:bg-stonecraft-800 cursor-pointer">
+                <input type="checkbox" ${calcState.pivnica_bar?'checked':''} onchange="calcState.pivnica_bar=this.checked; updateCalcResults();" class="w-4 h-4 accent-brick-600">
+                <span class="text-xs font-medium">Degustačný bar & pult</span>
+              </label>
+            </div>
+          </div>
+        `;
+      } else if (currentCalcCat === 'krb') {
+        container.innerHTML = `
+          <div>
+            <label class="block text-xs font-bold text-stonecraft-700 dark:text-stonecraft-300 mb-1.5">Typ krbu / pece:</label>
+            <select onchange="calcState.krb_typ=this.value; updateCalcResults();" class="w-full p-3 rounded-xl border border-stonecraft-300 dark:border-stonecraft-700 bg-stonecraft-50 dark:bg-stonecraft-800 text-sm">
+              <option value="interier" ${calcState.krb_typ==='interier'?'selected':''}>Interiérový krb s vložkou (teplovzdušný/akumulačný)</option>
+              <option value="exterier_pec" ${calcState.krb_typ==='exterier_pec'?'selected':''}>Záhradný krb s grilom a pizza pecou</option>
+              <option value="pec_golem" ${calcState.krb_typ==='pec_golem'?'selected':''}>Samostatná chlebová & pizza pec Golem</option>
+            </select>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-bold text-stonecraft-700 dark:text-stonecraft-300 mb-1.5">Materiál obstavby:</label>
+              <select onchange="calcState.krb_obstava=this.value; updateCalcResults();" class="w-full p-3 rounded-xl border border-stonecraft-300 dark:border-stonecraft-700 bg-stonecraft-50 dark:bg-stonecraft-800 text-sm">
+                <option value="samot_kamen" ${calcState.krb_obstava==='samot_kamen'?'selected':''}>Prírodný kameň + šamot</option>
+                <option value="palena_tehla" ${calcState.krb_obstava==='palena_tehla'?'selected':''}>Pálená rustikálna tehla</option>
+                <option value="modern_hladka" ${calcState.krb_obstava==='modern_hladka'?'selected':''}>Moderná akumulačná omietka</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-stonecraft-700 dark:text-stonecraft-300 mb-1.5">Doplnky:</label>
+              <label class="flex items-center gap-3 p-3 rounded-xl border border-stonecraft-200 dark:border-stonecraft-700 bg-stonecraft-50 dark:bg-stonecraft-800 cursor-pointer h-[46px]">
+                <input type="checkbox" ${calcState.krb_teplomer?'checked':''} onchange="calcState.krb_teplomer=this.checked; updateCalcResults();" class="w-4 h-4 accent-brick-600">
+                <span class="text-xs font-medium">Švajčiarsky teplomer 500 °C</span>
+              </label>
+            </div>
+          </div>
+        `;
+      } else if (currentCalcCat === 'rezivo') {
+        container.innerHTML = `
+          <div>
+            <div class="flex justify-between items-center mb-2">
+              <label class="font-bold text-sm text-stonecraft-900 dark:text-white">Plocha strechy pre krov & laty:</label>
+              <span class="font-bold text-base text-brick-600 dark:text-brick-400"><span id="val_rezivo_plocha">${calcState.rezivo_plocha_strechy}</span> m²</span>
+            </div>
+            <input type="range" min="50" max="400" step="10" value="${calcState.rezivo_plocha_strechy}" oninput="calcState.rezivo_plocha_strechy = parseInt(this.value); document.getElementById('val_rezivo_plocha').textContent=this.value; updateCalcResults();" class="w-full accent-brick-600 cursor-pointer">
+            <div class="flex justify-between text-[11px] text-stonecraft-400 mt-1">
+              <span>50 m² (chata/garáž)</span>
+              <span>160 m² (bežný dom)</span>
+              <span>400 m² (veľká vila)</span>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-bold text-stonecraft-700 dark:text-stonecraft-300 mb-1.5">Rozmer strešných lát:</label>
+              <select onchange="calcState.rezivo_laty=this.value; updateCalcResults();" class="w-full p-3 rounded-xl border border-stonecraft-300 dark:border-stonecraft-700 bg-stonecraft-50 dark:bg-stonecraft-800 text-sm">
+                <option value="50x50" ${calcState.rezivo_laty==='50x50'?'selected':''}>Laty 50 x 50 mm (ťažká škridla Bramac)</option>
+                <option value="50x40" ${calcState.rezivo_laty==='50x40'?'selected':''}>Laty 50 x 40 mm (štandard)</option>
+                <option value="50x30" ${calcState.rezivo_laty==='50x30'?'selected':''}>Laty 50 x 30 mm (plech / ľahká krytina)</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-stonecraft-700 dark:text-stonecraft-300 mb-1.5">Impregnácia Bochemit:</label>
+              <label class="flex items-center gap-3 p-3 rounded-xl border border-stonecraft-200 dark:border-stonecraft-700 bg-stonecraft-50 dark:bg-stonecraft-800 cursor-pointer h-[46px]">
+                <input type="checkbox" ${calcState.rezivo_impregnacia?'checked':''} onchange="calcState.rezivo_impregnacia=this.checked; updateCalcResults();" class="w-4 h-4 accent-brick-600">
+                <span class="text-xs font-medium">Hĺbková impregnácia proti hmyzu/plesniam</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+            <label class="flex items-center gap-3 p-3 rounded-xl border border-stonecraft-200 dark:border-stonecraft-700 bg-stonecraft-50 dark:bg-stonecraft-800 cursor-pointer">
+              <input type="checkbox" ${calcState.rezivo_osb?'checked':''} onchange="calcState.rezivo_osb=this.checked; updateCalcResults();" class="w-4 h-4 accent-brick-600">
+              <span class="text-xs font-medium">Vrátane OSB 3 dosiek Egger (plné debnenie)</span>
+            </label>
+            <label class="flex items-center gap-3 p-3 rounded-xl border border-stonecraft-200 dark:border-stonecraft-700 bg-stonecraft-50 dark:bg-stonecraft-800 cursor-pointer">
+              <input type="checkbox" ${calcState.rezivo_dovoz?'checked':''} onchange="calcState.rezivo_dovoz=this.checked; updateCalcResults();" class="w-4 h-4 accent-brick-600">
+              <span class="text-xs font-medium">Doprava priamo na stavbu Tatrou 815</span>
+            </label>
+          </div>
+        `;
+      } else if (currentCalcCat === 'smrekovec') {
+        container.innerHTML = `
+          <div>
+            <div class="flex justify-between items-center mb-2">
+              <label class="font-bold text-sm text-stonecraft-900 dark:text-white">Plocha terasy / fasády:</label>
+              <span class="font-bold text-base text-brick-600 dark:text-brick-400"><span id="val_smrekovec_plocha">${calcState.smrekovec_plocha}</span> m²</span>
+            </div>
+            <input type="range" min="10" max="150" step="5" value="${calcState.smrekovec_plocha}" oninput="calcState.smrekovec_plocha = parseInt(this.value); document.getElementById('val_smrekovec_plocha').textContent=this.value; updateCalcResults();" class="w-full accent-brick-600 cursor-pointer">
+            <div class="flex justify-between text-[11px] text-stonecraft-400 mt-1">
+              <span>10 m² (balkón)</span>
+              <span>35 m² (terasa k bazénu)</span>
+              <span>150 m² (rozsiahla fasáda)</span>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-bold text-stonecraft-700 dark:text-stonecraft-300 mb-1.5">Profil dosky:</label>
+              <select onchange="calcState.smrekovec_profil=this.value; updateCalcResults();" class="w-full p-3 rounded-xl border border-stonecraft-300 dark:border-stonecraft-700 bg-stonecraft-50 dark:bg-stonecraft-800 text-sm">
+                <option value="vrubkovana" ${calcState.smrekovec_profil==='vrubkovana'?'selected':''}>Obojstranne vrúbkovaná (protišmyková)</option>
+                <option value="hladka" ${calcState.smrekovec_profil==='hladka'?'selected':''}>Hladká zo všetkých 4 strán (minimalizmus)</option>
+                <option value="rhombus" ${calcState.smrekovec_profil==='rhombus'?'selected':''}>Fasádny Rhombus profil (lamely)</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-stonecraft-700 dark:text-stonecraft-300 mb-1.5">Spojovací materiál:</label>
+              <label class="flex items-center gap-3 p-3 rounded-xl border border-stonecraft-200 dark:border-stonecraft-700 bg-stonecraft-50 dark:bg-stonecraft-800 cursor-pointer h-[46px]">
+                <input type="checkbox" ${calcState.smrekovec_eurotec?'checked':''} onchange="calcState.smrekovec_eurotec=this.checked; updateCalcResults();" class="w-4 h-4 accent-brick-600">
+                <span class="text-xs font-medium">Nerezové profi skrutky Eurotec</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="pt-2">
+            <label class="flex items-center gap-3 p-3 rounded-xl border border-stonecraft-200 dark:border-stonecraft-700 bg-stonecraft-50 dark:bg-stonecraft-800 cursor-pointer">
+              <input type="checkbox" ${calcState.smrekovec_montaz?'checked':''} onchange="calcState.smrekovec_montaz=this.checked; updateCalcResults();" class="w-4 h-4 accent-brick-600">
+              <span class="text-xs font-medium">Odborná montáž terasy vrátane podkladových smrekovcových hranolov</span>
+            </label>
+          </div>
+        `;
+      } else if (currentCalcCat === 'dom') {
+        container.innerHTML = `
+          <div>
+            <div class="flex justify-between items-center mb-2">
+              <label class="font-bold text-sm text-stonecraft-900 dark:text-white">Zastavaná plocha domu:</label>
+              <span class="font-bold text-base text-brick-600 dark:text-brick-400"><span id="val_dom_plocha">${calcState.dom_plocha}</span> m²</span>
+            </div>
+            <input type="range" min="60" max="300" step="10" value="${calcState.dom_plocha}" oninput="calcState.dom_plocha = parseInt(this.value); document.getElementById('val_dom_plocha').textContent=this.value; updateCalcResults();" class="w-full accent-brick-600 cursor-pointer">
+            <div class="flex justify-between text-[11px] text-stonecraft-400 mt-1">
+              <span>60 m² (bungalov)</span>
+              <span>140 m² (rodinný dom)</span>
+              <span>300 m² (rozsiahla vila)</span>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-bold text-stonecraft-700 dark:text-stonecraft-300 mb-1.5">Rozsah dodávky:</label>
+              <select onchange="calcState.dom_faza=this.value; updateCalcResults();" class="w-full p-3 rounded-xl border border-stonecraft-300 dark:border-stonecraft-700 bg-stonecraft-50 dark:bg-stonecraft-800 text-sm">
+                <option value="zaklady" ${calcState.dom_faza==='zaklady'?'selected':''}>Iba základová doska a výkopy</option>
+                <option value="hruba_stavba" ${calcState.dom_faza==='hruba_stavba'?'selected':''}>Hrubá stavba (základy, murivo, krov, krytina)</option>
+                <option value="holodom" ${calcState.dom_faza==='holodom'?'selected':''}>Holodom s oknami a priečkami</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-stonecraft-700 dark:text-stonecraft-300 mb-1.5">Počet podlaží:</label>
+              <select onchange="calcState.dom_podlazia=parseInt(this.value); updateCalcResults();" class="w-full p-3 rounded-xl border border-stonecraft-300 dark:border-stonecraft-700 bg-stonecraft-50 dark:bg-stonecraft-800 text-sm">
+                <option value="1" ${calcState.dom_podlazia===1?'selected':''}>1 podlažie (Bungalov)</option>
+                <option value="2" ${calcState.dom_podlazia===2?'selected':''}>2 podlažia (Poschodový dom)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="pt-2">
+            <label class="flex items-center gap-3 p-3 rounded-xl border border-stonecraft-200 dark:border-stonecraft-700 bg-stonecraft-50 dark:bg-stonecraft-800 cursor-pointer">
+              <input type="checkbox" ${calcState.dom_jcb?'checked':''} onchange="calcState.dom_jcb=this.checked; updateCalcResults();" class="w-4 h-4 accent-brick-600">
+              <span class="text-xs font-medium">Výkopové a zemné práce našimi mechanizmami JCB</span>
+            </label>
+          </div>
+        `;
+      }
+    }
+
+    function updateCalcResults() {
+      let title = '';
+      let specs = [];
+      let timeline = '';
+      let total = 0;
+
+      if (currentCalcCat === 'pivnica') {
+        title = 'Klenbová vinná pivnica';
+        let baseRate = calcState.pivnica_typ === 'krizova' ? 480 : 390; // €/m2
+        if (calcState.pivnica_material === 'kamen') baseRate += 50;
+        total = calcState.pivnica_plocha * baseRate;
+        if (calcState.pivnica_koje) total += 1200;
+        if (calcState.pivnica_bar) total += 850;
+
+        specs = [
+          `Plocha pivnice: <strong>${calcState.pivnica_plocha} m²</strong>`,
+          `Typ klenby: <strong>${calcState.pivnica_typ === 'krizova' ? 'Krížová klenba' : 'Valená klenba'}</strong>`,
+          `Materiál: <strong>${calcState.pivnica_material === 'tehla' ? 'Stará pálená tehla' : 'Kameň + Tehla'}</strong>`,
+          `Archívne kóje na víno: <strong>${calcState.pivnica_koje ? 'Áno (+1 200 €)' : 'Nie'}</strong>`,
+          `Degustačný pult: <strong>${calcState.pivnica_bar ? 'Áno (+850 €)' : 'Nie'}</strong>`
+        ];
+        timeline = calcState.pivnica_plocha > 40 ? '5 – 8 týždňov' : '3 – 5 týždňov';
+
+      } else if (currentCalcCat === 'krb') {
+        title = 'Krb & Kachliarske dielo';
+        if (calcState.krb_typ === 'interier') {
+          total = 3800;
+          specs.push('Typ: <strong>Interiérový krb s vložkou</strong>');
+        } else if (calcState.krb_typ === 'exterier_pec') {
+          total = 5400;
+          specs.push('Typ: <strong>Záhradný krb s grilom a pecou</strong>');
+        } else {
+          total = 3200;
+          specs.push('Typ: <strong>Samostatná pizza pec Golem</strong>');
+        }
+
+        if (calcState.krb_obstava === 'samot_kamen') { total += 600; specs.push('Obstavba: <strong>Prírodný kameň + šamot</strong>'); }
+        else if (calcState.krb_obstava === 'palena_tehla') { total += 450; specs.push('Obstavba: <strong>Pálená tehla</strong>'); }
+        else { specs.push('Obstavba: <strong>Hladká omietka</strong>'); }
+
+        if (calcState.krb_teplomer) { total += 120; specs.push('Teplomer: <strong>Švajčiarsky do 500 °C</strong>'); }
+        timeline = '1 – 2 týždne';
+
+      } else if (currentCalcCat === 'rezivo') {
+        title = 'Krov a stavebné rezivo';
+        total = calcState.rezivo_plocha_strechy * 32; // base krov & rezivo
+        if (calcState.rezivo_impregnacia) total += calcState.rezivo_plocha_strechy * 3.5;
+        if (calcState.rezivo_osb) total += calcState.rezivo_plocha_strechy * 9.5;
+        if (calcState.rezivo_dovoz) total += 150;
+
+        specs = [
+          `Plocha strechy: <strong>${calcState.rezivo_plocha_strechy} m²</strong>`,
+          `Strešné laty: <strong>${calcState.rezivo_laty} mm</strong>`,
+          `Impregnácia Bochemit: <strong>${calcState.rezivo_impregnacia ? 'Áno' : 'Nie'}</strong>`,
+          `OSB 3 Egger debnenie: <strong>${calcState.rezivo_osb ? 'Áno' : 'Nie'}</strong>`,
+          `Dovoz Tatrou 815: <strong>${calcState.rezivo_dovoz ? 'Zahrnutý' : 'Vlastný odber'}</strong>`
+        ];
+        timeline = '1 – 3 týždne (výroba & dodanie)';
+
+      } else if (currentCalcCat === 'smrekovec') {
+        title = 'Sibírsky smrekovec';
+        let rate = 48; // €/m2 material
+        if (calcState.smrekovec_profil === 'rhombus') rate = 52;
+        total = calcState.smrekovec_plocha * rate;
+        if (calcState.smrekovec_eurotec) total += calcState.smrekovec_plocha * 7;
+        if (calcState.smrekovec_montaz) total += calcState.smrekovec_plocha * 28;
+
+        specs = [
+          `Plocha: <strong>${calcState.smrekovec_plocha} m²</strong>`,
+          `Profil: <strong>${calcState.smrekovec_profil === 'vrubkovana' ? 'Obojstranne vrúbkovaná' : (calcState.smrekovec_profil==='hladka'?'Hladká 4-stranná':'Fasádny Rhombus')}</strong>`,
+          `Spojivo Eurotec: <strong>${calcState.smrekovec_eurotec ? 'Áno' : 'Nie'}</strong>`,
+          `Odborná montáž na rošt: <strong>${calcState.smrekovec_montaz ? 'Áno' : 'Nie'}</strong>`
+        ];
+        timeline = '1 – 2 týždne';
+
+      } else if (currentCalcCat === 'dom') {
+        title = 'Rodinný dom & Hrubá stavba';
+        let baseRate = 0;
+        if (calcState.dom_faza === 'zaklady') baseRate = 130;
+        else if (calcState.dom_faza === 'hruba_stavba') baseRate = 420;
+        else baseRate = 780;
+
+        total = calcState.dom_plocha * baseRate * (calcState.dom_podlazia === 2 ? 1.6 : 1.0);
+        if (calcState.dom_jcb) total += 1500;
+
+        specs = [
+          `Zastavaná plocha: <strong>${calcState.dom_plocha} m²</strong>`,
+          `Fáza diela: <strong>${calcState.dom_faza==='zaklady'?'Základová doska':(calcState.dom_faza==='hruba_stavba'?'Hrubá stavba s krovom':'Holodom')}</strong>`,
+          `Podlažia: <strong>${calcState.dom_podlazia === 1 ? 'Prízemný (Bungalov)' : '2 podlažia'}</strong>`,
+          `Zemné práce JCB: <strong>${calcState.dom_jcb ? 'Zahrnuté (+1 500 €)' : 'Nie'}</strong>`
+        ];
+        timeline = calcState.dom_faza === 'zaklady' ? '2 – 3 týždne' : '2 – 4 mesiace';
+      }
+
+      document.getElementById('calcSummaryTitle').textContent = title;
+      document.getElementById('calcSummarySpecs').innerHTML = specs.map(s => `<div>${s}</div>`).join('');
+      document.getElementById('calcSummaryTimeline').textContent = timeline;
+      document.getElementById('calcTotalPrice').textContent = total.toLocaleString('sk-SK') + ' €';
+    }
+
+    function transferCalcToContact() {
+      const summaryTitle = document.getElementById('calcSummaryTitle').textContent;
+      const price = document.getElementById('calcTotalPrice').textContent;
+      const specs = Array.from(document.querySelectorAll('#calcSummarySpecs div')).map(d => d.textContent).join(', ');
+
+      const serviceSelect = document.getElementById('formService');
+      if (serviceSelect) {
+        if (currentCalcCat === 'pivnica') serviceSelect.value = 'Klenbová vinná pivnica';
+        else if (currentCalcCat === 'krb') serviceSelect.value = 'Interiérový krb / Kachľová pec';
+        else if (currentCalcCat === 'rezivo') serviceSelect.value = 'Krov na mieru / Stavebné rezivo';
+        else if (currentCalcCat === 'smrekovec') serviceSelect.value = 'Sibírsky smrekovec (terasa / fasáda)';
+        else if (currentCalcCat === 'dom') serviceSelect.value = 'Stavba rodinného domu / Hrubá stavba';
+      }
+
+      const msgField = document.getElementById('formMessage');
+      if (msgField) {
+        msgField.value = `Dobrý deň,\n\nMám záujem o cenovú ponuku z online kalkulačky:\nKategória: ${summaryTitle}\nOrientačný rozpočet: ${price}\nŠpecifikácia: ${specs}\n\nProsím o overenie kapacít a dohodnutie obhliadky / konzultácie.`;
+      }
+
+      document.getElementById('kontakt').scrollIntoView({ behavior: 'smooth' });
+      showToast('Kalkulácia pripravená', 'Údaje boli vložené do dopytového formulára nižšie.');
+    }
+
+    // ---------- QUICK ADD TO CART ----------
+    function addQuickItemToCart(itemName) {
+      const msgField = document.getElementById('formMessage');
+      if (msgField) {
+        if (!msgField.value.includes(itemName)) {
+          msgField.value += `\n- Požadovaná položka zo skladu: ${itemName}`;
+        }
+      }
+      document.getElementById('kontakt').scrollIntoView({ behavior: 'smooth' });
+      showToast('Položka pridaná do dopytu', `${itemName} bola pridaná do správy.`);
+    }
+
+    // ---------- CONTACT FORM HANDLING ----------
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      const btn = document.getElementById('submitFormBtn');
+      btn.disabled = true;
+      btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> <span>Odosielam dopyt...</span>';
+
+      setTimeout(() => {
+        btn.disabled = false;
+        btn.innerHTML = '<i class="fa-solid fa-check"></i> <span>Odoslané!</span>';
+        showToast('Ďakujeme za dopyt!', 'Vaša požiadavka bola prijatá. Majstri MARŠO-SK vás budú kontaktovať.');
+        document.getElementById('contactForm').reset();
+        document.getElementById('fileUploadStatus').textContent = 'Máte výkaz výmer alebo výkres krovu? Kliknite pre priloženie súborov (PDF, DWG, JPG)';
+      }, 1000);
+    }
+
+    function handleFileSelect(e) {
+      const files = e.target.files;
+      if (files && files.length > 0) {
+        const names = Array.from(files).map(f => f.name).join(', ');
+        document.getElementById('fileUploadStatus').innerHTML = `<span class="text-brick-600 font-bold"><i class="fa-solid fa-paperclip"></i> Priložené (${files.length}):</span> ${names}`;
+      }
+    }
+
+    // ---------- TOAST SYSTEM ----------
+    let toastTimeout;
+    function showToast(title, message) {
+      const toast = document.getElementById('toastNotification');
+      document.getElementById('toastTitle').textContent = title;
+      document.getElementById('toastMessage').textContent = message;
+
+      toast.classList.remove('translate-y-32', 'opacity-0');
+      clearTimeout(toastTimeout);
+      toastTimeout = setTimeout(() => {
+        toast.classList.add('translate-y-32', 'opacity-0');
+      }, 4000);
+    }
+
+    // ---------- LEGAL MODALS ----------
+    const legalTexts = {
+      cookies: {
+        title: 'Zásady používania súborov Cookies',
+        body: `
+          <p>Tento web používa nevyhnutné a analytické súbory cookies na zabezpečenie správneho fungovania navigácie, zapamätanie preferencií (napr. voľba tmavého/svetlého režimu a jazyka) a anonymnú štatistiku návštevnosti.</p>
+          <p>Cookies neukladajú žiadne citlivé osobné údaje. Používanie cookies môžete kedykoľvek obmedziť alebo zakázať v nastaveniach vášho webového prehliadača.</p>
+          <p>Spoločnosť Maršo-SK, s.r.o. rešpektuje vaše súkromie v zmysle platnej legislatívy EÚ.</p>
+        `
+      },
+      gdpr: {
+        title: 'Ochrana osobných údajov (GDPR)',
+        body: `
+          <p><strong>Prevádzkovateľ:</strong> Maršo-SK, s.r.o., Štúrova 49, 902 03 Pezinok, IČO: 44 420 145.</p>
+          <p><strong>Účel spracovania:</strong> Osobné údaje zadané v kontaktnom a dopytovom formulári (meno, telefón, e-mail, adresa stavby) sú spracovávané výhradne za účelom vypracovania cenovej ponuky, komunikácie so zákazníkom a plnenia predzmluvných vzťahov.</p>
+          <p><strong>Doba uchovávania:</strong> Údaje uchovávame len po dobu nevyhnutnú na vybavenie požiadavky alebo v zmysle zákonných archivačných lehôt pre účtovné doklady.</p>
+          <p>Máte právo kedykoľvek požiadať o prístup k svojim osobným údajom, ich opravu alebo vymazanie zaslaním emailu na <strong>marsosk@marsosk.sk</strong>.</p>
+        `
+      },
+      obchodne: {
+        title: 'Obchodné a dodacie podmienky',
+        body: `
+          <p><strong>1. Úvodné ustanovenia:</strong> Tieto obchodné podmienky upravujú dodávky stavebných prác, reziva a remeselných diel spoločnosťou Maršo-SK, s.r.o.</p>
+          <p><strong>2. Cenové ponuky a objednávky:</strong> Cenová ponuka vypracovaná na základe výkazu výmer alebo projektovej dokumentácie je orientačná až do finálneho zamerania na stavbe. Záväzná zmluva o dielo / objednávka vzniká písomným potvrdením oboch strán.</p>
+          <p><strong>3. Dodanie tovaru a reziva:</strong> Skladový tovar (rezivo, laty, OSB, brikety) je ihneď k odberu v Pezinku. V prípade dovozu sklápačom Tatra 815 je termín dohodnutý vopred podľa harmonogramu zákazníka.</p>
+          <p><strong>4. Záruka a reklamácie:</strong> Na vykonané stavebné práce a remeselné diela poskytujeme zákonnú záruku. U dreva ako prírodného materiálu sa zohľadňujú jeho prirodzené vlastnosti a prípustné tolerancie.</p>
+        `
+      }
+    };
+
+    function openModal(type) {
+      const data = legalTexts[type];
+      if (!data) return;
+      document.getElementById('legalModalTitle').textContent = data.title;
+      document.getElementById('legalModalBody').innerHTML = data.body;
+      document.getElementById('legalModal').classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLegalModal(e) {
+      document.getElementById('legalModal').classList.add('hidden');
+      document.body.style.overflow = '';
+    }
+
+    // ---------- LIVE OPENING HOURS STATUS ----------
+    function updateOpeningHours() {
+      const badge = document.getElementById('liveHoursBadge');
+      if (!badge) return;
+      const now = new Date();
+      const day = now.getDay(); // 0 is Sunday, 6 is Saturday
+      const hour = now.getHours();
+      const isOpen = (day >= 1 && day <= 5) && (hour >= 8 && hour < 15);
+      
+      if (isOpen) {
+        badge.innerHTML = 'Po–Pia: 08:00 – 15:00 <span class="text-emerald-400 font-bold">(Teraz otvorené)</span>';
+      } else {
+        badge.innerHTML = 'Po–Pia: 08:00 – 15:00 <span class="text-amberwood-400 font-medium">(Zatvorené, otvárame o 08:00)</span>';
+      }
+    }
+
+    // ---------- INITIALIZATION ----------
+    window.addEventListener('DOMContentLoaded', () => {
+      renderGallery();
+      setCalcCategory('pivnica');
+      updateOpeningHours();
+    });
+  </script>
+</body>
+</html>
