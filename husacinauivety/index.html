@@ -1,0 +1,2324 @@
+<!DOCTYPE html>
+<html lang="sk" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Husacina u Ivety | Slovenský Grob — Kráľovstvo chrumkavej husaciny a grobských tradícií</title>
+  <meta name="description" content="Autentická rodinná reštaurácia v Slovenskom Grobe. Chrumkavá hus pečená v tradičných hlinených pekáčoch na objednávku, domáca husacia pečienka, ručne vaľkané lokše a príjemné ľudové prostredie s grobskými čipkami.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Husacina u Ivety — Chrumkavá pečená hus a grobské špeciality v Slovenskom Grobe">
+  <meta property="og:description" content="Tradičné husacie hody u Ivety Noskovičovej. Pečieme výhradne čerstvo na objednávku v hlinených pekáčoch. Kapacita 67 miest, krb vo dvore, detské ihrisko, parkovisko.">
+  <meta property="og:image" content="images/cropped-Hody-2.jpg">
+  <meta property="og:type" content="website">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clay: {
+              50: '#FDF7F4',
+              100: '#FBECE6',
+              200: '#F7D7CA',
+              300: '#EEBAA6',
+              400: '#E09273',
+              500: '#CF6C45',
+              600: '#B85128',
+              700: '#943E1D',
+              800: '#75321A',
+              900: '#4D2010',
+              950: '#2A0F06'
+            },
+            crust: {
+              50: '#FCF9EE',
+              100: '#F8F1D6',
+              200: '#F0E0A6',
+              300: '#E4CB6C',
+              400: '#D7B439',
+              500: '#C09A20',
+              600: '#A17A16',
+              700: '#7B5913',
+              800: '#583D11',
+              900: '#3D2A0D'
+            },
+            wine: {
+              800: '#5A1324',
+              900: '#3D0A16',
+              950: '#26040C'
+            },
+            hearth: {
+              800: '#261C18',
+              900: '#1A120E',
+              950: '#110B08'
+            }
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            display: ['"Cinzel"', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            folk: ['"Caveat"', 'cursive']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Pro/Free Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <style>
+    /* Folk embroidery pattern border simulation */
+    .grob-lace-pattern {
+      background-image: radial-gradient(#CF6C45 1.5px, transparent 1.5px), radial-gradient(#CF6C45 1.5px, #FDF7F4 1.5px);
+      background-size: 24px 24px;
+      background-position: 0 0, 12px 12px;
+      opacity: 0.07;
+    }
+    .grob-folk-strip {
+      background: repeating-linear-gradient(45deg, #CF6C45, #CF6C45 10px, #C09A20 10px, #C09A20 20px, #5A1324 20px, #5A1324 30px);
+      height: 4px;
+    }
+    /* Glassmorphism */
+    .glass-nav {
+      background: rgba(26, 18, 14, 0.88);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+    }
+    .glass-card {
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(10px);
+    }
+    .glass-dark {
+      background: rgba(26, 18, 14, 0.92);
+      backdrop-filter: blur(12px);
+    }
+    /* Ambient fire glow */
+    .hearth-glow {
+      box-shadow: 0 0 60px -15px rgba(207, 108, 69, 0.35);
+    }
+    /* Smooth custom scrollbars */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #1A120E;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #75321A;
+      border-radius: 5px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #CF6C45;
+    }
+  </style>
+</head>
+<body class="bg-[#FAF7F2] text-[#2C221E] font-sans antialiased selection:bg-clay-600 selection:text-white">
+
+  <!-- TOP BAR: Status & Quick Contacts -->
+  <aside aria-label="Rýchle kontakty" class="bg-hearth-950 text-white/90 text-xs py-2 px-4 border-b border-white/10 relative z-50">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3">
+      <div class="flex items-center gap-4 flex-wrap">
+        <span class="inline-flex items-center gap-1.5 bg-clay-700/60 text-crust-200 px-2.5 py-0.5 rounded-full border border-clay-500/30">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span>Pečieme výhradne čerstvo na objednávku</span>
+        </span>
+        <span class="hidden sm:inline-flex items-center gap-1.5 text-white/70">
+          <i class="fa-solid fa-location-dot text-clay-400"></i>
+          Pezinská 28, Slovenský Grob (iba 15 min z Bratislavy)
+        </span>
+      </div>
+
+      <div class="flex items-center gap-4 flex-wrap">
+        <a href="tel:+421336478391" class="hover:text-crust-300 transition-colors flex items-center gap-1.5 font-medium">
+          <i class="fa-solid fa-phone text-clay-400 text-[11px]"></i>
+          <span>033 / 64 783 91</span>
+        </a>
+        <span class="text-white/20">|</span>
+        <a href="tel:+421904937173" class="hover:text-crust-300 transition-colors flex items-center gap-1.5 font-medium">
+          <i class="fa-solid fa-mobile-screen text-clay-400 text-[11px]"></i>
+          <span>0904 937 173</span>
+        </a>
+        <span class="text-white/20 hidden md:inline">|</span>
+        <!-- Sound of Hearth Fire (Web Audio) -->
+        <button id="hearth-audio-btn" onclick="toggleHearthSound()" class="hidden md:flex items-center gap-1.5 text-crust-300/80 hover:text-crust-200 transition-colors bg-white/5 hover:bg-white/10 px-2.5 py-0.5 rounded border border-white/10 text-[11px]" title="Zapnúť/Vypnúť upokojujúci zvuk praskania krbu">
+          <i id="hearth-audio-icon" class="fa-solid fa-fire text-clay-400"></i>
+          <span id="hearth-audio-text">Zvuk krbu</span>
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- STICKY HEADER -->
+  <header class="sticky top-0 z-40 glass-nav border-b border-white/10 transition-all duration-300 shadow-xl" id="main-header">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <!-- Logo -->
+        <a href="#hero" class="flex items-center gap-3.5 group">
+          <div class="relative w-12 h-12 rounded-full overflow-hidden border-2 border-crust-400/80 shadow-md group-hover:scale-105 transition-transform">
+            <img src="images/cropped-logo.jpg" alt="Husacina u Ivety Logo" class="w-full h-full object-cover">
+          </div>
+          <div>
+            <span class="block font-serif text-xl sm:text-2xl font-bold tracking-tight text-white group-hover:text-crust-300 transition-colors">
+              Husacina u Ivety
+            </span>
+            <span class="block text-[11px] uppercase tracking-widest text-crust-300/90 font-medium font-sans -mt-0.5">
+              Husacie hody · Slovenský Grob
+            </span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden lg:flex items-center gap-7 text-sm font-medium text-white/90">
+          <a href="#tradicia" class="hover:text-crust-300 transition-colors">Tradícia & Príbeh</a>
+          <a href="#menu" class="hover:text-crust-300 transition-colors flex items-center gap-1">
+            <span>Jedálny lístok</span>
+            <span class="text-[10px] bg-clay-600/80 text-white px-1.5 py-0.2 rounded font-sans">2026</span>
+          </a>
+          <a href="#balicky" class="hover:text-crust-300 transition-colors">Zážitkové hostiny</a>
+          <a href="#kalkulacka" class="hover:text-crust-300 transition-colors text-crust-300 font-semibold flex items-center gap-1.5">
+            <i class="fa-solid fa-calculator text-xs text-clay-400"></i>
+            <span>Kalkulačka hostiny</span>
+          </a>
+          <a href="#priestory" class="hover:text-crust-300 transition-colors">Priestory & Dvor</a>
+          <a href="#galeria" class="hover:text-crust-300 transition-colors">Galéria</a>
+          <a href="#kontakt" class="hover:text-crust-300 transition-colors">Kontakt</a>
+        </nav>
+
+        <!-- CTA & Mobile Trigger -->
+        <div class="flex items-center gap-3">
+          <a href="#rezervacia" class="hidden sm:inline-flex items-center gap-2 bg-gradient-to-r from-clay-600 to-clay-700 hover:from-clay-500 hover:to-clay-600 text-white px-5 py-2.5 rounded-full font-semibold text-sm shadow-lg shadow-clay-950/40 hover:shadow-clay-600/30 hover:-translate-y-0.5 transition-all">
+            <i class="fa-solid fa-utensils text-xs text-crust-300"></i>
+            <span>Rezervovať hus</span>
+          </a>
+
+          <!-- Mobile Menu Button -->
+          <button id="mobile-menu-toggle" onclick="toggleMobileMenu()" class="lg:hidden p-2 text-white/80 hover:text-white rounded-lg focus:outline-none" aria-label="Menu">
+            <i id="mobile-menu-icon" class="fa-solid fa-bars text-xl"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobile-menu" class="hidden lg:hidden glass-dark border-t border-white/10 px-4 pt-3 pb-6 space-y-3">
+      <a href="#tradicia" onclick="toggleMobileMenu()" class="block py-2 text-white/90 hover:text-crust-300 font-medium">Tradícia & Príbeh</a>
+      <a href="#menu" onclick="toggleMobileMenu()" class="block py-2 text-white/90 hover:text-crust-300 font-medium">Jedálny lístok</a>
+      <a href="#balicky" onclick="toggleMobileMenu()" class="block py-2 text-white/90 hover:text-crust-300 font-medium">Zážitkové hostiny</a>
+      <a href="#kalkulacka" onclick="toggleMobileMenu()" class="block py-2 text-crust-300 hover:text-white font-semibold flex items-center gap-2">
+        <i class="fa-solid fa-calculator text-clay-400"></i>
+        <span>Kalkulačka hostiny pre partiu</span>
+      </a>
+      <a href="#priestory" onclick="toggleMobileMenu()" class="block py-2 text-white/90 hover:text-crust-300 font-medium">Priestory, Krb & Detské ihrisko</a>
+      <a href="#galeria" onclick="toggleMobileMenu()" class="block py-2 text-white/90 hover:text-crust-300 font-medium">Fotogaléria</a>
+      <a href="#kontakt" onclick="toggleMobileMenu()" class="block py-2 text-white/90 hover:text-crust-300 font-medium">Kontakt & Trasa</a>
+      <div class="pt-2 border-t border-white/10 flex flex-col gap-2">
+        <a href="#rezervacia" onclick="toggleMobileMenu()" class="w-full text-center bg-clay-600 hover:bg-clay-500 text-white py-3 rounded-xl font-bold">
+          <i class="fa-solid fa-calendar-check mr-2"></i> Rezervovať stôl a hus
+        </a>
+        <div class="grid grid-cols-2 gap-2 text-center text-xs text-white/80 pt-1">
+          <a href="tel:+421336478391" class="bg-white/5 py-2 rounded-lg hover:bg-white/10">033 / 64 783 91</a>
+          <a href="tel:+421904937173" class="bg-white/5 py-2 rounded-lg hover:bg-white/10">0904 937 173</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section id="hero" class="relative min-h-[92vh] flex items-center justify-center overflow-hidden bg-hearth-950 text-white">
+    <!-- Background Image with Overlay -->
+    <div class="absolute inset-0 z-0">
+      <img src="images/cropped-Hody-2.jpg" alt="Tradičná pečená hus v Slovenskom Grobe" class="w-full h-full object-cover object-center scale-105 animate-[pulse_10s_ease-in-out_infinite] opacity-40">
+      <div class="absolute inset-0 bg-gradient-to-t from-hearth-950 via-hearth-950/70 to-hearth-950/40"></div>
+      <div class="absolute inset-0 grob-lace-pattern pointer-events-none"></div>
+    </div>
+
+    <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
+      <!-- Folk Badge -->
+      <div class="inline-flex items-center gap-2.5 bg-clay-900/80 border border-clay-500/40 px-4 py-1.5 rounded-full text-crust-200 text-xs sm:text-sm font-medium tracking-wide mb-6 shadow-lg backdrop-blur-md">
+        <i class="fa-solid fa-award text-crust-400"></i>
+        <span>Viac ako 120-ročná grobská tradícia · Rodinné husacie hody</span>
+      </div>
+
+      <!-- Main Title -->
+      <h1 class="font-serif text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight text-white leading-[1.12] mb-6 drop-shadow-md">
+        Kráľovstvo chrumkavej husaciny <br class="hidden sm:block">
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-crust-300 via-crust-200 to-clay-300">
+          v Slovenskom Grobe
+        </span>
+      </h1>
+
+      <!-- Subtitle -->
+      <p class="text-lg sm:text-xl md:text-2xl text-white/80 max-w-3xl mx-auto font-light leading-relaxed mb-10">
+        Vychutnajte si hus upečenú do zlato-chrumkava v hlinenom pekáči, 
+        teplú husaciu pečienku rozplývajúcu sa na jazyku, čerstvo mastené zemiakové lokše a pohár malokarpatského vína.
+      </p>
+
+      <!-- Key highlights pills -->
+      <div class="flex flex-wrap justify-center items-center gap-3 sm:gap-4 mb-10 text-xs sm:text-sm text-white/90">
+        <div class="bg-white/10 backdrop-blur-md px-3.5 py-1.5 rounded-lg border border-white/10 flex items-center gap-2">
+          <i class="fa-solid fa-clock text-crust-400"></i>
+          <span>Iba čerstvo na objednávku</span>
+        </div>
+        <div class="bg-white/10 backdrop-blur-md px-3.5 py-1.5 rounded-lg border border-white/10 flex items-center gap-2">
+          <i class="fa-solid fa-plate-wheat text-crust-400"></i>
+          <span>Hlinené pekáče</span>
+        </div>
+        <div class="bg-white/10 backdrop-blur-md px-3.5 py-1.5 rounded-lg border border-white/10 flex items-center gap-2">
+          <i class="fa-solid fa-users text-crust-400"></i>
+          <span>Salónik 67 miest</span>
+        </div>
+        <div class="bg-white/10 backdrop-blur-md px-3.5 py-1.5 rounded-lg border border-white/10 flex items-center gap-2">
+          <i class="fa-solid fa-fire text-clay-400"></i>
+          <span>Krb vo dvore & Detské ihrisko</span>
+        </div>
+        <div class="bg-white/10 backdrop-blur-md px-3.5 py-1.5 rounded-lg border border-white/10 flex items-center gap-2">
+          <i class="fa-solid fa-square-parking text-emerald-400"></i>
+          <span>Bezplatné parkovisko vo dvore</span>
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="#rezervacia" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-gradient-to-r from-clay-600 to-clay-700 hover:from-clay-500 hover:to-clay-600 text-white font-bold text-base px-8 py-4 rounded-full shadow-2xl shadow-clay-950 hover:shadow-clay-600/50 hover:-translate-y-1 transition-all">
+          <i class="fa-solid fa-calendar-check text-crust-300 text-lg"></i>
+          <span>Rezervovať stôl & hus</span>
+        </a>
+        <a href="#kalkulacka" class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-white/10 hover:bg-white/20 text-white font-semibold text-base px-7 py-4 rounded-full border border-white/20 backdrop-blur-md transition-all">
+          <i class="fa-solid fa-calculator text-crust-400"></i>
+          <span>Kalkulačka hostiny pre partiu</span>
+        </a>
+        <a href="#menu" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 text-white/70 hover:text-white font-medium text-base px-5 py-4 transition-colors">
+          <span>Pozrieť jedálny lístok</span>
+          <i class="fa-solid fa-arrow-down text-xs"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- Folk ribbon ornament at bottom -->
+    <div class="absolute bottom-0 left-0 right-0 grob-folk-strip"></div>
+  </section>
+
+  <!-- QUICK INFO BANNER: Notice about Pre-Orders -->
+  <section class="bg-crust-100 border-b border-crust-200 py-4 px-4 text-hearth-900">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-3 text-sm">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-full bg-clay-700 text-white flex items-center justify-center flex-shrink-0 shadow-sm">
+          <i class="fa-solid fa-hourglass-half"></i>
+        </div>
+        <div>
+          <span class="font-bold text-clay-900 block sm:inline">Prečo pečieme výlučne na objednávku?</span>
+          <span class="text-hearth-800/80"> Poctivá hus sa v hlinenom pekáči pečie pomaly vyše 3 hodín. Aby bola chrumkavá a horúca priamo na váš príchod, potrebujeme vašu rezerváciu aspoň 24–48 h vopred.</span>
+        </div>
+      </div>
+      <a href="tel:+421904937173" class="flex-shrink-0 font-bold text-clay-700 hover:text-clay-900 inline-flex items-center gap-1.5 underline underline-offset-4">
+        <span>Zavolať hneď: 0904 937 173</span>
+        <i class="fa-solid fa-arrow-right text-xs"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- TRADITION & STORY SECTION -->
+  <section id="tradicia" class="py-20 lg:py-28 bg-[#FAF7F2] relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        
+        <!-- Images Composition -->
+        <div class="lg:col-span-6 relative">
+          <div class="relative z-10 rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
+            <img src="images/triedenie2022406a8809.jpg" alt="Chrumkavá pečená hus v hlinenom pekáči" class="w-full h-[400px] sm:h-[480px] object-cover hover:scale-105 transition-transform duration-700">
+            <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-6 text-white">
+              <span class="text-xs uppercase tracking-widest text-crust-300 font-semibold">Originál Slovenský Grob</span>
+              <p class="font-serif text-lg font-bold">Pravé hlinené pekáče z modranskej hliny</p>
+            </div>
+          </div>
+
+          <!-- Secondary Image floating badge -->
+          <div class="absolute -bottom-6 -right-6 sm:bottom-6 sm:-right-8 z-20 w-44 sm:w-56 rounded-2xl overflow-hidden shadow-2xl border-4 border-white hidden sm:block">
+            <img src="images/triedenie2022406a8775.jpg" alt="Lokše a husacia pečienka" class="w-full h-36 object-cover">
+            <div class="bg-hearth-900 text-white p-2.5 text-center text-xs">
+              <span class="text-crust-300 font-bold block">Ručne vaľkané</span>
+              <span class="text-[11px] text-white/80">lokše pečené na platni</span>
+            </div>
+          </div>
+
+          <!-- Decorative folk pattern background -->
+          <div class="absolute -top-8 -left-8 w-48 h-48 bg-clay-200/50 rounded-full blur-3xl -z-10"></div>
+          <div class="absolute -bottom-8 -right-8 w-60 h-60 bg-crust-200/60 rounded-full blur-3xl -z-10"></div>
+        </div>
+
+        <!-- Story Content -->
+        <div class="lg:col-span-6 space-y-6">
+          <div class="inline-flex items-center gap-2 text-clay-700 font-bold uppercase tracking-wider text-xs">
+            <span class="w-8 h-[2px] bg-clay-600"></span>
+            <span>Slovo na úvod · Rodina Noskovičová</span>
+          </div>
+
+          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-hearth-950 leading-tight">
+            Vôňa, ktorá po generácie spája rodiny pri jednom stole
+          </h2>
+
+          <p class="text-base sm:text-lg text-[#5A4840] leading-relaxed">
+            Dedina <strong class="text-hearth-950 font-semibold">Slovenský Grob</strong>, ležiaca na úpätí Malých Karpát v tesnej blízkosti Bratislavy a Pezinka, je svetoznáma svojou vyše storočnou tradíciou pečenia husí, zemiakových lokší a lahodnej pečienky.
+          </p>
+
+          <p class="text-base sm:text-lg text-[#5A4840] leading-relaxed">
+            Naša rodinná reštaurácia s názvom <strong class="text-clay-800 font-semibold">,,Husacie hody – Iveta Noskovičová“</strong> patrí už dlhé roky k obľúbeným zastávkam domácich aj zahraničných gurmánov. Vytvorili sme pre vás autentické ľudové prostredie vyzdobené originálnymi grobskými čipkami a tradičnými ornamentálnymi maľbami.
+          </p>
+
+          <!-- 3 Pillars Grid -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4">
+            <div class="bg-white p-4 rounded-2xl border border-clay-100 shadow-sm">
+              <div class="text-clay-600 text-2xl mb-2">
+                <i class="fa-solid fa-fire-burner"></i>
+              </div>
+              <h3 class="font-bold text-sm text-hearth-950 mb-1">Pomalé pečenie</h3>
+              <p class="text-xs text-hearth-800/80">3+ hodiny v hlinenom pekáči s polievaním mliekom a masťou pre křupavú kôrku.</p>
+            </div>
+
+            <div class="bg-white p-4 rounded-2xl border border-clay-100 shadow-sm">
+              <div class="text-crust-600 text-2xl mb-2">
+                <i class="fa-solid fa-wheat-awn"></i>
+              </div>
+              <h3 class="font-bold text-sm text-hearth-950 mb-1">Poctivé lokše</h3>
+              <p class="text-xs text-hearth-800/80">Zemiaky, múka, štipka soli. Pečené na suchej platni a potreté husacím tukom.</p>
+            </div>
+
+            <div class="bg-white p-4 rounded-2xl border border-clay-100 shadow-sm">
+              <div class="text-wine-800 text-2xl mb-2">
+                <i class="fa-solid fa-wine-glass"></i>
+              </div>
+              <h3 class="font-bold text-sm text-hearth-950 mb-1">Malokarpatské vína</h3>
+              <p class="text-xs text-hearth-800/80">Veltlín, Frankovka a sezónny burčiak priamo z okolitých viníc.</p>
+            </div>
+          </div>
+
+          <!-- Quote from Hostess -->
+          <div class="bg-clay-50 border-l-4 border-clay-600 p-4 rounded-r-2xl italic text-sm text-clay-900 font-serif">
+            „U nás nepripravujeme jedlo v predstihu do zásoby. Každá hus začína voňať v peci až vtedy, keď vieme, kedy k nám prídete. Preto je naša husacina vždy čerstvá, horúca a šťavnatá.“
+            <span class="block text-xs font-sans not-italic font-bold text-clay-700 mt-2">— Iveta Noskovičová, majiteľka</span>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FEAST CALCULATOR SECTION (GROB FEAST CALCULATOR) -->
+  <section id="kalkulacka" class="py-20 bg-gradient-to-b from-hearth-950 via-hearth-900 to-hearth-950 text-white relative">
+    <div class="absolute inset-0 grob-lace-pattern opacity-10 pointer-events-none"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <span class="inline-flex items-center gap-2 text-crust-400 font-bold uppercase tracking-wider text-xs bg-white/5 px-3 py-1 rounded-full border border-white/10">
+          <i class="fa-solid fa-wand-magic-sparkles"></i>
+          <span>Plánovač hostiny & Prepočet ceny</span>
+        </span>
+        <h2 class="font-serif text-3xl sm:text-5xl font-bold tracking-tight text-white mt-3 mb-4">
+          Grob Feast Calculator™
+        </h2>
+        <p class="text-white/70 text-base sm:text-lg">
+          Neviete, koľko husí a lokší objednať pre vašu rodinu, firmu alebo priateľov? Nastavte počet hostí a náš inteligentný kalkulátor vám okamžite zostaví dokonalé vyvážené grobské menu!
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- Controls Column -->
+        <div class="lg:col-span-7 bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl p-6 sm:p-8 space-y-6">
+          <!-- Guest Count Slider -->
+          <div>
+            <div class="flex justify-between items-center mb-3">
+              <label for="guests-slider" class="text-base sm:text-lg font-bold text-white flex items-center gap-2">
+                <i class="fa-solid fa-users text-clay-400"></i>
+                <span>Počet hostí na hostine:</span>
+              </label>
+              <div class="bg-clay-600 text-white px-4 py-1.5 rounded-xl font-bold text-xl sm:text-2xl shadow-inner flex items-center gap-1.5">
+                <span id="guests-count-display">8</span>
+                <span class="text-xs font-normal text-white/80">osôb</span>
+              </div>
+            </div>
+            
+            <input type="range" id="guests-slider" min="2" max="60" value="8" step="1" 
+                   oninput="updateCalculator()" 
+                   class="w-full h-3 bg-hearth-800 rounded-lg appearance-none cursor-pointer accent-clay-500">
+            <div class="flex justify-between text-xs text-white/40 mt-1">
+              <span>2 osoby (romantika)</span>
+              <span>8 osôb (rodina)</span>
+              <span>20 osôb (večierok)</span>
+              <span>60 osôb (celý salónik)</span>
+            </div>
+          </div>
+
+          <!-- Style of Feast Preset Buttons -->
+          <div>
+            <span class="block text-xs uppercase tracking-wider text-white/60 font-semibold mb-2.5">
+              Alebo zvoľte typ hostiny:
+            </span>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
+              <button onclick="setGuests(4)" class="preset-btn py-2 px-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-xs text-center transition-all">
+                <span class="font-bold block">4 osoby</span>
+                <span class="text-[10px] text-white/60">1 celá hus</span>
+              </button>
+              <button onclick="setGuests(8)" class="preset-btn active-preset py-2 px-3 rounded-xl bg-clay-600 text-white border border-clay-500 text-xs text-center transition-all">
+                <span class="font-bold block">8 osôb</span>
+                <span class="text-[10px] text-white/80">2 pečené husi</span>
+              </button>
+              <button onclick="setGuests(15)" class="preset-btn py-2 px-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-xs text-center transition-all">
+                <span class="font-bold block">15 osôb</span>
+                <span class="text-[10px] text-white/60">Rodinná oslava</span>
+              </button>
+              <button onclick="setGuests(30)" class="preset-btn py-2 px-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-xs text-center transition-all">
+                <span class="font-bold block">30 osôb</span>
+                <span class="text-[10px] text-white/60">Firemný večierok</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Custom Options Toggles -->
+          <div class="pt-4 border-t border-white/10 space-y-3">
+            <span class="block text-xs uppercase tracking-wider text-white/60 font-semibold mb-1">
+              Prispôsobenie chutí vašej partie:
+            </span>
+
+            <label class="flex items-center justify-between p-3 rounded-xl bg-white/5 border border-white/5 hover:bg-white/10 cursor-pointer transition-all">
+              <div class="flex items-center gap-3">
+                <i class="fa-solid fa-bowl-food text-crust-400"></i>
+                <div>
+                  <span class="text-sm font-semibold text-white block">Zahrnúť husací vývar s drobkami</span>
+                  <span class="text-xs text-white/50">Hustá polievka s domácimi rezancami (misa)</span>
+                </div>
+              </div>
+              <input type="checkbox" id="calc-include-soup" checked onchange="updateCalculator()" class="w-5 h-5 rounded accent-clay-500">
+            </label>
+
+            <label class="flex items-center justify-between p-3 rounded-xl bg-white/5 border border-white/5 hover:bg-white/10 cursor-pointer transition-all">
+              <div class="flex items-center gap-3">
+                <i class="fa-solid fa-cake-candles text-crust-400"></i>
+                <div>
+                  <span class="text-sm font-semibold text-white block">Sladká bodka: Makové a orechové lokše</span>
+                  <span class="text-xs text-white/50">Tradičný grobský dezert (1 ks na osobu)</span>
+                </div>
+              </div>
+              <input type="checkbox" id="calc-include-dessert" checked onchange="updateCalculator()" class="w-5 h-5 rounded accent-clay-500">
+            </label>
+
+            <label class="flex items-center justify-between p-3 rounded-xl bg-white/5 border border-white/5 hover:bg-white/10 cursor-pointer transition-all">
+              <div class="flex items-center gap-3">
+                <i class="fa-solid fa-wine-bottle text-clay-400"></i>
+                <div>
+                  <span class="text-sm font-semibold text-white block">Malokarpatské víno / Sezónny burčiak</span>
+                  <span class="text-xs text-white/50">Odporúčané 0,5 l vína na dospelú osobu</span>
+                </div>
+              </div>
+              <input type="checkbox" id="calc-include-wine" checked onchange="updateCalculator()" class="w-5 h-5 rounded accent-clay-500">
+            </label>
+          </div>
+        </div>
+
+        <!-- Calculated Summary Card -->
+        <div class="lg:col-span-5 bg-gradient-to-b from-hearth-800 to-hearth-900 border-2 border-clay-500/50 rounded-3xl p-6 sm:p-8 shadow-2xl relative">
+          <div class="absolute -top-3.5 right-6 bg-gradient-to-r from-clay-500 to-clay-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-md">
+            Odporúčané zloženie
+          </div>
+
+          <h3 class="font-serif text-2xl font-bold text-white mb-4">
+            Vaša hostina pre <span id="summary-guests" class="text-crust-300">8</span> osôb
+          </h3>
+
+          <!-- Items Breakdown -->
+          <ul class="space-y-3 text-sm text-white/80 border-b border-white/10 pb-6 mb-6">
+            <li class="flex items-center justify-between">
+              <span class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-emerald-400 text-xs"></i>
+                <span>Pečená hus (chrumkavá)</span>
+              </span>
+              <strong id="calc-geese" class="text-white font-bold">2 ks</strong>
+            </li>
+            <li class="flex items-center justify-between">
+              <span class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-emerald-400 text-xs"></i>
+                <span>Husacia pečienka (porcie 150g)</span>
+              </span>
+              <strong id="calc-liver" class="text-white font-bold">4 porcie</strong>
+            </li>
+            <li class="flex items-center justify-between">
+              <span class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-emerald-400 text-xs"></i>
+                <span>Mastené zemiakové lokše</span>
+              </span>
+              <strong id="calc-lokse" class="text-white font-bold">20 ks</strong>
+            </li>
+            <li class="flex items-center justify-between">
+              <span class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-emerald-400 text-xs"></i>
+                <span>Dusená červená kapusta</span>
+              </span>
+              <strong id="calc-cabbage" class="text-white font-bold">8 porcií</strong>
+            </li>
+            <li class="flex items-center justify-between">
+              <span class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-emerald-400 text-xs"></i>
+                <span>Kyslý miešaný tanier (uhorky, alma, feferóny)</span>
+              </span>
+              <strong id="calc-pickles" class="text-white font-bold">2 misy</strong>
+            </li>
+            <li id="calc-row-soup" class="flex items-center justify-between">
+              <span class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-emerald-400 text-xs"></i>
+                <span>Husacia polievková misa</span>
+              </span>
+              <strong id="calc-soup" class="text-white font-bold">1 misa (6–8 os.)</strong>
+            </li>
+            <li id="calc-row-dessert" class="flex items-center justify-between">
+              <span class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-emerald-400 text-xs"></i>
+                <span>Sladké lokše (mak / orechy)</span>
+              </span>
+              <strong id="calc-dessert" class="text-white font-bold">8 ks</strong>
+            </li>
+            <li id="calc-row-wine" class="flex items-center justify-between">
+              <span class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-emerald-400 text-xs"></i>
+                <span>Malokarpatské víno / Burčiak</span>
+              </span>
+              <strong id="calc-wine" class="text-white font-bold">4 fľaše</strong>
+            </li>
+          </ul>
+
+          <!-- Pricing summary -->
+          <div class="space-y-2 mb-6">
+            <div class="flex items-baseline justify-between">
+              <span class="text-white/60 text-sm">Predbežná cena hostiny:</span>
+              <span class="font-serif text-3xl sm:text-4xl font-bold text-crust-300" id="calc-total-price">396 €</span>
+            </div>
+            <div class="flex items-center justify-between text-xs text-white/70">
+              <span>Prepočet na 1 osobu:</span>
+              <span class="font-bold text-white text-base" id="calc-per-person">cca 49,50 € / os.</span>
+            </div>
+            <p class="text-[11px] text-white/50 italic pt-1">
+              * Presná cena sa upresní pri telefonickom potvrdení podľa vašich preferencií a aktuálneho výberu vín.
+            </p>
+          </div>
+
+          <!-- Transfer to Booking Button -->
+          <button onclick="applyCalculatorToBooking()" class="w-full bg-gradient-to-r from-clay-500 to-clay-600 hover:from-clay-400 hover:to-clay-500 text-white py-3.5 px-4 rounded-xl font-bold text-sm sm:text-base flex items-center justify-center gap-2 shadow-lg hover:shadow-clay-500/40 transition-all">
+            <i class="fa-solid fa-arrow-down-to-bracket text-crust-200"></i>
+            <span>Preniesť túto hostinu do rezervácie</span>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PACKAGES / HOSTINY SECTION -->
+  <section id="balicky" class="py-20 bg-[#FAF7F2]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="inline-flex items-center gap-2 text-clay-700 font-bold uppercase tracking-wider text-xs">
+          <span class="w-8 h-[2px] bg-clay-600"></span>
+          <span>Preverené zostavy pre gurmánov</span>
+          <span class="w-8 h-[2px] bg-clay-600"></span>
+        </span>
+        <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-hearth-950 mt-3 mb-4">
+          Zážitkové husacie balíčky
+        </h2>
+        <p class="text-[#5A4840] text-base sm:text-lg">
+          Pripravili sme pre vás najobľúbenejšie kombinácie grobských hodov. Stačí si vybrať balíček a my všetko načas upečieme.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Package 1: Malá grobská klasika -->
+        <div class="bg-white rounded-3xl border border-clay-100 shadow-xl overflow-hidden flex flex-col hover:-translate-y-1.5 transition-all duration-300">
+          <div class="h-48 overflow-hidden relative">
+            <img src="images/triedenie2022406a8774.jpg" alt="Grobská klasika" class="w-full h-full object-cover">
+            <div class="absolute top-4 left-4 bg-hearth-950/80 backdrop-blur-md text-white text-xs px-3 py-1 rounded-full font-bold">
+              Pre 4–5 osôb
+            </div>
+          </div>
+          <div class="p-6 sm:p-8 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="font-serif text-2xl font-bold text-hearth-950 mb-2">Grobská klasika</h3>
+              <p class="text-xs text-[#5A4840] mb-6">Ideálne pre menšiu rodinu, kolegov alebo priateľov na víkendový gurmánsky obed.</p>
+
+              <ul class="space-y-2.5 text-xs sm:text-sm text-hearth-900 mb-8">
+                <li class="flex items-center gap-2.5">
+                  <i class="fa-solid fa-circle-check text-clay-600 text-xs"></i>
+                  <span><strong>1x Pečená hus</strong> (chrumkavá celá hus)</span>
+                </li>
+                <li class="flex items-center gap-2.5">
+                  <i class="fa-solid fa-circle-check text-clay-600 text-xs"></i>
+                  <span><strong>10x Zemiaková lokša mastená</strong></span>
+                </li>
+                <li class="flex items-center gap-2.5">
+                  <i class="fa-solid fa-circle-check text-clay-600 text-xs"></i>
+                  <span><strong>4x Dusená červená kapusta</strong></span>
+                </li>
+                <li class="flex items-center gap-2.5">
+                  <i class="fa-solid fa-circle-check text-clay-600 text-xs"></i>
+                  <span><strong>1x Kyslý tanier</strong> (grobské uhorky, alma)</span>
+                </li>
+                <li class="flex items-center gap-2.5">
+                  <i class="fa-solid fa-circle-check text-clay-600 text-xs"></i>
+                  <span><strong>1x Košík čerstvého chleba</strong></span>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <div class="flex items-baseline justify-between border-t border-clay-100 pt-4 mb-4">
+                <div>
+                  <span class="text-xs text-hearth-800/60 block">Cena za balíček:</span>
+                  <span class="font-serif text-2xl font-bold text-clay-700">153 €</span>
+                </div>
+                <span class="text-xs font-semibold text-hearth-800/80 bg-crust-100 px-2.5 py-1 rounded-md">cca 30 € / os.</span>
+              </div>
+              <button onclick="selectPackage('Grobská klasika (4-5 osôb)', 153, 5)" class="w-full bg-clay-50 hover:bg-clay-600 hover:text-white text-clay-700 font-bold py-3 rounded-xl border border-clay-200 transition-all text-sm">
+                Vybrať tento balíček
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Package 2: Kráľovská husacia hostina (BESTSELLER) -->
+        <div class="bg-white rounded-3xl border-2 border-clay-500 shadow-2xl overflow-hidden flex flex-col relative hover:-translate-y-2 transition-all duration-300">
+          <div class="absolute top-0 right-0 bg-gradient-to-l from-clay-600 to-clay-700 text-white text-xs font-bold px-4 py-1 rounded-bl-xl uppercase tracking-wider z-10 shadow-md">
+            Najobľúbenejšie
+          </div>
+          <div class="h-48 overflow-hidden relative">
+            <img src="images/triedenie2022406a8809.jpg" alt="Kráľovská husacia hostina" class="w-full h-full object-cover">
+            <div class="absolute top-4 left-4 bg-hearth-950/80 backdrop-blur-md text-white text-xs px-3 py-1 rounded-full font-bold">
+              Pre 8–10 osôb
+            </div>
+          </div>
+          <div class="p-6 sm:p-8 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="font-serif text-2xl font-bold text-hearth-950 mb-2">Kráľovská hostina</h3>
+              <p class="text-xs text-[#5A4840] mb-6">Kompletný degustačný zážitok s teplou husacou pečienkou, polievkou a sladkými lokšami.</p>
+
+              <ul class="space-y-2.5 text-xs sm:text-sm text-hearth-900 mb-8">
+                <li class="flex items-center gap-2.5">
+                  <i class="fa-solid fa-circle-check text-clay-600 text-xs"></i>
+                  <span><strong>2x Celá chrumkavá hus</strong> v pekáči</span>
+                </li>
+                <li class="flex items-center gap-2.5">
+                  <i class="fa-solid fa-circle-check text-clay-600 text-xs"></i>
+                  <span><strong>4x Husacia pečienka (150g)</strong> rozplývavá</span>
+                </li>
+                <li class="flex items-center gap-2.5">
+                  <i class="fa-solid fa-circle-check text-clay-600 text-xs"></i>
+                  <span><strong>1x Husacia polievková misa</strong> pre celú partiu</span>
+                </li>
+                <li class="flex items-center gap-2.5">
+                  <i class="fa-solid fa-circle-check text-clay-600 text-xs"></i>
+                  <span><strong>25x Mastené zemiakové lokše</strong></span>
+                </li>
+                <li class="flex items-center gap-2.5">
+                  <i class="fa-solid fa-circle-check text-clay-600 text-xs"></i>
+                  <span><strong>8x Dusená červená kapusta</strong></span>
+                </li>
+                <li class="flex items-center gap-2.5">
+                  <i class="fa-solid fa-circle-check text-clay-600 text-xs"></i>
+                  <span><strong>2x Kyslý grobský tanier</strong></span>
+                </li>
+                <li class="flex items-center gap-2.5">
+                  <i class="fa-solid fa-circle-check text-clay-600 text-xs"></i>
+                  <span><strong>8x Sladká lokša (mak / orechy)</strong></span>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <div class="flex items-baseline justify-between border-t border-clay-100 pt-4 mb-4">
+                <div>
+                  <span class="text-xs text-hearth-800/60 block">Cena za balíček:</span>
+                  <span class="font-serif text-2xl font-bold text-clay-700">460 €</span>
+                </div>
+                <span class="text-xs font-semibold text-clay-800 bg-clay-100 px-2.5 py-1 rounded-md">cca 46 € / os.</span>
+              </div>
+              <button onclick="selectPackage('Kráľovská husacia hostina (8-10 osôb)', 460, 9)" class="w-full bg-clay-600 hover:bg-clay-700 text-white font-bold py-3.5 rounded-xl shadow-lg shadow-clay-600/30 transition-all text-sm">
+                Rezervovať kráľovskú hostinu
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Package 3: Firemný & Rodinný banket -->
+        <div class="bg-white rounded-3xl border border-clay-100 shadow-xl overflow-hidden flex flex-col hover:-translate-y-1.5 transition-all duration-300">
+          <div class="h-48 overflow-hidden relative">
+            <img src="images/triedenie2022406a8785-panorama.jpg" alt="Firemný a rodinný banket" class="w-full h-full object-cover">
+            <div class="absolute top-4 left-4 bg-hearth-950/80 backdrop-blur-md text-white text-xs px-3 py-1 rounded-full font-bold">
+              Pre 20–60 osôb
+            </div>
+          </div>
+          <div class="p-6 sm:p-8 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="font-serif text-2xl font-bold text-hearth-950 mb-2">Exkluzívny banket</h3>
+              <p class="text-xs text-[#5A4840] mb-6">Uzatvorená spoločnosť na kľúč v ľudovom salóniku (67 miest) alebo na dvore pri krbe.</p>
+
+              <ul class="space-y-2.5 text-xs sm:text-sm text-hearth-900 mb-8">
+                <li class="flex items-center gap-2.5">
+                  <i class="fa-solid fa-circle-check text-clay-600 text-xs"></i>
+                  <span><strong>Celý salónik s grobskými čipkami</strong> iba pre vás</span>
+                </li>
+                <li class="flex items-center gap-2.5">
+                  <i class="fa-solid fa-circle-check text-clay-600 text-xs"></i>
+                  <span><strong>Priebežné pečenie husí</strong> podľa harmonogramu</span>
+                </li>
+                <li class="flex items-center gap-2.5">
+                  <i class="fa-solid fa-circle-check text-clay-600 text-xs"></i>
+                  <span><strong>Neobmedzený príliv čerstvých lokší</strong></span>
+                </li>
+                <li class="flex items-center gap-2.5">
+                  <i class="fa-solid fa-circle-check text-clay-600 text-xs"></i>
+                  <span><strong>Možnosť posedenia pri otvorenom krbe</strong></span>
+                </li>
+                <li class="flex items-center gap-2.5">
+                  <i class="fa-solid fa-circle-check text-clay-600 text-xs"></i>
+                  <span><strong>Bezpečné parkovisko pre 15+ áut</strong> vo dvore</span>
+                </li>
+                <li class="flex items-center gap-2.5">
+                  <i class="fa-solid fa-circle-check text-clay-600 text-xs"></i>
+                  <span><strong>Osobný prístup majiteľky Ivety</strong></span>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <div class="flex items-baseline justify-between border-t border-clay-100 pt-4 mb-4">
+                <div>
+                  <span class="text-xs text-hearth-800/60 block">Cena na mieru:</span>
+                  <span class="font-serif text-xl font-bold text-clay-700">Individuálna kalkulácia</span>
+                </div>
+                <span class="text-xs font-semibold text-hearth-800/80 bg-crust-100 px-2.5 py-1 rounded-md">od 42 € / os.</span>
+              </div>
+              <button onclick="selectPackage('Exkluzívny banket (20-60 osôb)', 0, 25)" class="w-full bg-clay-50 hover:bg-clay-600 hover:text-white text-clay-700 font-bold py-3 rounded-xl border border-clay-200 transition-all text-sm">
+                Dopytovať firemný / rodinný banket
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- INTERACTIVE MENU SECTION (JEDÁLNY LÍSTOK 2025/2026) -->
+  <section id="menu" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <span class="inline-flex items-center gap-2 text-clay-700 font-bold uppercase tracking-wider text-xs">
+          <span class="w-8 h-[2px] bg-clay-600"></span>
+          <span>Poctivá gastronómia Slovenského Grobu</span>
+          <span class="w-8 h-[2px] bg-clay-600"></span>
+        </span>
+        <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-hearth-950 mt-3 mb-4">
+          Jedálny lístok & Špeciality
+        </h2>
+        <p class="text-[#5A4840] text-base sm:text-lg">
+          Tradičné receptúry, suroviny od overených slovenských chovateľov a ceny platné od 19. septembra 2025.
+        </p>
+      </div>
+
+      <!-- Category Filter Tabs -->
+      <div class="flex flex-wrap items-center justify-center gap-2 mb-12">
+        <button onclick="filterMenu('all')" class="menu-tab active-tab px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all bg-clay-600 text-white shadow-md">
+          Všetky položky
+        </button>
+        <button onclick="filterMenu('goose')" class="menu-tab px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all bg-clay-50 hover:bg-clay-100 text-hearth-900 border border-clay-200">
+          🦆 Husacina & Pečienka
+        </button>
+        <button onclick="filterMenu('lokse')" class="menu-tab px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all bg-clay-50 hover:bg-clay-100 text-hearth-900 border border-clay-200">
+          🥞 Domáce lokše
+        </button>
+        <button onclick="filterMenu('soup')" class="menu-tab px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all bg-clay-50 hover:bg-clay-100 text-hearth-900 border border-clay-200">
+          🍲 Polievky & Prílohy
+        </button>
+        <button onclick="filterMenu('dessert')" class="menu-tab px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all bg-clay-50 hover:bg-clay-100 text-hearth-900 border border-clay-200">
+          🍰 Dezerty & Štrúdle
+        </button>
+        <button onclick="filterMenu('wine')" class="menu-tab px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all bg-clay-50 hover:bg-clay-100 text-hearth-900 border border-clay-200">
+          🍷 Malokarpatské vína
+        </button>
+      </div>
+
+      <!-- Menu Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6" id="menu-items-grid">
+        
+        <!-- 1. Pečená hus -->
+        <div class="menu-item group bg-[#FAF7F2] p-5 sm:p-6 rounded-2xl border border-clay-200/80 hover:border-clay-400 hover:shadow-lg transition-all flex flex-col sm:flex-row gap-5" data-cat="goose">
+          <div class="w-full sm:w-36 h-36 rounded-xl overflow-hidden flex-shrink-0 relative">
+            <img src="images/triedenie2022406a8809.jpg" alt="Pečená hus" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-2 left-2 bg-clay-600 text-white text-[10px] font-bold px-2 py-0.5 rounded uppercase">Bestseller</span>
+          </div>
+          <div class="flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-start justify-between gap-3 mb-1">
+                <h3 class="font-serif text-lg sm:text-xl font-bold text-hearth-950">Pečená hus celá</h3>
+                <span class="font-serif text-xl font-bold text-clay-700 whitespace-nowrap">110.00 €</span>
+              </div>
+              <span class="inline-block text-xs text-clay-600 font-semibold mb-2">1 ks (výdatné pre 4–5 osôb) · cca 4 kg</span>
+              <p class="text-xs text-hearth-800/80 leading-relaxed">
+                Poctivo vykŕmená hus upečená v tradičnom hlinenom pekáči do zlato-chrumkava. Šťavnaté jemné mäso s nezameniteľnou grobskou arómou.
+              </p>
+            </div>
+            <div class="mt-3 pt-3 border-t border-clay-200/60 flex items-center justify-between text-xs text-hearth-700">
+              <span class="text-emerald-700 font-medium"><i class="fa-solid fa-clock mr-1"></i>Pečieme čerstvo na hodinu</span>
+              <button onclick="addToReservationPreselect('Pečená hus (110 €)')" class="text-clay-600 hover:text-clay-800 font-bold flex items-center gap-1 hover:underline">
+                <span>Pridať</span> <i class="fa-solid fa-plus text-[10px]"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Husacia pečienka (porcia) -->
+        <div class="menu-item group bg-[#FAF7F2] p-5 sm:p-6 rounded-2xl border border-clay-200/80 hover:border-clay-400 hover:shadow-lg transition-all flex flex-col sm:flex-row gap-5" data-cat="goose">
+          <div class="w-full sm:w-36 h-36 rounded-xl overflow-hidden flex-shrink-0 relative">
+            <img src="images/triedenie2022406a8804.jpg" alt="Husacia pečienka" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-2 left-2 bg-crust-600 text-white text-[10px] font-bold px-2 py-0.5 rounded uppercase">Delikatesa</span>
+          </div>
+          <div class="flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-start justify-between gap-3 mb-1">
+                <h3 class="font-serif text-lg sm:text-xl font-bold text-hearth-950">Husacia pečienka (porcia)</h3>
+                <span class="font-serif text-xl font-bold text-clay-700 whitespace-nowrap">18.00 €</span>
+              </div>
+              <span class="inline-block text-xs text-clay-600 font-semibold mb-2">Porcia 150 g *</span>
+              <p class="text-xs text-hearth-800/80 leading-relaxed">
+                Jemná husacia pečeň dusená na vlastnej voňavej masti. Podávaná horúca, ideálna na natretie na čerstvo upečenú zemiakovú lokšu.
+              </p>
+            </div>
+            <div class="mt-3 pt-3 border-t border-clay-200/60 flex items-center justify-between text-xs text-hearth-700">
+              <span class="text-hearth-500 italic">* Váha uvedená v surovom stave</span>
+              <button onclick="addToReservationPreselect('Husacia pečienka porcia (18 €)')" class="text-clay-600 hover:text-clay-800 font-bold flex items-center gap-1 hover:underline">
+                <span>Pridať</span> <i class="fa-solid fa-plus text-[10px]"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Husacia pečienka (1 kg v surovom stave) -->
+        <div class="menu-item group bg-[#FAF7F2] p-5 sm:p-6 rounded-2xl border border-clay-200/80 hover:border-clay-400 hover:shadow-lg transition-all flex flex-col sm:flex-row gap-5" data-cat="goose">
+          <div class="w-full sm:w-36 h-36 rounded-xl overflow-hidden flex-shrink-0 relative">
+            <img src="images/triedenie2022406a8775.jpg" alt="Husacia pečienka 1kg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-2 left-2 bg-hearth-900 text-crust-200 text-[10px] font-bold px-2 py-0.5 rounded uppercase">Pre celú partiu</span>
+          </div>
+          <div class="flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-start justify-between gap-3 mb-1">
+                <h3 class="font-serif text-lg sm:text-xl font-bold text-hearth-950">Husacia pečienka (1 kg misa)</h3>
+                <span class="font-serif text-xl font-bold text-clay-700 whitespace-nowrap">120.00 €</span>
+              </div>
+              <span class="inline-block text-xs text-clay-600 font-semibold mb-2">1 000 g v surovom stave</span>
+              <p class="text-xs text-hearth-800/80 leading-relaxed">
+                Veľká servírovacia misa lahodnej husacej pečienky v čistej masti pre 6 až 10 osôb. Kráľovské pohostenie, ktoré na stole vyvolá nadšenie.
+              </p>
+            </div>
+            <div class="mt-3 pt-3 border-t border-clay-200/60 flex items-center justify-between text-xs text-hearth-700">
+              <span class="text-clay-700 font-medium">Kráľovský štart hostiny</span>
+              <button onclick="addToReservationPreselect('Husacia pečienka 1 kg (120 €)')" class="text-clay-600 hover:text-clay-800 font-bold flex items-center gap-1 hover:underline">
+                <span>Pridať</span> <i class="fa-solid fa-plus text-[10px]"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Lokša mastená -->
+        <div class="menu-item group bg-[#FAF7F2] p-5 sm:p-6 rounded-2xl border border-clay-200/80 hover:border-clay-400 hover:shadow-lg transition-all flex flex-col sm:flex-row gap-5" data-cat="lokse">
+          <div class="w-full sm:w-36 h-36 rounded-xl overflow-hidden flex-shrink-0 relative">
+            <img src="images/triedenie2022406a8766.jpg" alt="Lokša mastená" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-2 left-2 bg-clay-600 text-white text-[10px] font-bold px-2 py-0.5 rounded uppercase">Grobská klasika</span>
+          </div>
+          <div class="flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-start justify-between gap-3 mb-1">
+                <h3 class="font-serif text-lg sm:text-xl font-bold text-hearth-950">Lokša mastená husacou masťou</h3>
+                <span class="font-serif text-xl font-bold text-clay-700 whitespace-nowrap">2.50 €</span>
+              </div>
+              <span class="inline-block text-xs text-clay-600 font-semibold mb-2">40 g · Tradičná ručná práca</span>
+              <p class="text-xs text-hearth-800/80 leading-relaxed">
+                Pravá grobská zemiaková lokša vaľkaná natenko, pečená na suchej platni a bohato natretá horúcou vypečenou husacou masťou.
+              </p>
+            </div>
+            <div class="mt-3 pt-3 border-t border-clay-200/60 flex items-center justify-between text-xs text-hearth-700">
+              <span class="text-hearth-600">Odporúčame 2–4 ks na osobu</span>
+              <button onclick="addToReservationPreselect('Lokša mastená 40g (2.50 €)')" class="text-clay-600 hover:text-clay-800 font-bold flex items-center gap-1 hover:underline">
+                <span>Pridať</span> <i class="fa-solid fa-plus text-[10px]"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. Lokša bezlepková -->
+        <div class="menu-item group bg-[#FAF7F2] p-5 sm:p-6 rounded-2xl border border-clay-200/80 hover:border-clay-400 hover:shadow-lg transition-all flex flex-col sm:flex-row gap-5" data-cat="lokse">
+          <div class="w-full sm:w-36 h-36 rounded-xl overflow-hidden flex-shrink-0 relative">
+            <img src="images/triedenie2022406a8774.jpg" alt="Lokša bezlepková" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-2 left-2 bg-emerald-600 text-white text-[10px] font-bold px-2 py-0.5 rounded uppercase">Pre celiatikov</span>
+          </div>
+          <div class="flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-start justify-between gap-3 mb-1">
+                <h3 class="font-serif text-lg sm:text-xl font-bold text-hearth-950">Lokša bezlepková mastená</h3>
+                <span class="font-serif text-xl font-bold text-clay-700 whitespace-nowrap">3.00 €</span>
+              </div>
+              <span class="inline-block text-xs text-emerald-700 font-semibold mb-2">40 g · 100% Gluten-free receptúra</span>
+              <p class="text-xs text-hearth-800/80 leading-relaxed">
+                Pripravená zo špeciálnej certifikovanej bezlepkovej zmesi, aby si grobské hody mohol bez obáv vychutnať každý hosť.
+              </p>
+            </div>
+            <div class="mt-3 pt-3 border-t border-clay-200/60 flex items-center justify-between text-xs text-hearth-700">
+              <span class="text-emerald-700 font-medium">Vhodné pre celiakiu</span>
+              <button onclick="addToReservationPreselect('Lokša bezlepková (3.00 €)')" class="text-clay-600 hover:text-clay-800 font-bold flex items-center gap-1 hover:underline">
+                <span>Pridať</span> <i class="fa-solid fa-plus text-[10px]"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. Lokša plnená husacou pečienkou -->
+        <div class="menu-item group bg-[#FAF7F2] p-5 sm:p-6 rounded-2xl border border-clay-200/80 hover:border-clay-400 hover:shadow-lg transition-all flex flex-col sm:flex-row gap-5" data-cat="lokse">
+          <div class="w-full sm:w-36 h-36 rounded-xl overflow-hidden flex-shrink-0 relative">
+            <img src="images/triedenie2022406a8775.jpg" alt="Lokša plnená husacou pečienkou" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-2 left-2 bg-clay-700 text-white text-[10px] font-bold px-2 py-0.5 rounded uppercase">Luxusné predjedlo</span>
+          </div>
+          <div class="flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-start justify-between gap-3 mb-1">
+                <h3 class="font-serif text-lg sm:text-xl font-bold text-hearth-950">Lokša plnená husacou pečienkou</h3>
+                <span class="font-serif text-xl font-bold text-clay-700 whitespace-nowrap">5.90 €</span>
+              </div>
+              <span class="inline-block text-xs text-clay-600 font-semibold mb-2">60 g · Teplé pohostenie</span>
+              <p class="text-xs text-hearth-800/80 leading-relaxed">
+                Zemiaková lokša zrolovaná s lahodnou porciou teplej rozplývajúcej sa husacej pečienky vnútri. Dokonalý gurmánsky štart.
+              </p>
+            </div>
+            <div class="mt-3 pt-3 border-t border-clay-200/60 flex items-center justify-between text-xs text-hearth-700">
+              <span class="text-hearth-600">Skvelé k prípitku</span>
+              <button onclick="addToReservationPreselect('Lokša plnená husacou pečienkou (5.90 €)')" class="text-clay-600 hover:text-clay-800 font-bold flex items-center gap-1 hover:underline">
+                <span>Pridať</span> <i class="fa-solid fa-plus text-[10px]"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 7. Polievka z husacích drobkov -->
+        <div class="menu-item group bg-[#FAF7F2] p-5 sm:p-6 rounded-2xl border border-clay-200/80 hover:border-clay-400 hover:shadow-lg transition-all flex flex-col sm:flex-row gap-5" data-cat="soup">
+          <div class="w-full sm:w-36 h-36 rounded-xl overflow-hidden flex-shrink-0 relative">
+            <img src="images/food-plate-wood-restaurant.jpg" alt="Polievka z husacích drobkov" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-2 left-2 bg-crust-700 text-white text-[10px] font-bold px-2 py-0.5 rounded uppercase">Silný vývar</span>
+          </div>
+          <div class="flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-start justify-between gap-3 mb-1">
+                <h3 class="font-serif text-lg sm:text-xl font-bold text-hearth-950">Polievka z husacích drobkov</h3>
+                <span class="font-serif text-xl font-bold text-clay-700 whitespace-nowrap">4.50 €</span>
+              </div>
+              <span class="inline-block text-xs text-clay-600 font-semibold mb-2">0,33 l porcia | Polievková misa (6 os.) 29.00 €</span>
+              <p class="text-xs text-hearth-800/80 leading-relaxed">
+                Poctivý silný domáci husací vývar varený s koreňovou zeleninou, husacími drobkami a domácimi niťovými rezancami. Zahreje telo aj dušu.
+              </p>
+            </div>
+            <div class="mt-3 pt-3 border-t border-clay-200/60 flex items-center justify-between text-xs text-hearth-700">
+              <span class="text-hearth-600">K dispozícii aj misa pre 6 osôb</span>
+              <button onclick="addToReservationPreselect('Husacia polievka porcia (4.50 €)')" class="text-clay-600 hover:text-clay-800 font-bold flex items-center gap-1 hover:underline">
+                <span>Pridať</span> <i class="fa-solid fa-plus text-[10px]"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 8. Dusená červená kapusta -->
+        <div class="menu-item group bg-[#FAF7F2] p-5 sm:p-6 rounded-2xl border border-clay-200/80 hover:border-clay-400 hover:shadow-lg transition-all flex flex-col sm:flex-row gap-5" data-cat="soup">
+          <div class="w-full sm:w-36 h-36 rounded-xl overflow-hidden flex-shrink-0 relative">
+            <img src="images/triedenie2022406a8776.jpg" alt="Dusená červená kapusta" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          </div>
+          <div class="flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-start justify-between gap-3 mb-1">
+                <h3 class="font-serif text-lg sm:text-xl font-bold text-hearth-950">Dusená červená kapusta</h3>
+                <span class="font-serif text-xl font-bold text-clay-700 whitespace-nowrap">3.00 €</span>
+              </div>
+              <span class="inline-block text-xs text-clay-600 font-semibold mb-2">150 g · Naša domáca receptúra</span>
+              <p class="text-xs text-hearth-800/80 leading-relaxed">
+                Jemne skaramelizovaná sladko-kyslá červená kapusta dusená na husacej masti s jablkami, škoricou a červeným vínom. Neodmysliteľná k husi.
+              </p>
+            </div>
+            <div class="mt-3 pt-3 border-t border-clay-200/60 flex items-center justify-between text-xs text-hearth-700">
+              <span class="text-hearth-600">Tradičná príloha</span>
+              <button onclick="addToReservationPreselect('Dusená červená kapusta 150g (3.00 €)')" class="text-clay-600 hover:text-clay-800 font-bold flex items-center gap-1 hover:underline">
+                <span>Pridať</span> <i class="fa-solid fa-plus text-[10px]"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 9. Kyslý miešaný tanier -->
+        <div class="menu-item group bg-[#FAF7F2] p-5 sm:p-6 rounded-2xl border border-clay-200/80 hover:border-clay-400 hover:shadow-lg transition-all flex flex-col sm:flex-row gap-5" data-cat="soup">
+          <div class="w-full sm:w-36 h-36 rounded-xl overflow-hidden flex-shrink-0 relative">
+            <img src="images/triedenie2022406a8740.jpg" alt="Kyslý miešaný tanier" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          </div>
+          <div class="flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-start justify-between gap-3 mb-1">
+                <h3 class="font-serif text-lg sm:text-xl font-bold text-hearth-950">Kyslý miešaný tanier</h3>
+                <span class="font-serif text-xl font-bold text-clay-700 whitespace-nowrap">8.00 €</span>
+              </div>
+              <span class="inline-block text-xs text-clay-600 font-semibold mb-2">400 g misa pre celú partiu</span>
+              <p class="text-xs text-hearth-800/80 leading-relaxed">
+                Grobské kyslé uhorky, chrumkavá domáca čalamáda, plnená alma paprika, pikantné feferóny a baranie rohy. Ideálne vyváženie mastnej husaciny.
+              </p>
+            </div>
+            <div class="mt-3 pt-3 border-t border-clay-200/60 flex items-center justify-between text-xs text-hearth-700">
+              <span class="text-hearth-600">Nevyhnutné na stole</span>
+              <button onclick="addToReservationPreselect('Kyslý miešaný tanier 400g (8.00 €)')" class="text-clay-600 hover:text-clay-800 font-bold flex items-center gap-1 hover:underline">
+                <span>Pridať</span> <i class="fa-solid fa-plus text-[10px]"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 10. Sladké lokše: Džem + Mak / Orechy -->
+        <div class="menu-item group bg-[#FAF7F2] p-5 sm:p-6 rounded-2xl border border-clay-200/80 hover:border-clay-400 hover:shadow-lg transition-all flex flex-col sm:flex-row gap-5" data-cat="dessert">
+          <div class="w-full sm:w-36 h-36 rounded-xl overflow-hidden flex-shrink-0 relative">
+            <img src="images/triedenie2022406a8766.jpg" alt="Sladké lokše" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-2 left-2 bg-crust-600 text-white text-[10px] font-bold px-2 py-0.5 rounded uppercase">Sladká bodka</span>
+          </div>
+          <div class="flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-start justify-between gap-3 mb-1">
+                <h3 class="font-serif text-lg sm:text-xl font-bold text-hearth-950">Lokša s makom / orechmi</h3>
+                <span class="font-serif text-xl font-bold text-clay-700 whitespace-nowrap">4.90 €</span>
+              </div>
+              <span class="inline-block text-xs text-clay-600 font-semibold mb-2">60 g · Domáci lekvár + mak alebo vlašské orechy</span>
+              <p class="text-xs text-hearth-800/80 leading-relaxed">
+                Tradičná grobská zemiaková lokša plnená hustým slivkovým lekvárom a bohato sypaná mletým makom s práškovým cukrom alebo praženými orechmi.
+              </p>
+            </div>
+            <div class="mt-3 pt-3 border-t border-clay-200/60 flex items-center justify-between text-xs text-hearth-700">
+              <span class="text-hearth-600">Obľúbené deťmi aj dospelými</span>
+              <button onclick="addToReservationPreselect('Sladká lokša mak/orech (4.90 €)')" class="text-clay-600 hover:text-clay-800 font-bold flex items-center gap-1 hover:underline">
+                <span>Pridať</span> <i class="fa-solid fa-plus text-[10px]"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 11. Domáca štrúdľa -->
+        <div class="menu-item group bg-[#FAF7F2] p-5 sm:p-6 rounded-2xl border border-clay-200/80 hover:border-clay-400 hover:shadow-lg transition-all flex flex-col sm:flex-row gap-5" data-cat="dessert">
+          <div class="w-full sm:w-36 h-36 rounded-xl overflow-hidden flex-shrink-0 relative">
+            <img src="images/triedenie2022406a8771.jpg" alt="Domáca štrúdľa" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          </div>
+          <div class="flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-start justify-between gap-3 mb-1">
+                <h3 class="font-serif text-lg sm:text-xl font-bold text-hearth-950">Ťahaná domáca štrúdľa</h3>
+                <span class="font-serif text-xl font-bold text-clay-700 whitespace-nowrap">4.90 €</span>
+              </div>
+              <span class="inline-block text-xs text-clay-600 font-semibold mb-2">60 g · Makovo-višňová alebo jablkovo-orechová</span>
+              <p class="text-xs text-hearth-800/80 leading-relaxed">
+                Poctivé ťahané lístkové cesto plnené šťavnatými jablkami so škoricou a orechmi alebo makom s višňami. Pečené s láskou podľa starej receptúry.
+              </p>
+            </div>
+            <div class="mt-3 pt-3 border-t border-clay-200/60 flex items-center justify-between text-xs text-hearth-700">
+              <span class="text-hearth-600">Ku kávičke</span>
+              <button onclick="addToReservationPreselect('Domáca štrúdľa (4.90 €)')" class="text-clay-600 hover:text-clay-800 font-bold flex items-center gap-1 hover:underline">
+                <span>Pridať</span> <i class="fa-solid fa-plus text-[10px]"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 12. Husacia masť na doma (450 g pohár) -->
+        <div class="menu-item group bg-[#FAF7F2] p-5 sm:p-6 rounded-2xl border border-clay-200/80 hover:border-clay-400 hover:shadow-lg transition-all flex flex-col sm:flex-row gap-5" data-cat="goose">
+          <div class="w-full sm:w-36 h-36 rounded-xl overflow-hidden flex-shrink-0 relative">
+            <img src="images/food-plate-wood-restaurant.jpg" alt="Husacia masť" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-2 left-2 bg-emerald-700 text-white text-[10px] font-bold px-2 py-0.5 rounded uppercase">So sebou domov</span>
+          </div>
+          <div class="flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-start justify-between gap-3 mb-1">
+                <h3 class="font-serif text-lg sm:text-xl font-bold text-hearth-950">Čistá husacia masť (pohár)</h3>
+                <span class="font-serif text-xl font-bold text-clay-700 whitespace-nowrap">3.00 €</span>
+              </div>
+              <span class="inline-block text-xs text-clay-600 font-semibold mb-2">450 g pohár · 100% čistá vypečená masť</span>
+              <p class="text-xs text-hearth-800/80 leading-relaxed">
+                Zlatistá, voňavá a čistá husacia masť vytopená pri pečení husí. Vynikajúca na chlieb s cibuľkou alebo na domáce varenie.
+              </p>
+            </div>
+            <div class="mt-3 pt-3 border-t border-clay-200/60 flex items-center justify-between text-xs text-hearth-700">
+              <span class="text-hearth-600">Vezmite si chuť Grobu domov</span>
+              <button onclick="addToReservationPreselect('Husacia masť 450g pohár (3.00 €)')" class="text-clay-600 hover:text-clay-800 font-bold flex items-center gap-1 hover:underline">
+                <span>Pridať</span> <i class="fa-solid fa-plus text-[10px]"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 13. Malokarpatské vína & Sezónny burčiak -->
+        <div class="menu-item group bg-[#FAF7F2] p-5 sm:p-6 rounded-2xl border border-clay-200/80 hover:border-clay-400 hover:shadow-lg transition-all flex flex-col sm:flex-row gap-5" data-cat="wine">
+          <div class="w-full sm:w-36 h-36 rounded-xl overflow-hidden flex-shrink-0 relative">
+            <img src="images/banner.jpg" alt="Malokarpatské víno" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-2 left-2 bg-wine-800 text-white text-[10px] font-bold px-2 py-0.5 rounded uppercase">Miestni vinári</span>
+          </div>
+          <div class="flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-start justify-between gap-3 mb-1">
+                <h3 class="font-serif text-lg sm:text-xl font-bold text-hearth-950">Malokarpatské vína & Burčiak</h3>
+                <span class="font-serif text-xl font-bold text-clay-700 whitespace-nowrap">od 12.00 €</span>
+              </div>
+              <span class="inline-block text-xs text-wine-800 font-semibold mb-2">Veltlín, Frankovka, Rizling, Svätovavrinecké</span>
+              <p class="text-xs text-hearth-800/80 leading-relaxed">
+                Výber najlepších malokarpatských vín od vinárov z Pezinka, Modry, Svätého Jura a Limbachu. Počas jesene čerstvý kvasinkový burčiak.
+              </p>
+            </div>
+            <div class="mt-3 pt-3 border-t border-clay-200/60 flex items-center justify-between text-xs text-hearth-700">
+              <span class="text-wine-800 font-semibold"><i class="fa-solid fa-wine-bottle mr-1"></i>Dokonalé k husacine</span>
+              <button onclick="addToReservationPreselect('Fľaša vína / džbán (od 12 €)')" class="text-clay-600 hover:text-clay-800 font-bold flex items-center gap-1 hover:underline">
+                <span>Pridať</span> <i class="fa-solid fa-plus text-[10px]"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 14. Drobné prílohy: Chlieb & Knedľa -->
+        <div class="menu-item group bg-[#FAF7F2] p-5 sm:p-6 rounded-2xl border border-clay-200/80 hover:border-clay-400 hover:shadow-lg transition-all flex flex-col sm:flex-row gap-5" data-cat="soup">
+          <div class="w-full sm:w-36 h-36 rounded-xl overflow-hidden flex-shrink-0 relative">
+            <img src="images/food-plate-wood-restaurant.jpg" alt="Chlieb a prílohy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          </div>
+          <div class="flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-start justify-between gap-3 mb-1">
+                <h3 class="font-serif text-lg sm:text-xl font-bold text-hearth-950">Chlieb & Domáca knedľa</h3>
+                <span class="font-serif text-xl font-bold text-clay-700 whitespace-nowrap">0.60 € – 3.00 €</span>
+              </div>
+              <span class="inline-block text-xs text-clay-600 font-semibold mb-2">Chlieb ošatka 3.00 € · Knedľa 1 ks 0.60 €</span>
+              <p class="text-xs text-hearth-800/80 leading-relaxed">
+                Čerstvý remeselný chlieb s chrumkavou kôrkou ideálny na vytieranie pekáča a nadýchaná parená knedľa ku kapuste a omáčke.
+              </p>
+            </div>
+            <div class="mt-3 pt-3 border-t border-clay-200/60 flex items-center justify-between text-xs text-hearth-700">
+              <span class="text-hearth-600">Tradičný doplnok</span>
+              <button onclick="addToReservationPreselect('Košík chleba (3.00 €)')" class="text-clay-600 hover:text-clay-800 font-bold flex items-center gap-1 hover:underline">
+                <span>Pridať</span> <i class="fa-solid fa-plus text-[10px]"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Toast sound trigger button -->
+      <div class="mt-12 text-center">
+        <button onclick="playToastSound()" class="inline-flex items-center gap-2 bg-crust-100 hover:bg-crust-200 text-clay-800 px-5 py-2.5 rounded-full border border-crust-300 text-xs sm:text-sm font-semibold transition-all">
+          <i class="fa-solid fa-champagne-glasses text-clay-600"></i>
+          <span>Na zdravie! (Kliknite pre grobský prípitok vínom)</span>
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SPACES, HEARTH & AMBIANCE SECTION -->
+  <section id="priestory" class="py-20 lg:py-28 bg-hearth-950 text-white relative overflow-hidden">
+    <div class="absolute inset-0 grob-lace-pattern opacity-10 pointer-events-none"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="inline-flex items-center gap-2 text-crust-400 font-bold uppercase tracking-wider text-xs bg-white/5 px-3 py-1 rounded-full border border-white/10">
+          <i class="fa-solid fa-house-chimney"></i>
+          <span>Autentické prostredie u Ivety</span>
+        </span>
+        <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white mt-3 mb-4">
+          Priestory vytvorené pre rodinu a priateľov
+        </h2>
+        <p class="text-white/70 text-base sm:text-lg">
+          Vstúpte do atmosféry slovenskej pohostinnosti. Kapacita 67 miest, vôňa dreva z krbu a bezpečný uzavretý areál.
+        </p>
+      </div>
+
+      <!-- 4 Spaces Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- 1. Salónik s čipkami -->
+        <div class="bg-white/5 border border-white/10 rounded-3xl p-6 flex flex-col justify-between hover:bg-white/10 transition-all group">
+          <div>
+            <div class="h-44 rounded-2xl overflow-hidden mb-5">
+              <img src="images/triedenie2022406a8756.jpg" alt="Salónik s grobskými čipkami" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            </div>
+            <div class="flex items-center gap-2 text-crust-400 text-xs font-semibold mb-2">
+              <i class="fa-solid fa-users"></i>
+              <span>Kapacita 67 miest</span>
+            </div>
+            <h3 class="font-serif text-xl font-bold text-white mb-2">Ľudový salónik</h3>
+            <p class="text-xs text-white/70 leading-relaxed">
+              Klimatizovaný, štýlový interiér vyzdobený originálnymi grobskými čipkami a ľudovými maľbami. Vhodný pre oslavy, promócie aj firemné večierky.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-white/10 mt-4 text-[11px] text-crust-300 font-medium">
+            Komfortné celoročné sedenie
+          </div>
+        </div>
+
+        <!-- 2. Gazdovský dvor s krbom -->
+        <div class="bg-white/5 border border-white/10 rounded-3xl p-6 flex flex-col justify-between hover:bg-white/10 transition-all group">
+          <div>
+            <div class="h-44 rounded-2xl overflow-hidden mb-5">
+              <img src="images/Hody-22.jpg" alt="Dvor s krbom" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            </div>
+            <div class="flex items-center gap-2 text-clay-400 text-xs font-semibold mb-2">
+              <i class="fa-solid fa-fire"></i>
+              <span>Romantický otvorený oheň</span>
+            </div>
+            <h3 class="font-serif text-xl font-bold text-white mb-2">Dvor s krbom</h3>
+            <p class="text-xs text-white/70 leading-relaxed">
+              Zastrešená aj otvorená terasa v tichom súkromnom dvore s veľkým kamenným krbom. Večerné posedenie pri praskajúcom dreve a pohári vína.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-white/10 mt-4 text-[11px] text-clay-300 font-medium">
+            Letná aj jesenná atmosféra
+          </div>
+        </div>
+
+        <!-- 3. Detské ihrisko -->
+        <div class="bg-white/5 border border-white/10 rounded-3xl p-6 flex flex-col justify-between hover:bg-white/10 transition-all group">
+          <div>
+            <div class="h-44 rounded-2xl overflow-hidden mb-5">
+              <img src="images/Hody-25.jpg" alt="Detské ihrisko" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            </div>
+            <div class="flex items-center gap-2 text-emerald-400 text-xs font-semibold mb-2">
+              <i class="fa-solid fa-child-reaching"></i>
+              <span>Pre rodiny s deťmi</span>
+            </div>
+            <h3 class="font-serif text-xl font-bold text-white mb-2">Detské ihrisko</h3>
+            <p class="text-xs text-white/70 leading-relaxed">
+              Bezpečný, oplotený areál priamo v záhrade dvora. Preliezky, hojdačky a šmýkačka zabavia vaše ratolesti, kým vy pokojne hodujete.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-white/10 mt-4 text-[11px] text-emerald-300 font-medium">
+            100% bezpečný dvor mimo cesty
+          </div>
+        </div>
+
+        <!-- 4. Vlastné parkovisko -->
+        <div class="bg-white/5 border border-white/10 rounded-3xl p-6 flex flex-col justify-between hover:bg-white/10 transition-all group">
+          <div>
+            <div class="h-44 rounded-2xl overflow-hidden mb-5">
+              <img src="images/Hody-20.jpg" alt="Parkovisko vo dvore" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            </div>
+            <div class="flex items-center gap-2 text-blue-400 text-xs font-semibold mb-2">
+              <i class="fa-solid fa-square-parking"></i>
+              <span>Priamo vo dvore zadarmo</span>
+            </div>
+            <h3 class="font-serif text-xl font-bold text-white mb-2">Súkromné parkovanie</h3>
+            <p class="text-xs text-white/70 leading-relaxed">
+              Nemusíte hľadať miesto v uličkách dediny. Vojdite bránou priamo do nášho dvora, kde pohodlne zaparkuje celá vaša rodina či firemná kolóna.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-white/10 mt-4 text-[11px] text-blue-300 font-medium">
+            Kapacita pre 15+ áut
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PHOTO GALLERY WITH LIGHTBOX -->
+  <section id="galeria" class="py-20 bg-[#FAF7F2]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <span class="inline-flex items-center gap-2 text-clay-700 font-bold uppercase tracking-wider text-xs">
+          <span class="w-8 h-[2px] bg-clay-600"></span>
+          <span>Fotogaléria Husacina u Ivety</span>
+          <span class="w-8 h-[2px] bg-clay-600"></span>
+        </span>
+        <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-hearth-950 mt-3 mb-4">
+          Pohľad do našej kuchyne a dvora
+        </h2>
+        <p class="text-[#5A4840] text-base sm:text-lg">
+          Pozrite si reálne fotografie pečených husí, priateľských posedení, tradičných čipiek a rozkvitnutého dvora.
+        </p>
+      </div>
+
+      <!-- Gallery Filter -->
+      <div class="flex flex-wrap items-center justify-center gap-2 mb-10">
+        <button onclick="filterGallery('all')" class="gal-tab active-gal px-4 py-2 rounded-full text-xs font-bold transition-all bg-clay-600 text-white">
+          Všetky fotografie
+        </button>
+        <button onclick="filterGallery('food')" class="gal-tab px-4 py-2 rounded-full text-xs font-bold transition-all bg-white hover:bg-clay-100 text-hearth-900 border border-clay-200">
+          Chrumkavá husacina & lokše
+        </button>
+        <button onclick="filterGallery('interior')" class="gal-tab px-4 py-2 rounded-full text-xs font-bold transition-all bg-white hover:bg-clay-100 text-hearth-900 border border-clay-200">
+          Ľudový salónik & grobské čipky
+        </button>
+        <button onclick="filterGallery('exterior')" class="gal-tab px-4 py-2 rounded-full text-xs font-bold transition-all bg-white hover:bg-clay-100 text-hearth-900 border border-clay-200">
+          Gazdovský dvor, krb & ihrisko
+        </button>
+      </div>
+
+      <!-- Masonry/Grid Gallery -->
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4" id="gallery-grid">
+        
+        <!-- Image 1 -->
+        <div class="gal-item food relative rounded-2xl overflow-hidden group cursor-pointer aspect-square shadow-sm" onclick="openLightbox('images/triedenie2022406a8809.jpg', 'Chrumkavá pečená hus v tradičnom hlinenom pekáči')">
+          <img src="images/triedenie2022406a8809.jpg" alt="Pečená hus" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+            <span class="text-white text-xs font-medium"><i class="fa-solid fa-magnifying-glass-plus mr-1"></i> Zlatistá pečená hus</span>
+          </div>
+        </div>
+
+        <!-- Image 2 -->
+        <div class="gal-item food relative rounded-2xl overflow-hidden group cursor-pointer aspect-square shadow-sm" onclick="openLightbox('images/triedenie2022406a8775.jpg', 'Husacia pečienka s mastenými lokšami')">
+          <img src="images/triedenie2022406a8775.jpg" alt="Husacia pečienka a lokše" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+            <span class="text-white text-xs font-medium"><i class="fa-solid fa-magnifying-glass-plus mr-1"></i> Pečienka a lokše</span>
+          </div>
+        </div>
+
+        <!-- Image 3 -->
+        <div class="gal-item food relative rounded-2xl overflow-hidden group cursor-pointer aspect-square shadow-sm" onclick="openLightbox('images/triedenie2022406a8776.jpg', 'Slávnostne prestretý stôl na husacie hody')">
+          <img src="images/triedenie2022406a8776.jpg" alt="Prestretý stôl na husacinu" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+            <span class="text-white text-xs font-medium"><i class="fa-solid fa-magnifying-glass-plus mr-1"></i> Slávnostný stôl</span>
+          </div>
+        </div>
+
+        <!-- Image 4 -->
+        <div class="gal-item food relative rounded-2xl overflow-hidden group cursor-pointer aspect-square shadow-sm" onclick="openLightbox('images/triedenie2022406a8740.jpg', 'Detail pečenej husi v pekáči')">
+          <img src="images/triedenie2022406a8740.jpg" alt="Pečená hus detail" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+            <span class="text-white text-xs font-medium"><i class="fa-solid fa-magnifying-glass-plus mr-1"></i> Chrumkavá kôrka</span>
+          </div>
+        </div>
+
+        <!-- Image 5 -->
+        <div class="gal-item food relative rounded-2xl overflow-hidden group cursor-pointer aspect-square shadow-sm" onclick="openLightbox('images/triedenie2022406a8804.jpg', 'Teplá husacia pečienka v čistej masti')">
+          <img src="images/triedenie2022406a8804.jpg" alt="Husacia pečienka" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+            <span class="text-white text-xs font-medium"><i class="fa-solid fa-magnifying-glass-plus mr-1"></i> Delikátna pečienka</span>
+          </div>
+        </div>
+
+        <!-- Image 6 -->
+        <div class="gal-item food relative rounded-2xl overflow-hidden group cursor-pointer aspect-square shadow-sm" onclick="openLightbox('images/triedenie2022406a8766.jpg', 'Mastené domáce zemiakové lokše')">
+          <img src="images/triedenie2022406a8766.jpg" alt="Zemiakové lokše" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+            <span class="text-white text-xs font-medium"><i class="fa-solid fa-magnifying-glass-plus mr-1"></i> Ručne vaľkané lokše</span>
+          </div>
+        </div>
+
+        <!-- Image 7: Interior -->
+        <div class="gal-item interior relative rounded-2xl overflow-hidden group cursor-pointer aspect-square shadow-sm" onclick="openLightbox('images/triedenie2022406a8756.jpg', 'Originálne tradičné grobské čipky na stenách salónika')">
+          <img src="images/triedenie2022406a8756.jpg" alt="Grobské čipky" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+            <span class="text-white text-xs font-medium"><i class="fa-solid fa-magnifying-glass-plus mr-1"></i> Grobské čipky</span>
+          </div>
+        </div>
+
+        <!-- Image 8: Interior Panorama -->
+        <div class="gal-item interior relative rounded-2xl overflow-hidden group cursor-pointer aspect-square shadow-sm" onclick="openLightbox('images/triedenie2022406a8785-panorama.jpg', 'Panoráma ľudového salónika s kapacitou 67 miest')">
+          <img src="images/triedenie2022406a8785-panorama.jpg" alt="Panoráma salónika" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+            <span class="text-white text-xs font-medium"><i class="fa-solid fa-magnifying-glass-plus mr-1"></i> Salónik (67 miest)</span>
+          </div>
+        </div>
+
+        <!-- Image 9: Courtyard Hearth -->
+        <div class="gal-item exterior relative rounded-2xl overflow-hidden group cursor-pointer aspect-square shadow-sm" onclick="openLightbox('images/Hody-19.jpg', 'Murovaný krb na dvore s praskajúcim ohňom')">
+          <img src="images/Hody-19.jpg" alt="Krb vo dvore" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+            <span class="text-white text-xs font-medium"><i class="fa-solid fa-magnifying-glass-plus mr-1"></i> Otvorený krb</span>
+          </div>
+        </div>
+
+        <!-- Image 10: Courtyard Seating -->
+        <div class="gal-item exterior relative rounded-2xl overflow-hidden group cursor-pointer aspect-square shadow-sm" onclick="openLightbox('images/Hody-22.jpg', 'Záhradné posedenie na upravenom gazdovskom dvore')">
+          <img src="images/Hody-22.jpg" alt="Dvor a sedenie" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+            <span class="text-white text-xs font-medium"><i class="fa-solid fa-magnifying-glass-plus mr-1"></i> Dvor & sedenie</span>
+          </div>
+        </div>
+
+        <!-- Image 11: Playground -->
+        <div class="gal-item exterior relative rounded-2xl overflow-hidden group cursor-pointer aspect-square shadow-sm" onclick="openLightbox('images/Hody-25.jpg', 'Detské ihrisko so šmýkačkou a hojdačkami')">
+          <img src="images/Hody-25.jpg" alt="Detské ihrisko" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+            <span class="text-white text-xs font-medium"><i class="fa-solid fa-magnifying-glass-plus mr-1"></i> Detské ihrisko</span>
+          </div>
+        </div>
+
+        <!-- Image 12: Garden & Parking -->
+        <div class="gal-item exterior relative rounded-2xl overflow-hidden group cursor-pointer aspect-square shadow-sm" onclick="openLightbox('images/Hody-20.jpg', 'Priestranný dvor s vlastným parkoviskom')">
+          <img src="images/Hody-20.jpg" alt="Dvor a parkovisko" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+            <span class="text-white text-xs font-medium"><i class="fa-solid fa-magnifying-glass-plus mr-1"></i> Parkovisko vo dvore</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- LIGHTBOX MODAL -->
+  <div id="lightbox" class="fixed inset-0 z-50 bg-black/95 hidden flex flex-col items-center justify-center p-4">
+    <button onclick="closeLightbox()" class="absolute top-6 right-6 text-white/80 hover:text-white text-3xl p-2 z-10" aria-label="Zatvoriť">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+    <div class="max-w-4xl max-h-[80vh] relative flex items-center justify-center">
+      <img id="lightbox-img" src="" alt="" class="max-h-[80vh] max-w-full rounded-xl shadow-2xl object-contain">
+    </div>
+    <p id="lightbox-caption" class="text-white/80 text-sm mt-4 text-center font-medium max-w-xl"></p>
+  </div>
+
+  <!-- RESERVATION SECTION -->
+  <section id="rezervacia" class="py-20 lg:py-28 bg-[#FAF7F2] relative">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="bg-white rounded-3xl shadow-2xl border border-clay-200 overflow-hidden">
+        
+        <!-- Header Banner -->
+        <div class="bg-gradient-to-r from-hearth-950 via-hearth-900 to-hearth-950 text-white p-8 sm:p-12 text-center relative">
+          <div class="absolute inset-0 grob-lace-pattern opacity-10 pointer-events-none"></div>
+          <span class="inline-flex items-center gap-2 bg-clay-700/80 text-crust-200 px-3.5 py-1 rounded-full text-xs font-semibold uppercase tracking-wider mb-3">
+            <i class="fa-solid fa-calendar-check"></i>
+            <span>Nezáväzný dopyt & Rezervácia stola</span>
+          </span>
+          <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white mb-3">
+            Rezervujte si husacie hody
+          </h2>
+          <p class="text-white/80 text-sm sm:text-base max-w-2xl mx-auto">
+            Keďže pečieme výhradne čerstvo na objednávku, vyplňte formulár a pani Iveta vás bude kontaktovať pre potvrdenie termínu a detailov hodov.
+          </p>
+        </div>
+
+        <!-- Form Body -->
+        <form id="reservation-form" onsubmit="handleReservationSubmit(event)" class="p-6 sm:p-10 lg:p-12 space-y-8">
+          
+          <!-- Contact Details Grid -->
+          <div>
+            <h3 class="font-serif text-xl font-bold text-hearth-950 mb-4 flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-clay-600 text-white text-xs flex items-center justify-center font-sans">1</span>
+              <span>Kontaktné údaje</span>
+            </h3>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <div>
+                <label for="res-name" class="block text-xs font-bold text-hearth-900 uppercase tracking-wider mb-1.5">
+                  Meno a priezvisko *
+                </label>
+                <input type="text" id="res-name" required placeholder="napr. Peter Novák" class="w-full px-4 py-3 rounded-xl border border-clay-200 focus:border-clay-500 focus:ring-2 focus:ring-clay-200 outline-none transition-all text-sm">
+              </div>
+
+              <div>
+                <label for="res-phone" class="block text-xs font-bold text-hearth-900 uppercase tracking-wider mb-1.5">
+                  Telefónne číslo *
+                </label>
+                <input type="tel" id="res-phone" required placeholder="napr. 0905 123 456" class="w-full px-4 py-3 rounded-xl border border-clay-200 focus:border-clay-500 focus:ring-2 focus:ring-clay-200 outline-none transition-all text-sm">
+              </div>
+
+              <div>
+                <label for="res-email" class="block text-xs font-bold text-hearth-900 uppercase tracking-wider mb-1.5">
+                  E-mailová adresa
+                </label>
+                <input type="email" id="res-email" placeholder="vas@email.sk" class="w-full px-4 py-3 rounded-xl border border-clay-200 focus:border-clay-500 focus:ring-2 focus:ring-clay-200 outline-none transition-all text-sm">
+              </div>
+            </div>
+          </div>
+
+          <!-- Date & Time & Guests -->
+          <div class="pt-6 border-t border-clay-100">
+            <h3 class="font-serif text-xl font-bold text-hearth-950 mb-4 flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-clay-600 text-white text-xs flex items-center justify-center font-sans">2</span>
+              <span>Dátum, čas podávania a počet hostí</span>
+            </h3>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <div>
+                <label for="res-date" class="block text-xs font-bold text-hearth-900 uppercase tracking-wider mb-1.5">
+                  Dátum návštevy *
+                </label>
+                <input type="date" id="res-date" required class="w-full px-4 py-3 rounded-xl border border-clay-200 focus:border-clay-500 focus:ring-2 focus:ring-clay-200 outline-none transition-all text-sm">
+              </div>
+
+              <div>
+                <label for="res-time" class="block text-xs font-bold text-hearth-900 uppercase tracking-wider mb-1.5">
+                  Čas príchodu & servírovania *
+                </label>
+                <select id="res-time" required class="w-full px-4 py-3 rounded-xl border border-clay-200 focus:border-clay-500 focus:ring-2 focus:ring-clay-200 outline-none transition-all text-sm bg-white">
+                  <option value="">Zvoľte čas podávania</option>
+                  <option value="11:30">11:30 (skorý obed)</option>
+                  <option value="12:00">12:00 (nedeľný obed)</option>
+                  <option value="12:30">12:30</option>
+                  <option value="13:00">13:00</option>
+                  <option value="14:00">14:00</option>
+                  <option value="16:00">16:00</option>
+                  <option value="17:00">17:00 (večerná hostina)</option>
+                  <option value="18:00">18:00</option>
+                  <option value="19:00">19:00</option>
+                  <option value="iný">Iný čas (napíšte do poznámky)</option>
+                </select>
+                <span class="text-[11px] text-clay-700 block mt-1">Hus sa dopeká presne na túto minútu!</span>
+              </div>
+
+              <div>
+                <label for="res-guests" class="block text-xs font-bold text-hearth-900 uppercase tracking-wider mb-1.5">
+                  Počet osôb *
+                </label>
+                <input type="number" id="res-guests" min="1" max="70" value="8" required class="w-full px-4 py-3 rounded-xl border border-clay-200 focus:border-clay-500 focus:ring-2 focus:ring-clay-200 outline-none transition-all text-sm font-bold">
+              </div>
+            </div>
+          </div>
+
+          <!-- Feast Choices & Items -->
+          <div class="pt-6 border-t border-clay-100">
+            <h3 class="font-serif text-xl font-bold text-hearth-950 mb-4 flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-clay-600 text-white text-xs flex items-center justify-center font-sans">3</span>
+              <span>Výber balíčka alebo predbežnej objednávky</span>
+            </h3>
+
+            <div class="space-y-4">
+              <div>
+                <label for="res-package" class="block text-xs font-bold text-hearth-900 uppercase tracking-wider mb-1.5">
+                  Zážitkový balíček (voliteľné)
+                </label>
+                <select id="res-package" class="w-full px-4 py-3 rounded-xl border border-clay-200 focus:border-clay-500 focus:ring-2 focus:ring-clay-200 outline-none transition-all text-sm bg-white">
+                  <option value="Vlastný výber z lístka">Vlastný výber špecialít (špecifikujte nižšie)</option>
+                  <option value="Grobská klasika (4-5 osôb)">Grobská klasika pre 4–5 osôb (153 €)</option>
+                  <option value="Kráľovská husacia hostina (8-10 osôb)">Kráľovská husacia hostina pre 8–10 osôb (460 €)</option>
+                  <option value="Exkluzívny banket (20-60 osôb)">Exkluzívny banket na kľúč (20–60 osôb)</option>
+                  <option value="Zostavené z kalkulačky">Zostavené z Grob Feast Calculator</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="res-notes" class="block text-xs font-bold text-hearth-900 uppercase tracking-wider mb-1.5">
+                  Požiadavky na husi, lokše, špeciálne diéty alebo sedenie
+                </label>
+                <textarea id="res-notes" rows="4" placeholder="Napr.: 2x pečená hus, 15x mastené lokše, 5x bezlepkové lokše pre celiatika, 1x detská stolička. Ak sa dá, posedenie pri krbe na dvore." class="w-full px-4 py-3 rounded-xl border border-clay-200 focus:border-clay-500 focus:ring-2 focus:ring-clay-200 outline-none transition-all text-sm"></textarea>
+              </div>
+            </div>
+          </div>
+
+          <!-- Submit Button & Guarantee -->
+          <div class="pt-4 border-t border-clay-100 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="text-xs text-hearth-800/70 text-center sm:text-left">
+              <i class="fa-solid fa-shield-halved text-emerald-600 mr-1.5"></i>
+              <span>Vaša rezervácia je nezáväzná. Majiteľka Iveta vám do 2 hodín zavolá pre potvrdenie.</span>
+            </div>
+
+            <button type="submit" class="w-full sm:w-auto bg-gradient-to-r from-clay-600 to-clay-700 hover:from-clay-500 hover:to-clay-600 text-white font-bold text-base px-10 py-4 rounded-xl shadow-xl shadow-clay-600/30 hover:-translate-y-0.5 transition-all flex items-center justify-center gap-2">
+              <i class="fa-solid fa-paper-plane text-crust-300"></i>
+              <span>Odoslať dopyt na husacinu</span>
+            </button>
+          </div>
+
+        </form>
+
+        <!-- Direct Call Box inside Reservation -->
+        <div class="bg-crust-50 border-t border-crust-200 p-6 sm:p-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div class="flex items-center gap-3.5">
+            <div class="w-12 h-12 rounded-full bg-clay-600 text-white flex items-center justify-center text-xl flex-shrink-0">
+              <i class="fa-solid fa-phone-volume"></i>
+            </div>
+            <div>
+              <span class="text-xs uppercase tracking-wider text-clay-800 font-bold block">Preferujete okamžitú dohodu telefonicky?</span>
+              <span class="text-sm text-hearth-950">Zavolajte pani Ivete Noskovičovej priamo a dohodnite si termín hneď:</span>
+            </div>
+          </div>
+          <div class="flex items-center gap-3 flex-wrap">
+            <a href="tel:+421904937173" class="bg-clay-600 hover:bg-clay-700 text-white px-5 py-2.5 rounded-xl font-bold text-sm shadow-md inline-flex items-center gap-2">
+              <i class="fa-solid fa-mobile-screen"></i>
+              <span>0904 937 173</span>
+            </a>
+            <a href="tel:+421336478391" class="bg-white hover:bg-clay-100 text-clay-800 border border-clay-300 px-5 py-2.5 rounded-xl font-bold text-sm shadow-sm inline-flex items-center gap-2">
+              <i class="fa-solid fa-phone"></i>
+              <span>033 / 64 783 91</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SUCCESS MODAL (RESERVATION SUBMITTED) -->
+  <div id="success-modal" class="fixed inset-0 z-50 bg-black/80 hidden flex items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-md w-full p-8 text-center shadow-2xl relative border-2 border-clay-500">
+      <div class="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto text-3xl mb-4">
+        <i class="fa-solid fa-check"></i>
+      </div>
+      <h3 class="font-serif text-2xl font-bold text-hearth-950 mb-2">Dopyt úspešne odoslaný!</h3>
+      <p class="text-sm text-hearth-800/80 mb-6 leading-relaxed">
+        Ďakujeme za záujem o husacie hody u Ivety. Vaše požiadavky sme zaznamenali. Pani Iveta Noskovičová vás bude v krátkom čase kontaktovať na vašom čísle pre potvrdenie termínu a času pečenia husí.
+      </p>
+      <div class="bg-clay-50 p-4 rounded-xl text-xs text-clay-900 mb-6 text-left space-y-1">
+        <p><strong>Meno:</strong> <span id="conf-name"></span></p>
+        <p><strong>Dátum:</strong> <span id="conf-date"></span> o <span id="conf-time"></span></p>
+        <p><strong>Počet hostí:</strong> <span id="conf-guests"></span></p>
+      </div>
+      <button onclick="closeSuccessModal()" class="w-full bg-clay-600 hover:bg-clay-700 text-white font-bold py-3 rounded-xl transition-all">
+        Rozumiem, tešíme sa
+      </button>
+    </div>
+  </div>
+
+  <!-- FAQ SECTION -->
+  <section class="py-20 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center mb-12">
+        <span class="inline-flex items-center gap-2 text-clay-700 font-bold uppercase tracking-wider text-xs">
+          <i class="fa-solid fa-circle-question"></i>
+          <span>Často kladené otázky</span>
+        </span>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-hearth-950 mt-2 mb-3">
+          Všetko, čo potrebujete vedieť pred návštevou
+        </h2>
+      </div>
+
+      <div class="space-y-4" id="faq-accordion">
+        
+        <!-- FAQ 1 -->
+        <div class="border border-clay-200 rounded-2xl overflow-hidden transition-all">
+          <button onclick="toggleFaq(1)" class="w-full p-5 text-left font-serif font-bold text-base sm:text-lg text-hearth-950 flex justify-between items-center bg-[#FAF7F2] hover:bg-clay-50 transition-colors">
+            <span>Koľko dní vopred je potrebné husacinu objednať?</span>
+            <i id="faq-icon-1" class="fa-solid fa-chevron-down text-clay-600 transition-transform"></i>
+          </button>
+          <div id="faq-content-1" class="p-5 text-sm text-[#5A4840] leading-relaxed hidden bg-white border-t border-clay-100">
+            Odporúčame rezerváciu aspoň <strong>24 až 48 hodín vopred</strong>. Počas hlavnej husacej sezóny (od septembra do decembra) a cez víkendy odporúčame rezervovať stôl aspoň 1–2 týždne vopred, keďže kapacita je limitovaná 67 miestami a pečieme výlučne čerstvo na danú hodinu.
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="border border-clay-200 rounded-2xl overflow-hidden transition-all">
+          <button onclick="toggleFaq(2)" class="w-full p-5 text-left font-serif font-bold text-base sm:text-lg text-hearth-950 flex justify-between items-center bg-[#FAF7F2] hover:bg-clay-50 transition-colors">
+            <span>Je možné objednať si husacinu so sebou (Takeaway / balíček domov)?</span>
+            <i id="faq-icon-2" class="fa-solid fa-chevron-down text-clay-600 transition-transform"></i>
+          </button>
+          <div id="faq-content-2" class="p-5 text-sm text-[#5A4840] leading-relaxed hidden bg-white border-t border-clay-100">
+            Áno, veľmi radi vám upečieme celú hus, lokše, kapustu aj pečienku a zabalíme do špeciálnych termo-obalov, aby jedlo zostalo horúce až k vášmu rodinnému stolu. Aj v tomto prípade je nutná telefonická objednávka vopred na presný čas vyzdvihnutia.
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="border border-clay-200 rounded-2xl overflow-hidden transition-all">
+          <button onclick="toggleFaq(3)" class="w-full p-5 text-left font-serif font-bold text-base sm:text-lg text-hearth-950 flex justify-between items-center bg-[#FAF7F2] hover:bg-clay-50 transition-colors">
+            <span>Máte v ponuke aj bezlepkové lokše pre celiatikov?</span>
+            <i id="faq-icon-3" class="fa-solid fa-chevron-down text-clay-600 transition-transform"></i>
+          </button>
+          <div id="faq-content-3" class="p-5 text-sm text-[#5A4840] leading-relaxed hidden bg-white border-t border-clay-100">
+            Áno! Pripravujeme poctivé <strong>bezlepkové lokše (40 g za 3.00 €)</strong> pečené zo špeciálnej bezlepkovej múky a zemiakov. Pri rezervácii nám prosím vopred uveďte počet bezlepkových lokší, aby sme ich mali pre vás nachystané.
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="border border-clay-200 rounded-2xl overflow-hidden transition-all">
+          <button onclick="toggleFaq(4)" class="w-full p-5 text-left font-serif font-bold text-base sm:text-lg text-hearth-950 flex justify-between items-center bg-[#FAF7F2] hover:bg-clay-50 transition-colors">
+            <span>Ako je to s parkovaním a deťmi?</span>
+            <i id="faq-icon-4" class="fa-solid fa-chevron-down text-clay-600 transition-transform"></i>
+          </button>
+          <div id="faq-content-4" class="p-5 text-sm text-[#5A4840] leading-relaxed hidden bg-white border-t border-clay-100">
+            Máme vlastné <strong>bezplatné uzavreté parkovisko priamo vo dvore</strong> reštaurácie, takže nemusíte parkovať na ulici. V záhrade máme vybudované <strong>bezpečné detské ihrisko</strong> s preliezkami, šmýkačkou a hojdačkami a k dispozícii máme aj detské stoličky.
+          </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="border border-clay-200 rounded-2xl overflow-hidden transition-all">
+          <button onclick="toggleFaq(5)" class="w-full p-5 text-left font-serif font-bold text-base sm:text-lg text-hearth-950 flex justify-between items-center bg-[#FAF7F2] hover:bg-clay-50 transition-colors">
+            <span>Koľko husí a lokší zvyčajne zje jeden človek?</span>
+            <i id="faq-icon-5" class="fa-solid fa-chevron-down text-clay-600 transition-transform"></i>
+          </button>
+          <div id="faq-content-5" class="p-5 text-sm text-[#5A4840] leading-relaxed hidden bg-white border-t border-clay-100">
+            Z dlhoročnej praxe: <strong>1 celá hus bohato zasýti 4 až 5 dospelých osôb</strong>. K tomu dospelý hosť zvyčajne skonzumuje <strong>2 až 4 lokše</strong> (kombinácia mastených a sladkých) a 150 g kapusty. Ako predjedlo odporúčame 1–2 porcie husacej pečienky na rozdelenie pre stôl. Náš <em>Grob Feast Calculator™</em> vyššie vám presne toto prepočíta jedným klikom!
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- LOCATION & CONTACT & MAP SECTION -->
+  <section id="kontakt" class="py-20 lg:py-28 bg-[#FAF7F2] border-t border-clay-200/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Contact Information -->
+        <div class="lg:col-span-5 space-y-6">
+          <span class="inline-flex items-center gap-2 text-clay-700 font-bold uppercase tracking-wider text-xs">
+            <span class="w-8 h-[2px] bg-clay-600"></span>
+            <span>Kde nás nájdete</span>
+          </span>
+
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-hearth-950">
+            Husacie hody – Iveta Noskovičová
+          </h2>
+
+          <p class="text-sm sm:text-base text-[#5A4840] leading-relaxed">
+            Tešíme sa na vašu návštevu v Slovenskom Grobe. Naša prevádzka je ľahko dostupná autom po diaľnici D1 alebo starej seneckej ceste.
+          </p>
+
+          <div class="space-y-4 pt-2">
+            <!-- Address -->
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-xl bg-clay-100 text-clay-700 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <div>
+                <span class="text-xs uppercase tracking-wider text-hearth-800/60 font-semibold block">Adresa reštaurácie:</span>
+                <span class="text-base font-bold text-hearth-950">Pezinská 28, 900 26 Slovenský Grob</span>
+                <span class="text-xs text-hearth-800/70 block mt-0.5">Vlastné parkovisko priamo vo dvore</span>
+              </div>
+            </div>
+
+            <!-- Phone 1 -->
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-xl bg-clay-100 text-clay-700 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <i class="fa-solid fa-mobile-screen"></i>
+              </div>
+              <div>
+                <span class="text-xs uppercase tracking-wider text-hearth-800/60 font-semibold block">Mobil (objednávky & rezervácie):</span>
+                <a href="tel:+421904937173" class="text-lg font-bold text-clay-700 hover:text-clay-900 transition-colors">
+                  0904 937 173
+                </a>
+              </div>
+            </div>
+
+            <!-- Phone 2 -->
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-xl bg-clay-100 text-clay-700 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <i class="fa-solid fa-phone"></i>
+              </div>
+              <div>
+                <span class="text-xs uppercase tracking-wider text-hearth-800/60 font-semibold block">Pevná linka:</span>
+                <a href="tel:+421336478391" class="text-base font-bold text-hearth-950 hover:text-clay-700 transition-colors">
+                  (+421) 033 / 64 783 91
+                </a>
+              </div>
+            </div>
+
+            <!-- Operating note -->
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-xl bg-crust-200 text-crust-800 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <i class="fa-solid fa-door-open"></i>
+              </div>
+              <div>
+                <span class="text-xs uppercase tracking-wider text-hearth-800/60 font-semibold block">Otváracia doba:</span>
+                <span class="text-sm font-bold text-hearth-950">Výlučne na základe vopred potvrdenej objednávky</span>
+                <span class="text-xs text-hearth-800/70 block">Otvorené po celý rok (pondelok – nedeľa) pre nahlásené skupiny a stoly.</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Navigation Link Buttons -->
+          <div class="flex flex-wrap gap-3 pt-4">
+            <a href="https://maps.google.com/?q=Pezinská+28,+900+26+Slovenský+Grob" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-clay-600 hover:bg-clay-700 text-white px-5 py-2.5 rounded-xl font-bold text-xs sm:text-sm shadow-md transition-all">
+              <i class="fa-solid fa-diamond-turn-right"></i>
+              <span>Navigovať cez Google Maps</span>
+            </a>
+            <a href="https://waze.com/ul?q=Pezinská+28+Slovenský+Grob" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-white hover:bg-clay-50 text-hearth-900 border border-clay-300 px-5 py-2.5 rounded-xl font-bold text-xs sm:text-sm shadow-sm transition-all">
+              <i class="fa-brands fa-waze text-blue-500"></i>
+              <span>Waze navigácia</span>
+            </a>
+          </div>
+
+        </div>
+
+        <!-- Visual Map & Distances Card -->
+        <div class="lg:col-span-7 bg-white rounded-3xl p-6 sm:p-8 border border-clay-200 shadow-xl">
+          <div class="flex items-center justify-between mb-4">
+            <h3 class="font-serif text-xl font-bold text-hearth-950">Vzdialenosti z okolia:</h3>
+            <span class="text-xs font-semibold text-clay-700 bg-clay-50 px-3 py-1 rounded-full border border-clay-200">
+              Iba kúsok od hlavného mesta
+            </span>
+          </div>
+
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6 text-center">
+            <div class="bg-clay-50 p-3 rounded-2xl border border-clay-100">
+              <span class="text-xs text-hearth-800/60 block">Bratislava</span>
+              <span class="font-serif text-lg font-bold text-clay-800">15 min</span>
+              <span class="text-[10px] text-hearth-800/50 block">cca 16 km</span>
+            </div>
+            <div class="bg-clay-50 p-3 rounded-2xl border border-clay-100">
+              <span class="text-xs text-hearth-800/60 block">Pezinok</span>
+              <span class="font-serif text-lg font-bold text-clay-800">5 min</span>
+              <span class="text-[10px] text-hearth-800/50 block">cca 4 km</span>
+            </div>
+            <div class="bg-clay-50 p-3 rounded-2xl border border-clay-100">
+              <span class="text-xs text-hearth-800/60 block">Senec</span>
+              <span class="font-serif text-lg font-bold text-clay-800">12 min</span>
+              <span class="text-[10px] text-hearth-800/50 block">cca 11 km</span>
+            </div>
+            <div class="bg-clay-50 p-3 rounded-2xl border border-clay-100">
+              <span class="text-xs text-hearth-800/60 block">Trnava</span>
+              <span class="font-serif text-lg font-bold text-clay-800">25 min</span>
+              <span class="text-[10px] text-hearth-800/50 block">cca 28 km</span>
+            </div>
+          </div>
+
+          <!-- Embedded Interactive Map -->
+          <div class="h-72 rounded-2xl overflow-hidden border border-clay-200 shadow-inner relative">
+            <iframe 
+              title="Mapa Husacina u Ivety"
+              class="w-full h-full border-0" 
+              src="https://maps.google.com/maps?q=Pezinsk%C3%A1+28,+900+26+Slovensk%C3%BD+Grob&t=&z=15&ie=UTF8&iwloc=&output=embed"
+              loading="lazy">
+            </iframe>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-hearth-950 text-white/80 py-16 border-t border-white/10 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+        
+        <!-- Col 1: About & Logo -->
+        <div class="md:col-span-2 space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full overflow-hidden border border-crust-400">
+              <img src="images/cropped-logo.jpg" alt="Husacina u Ivety" class="w-full h-full object-cover">
+            </div>
+            <span class="font-serif text-2xl font-bold text-white">Husacina u Ivety</span>
+          </div>
+          <p class="text-xs sm:text-sm text-white/60 max-w-md leading-relaxed">
+            Rodinná reštaurácia v Slovenskom Grobe špecializovaná na čerstvú pečenú husacinu, domácu husaciu pečienku, ručne vaľkané zemiakové lokše a malokarpatské vína. Člen tradície husacích hodov.
+          </p>
+          <div class="text-xs text-white/50 space-y-0.5">
+            <p>Prevádzkovateľ: <strong>Husacie hody – Iveta Noskovičová</strong></p>
+            <p>Sídlo prevádzky: Pezinská 28, 900 26 Slovenský Grob</p>
+          </div>
+        </div>
+
+        <!-- Col 2: Navigation Links -->
+        <div class="space-y-3">
+          <h4 class="font-serif text-base font-bold text-white tracking-wide">Navigácia</h4>
+          <ul class="space-y-2 text-xs sm:text-sm text-white/70">
+            <li><a href="#tradicia" class="hover:text-crust-300 transition-colors">O nás & Tradícia</a></li>
+            <li><a href="#menu" class="hover:text-crust-300 transition-colors">Jedálny lístok</a></li>
+            <li><a href="#balicky" class="hover:text-crust-300 transition-colors">Zážitkové balíčky</a></li>
+            <li><a href="#kalkulacka" class="hover:text-crust-300 transition-colors text-crust-300">Grob Feast Calculator</a></li>
+            <li><a href="#priestory" class="hover:text-crust-300 transition-colors">Priestory & Dvor</a></li>
+            <li><a href="#galeria" class="hover:text-crust-300 transition-colors">Fotogaléria</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Contacts & Orders -->
+        <div class="space-y-3">
+          <h4 class="font-serif text-base font-bold text-white tracking-wide">Objednávky</h4>
+          <div class="text-xs sm:text-sm space-y-2 text-white/70">
+            <p class="flex items-center gap-2">
+              <i class="fa-solid fa-mobile-screen text-clay-400"></i>
+              <a href="tel:+421904937173" class="hover:text-white font-bold">0904 937 173</a>
+            </p>
+            <p class="flex items-center gap-2">
+              <i class="fa-solid fa-phone text-clay-400"></i>
+              <a href="tel:+421336478391" class="hover:text-white">033 / 64 783 91</a>
+            </p>
+            <p class="flex items-center gap-2">
+              <i class="fa-solid fa-location-dot text-clay-400"></i>
+              <span>Pezinská 28, Slovenský Grob</span>
+            </p>
+            <div class="pt-2">
+              <span class="inline-block text-[11px] bg-white/10 text-crust-300 px-3 py-1 rounded-md">
+                Režim: Výlučne na objednávku
+              </span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/40">
+        <p>&copy; 2026 Husacina u Ivety (Husacie hody – Iveta Noskovičová). Všetky práva vyhradené.</p>
+        <div class="flex items-center gap-4">
+          <a href="#hero" class="hover:text-white transition-colors flex items-center gap-1">
+            <span>Návrat hore</span>
+            <i class="fa-solid fa-arrow-up text-[10px]"></i>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- JAVASCRIPT LOGIC -->
+  <script>
+    // --- 1. GROB FEAST CALCULATOR LOGIC ---
+    const pricing = {
+      goose: 110.00,       // 1 celá hus (pre 4-5 osôb)
+      liverPortion: 18.00, // 150g porcia
+      loksa: 2.50,         // mastená lokša
+      cabbage: 3.00,       // červená kapusta 150g
+      pickles: 8.00,       // kyslý tanier 400g (pre 4-5 os.)
+      soupTureen: 29.00,   // polievková misa pre 6-8 os.
+      dessertLoksa: 4.90,  // sladká lokša
+      wineBottle: 14.00    // fľaša vína / burčiak džbán
+    };
+
+    function updateCalculator() {
+      const guests = parseInt(document.getElementById('guests-slider').value, 10);
+      document.getElementById('guests-count-display').innerText = guests;
+      document.getElementById('summary-guests').innerText = guests;
+
+      // Update preset buttons styling
+      document.querySelectorAll('.preset-btn').forEach(b => {
+        b.classList.remove('active-preset', 'bg-clay-600', 'text-white');
+        b.classList.add('bg-white/5', 'text-white/60');
+      });
+
+      // Calculations:
+      // 1 goose covers approx 4 to 4.5 persons
+      const geeseCount = Math.max(1, Math.ceil(guests / 4.5));
+      // Goose liver appetizer: approx 1 portion per 2 guests
+      const liverCount = Math.max(1, Math.round(guests * 0.5));
+      // Lokše: 2.5 per guest on average
+      const lokseCount = Math.max(4, Math.round(guests * 2.5));
+      // Cabbage: 1 portion per guest
+      const cabbageCount = guests;
+      // Pickles: 1 large plate per 4 guests
+      const picklesCount = Math.max(1, Math.ceil(guests / 4));
+
+      // Optional selections
+      const incSoup = document.getElementById('calc-include-soup').checked;
+      const incDessert = document.getElementById('calc-include-dessert').checked;
+      const incWine = document.getElementById('calc-include-wine').checked;
+
+      const soupTureens = incSoup ? Math.max(1, Math.ceil(guests / 7)) : 0;
+      const dessertCount = incDessert ? guests : 0;
+      const wineBottles = incWine ? Math.max(1, Math.ceil(guests / 2)) : 0;
+
+      // Update DOM Text
+      document.getElementById('calc-geese').innerText = geeseCount + ' ks (' + (geeseCount * 4) + ' kg)';
+      document.getElementById('calc-liver').innerText = liverCount + ' porcií (' + (liverCount * 150) + ' g)';
+      document.getElementById('calc-lokse').innerText = lokseCount + ' ks (mastené)';
+      document.getElementById('calc-cabbage').innerText = cabbageCount + ' porcií';
+      document.getElementById('calc-pickles').innerText = picklesCount + ' misy (400g)';
+
+      // Visibility & text of optionals
+      const soupRow = document.getElementById('calc-row-soup');
+      if (incSoup) {
+        soupRow.style.display = 'flex';
+        document.getElementById('calc-soup').innerText = soupTureens + ' misa (' + (soupTureens * 6) + ' os.)';
+      } else {
+        soupRow.style.display = 'none';
+      }
+
+      const dessertRow = document.getElementById('calc-row-dessert');
+      if (incDessert) {
+        dessertRow.style.display = 'flex';
+        document.getElementById('calc-dessert').innerText = dessertCount + ' ks';
+      } else {
+        dessertRow.style.display = 'none';
+      }
+
+      const wineRow = document.getElementById('calc-row-wine');
+      if (incWine) {
+        wineRow.style.display = 'flex';
+        document.getElementById('calc-wine').innerText = wineBottles + ' fľaše (0,75 l)';
+      } else {
+        wineRow.style.display = 'none';
+      }
+
+      // Calculate Total Cost
+      let total = (geeseCount * pricing.goose) +
+                  (liverCount * pricing.liverPortion) +
+                  (lokseCount * pricing.loksa) +
+                  (cabbageCount * pricing.cabbage) +
+                  (picklesCount * pricing.pickles);
+
+      if (incSoup) total += (soupTureens * pricing.soupTureen);
+      if (incDessert) total += (dessertCount * pricing.dessertLoksa);
+      if (incWine) total += (wineBottles * pricing.wineBottle);
+
+      const perPerson = total / guests;
+
+      document.getElementById('calc-total-price').innerText = Math.round(total) + ' €';
+      document.getElementById('calc-per-person').innerText = 'cca ' + perPerson.toFixed(1) + ' € / os.';
+    }
+
+    function setGuests(count) {
+      document.getElementById('guests-slider').value = count;
+      updateCalculator();
+    }
+
+    function applyCalculatorToBooking() {
+      const guests = document.getElementById('guests-slider').value;
+      const geese = document.getElementById('calc-geese').innerText;
+      const liver = document.getElementById('calc-liver').innerText;
+      const lokse = document.getElementById('calc-lokse').innerText;
+      const total = document.getElementById('calc-total-price').innerText;
+
+      document.getElementById('res-guests').value = guests;
+      document.getElementById('res-package').value = 'Zostavené z kalkulačky';
+      
+      const summaryNotes = `Kalkulačka hostiny pre ${guests} osôb:\n- Husacina: ${geese}\n- Pečienka: ${liver}\n- Lokše: ${lokse}\n- Odhadovaná cena: ${total}`;
+      document.getElementById('res-notes').value = summaryNotes;
+
+      // Scroll to booking smoothly
+      document.getElementById('rezervacia').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function selectPackage(packageName, price, guests) {
+      document.getElementById('res-guests').value = guests;
+      document.getElementById('res-package').value = packageName;
+      document.getElementById('res-notes').value = `Vybraný balíček: ${packageName}${price > 0 ? ` (Cena: ${price} €)` : ' (Individuálna kalkulácia)'}. Prosíme potvrdiť čas a špeciálne požiadavky.`;
+      document.getElementById('rezervacia').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function addToReservationPreselect(itemName) {
+      const notes = document.getElementById('res-notes');
+      if (notes.value.trim() === '') {
+        notes.value = `Objednávka z lístka:\n- 1x ${itemName}`;
+      } else {
+        notes.value += `\n- 1x ${itemName}`;
+      }
+      document.getElementById('rezervacia').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // --- 2. MENU FILTERING ---
+    function filterMenu(category) {
+      const tabs = document.querySelectorAll('.menu-tab');
+      tabs.forEach(tab => {
+        tab.classList.remove('bg-clay-600', 'text-white', 'shadow-md');
+        tab.classList.add('bg-clay-50', 'text-hearth-900');
+      });
+      event.target.classList.remove('bg-clay-50', 'text-hearth-900');
+      event.target.classList.add('bg-clay-600', 'text-white', 'shadow-md');
+
+      const items = document.querySelectorAll('.menu-item');
+      items.forEach(item => {
+        if (category === 'all' || item.dataset.cat === category) {
+          item.style.display = 'flex';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    }
+
+    // --- 3. GALLERY FILTERING & LIGHTBOX ---
+    function filterGallery(category) {
+      const tabs = document.querySelectorAll('.gal-tab');
+      tabs.forEach(t => {
+        t.classList.remove('bg-clay-600', 'text-white');
+        t.classList.add('bg-white', 'text-hearth-900');
+      });
+      event.target.classList.remove('bg-white', 'text-hearth-900');
+      event.target.classList.add('bg-clay-600', 'text-white');
+
+      const items = document.querySelectorAll('.gal-item');
+      items.forEach(item => {
+        if (category === 'all' || item.classList.contains(category)) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    }
+
+    function openLightbox(src, caption) {
+      const modal = document.getElementById('lightbox');
+      const img = document.getElementById('lightbox-img');
+      const cap = document.getElementById('lightbox-caption');
+      img.src = src;
+      cap.innerText = caption;
+      modal.classList.remove('hidden');
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.add('hidden');
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeLightbox();
+        closeSuccessModal();
+      }
+    });
+
+    // --- 4. FAQ ACCORDION ---
+    function toggleFaq(index) {
+      const content = document.getElementById(`faq-content-${index}`);
+      const icon = document.getElementById(`faq-icon-${index}`);
+      if (content.classList.contains('hidden')) {
+        content.classList.remove('hidden');
+        icon.classList.add('rotate-180');
+      } else {
+        content.classList.add('hidden');
+        icon.classList.remove('rotate-180');
+      }
+    }
+
+    // --- 5. MOBILE MENU ---
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobile-menu');
+      const icon = document.getElementById('mobile-menu-icon');
+      if (menu.classList.contains('hidden')) {
+        menu.classList.remove('hidden');
+        icon.classList.replace('fa-bars', 'fa-xmark');
+      } else {
+        menu.classList.add('hidden');
+        icon.classList.replace('fa-xmark', 'fa-bars');
+      }
+    }
+
+    // --- 6. FORM SUBMISSION ---
+    function handleReservationSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('res-name').value;
+      const date = document.getElementById('res-date').value;
+      const time = document.getElementById('res-time').value;
+      const guests = document.getElementById('res-guests').value;
+
+      document.getElementById('conf-name').innerText = name;
+      document.getElementById('conf-date').innerText = date;
+      document.getElementById('conf-time').innerText = time;
+      document.getElementById('conf-guests').innerText = guests + ' osôb';
+
+      document.getElementById('success-modal').classList.remove('hidden');
+    }
+
+    function closeSuccessModal() {
+      document.getElementById('success-modal').classList.add('hidden');
+      document.getElementById('reservation-form').reset();
+    }
+
+    // --- 7. AMBIENT AUDIO (WEB AUDIO API - ZERO EXTERNAL ASSETS) ---
+    let audioCtx = null;
+    let isFirePlaying = false;
+    let fireNoiseNode = null;
+
+    function initAudio() {
+      if (!audioCtx) {
+        audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      }
+      if (audioCtx.state === 'suspended') {
+        audioCtx.resume();
+      }
+    }
+
+    // Synthesized Crystal Wine Glass Clink (A toast to Grob)
+    function playToastSound() {
+      try {
+        initAudio();
+        const now = audioCtx.currentTime;
+
+        // Two crystal glasses hitting: high resonance sine harmonics (approx 2200Hz and 3100Hz)
+        [2150, 3120].forEach((freq, i) => {
+          const osc = audioCtx.createOscillator();
+          const gain = audioCtx.createGain();
+
+          osc.type = 'sine';
+          osc.frequency.setValueAtTime(freq + (i * 25), now);
+
+          gain.gain.setValueAtTime(0.2, now);
+          gain.gain.exponentialRampToValueAtTime(0.0001, now + 1.8);
+
+          osc.connect(gain);
+          gain.connect(audioCtx.destination);
+
+          osc.start(now);
+          osc.stop(now + 1.8);
+        });
+      } catch (err) {
+        console.log('Audio clink not supported or blocked:', err);
+      }
+    }
+
+    // Synthesized Crackling Hearth Fire
+    function toggleHearthSound() {
+      try {
+        initAudio();
+        const btn = document.getElementById('hearth-audio-btn');
+        const icon = document.getElementById('hearth-audio-icon');
+        const text = document.getElementById('hearth-audio-text');
+
+        if (!isFirePlaying) {
+          // Create crackle noise buffer
+          const bufferSize = audioCtx.sampleRate * 2;
+          const noiseBuffer = audioCtx.createBuffer(1, bufferSize, audioCtx.sampleRate);
+          const output = noiseBuffer.getChannelData(0);
+
+          let lastOut = 0.0;
+          for (let i = 0; i < bufferSize; i++) {
+            // Brown noise with sporadic pops/crackles
+            const white = Math.random() * 2 - 1;
+            output[i] = (lastOut + (0.02 * white)) / 1.02;
+            lastOut = output[i];
+            output[i] *= 1.2;
+            // Add sporadic hearth snap/pop
+            if (Math.random() < 0.001) {
+              output[i] += (Math.random() * 2 - 1) * 0.8;
+            }
+          }
+
+          fireNoiseNode = audioCtx.createBufferSource();
+          fireNoiseNode.buffer = noiseBuffer;
+          fireNoiseNode.loop = true;
+
+          const filter = audioCtx.createBiquadFilter();
+          filter.type = 'lowpass';
+          filter.frequency.value = 800;
+
+          const gain = audioCtx.createGain();
+          gain.gain.value = 0.15;
+
+          fireNoiseNode.connect(filter);
+          filter.connect(gain);
+          gain.connect(audioCtx.destination);
+
+          fireNoiseNode.start();
+          isFirePlaying = true;
+
+          btn.classList.add('bg-clay-600', 'text-white');
+          icon.classList.add('text-crust-300', 'animate-pulse');
+          text.innerText = 'Krb hrá';
+        } else {
+          if (fireNoiseNode) {
+            fireNoiseNode.stop();
+            fireNoiseNode.disconnect();
+          }
+          isFirePlaying = false;
+          btn.classList.remove('bg-clay-600', 'text-white');
+          icon.classList.remove('text-crust-300', 'animate-pulse');
+          text.innerText = 'Zvuk krbu';
+        }
+      } catch (err) {
+        console.log('Hearth fire audio error:', err);
+      }
+    }
+
+    // Set today as min date for reservation picker
+    window.addEventListener('DOMContentLoaded', () => {
+      const today = new Date().toISOString().split('T')[0];
+      const datePicker = document.getElementById('res-date');
+      if (datePicker) {
+        datePicker.min = today;
+      }
+      updateCalculator();
+    });
+  </script>
+</body>
+</html>
