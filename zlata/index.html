@@ -1,0 +1,2179 @@
+<!DOCTYPE html>
+<html lang="sk" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZLATA, s.r.o. | Moderné online účtovníctvo, mzdy a refundácia DPH z EÚ</title>
+  <meta name="description" content="Komplexné vedenie účtovníctva s 24/7 online prístupom, mzdová agenda a špecializovaná refundácia DPH z členských štátov EÚ. Viac ako 20 rokov praxe a 100% poistenie v GENERALI. Kancelárie Pezinok a Šenkvice.">
+  <meta name="keywords" content="účtovníctvo Pezinok, účtovníctvo Šenkvice, online účtovníctvo, refundácia DPH z EU, vrátenie DPH zo zahraničia, spracovanie miezd, podvojné účtovníctvo, ZLATA s.r.o., daňové priznanie, poistené účtovníctvo">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.zlata.sk/">
+  <meta property="og:title" content="ZLATA, s.r.o. — Profesionálne online účtovníctvo a vrátenie DPH z EÚ">
+  <meta property="og:description" content="Prestaňte nosiť doklady v šanónoch. Získajte moderné online účtovníctvo s nepretržitým prístupom a 100% garanciou bezchybnosti krytou poisťovňou Generali.">
+  <meta property="og:image" content="images/hero-accounting.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/logo-square.png">
+
+  <!-- Google Fonts: Inter & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#fbf7ff',
+              100: '#f4ebff',
+              200: '#e8d5ff',
+              300: '#d5b2ff',
+              400: '#b881ff',
+              500: '#9b4eff',
+              600: '#842df0',
+              700: '#6f1dc7',
+              800: '#5c19a4',
+              900: '#4c1784',
+              950: '#2e0757',
+            },
+            gold: {
+              50: '#fffbeb',
+              100: '#fef3c7',
+              200: '#fde68a',
+              300: '#fcd34d',
+              400: '#fbbf24',
+              500: '#f59e0b',
+              600: '#d97706',
+              700: '#b45309',
+              800: '#92400e',
+              900: '#78350f',
+            },
+            accent: {
+              teal: '#0d9488',
+              emerald: '#10b981',
+              navy: '#0f172a'
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'Inter', 'sans-serif'],
+            mono: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'monospace']
+          },
+          boxShadow: {
+            'glow': '0 0 40px -10px rgba(132, 45, 240, 0.25)',
+            'card': '0 10px 30px -5px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.02)',
+            'card-hover': '0 20px 40px -10px rgba(111, 29, 199, 0.15), 0 8px 16px -4px rgba(0, 0, 0, 0.06)'
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom refined animations & utilities */
+    .glass-nav {
+      background: rgba(255, 255, 255, 0.88);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+    .hero-mesh {
+      background: radial-gradient(circle at 15% 20%, rgba(155, 78, 255, 0.12) 0%, transparent 40%),
+                  radial-gradient(circle at 85% 70%, rgba(245, 158, 11, 0.10) 0%, transparent 40%),
+                  radial-gradient(circle at 50% 50%, rgba(244, 235, 255, 0.5) 0%, #ffffff 100%);
+    }
+    .badge-shimmer {
+      background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.4) 50%, rgba(255,255,255,0) 100%);
+      background-size: 200% 100%;
+      animation: shimmer 3s infinite;
+    }
+    @keyframes shimmer {
+      0% { background-position: -200% 0; }
+      100% { background-position: 200% 0; }
+    }
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f1f5f9;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 5px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #94a3b8;
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-brand-500 selection:text-white font-sans">
+
+  <!-- TOP BAR INFO -->
+  <div class="bg-brand-950 text-slate-300 text-xs py-2 px-4 border-b border-brand-900/60 hidden md:block">
+    <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-4">
+      <div class="flex items-center space-x-6">
+        <span class="inline-flex items-center text-slate-300">
+          <i class="fa-solid fa-shield-halved text-gold-400 mr-2"></i>
+          100% poistné krytie zodpovednosti v GENERALI Slovensko
+        </span>
+        <span class="inline-flex items-center text-slate-300">
+          <i class="fa-solid fa-cloud text-brand-300 mr-2"></i>
+          Online cloud prístup k agende 24/7/365
+        </span>
+        <span class="inline-flex items-center text-slate-300">
+          <i class="fa-solid fa-award text-gold-400 mr-2"></i>
+          Viac ako 20 rokov na trhu (od 2004)
+        </span>
+      </div>
+      <div class="flex items-center space-x-5 text-xs">
+        <a href="tel:+421903229408" class="hover:text-gold-300 transition-colors flex items-center font-medium">
+          <i class="fa-solid fa-phone text-gold-400 mr-1.5"></i> 0903 229 408
+        </a>
+        <a href="mailto:zlata@zlata.sk" class="hover:text-gold-300 transition-colors flex items-center">
+          <i class="fa-solid fa-envelope text-gold-400 mr-1.5"></i> zlata@zlata.sk
+        </a>
+        <span class="text-slate-500">|</span>
+        <span class="text-slate-400">Pezinok & Šenkvice</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN NAVIGATION -->
+  <header class="sticky top-0 z-50 glass-nav border-b border-slate-200/80 shadow-sm transition-all duration-300" id="mainHeader">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- LOGO -->
+        <a href="#" class="flex items-center space-x-3 group">
+          <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-brand-700 to-brand-900 flex items-center justify-center p-1.5 shadow-md shadow-brand-700/20 group-hover:scale-105 transition-transform">
+            <img src="images/logo-square.png" alt="ZLATA s.r.o. Logo" class="w-full h-full object-contain filter drop-shadow">
+          </div>
+          <div class="flex flex-col">
+            <span class="font-extrabold text-2xl tracking-tight text-slate-900 group-hover:text-brand-700 transition-colors flex items-center">
+              ZLATA<span class="text-gold-500 text-lg font-bold ml-1">, s.r.o.</span>
+            </span>
+            <span class="text-[11px] font-semibold uppercase tracking-wider text-slate-700 -mt-1">
+              VEDENIE ÚČTOVNÍCTVA &bull; MZDY &bull; DPH EÚ
+            </span>
+          </div>
+        </a>
+
+        <!-- DESKTOP NAV -->
+        <nav class="hidden lg:flex items-center space-x-1">
+          <a href="#sluzby" class="px-3.5 py-2 text-sm font-semibold text-slate-700 hover:text-brand-700 rounded-lg hover:bg-slate-100/70 transition-all">Služby</a>
+          <a href="#online-uctovnictvo" class="px-3.5 py-2 text-sm font-semibold text-slate-700 hover:text-brand-700 rounded-lg hover:bg-slate-100/70 transition-all">Online Cloud</a>
+          <a href="#mzdy" class="px-3.5 py-2 text-sm font-semibold text-slate-700 hover:text-brand-700 rounded-lg hover:bg-slate-100/70 transition-all">Mzdy & Personál</a>
+          <a href="#refundacia-dph" class="px-3.5 py-2 text-sm font-semibold text-slate-700 hover:text-brand-700 rounded-lg hover:bg-slate-100/70 transition-all flex items-center">
+            <span>Refundácia DPH EÚ</span>
+            <span class="ml-1.5 bg-gold-100 text-gold-800 text-[10px] font-bold px-1.5 py-0.5 rounded-full border border-gold-300">Špecializácia</span>
+          </a>
+          <a href="#kalkulacka" class="px-3.5 py-2 text-sm font-semibold text-brand-700 hover:text-brand-800 rounded-lg hover:bg-brand-50 transition-all flex items-center">
+            <i class="fa-solid fa-calculator mr-1.5 text-xs text-brand-600"></i> Kalkulačka ceny
+          </a>
+          <a href="#cennik" class="px-3.5 py-2 text-sm font-semibold text-slate-700 hover:text-brand-700 rounded-lg hover:bg-slate-100/70 transition-all">Cenník</a>
+          <a href="#kontakt" class="px-3.5 py-2 text-sm font-semibold text-slate-700 hover:text-brand-700 rounded-lg hover:bg-slate-100/70 transition-all">Pobočky</a>
+        </nav>
+
+        <!-- CTA BUTTONS -->
+        <div class="hidden md:flex items-center space-x-3">
+          <a href="tel:+421903229408" class="text-sm font-bold text-slate-700 hover:text-brand-700 flex items-center px-3 py-2 border border-slate-200 rounded-xl hover:border-brand-300 transition-colors bg-white/70">
+            <i class="fa-solid fa-phone-volume text-gold-500 mr-2"></i>
+            0903 229 408
+          </a>
+          <a href="#kontakt-formular" class="text-sm font-bold text-white bg-gradient-to-r from-brand-700 to-brand-800 hover:from-brand-600 hover:to-brand-700 px-5 py-2.5 rounded-xl shadow-md shadow-brand-700/20 hover:shadow-lg hover:shadow-brand-700/30 transition-all transform hover:-translate-y-0.5 flex items-center">
+            <span>Nezáväzná ponuka</span>
+            <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+          </a>
+        </div>
+
+        <!-- MOBILE MENU BUTTON -->
+        <div class="lg:hidden flex items-center space-x-2">
+          <a href="tel:+421903229408" class="w-10 h-10 rounded-lg bg-brand-50 text-brand-700 flex items-center justify-center text-sm font-bold border border-brand-200">
+            <i class="fa-solid fa-phone"></i>
+          </a>
+          <button id="mobileMenuBtn" type="button" aria-label="Menu" class="p-2.5 rounded-xl text-slate-700 hover:bg-slate-100 focus:outline-none">
+            <i class="fa-solid fa-bars text-xl" id="menuIcon"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- MOBILE DROPDOWN -->
+    <div id="mobileMenu" class="hidden lg:hidden border-t border-slate-200 bg-white/95 backdrop-blur-md px-4 pt-3 pb-6 space-y-2 shadow-xl">
+      <a href="#sluzby" class="block px-3 py-2.5 rounded-lg text-base font-semibold text-slate-700 hover:bg-brand-50 hover:text-brand-700 mobile-nav-link">Služby a účtovníctvo</a>
+      <a href="#online-uctovnictvo" class="block px-3 py-2.5 rounded-lg text-base font-semibold text-slate-700 hover:bg-brand-50 hover:text-brand-700 mobile-nav-link">Online Cloud 24/7</a>
+      <a href="#mzdy" class="block px-3 py-2.5 rounded-lg text-base font-semibold text-slate-700 hover:bg-brand-50 hover:text-brand-700 mobile-nav-link">Mzdy a personalistika</a>
+      <a href="#refundacia-dph" class="block px-3 py-2.5 rounded-lg text-base font-semibold text-slate-700 hover:bg-brand-50 hover:text-brand-700 mobile-nav-link flex items-center justify-between">
+        <span>Refundácia DPH z EÚ</span>
+        <span class="bg-gold-100 text-gold-800 text-xs font-bold px-2 py-0.5 rounded-full">Top služba</span>
+      </a>
+      <a href="#kalkulacka" class="block px-3 py-2.5 rounded-lg text-base font-semibold text-brand-700 bg-brand-50/70 mobile-nav-link flex items-center">
+        <i class="fa-solid fa-calculator mr-2 text-brand-600"></i> Interaktívna cenová kalkulačka
+      </a>
+      <a href="#cennik" class="block px-3 py-2.5 rounded-lg text-base font-semibold text-slate-700 hover:bg-brand-50 hover:text-brand-700 mobile-nav-link">Kompletný Cenník</a>
+      <a href="#preco-my" class="block px-3 py-2.5 rounded-lg text-base font-semibold text-slate-700 hover:bg-brand-50 hover:text-brand-700 mobile-nav-link">Prečo ZLATA</a>
+      <a href="#kontakt" class="block px-3 py-2.5 rounded-lg text-base font-semibold text-slate-700 hover:bg-brand-50 hover:text-brand-700 mobile-nav-link">Kancelárie Pezinok & Šenkvice</a>
+      <div class="pt-4 flex flex-col gap-2">
+        <a href="#kontakt-formular" class="w-full text-center py-3 bg-brand-700 text-white font-bold rounded-xl shadow-md mobile-nav-link">
+          Vyžiadať cenovú ponuku
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="relative hero-mesh pt-12 pb-20 md:pt-20 md:pb-32 overflow-hidden border-b border-slate-200/60">
+    <!-- Background subtle shapes -->
+    <div class="absolute -top-24 -right-24 w-96 h-96 bg-brand-400/10 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute -bottom-24 -left-24 w-96 h-96 bg-gold-400/15 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        
+        <!-- LEFT: Hero Copy -->
+        <div class="lg:col-span-7 space-y-6">
+          
+          <div class="inline-flex items-center space-x-2 bg-brand-100/80 border border-brand-200/70 px-3.5 py-1.5 rounded-full text-xs font-bold text-brand-900 shadow-sm">
+            <span class="flex h-2 w-2 rounded-full bg-emerald-500 animate-pulse"></span>
+            <span>Cloudové účtovníctvo 21. storočia &bull; 100% kryté poistením Generali</span>
+          </div>
+
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.12]">
+            Vaše financie v bezpečí, <br class="hidden sm:inline">
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-700 via-brand-600 to-gold-600">online 24/7 non-stop</span><br>
+            a dane bez stresu.
+          </h1>
+
+          <p class="text-lg sm:text-xl text-slate-600 max-w-2xl leading-relaxed">
+            Zabudnite na škatule plné papierov a obavy z daňových kontrol. Sme akreditovaná účtovná a poradenská spoločnosť 
+            s viac ako <strong>20-ročnou tradíciou</strong>. Poskytujeme komplexné podvojné a jednoduché účtovníctvo, mzdy a 
+            <strong>špecializovanú refundáciu DPH z 27 krajín EÚ</strong>.
+          </p>
+
+          <!-- Action buttons -->
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
+            <a href="#kalkulacka" class="inline-flex justify-center items-center px-7 py-4 text-base font-bold text-white bg-gradient-to-r from-brand-700 to-brand-800 hover:from-brand-600 hover:to-brand-700 rounded-xl shadow-lg shadow-brand-700/25 hover:shadow-xl hover:shadow-brand-700/35 transition-all transform hover:-translate-y-0.5">
+              <i class="fa-solid fa-calculator mr-2.5 text-gold-300"></i>
+              <span>Vypočítať cenu online</span>
+            </a>
+            <a href="#kontakt-formular" class="inline-flex justify-center items-center px-7 py-4 text-base font-bold text-slate-700 bg-white hover:bg-slate-50 border border-slate-300 rounded-xl shadow-sm hover:border-brand-400 transition-all">
+              <i class="fa-solid fa-comments text-brand-600 mr-2.5"></i>
+              <span>Bezplatná konzultácia</span>
+            </a>
+          </div>
+
+          <!-- Trust metrics grid -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-6 border-t border-slate-200/80">
+            <div>
+              <div class="text-2xl sm:text-3xl font-black text-brand-800">20+</div>
+              <div class="text-xs font-semibold text-slate-700 uppercase tracking-wide">rokov praxe</div>
+            </div>
+            <div>
+              <div class="text-2xl sm:text-3xl font-black text-gold-600">100%</div>
+              <div class="text-xs font-semibold text-slate-700 uppercase tracking-wide">poistné krytie</div>
+            </div>
+            <div>
+              <div class="text-2xl sm:text-3xl font-black text-brand-800">24/7</div>
+              <div class="text-xs font-semibold text-slate-700 uppercase tracking-wide">cloudový prístup</div>
+            </div>
+            <div>
+              <div class="text-2xl sm:text-3xl font-black text-gold-600">27</div>
+              <div class="text-xs font-semibold text-slate-700 uppercase tracking-wide">štátov EÚ pre DPH</div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- RIGHT: Interactive Visual Card / Hero Mockup -->
+        <div class="lg:col-span-5 relative">
+          <div class="relative mx-auto max-w-md lg:max-w-none">
+            
+            <!-- Main Glass Card -->
+            <div class="bg-white/95 rounded-3xl p-6 sm:p-8 shadow-2xl border border-slate-200/90 relative backdrop-blur-md">
+              
+              <div class="flex items-center justify-between pb-5 border-b border-slate-100">
+                <div class="flex items-center space-x-3">
+                  <div class="w-10 h-10 rounded-xl bg-brand-700 text-white flex items-center justify-center font-black text-lg shadow-sm">
+                    Z
+                  </div>
+                  <div>
+                    <h3 class="font-extrabold text-slate-900 text-sm">Portál klienta ZLATA Cloud</h3>
+                    <p class="text-xs text-emerald-600 font-semibold flex items-center">
+                      <span class="w-2 h-2 rounded-full bg-emerald-500 inline-block mr-1.5"></span>
+                      Aktívny &bull; Synchronizovaný v reálnom čase
+                    </p>
+                  </div>
+                </div>
+                <span class="text-xs font-mono bg-slate-100 text-slate-700 px-2 py-1 rounded-md">SSL 256-bit</span>
+              </div>
+
+              <!-- Quick financial status snippet -->
+              <div class="mt-6 space-y-4">
+                
+                <div class="bg-gradient-to-br from-brand-900 to-brand-950 rounded-2xl p-4 text-white shadow-md">
+                  <div class="flex justify-between items-center text-xs text-brand-200">
+                    <span>Prehľad výsledkov hospodárenia</span>
+                    <span class="bg-brand-800/80 px-2 py-0.5 rounded text-[11px] font-medium text-gold-300">Aktuálny mesiac</span>
+                  </div>
+                  <div class="mt-2 flex items-baseline justify-between">
+                    <div>
+                      <span class="text-2xl font-black text-white">48 920,00 €</span>
+                      <span class="text-xs text-emerald-400 font-bold ml-2"><i class="fa-solid fa-arrow-trend-up"></i> +14.2%</span>
+                    </div>
+                    <span class="text-xs text-slate-300">Zisk po zdanení</span>
+                  </div>
+                  <div class="mt-3 grid grid-cols-2 gap-2 text-xs pt-3 border-t border-brand-800/80">
+                    <div>
+                      <span class="text-brand-300 text-[11px] block">Pohľadávky po lehote</span>
+                      <span class="font-bold text-white">0,00 €</span>
+                    </div>
+                    <div>
+                      <span class="text-brand-300 text-[11px] block">Predbežná DPH k úhrade</span>
+                      <span class="font-bold text-amber-300">3 420,50 €</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 3 Key features pill list -->
+                <div class="space-y-2.5 pt-2">
+                  <div class="flex items-center p-3 rounded-xl bg-slate-50 border border-slate-100 hover:bg-slate-100/70 transition-colors">
+                    <div class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center mr-3 shrink-0">
+                      <i class="fa-solid fa-file-invoice-dollar text-sm"></i>
+                    </div>
+                    <div class="flex-1 min-w-0">
+                      <p class="text-xs font-bold text-slate-800">Okamžitý prehľad pohľadávok & záväzkov</p>
+                      <p class="text-[11px] text-slate-500">Vidíte presne, kto vám dlhuje a čo je potrebné uhradiť.</p>
+                    </div>
+                  </div>
+
+                  <div class="flex items-center p-3 rounded-xl bg-slate-50 border border-slate-100 hover:bg-slate-100/70 transition-colors">
+                    <div class="w-8 h-8 rounded-lg bg-brand-100 text-brand-700 flex items-center justify-center mr-3 shrink-0">
+                      <i class="fa-solid fa-camera-rotate text-sm"></i>
+                    </div>
+                    <div class="flex-1 min-w-0">
+                      <p class="text-xs font-bold text-slate-800">Elektronická bezpapierová agenda</p>
+                      <p class="text-[11px] text-slate-500">Doklady stačí odfotiť, naskenovať alebo preposlať emailom.</p>
+                    </div>
+                  </div>
+
+                  <div class="flex items-center p-3 rounded-xl bg-slate-50 border border-slate-100 hover:bg-slate-100/70 transition-colors">
+                    <div class="w-8 h-8 rounded-lg bg-gold-100 text-gold-700 flex items-center justify-center mr-3 shrink-0">
+                      <i class="fa-solid fa-earth-europe text-sm"></i>
+                    </div>
+                    <div class="flex-1 min-w-0">
+                      <p class="text-xs font-bold text-slate-800">Vrátenie DPH zo zahraničia (EÚ)</p>
+                      <p class="text-[11px] text-slate-500">Peniaze z tankovania a nákupov v EÚ späť na váš účet.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="pt-2 text-center">
+                  <a href="#online-uctovnictvo" class="text-xs font-bold text-brand-700 hover:text-brand-900 inline-flex items-center">
+                    <span>Ako funguje on-line cloudový prístup?</span>
+                    <i class="fa-solid fa-arrow-right ml-1.5 text-[10px]"></i>
+                  </a>
+                </div>
+
+              </div>
+
+            </div>
+
+            <!-- Floating floating badges -->
+            <div class="absolute -bottom-5 -left-5 bg-white rounded-2xl p-3.5 shadow-xl border border-slate-200/90 hidden sm:flex items-center space-x-3">
+              <div class="w-10 h-10 rounded-xl bg-gold-500 text-white flex items-center justify-center text-lg shadow-sm">
+                <i class="fa-solid fa-shield-heart"></i>
+              </div>
+              <div>
+                <p class="text-xs font-extrabold text-slate-900">Poistenie GENERALI</p>
+                <p class="text-[10px] text-slate-500">100% krytie škôd a sankcií</p>
+              </div>
+            </div>
+
+            <div class="absolute -top-5 -right-5 bg-white rounded-2xl p-3.5 shadow-xl border border-slate-200/90 hidden sm:flex items-center space-x-3">
+              <div class="w-10 h-10 rounded-xl bg-emerald-500 text-white flex items-center justify-center text-lg shadow-sm">
+                <i class="fa-solid fa-headset"></i>
+              </div>
+              <div>
+                <p class="text-xs font-extrabold text-slate-900">Hot-line podpora</p>
+                <p class="text-[10px] text-slate-500">0903 229 408 pre klientov</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST BAR / PARTNERS & CERTIFICATIONS -->
+  <section class="py-8 bg-white border-b border-slate-200/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="text-center md:text-left">
+          <p class="text-xs font-bold uppercase tracking-wider text-slate-700">Garancia stability & legislatívnej istoty</p>
+          <p class="text-sm font-extrabold text-slate-800">Spolupracujeme s renomovanými inštitúciami a softvérmi</p>
+        </div>
+        <div class="flex flex-wrap items-center justify-center md:justify-end gap-6 sm:gap-10 text-slate-700">
+          <div class="flex items-center space-x-2 font-bold text-sm text-slate-700 hover:text-brand-800 transition-colors">
+            <i class="fa-solid fa-building-shield text-brand-700 text-xl"></i>
+            <span>Poisťovňa GENERALI</span>
+          </div>
+          <div class="flex items-center space-x-2 font-bold text-sm text-slate-700 hover:text-brand-800 transition-colors">
+            <i class="fa-solid fa-landmark text-brand-700 text-xl"></i>
+            <span>Finančná správa SR (PFS)</span>
+          </div>
+          <div class="flex items-center space-x-2 font-bold text-sm text-slate-700 hover:text-brand-800 transition-colors">
+            <i class="fa-solid fa-cloud-arrow-up text-brand-700 text-xl"></i>
+            <span>Cloud & E-Kasa Ready</span>
+          </div>
+          <div class="flex items-center space-x-2 font-bold text-sm text-slate-700 hover:text-brand-800 transition-colors">
+            <i class="fa-solid fa-passport text-brand-700 text-xl"></i>
+            <span>Smernica EÚ 2008/09/EC</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPARISON: OLD WAY VS ZLATA WAY -->
+  <section class="py-16 md:py-24 bg-slate-50" id="rozdiel">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-xs font-extrabold uppercase tracking-widest text-brand-700 bg-brand-100 px-3 py-1 rounded-full">
+          Prečo zmeniť prístup
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3 tracking-tight">
+          V čom sa líšime od bežných účtovných firiem?
+        </h2>
+        <p class="text-base sm:text-lg text-slate-600 mt-4 leading-relaxed">
+          Tradičné účtovníctvo býva pomalé, neprehľadné a viazané na papierové šanóny. So ZLATA, s.r.o. získavate 
+          moderného partnera, ktorý vám dáva slobodu a okamžitý prehľad o peniazoch.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+        
+        <!-- The Old Way -->
+        <div class="bg-white rounded-3xl p-8 border border-red-100 shadow-sm relative overflow-hidden">
+          <div class="absolute top-0 right-0 bg-red-100 text-red-700 text-xs font-bold px-4 py-1.5 rounded-bl-2xl">
+            Zastaraný model
+          </div>
+          <div class="flex items-center space-x-3 mb-6">
+            <div class="w-12 h-12 rounded-2xl bg-red-50 text-red-600 flex items-center justify-center text-xl">
+              <i class="fa-solid fa-box-archive"></i>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-slate-900">Tradičný externý účtovník</h3>
+              <p class="text-xs text-slate-500">Papierový kolobeh a neskoré reporty</p>
+            </div>
+          </div>
+          <ul class="space-y-4 text-sm text-slate-600">
+            <li class="flex items-start">
+              <i class="fa-solid fa-xmark text-red-500 mt-1 mr-3 text-base shrink-0"></i>
+              <span><strong>Hory papierov a šanónov:</strong> Nutnosť fyzicky nosiť doklady a bločky každý mesiac do kancelárie.</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fa-solid fa-xmark text-red-500 mt-1 mr-3 text-base shrink-0"></i>
+              <span><strong>Neviete, ako na tom firma stojí:</strong> Výsledky hospodárenia sa dozviete až pri ročnej závierke alebo s týždňovým oneskorením.</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fa-solid fa-xmark text-red-500 mt-1 mr-3 text-base shrink-0"></i>
+              <span><strong>Strach z chýb a pokút:</strong> Účtovník často nemá reálne poistné krytie a riziko sankcií znášate vy.</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fa-solid fa-xmark text-red-500 mt-1 mr-3 text-base shrink-0"></i>
+              <span><strong>Zahraničná DPH prepadá:</strong> Bločky za tankovanie a hotely v zahraničí končia v koši, lebo ich nevie vyreklamovať.</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- The ZLATA Way -->
+        <div class="bg-gradient-to-br from-brand-900 to-brand-950 text-white rounded-3xl p-8 border border-brand-800 shadow-xl relative overflow-hidden">
+          <div class="absolute top-0 right-0 bg-gold-400 text-brand-950 text-xs font-extrabold px-4 py-1.5 rounded-bl-2xl">
+            Odporúčané riešenie
+          </div>
+          <div class="flex items-center space-x-3 mb-6">
+            <div class="w-12 h-12 rounded-2xl bg-brand-800/80 text-gold-400 flex items-center justify-center text-xl">
+              <i class="fa-solid fa-cloud-bolt"></i>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-white">Moderné partnerstvo so ZLATA</h3>
+              <p class="text-xs text-brand-200">Online prehľad 24/7/365 & 100% garancia</p>
+            </div>
+          </div>
+          <ul class="space-y-4 text-sm text-slate-200">
+            <li class="flex items-start">
+              <i class="fa-solid fa-check text-gold-400 mt-1 mr-3 text-base shrink-0"></i>
+              <span><strong>Non-stop online cloud prístup:</strong> Vaša agenda je dostupná 24/7/365 z kancelárie, domova aj mobilu.</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fa-solid fa-check text-gold-400 mt-1 mr-3 text-base shrink-0"></i>
+              <span><strong>Finančný kompas v reálnom čase:</strong> Okamžitý prehľad pohľadávok, záväzkov, skladov a predbežných daňových povinností.</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fa-solid fa-check text-gold-400 mt-1 mr-3 text-base shrink-0"></i>
+              <span><strong>100% poistná zmluva v GENERALI:</strong> Zodpovednosť za bezchybné spracovanie agendy a prípadné sankcie preberáme na seba.</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fa-solid fa-check text-gold-400 mt-1 mr-3 text-base shrink-0"></i>
+              <span><strong>Špecializovaná refundácia DPH z EÚ:</strong> Vrátime vám tisíce eur z nákupov pohonných hmôt, mýta a služieb v 27 štátoch EÚ.</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SERVICES OVERVIEW -->
+  <section class="py-16 md:py-24 bg-white" id="sluzby">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-xs font-extrabold uppercase tracking-widest text-brand-700 bg-brand-100 px-3 py-1 rounded-full">
+          Komplexné portfólio služieb
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3 tracking-tight">
+          Všetko pod jednou strechou pre vašu firmu
+        </h2>
+        <p class="text-base sm:text-lg text-slate-600 mt-4 leading-relaxed">
+          Od drobného živnostníka cez dynamické s.r.o. až po medzinárodných prepravcov a výrobné spoločnosti. 
+          Vyberte si službu, ktorú potrebujete.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Service 1: Podvojné účtovníctvo -->
+        <div class="bg-slate-50/80 rounded-3xl p-8 border border-slate-200 hover:border-brand-300 hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="w-14 h-14 rounded-2xl bg-brand-100 text-brand-700 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 group-hover:bg-brand-700 group-hover:text-white transition-all">
+              <i class="fa-solid fa-calculator"></i>
+            </div>
+            <h3 class="text-xl font-extrabold text-slate-900 mb-2">Podvojné účtovníctvo</h3>
+            <p class="text-sm text-slate-600 mb-4 leading-relaxed">
+              Kompletné vedenie agendy pre právnické osoby (s.r.o., a.s.) v súlade so zákonom o účtovníctve. Mesačné závierky, DPH priznania a kontrolné výkazy.
+            </p>
+            <ul class="text-xs space-y-2 text-slate-600 border-t border-slate-200/80 pt-4">
+              <li class="flex items-center"><i class="fa-solid fa-check text-emerald-500 mr-2"></i> Kniha pohľadávok, záväzkov a hlavná kniha</li>
+              <li class="flex items-center"><i class="fa-solid fa-check text-emerald-500 mr-2"></i> Priznanie k DPH, Kontrolný & Súhrnný výkaz</li>
+              <li class="flex items-center"><i class="fa-solid fa-check text-emerald-500 mr-2"></i> Intrastat a štatistické výkazy</li>
+              <li class="flex items-center"><i class="fa-solid fa-check text-emerald-500 mr-2"></i> Riadne a mimoriadne účtovné závierky</li>
+            </ul>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-200/80 flex items-center justify-between">
+            <span class="text-xs font-bold text-slate-500">Od 99 € / mes.</span>
+            <a href="#kalkulacka" class="text-xs font-bold text-brand-700 hover:text-brand-900 flex items-center">
+              Spočítať cenu <i class="fa-solid fa-arrow-right ml-1"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Service 2: Mzdy & Personalistika -->
+        <div class="bg-slate-50/80 rounded-3xl p-8 border border-slate-200 hover:border-brand-300 hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between group" id="mzdy">
+          <div>
+            <div class="w-14 h-14 rounded-2xl bg-gold-100 text-gold-700 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 group-hover:bg-gold-500 group-hover:text-white transition-all">
+              <i class="fa-solid fa-users"></i>
+            </div>
+            <h3 class="text-xl font-extrabold text-slate-900 mb-2">Mzdy & Personalistika</h3>
+            <p class="text-sm text-slate-600 mb-4 leading-relaxed">
+              Kompletný mzdový outsourcing bez starostí so Zákonníkom práce. Výplatné pásky, elektronická komunikácia s SP a ZP, bankové príkazy.
+            </p>
+            <ul class="text-xs space-y-2 text-slate-600 border-t border-slate-200/80 pt-4">
+              <li class="flex items-center"><i class="fa-solid fa-check text-emerald-500 mr-2"></i> Výpočet miezd (TPP, dohody DBPŠ, DVP)</li>
+              <li class="flex items-center"><i class="fa-solid fa-check text-emerald-500 mr-2"></i> Elektronické prihlášky/odhlášky na SP & ZP</li>
+              <li class="flex items-center"><i class="fa-solid fa-check text-emerald-500 mr-2"></i> Príprava bankových príkazov (homebanking)</li>
+              <li class="flex items-center"><i class="fa-solid fa-check text-emerald-500 mr-2"></i> Ročné zúčtovanie dane a ELDP</li>
+            </ul>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-200/80 flex items-center justify-between">
+            <span class="text-xs font-bold text-slate-500">Od 13 € / zamestnanec</span>
+            <a href="#kalkulacka" class="text-xs font-bold text-brand-700 hover:text-brand-900 flex items-center">
+              Spočítať mzdy <i class="fa-solid fa-arrow-right ml-1"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Service 3: Refundácia DPH z EÚ (TOP HIGHLIGHT) -->
+        <div class="bg-gradient-to-br from-brand-900 via-brand-950 to-slate-950 text-white rounded-3xl p-8 border border-brand-800 shadow-xl flex flex-col justify-between group relative overflow-hidden" id="refundacia-dph">
+          <div class="absolute -right-12 -bottom-12 w-40 h-40 bg-gold-500/10 rounded-full blur-2xl"></div>
+          <div>
+            <div class="flex items-center justify-between mb-6">
+              <div class="w-14 h-14 rounded-2xl bg-gold-400 text-brand-950 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">
+                <i class="fa-solid fa-euro-sign"></i>
+              </div>
+              <span class="bg-gold-400/20 text-gold-300 border border-gold-400/40 text-[11px] font-extrabold px-2.5 py-1 rounded-full uppercase">
+                Špecializácia
+              </span>
+            </div>
+            <h3 class="text-xl font-extrabold text-white mb-2">Refundácia DPH z EÚ</h3>
+            <p class="text-sm text-slate-300 mb-4 leading-relaxed">
+              Zastupujeme slovenské firmy pri vrátení DPH zaplatenej v iných štátoch EÚ (PHM, mýto, ubytovanie, veľtrhy, opravy vozidiel).
+            </p>
+            <ul class="text-xs space-y-2 text-slate-300 border-t border-brand-800/80 pt-4">
+              <li class="flex items-center"><i class="fa-solid fa-check text-gold-400 mr-2"></i> Všetkých 27 členských štátov EÚ</li>
+              <li class="flex items-center"><i class="fa-solid fa-check text-gold-400 mr-2"></i> Elektronické podanie cez portál FS SR</li>
+              <li class="flex items-center"><i class="fa-solid fa-check text-gold-400 mr-2"></i> Férová provízia len z úspešnej vratky</li>
+              <li class="flex items-center"><i class="fa-solid fa-check text-gold-400 mr-2"></i> Riešenie výziev a odvolaní so zahraničným DÚ</li>
+            </ul>
+          </div>
+          <div class="mt-6 pt-4 border-t border-brand-800/80 flex items-center justify-between">
+            <span class="text-xs font-bold text-gold-400">Sadzba 6% (min. 80 €)</span>
+            <a href="#kalkulacka-dph" class="text-xs font-bold text-white hover:text-gold-300 flex items-center">
+              Simulátor vratky <i class="fa-solid fa-arrow-right ml-1"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Service 4: Jednoduché účtovníctvo & Živnostníci -->
+        <div class="bg-slate-50/80 rounded-3xl p-8 border border-slate-200 hover:border-brand-300 hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="w-14 h-14 rounded-2xl bg-brand-100 text-brand-700 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 group-hover:bg-brand-700 group-hover:text-white transition-all">
+              <i class="fa-solid fa-user-tie"></i>
+            </div>
+            <h3 class="text-xl font-extrabold text-slate-900 mb-2">Účtovníctvo pre SZČO</h3>
+            <p class="text-sm text-slate-600 mb-4 leading-relaxed">
+              Jednoduché účtovníctvo, paušálne výdavky aj daňová evidencia. Optimalizácia odvodov do Sociálnej a zdravotnej poisťovne.
+            </p>
+            <ul class="text-xs space-y-2 text-slate-600 border-t border-slate-200/80 pt-4">
+              <li class="flex items-center"><i class="fa-solid fa-check text-emerald-500 mr-2"></i> Peňažný denník a daňová evidencia</li>
+              <li class="flex items-center"><i class="fa-solid fa-check text-emerald-500 mr-2"></i> Daňové priznanie typ B (paušál / reálne)</li>
+              <li class="flex items-center"><i class="fa-solid fa-check text-emerald-500 mr-2"></i> Výpočet preddavkov na SP a ZP</li>
+              <li class="flex items-center"><i class="fa-solid fa-check text-emerald-500 mr-2"></i> Bezpečné sledovanie obratu na DPH</li>
+            </ul>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-200/80 flex items-center justify-between">
+            <span class="text-xs font-bold text-slate-500">Paušál od 79 €</span>
+            <a href="#cennik" class="text-xs font-bold text-brand-700 hover:text-brand-900 flex items-center">
+              Zobraziť cenník <i class="fa-solid fa-arrow-right ml-1"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Service 5: Daňové priznania a majetok -->
+        <div class="bg-slate-50/80 rounded-3xl p-8 border border-slate-200 hover:border-brand-300 hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="w-14 h-14 rounded-2xl bg-brand-100 text-brand-700 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 group-hover:bg-brand-700 group-hover:text-white transition-all">
+              <i class="fa-solid fa-file-signature"></i>
+            </div>
+            <h3 class="text-xl font-extrabold text-slate-900 mb-2">Daňové priznania & Majetok</h3>
+            <p class="text-sm text-slate-600 mb-4 leading-relaxed">
+              Zostavenie priznaní k dani z príjmov FO/PO, dani z motorových vozidiel (DzMV), dani z nehnuteľností a odpisové plány investícií.
+            </p>
+            <ul class="text-xs space-y-2 text-slate-600 border-t border-slate-200/80 pt-4">
+              <li class="flex items-center"><i class="fa-solid fa-check text-emerald-500 mr-2"></i> Príjmy zo zahraničia (DPFO A od 99 €)</li>
+              <li class="flex items-center"><i class="fa-solid fa-check text-emerald-500 mr-2"></i> Daň z motorových vozidiel (DzMV od 25 €)</li>
+              <li class="flex items-center"><i class="fa-solid fa-check text-emerald-500 mr-2"></i> Evidencia dlhodobého majetku a odpisy</li>
+              <li class="flex items-center"><i class="fa-solid fa-check text-emerald-500 mr-2"></i> Dotácie a investičné stimuly</li>
+            </ul>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-200/80 flex items-center justify-between">
+            <span class="text-xs font-bold text-slate-500">DPFO od 69 €</span>
+            <a href="#cennik" class="text-xs font-bold text-brand-700 hover:text-brand-900 flex items-center">
+              Zobraziť cenník <i class="fa-solid fa-arrow-right ml-1"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Service 6: Založenie & Zmeny v s.r.o. -->
+        <div class="bg-slate-50/80 rounded-3xl p-8 border border-slate-200 hover:border-brand-300 hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="w-14 h-14 rounded-2xl bg-brand-100 text-brand-700 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 group-hover:bg-brand-700 group-hover:text-white transition-all">
+              <i class="fa-solid fa-briefcase"></i>
+            </div>
+            <h3 class="text-xl font-extrabold text-slate-900 mb-2">Založenie & Zmeny s.r.o.</h3>
+            <p class="text-sm text-slate-600 mb-4 leading-relaxed">
+              Kompletný full-servis: založenie novej spoločnosti, zmeny v ORSR (zmena konateľa, sídla, spoločníkov), registrácia na DÚ a pridelenie IČ DPH.
+            </p>
+            <ul class="text-xs space-y-2 text-slate-600 border-t border-slate-200/80 pt-4">
+              <li class="flex items-center"><i class="fa-solid fa-check text-emerald-500 mr-2"></i> Vypracovanie zakladateľských listín a zmlúv</li>
+              <li class="flex items-center"><i class="fa-solid fa-check text-emerald-500 mr-2"></i> Zápis do Obchodného & Živnostenského registra</li>
+              <li class="flex items-center"><i class="fa-solid fa-check text-emerald-500 mr-2"></i> Registrácia pre daň z pridanej hodnoty (§ 4, § 7)</li>
+              <li class="flex items-center"><i class="fa-solid fa-check text-emerald-500 mr-2"></i> Zápisnica z valného zhromaždenia</li>
+            </ul>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-200/80 flex items-center justify-between">
+            <span class="text-xs font-bold text-slate-500">Individuálna kalkulácia</span>
+            <a href="#kontakt-formular" class="text-xs font-bold text-brand-700 hover:text-brand-900 flex items-center">
+              Požiadať o konzultáciu <i class="fa-solid fa-arrow-right ml-1"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CLOUD & MODERN TECH SHOWCASE -->
+  <section class="py-16 md:py-24 bg-slate-900 text-white relative overflow-hidden" id="online-uctovnictvo">
+    <div class="absolute top-0 right-0 w-96 h-96 bg-brand-600/10 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left: Explanatory Copy -->
+        <div class="lg:col-span-6 space-y-6">
+          <span class="text-xs font-extrabold uppercase tracking-widest text-gold-400 bg-gold-400/10 border border-gold-400/20 px-3.5 py-1 rounded-full">
+            Revolúcia vo vedení agendy
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-white leading-tight">
+            Pracujte kedykoľvek a odkiaľkoľvek s naším Cloudom 24/7/365
+          </h2>
+          <p class="text-slate-300 text-base sm:text-lg leading-relaxed">
+            Na rozdiel od bežných účtovníkov, ktorí vaše dáta uzavrú do svojho počítača, my vám otvárame dvere. 
+            Využívame certifikované cloudové riešenie, vďaka ktorému máte k svojej agende prístup v reálnom čase.
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
+            <div class="bg-slate-800/80 p-4 rounded-2xl border border-slate-700/80">
+              <i class="fa-solid fa-mobile-screen text-gold-400 text-xl mb-2"></i>
+              <h4 class="font-bold text-white text-sm">Prístup z mobilu aj PC</h4>
+              <p class="text-xs text-slate-400 mt-1">Prehľad faktúr a stavu účtov máte vo vrecku aj na cestách.</p>
+            </div>
+            <div class="bg-slate-800/80 p-4 rounded-2xl border border-slate-700/80">
+              <i class="fa-solid fa-chart-line text-brand-400 text-xl mb-2"></i>
+              <h4 class="font-bold text-white text-sm">Priebežné daňové odhady</h4>
+              <p class="text-xs text-slate-400 mt-1">Nezaskočia vás nečakané platby daní a poistného na konci roka.</p>
+            </div>
+            <div class="bg-slate-800/80 p-4 rounded-2xl border border-slate-700/80">
+              <i class="fa-solid fa-lock text-emerald-400 text-xl mb-2"></i>
+              <h4 class="font-bold text-white text-sm">Denné bezpečné zálohovanie</h4>
+              <p class="text-xs text-slate-400 mt-1">Šifrovanie na úrovni bankových systémov a ochrana pred stratou dát.</p>
+            </div>
+            <div class="bg-slate-800/80 p-4 rounded-2xl border border-slate-700/80">
+              <i class="fa-solid fa-network-wired text-purple-400 text-xl mb-2"></i>
+              <h4 class="font-bold text-white text-sm">Klienti z celého Slovenska</h4>
+              <p class="text-xs text-slate-400 mt-1">Osobný kontakt v Pezinku/Šenkviciach alebo 100% online kdekoľvek v SR.</p>
+            </div>
+          </div>
+
+          <div class="pt-4">
+            <a href="#kontakt-formular" class="inline-flex items-center text-sm font-bold text-gold-400 hover:text-gold-300">
+              <span>Chcem si vyskúšať online prístup k účtovníctvu</span>
+              <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+            </a>
+          </div>
+
+        </div>
+
+        <!-- Right: Modern Cloud Dashboard Preview -->
+        <div class="lg:col-span-6">
+          <div class="bg-slate-800 rounded-3xl p-6 border border-slate-700 shadow-2xl relative">
+            <div class="flex items-center justify-between pb-4 border-b border-slate-700 text-xs text-slate-400">
+              <div class="flex items-center space-x-2">
+                <span class="w-3 h-3 rounded-full bg-red-500 inline-block"></span>
+                <span class="w-3 h-3 rounded-full bg-yellow-500 inline-block"></span>
+                <span class="w-3 h-3 rounded-full bg-green-500 inline-block"></span>
+                <span class="font-mono text-slate-300 ml-2">cloud.zlata.sk/portal</span>
+              </div>
+              <span class="text-emerald-400 font-semibold"><i class="fa-solid fa-circle-check mr-1"></i> Prepojené</span>
+            </div>
+
+            <!-- Dashboard widgets -->
+            <div class="mt-6 space-y-4">
+              
+              <!-- Quick overview header -->
+              <div class="grid grid-cols-3 gap-3">
+                <div class="bg-slate-900/90 p-3.5 rounded-xl border border-slate-700/50">
+                  <span class="text-[11px] text-slate-400 block">Nevyrovnané pohľadávky</span>
+                  <span class="text-lg font-bold text-emerald-400">12 450 €</span>
+                </div>
+                <div class="bg-slate-900/90 p-3.5 rounded-xl border border-slate-700/50">
+                  <span class="text-[11px] text-slate-400 block">Záväzky do splatnosti</span>
+                  <span class="text-lg font-bold text-slate-200">4 120 €</span>
+                </div>
+                <div class="bg-slate-900/90 p-3.5 rounded-xl border border-slate-700/50">
+                  <span class="text-[11px] text-slate-400 block">Aktuálny zostatok</span>
+                  <span class="text-lg font-bold text-gold-400">32 890 €</span>
+                </div>
+              </div>
+
+              <!-- Document processing status -->
+              <div class="bg-slate-900/90 p-4 rounded-xl border border-slate-700/50">
+                <div class="flex justify-between items-center mb-2">
+                  <span class="text-xs font-bold text-slate-200">Spracovanie dokladov za aktuálny mesiac</span>
+                  <span class="text-xs font-mono text-brand-300">88% hotovo</span>
+                </div>
+                <div class="w-full bg-slate-700 h-2.5 rounded-full overflow-hidden">
+                  <div class="bg-gradient-to-r from-brand-500 to-gold-400 h-2.5 rounded-full" style="width: 88%"></div>
+                </div>
+                <div class="flex justify-between items-center text-[11px] text-slate-400 mt-2">
+                  <span>Zaúčtovaných 142 dokladov</span>
+                  <span class="text-emerald-400 font-semibold"><i class="fa-solid fa-shield mr-1"></i> Žiadne chyby</span>
+                </div>
+              </div>
+
+              <!-- Electronic exchange pill -->
+              <div class="p-3 bg-brand-950/60 rounded-xl border border-brand-800/60 flex items-center justify-between text-xs">
+                <div class="flex items-center space-x-3">
+                  <i class="fa-solid fa-file-pdf text-red-400 text-lg"></i>
+                  <div>
+                    <span class="font-bold text-slate-200 block">Účtovná závierka 2024 (PDF)</span>
+                    <span class="text-[10px] text-slate-400">Podaná na PFS dňa 28.03.</span>
+                  </div>
+                </div>
+                <span class="text-xs font-bold text-brand-300 bg-brand-900/80 px-2.5 py-1 rounded-md">Archivované</span>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- INTERACTIVE PRICING CALCULATOR -->
+  <section class="py-16 md:py-24 bg-slate-50 border-y border-slate-200/80" id="kalkulacka">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <span class="text-xs font-extrabold uppercase tracking-widest text-brand-700 bg-brand-100 px-3 py-1 rounded-full">
+          Transparentnosť na 1. mieste
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3 tracking-tight">
+          Interaktívna kalkulačka ceny účtovníctva
+        </h2>
+        <p class="text-base sm:text-lg text-slate-600 mt-3 leading-relaxed">
+          Nastavte si parametre vášho podnikania a okamžite zistite transparentný odhad mesačných nákladov podľa oficiálneho cenníka ZLATA, s.r.o.
+        </p>
+      </div>
+
+      <!-- Main Calculator Card -->
+      <div class="bg-white rounded-3xl p-6 sm:p-10 shadow-xl border border-slate-200/90">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          
+          <!-- Controls (Left 7 cols) -->
+          <div class="lg:col-span-7 space-y-6">
+            
+            <!-- Type of accounting -->
+            <div>
+              <label class="block text-sm font-bold text-slate-900 mb-2">1. Typ podnikateľského subjektu a agendy</label>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3" id="calcTypeRadios">
+                <label class="flex items-center p-3.5 border-2 border-brand-700 bg-brand-50/50 rounded-2xl cursor-pointer transition-all" id="lblPodvojne">
+                  <input type="radio" name="calcType" value="podvojne" checked class="text-brand-600 focus:ring-brand-500 mr-3">
+                  <div>
+                    <span class="block text-sm font-extrabold text-slate-900">Podvojné účtovníctvo</span>
+                    <span class="block text-xs text-slate-500">s.r.o., a.s., občianske združenie</span>
+                  </div>
+                </label>
+                <label class="flex items-center p-3.5 border-2 border-slate-200 hover:border-slate-300 rounded-2xl cursor-pointer transition-all" id="lblJednoduche">
+                  <input type="radio" name="calcType" value="jednoduche" class="text-brand-600 focus:ring-brand-500 mr-3">
+                  <div>
+                    <span class="block text-sm font-extrabold text-slate-900">Jednoduché účtovníctvo</span>
+                    <span class="block text-xs text-slate-500">SZČO, živnostníci, slobodné povolania</span>
+                  </div>
+                </label>
+              </div>
+            </div>
+
+            <!-- VAT status -->
+            <div>
+              <label class="block text-sm font-bold text-slate-900 mb-2">2. Ste platiteľom DPH?</label>
+              <div class="grid grid-cols-2 gap-3">
+                <label class="flex items-center p-3 border-2 border-brand-700 bg-brand-50/50 rounded-xl cursor-pointer transition-all" id="lblPlatitelDph">
+                  <input type="radio" name="calcDph" value="platitel" checked class="text-brand-600 focus:ring-brand-500 mr-2.5">
+                  <span class="text-xs sm:text-sm font-bold text-slate-800">Platiteľ DPH</span>
+                </label>
+                <label class="flex items-center p-3 border-2 border-slate-200 hover:border-slate-300 rounded-xl cursor-pointer transition-all" id="lblNeplatitelDph">
+                  <input type="radio" name="calcDph" value="neplatitel" class="text-brand-600 focus:ring-brand-500 mr-2.5">
+                  <span class="text-xs sm:text-sm font-bold text-slate-800">Neplatiteľ DPH</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Invoices / Entries slider -->
+            <div>
+              <div class="flex justify-between items-center mb-2">
+                <label for="itemsSlider" class="text-sm font-bold text-slate-900">3. Počet účtovných položiek mesačne</label>
+                <span class="text-base font-extrabold text-brand-700 bg-brand-100 px-3 py-0.5 rounded-lg font-mono" id="itemsCountDisplay">50 položiek</span>
+              </div>
+              <input type="range" id="itemsSlider" min="20" max="600" step="10" value="50" class="w-full h-2.5 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-brand-700">
+              <div class="flex justify-between text-[11px] text-slate-400 mt-1">
+                <span>1 - 99 (Základný paušál)</span>
+                <span>200 - 299</span>
+                <span>400 - 499</span>
+                <span>600+ (Väčšia firma)</span>
+              </div>
+              <p class="text-[11px] text-slate-500 mt-1.5 italic">* Súčet položiek = súčet prijatých/vydaných faktúr, bločkov, bankových pohybov a zápisov v denníku.</p>
+            </div>
+
+            <!-- Employees slider -->
+            <div>
+              <div class="flex justify-between items-center mb-2">
+                <label for="employeesSlider" class="text-sm font-bold text-slate-900">4. Počet zamestnancov na mzdy</label>
+                <span class="text-base font-extrabold text-gold-700 bg-gold-100 px-3 py-0.5 rounded-lg font-mono" id="employeesCountDisplay">0 zamestnancov</span>
+              </div>
+              <input type="range" id="employeesSlider" min="0" max="30" step="1" value="0" class="w-full h-2.5 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-gold-500">
+              <div class="flex justify-between text-[11px] text-slate-400 mt-1">
+                <span>0 (Iba konateľ bez TPP)</span>
+                <span>5 zamestnancov (10% zľava)</span>
+                <span>15 zamestnancov</span>
+                <span>30 zamestnancov</span>
+              </div>
+            </div>
+
+            <!-- Extra options checkboxes -->
+            <div>
+              <label class="block text-sm font-bold text-slate-900 mb-2">5. Doplnkové služby a vozidlá</label>
+              <div class="space-y-2">
+                <label class="flex items-center text-xs sm:text-sm text-slate-700 cursor-pointer">
+                  <input type="checkbox" id="chkDzmv" class="rounded text-brand-600 focus:ring-brand-500 mr-2.5 w-4 h-4">
+                  <span>Daň z motorových vozidiel (ročné priznanie za firemné auto, 25 € / rok)</span>
+                </label>
+                <label class="flex items-center text-xs sm:text-sm text-slate-700 cursor-pointer">
+                  <input type="checkbox" id="chkZavazky" checked class="rounded text-brand-600 focus:ring-brand-500 mr-2.5 w-4 h-4">
+                  <span>Aktívny 24/7 online prístup k záväzkom a pohľadávkam (Zahrnuté v cene)</span>
+                </label>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Live Result Card (Right 5 cols) -->
+          <div class="lg:col-span-5 bg-gradient-to-br from-brand-900 to-brand-950 text-white rounded-3xl p-6 sm:p-8 shadow-xl border border-brand-800 flex flex-col justify-between sticky top-28">
+            
+            <div>
+              <div class="flex items-center justify-between pb-4 border-b border-brand-800">
+                <span class="text-xs font-bold uppercase tracking-wider text-brand-300">Orientačná kalkulácia</span>
+                <span class="bg-gold-500/20 text-gold-300 border border-gold-400/30 text-[10px] font-extrabold px-2 py-0.5 rounded-full">
+                  Platný cenník 2024
+                </span>
+              </div>
+
+              <!-- Main big number -->
+              <div class="mt-6">
+                <span class="text-xs text-brand-200 block font-medium">Odhadovaná mesačná cena:</span>
+                <div class="flex items-baseline space-x-2 mt-1">
+                  <span class="text-4xl sm:text-5xl font-black text-white" id="calcFinalPrice">99 €</span>
+                  <span class="text-sm text-slate-300 font-medium">/ mesiac</span>
+                </div>
+                <p class="text-[11px] text-brand-300 mt-1" id="calcPriceVatNote">(cena pre platiteľov DPH je bez DPH)</p>
+              </div>
+
+              <!-- Breakdown list -->
+              <div class="mt-6 space-y-2.5 text-xs border-t border-brand-800/80 pt-4">
+                <div class="flex justify-between text-slate-300">
+                  <span>Vedenie účtovnej agendy:</span>
+                  <span class="font-bold text-white" id="calcAccountingFee">99 €</span>
+                </div>
+                <div class="flex justify-between text-slate-300">
+                  <span>Spracovanie miezd a výkazov:</span>
+                  <span class="font-bold text-white" id="calcPayrollFee">0 €</span>
+                </div>
+                <div class="flex justify-between text-slate-300">
+                  <span>DPH priznanie & Kontrolný výkaz:</span>
+                  <span class="font-bold text-emerald-400" id="calcVatFee">V cene paušálu</span>
+                </div>
+                <div class="flex justify-between text-slate-300">
+                  <span>Cloudový 24/7 prístup:</span>
+                  <span class="font-bold text-gold-400">V cene spolupráce</span>
+                </div>
+              </div>
+
+              <!-- Guarantee reminder -->
+              <div class="mt-6 bg-brand-800/50 p-3 rounded-xl border border-brand-700/60 text-[11px] text-slate-300 flex items-start space-x-2">
+                <i class="fa-solid fa-shield-halved text-gold-400 mt-0.5 shrink-0"></i>
+                <span>Zahŕňa 100% poistnú garanciu škôd v poisťovni Generali a osobnú podporu účtovníčky.</span>
+              </div>
+
+            </div>
+
+            <!-- CTA button inside calculator -->
+            <div class="mt-8 pt-4">
+              <button type="button" id="btnApplyCalculator" class="w-full py-4 bg-gradient-to-r from-gold-500 to-gold-600 hover:from-gold-400 hover:to-gold-500 text-brand-950 font-extrabold text-sm rounded-xl shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-0.5 flex items-center justify-center">
+                <span>Objednať s týmito parametrami</span>
+                <i class="fa-solid fa-arrow-right ml-2"></i>
+              </button>
+              <p class="text-[10px] text-slate-400 text-center mt-2">Nezáväzný dopyt &bull; Odpoveď do 24 hodín</p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SPECIALIZED SECTION: REFUNDACIA DPH Z EU + SIMULATOR -->
+  <section class="py-16 md:py-24 bg-white" id="kalkulacka-dph">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="bg-gradient-to-br from-slate-900 via-brand-950 to-slate-900 rounded-3xl p-8 sm:p-12 text-white shadow-2xl border border-brand-800/60 relative overflow-hidden">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          
+          <!-- Left info -->
+          <div class="lg:col-span-6 space-y-6">
+            <span class="bg-gold-400/20 text-gold-300 border border-gold-400/40 text-xs font-extrabold px-3 py-1 rounded-full uppercase">
+              Špecializácia spoločnosti ZLATA, s.r.o.
+            </span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight leading-tight text-white">
+              Vrátime vám DPH zaplatenú v zahraničí (EÚ)
+            </h2>
+            <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+              Jazdíte do Česka, Rakúska, Nemecka, Poľska či Maďarska? Tankujete v zahraničí, platíte mýto, ubytovanie na služobných cestách alebo nakupujete tovar a služby v EÚ? 
+              Podľa smernice <strong>2008/09/EC</strong> máte nárok na vrátenie zahraničnej DPH.
+            </p>
+
+            <div class="space-y-3 text-xs sm:text-sm text-slate-300">
+              <div class="flex items-start">
+                <i class="fa-solid fa-circle-check text-gold-400 mt-1 mr-3 shrink-0"></i>
+                <span><strong>Minimálna suma vratky:</strong> 400 € za štvrťrok alebo iba 50 € za kalendárny rok.</span>
+              </div>
+              <div class="flex items-start">
+                <i class="fa-solid fa-circle-check text-gold-400 mt-1 mr-3 shrink-0"></i>
+                <span><strong>Zastúpenie bez starostí:</strong> Vyhotovíme plnú moc, vytvoríme väzbu na portáli FS SR a predložíme žiadosť.</span>
+              </div>
+              <div class="flex items-start">
+                <i class="fa-solid fa-circle-check text-gold-400 mt-1 mr-3 shrink-0"></i>
+                <span><strong>Férová provízia:</strong> 6% zo sumy vratky (min. 80 € / štát). Ak nezískate peniaze, neplatíte percentuálnu odmenu.</span>
+              </div>
+            </div>
+
+            <!-- 3 Downloadable guides note -->
+            <div class="p-4 bg-slate-800/90 rounded-2xl border border-slate-700/80 text-xs space-y-2">
+              <p class="font-bold text-gold-300 flex items-center">
+                <i class="fa-solid fa-book-open mr-2"></i> Pripravené odborné PDF manuály:
+              </p>
+              <ul class="text-slate-300 list-disc list-inside space-y-1">
+                <li>1. Základné kritériá pre vrátenie DPH z členských štátov EÚ</li>
+                <li>2. Otázky a odpovede k vráteniu dane v EÚ</li>
+                <li>3. Špecifické podmienky jednotlivých štátov (Rakúsko, Nemecko...)</li>
+              </ul>
+            </div>
+
+          </div>
+
+          <!-- Right: Interactive EU VAT Simulator -->
+          <div class="lg:col-span-6 bg-slate-800/90 rounded-3xl p-6 sm:p-8 border border-slate-700 shadow-xl">
+            
+            <h3 class="text-lg font-bold text-white mb-4 flex items-center">
+              <i class="fa-solid fa-calculator text-gold-400 mr-2"></i>
+              Simulátor vrátenia DPH z EÚ
+            </h3>
+
+            <div class="space-y-4 text-xs sm:text-sm">
+              
+              <!-- Select Country -->
+              <div>
+                <label for="vatCountry" class="block font-bold text-slate-300 mb-1.5">Vyberte štát, kde ste nakupovali:</label>
+                <select id="vatCountry" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-3.5 py-2.5 text-white focus:outline-none focus:border-gold-400 text-sm">
+                  <option value="20|Rakúsko" selected>🇦🇹 Rakúsko (Sadzba DPH: 20%)</option>
+                  <option value="19|Nemecko">🇩🇪 Nemecko (Sadzba DPH: 19%)</option>
+                  <option value="21|Česká republika">🇨🇿 Česká republika (Sadzba DPH: 21%)</option>
+                  <option value="23|Poľsko">🇵🇱 Poľsko (Sadzba DPH: 23%)</option>
+                  <option value="27|Maďarsko">🇭🇺 Maďarsko (Sadzba DPH: 27%)</option>
+                  <option value="22|Taliansko">🇮🇹 Taliansko (Sadzba DPH: 22%)</option>
+                  <option value="20|Francúzsko">🇫🇷 Francúzsko (Sadzba DPH: 20%)</option>
+                  <option value="21|Španielsko">🇪🇸 Španielsko (Sadzba DPH: 21%)</option>
+                  <option value="21|Holandsko">🇳🇱 Holandsko (Sadzba DPH: 21%)</option>
+                  <option value="21|Belgicko">🇧🇪 Belgicko (Sadzba DPH: 21%)</option>
+                  <option value="25|Chorvátsko">🇭🇷 Chorvátsko (Sadzba DPH: 25%)</option>
+                  <option value="21|Ostatné štáty EÚ">🇪🇺 Iný štát EÚ (priemer 21%)</option>
+                </select>
+              </div>
+
+              <!-- Input Amount -->
+              <div>
+                <label for="vatTotalExpense" class="block font-bold text-slate-300 mb-1.5">Celková suma nákupov vrátane DPH v danej krajine (€):</label>
+                <div class="relative">
+                  <input type="number" id="vatTotalExpense" value="3500" min="200" step="100" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-3.5 py-2.5 text-white focus:outline-none focus:border-gold-400 font-mono text-base font-bold pl-8">
+                  <span class="absolute left-3 top-2.5 text-slate-500 font-bold">€</span>
+                </div>
+                <p class="text-[11px] text-slate-400 mt-1">Napr. účty za naftu/benzín, mýtne poplatky, ubytovanie, materiál.</p>
+              </div>
+
+              <!-- Calculation Result Preview Box -->
+              <div class="bg-slate-950 p-4 rounded-2xl border border-slate-700/80 space-y-3 mt-4">
+                <div class="flex justify-between items-baseline">
+                  <span class="text-xs text-slate-400">Odhadovaná suma vratky DPH:</span>
+                  <span class="text-2xl font-black text-emerald-400 font-mono" id="vatRefundEstimated">583,33 €</span>
+                </div>
+                <div class="flex justify-between items-baseline text-xs text-slate-400 border-t border-slate-800 pt-2">
+                  <span>Odmena ZLATA s.r.o. (6%, min. 80 €):</span>
+                  <span class="font-bold text-slate-200 font-mono" id="vatCommissionEstimated">80,00 €</span>
+                </div>
+                <div class="flex justify-between items-baseline text-xs text-slate-300 border-t border-slate-800 pt-2 font-bold">
+                  <span>Čistý zisk pre vašu firmu:</span>
+                  <span class="text-lg font-black text-gold-400 font-mono" id="vatNetProfit">503,33 €</span>
+                </div>
+              </div>
+
+              <button type="button" id="btnRequestVatRefund" class="w-full py-3.5 bg-gradient-to-r from-gold-500 to-gold-600 hover:from-gold-400 hover:to-gold-500 text-brand-950 font-extrabold rounded-xl transition-all shadow-md text-sm">
+                Požiadať o vrátenie DPH z tohto štátu
+              </button>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- OFFICIAL PRICING TABLE (CENNÍK) WITH SEARCH & FILTER -->
+  <section class="py-16 md:py-24 bg-slate-50" id="cennik">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <span class="text-xs font-extrabold uppercase tracking-widest text-brand-700 bg-brand-100 px-3 py-1 rounded-full">
+          Platný od 01.01.2024
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3 tracking-tight">
+          Oficiálny cenník služieb ZLATA, s.r.o.
+        </h2>
+        <p class="text-base sm:text-lg text-slate-600 mt-3 leading-relaxed">
+          Prehľadné sadzby bez skrytých poplatkov. Pre platiteľov DPH sú ceny uvedené bez DPH.
+        </p>
+        
+        <!-- Direct PDF Download Link -->
+        <div class="mt-4 flex justify-center">
+          <a href="cennik-2024.pdf" download="Cennik-ZLATA-2024.pdf" class="inline-flex items-center text-xs font-bold text-brand-700 hover:text-brand-900 bg-white border border-brand-200 px-4 py-2 rounded-xl shadow-sm hover:shadow transition-all">
+            <i class="fa-solid fa-file-pdf text-red-500 mr-2 text-sm"></i>
+            <span>Stiahnuť oficiálny Cenník v PDF (podpísaný Zlata Rašková)</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Filter Tabs & Search Bar -->
+      <div class="bg-white rounded-3xl p-6 sm:p-8 shadow-card border border-slate-200">
+        
+        <div class="flex flex-col md:flex-row items-center justify-between gap-4 pb-6 border-b border-slate-200">
+          
+          <!-- Category Tabs -->
+          <div class="flex flex-wrap gap-2 w-full md:w-auto" id="pricingCategoryTabs">
+            <button class="pricing-tab-btn active px-3.5 py-1.5 rounded-xl text-xs font-bold bg-brand-700 text-white shadow-sm transition-all" data-category="all">
+              Všetky položky
+            </button>
+            <button class="pricing-tab-btn px-3.5 py-1.5 rounded-xl text-xs font-bold bg-slate-100 text-slate-700 hover:bg-slate-200 transition-all" data-category="podvojne">
+              Podvojné účtovníctvo
+            </button>
+            <button class="pricing-tab-btn px-3.5 py-1.5 rounded-xl text-xs font-bold bg-slate-100 text-slate-700 hover:bg-slate-200 transition-all" data-category="mzdy">
+              Mzdy & Personalistika
+            </button>
+            <button class="pricing-tab-btn px-3.5 py-1.5 rounded-xl text-xs font-bold bg-slate-100 text-slate-700 hover:bg-slate-200 transition-all" data-category="priznania">
+              Daňové priznania
+            </button>
+            <button class="pricing-tab-btn px-3.5 py-1.5 rounded-xl text-xs font-bold bg-slate-100 text-slate-700 hover:bg-slate-200 transition-all" data-category="ostatne">
+              Ostatné služby & Refundácia
+            </button>
+          </div>
+
+          <!-- Search input -->
+          <div class="relative w-full md:w-72">
+            <input type="text" id="pricingSearchInput" placeholder="Vyhľadať položku v cenníku..." class="w-full text-xs bg-slate-50 border border-slate-200 rounded-xl pl-9 pr-4 py-2.5 focus:outline-none focus:border-brand-500 focus:bg-white transition-all">
+            <i class="fa-solid fa-magnifying-glass absolute left-3 top-3 text-slate-400 text-xs"></i>
+          </div>
+
+        </div>
+
+        <!-- Table Container -->
+        <div class="overflow-x-auto mt-4">
+          <table class="w-full text-left text-xs sm:text-sm">
+            <thead>
+              <tr class="text-slate-400 uppercase text-[11px] font-bold border-b border-slate-200">
+                <th class="py-3 px-4">Kód</th>
+                <th class="py-3 px-4">Popis položky / úkonu</th>
+                <th class="py-3 px-4 text-right">Platiteľ DPH</th>
+                <th class="py-3 px-4 text-right">Neplatiteľ DPH</th>
+                <th class="py-3 px-4 text-right">Poznámka</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100 font-medium text-slate-700" id="pricingTableBody">
+              
+              <!-- Podvojné účtovníctvo -->
+              <tr class="pricing-row hover:bg-slate-50/80 transition-colors" data-cat="podvojne">
+                <td class="py-3.5 px-4 font-mono font-bold text-brand-700">B.1</td>
+                <td class="py-3.5 px-4 font-bold text-slate-900">Vedenie podvojného účtovníctva: 1 – 99 položiek</td>
+                <td class="py-3.5 px-4 text-right font-extrabold text-slate-900">99 EUR</td>
+                <td class="py-3.5 px-4 text-right text-slate-600">85 EUR</td>
+                <td class="py-3.5 px-4 text-right text-xs text-slate-500">základný mesačný paušál</td>
+              </tr>
+              <tr class="pricing-row hover:bg-slate-50/80 transition-colors" data-cat="podvojne">
+                <td class="py-3.5 px-4 font-mono font-bold text-brand-700">B.2</td>
+                <td class="py-3.5 px-4 font-bold text-slate-900">Vedenie podvojného účtovníctva: 100 – 199 položiek</td>
+                <td class="py-3.5 px-4 text-right font-extrabold text-slate-900">169 EUR</td>
+                <td class="py-3.5 px-4 text-right text-slate-600">145 EUR</td>
+                <td class="py-3.5 px-4 text-right text-xs text-slate-500">mesačne</td>
+              </tr>
+              <tr class="pricing-row hover:bg-slate-50/80 transition-colors" data-cat="podvojne">
+                <td class="py-3.5 px-4 font-mono font-bold text-brand-700">B.3</td>
+                <td class="py-3.5 px-4 font-bold text-slate-900">Vedenie podvojného účtovníctva: 200 – 299 položiek</td>
+                <td class="py-3.5 px-4 text-right font-extrabold text-slate-900">199 EUR</td>
+                <td class="py-3.5 px-4 text-right text-slate-600">175 EUR</td>
+                <td class="py-3.5 px-4 text-right text-xs text-slate-500">mesačne</td>
+              </tr>
+              <tr class="pricing-row hover:bg-slate-50/80 transition-colors" data-cat="podvojne">
+                <td class="py-3.5 px-4 font-mono font-bold text-brand-700">B.4</td>
+                <td class="py-3.5 px-4 font-bold text-slate-900">Vedenie podvojného účtovníctva: 300 – 399 položiek</td>
+                <td class="py-3.5 px-4 text-right font-extrabold text-slate-900">259 EUR</td>
+                <td class="py-3.5 px-4 text-right text-slate-600">230 EUR</td>
+                <td class="py-3.5 px-4 text-right text-xs text-slate-500">mesačne</td>
+              </tr>
+              <tr class="pricing-row hover:bg-slate-50/80 transition-colors" data-cat="podvojne">
+                <td class="py-3.5 px-4 font-mono font-bold text-brand-700">B.5</td>
+                <td class="py-3.5 px-4 font-bold text-slate-900">Vedenie podvojného účtovníctva: 400 – 499 položiek</td>
+                <td class="py-3.5 px-4 text-right font-extrabold text-slate-900">299 EUR</td>
+                <td class="py-3.5 px-4 text-right text-slate-600">265 EUR</td>
+                <td class="py-3.5 px-4 text-right text-xs text-slate-500">mesačne</td>
+              </tr>
+              <tr class="pricing-row hover:bg-slate-50/80 transition-colors" data-cat="podvojne">
+                <td class="py-3.5 px-4 font-mono font-bold text-brand-700">B.6</td>
+                <td class="py-3.5 px-4 font-bold text-slate-900">Vedenie podvojného účtovníctva: 500 – 599 položiek</td>
+                <td class="py-3.5 px-4 text-right font-extrabold text-slate-900">379 EUR</td>
+                <td class="py-3.5 px-4 text-right text-slate-600">335 EUR</td>
+                <td class="py-3.5 px-4 text-right text-xs text-slate-500">mesačne</td>
+              </tr>
+              <tr class="pricing-row hover:bg-slate-50/80 transition-colors" data-cat="podvojne">
+                <td class="py-3.5 px-4 font-mono font-bold text-brand-700">B.9</td>
+                <td class="py-3.5 px-4 font-bold text-slate-900">Priznanie k DPH a Kontrolný výkaz</td>
+                <td class="py-3.5 px-4 text-right font-extrabold text-emerald-600">v cene paušálu</td>
+                <td class="py-3.5 px-4 text-right text-slate-600">28 EUR / ks</td>
+                <td class="py-3.5 px-4 text-right text-xs text-slate-500">mesačne / štvrťročne</td>
+              </tr>
+
+              <!-- Mzdy -->
+              <tr class="pricing-row hover:bg-slate-50/80 transition-colors" data-cat="mzdy">
+                <td class="py-3.5 px-4 font-mono font-bold text-gold-600">C.1</td>
+                <td class="py-3.5 px-4 font-bold text-slate-900">Spracovanie mzdy (PZ, DBPŠ, DVP, ...)</td>
+                <td class="py-3.5 px-4 text-right font-extrabold text-slate-900">13,00 EUR / os</td>
+                <td class="py-3.5 px-4 text-right text-slate-600">13,00 EUR / os</td>
+                <td class="py-3.5 px-4 text-right text-xs text-emerald-600 font-bold">zľava 10% pri násobku 5</td>
+              </tr>
+              <tr class="pricing-row hover:bg-slate-50/80 transition-colors" data-cat="mzdy">
+                <td class="py-3.5 px-4 font-mono font-bold text-gold-600">C.2</td>
+                <td class="py-3.5 px-4 font-bold text-slate-900">Zaslanie výkazov do poisťovní a na DÚ elektronicky</td>
+                <td class="py-3.5 px-4 text-right font-extrabold text-slate-900">5,00 EUR / inštit.</td>
+                <td class="py-3.5 px-4 text-right text-slate-600">5,00 EUR / inštit.</td>
+                <td class="py-3.5 px-4 text-right text-xs text-slate-500">SP, ZP, DÚ</td>
+              </tr>
+              <tr class="pricing-row hover:bg-slate-50/80 transition-colors" data-cat="mzdy">
+                <td class="py-3.5 px-4 font-mono font-bold text-gold-600">C.3</td>
+                <td class="py-3.5 px-4 font-bold text-slate-900">Vypracovanie pracovnej zmluvy (PZ, DBPŠ, DVP)</td>
+                <td class="py-3.5 px-4 text-right font-extrabold text-slate-900">25 EUR / hod</td>
+                <td class="py-3.5 px-4 text-right text-slate-600">25 EUR / hod</td>
+                <td class="py-3.5 px-4 text-right text-xs text-slate-500">na mieru</td>
+              </tr>
+              <tr class="pricing-row hover:bg-slate-50/80 transition-colors" data-cat="mzdy">
+                <td class="py-3.5 px-4 font-mono font-bold text-gold-600">C.4</td>
+                <td class="py-3.5 px-4 font-bold text-slate-900">Prihláška zamestnanca do poisťovní (vrátane Odhlášky)</td>
+                <td class="py-3.5 px-4 text-right font-extrabold text-slate-900">13 EUR</td>
+                <td class="py-3.5 px-4 text-right text-slate-600">13 EUR</td>
+                <td class="py-3.5 px-4 text-right text-xs text-slate-500">jednorazovo</td>
+              </tr>
+
+              <!-- Daňové priznania -->
+              <tr class="pricing-row hover:bg-slate-50/80 transition-colors" data-cat="priznania">
+                <td class="py-3.5 px-4 font-mono font-bold text-brand-700">A.1</td>
+                <td class="py-3.5 px-4 font-bold text-slate-900">DPFO A: Príjmy zo závislej činnosti (tuzemsko)</td>
+                <td class="py-3.5 px-4 text-right font-extrabold text-slate-900">69 EUR</td>
+                <td class="py-3.5 px-4 text-right text-slate-600">69 EUR</td>
+                <td class="py-3.5 px-4 text-right text-xs text-slate-500">zamestnanci</td>
+              </tr>
+              <tr class="pricing-row hover:bg-slate-50/80 transition-colors" data-cat="priznania">
+                <td class="py-3.5 px-4 font-mono font-bold text-brand-700">A.2</td>
+                <td class="py-3.5 px-4 font-bold text-slate-900">DPFO A: Príjmy zo závislej činnosti (tuzemsko + zahraničie)</td>
+                <td class="py-3.5 px-4 text-right font-extrabold text-slate-900">99 EUR</td>
+                <td class="py-3.5 px-4 text-right text-slate-600">99 EUR</td>
+                <td class="py-3.5 px-4 text-right text-xs text-slate-500">práca v zahraničí</td>
+              </tr>
+              <tr class="pricing-row hover:bg-slate-50/80 transition-colors" data-cat="priznania">
+                <td class="py-3.5 px-4 font-mono font-bold text-brand-700">A.3</td>
+                <td class="py-3.5 px-4 font-bold text-slate-900">DPFO B: Živnosť s uplatnením paušálnych výdavkov</td>
+                <td class="py-3.5 px-4 text-right font-extrabold text-slate-900">79 EUR</td>
+                <td class="py-3.5 px-4 text-right text-slate-600">79 EUR</td>
+                <td class="py-3.5 px-4 text-right text-xs text-slate-500">živnostníci 60% paušál</td>
+              </tr>
+              <tr class="pricing-row hover:bg-slate-50/80 transition-colors" data-cat="priznania">
+                <td class="py-3.5 px-4 font-mono font-bold text-brand-700">A.4</td>
+                <td class="py-3.5 px-4 font-bold text-slate-900">DPFO B: Živnosť s daňovou evidenciou (+ prenájmy)</td>
+                <td class="py-3.5 px-4 text-right font-extrabold text-slate-900">159 EUR</td>
+                <td class="py-3.5 px-4 text-right text-slate-600">159 EUR</td>
+                <td class="py-3.5 px-4 text-right text-xs text-slate-500">skutočné výdavky</td>
+              </tr>
+              <tr class="pricing-row hover:bg-slate-50/80 transition-colors" data-cat="priznania">
+                <td class="py-3.5 px-4 font-mono font-bold text-brand-700">A.5</td>
+                <td class="py-3.5 px-4 font-bold text-slate-900">Daň z motorových vozidiel (DzMV s 1 vozidlom)</td>
+                <td class="py-3.5 px-4 text-right font-extrabold text-slate-900">25 EUR</td>
+                <td class="py-3.5 px-4 text-right text-slate-600">25 EUR</td>
+                <td class="py-3.5 px-4 text-right text-xs text-slate-500">+13 EUR ďalšie vozidlo</td>
+              </tr>
+
+              <!-- Ostatné & Refundácia -->
+              <tr class="pricing-row hover:bg-slate-50/80 transition-colors" data-cat="ostatne">
+                <td class="py-3.5 px-4 font-mono font-bold text-gold-600">F.10</td>
+                <td class="py-3.5 px-4 font-bold text-slate-900">Refundácia zahraničnej DPH z IČŠ EÚ / štát</td>
+                <td class="py-3.5 px-4 text-right font-extrabold text-gold-600">6%, min. 80 EUR</td>
+                <td class="py-3.5 px-4 text-right text-gold-600">6%, min. 80 EUR</td>
+                <td class="py-3.5 px-4 text-right text-xs text-slate-500">alebo 4,50 EUR / doklad</td>
+              </tr>
+              <tr class="pricing-row hover:bg-slate-50/80 transition-colors" data-cat="ostatne">
+                <td class="py-3.5 px-4 font-mono font-bold text-brand-700">F.3</td>
+                <td class="py-3.5 px-4 font-bold text-slate-900">Registrácia na platiteľa DPH</td>
+                <td class="py-3.5 px-4 text-right font-extrabold text-slate-900">90 EUR</td>
+                <td class="py-3.5 px-4 text-right text-slate-600">90 EUR</td>
+                <td class="py-3.5 px-4 text-right text-xs text-slate-500">kompletné vybavenie</td>
+              </tr>
+              <tr class="pricing-row hover:bg-slate-50/80 transition-colors" data-cat="ostatne">
+                <td class="py-3.5 px-4 font-mono font-bold text-brand-700">F.4</td>
+                <td class="py-3.5 px-4 font-bold text-slate-900">Vytvorenie elektronickej väzby na portáli PFS</td>
+                <td class="py-3.5 px-4 text-right font-extrabold text-slate-900">28 EUR</td>
+                <td class="py-3.5 px-4 text-right text-slate-600">28 EUR</td>
+                <td class="py-3.5 px-4 text-right text-xs text-slate-500">splnomocnenie DÚ</td>
+              </tr>
+              <tr class="pricing-row hover:bg-slate-50/80 transition-colors" data-cat="ostatne">
+                <td class="py-3.5 px-4 font-mono font-bold text-brand-700">F.9</td>
+                <td class="py-3.5 px-4 font-bold text-slate-900">Zastupovanie počas kontroly štátnymi orgánmi</td>
+                <td class="py-3.5 px-4 text-right font-extrabold text-slate-900">33 EUR / hod</td>
+                <td class="py-3.5 px-4 text-right text-slate-600">33 EUR / hod</td>
+                <td class="py-3.5 px-4 text-right text-xs text-slate-500">daňové úrady, SP, ZP</td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+
+        <div id="noResultsMsg" class="hidden py-8 text-center text-slate-500 text-sm">
+          <i class="fa-solid fa-circle-exclamation text-2xl mb-2 text-slate-400"></i>
+          <p>Nenašli sa žiadne položky zodpovedajúce vášmu vyhľadávaniu.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- WHY ZLATA & OUR GUARANTEES -->
+  <section class="py-16 md:py-24 bg-white" id="preco-my">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-xs font-extrabold uppercase tracking-widest text-brand-700 bg-brand-100 px-3 py-1 rounded-full">
+          Dôvera a profesionalita
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3 tracking-tight">
+          Prečo nám zverujú účtovníctvo firmy z celého Slovenska?
+        </h2>
+        <p class="text-base sm:text-lg text-slate-600 mt-4 leading-relaxed">
+          Preberáme plnú zodpovednosť za vašu účtovnú a daňovú agendu. Vaše podnikanie chránime skúsenosťami, špičkovým zázemím a poistením.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        
+        <!-- Pillar 1 -->
+        <div class="bg-slate-50 rounded-3xl p-6 border border-slate-200 hover:shadow-card transition-all">
+          <div class="w-12 h-12 rounded-xl bg-gold-100 text-gold-700 flex items-center justify-center text-xl mb-4">
+            <i class="fa-solid fa-shield-halved"></i>
+          </div>
+          <h4 class="font-bold text-slate-900 text-base mb-2">100% Poistenie v GENERALI</h4>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Človek je tvor omylný. Naša spoločnosť preberá plnú zodpovednosť za prípadné sankcie či penále. Sme poistení v GENERALI Slovensko.
+          </p>
+        </div>
+
+        <!-- Pillar 2 -->
+        <div class="bg-slate-50 rounded-3xl p-6 border border-slate-200 hover:shadow-card transition-all">
+          <div class="w-12 h-12 rounded-xl bg-brand-100 text-brand-700 flex items-center justify-center text-xl mb-4">
+            <i class="fa-solid fa-award"></i>
+          </div>
+          <h4 class="font-bold text-slate-900 text-base mb-2">20+ Rokov praxe v teréne</h4>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Sme rybou vo vode v účtovaní stavebníctva, medzinárodnej dopravy, likvidácie druhotných surovín, obchodovania s drahými kovmi aj e-shopov.
+          </p>
+        </div>
+
+        <!-- Pillar 3 -->
+        <div class="bg-slate-50 rounded-3xl p-6 border border-slate-200 hover:shadow-card transition-all">
+          <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center text-xl mb-4">
+            <i class="fa-solid fa-headset"></i>
+          </div>
+          <h4 class="font-bold text-slate-900 text-base mb-2">Dostupnosť & Hot-line</h4>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Nečakáte týždne na odpoveď. Naše telefónne linky a email sú otvorené pre operatívne konzultácie v momente, keď potrebujete radu.
+          </p>
+        </div>
+
+        <!-- Pillar 4 -->
+        <div class="bg-slate-50 rounded-3xl p-6 border border-slate-200 hover:shadow-card transition-all">
+          <div class="w-12 h-12 rounded-xl bg-purple-100 text-purple-700 flex items-center justify-center text-xl mb-4">
+            <i class="fa-solid fa-laptop-file"></i>
+          </div>
+          <h4 class="font-bold text-slate-900 text-base mb-2">Bezpapierová kancelária</h4>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Šetríme váš čas a životné prostredie. Prejdite s nami na plne digitalizované odovzdávanie podkladov prostredníctvom cloudu.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SPECIALIZED SECTORS (RYBOU VO VODE) -->
+  <section class="py-16 md:py-20 bg-slate-100/70 border-y border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-10">
+        <h3 class="text-2xl font-extrabold text-slate-900">
+          Odvetvia, v ktorých sme skutočnou „rybou vo vode“
+        </h3>
+        <p class="text-xs sm:text-sm text-slate-600 mt-2">
+          Máme bohaté špecifické know-how s legislatívou, skladovými systémami a kontrolami v týchto segmentoch:
+        </p>
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 text-center text-xs font-bold text-slate-800">
+        <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-sm flex flex-col items-center justify-center space-y-2 hover:border-brand-400 transition-colors">
+          <i class="fa-solid fa-truck-moving text-brand-700 text-2xl"></i>
+          <span>Medzinárodná doprava & logistika</span>
+        </div>
+        <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-sm flex flex-col items-center justify-center space-y-2 hover:border-brand-400 transition-colors">
+          <i class="fa-solid fa-trowel-bricks text-brand-700 text-2xl"></i>
+          <span>Stavebníctvo & zákazková výroba</span>
+        </div>
+        <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-sm flex flex-col items-center justify-center space-y-2 hover:border-brand-400 transition-colors">
+          <i class="fa-solid fa-recycle text-brand-700 text-2xl"></i>
+          <span>Kovový šrot & druhotné suroviny</span>
+        </div>
+        <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-sm flex flex-col items-center justify-center space-y-2 hover:border-brand-400 transition-colors">
+          <i class="fa-solid fa-gem text-brand-700 text-2xl"></i>
+          <span>Investičné zlato & diamanty</span>
+        </div>
+        <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-sm flex flex-col items-center justify-center space-y-2 hover:border-brand-400 transition-colors">
+          <i class="fa-solid fa-cart-shopping text-brand-700 text-2xl"></i>
+          <span>Maloobchod & e-shopy</span>
+        </div>
+        <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-sm flex flex-col items-center justify-center space-y-2 hover:border-brand-400 transition-colors">
+          <i class="fa-solid fa-tree text-brand-700 text-2xl"></i>
+          <span>Drevovýroba & skladové hospodárstvo</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ SECTION -->
+  <section class="py-16 md:py-24 bg-white" id="faq">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center mb-16">
+        <span class="text-xs font-extrabold uppercase tracking-widest text-brand-700 bg-brand-100 px-3 py-1 rounded-full">
+          Odpovede na vaše otázky
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3 tracking-tight">
+          Často kladené otázky (FAQ)
+        </h2>
+        <p class="text-base text-slate-600 mt-3">
+          Všetko, čo potrebujete vedieť o spolupráci, prechode a refundácii DPH.
+        </p>
+      </div>
+
+      <div class="space-y-4">
+        
+        <!-- FAQ 1 -->
+        <div class="faq-item border border-slate-200 rounded-2xl overflow-hidden bg-slate-50/70">
+          <button type="button" class="faq-toggle w-full px-6 py-4.5 text-left flex justify-between items-center text-slate-900 font-bold text-sm sm:text-base hover:text-brand-700 transition-colors">
+            <span>Ako prebieha prechod od súčasného účtovníka k ZLATA, s.r.o.?</span>
+            <i class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-300"></i>
+          </button>
+          <div class="faq-content hidden px-6 pb-5 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+            Prechod je maximálne plynulý a bez prerušenia chodu vašej firmy. Zabezpečíme prevzatie kompletnej účtovnej agendy, počiatočných stavov a mzdových listov od vášho predchádzajúceho účtovníka. Zriadime elektronické splnomocnenie na portáli Finančnej správy SR a pripravíme vám online cloudový prístup.
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="faq-item border border-slate-200 rounded-2xl overflow-hidden bg-slate-50/70">
+          <button type="button" class="faq-toggle w-full px-6 py-4.5 text-left flex justify-between items-center text-slate-900 font-bold text-sm sm:text-base hover:text-brand-700 transition-colors">
+            <span>Musím bývať v Pezinku alebo Šenkviciach, aby sme mohli spolupracovať?</span>
+            <i class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-300"></i>
+          </button>
+          <div class="faq-content hidden px-6 pb-5 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+            Vôbec nie! Naše kancelárie v Pezinku a Šenkviciach slúžia pre klientov, ktorí preferujú osobný kontakt, no vďaka nášmu zabezpečenému 24/7 cloudovému systému úspešne obsluhujeme firmy, prepravcov a živnostníkov z celého Slovenska – od Bratislavy cez Žilinu, Banskú Bystricu až po Košice.
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="faq-item border border-slate-200 rounded-2xl overflow-hidden bg-slate-50/70">
+          <button type="button" class="faq-toggle w-full px-6 py-4.5 text-left flex justify-between items-center text-slate-900 font-bold text-sm sm:text-base hover:text-brand-700 transition-colors">
+            <span>Ako je to s garanciou za prípadné pokuty alebo chyby v účtovníctve?</span>
+            <i class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-300"></i>
+          </button>
+          <div class="faq-content hidden px-6 pb-5 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+            Naša spoločnosť má už od svojho založenia uzatvorené zmluvné poistenie profesijnej zodpovednosti v poisťovni GENERALI Slovensko. Za chyby spôsobené našou činnosťou preberáme plnú zodpovednosť a prípadné dorubené penále či pokuty sú kryté poistnou zmluvou.
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="faq-item border border-slate-200 rounded-2xl overflow-hidden bg-slate-50/70">
+          <button type="button" class="faq-toggle w-full px-6 py-4.5 text-left flex justify-between items-center text-slate-900 font-bold text-sm sm:text-base hover:text-brand-700 transition-colors">
+            <span>Čo všetko je potrebné na vrátenie (refundáciu) DPH z iného štátu EÚ?</span>
+            <i class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-300"></i>
+          </button>
+          <div class="faq-content hidden px-6 pb-5 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+            Potrebujete byť platiteľom DPH v SR a mať originálne doklady (faktúry, pokladničné bloky) zo zahraničia s vyčíslenou zahraničnou DPH (napr. nafta, mýto, hotel). My s vami podpíšeme zmluvu o zastupovaní, vytvoríme väzbu na daňovom úrade a podáme elektronickú žiadosť za daný členský štát.
+          </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="faq-item border border-slate-200 rounded-2xl overflow-hidden bg-slate-50/70">
+          <button type="button" class="faq-toggle w-full px-6 py-4.5 text-left flex justify-between items-center text-slate-900 font-bold text-sm sm:text-base hover:text-brand-700 transition-colors">
+            <span>Ako posielame doklady, ak máme cloudové účtovníctvo?</span>
+            <i class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-300"></i>
+          </button>
+          <div class="faq-content hidden px-6 pb-5 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+            Doklady môžete nahrávať priamo do zabezpečeného cloudového úložiska, zasielať elektronické PDF faktúry na dedikovaný email, prípadne odfotiť bločky cez mobil. Pre klientov, ktorí chcú nosiť papierové doklady, sú k dispozícii naše kancelárie v Pezinku a Šenkviciach.
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- BRANCHES & CONTACT SECTION (PEZINOK & ŠENKVICE) -->
+  <section class="py-16 md:py-24 bg-slate-50 border-t border-slate-200/80" id="kontakt">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-xs font-extrabold uppercase tracking-widest text-brand-700 bg-brand-100 px-3 py-1 rounded-full">
+          Dve moderné kancelárie
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3 tracking-tight">
+          Kde nás nájdete & Ako sa spojiť
+        </h2>
+        <p class="text-base sm:text-lg text-slate-600 mt-3 leading-relaxed">
+          Sme vám k dispozícii osobne v našich kanceláriách v Pezinku a Šenkviciach, alebo nepretržite online a na telefóne.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- Left: Two branches toggle cards (5 cols) -->
+        <div class="lg:col-span-5 space-y-6">
+          
+          <!-- Pezinok Card -->
+          <div class="bg-white rounded-3xl p-6 sm:p-7 shadow-card border border-slate-200 hover:border-brand-300 transition-all">
+            <div class="flex items-center justify-between pb-4 border-b border-slate-100">
+              <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-xl bg-brand-700 text-white flex items-center justify-center">
+                  <i class="fa-solid fa-building"></i>
+                </div>
+                <div>
+                  <h3 class="text-lg font-extrabold text-slate-900">Kancelária Pezinok</h3>
+                  <p class="text-xs text-slate-500">Hlavné konzultačné stredisko</p>
+                </div>
+              </div>
+              <span class="text-[11px] font-bold bg-brand-50 text-brand-700 px-2.5 py-1 rounded-full">Pezinok</span>
+            </div>
+
+            <div class="mt-4 space-y-3 text-xs sm:text-sm text-slate-600">
+              <div class="flex items-start">
+                <i class="fa-solid fa-location-dot text-brand-700 mt-1 mr-3 shrink-0"></i>
+                <span>Šenkvická 20, 902 01 Pezinok</span>
+              </div>
+              <div class="flex items-center">
+                <i class="fa-solid fa-phone text-brand-700 mr-3 shrink-0"></i>
+                <span>Telefón: <strong>033 / 6400269, 6452007</strong></span>
+              </div>
+              <div class="flex items-center">
+                <i class="fa-solid fa-mobile-screen-button text-gold-500 mr-3 shrink-0"></i>
+                <span>Mobil hotline: <strong>0903 229 408</strong></span>
+              </div>
+              <div class="flex items-center">
+                <i class="fa-solid fa-clock text-slate-400 mr-3 shrink-0"></i>
+                <span>Pondelok – Piatok: 08:00 – 16:30</span>
+              </div>
+            </div>
+
+            <div class="mt-5 pt-4 border-t border-slate-100 flex items-center justify-between">
+              <a href="https://maps.google.com/?q=Šenkvická+20,+902+01+Pezinok" target="_blank" rel="noopener" class="text-xs font-bold text-brand-700 hover:text-brand-900 flex items-center">
+                <i class="fa-solid fa-map-location-dot mr-1.5"></i> Navigovať do Pezinka
+              </a>
+              <span class="text-[11px] text-slate-400">Parkovanie pri budove</span>
+            </div>
+          </div>
+
+          <!-- Šenkvice Card (Sídlo spoločnosti) -->
+          <div class="bg-white rounded-3xl p-6 sm:p-7 shadow-card border border-slate-200 hover:border-brand-300 transition-all">
+            <div class="flex items-center justify-between pb-4 border-b border-slate-100">
+              <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-xl bg-gold-500 text-white flex items-center justify-center">
+                  <i class="fa-solid fa-landmark"></i>
+                </div>
+                <div>
+                  <h3 class="text-lg font-extrabold text-slate-900">Sídlo & Kancelária Šenkvice</h3>
+                  <p class="text-xs text-slate-500">Oficiálne sídlo spoločnosti</p>
+                </div>
+              </div>
+              <span class="text-[11px] font-bold bg-gold-50 text-gold-800 px-2.5 py-1 rounded-full">Sídlo</span>
+            </div>
+
+            <div class="mt-4 space-y-3 text-xs sm:text-sm text-slate-600">
+              <div class="flex items-start">
+                <i class="fa-solid fa-location-dot text-gold-600 mt-1 mr-3 shrink-0"></i>
+                <span>Cerovská 1501/171A, 900 81 Šenkvice</span>
+              </div>
+              <div class="flex items-center">
+                <i class="fa-solid fa-mobile-screen-button text-gold-600 mr-3 shrink-0"></i>
+                <span>Mobil hotline: <strong>0903 229 408</strong></span>
+              </div>
+              <div class="flex items-center">
+                <i class="fa-solid fa-envelope text-brand-700 mr-3 shrink-0"></i>
+                <span>E-mail: <strong>zlata@zlata.sk</strong></span>
+              </div>
+              <div class="flex items-center">
+                <i class="fa-solid fa-compass text-slate-400 mr-3 shrink-0"></i>
+                <span class="font-mono text-xs text-slate-500">GPS: 48.293234 N, 17.290481 E</span>
+              </div>
+            </div>
+
+            <div class="mt-5 pt-4 border-t border-slate-100 flex items-center justify-between">
+              <a href="https://maps.google.com/?q=Cerovská+1501/171A,+900+81+Šenkvice" target="_blank" rel="noopener" class="text-xs font-bold text-gold-700 hover:text-gold-900 flex items-center">
+                <i class="fa-solid fa-map-location-dot mr-1.5"></i> Navigovať do Šenkvíc
+              </a>
+              <span class="text-[11px] text-slate-400">Jednoduchý prístup</span>
+            </div>
+          </div>
+
+          <!-- Billing Info snippet -->
+          <div class="bg-brand-900 text-white rounded-3xl p-6 shadow-md text-xs space-y-2">
+            <h4 class="font-bold text-sm text-gold-300">Fakturačné údaje spoločnosti:</h4>
+            <div class="grid grid-cols-2 gap-2 text-slate-300 pt-1">
+              <div>IČO: <strong class="text-white">35 915 226</strong></div>
+              <div>IČ DPH: <strong class="text-white">SK2021928282</strong></div>
+              <div class="col-span-2">OR Okresného súdu BA I (Mestský súd BA III), Odd. Sro, vl. č. 34380/B</div>
+              <div class="col-span-2 pt-1 border-t border-brand-800 text-slate-400">
+                IBAN: <strong class="text-white font-mono">SK46 1100 0000 0026 2880 8995</strong> (TATRSKBX)
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right: Modern Contact & Quote Form (7 cols) -->
+        <div class="lg:col-span-7 bg-white rounded-3xl p-8 sm:p-10 shadow-xl border border-slate-200" id="kontakt-formular">
+          
+          <div class="mb-6">
+            <span class="text-xs font-bold uppercase tracking-wider text-brand-700">Rýchly dopyt & konzultácia</span>
+            <h3 class="text-2xl font-extrabold text-slate-900 mt-1">Pošlite nám nezáväznú správu</h3>
+            <p class="text-xs sm:text-sm text-slate-500 mt-1">
+              Vyplňte formulár a my sa vám ozveme s presnou cenovou ponukou alebo dohodneme osobné stretnutie.
+            </p>
+          </div>
+
+          <form id="leadContactForm" class="space-y-4">
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label for="formName" class="block text-xs font-bold text-slate-700 mb-1">Meno a priezvisko *</label>
+                <input type="text" id="formName" required placeholder="Ing. Ján Novák" class="w-full text-xs sm:text-sm bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2.5 focus:outline-none focus:border-brand-500 focus:bg-white transition-all">
+              </div>
+              <div>
+                <label for="formCompany" class="block text-xs font-bold text-slate-700 mb-1">Názov firmy / IČO</label>
+                <input type="text" id="formCompany" placeholder="Napr. MOJA FIRMA s.r.o. / 12345678" class="w-full text-xs sm:text-sm bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2.5 focus:outline-none focus:border-brand-500 focus:bg-white transition-all">
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label for="formEmail" class="block text-xs font-bold text-slate-700 mb-1">Váš e-mail *</label>
+                <input type="email" id="formEmail" required placeholder="novak@firma.sk" class="w-full text-xs sm:text-sm bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2.5 focus:outline-none focus:border-brand-500 focus:bg-white transition-all">
+              </div>
+              <div>
+                <label for="formPhone" class="block text-xs font-bold text-slate-700 mb-1">Telefónne číslo *</label>
+                <input type="tel" id="formPhone" required placeholder="0903 123 456" class="w-full text-xs sm:text-sm bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2.5 focus:outline-none focus:border-brand-500 focus:bg-white transition-all">
+              </div>
+            </div>
+
+            <!-- Service Selection -->
+            <div>
+              <label for="formService" class="block text-xs font-bold text-slate-700 mb-1">O akú službu máte záujem?</label>
+              <select id="formService" class="w-full text-xs sm:text-sm bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2.5 focus:outline-none focus:border-brand-500 focus:bg-white transition-all">
+                <option value="Podvojné účtovníctvo pre s.r.o.">Podvojné účtovníctvo s online prístupom (s.r.o. / a.s.)</option>
+                <option value="Refundácia DPH z EÚ">Refundácia (vrátenie) DPH z iných štátov EÚ</option>
+                <option value="Vedenie miezd a personalistiky">Spracovanie miezd a personalistika</option>
+                <option value="Jednoduché účtovníctvo / SZČO">Jednoduché účtovníctvo a daňová evidencia (SZČO)</option>
+                <option value="Daňové priznanie (DPFO / DPPO)">Daňové priznanie (zamestnanec, zahraničie, firma, auto)</option>
+                <option value="Založenie alebo zmeny v s.r.o.">Založenie s.r.o. alebo zápis zmien v ORSR</option>
+                <option value="Iná otázka / Konzultácia">Iné poradenstvo / Špecifická požiadavka</option>
+              </select>
+            </div>
+
+            <!-- Pre-filled note from calculator -->
+            <div>
+              <label for="formMessage" class="block text-xs font-bold text-slate-700 mb-1">Vaša správa alebo špecifikácia dopytu</label>
+              <textarea id="formMessage" rows="4" placeholder="Napíšte nám podrobnosti o vašom podnikaní (počet dokladov, zamestnanci, štáty pri vratke DPH...)" class="w-full text-xs sm:text-sm bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2.5 focus:outline-none focus:border-brand-500 focus:bg-white transition-all"></textarea>
+            </div>
+
+            <!-- GDPR Consent -->
+            <div class="flex items-start pt-1">
+              <input type="checkbox" id="formGdpr" required class="mt-1 rounded text-brand-600 focus:ring-brand-500 mr-2.5 w-4 h-4">
+              <label for="formGdpr" class="text-[11px] text-slate-500 leading-normal cursor-pointer">
+                Súhlasím so spracovaním osobných údajov spoločnosťou ZLATA, s.r.o. za účelom kontaktovania a vypracovania cenovej ponuky podľa platných predpisov GDPR.
+              </label>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="pt-2">
+              <button type="submit" id="submitFormBtn" class="w-full py-4 bg-gradient-to-r from-brand-700 to-brand-800 hover:from-brand-600 hover:to-brand-700 text-white font-extrabold text-sm sm:text-base rounded-xl shadow-lg shadow-brand-700/20 hover:shadow-xl hover:shadow-brand-700/30 transition-all flex items-center justify-center">
+                <span>Odoslať nezáväzný dopyt</span>
+                <i class="fa-solid fa-paper-plane ml-2 text-xs"></i>
+              </button>
+            </div>
+
+          </form>
+
+          <!-- Form Success Message Modal / Inline Alert -->
+          <div id="formSuccessAlert" class="hidden mt-4 p-4 rounded-2xl bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs sm:text-sm">
+            <div class="flex items-start">
+              <i class="fa-solid fa-circle-check text-emerald-600 text-lg mr-3 mt-0.5"></i>
+              <div>
+                <strong class="font-bold block text-sm">Ďakujeme za váš dopyt!</strong>
+                <span>Vaša správa bola úspešne zaznamenaná. Náš tím vás bude kontaktovať v najkratšom možnom čase (zvyčajne do 24 hodín). V naliehavých prípadoch volajte na <strong>0903 229 408</strong>.</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-slate-950 text-slate-400 pt-16 pb-12 border-t border-slate-900 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-slate-800/80">
+        
+        <!-- Col 1: Brand & About -->
+        <div class="lg:col-span-2 space-y-4">
+          <div class="flex items-center space-x-3">
+            <div class="w-10 h-10 rounded-xl bg-brand-700 text-white flex items-center justify-center font-black text-lg">
+              Z
+            </div>
+            <div>
+              <span class="text-xl font-extrabold text-white tracking-tight">ZLATA<span class="text-gold-400">, s.r.o.</span></span>
+              <span class="block text-[10px] text-slate-300 font-semibold uppercase tracking-wider">Účtovná & poradenská kancelária</span>
+            </div>
+          </div>
+          <p class="text-slate-300 text-xs leading-relaxed max-w-sm">
+            Viac ako 20 rokov poskytujeme komplexné vedenie účtovníctva s 24/7 online cloudovým prístupom, mzdovú agendu a špecializovanú refundáciu DPH z iných členských štátov EÚ.
+          </p>
+          <div class="flex items-center space-x-3 text-slate-400 pt-2">
+            <span class="inline-flex items-center px-2.5 py-1 rounded-md bg-slate-900 border border-slate-800 text-[11px] text-slate-300">
+              <i class="fa-solid fa-shield-halved text-gold-400 mr-1.5"></i> Poistenie Generali
+            </span>
+            <span class="inline-flex items-center px-2.5 py-1 rounded-md bg-slate-900 border border-slate-800 text-[11px] text-slate-300">
+              <i class="fa-solid fa-cloud text-brand-400 mr-1.5"></i> 24/7/365 Cloud
+            </span>
+          </div>
+        </div>
+
+        <!-- Col 2: Služby -->
+        <div class="space-y-3">
+          <h4 class="text-xs font-bold text-white uppercase tracking-wider">Služby</h4>
+          <ul class="space-y-2">
+            <li><a href="#sluzby" class="hover:text-gold-400 transition-colors">Podvojné účtovníctvo</a></li>
+            <li><a href="#sluzby" class="hover:text-gold-400 transition-colors">Jednoduché účtovníctvo</a></li>
+            <li><a href="#mzdy" class="hover:text-gold-400 transition-colors">Mzdy a personalistika</a></li>
+            <li><a href="#refundacia-dph" class="hover:text-gold-400 transition-colors">Refundácia DPH z EÚ</a></li>
+            <li><a href="#cennik" class="hover:text-gold-400 transition-colors">Daňové priznania (FO/PO)</a></li>
+            <li><a href="#sluzby" class="hover:text-gold-400 transition-colors">Založenie a zmeny s.r.o.</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Rýchle odkazy -->
+        <div class="space-y-3">
+          <h4 class="text-xs font-bold text-white uppercase tracking-wider">Navigácia</h4>
+          <ul class="space-y-2">
+            <li><a href="#online-uctovnictvo" class="hover:text-gold-400 transition-colors">Online Cloud prístup</a></li>
+            <li><a href="#kalkulacka" class="hover:text-gold-400 transition-colors">Kalkulačka ceny</a></li>
+            <li><a href="#kalkulacka-dph" class="hover:text-gold-400 transition-colors">Simulátor vratky DPH</a></li>
+            <li><a href="#cennik" class="hover:text-gold-400 transition-colors">Kompletný Cenník 2024</a></li>
+            <li><a href="#faq" class="hover:text-gold-400 transition-colors">Časté otázky (FAQ)</a></li>
+            <li><a href="cennik-2024.pdf" download class="hover:text-gold-400 transition-colors text-gold-400/90 flex items-center">
+              <i class="fa-solid fa-file-pdf mr-1 text-[10px]"></i> Cenník v PDF
+            </a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Pobočky & Kontakt -->
+        <div class="space-y-3">
+          <h4 class="text-xs font-bold text-white uppercase tracking-wider">Pobočky & Hot-line</h4>
+          <p class="text-slate-300"><strong>Pezinok:</strong> Šenkvická 20</p>
+          <p class="text-slate-300"><strong>Šenkvice:</strong> Cerovská 1501/171A</p>
+          <p class="pt-1">
+            <a href="tel:+421903229408" class="text-gold-400 font-bold hover:underline flex items-center">
+              <i class="fa-solid fa-phone mr-1.5"></i> 0903 229 408
+            </a>
+          </p>
+          <p>
+            <a href="mailto:zlata@zlata.sk" class="hover:underline flex items-center text-slate-300">
+              <i class="fa-solid fa-envelope mr-1.5"></i> zlata@zlata.sk
+            </a>
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Legal footer row -->
+      <div class="mt-8 flex flex-col sm:flex-row justify-between items-center text-[11px] text-slate-300 gap-4">
+        <div>
+          &copy; 2026 ZLATA, s.r.o. Všetky práva vyhradené. Cerovská 1501/171A, 900 81 Šenkvice. IČO: 35915226.
+        </div>
+        <div class="flex items-center space-x-4">
+          <a href="#" class="hover:text-slate-300 transition-colors">Ochrana osobných údajov (GDPR)</a>
+          <span>&bull;</span>
+          <a href="#" class="hover:text-slate-300 transition-colors">Cookies</a>
+          <span>&bull;</span>
+          <span>Redizajn 2026 pre moderný web</span>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- FLOATING QUICK CONTACT BAR (MOBILE / DESKTOP) -->
+  <div class="fixed bottom-5 right-5 z-40 flex flex-col items-end space-y-2">
+    <!-- Scroll to top button -->
+    <button id="scrollToTopBtn" aria-label="Hore" class="hidden w-11 h-11 rounded-full bg-slate-900/80 text-white hover:bg-slate-900 border border-slate-700/80 shadow-lg backdrop-blur-md flex items-center justify-center transition-all duration-300">
+      <i class="fa-solid fa-arrow-up text-xs"></i>
+    </button>
+    <!-- Direct hotline pill -->
+    <a href="tel:+421903229408" class="bg-gradient-to-r from-gold-500 to-gold-600 text-brand-950 px-4 py-2.5 rounded-full shadow-xl hover:shadow-2xl font-black text-xs flex items-center space-x-2 transition-all transform hover:scale-105 border-2 border-white">
+      <i class="fa-solid fa-phone text-sm animate-bounce"></i>
+      <span class="hidden sm:inline">Hot-line:</span>
+      <span>0903 229 408</span>
+    </a>
+  </div>
+
+  <!-- JAVASCRIPT LOGIC & INTERACTIVITY -->
+  <script>
+    // 1. Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const menuIcon = document.getElementById('menuIcon');
+
+    mobileMenuBtn.addEventListener('click', () => {
+      const isHidden = mobileMenu.classList.contains('hidden');
+      if (isHidden) {
+        mobileMenu.classList.remove('hidden');
+        menuIcon.classList.remove('fa-bars');
+        menuIcon.classList.add('fa-xmark');
+      } else {
+        mobileMenu.classList.add('hidden');
+        menuIcon.classList.remove('fa-xmark');
+        menuIcon.classList.add('fa-bars');
+      }
+    });
+
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        menuIcon.classList.remove('fa-xmark');
+        menuIcon.classList.add('fa-bars');
+      });
+    });
+
+    // 2. Scroll to top button visibility
+    const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 400) {
+        scrollToTopBtn.classList.remove('hidden');
+      } else {
+        scrollToTopBtn.classList.add('hidden');
+      }
+    });
+    scrollToTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // 3. Interactive Pricing Calculator Logic
+    const calcTypeRadios = document.querySelectorAll('input[name="calcType"]');
+    const calcDphRadios = document.querySelectorAll('input[name="calcDph"]');
+    const itemsSlider = document.getElementById('itemsSlider');
+    const employeesSlider = document.getElementById('employeesSlider');
+    const chkDzmv = document.getElementById('chkDzmv');
+
+    const itemsCountDisplay = document.getElementById('itemsCountDisplay');
+    const employeesCountDisplay = document.getElementById('employeesCountDisplay');
+    const calcFinalPrice = document.getElementById('calcFinalPrice');
+    const calcAccountingFee = document.getElementById('calcAccountingFee');
+    const calcPayrollFee = document.getElementById('calcPayrollFee');
+    const calcVatFee = document.getElementById('calcVatFee');
+    const calcPriceVatNote = document.getElementById('calcPriceVatNote');
+
+    const lblPodvojne = document.getElementById('lblPodvojne');
+    const lblJednoduche = document.getElementById('lblJednoduche');
+    const lblPlatitelDph = document.getElementById('lblPlatitelDph');
+    const lblNeplatitelDph = document.getElementById('lblNeplatitelDph');
+
+    function updateCalculator() {
+      const type = document.querySelector('input[name="calcType"]:checked').value;
+      const dph = document.querySelector('input[name="calcDph"]:checked').value;
+      const isPlatitel = dph === 'platitel';
+      const items = parseInt(itemsSlider.value, 10);
+      const employees = parseInt(employeesSlider.value, 10);
+      const dzmvChecked = chkDzmv.checked;
+
+      // Update slider displays
+      itemsCountDisplay.innerText = items + ' položiek';
+      employeesCountDisplay.innerText = employees === 0 ? '0 zamestnancov' : employees + (employees === 1 ? ' zamestnanec' : (employees < 5 ? ' zamestnanci' : ' zamestnancov'));
+
+      // Calculate base accounting fee based on 2024 price list tiers
+      let accountingFee = 99;
+      if (type === 'podvojne') {
+        if (items <= 99) {
+          accountingFee = isPlatitel ? 99 : 85;
+        } else if (items <= 199) {
+          accountingFee = isPlatitel ? 169 : 145;
+        } else if (items <= 299) {
+          accountingFee = isPlatitel ? 199 : 175;
+        } else if (items <= 399) {
+          accountingFee = isPlatitel ? 259 : 230;
+        } else if (items <= 499) {
+          accountingFee = isPlatitel ? 299 : 265;
+        } else if (items <= 599) {
+          accountingFee = isPlatitel ? 379 : 335;
+        } else {
+          accountingFee = isPlatitel ? 499 : 445;
+        }
+      } else {
+        // Jednoduché účtovníctvo / daňová evidencia
+        if (items <= 99) {
+          accountingFee = isPlatitel ? 85 : 70;
+        } else if (items <= 199) {
+          accountingFee = isPlatitel ? 140 : 120;
+        } else if (items <= 299) {
+          accountingFee = isPlatitel ? 175 : 150;
+        } else {
+          accountingFee = isPlatitel ? 230 : 200;
+        }
+      }
+
+      // Payroll fee: 13 € per person, 10% discount for multiples of 5, plus 5€ per institution
+      let payrollFee = 0;
+      if (employees > 0) {
+        let perPerson = 13.0;
+        if (employees >= 5) {
+          perPerson = 11.7; // 10% discount
+        }
+        payrollFee = Math.round(employees * perPerson + 5); // 5€ electronic filing
+      }
+
+      let extra = 0;
+      if (dzmvChecked) {
+        extra += Math.round(25 / 12); // DzMV spread per month
+      }
+
+      const totalMonthly = accountingFee + payrollFee + extra;
+
+      // Update UI elements
+      calcFinalPrice.innerText = totalMonthly + ' €';
+      calcAccountingFee.innerText = accountingFee + ' €';
+      calcPayrollFee.innerText = payrollFee > 0 ? payrollFee + ' €' : '0 €';
+      calcVatFee.innerText = isPlatitel ? 'V cene paušálu' : 'Neuplatňuje sa';
+      calcPriceVatNote.innerText = isPlatitel ? '(cena pre platiteľov DPH je bez DPH)' : '(konečná cena pre neplatiteľa DPH)';
+
+      // Style active radio wrappers
+      if (type === 'podvojne') {
+        lblPodvojne.className = 'flex items-center p-3.5 border-2 border-brand-700 bg-brand-50/50 rounded-2xl cursor-pointer transition-all';
+        lblJednoduche.className = 'flex items-center p-3.5 border-2 border-slate-200 hover:border-slate-300 rounded-2xl cursor-pointer transition-all';
+      } else {
+        lblJednoduche.className = 'flex items-center p-3.5 border-2 border-brand-700 bg-brand-50/50 rounded-2xl cursor-pointer transition-all';
+        lblPodvojne.className = 'flex items-center p-3.5 border-2 border-slate-200 hover:border-slate-300 rounded-2xl cursor-pointer transition-all';
+      }
+
+      if (isPlatitel) {
+        lblPlatitelDph.className = 'flex items-center p-3 border-2 border-brand-700 bg-brand-50/50 rounded-xl cursor-pointer transition-all';
+        lblNeplatitelDph.className = 'flex items-center p-3 border-2 border-slate-200 hover:border-slate-300 rounded-xl cursor-pointer transition-all';
+      } else {
+        lblNeplatitelDph.className = 'flex items-center p-3 border-2 border-brand-700 bg-brand-50/50 rounded-xl cursor-pointer transition-all';
+        lblPlatitelDph.className = 'flex items-center p-3 border-2 border-slate-200 hover:border-slate-300 rounded-xl cursor-pointer transition-all';
+      }
+    }
+
+    calcTypeRadios.forEach(r => r.addEventListener('change', updateCalculator));
+    calcDphRadios.forEach(r => r.addEventListener('change', updateCalculator));
+    itemsSlider.addEventListener('input', updateCalculator);
+    employeesSlider.addEventListener('input', updateCalculator);
+    chkDzmv.addEventListener('change', updateCalculator);
+    updateCalculator();
+
+    // 4. Button to apply calculated values directly into contact form
+    const btnApplyCalculator = document.getElementById('btnApplyCalculator');
+    btnApplyCalculator.addEventListener('click', () => {
+      const type = document.querySelector('input[name="calcType"]:checked').value === 'podvojne' ? 'Podvojné účtovníctvo' : 'Jednoduché účtovníctvo';
+      const dph = document.querySelector('input[name="calcDph"]:checked').value === 'platitel' ? 'Platiteľ DPH' : 'Neplatiteľ DPH';
+      const items = itemsSlider.value;
+      const employees = employeesSlider.value;
+      const finalPrice = calcFinalPrice.innerText;
+
+      const formService = document.getElementById('formService');
+      formService.value = type === 'Podvojné účtovníctvo' ? 'Podvojné účtovníctvo pre s.r.o.' : 'Jednoduché účtovníctvo / SZČO';
+
+      const formMessage = document.getElementById('formMessage');
+      formMessage.value = `Dobrý deň,\n\nmám záujem o cenovú ponuku s parametrami z vašej online kalkulačky:\n- Typ: ${type} (${dph})\n- Počet mesačných dokladov/položiek: cca ${items}\n- Počet zamestnancov: ${employees}\n- Vypočítaný orientačný odhad: ${finalPrice} / mesiac\n\nProsím o kontaktovanie a zaslanie návrhu spolupráce.`;
+
+      document.getElementById('kontakt-formular').scrollIntoView({ behavior: 'smooth' });
+      document.getElementById('formName').focus();
+    });
+
+    // 5. EU VAT Refund Simulator Logic
+    const vatCountry = document.getElementById('vatCountry');
+    const vatTotalExpense = document.getElementById('vatTotalExpense');
+    const vatRefundEstimated = document.getElementById('vatRefundEstimated');
+    const vatCommissionEstimated = document.getElementById('vatCommissionEstimated');
+    const vatNetProfit = document.getElementById('vatNetProfit');
+    const btnRequestVatRefund = document.getElementById('btnRequestVatRefund');
+
+    function updateVatSimulator() {
+      const parts = vatCountry.value.split('|');
+      const rate = parseFloat(parts[0]) / 100;
+      const expense = parseFloat(vatTotalExpense.value) || 0;
+
+      // Expense = Net + VAT = Net * (1 + rate) -> VAT = Expense * rate / (1 + rate)
+      const vatAmount = expense * (rate / (1 + rate));
+      
+      // Commission: 6% of vatAmount, minimum 80 €
+      let commission = vatAmount * 0.06;
+      if (commission < 80) commission = 80;
+      if (vatAmount <= 80) commission = vatAmount; // boundary safety
+
+      const netBenefit = Math.max(0, vatAmount - commission);
+
+      vatRefundEstimated.innerText = vatAmount.toLocaleString('sk-SK', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' €';
+      vatCommissionEstimated.innerText = commission.toLocaleString('sk-SK', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' €';
+      vatNetProfit.innerText = netBenefit.toLocaleString('sk-SK', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' €';
+    }
+
+    vatCountry.addEventListener('change', updateVatSimulator);
+    vatTotalExpense.addEventListener('input', updateVatSimulator);
+    updateVatSimulator();
+
+    btnRequestVatRefund.addEventListener('click', () => {
+      const parts = vatCountry.value.split('|');
+      const countryName = parts[1];
+      const expense = vatTotalExpense.value;
+      const refund = vatRefundEstimated.innerText;
+
+      document.getElementById('formService').value = 'Refundácia DPH z EÚ';
+      document.getElementById('formMessage').value = `Dobrý deň,\n\nžiadame o zastupovanie pri vrátení (refundácii) DPH z iného členského štátu EÚ:\n- Štát: ${countryName}\n- Odhadovaná suma nákladov s DPH: ${expense} €\n- Odhadovaná vratka dane: ${refund}\n\nProsím o zaslanie zmluvy o zastupovaní a inštrukcií k vytvoreniu väzby na portáli Finančnej správy SR.`;
+
+      document.getElementById('kontakt-formular').scrollIntoView({ behavior: 'smooth' });
+      document.getElementById('formName').focus();
+    });
+
+    // 6. Pricing Category Tabs & Search Filter
+    const pricingTabBtns = document.querySelectorAll('.pricing-tab-btn');
+    const pricingRows = document.querySelectorAll('.pricing-row');
+    const pricingSearchInput = document.getElementById('pricingSearchInput');
+    const noResultsMsg = document.getElementById('noResultsMsg');
+    let currentCategory = 'all';
+
+    function filterPricingTable() {
+      const query = pricingSearchInput.value.toLowerCase().trim();
+      let visibleCount = 0;
+
+      pricingRows.forEach(row => {
+        const cat = row.getAttribute('data-cat');
+        const text = row.innerText.toLowerCase();
+
+        const matchesCat = (currentCategory === 'all' || cat === currentCategory);
+        const matchesQuery = (query === '' || text.includes(query));
+
+        if (matchesCat && matchesQuery) {
+          row.style.display = '';
+          visibleCount++;
+        } else {
+          row.style.display = 'none';
+        }
+      });
+
+      if (visibleCount === 0) {
+        noResultsMsg.classList.remove('hidden');
+      } else {
+        noResultsMsg.classList.add('hidden');
+      }
+    }
+
+    pricingTabBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        pricingTabBtns.forEach(b => {
+          b.className = 'pricing-tab-btn px-3.5 py-1.5 rounded-xl text-xs font-bold bg-slate-100 text-slate-700 hover:bg-slate-200 transition-all';
+        });
+        btn.className = 'pricing-tab-btn active px-3.5 py-1.5 rounded-xl text-xs font-bold bg-brand-700 text-white shadow-sm transition-all';
+        currentCategory = btn.getAttribute('data-category');
+        filterPricingTable();
+      });
+    });
+
+    pricingSearchInput.addEventListener('input', filterPricingTable);
+
+    // 7. FAQ Accordion Toggle
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+      const toggleBtn = item.querySelector('.faq-toggle');
+      const content = item.querySelector('.faq-content');
+      const icon = item.querySelector('.fa-chevron-down');
+
+      toggleBtn.addEventListener('click', () => {
+        const isOpen = !content.classList.contains('hidden');
+        // close all others
+        faqItems.forEach(other => {
+          other.querySelector('.faq-content').classList.add('hidden');
+          other.querySelector('.fa-chevron-down').style.transform = 'rotate(0deg)';
+        });
+        if (!isOpen) {
+          content.classList.remove('hidden');
+          icon.style.transform = 'rotate(180deg)';
+        }
+      });
+    });
+
+    // 8. Lead Contact Form Submit Handler
+    const leadForm = document.getElementById('leadContactForm');
+    const formSuccessAlert = document.getElementById('formSuccessAlert');
+    const submitFormBtn = document.getElementById('submitFormBtn');
+
+    leadForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      submitFormBtn.disabled = true;
+      submitFormBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin mr-2"></i> Odosielam...';
+
+      setTimeout(() => {
+        submitFormBtn.disabled = false;
+        submitFormBtn.innerHTML = '<span>Odoslať nezáväzný dopyt</span><i class="fa-solid fa-paper-plane ml-2 text-xs"></i>';
+        formSuccessAlert.classList.remove('hidden');
+        leadForm.reset();
+        formSuccessAlert.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }, 700);
+    });
+  </script>
+
+</body>
+</html>
