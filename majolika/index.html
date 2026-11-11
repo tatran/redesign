@@ -1,0 +1,2144 @@
+<!DOCTYPE html>
+<html lang="sk" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slovenská ľudová majolika Modra — Živá tradícia od roku 1883 | Redizajn</title>
+  <meta name="description" content="Oficiálny redizajn prezentácie Slovenskej ľudovej majoliky v Modre. 100% ručne točená a maľovaná keramika, nehmotné kultúrne dedičstvo SR, zážitkové tvorivé dielne a e-shop.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/gif" href="images/logo_slm.gif">
+
+  <!-- Google Fonts: Cormorant Garamond, Cinzel & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            majolika: {
+              blue: '#0d2d5e',
+              'blue-light': '#1e4c8f',
+              'blue-soft': '#e8f0fe',
+              cobalt: '#0e29a0',
+              clay: '#b95332',
+              'clay-hover': '#a04427',
+              terracotta: '#d97448',
+              cream: '#fbf9f4',
+              'cream-dark': '#f2ede0',
+              gold: '#c99a45',
+              'gold-light': '#f3e5c8',
+              green: '#2d6a4f',
+              charcoal: '#22252a'
+            }
+          },
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            display: ['"Cinzel"', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+          },
+          boxShadow: {
+            'majolika': '0 12px 36px -8px rgba(13, 45, 94, 0.12)',
+            'clay': '0 12px 30px -8px rgba(185, 83, 50, 0.25)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    /* Folk Ornament Border Accent */
+    .folk-border-pattern {
+      background-image: radial-gradient(#0d2d5e 1.5px, transparent 1.5px), radial-gradient(#b95332 1.5px, #fbf9f4 1.5px);
+      background-size: 24px 24px;
+      background-position: 0 0, 12px 12px;
+    }
+    
+    .folk-wave {
+      background: linear-gradient(135deg, #0d2d5e 25%, transparent 25%) -12px 0/ 24px 24px,
+                  linear-gradient(225deg, #0d2d5e 25%, transparent 25%) -12px 0/ 24px 24px,
+                  linear-gradient(315deg, #0d2d5e 25%, transparent 25%) 0 0/ 24px 24px,
+                  linear-gradient(45deg, #0d2d5e 25%, #1e4c8f 25%) 0 0/ 24px 24px;
+    }
+
+    /* Ceramic Glaze Shine Effect */
+    .glaze-card {
+      position: relative;
+      overflow: hidden;
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .glaze-card::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -60%;
+      width: 20%;
+      height: 200%;
+      background: rgba(255, 255, 255, 0.25);
+      transform: rotate(30deg);
+      transition: all 0.75s ease;
+      pointer-events: none;
+    }
+    .glaze-card:hover::after {
+      left: 140%;
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #fbf9f4;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #0d2d5e;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #b95332;
+    }
+  </style>
+</head>
+
+<body class="bg-majolika-cream text-majolika-charcoal font-sans antialiased selection:bg-majolika-blue selection:text-white">
+
+  <!-- ================= TOP HERITAGE ANNOUNCEMENT BAR ================= -->
+  <div class="bg-majolika-blue text-white text-xs md:text-sm py-2 px-4 border-b border-majolika-blue-light/40">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
+      <div class="flex items-center gap-2">
+        <span class="inline-flex items-center justify-center bg-majolika-gold text-majolika-blue font-bold px-2 py-0.5 rounded text-[11px] tracking-wider uppercase">
+          UNESCO SR & EÚ
+        </span>
+        <span class="font-medium text-majolika-cream">
+          Modranská majolika je zapísaná v Reprezentatívnom zozname nehmotného kultúrneho dedičstva SR a chránená zemepisným označením EÚ (2026).
+        </span>
+      </div>
+      <div class="flex items-center gap-4 text-xs font-medium">
+        <a href="#dielne" class="hover:text-majolika-gold transition-colors flex items-center gap-1">
+          <i data-lucide="calendar" class="w-3.5 h-3.5"></i> Víkendy v dielňach: každú celú hodinu 10:00 - 16:00
+        </a>
+        <span class="hidden md:inline text-white/30">|</span>
+        <a href="tel:+421911980105" class="hidden md:flex items-center gap-1 hover:text-majolika-gold transition-colors">
+          <i data-lucide="phone" class="w-3.5 h-3.5"></i> +421 911 980 105
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= MAIN NAVIGATION ================= -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md shadow-sm border-b border-majolika-cream-dark transition-all duration-300" id="mainHeader">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Logo -->
+        <a href="#" class="flex items-center gap-3 group">
+          <img src="images/logo_slm.gif" alt="Slovenská ľudová majolika logo" class="w-12 h-12 object-contain group-hover:scale-105 transition-transform duration-300">
+          <div>
+            <div class="font-display text-lg md:text-xl font-bold tracking-wider text-majolika-blue leading-none">
+              SLOVENSKÁ ĽUDOVÁ MAJOLIKA
+            </div>
+            <div class="text-[11px] font-semibold text-majolika-clay tracking-widest uppercase mt-0.5">
+              Modra &bull; Tradícia od roku 1883
+            </div>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden lg:flex items-center gap-7 text-sm font-semibold text-majolika-blue">
+          <a href="#o-nas" class="hover:text-majolika-clay transition-colors">O nás</a>
+          <a href="#dekory" class="hover:text-majolika-clay transition-colors flex items-center gap-1">
+            4 Dekóry Modry
+            <span class="bg-majolika-clay/10 text-majolika-clay text-[10px] px-1.5 py-0.5 rounded font-bold">Vzory</span>
+          </a>
+          <a href="#dielne" class="hover:text-majolika-clay transition-colors flex items-center gap-1">
+            Dielne & Prehliadky
+            <span class="bg-majolika-green/10 text-majolika-green text-[10px] px-1.5 py-0.5 rounded font-bold">Zážitok</span>
+          </a>
+          <a href="#eshop" class="hover:text-majolika-clay transition-colors">E-shop & Kolekcie</a>
+          <a href="#zakazkova-vyroba" class="hover:text-majolika-clay transition-colors">Na mieru</a>
+          <a href="#majstri" class="hover:text-majolika-clay transition-colors">Majstri</a>
+          <a href="#aktuality" class="hover:text-majolika-clay transition-colors">Aktuality</a>
+          <a href="#kontakt" class="hover:text-majolika-clay transition-colors">Kontakt</a>
+        </nav>
+
+        <!-- Right Action Icons & CTA -->
+        <div class="flex items-center gap-3">
+          <!-- Cart Toggle Button -->
+          <button onclick="toggleCart()" class="relative p-2.5 rounded-full hover:bg-majolika-cream text-majolika-blue transition-colors" aria-label="Košík">
+            <i data-lucide="shopping-bag" class="w-5 h-5"></i>
+            <span id="cartCountBadge" class="absolute -top-1 -right-1 bg-majolika-clay text-white text-[11px] font-bold w-5 h-5 rounded-full flex items-center justify-center shadow-sm">
+              2
+            </span>
+          </button>
+
+          <!-- Book Workshop Button -->
+          <a href="#booking-section" class="hidden sm:inline-flex items-center gap-2 bg-majolika-clay hover:bg-majolika-clay-hover text-white text-xs md:text-sm font-bold px-4 py-2.5 rounded-full shadow-clay hover:shadow-lg transition-all duration-300">
+            <i data-lucide="sparkles" class="w-4 h-4"></i>
+            <span>Rezervovať dielňu</span>
+          </a>
+
+          <!-- Mobile Hamburger Toggle -->
+          <button onclick="toggleMobileMenu()" class="lg:hidden p-2 rounded-lg text-majolika-blue hover:bg-majolika-cream" aria-label="Otvoriť menu">
+            <i data-lucide="menu" class="w-6 h-6" id="menuOpenIcon"></i>
+            <i data-lucide="x" class="w-6 h-6 hidden" id="menuCloseIcon"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobileMenu" class="hidden lg:hidden bg-white border-b border-majolika-cream-dark px-6 py-6 space-y-4">
+      <nav class="flex flex-col space-y-3 text-base font-semibold text-majolika-blue">
+        <a href="#o-nas" onclick="toggleMobileMenu()" class="hover:text-majolika-clay py-1">O nás & História</a>
+        <a href="#dekory" onclick="toggleMobileMenu()" class="hover:text-majolika-clay py-1 flex items-center justify-between">
+          <span>4 Dekóry Modranskej keramiky</span>
+          <span class="text-xs bg-majolika-clay/10 text-majolika-clay px-2 py-0.5 rounded font-bold">Vzory</span>
+        </a>
+        <a href="#dielne" onclick="toggleMobileMenu()" class="hover:text-majolika-clay py-1 flex items-center justify-between">
+          <span>Zážitkové tvorivé dielne & Prehliadky</span>
+          <span class="text-xs bg-majolika-green/10 text-majolika-green px-2 py-0.5 rounded font-bold">Populárne</span>
+        </a>
+        <a href="#eshop" onclick="toggleMobileMenu()" class="hover:text-majolika-clay py-1">E-shop & Kolekcie</a>
+        <a href="#zakazkova-vyroba" onclick="toggleMobileMenu()" class="hover:text-majolika-clay py-1">Zákazková výroba na mieru</a>
+        <a href="#majstri" onclick="toggleMobileMenu()" class="hover:text-majolika-clay py-1">Naši majstri a keramikári</a>
+        <a href="#aktuality" onclick="toggleMobileMenu()" class="hover:text-majolika-clay py-1">Aktuality & Dedičstvo</a>
+        <a href="#kontakt" onclick="toggleMobileMenu()" class="hover:text-majolika-clay py-1">Kontakt & Predajňa v Modre</a>
+      </nav>
+      <div class="pt-4 border-t border-gray-100 flex flex-col gap-3">
+        <a href="#booking-section" onclick="toggleMobileMenu()" class="w-full text-center bg-majolika-clay hover:bg-majolika-clay-hover text-white font-bold py-3 rounded-xl shadow-clay">
+          Rezervovať termín dielne
+        </a>
+        <a href="tel:+421911980105" class="flex items-center justify-center gap-2 text-sm text-majolika-blue font-semibold py-2">
+          <i data-lucide="phone" class="w-4 h-4"></i> +421 911 980 105
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= HERO SECTION ================= -->
+  <section class="relative overflow-hidden bg-gradient-to-b from-white via-majolika-cream to-majolika-cream-dark/40 pt-12 pb-20 lg:pt-20 lg:pb-28">
+    <!-- Subtle Background Graphic Elements -->
+    <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-majolika-blue-soft/50 blur-3xl pointer-events-none"></div>
+    <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-96 h-96 rounded-full bg-majolika-clay/10 blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        
+        <!-- Left Content (7 Cols) -->
+        <div class="lg:col-span-7 space-y-6">
+          
+          <div class="inline-flex items-center gap-2 bg-majolika-blue/5 border border-majolika-blue/15 text-majolika-blue px-3.5 py-1.5 rounded-full text-xs md:text-sm font-semibold tracking-wide">
+            <span class="w-2 h-2 rounded-full bg-majolika-clay animate-pulse"></span>
+            <span>Reprezentatívne nehmotné kultúrne dedičstvo Slovenska</span>
+          </div>
+
+          <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-majolika-blue leading-[1.08] tracking-tight">
+            Živé srdce modranskej keramiky <span class="italic font-normal text-majolika-clay">od roku 1883</span>
+          </h1>
+
+          <p class="text-base sm:text-lg text-majolika-charcoal/80 max-w-2xl leading-relaxed font-light">
+            Už viac ako 140 rokov vytáčame hlinu na hrnčiarskom kruhu a maľujeme snehobielu glazúru štetcom z ruky. Každý náš tanier, džbán, čajník i šálka je neopakovateľný originál z dielní v Modre.
+          </p>
+
+          <!-- Key Highlights Pills -->
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2">
+            <div class="bg-white/80 backdrop-blur-sm p-3.5 rounded-2xl border border-majolika-cream-dark shadow-sm">
+              <div class="text-2xl font-bold font-serif text-majolika-blue">140+ rokov</div>
+              <div class="text-xs text-majolika-charcoal/70 font-medium">nepretržitej tradície</div>
+            </div>
+            <div class="bg-white/80 backdrop-blur-sm p-3.5 rounded-2xl border border-majolika-cream-dark shadow-sm">
+              <div class="text-2xl font-bold font-serif text-majolika-clay">100% ručne</div>
+              <div class="text-xs text-majolika-charcoal/70 font-medium">točené & maľované</div>
+            </div>
+            <div class="bg-white/80 backdrop-blur-sm p-3.5 rounded-2xl border border-majolika-cream-dark shadow-sm col-span-2 sm:col-span-1">
+              <div class="text-2xl font-bold font-serif text-majolika-gold">EÚ 2026</div>
+              <div class="text-xs text-majolika-charcoal/70 font-medium">Chránené označenie</div>
+            </div>
+          </div>
+
+          <!-- CTAs -->
+          <div class="flex flex-wrap items-center gap-4 pt-4">
+            <a href="#dielne" class="inline-flex items-center justify-center gap-2.5 bg-majolika-blue hover:bg-majolika-blue-light text-white font-bold text-sm sm:text-base px-7 py-4 rounded-xl shadow-majolika hover:shadow-xl transition-all duration-300">
+              <i data-lucide="palette" class="w-5 h-5 text-majolika-gold"></i>
+              <span>Zažiť tvorivú dielňu</span>
+            </a>
+            <a href="#eshop" class="inline-flex items-center justify-center gap-2.5 bg-white hover:bg-majolika-cream border-2 border-majolika-blue text-majolika-blue font-bold text-sm sm:text-base px-7 py-4 rounded-xl hover:shadow-md transition-all duration-300">
+              <i data-lucide="store" class="w-5 h-5"></i>
+              <span>Preskúmať e-shop</span>
+            </a>
+          </div>
+
+          <!-- Quick Trust Proof -->
+          <div class="flex items-center gap-3 pt-2 text-xs text-majolika-charcoal/70">
+            <div class="flex text-amber-400">
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+            </div>
+            <span><strong>4.9 / 5</strong> hodnotenie návštevníkov dielní & zákazníkov e-shopu</span>
+          </div>
+
+        </div>
+
+        <!-- Right Visual Showcase (5 Cols) -->
+        <div class="lg:col-span-5 relative">
+          <!-- Main Hero Composition -->
+          <div class="relative mx-auto max-w-md lg:max-w-none">
+            
+            <!-- Large Image (Workshop Painting) -->
+            <div class="glaze-card rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-white">
+              <img src="images/hero_workshop.jpg" alt="Maľovanie tradičnej modranskej keramiky" class="w-full h-80 sm:h-96 object-cover hover:scale-105 transition-transform duration-700">
+              <div class="p-5 bg-white space-y-1">
+                <div class="flex items-center justify-between">
+                  <span class="text-xs uppercase tracking-wider font-bold text-majolika-clay">Remeselný proces</span>
+                  <span class="text-xs text-gray-500 flex items-center gap-1"><i data-lucide="map-pin" class="w-3.5 h-3.5"></i> Modra, Dolná 138</span>
+                </div>
+                <h3 class="font-serif text-lg font-bold text-majolika-blue">Ručné maľovanie voľnou rukou</h3>
+                <p class="text-xs text-gray-600">Maliarka nanáša tradičné oxidy kovov priamo na surovú glazúru pred finálnym výpalom pri 1020 °C.</p>
+              </div>
+            </div>
+
+            <!-- Floating Badge 1: Heritage Certificate -->
+            <div class="absolute -bottom-6 -left-6 sm:-left-8 bg-white/95 backdrop-blur-md p-3.5 rounded-2xl shadow-xl border border-majolika-gold/30 flex items-center gap-3.5 max-w-[260px]">
+              <img src="images/unesco_cert.jpg" alt="Zápis v dedičstve" class="w-14 h-14 object-cover rounded-xl border border-majolika-gold/40">
+              <div>
+                <div class="text-[10px] font-bold uppercase tracking-wider text-majolika-gold">Národný zoznam</div>
+                <div class="text-xs font-bold text-majolika-blue leading-tight">Nehmotné kultúrne dedičstvo Slovenska</div>
+              </div>
+            </div>
+
+            <!-- Floating Badge 2: Authentic Vase graphic -->
+            <div class="hidden sm:flex absolute -top-8 -right-6 bg-white/90 backdrop-blur-md p-2.5 rounded-2xl shadow-lg border border-majolika-blue/20 items-center gap-2">
+              <img src="images/dekor_modry.png" alt="Modranský motív" class="w-10 h-10 object-contain">
+              <div class="pr-2">
+                <div class="text-[10px] uppercase font-bold text-majolika-blue">Originálna receptúra</div>
+                <div class="text-xs font-bold text-majolika-clay">Kobalt & cín</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 4 DEKÓRY MODRANSKEJ MAJOLIKY ================= -->
+  <section id="dekory" class="py-20 bg-white border-y border-majolika-cream-dark relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto space-y-3 mb-14">
+        <div class="inline-flex items-center gap-2 text-majolika-clay font-bold text-xs uppercase tracking-widest">
+          <i data-lucide="palette" class="w-4 h-4"></i>
+          <span>Autentická ornamentika Modry</span>
+        </div>
+        <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-majolika-blue">
+          Štyri tradičné dekóry modranskej keramiky
+        </h2>
+        <p class="text-sm sm:text-base text-majolika-charcoal/70">
+          Každý vzor má svoj vlastný historický príbeh, farebný kód a symboliku. Kliknite a spoznajte rozmanitosť nášho remesla.
+        </p>
+      </div>
+
+      <!-- Interactive Pattern Tabs Navigation -->
+      <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-4 mb-10">
+        <button onclick="switchDecor('modry')" id="tab-modry" class="decor-tab-btn active px-5 py-3 rounded-xl font-bold text-sm sm:text-base transition-all duration-300 flex items-center gap-2.5 bg-majolika-blue text-white shadow-md">
+          <span class="w-3.5 h-3.5 rounded-full bg-blue-600 border border-white"></span>
+          <span>Modrý dekór</span>
+        </button>
+        <button onclick="switchDecor('pestry')" id="tab-pestry" class="decor-tab-btn px-5 py-3 rounded-xl font-bold text-sm sm:text-base transition-all duration-300 flex items-center gap-2.5 bg-majolika-cream text-majolika-blue hover:bg-majolika-cream-dark">
+          <span class="w-3.5 h-3.5 rounded-full bg-gradient-to-r from-yellow-400 via-green-500 to-blue-600 border border-white"></span>
+          <span>Pestrý dekór</span>
+        </button>
+        <button onclick="switchDecor('habansky')" id="tab-habansky" class="decor-tab-btn px-5 py-3 rounded-xl font-bold text-sm sm:text-base transition-all duration-300 flex items-center gap-2.5 bg-majolika-cream text-majolika-blue hover:bg-majolika-cream-dark">
+          <span class="w-3.5 h-3.5 rounded-full bg-amber-500 border border-white"></span>
+          <span>Habánsky dekór</span>
+        </button>
+        <button onclick="switchDecor('zeleny')" id="tab-zeleny" class="decor-tab-btn px-5 py-3 rounded-xl font-bold text-sm sm:text-base transition-all duration-300 flex items-center gap-2.5 bg-majolika-cream text-majolika-blue hover:bg-majolika-cream-dark">
+          <span class="w-3.5 h-3.5 rounded-full bg-emerald-600 border border-white"></span>
+          <span>Zelený dekór</span>
+        </button>
+      </div>
+
+      <!-- Decor Detail Showcase Box -->
+      <div class="bg-majolika-cream rounded-3xl p-6 sm:p-10 lg:p-12 border border-majolika-cream-dark shadow-majolika">
+        
+        <!-- 1. MODRÝ DEKÓR CONTENT -->
+        <div id="content-modry" class="decor-panel grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-5 flex justify-center">
+            <div class="relative group">
+              <div class="absolute inset-0 bg-blue-500/10 rounded-full blur-2xl transform group-hover:scale-110 transition-transform"></div>
+              <img src="images/dekor_modry.png" alt="Modrý dekór modranskej majoliky" class="w-72 h-72 sm:w-80 sm:h-80 object-contain relative z-10 drop-shadow-xl transition-transform duration-500 group-hover:rotate-3">
+              <span class="absolute bottom-2 right-4 bg-white/90 backdrop-blur-sm text-majolika-blue text-xs font-bold px-3 py-1 rounded-full shadow-sm">
+                Kobaltová glazúra
+              </span>
+            </div>
+          </div>
+          <div class="lg:col-span-7 space-y-5">
+            <div class="inline-block bg-blue-100 text-blue-900 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+              Najobľúbenejšia klasika
+            </div>
+            <h3 class="font-serif text-3xl sm:text-4xl font-bold text-majolika-blue">
+              Modrý dekór: Elegancia kobaltu na bielom snehu
+            </h3>
+            <p class="text-sm sm:text-base text-majolika-charcoal/80 leading-relaxed">
+              Modrý vzor je vizuálnou synonymiou modranskej majoliky. Vznikol kombináciou čistej bielej cínovej glazúry a intenzívneho kobaltového pigmentu. Motívy zobrazujú zrelé hrozno, úponky viniča, lúčne kvety a štylizované vtáčiky, ktoré odkazujú na malokarpatskú vinohradnícku kultúru.
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+              <div class="bg-white p-4 rounded-xl border border-majolika-cream-dark">
+                <div class="font-bold text-xs uppercase text-majolika-clay mb-1">Farby a pigmenty</div>
+                <div class="text-sm font-semibold text-majolika-blue">Kobaltová modrá (oxid kobaltu) v jemných a sýtych tónoch.</div>
+              </div>
+              <div class="bg-white p-4 rounded-xl border border-majolika-cream-dark">
+                <div class="font-bold text-xs uppercase text-majolika-clay mb-1">Tradičné využitie</div>
+                <div class="text-sm font-semibold text-majolika-blue">Sviatočné servírovacie taniere, vínové džbány a moderné sety.</div>
+              </div>
+            </div>
+            <div class="pt-2 flex flex-wrap gap-3">
+              <a href="#eshop" onclick="filterShop('modry')" class="inline-flex items-center gap-2 bg-majolika-blue hover:bg-majolika-blue-light text-white font-bold text-sm px-6 py-3 rounded-xl transition-colors">
+                <span>Zobraziť výrobky v modrom dekóre</span>
+                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. PESTRÝ DEKÓR CONTENT -->
+        <div id="content-pestry" class="decor-panel hidden grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-5 flex justify-center">
+            <div class="relative group">
+              <div class="absolute inset-0 bg-amber-500/10 rounded-full blur-2xl transform group-hover:scale-110 transition-transform"></div>
+              <img src="images/dekor_pestry.png" alt="Pestrý dekór modranskej majoliky" class="w-72 h-72 sm:w-80 sm:h-80 object-contain relative z-10 drop-shadow-xl transition-transform duration-500 group-hover:rotate-3">
+              <span class="absolute bottom-2 right-4 bg-white/90 backdrop-blur-sm text-majolika-clay text-xs font-bold px-3 py-1 rounded-full shadow-sm">
+                4-farebná symfónia
+              </span>
+            </div>
+          </div>
+          <div class="lg:col-span-7 space-y-5">
+            <div class="inline-block bg-amber-100 text-amber-900 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+              Tradičná ľudová farebnosť
+            </div>
+            <h3 class="font-serif text-3xl sm:text-4xl font-bold text-majolika-blue">
+              Pestrý dekór: Oslava slnka, prírody a radosti zo života
+            </h3>
+            <p class="text-sm sm:text-base text-majolika-charcoal/80 leading-relaxed">
+              Pestrý dekor spája štyri základné keramické farby. Každý ťah štetcom si vyžaduje mimoriadnu istotu maliarky, pretože surová glazúra okamžite saje pigment a chybu nie je možné zotrieť. Pestro maľovaná keramika zdobila sviatočné stoly a police v celom stredoeurópskom regióne.
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+              <div class="bg-white p-4 rounded-xl border border-majolika-cream-dark">
+                <div class="font-bold text-xs uppercase text-majolika-clay mb-1">Harmónia 4 tónov</div>
+                <div class="text-sm font-semibold text-majolika-blue">Antimónová žltá, medená zelená, kobaltová modrá a mangánová fialovo-červená.</div>
+              </div>
+              <div class="bg-white p-4 rounded-xl border border-majolika-cream-dark">
+                <div class="font-bold text-xs uppercase text-majolika-clay mb-1">Charakteristické prvky</div>
+                <div class="text-sm font-semibold text-majolika-blue">Kvitnúce tulipány, granátové jablká, vtáčiky v korune stromu.</div>
+              </div>
+            </div>
+            <div class="pt-2 flex flex-wrap gap-3">
+              <a href="#eshop" onclick="filterShop('pestry')" class="inline-flex items-center gap-2 bg-majolika-clay hover:bg-majolika-clay-hover text-white font-bold text-sm px-6 py-3 rounded-xl transition-colors">
+                <span>Zobraziť výrobky v pestrom dekóre</span>
+                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. HABÁNSKY DEKÓR CONTENT -->
+        <div id="content-habansky" class="decor-panel hidden grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-5 flex justify-center">
+            <div class="relative group">
+              <div class="absolute inset-0 bg-emerald-500/10 rounded-full blur-2xl transform group-hover:scale-110 transition-transform"></div>
+              <img src="images/dekor_habansky.png" alt="Habánsky dekór modranskej majoliky" class="w-72 h-72 sm:w-80 sm:h-80 object-contain relative z-10 drop-shadow-xl transition-transform duration-500 group-hover:rotate-3">
+              <span class="absolute bottom-2 right-4 bg-white/90 backdrop-blur-sm text-majolika-green text-xs font-bold px-3 py-1 rounded-full shadow-sm">
+                Od 16. storočia
+              </span>
+            </div>
+          </div>
+          <div class="lg:col-span-7 space-y-5">
+            <div class="inline-block bg-emerald-100 text-emerald-900 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+              Historické korene fajansy
+            </div>
+            <h3 class="font-serif text-3xl sm:text-4xl font-bold text-majolika-blue">
+              Habánsky dekór: Šľachtická askéza a prísny kódex
+            </h3>
+            <p class="text-sm sm:text-base text-majolika-charcoal/80 leading-relaxed">
+              Habáni (novokrstenci) priniesli na západné Slovensko v 16. storočí tajomstvo nepriehľadnej cínovej bielej glazúry priamo z Talianska. Ich kódex zakazoval zobrazovanie ľudí a zvierat, preto v habánskom dekóre dominujú architektonické prvky, stylizované rastliny, cechové erby a letopočty. Nikdy nepoužívali červenú farbu.
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+              <div class="bg-white p-4 rounded-xl border border-majolika-cream-dark">
+                <div class="font-bold text-xs uppercase text-majolika-clay mb-1">Farby kódexu</div>
+                <div class="text-sm font-semibold text-majolika-blue">Žltá, modrá, zelená a tmavofialová (mangán). Prísne bez červenej.</div>
+              </div>
+              <div class="bg-white p-4 rounded-xl border border-majolika-cream-dark">
+                <div class="font-bold text-xs uppercase text-majolika-clay mb-1">Historický odkaz</div>
+                <div class="text-sm font-semibold text-majolika-blue">Základ celého modranského hrnčiarstva a vzniku cechu v roku 1636.</div>
+              </div>
+            </div>
+            <div class="pt-2 flex flex-wrap gap-3">
+              <a href="#eshop" onclick="filterShop('habansky')" class="inline-flex items-center gap-2 bg-majolika-green hover:bg-emerald-800 text-white font-bold text-sm px-6 py-3 rounded-xl transition-colors">
+                <span>Zobraziť výrobky v habánskom štýle</span>
+                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. ZELENÝ DEKÓR CONTENT -->
+        <div id="content-zeleny" class="decor-panel hidden grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-5 flex justify-center">
+            <div class="relative group">
+              <div class="absolute inset-0 bg-green-500/10 rounded-full blur-2xl transform group-hover:scale-110 transition-transform"></div>
+              <img src="images/dekor_zeleny.png" alt="Zelený dekór modranskej majoliky" class="w-72 h-72 sm:w-80 sm:h-80 object-contain relative z-10 drop-shadow-xl transition-transform duration-500 group-hover:rotate-3">
+              <span class="absolute bottom-2 right-4 bg-white/90 backdrop-blur-sm text-emerald-800 text-xs font-bold px-3 py-1 rounded-full shadow-sm">
+                Lesy Malých Karpát
+              </span>
+            </div>
+          </div>
+          <div class="lg:col-span-7 space-y-5">
+            <div class="inline-block bg-teal-100 text-teal-900 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+              Prírodná harmónia
+            </div>
+            <h3 class="font-serif text-3xl sm:text-4xl font-bold text-majolika-blue">
+              Zelený dekór: Pokoj karpatských hájov a vinohradov
+            </h3>
+            <p class="text-sm sm:text-base text-majolika-charcoal/80 leading-relaxed">
+              Zelená ornamentika vzniká použitím oxidu medi. Tento dekór pôsobí jemne, harmonicky a pokojne. Tradične sa uplatňuje na čajových a kávových súpravách, misách na ovocie a dekoratívnych vázach, kde dominuje prírodný motív vetvičiek a lúčnych bylín.
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+              <div class="bg-white p-4 rounded-xl border border-majolika-cream-dark">
+                <div class="font-bold text-xs uppercase text-majolika-clay mb-1">Použité zloženie</div>
+                <div class="text-sm font-semibold text-majolika-blue">Oxid medi vytvárajúci hlbokú lesnú až jemne trávovú zelenú.</div>
+              </div>
+              <div class="bg-white p-4 rounded-xl border border-majolika-cream-dark">
+                <div class="font-bold text-xs uppercase text-majolika-clay mb-1">Obľúbené kúsky</div>
+                <div class="text-sm font-semibold text-majolika-blue">Šálky s podšálkou, hlboké polievkové misy a džbániky na mlieko.</div>
+              </div>
+            </div>
+            <div class="pt-2 flex flex-wrap gap-3">
+              <a href="#eshop" onclick="filterShop('zeleny')" class="inline-flex items-center gap-2 bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-sm px-6 py-3 rounded-xl transition-colors">
+                <span>Zobraziť výrobky v zelenom dekóre</span>
+                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= ZÁŽITKY: TVORIVÉ DIELNE & PREHLIADKY ================= -->
+  <section id="dielne" class="py-20 bg-majolika-cream relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left: Story & Visuals -->
+        <div class="lg:col-span-6 space-y-6">
+          <div class="inline-flex items-center gap-2 text-majolika-green font-bold text-xs uppercase tracking-widest">
+            <i data-lucide="compass" class="w-4 h-4"></i>
+            <span>Nezabudnuteľný víkend v Modre</span>
+          </div>
+
+          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-majolika-blue leading-tight">
+            Vstúpte priamo do dielne a vyskúšajte si točenie na kruhu
+          </h2>
+
+          <p class="text-base text-majolika-charcoal/80 leading-relaxed font-light">
+            Vôňa mokrej hliny, tichý beh hrnčiarskeho kruhu a kúzlo štetca. Cez víkendy otvárame naše historické dielne rodinám, párom aj jednotlivcom. Každú celú hodinu od 10:00 do 16:00 vás naši lektori prevedú výrobou a pod ich vedením si vytvoríte vlastné dielo.
+          </p>
+
+          <div class="space-y-4 pt-2">
+            <div class="flex items-start gap-4 p-4 rounded-2xl bg-white border border-majolika-cream-dark shadow-sm">
+              <div class="p-2.5 rounded-xl bg-majolika-blue/10 text-majolika-blue shrink-0">
+                <i data-lucide="eye" class="w-6 h-6"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-majolika-blue text-base">Komentovaná prehliadka výroby (30 min)</h4>
+                <p class="text-xs sm:text-sm text-gray-600 mt-0.5">Prevedieme vás cez prípravu hliny, točiareň, sušiareň, glazovňu, maliarsku dielňu až k obrovským keramickým peciam.</p>
+                <div class="mt-2 text-xs font-bold text-majolika-clay">€6 dospelý &bull; €4 dieťa / študent / senior</div>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4 p-4 rounded-2xl bg-white border-2 border-majolika-clay/30 shadow-md relative overflow-hidden">
+              <div class="absolute top-0 right-0 bg-majolika-clay text-white text-[10px] font-bold px-3 py-0.5 rounded-bl-lg uppercase tracking-wider">
+                Najobľúbenejšie
+              </div>
+              <div class="p-2.5 rounded-xl bg-majolika-clay/10 text-majolika-clay shrink-0">
+                <i data-lucide="hand" class="w-6 h-6"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-majolika-blue text-base">Prehliadka + Tvorivá dielňa (90 min)</h4>
+                <p class="text-xs sm:text-sm text-gray-600 mt-0.5">30 min prehliadky + celá hodina tvorenia! Točenie na kruhu, retušovanie a ručná maľba. Vaše vyrobené dielo vám po výpale v peci do 2 týždňov pošleme domov.</p>
+                <div class="mt-2 text-xs font-bold text-majolika-clay">€30 / účastník (vrátane hliny, glazúry, výpalu a lektora)</div>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4 p-4 rounded-2xl bg-white border border-majolika-cream-dark shadow-sm">
+              <div class="p-2.5 rounded-xl bg-majolika-gold/15 text-majolika-blue shrink-0">
+                <i data-lucide="award" class="w-6 h-6"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-majolika-blue text-base">Masterclass s majstrami (180 min)</h4>
+                <p class="text-xs sm:text-sm text-gray-600 mt-0.5">Individuálny a hĺbkový kurz točenia na kruhu a tradičného maľovania pre pokročilých záujemcov a milovníkov remesla.</p>
+                <div class="mt-2 text-xs font-bold text-majolika-clay">€65 / účastník &bull; Limitovaný počet miest</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-6 pt-2 text-xs text-gray-500 font-medium">
+            <span class="flex items-center gap-1.5"><i data-lucide="check-circle" class="w-4 h-4 text-majolika-green"></i> Zástery a pomôcky v cene</span>
+            <span class="flex items-center gap-1.5"><i data-lucide="check-circle" class="w-4 h-4 text-majolika-green"></i> Vhodné aj pre deti od 4 rokov</span>
+          </div>
+
+        </div>
+
+        <!-- Right: Interactive Dynamic Booking Engine -->
+        <div id="booking-section" class="lg:col-span-6">
+          <div class="bg-white rounded-3xl p-6 sm:p-8 lg:p-10 shadow-2xl border border-majolika-cream-dark relative">
+            
+            <div class="flex items-center justify-between pb-6 border-b border-gray-100">
+              <div>
+                <span class="text-xs font-bold uppercase tracking-wider text-majolika-clay">Rezervačný systém</span>
+                <h3 class="font-serif text-2xl font-bold text-majolika-blue">Rezervácia termínu v Modre</h3>
+              </div>
+              <div class="w-12 h-12 rounded-2xl bg-majolika-blue/5 flex items-center justify-center text-majolika-blue">
+                <i data-lucide="calendar-check" class="w-6 h-6"></i>
+              </div>
+            </div>
+
+            <form id="bookingForm" onsubmit="handleBookingSubmit(event)" class="space-y-5 pt-6">
+              
+              <!-- Program Selection -->
+              <div>
+                <label class="block text-xs font-bold uppercase tracking-wider text-majolika-blue mb-2">Vyberte program:</label>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                  <label class="cursor-pointer border-2 rounded-xl p-3 flex flex-col justify-between transition-all has-[:checked]:border-majolika-blue has-[:checked]:bg-majolika-blue/5">
+                    <input type="radio" name="program" value="dielna" checked onchange="calculateBookingPrice()" class="sr-only">
+                    <span class="font-bold text-sm text-majolika-blue">Tvorivá dielňa (90 min)</span>
+                    <span class="text-xs text-majolika-clay font-bold mt-1">€30 / osoba</span>
+                  </label>
+                  <label class="cursor-pointer border-2 rounded-xl p-3 flex flex-col justify-between transition-all has-[:checked]:border-majolika-blue has-[:checked]:bg-majolika-blue/5">
+                    <input type="radio" name="program" value="prehliadka" onchange="calculateBookingPrice()" class="sr-only">
+                    <span class="font-bold text-sm text-majolika-blue">Len prehliadka (30 min)</span>
+                    <span class="text-xs text-majolika-clay font-bold mt-1">€6 dospelý / €4 dieťa</span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Date & Time Slot -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-bold uppercase tracking-wider text-majolika-blue mb-1">Dátum návštevy:</label>
+                  <input type="date" id="bookingDate" required class="w-full bg-majolika-cream border border-gray-200 rounded-xl px-3.5 py-2.5 text-sm font-semibold text-majolika-charcoal focus:outline-none focus:border-majolika-blue">
+                </div>
+                <div>
+                  <label class="block text-xs font-bold uppercase tracking-wider text-majolika-blue mb-1">Časový slot (víkend):</label>
+                  <select id="bookingTime" class="w-full bg-majolika-cream border border-gray-200 rounded-xl px-3.5 py-2.5 text-sm font-semibold text-majolika-charcoal focus:outline-none focus:border-majolika-blue">
+                    <option value="10:00">10:00 — Ranný slot</option>
+                    <option value="11:00">11:00 — Dopoludňajší slot</option>
+                    <option value="13:00" selected>13:00 — Popoludňajší slot</option>
+                    <option value="14:00">14:00 — Popoludňajší slot</option>
+                    <option value="15:00">15:00 — Podvečerný slot</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Persons Counter -->
+              <div class="grid grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-bold uppercase tracking-wider text-majolika-blue mb-1">Dospelí:</label>
+                  <div class="flex items-center bg-majolika-cream border border-gray-200 rounded-xl p-1">
+                    <button type="button" onclick="adjustCount('adults', -1)" class="w-8 h-8 rounded-lg bg-white flex items-center justify-center font-bold text-majolika-blue hover:bg-gray-100">-</button>
+                    <span id="adultCount" class="flex-1 text-center font-bold text-sm">2</span>
+                    <button type="button" onclick="adjustCount('adults', 1)" class="w-8 h-8 rounded-lg bg-white flex items-center justify-center font-bold text-majolika-blue hover:bg-gray-100">+</button>
+                  </div>
+                </div>
+                <div>
+                  <label class="block text-xs font-bold uppercase tracking-wider text-majolika-blue mb-1">Deti (do 15 r.):</label>
+                  <div class="flex items-center bg-majolika-cream border border-gray-200 rounded-xl p-1">
+                    <button type="button" onclick="adjustCount('children', -1)" class="w-8 h-8 rounded-lg bg-white flex items-center justify-center font-bold text-majolika-blue hover:bg-gray-100">-</button>
+                    <span id="childCount" class="flex-1 text-center font-bold text-sm">0</span>
+                    <button type="button" onclick="adjustCount('children', 1)" class="w-8 h-8 rounded-lg bg-white flex items-center justify-center font-bold text-majolika-blue hover:bg-gray-100">+</button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Delivery Addon Checkbox -->
+              <div class="p-3.5 bg-majolika-cream/70 rounded-xl border border-gray-200 flex items-center justify-between text-xs">
+                <label class="flex items-center gap-2.5 cursor-pointer font-medium text-majolika-blue">
+                  <input type="checkbox" id="shippingAddon" onchange="calculateBookingPrice()" class="w-4 h-4 rounded text-majolika-clay focus:ring-majolika-clay">
+                  <span>Doručiť vypálené diela kuriérom domov (+ €5.90)</span>
+                </label>
+                <span class="text-gray-500 font-normal">alebo osobný odber v Modre</span>
+              </div>
+
+              <!-- Contact Inputs -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <input type="text" id="bookingName" required placeholder="Vaše Meno a Priezvisko" class="w-full bg-majolika-cream border border-gray-200 rounded-xl px-3.5 py-2.5 text-xs text-majolika-charcoal focus:outline-none focus:border-majolika-blue">
+                <input type="email" id="bookingEmail" required placeholder="Váš E-mail" class="w-full bg-majolika-cream border border-gray-200 rounded-xl px-3.5 py-2.5 text-xs text-majolika-charcoal focus:outline-none focus:border-majolika-blue">
+              </div>
+
+              <!-- Price Summary & Submit -->
+              <div class="pt-2 flex items-center justify-between">
+                <div>
+                  <div class="text-[11px] font-bold uppercase tracking-wider text-gray-500">Celková cena:</div>
+                  <div id="bookingTotalPrice" class="font-serif text-3xl font-bold text-majolika-clay">€60.00</div>
+                </div>
+                <button type="submit" class="bg-majolika-blue hover:bg-majolika-blue-light text-white font-bold text-sm px-6 py-3.5 rounded-xl shadow-majolika hover:shadow-lg transition-all flex items-center gap-2">
+                  <span>Potvrdiť rezerváciu</span>
+                  <i data-lucide="check" class="w-4 h-4"></i>
+                </button>
+              </div>
+
+              <div class="text-[11px] text-gray-500 text-center">
+                Platba prebieha priamo na mieste v hotovosti alebo platobnou kartou. Bezplatné zrušenie do 24 hodín vopred.
+              </div>
+
+            </form>
+
+            <!-- Success Confirmation Toast -->
+            <div id="bookingSuccessToast" class="hidden absolute inset-0 bg-white/95 backdrop-blur-md rounded-3xl p-8 flex flex-col items-center justify-center text-center space-y-4 z-20">
+              <div class="w-16 h-16 bg-majolika-green/10 text-majolika-green rounded-full flex items-center justify-center">
+                <i data-lucide="check-circle" class="w-10 h-10"></i>
+              </div>
+              <h4 class="font-serif text-2xl font-bold text-majolika-blue">Rezervácia bola úspešne odoslaná!</h4>
+              <p class="text-xs sm:text-sm text-gray-600 max-w-sm" id="bookingSuccessDetails">
+                Ďakujeme. Na váš email sme odoslali potvrdenie termínu a inštrukcie k príchodu do dielne v Modre. Tešíme sa na vás!
+              </p>
+              <button onclick="dismissBookingToast()" class="bg-majolika-blue text-white text-xs font-bold px-6 py-2.5 rounded-xl">
+                Zavrieť
+              </button>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= E-SHOP & KOLEKCIE ================= -->
+  <section id="eshop" class="py-20 bg-white border-t border-majolika-cream-dark">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+        <div class="space-y-2">
+          <div class="inline-flex items-center gap-2 text-majolika-clay font-bold text-xs uppercase tracking-widest">
+            <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+            <span>Ručne maľovaný porcelán & fajansa</span>
+          </div>
+          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-majolika-blue">
+            Výber z našich dielní a kolekcií
+          </h2>
+          <p class="text-sm sm:text-base text-majolika-charcoal/70 max-w-xl">
+            Od tradičných modranských džbánov až po moderné autorské kolekcie. Každý kus je opatrený značkou majstra a logom Slovenskej ľudovej majoliky.
+          </p>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="flex flex-wrap items-center gap-2 text-xs font-bold" id="shopFilters">
+          <button onclick="filterShop('all')" class="shop-filter-btn active bg-majolika-blue text-white px-4 py-2 rounded-full">
+            Všetky
+          </button>
+          <button onclick="filterShop('taniere')" class="shop-filter-btn bg-majolika-cream text-majolika-blue hover:bg-majolika-cream-dark px-4 py-2 rounded-full">
+            Taniere & Misy
+          </button>
+          <button onclick="filterShop('dzbany')" class="shop-filter-btn bg-majolika-cream text-majolika-blue hover:bg-majolika-cream-dark px-4 py-2 rounded-full">
+            Džbány & Vázy
+          </button>
+          <button onclick="filterShop('hrnceky')" class="shop-filter-btn bg-majolika-cream text-majolika-blue hover:bg-majolika-cream-dark px-4 py-2 rounded-full">
+            Šálky & Hrnčeky
+          </button>
+          <button onclick="filterShop('dizajn')" class="shop-filter-btn bg-majolika-cream text-majolika-clay hover:bg-majolika-cream-dark px-4 py-2 rounded-full flex items-center gap-1">
+            <i data-lucide="sparkles" class="w-3.5 h-3.5"></i> Autorský dizajn
+          </button>
+        </div>
+      </div>
+
+      <!-- Products Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" id="productsGrid">
+        
+        <!-- Product 1 -->
+        <div class="product-item group bg-majolika-cream/40 rounded-2xl p-4 border border-majolika-cream-dark hover:border-majolika-blue/30 hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-category="taniere" data-decor="zeleny">
+          <div>
+            <div class="relative overflow-hidden rounded-xl bg-white aspect-square mb-4">
+              <img src="images/misy.jpg" alt="Miska na nohe so zeleným dekórom" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <span class="absolute top-2.5 left-2.5 bg-emerald-700 text-white text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded">
+                Zelený dekór
+              </span>
+              <button onclick="openProductModal('misa-zeleny')" class="absolute top-2.5 right-2.5 w-8 h-8 rounded-full bg-white/90 backdrop-blur-sm text-majolika-blue flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity shadow-sm hover:bg-white" title="Rýchly náhľad">
+                <i data-lucide="eye" class="w-4 h-4"></i>
+              </button>
+            </div>
+            <div class="text-[11px] font-bold text-gray-500 uppercase tracking-wider">Úžitková keramika</div>
+            <h3 class="font-bold text-majolika-blue text-base mt-0.5 line-clamp-1 group-hover:text-majolika-clay transition-colors">
+              Misa na nohe s vlnkovým okrajom
+            </h3>
+            <p class="text-xs text-gray-600 mt-1 line-clamp-2">Ručne vytočená misa s plastickým vlnkovaným okrajom a motívom malokarpatských bylín.</p>
+          </div>
+          <div class="pt-4 mt-2 border-t border-gray-100 flex items-center justify-between">
+            <div>
+              <span class="text-xs text-gray-500 block text-[10px] uppercase font-bold">Cena s DPH</span>
+              <span class="font-serif text-xl font-bold text-majolika-blue">€100.00</span>
+            </div>
+            <button onclick="addToCart('Misa na nohe s vlnkovým okrajom', 100.00, 'images/misy.jpg')" class="bg-majolika-blue hover:bg-majolika-clay text-white text-xs font-bold px-3.5 py-2.5 rounded-xl transition-colors flex items-center gap-1.5 shadow-sm">
+              <i data-lucide="shopping-cart" class="w-3.5 h-3.5"></i>
+              <span>Do košíka</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-item group bg-majolika-cream/40 rounded-2xl p-4 border border-majolika-cream-dark hover:border-majolika-blue/30 hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-category="hrnceky" data-decor="modry">
+          <div>
+            <div class="relative overflow-hidden rounded-xl bg-white aspect-square mb-4">
+              <img src="images/hrnceky.jpg" alt="Espresso šálka s modrým dekórom" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <span class="absolute top-2.5 left-2.5 bg-blue-700 text-white text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded">
+                Modrý dekór
+              </span>
+              <button onclick="openProductModal('salka-modry')" class="absolute top-2.5 right-2.5 w-8 h-8 rounded-full bg-white/90 backdrop-blur-sm text-majolika-blue flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity shadow-sm hover:bg-white" title="Rýchly náhľad">
+                <i data-lucide="eye" class="w-4 h-4"></i>
+              </button>
+            </div>
+            <div class="text-[11px] font-bold text-gray-500 uppercase tracking-wider">Káva & Čaj</div>
+            <h3 class="font-bold text-majolika-blue text-base mt-0.5 line-clamp-1 group-hover:text-majolika-clay transition-colors">
+              Šálka na espresso s podšálkou
+            </h3>
+            <p class="text-xs text-gray-600 mt-1 line-clamp-2">Klasický modrý motív na jemnej bielej glazúre. Ergonomické uško, objem 80 ml.</p>
+          </div>
+          <div class="pt-4 mt-2 border-t border-gray-100 flex items-center justify-between">
+            <div>
+              <span class="text-xs text-gray-500 block text-[10px] uppercase font-bold">Cena s DPH</span>
+              <span class="font-serif text-xl font-bold text-majolika-blue">€35.00</span>
+            </div>
+            <button onclick="addToCart('Šálka na espresso s podšálkou', 35.00, 'images/hrnceky.jpg')" class="bg-majolika-blue hover:bg-majolika-clay text-white text-xs font-bold px-3.5 py-2.5 rounded-xl transition-colors flex items-center gap-1.5 shadow-sm">
+              <i data-lucide="shopping-cart" class="w-3.5 h-3.5"></i>
+              <span>Do košíka</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-item group bg-majolika-cream/40 rounded-2xl p-4 border border-majolika-cream-dark hover:border-majolika-blue/30 hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-category="dzbany" data-decor="pestry">
+          <div>
+            <div class="relative overflow-hidden rounded-xl bg-white aspect-square mb-4">
+              <img src="images/cajniky.jpg" alt="Tradičný čajník pestrý vzor" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <span class="absolute top-2.5 left-2.5 bg-amber-600 text-white text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded">
+                Pestrý dekór
+              </span>
+              <button onclick="openProductModal('cajnik-pestry')" class="absolute top-2.5 right-2.5 w-8 h-8 rounded-full bg-white/90 backdrop-blur-sm text-majolika-blue flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity shadow-sm hover:bg-white" title="Rýchly náhľad">
+                <i data-lucide="eye" class="w-4 h-4"></i>
+              </button>
+            </div>
+            <div class="text-[11px] font-bold text-gray-500 uppercase tracking-wider">Tradičné servírovanie</div>
+            <h3 class="font-bold text-majolika-blue text-base mt-0.5 line-clamp-1 group-hover:text-majolika-clay transition-colors">
+              Modranský čajník s pokrievkou (1.2 l)
+            </h3>
+            <p class="text-xs text-gray-600 mt-1 line-clamp-2">Výrazný pestro maľovaný kvetinový vzor, dokonalé vyváženie nalievacieho hrdla.</p>
+          </div>
+          <div class="pt-4 mt-2 border-t border-gray-100 flex items-center justify-between">
+            <div>
+              <span class="text-xs text-gray-500 block text-[10px] uppercase font-bold">Cena s DPH</span>
+              <span class="font-serif text-xl font-bold text-majolika-blue">€85.00</span>
+            </div>
+            <button onclick="addToCart('Modranský čajník s pokrievkou (1.2 l)', 85.00, 'images/cajniky.jpg')" class="bg-majolika-blue hover:bg-majolika-clay text-white text-xs font-bold px-3.5 py-2.5 rounded-xl transition-colors flex items-center gap-1.5 shadow-sm">
+              <i data-lucide="shopping-cart" class="w-3.5 h-3.5"></i>
+              <span>Do košíka</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product-item group bg-majolika-cream/40 rounded-2xl p-4 border border-majolika-cream-dark hover:border-majolika-blue/30 hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-category="dizajn">
+          <div>
+            <div class="relative overflow-hidden rounded-xl bg-white aspect-square mb-4">
+              <img src="images/panabeka.jpg" alt="Kolekcia Pánabeka od Terezy Orviskej" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <span class="absolute top-2.5 left-2.5 bg-majolika-clay text-white text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded">
+                Autorská séria
+              </span>
+              <button onclick="openProductModal('panabeka')" class="absolute top-2.5 right-2.5 w-8 h-8 rounded-full bg-white/90 backdrop-blur-sm text-majolika-blue flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity shadow-sm hover:bg-white" title="Rýchly náhľad">
+                <i data-lucide="eye" class="w-4 h-4"></i>
+              </button>
+            </div>
+            <div class="text-[11px] font-bold text-gray-500 uppercase tracking-wider">Dizajn: Tereza Orviská</div>
+            <h3 class="font-bold text-majolika-blue text-base mt-0.5 line-clamp-1 group-hover:text-majolika-clay transition-colors">
+              Miska PÁNABEKA (Minimalist)
+            </h3>
+            <p class="text-xs text-gray-600 mt-1 line-clamp-2">Súčasný grafický pohľad na tradičný motív. Matná a lesklá textúra, priemer 15 cm.</p>
+          </div>
+          <div class="pt-4 mt-2 border-t border-gray-100 flex items-center justify-between">
+            <div>
+              <span class="text-xs text-gray-500 block text-[10px] uppercase font-bold">Cena s DPH</span>
+              <span class="font-serif text-xl font-bold text-majolika-blue">€40.00</span>
+            </div>
+            <button onclick="addToCart('Miska PÁNABEKA (Minimalist)', 40.00, 'images/panabeka.jpg')" class="bg-majolika-blue hover:bg-majolika-clay text-white text-xs font-bold px-3.5 py-2.5 rounded-xl transition-colors flex items-center gap-1.5 shadow-sm">
+              <i data-lucide="shopping-cart" class="w-3.5 h-3.5"></i>
+              <span>Do košíka</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="product-item group bg-majolika-cream/40 rounded-2xl p-4 border border-majolika-cream-dark hover:border-majolika-blue/30 hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-category="taniere" data-decor="modry">
+          <div>
+            <div class="relative overflow-hidden rounded-xl bg-white aspect-square mb-4">
+              <img src="images/taniere.jpg" alt="Veľký servírovací tanier Modrý dekór" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <span class="absolute top-2.5 left-2.5 bg-blue-700 text-white text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded">
+                Modrý dekór
+              </span>
+              <button onclick="openProductModal('tanier-modry')" class="absolute top-2.5 right-2.5 w-8 h-8 rounded-full bg-white/90 backdrop-blur-sm text-majolika-blue flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity shadow-sm hover:bg-white" title="Rýchly náhľad">
+                <i data-lucide="eye" class="w-4 h-4"></i>
+              </button>
+            </div>
+            <div class="text-[11px] font-bold text-gray-500 uppercase tracking-wider">Výstavné & Servírovacie</div>
+            <h3 class="font-bold text-majolika-blue text-base mt-0.5 line-clamp-1 group-hover:text-majolika-clay transition-colors">
+              Veľký tanier s vyrezávaným okrajom (Ø 32 cm)
+            </h3>
+            <p class="text-xs text-gray-600 mt-1 line-clamp-2">Majstrovské dielo s perforovaným čipkovým okrajom a centrálnym motívom modranského viniča.</p>
+          </div>
+          <div class="pt-4 mt-2 border-t border-gray-100 flex items-center justify-between">
+            <div>
+              <span class="text-xs text-gray-500 block text-[10px] uppercase font-bold">Cena s DPH</span>
+              <span class="font-serif text-xl font-bold text-majolika-blue">€120.00</span>
+            </div>
+            <button onclick="addToCart('Veľký tanier s vyrezávaným okrajom (Ø 32 cm)', 120.00, 'images/taniere.jpg')" class="bg-majolika-blue hover:bg-majolika-clay text-white text-xs font-bold px-3.5 py-2.5 rounded-xl transition-colors flex items-center gap-1.5 shadow-sm">
+              <i data-lucide="shopping-cart" class="w-3.5 h-3.5"></i>
+              <span>Do košíka</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Product 6 -->
+        <div class="product-item group bg-majolika-cream/40 rounded-2xl p-4 border border-majolika-cream-dark hover:border-majolika-blue/30 hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-category="dzbany">
+          <div>
+            <div class="relative overflow-hidden rounded-xl bg-white aspect-square mb-4">
+              <img src="images/vazy_vystavne.jpg" alt="Výstavná majoliková váza" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <span class="absolute top-2.5 left-2.5 bg-majolika-gold text-majolika-blue text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded">
+                Reprezentatívne
+              </span>
+              <button onclick="openProductModal('vaza-vystavna')" class="absolute top-2.5 right-2.5 w-8 h-8 rounded-full bg-white/90 backdrop-blur-sm text-majolika-blue flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity shadow-sm hover:bg-white" title="Rýchly náhľad">
+                <i data-lucide="eye" class="w-4 h-4"></i>
+              </button>
+            </div>
+            <div class="text-[11px] font-bold text-gray-500 uppercase tracking-wider">Unikátne solitéry</div>
+            <h3 class="font-bold text-majolika-blue text-base mt-0.5 line-clamp-1 group-hover:text-majolika-clay transition-colors">
+              Zberateľská váza v zlatej hodinke (38 cm)
+            </h3>
+            <p class="text-xs text-gray-600 mt-1 line-clamp-2">Výpravný ručne maľovaný kus s bohatou figurálnou a vinohradníckou kompozíciou.</p>
+          </div>
+          <div class="pt-4 mt-2 border-t border-gray-100 flex items-center justify-between">
+            <div>
+              <span class="text-xs text-gray-500 block text-[10px] uppercase font-bold">Cena s DPH</span>
+              <span class="font-serif text-xl font-bold text-majolika-blue">€240.00</span>
+            </div>
+            <button onclick="addToCart('Zberateľská váza v zlatej hodinke (38 cm)', 240.00, 'images/vazy_vystavne.jpg')" class="bg-majolika-blue hover:bg-majolika-clay text-white text-xs font-bold px-3.5 py-2.5 rounded-xl transition-colors flex items-center gap-1.5 shadow-sm">
+              <i data-lucide="shopping-cart" class="w-3.5 h-3.5"></i>
+              <span>Do košíka</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Product 7 -->
+        <div class="product-item group bg-majolika-cream/40 rounded-2xl p-4 border border-majolika-cream-dark hover:border-majolika-blue/30 hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-category="dizajn">
+          <div>
+            <div class="relative overflow-hidden rounded-xl bg-white aspect-square mb-4">
+              <img src="images/kruhy.jpg" alt="Kolekcia Kruhy od Emmy Kočnerovej" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <span class="absolute top-2.5 left-2.5 bg-majolika-clay text-white text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded">
+                Dizajnová séria
+              </span>
+              <button onclick="openProductModal('kruhy')" class="absolute top-2.5 right-2.5 w-8 h-8 rounded-full bg-white/90 backdrop-blur-sm text-majolika-blue flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity shadow-sm hover:bg-white" title="Rýchly náhľad">
+                <i data-lucide="eye" class="w-4 h-4"></i>
+              </button>
+            </div>
+            <div class="text-[11px] font-bold text-gray-500 uppercase tracking-wider">Dizajn: Emma Kočnerová</div>
+            <h3 class="font-bold text-majolika-blue text-base mt-0.5 line-clamp-1 group-hover:text-majolika-clay transition-colors">
+              Hrnček KRUHY s kobaltovým akcentom
+            </h3>
+            <p class="text-xs text-gray-600 mt-1 line-clamp-2">Geometrický rytmus kruhov inšpirovaný otáčaním hrnčiarskeho kruhu. Objem 300 ml.</p>
+          </div>
+          <div class="pt-4 mt-2 border-t border-gray-100 flex items-center justify-between">
+            <div>
+              <span class="text-xs text-gray-500 block text-[10px] uppercase font-bold">Cena s DPH</span>
+              <span class="font-serif text-xl font-bold text-majolika-blue">€28.00</span>
+            </div>
+            <button onclick="addToCart('Hrnček KRUHY s kobaltovým akcentom', 28.00, 'images/kruhy.jpg')" class="bg-majolika-blue hover:bg-majolika-clay text-white text-xs font-bold px-3.5 py-2.5 rounded-xl transition-colors flex items-center gap-1.5 shadow-sm">
+              <i data-lucide="shopping-cart" class="w-3.5 h-3.5"></i>
+              <span>Do košíka</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Product 8 -->
+        <div class="product-item group bg-majolika-cream/40 rounded-2xl p-4 border border-majolika-cream-dark hover:border-majolika-blue/30 hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-category="dizajn">
+          <div>
+            <div class="relative overflow-hidden rounded-xl bg-white aspect-square mb-4">
+              <img src="images/fragmenty.jpg" alt="Kolekcia Fragmenty" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <span class="absolute top-2.5 left-2.5 bg-majolika-charcoal text-white text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded">
+                Limitovaná edícia
+              </span>
+              <button onclick="openProductModal('fragmenty')" class="absolute top-2.5 right-2.5 w-8 h-8 rounded-full bg-white/90 backdrop-blur-sm text-majolika-blue flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity shadow-sm hover:bg-white" title="Rýchly náhľad">
+                <i data-lucide="eye" class="w-4 h-4"></i>
+              </button>
+            </div>
+            <div class="text-[11px] font-bold text-gray-500 uppercase tracking-wider">Mladá majolika</div>
+            <h3 class="font-bold text-majolika-blue text-base mt-0.5 line-clamp-1 group-hover:text-majolika-clay transition-colors">
+              Sada tanierov FRAGMENTY (3 ks)
+            </h3>
+            <p class="text-xs text-gray-600 mt-1 line-clamp-2">Dekompozícia tradičného habánskeho motívu na moderných minimalistických tvaroch.</p>
+          </div>
+          <div class="pt-4 mt-2 border-t border-gray-100 flex items-center justify-between">
+            <div>
+              <span class="text-xs text-gray-500 block text-[10px] uppercase font-bold">Cena s DPH</span>
+              <span class="font-serif text-xl font-bold text-majolika-blue">€95.00</span>
+            </div>
+            <button onclick="addToCart('Sada tanierov FRAGMENTY (3 ks)', 95.00, 'images/fragmenty.jpg')" class="bg-majolika-blue hover:bg-majolika-clay text-white text-xs font-bold px-3.5 py-2.5 rounded-xl transition-colors flex items-center gap-1.5 shadow-sm">
+              <i data-lucide="shopping-cart" class="w-3.5 h-3.5"></i>
+              <span>Do košíka</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Trust Badges Under E-shop -->
+      <div class="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 pt-10 border-t border-gray-100 text-center sm:text-left">
+        <div class="flex items-center gap-4 justify-center sm:justify-start">
+          <div class="w-12 h-12 rounded-2xl bg-majolika-blue/5 text-majolika-blue flex items-center justify-center shrink-0">
+            <i data-lucide="shield-check" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <div class="font-bold text-sm text-majolika-blue">100% Bezpečné balenie</div>
+            <div class="text-xs text-gray-500">Keramiku balíme do viacvrstvových ochranných materiálov</div>
+          </div>
+        </div>
+        <div class="flex items-center gap-4 justify-center sm:justify-start">
+          <div class="w-12 h-12 rounded-2xl bg-majolika-blue/5 text-majolika-blue flex items-center justify-center shrink-0">
+            <i data-lucide="truck" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <div class="font-bold text-sm text-majolika-blue">Doručenie Packeta & Kuriér</div>
+            <div class="text-xs text-gray-500">Do 3-5 pracovných dní, alebo osobný odber v Modre</div>
+          </div>
+        </div>
+        <div class="flex items-center gap-4 justify-center sm:justify-start">
+          <div class="w-12 h-12 rounded-2xl bg-majolika-blue/5 text-majolika-blue flex items-center justify-center shrink-0">
+            <i data-lucide="heart-handshake" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <div class="font-bold text-sm text-majolika-blue">Záruka pravosti a originality</div>
+            <div class="text-xs text-gray-500">Certifikát a signatúra majstra na každom výrobku</div>
+          </div>
+        </div>
+        <div class="flex items-center gap-4 justify-center sm:justify-start">
+          <div class="w-12 h-12 rounded-2xl bg-majolika-blue/5 text-majolika-blue flex items-center justify-center shrink-0">
+            <i data-lucide="gift" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <div class="font-bold text-sm text-majolika-blue">Darčekové balenia & poukazy</div>
+            <div class="text-xs text-gray-500">Možnosť personalizovaného venovania a poukazov</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= ZÁKAZKOVÁ VÝROBA NA MIERU ================= -->
+  <section id="zakazkova-vyroba" class="py-20 bg-gradient-to-br from-majolika-blue to-[#081a38] text-white relative overflow-hidden">
+    <!-- Atmospheric background accents -->
+    <div class="absolute -right-20 -bottom-20 w-80 h-80 rounded-full bg-majolika-clay/20 blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center gap-2 bg-majolika-gold/15 border border-majolika-gold/30 text-majolika-gold px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider">
+            <i data-lucide="sparkles" class="w-4 h-4"></i>
+            <span>Zákazky s venovaním & Reprezentatívne dary</span>
+          </div>
+
+          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">
+            Keramika s vaším vlastným príbehom na mieru
+          </h2>
+
+          <p class="text-base sm:text-lg text-white/80 font-light leading-relaxed max-w-2xl">
+            Vyrábame personalizované keramické diela pre významné životné okamihy aj prestížne inštitúcie. Od svadobného taniera s menami snúbencov až po štátne dary pre zahraničné delegácie.
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
+            <div class="bg-white/10 backdrop-blur-md p-4 rounded-2xl border border-white/10">
+              <i data-lucide="heart" class="w-6 h-6 text-majolika-gold mb-2"></i>
+              <div class="font-bold text-sm">Svadobné dary</div>
+              <div class="text-xs text-white/70 mt-1">Taniere a misy s menami, dátumom a želaním novomanželom.</div>
+            </div>
+            <div class="bg-white/10 backdrop-blur-md p-4 rounded-2xl border border-white/10">
+              <i data-lucide="briefcase" class="w-6 h-6 text-majolika-gold mb-2"></i>
+              <div class="font-bold text-sm">Firemné & Štátne dary</div>
+              <div class="text-xs text-white/70 mt-1">Cechové džbány, plakety a vázy s erbom mesta či logom spoločnosti.</div>
+            </div>
+            <div class="bg-white/10 backdrop-blur-md p-4 rounded-2xl border border-white/10">
+              <i data-lucide="cake" class="w-6 h-6 text-majolika-gold mb-2"></i>
+              <div class="font-bold text-sm">Jubileá & Krstiny</div>
+              <div class="text-xs text-white/70 mt-1">Krhličky, čutory a pamätné zvončeky s venovaním k narodeninám.</div>
+            </div>
+          </div>
+
+          <div class="pt-2 flex flex-wrap items-center gap-4">
+            <a href="#kontakt" class="bg-majolika-gold hover:bg-majolika-gold-light text-majolika-blue font-bold text-sm px-7 py-3.5 rounded-xl shadow-lg transition-colors inline-flex items-center gap-2">
+              <span>Nezáväzne popýtať zákazku</span>
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+            <span class="text-xs text-white/60">Doba výroby na mieru: 3 – 5 týždňov podľa náročnosti výpalu</span>
+          </div>
+
+        </div>
+
+        <!-- Right Visual Showcase -->
+        <div class="lg:col-span-5">
+          <div class="relative bg-white/5 border border-white/10 p-6 sm:p-8 rounded-3xl backdrop-blur-md">
+            <div class="text-xs font-bold uppercase tracking-wider text-majolika-gold mb-2">Ukážka realizácie</div>
+            <h3 class="font-serif text-2xl font-bold mb-3">Svadobný tanier so zlatým lemovaním</h3>
+            <p class="text-xs text-white/80 leading-relaxed mb-4">
+              Ručne vytočený veľký tanier s nápisom na želanie, maľovaný pestrým motívom holubičiek (symbol manželskej vernosti) a zušľachtený pravým 24-karátovým zlatom pri treťom výpale.
+            </p>
+            <div class="rounded-2xl overflow-hidden border border-white/20 aspect-video mb-4">
+              <img src="images/hero_kiln.jpg" alt="Pecný priestor a zákazková keramika" class="w-full h-full object-cover">
+            </div>
+            <div class="flex items-center justify-between text-xs text-white/70">
+              <span>Autor maľby: <strong>Mgr. Katarína Borišová</strong></span>
+              <span>Výpal: <strong>1020 °C</strong></span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 7 KROKOV MAJSTROVSTVA ================= -->
+  <section class="py-20 bg-majolika-cream relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto space-y-3 mb-16">
+        <div class="inline-flex items-center gap-2 text-majolika-clay font-bold text-xs uppercase tracking-widest">
+          <i data-lucide="flame" class="w-4 h-4"></i>
+          <span>Od hliny po finálne dielo</span>
+        </div>
+        <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-majolika-blue">
+          Ako vzniká pravá modranská majolika
+        </h2>
+        <p class="text-sm sm:text-base text-majolika-charcoal/70">
+          Celý proces prebieha výhradne ručne pod rukami zručných majstrov točiarov a skúsených maliarok.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Step 1 -->
+        <div class="bg-white p-6 rounded-2xl border border-majolika-cream-dark shadow-sm relative group hover:shadow-md transition-shadow">
+          <div class="w-10 h-10 rounded-xl bg-majolika-blue text-white font-bold font-serif text-lg flex items-center justify-center mb-4">1</div>
+          <h3 class="font-bold text-majolika-blue text-base mb-1">Príprava a miesenie hliny</h3>
+          <p class="text-xs text-gray-600 leading-relaxed">Kvalitná hlina sa čistí, homogenizuje a odvzdušňuje v špeciálnom závitovkovom lise, aby v peci nepraskala.</p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="bg-white p-6 rounded-2xl border border-majolika-cream-dark shadow-sm relative group hover:shadow-md transition-shadow">
+          <div class="w-10 h-10 rounded-xl bg-majolika-clay text-white font-bold font-serif text-lg flex items-center justify-center mb-4">2</div>
+          <h3 class="font-bold text-majolika-blue text-base mb-1">Točenie na kruhu</h3>
+          <p class="text-xs text-gray-600 leading-relaxed">Džbankár vytáča na rotujúcom kruhu požadovaný tvar – džbán, misu, tanier či šálku s presnou hrúbkou steny.</p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="bg-white p-6 rounded-2xl border border-majolika-cream-dark shadow-sm relative group hover:shadow-md transition-shadow">
+          <div class="w-10 h-10 rounded-xl bg-majolika-blue text-white font-bold font-serif text-lg flex items-center justify-center mb-4">3</div>
+          <h3 class="font-bold text-majolika-blue text-base mb-1">Pomalé sušenie a retuš</h3>
+          <p class="text-xs text-gray-600 leading-relaxed">Vytvorené nádoby schnú niekoľko dní na policiach. Po zvädnutí sa retušujú a pridávajú ušká, hubičky a ozdoby.</p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="bg-white p-6 rounded-2xl border border-majolika-cream-dark shadow-sm relative group hover:shadow-md transition-shadow">
+          <div class="w-10 h-10 rounded-xl bg-majolika-gold text-majolika-blue font-bold font-serif text-lg flex items-center justify-center mb-4">4</div>
+          <h3 class="font-bold text-majolika-blue text-base mb-1">1. Výpal: Prežah (960 °C)</h3>
+          <p class="text-xs text-gray-600 leading-relaxed">Hlinitý črep prechádza prvým ohňom. Získava pevnú pórovitú štruktúru pripravenú absorbovať glazúru.</p>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="bg-white p-6 rounded-2xl border border-majolika-cream-dark shadow-sm relative group hover:shadow-md transition-shadow">
+          <div class="w-10 h-10 rounded-xl bg-majolika-green text-white font-bold font-serif text-lg flex items-center justify-center mb-4">5</div>
+          <h3 class="font-bold text-majolika-blue text-base mb-1">Glazovanie v bielej kúpeli</h3>
+          <p class="text-xs text-gray-600 leading-relaxed">Prežahnutý kus sa ponorí do roztoku cínovej bielej glazúry, ktorá po uschnutí vytvorí jemný kriedový povrch.</p>
+        </div>
+
+        <!-- Step 6 -->
+        <div class="bg-white p-6 rounded-2xl border border-majolika-cream-dark shadow-sm relative group hover:shadow-md transition-shadow">
+          <div class="w-10 h-10 rounded-xl bg-majolika-clay text-white font-bold font-serif text-lg flex items-center justify-center mb-4">6</div>
+          <h3 class="font-bold text-majolika-blue text-base mb-1">Ručná maľba voľnou rukou</h3>
+          <p class="text-xs text-gray-600 leading-relaxed">Maliarka nanáša štetcom oxidy kovov na surovú glazúru. Chyba sa nedá opraviť, každý ťah vyžaduje stopercentné majstrovstvo.</p>
+        </div>
+
+        <!-- Step 7 -->
+        <div class="bg-white p-6 rounded-2xl border border-majolika-cream-dark shadow-sm relative group hover:shadow-md transition-shadow">
+          <div class="w-10 h-10 rounded-xl bg-majolika-blue text-white font-bold font-serif text-lg flex items-center justify-center mb-4">7</div>
+          <h3 class="font-bold text-majolika-blue text-base mb-1">2. Ostrý výpal (1020 °C)</h3>
+          <p class="text-xs text-gray-600 leading-relaxed">Vysoká teplota roztaví glazúru a keramické farby do sklovitej, žiarivej a trvácej vrstvy s neopakovateľným leskom.</p>
+        </div>
+
+        <!-- Step 8 -->
+        <div class="bg-white p-6 rounded-2xl border-2 border-majolika-gold/50 shadow-sm relative group hover:shadow-md transition-shadow">
+          <div class="w-10 h-10 rounded-xl bg-majolika-gold text-white font-bold font-serif text-lg flex items-center justify-center mb-4">✓</div>
+          <h3 class="font-bold text-majolika-blue text-base mb-1">Značka kvality a majstra</h3>
+          <p class="text-xs text-gray-600 leading-relaxed">Dôkladná kontrola každého kusa, signatúra a certifikát garantujúci pôvod v Slovenskej ľudovej majolike Modra.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= NAŠI MAJSTRI A LEKTORI ================= -->
+  <section id="majstri" class="py-20 bg-white border-y border-majolika-cream-dark">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto space-y-3 mb-16">
+        <div class="inline-flex items-center gap-2 text-majolika-clay font-bold text-xs uppercase tracking-widest">
+          <i data-lucide="users" class="w-4 h-4"></i>
+          <span>Tváre živého remesla</span>
+        </div>
+        <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-majolika-blue">
+          Spoznajte našich majstrov a keramikárov
+        </h2>
+        <p class="text-sm sm:text-base text-majolika-charcoal/70">
+          Za každým výrobkom stoja konkrétne ľudské ruky, celoživotná prax a hlboká úcta k slovenskému kultúrnemu dedičstvu.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Artisan 1: Romana Uherčíková -->
+        <div class="bg-majolika-cream/50 rounded-3xl p-6 border border-majolika-cream-dark flex flex-col items-center text-center group hover:shadow-xl transition-all duration-300">
+          <div class="w-40 h-40 rounded-full overflow-hidden mb-5 border-4 border-white shadow-md group-hover:scale-105 transition-transform">
+            <img src="images/romana_uhercikova.jpg" alt="Romana Uherčíková" class="w-full h-full object-cover">
+          </div>
+          <span class="text-xs font-bold text-majolika-green uppercase tracking-wider mb-1">Lektorka & Sprievodkyňa</span>
+          <h3 class="font-serif text-2xl font-bold text-majolika-blue">Romana Uherčíková</h3>
+          <p class="text-xs text-majolika-clay font-semibold mt-0.5">Hlavná lektorka tvorivých dielní</p>
+          <p class="text-xs text-gray-600 mt-3 leading-relaxed">
+            S láskou vedie víkendové kurzy točenia a komentované prehliadky pre deti aj dospelých. Jej rukami prešli stovky nadšených účastníkov dielní.
+          </p>
+          <div class="mt-4 pt-3 border-t border-gray-200/60 w-full text-xs text-gray-500 font-medium">
+            Kontakt: romana.uhercikova@majolika.sk
+          </div>
+        </div>
+
+        <!-- Artisan 2: Mgr. Katarína Borišová -->
+        <div class="bg-majolika-cream/50 rounded-3xl p-6 border border-majolika-cream-dark flex flex-col items-center text-center group hover:shadow-xl transition-all duration-300">
+          <div class="w-40 h-40 rounded-full overflow-hidden mb-5 border-4 border-white shadow-md group-hover:scale-105 transition-transform">
+            <img src="images/katarina_borisova.jpg" alt="Mgr. Katarína Borišová" class="w-full h-full object-cover">
+          </div>
+          <span class="text-xs font-bold text-majolika-clay uppercase tracking-wider mb-1">Kreatíva & Maľba</span>
+          <h3 class="font-serif text-2xl font-bold text-majolika-blue">Mgr. Katarína Borišová</h3>
+          <p class="text-xs text-majolika-clay font-semibold mt-0.5">Kreatívna tvorba, autorské vzory & maľovanie</p>
+          <p class="text-xs text-gray-600 mt-3 leading-relaxed">
+            Spája tradičnú ornamentiku so súčasnými dizajnovými formami. Stojí za novými vzormi a reprezentačnými kolekciami s pravým zlatom.
+          </p>
+          <div class="mt-4 pt-3 border-t border-gray-200/60 w-full text-xs text-gray-500 font-medium">
+            Kontakt: katarina.borisova@majolika.sk
+          </div>
+        </div>
+
+        <!-- Artisan 3: Mgr. Filip Fuňa -->
+        <div class="bg-majolika-cream/50 rounded-3xl p-6 border border-majolika-cream-dark flex flex-col items-center text-center group hover:shadow-xl transition-all duration-300">
+          <div class="w-40 h-40 rounded-full overflow-hidden mb-5 border-4 border-white shadow-md group-hover:scale-105 transition-transform">
+            <img src="images/filip_funa.jpg" alt="Mgr. Filip Fuňa" class="w-full h-full object-cover">
+          </div>
+          <span class="text-xs font-bold text-majolika-blue uppercase tracking-wider mb-1">Vedenie družstva</span>
+          <h3 class="font-serif text-2xl font-bold text-majolika-blue">Mgr. Filip Fuňa</h3>
+          <p class="text-xs text-majolika-clay font-semibold mt-0.5">Výkonný riaditeľ Slovenskej ľudovej majoliky</p>
+          <p class="text-xs text-gray-600 mt-3 leading-relaxed">
+            Zaslúžil sa o záchranu výroby v Modre, zápis do zoznamu UNESCO SR a získanie prestížneho chráneného zemepisného označenia Európskej únie v roku 2026.
+          </p>
+          <div class="mt-4 pt-3 border-t border-gray-200/60 w-full text-xs text-gray-500 font-medium">
+            Kontakt: filip.funa@majolika.sk
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Team Roster Note -->
+      <div class="mt-12 bg-majolika-cream rounded-2xl p-6 border border-majolika-cream-dark flex flex-wrap items-center justify-between gap-4">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-majolika-blue text-white flex items-center justify-center">
+            <i data-lucide="award" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <div class="font-bold text-sm text-majolika-blue">Majstri dielne a točiarne:</div>
+            <div class="text-xs text-gray-600">Robert Uherčík, Oliver Döme, Michal Petráš (džbankári) &bull; Drahomíra Pešková, Mária Kaššáková, Mária Pavlovičová, Juraj Hanulík, Katarína Gážiová (maliari) &bull; Mária Valentínová & Marián Polčic (majstri výroby a pecí).</div>
+          </div>
+        </div>
+        <a href="#dielne" class="text-xs font-bold text-majolika-clay hover:underline flex items-center gap-1">
+          <span>Stretnúť majstrov osobne v dielni</span>
+          <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= AKTUALITY & NEVYHADZUJTE KERAMIKU ================= -->
+  <section id="aktuality" class="py-20 bg-majolika-cream relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+        <div class="space-y-2">
+          <div class="inline-flex items-center gap-2 text-majolika-clay font-bold text-xs uppercase tracking-widest">
+            <i data-lucide="newspaper" class="w-4 h-4"></i>
+            <span>Dianie v Modre & Podujatia</span>
+          </div>
+          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-majolika-blue">
+            Aktuality & Komunitné iniciatívy
+          </h2>
+          <p class="text-sm sm:text-base text-majolika-charcoal/70 max-w-xl">
+            Pozrite si najnovšie úspechy modranskej majoliky na Slovensku i vo svete a zapojte sa do našich projektov.
+          </p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- News 1: Protected Designation -->
+        <article class="bg-white rounded-3xl overflow-hidden border border-majolika-cream-dark shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="aspect-video relative overflow-hidden bg-gray-100">
+              <img src="images/unesco_cert.jpg" alt="Chránené zemepisné označenie EÚ" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <span class="absolute top-3 left-3 bg-majolika-gold text-majolika-blue text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full shadow-sm">
+                Veľký úspech 2026
+              </span>
+            </div>
+            <div class="p-6">
+              <div class="text-xs text-gray-500 mb-2">29. Október 2026</div>
+              <h3 class="font-serif text-xl font-bold text-majolika-blue group-hover:text-majolika-clay transition-colors leading-snug">
+                Modranská majolika získala chránené zemepisné označenie Európskej únie
+              </h3>
+              <p class="text-xs text-gray-600 mt-2.5 leading-relaxed">
+                Európska komisia oficiálne zapísala Modranskú majoliku do registra Chránených zemepisných označení (CHZO). Toto ocenenie garantuje, že pravá majolika pochádza výhradne z modranského regiónu.
+              </p>
+            </div>
+          </div>
+          <div class="px-6 pb-6 pt-2">
+            <a href="#kontakt" class="text-xs font-bold text-majolika-blue hover:text-majolika-clay transition-colors inline-flex items-center gap-1.5">
+              <span>Čítať celé vyhlásenie</span>
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- News 2: Crafted Origins Exhibition in Spain -->
+        <article class="bg-white rounded-3xl overflow-hidden border border-majolika-cream-dark shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="aspect-video relative overflow-hidden bg-gray-100">
+              <img src="images/historia5.jpg" alt="Výstava Crafted Origins" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <span class="absolute top-3 left-3 bg-majolika-blue text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full shadow-sm">
+                Európska výstava
+              </span>
+            </div>
+            <div class="p-6">
+              <div class="text-xs text-gray-500 mb-2">5. November 2026</div>
+              <h3 class="font-serif text-xl font-bold text-majolika-blue group-hover:text-majolika-clay transition-colors leading-snug">
+                Modranská keramika reprezentuje Slovensko na výstave Crafted Origins v Španielsku
+              </h3>
+              <p class="text-xs text-gray-600 mt-2.5 leading-relaxed">
+                Výber najlepších prác našich majstrov džbankárov a maliarok bol pozvaný do medzinárodnej expozície európskeho remeselného dedičstva v Madride a Valencii.
+              </p>
+            </div>
+          </div>
+          <div class="px-6 pb-6 pt-2">
+            <a href="#kontakt" class="text-xs font-bold text-majolika-blue hover:text-majolika-clay transition-colors inline-flex items-center gap-1.5">
+              <span>Zobraziť podrobnosti</span>
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- News 3: Initiative "Nevyhadzujte keramiku!" -->
+        <article class="bg-white rounded-3xl overflow-hidden border-2 border-majolika-clay/30 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="aspect-video relative overflow-hidden bg-gray-100">
+              <img src="images/news_keramika.jpg" alt="Iniciatíva Nevyhadzujte keramiku" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <span class="absolute top-3 left-3 bg-majolika-clay text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full shadow-sm">
+                Iniciatíva záchrany
+              </span>
+            </div>
+            <div class="p-6">
+              <div class="text-xs text-majolika-clay font-bold mb-2">Trvalá výzva občanom</div>
+              <h3 class="font-serif text-xl font-bold text-majolika-blue group-hover:text-majolika-clay transition-colors leading-snug">
+                Nevyhadzujte starú keramiku! Dajte jej s nami druhý život
+              </h3>
+              <p class="text-xs text-gray-600 mt-2.5 leading-relaxed">
+                Zdedili ste staršie kúsky alebo kúpili dom s pokladmi na povale? Pre väčšie zbierky do 50 km prídeme osobne, preplatíme poštovné a odmeníme vás voľným vstupom do našich tvorivých dielní.
+              </p>
+            </div>
+          </div>
+          <div class="px-6 pb-6 pt-2">
+            <button onclick="openDonateModal()" class="text-xs font-bold text-majolika-clay hover:underline inline-flex items-center gap-1.5">
+              <span>Ako darovať staršiu keramiku</span>
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </button>
+          </div>
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= PREDAJŇA, DIELNE & KONTAKT ================= -->
+  <section id="kontakt" class="py-20 bg-white border-t border-majolika-cream-dark">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        
+        <!-- Left Contact Info (5 Cols) -->
+        <div class="lg:col-span-5 space-y-6">
+          <div class="inline-flex items-center gap-2 text-majolika-clay font-bold text-xs uppercase tracking-widest">
+            <i data-lucide="map-pin" class="w-4 h-4"></i>
+            <span>Navštívte nás v Modre</span>
+          </div>
+
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-majolika-blue">
+            Sme tu pre vás každý deň
+          </h2>
+
+          <p class="text-sm text-majolika-charcoal/80 leading-relaxed font-light">
+            Naša historická budova, výrobná točiareň, pece a podniková predajňa sa nachádzajú priamo v slobodnom kráľovskom meste Modra. Radi vás privítame!
+          </p>
+
+          <!-- Contact Data Cards -->
+          <div class="space-y-4 pt-2">
+            
+            <div class="flex items-start gap-4 p-4 rounded-2xl bg-majolika-cream border border-majolika-cream-dark">
+              <div class="p-2.5 rounded-xl bg-majolika-blue text-white shrink-0 mt-0.5">
+                <i data-lucide="map-pin" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-majolika-blue text-sm">Adresa dielne a predajne</h4>
+                <div class="text-xs text-gray-600 mt-1">
+                  Dolná 138, 900 01 Modra, Slovenská republika
+                </div>
+                <a href="https://www.google.com/maps/dir//Doln%C3%A1+138,+900+01+Modra" target="_blank" rel="noopener noreferrer" class="mt-2 text-xs font-bold text-majolika-clay hover:underline inline-flex items-center gap-1">
+                  <span>Navigovať cez Google Maps</span>
+                  <i data-lucide="external-link" class="w-3 h-3"></i>
+                </a>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4 p-4 rounded-2xl bg-majolika-cream border border-majolika-cream-dark">
+              <div class="p-2.5 rounded-xl bg-majolika-clay text-white shrink-0 mt-0.5">
+                <i data-lucide="clock" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-majolika-blue text-sm">Otváracie hodiny predajne</h4>
+                <div class="text-xs text-gray-600 mt-1 space-y-0.5">
+                  <div><strong>Pondelok – Piatok:</strong> 08:00 – 16:00</div>
+                  <div><strong>Sobota – Nedeľa:</strong> 10:00 – 16:00</div>
+                  <div class="text-majolika-green font-semibold pt-1">
+                    Cez víkendy: prehliadky a dielne každú celú hodinu!
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4 p-4 rounded-2xl bg-majolika-cream border border-majolika-cream-dark">
+              <div class="p-2.5 rounded-xl bg-majolika-gold text-majolika-blue shrink-0 mt-0.5">
+                <i data-lucide="phone-call" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-majolika-blue text-sm">Priamy telefonický a e-mailový kontakt</h4>
+                <div class="text-xs text-gray-600 mt-1 space-y-1">
+                  <div>Všeobecné informácie & E-shop: <a href="tel:+421911980105" class="font-bold text-majolika-blue hover:underline">+421 911 980 105</a></div>
+                  <div>E-mail: <a href="mailto:majolika@majolika.sk" class="font-bold text-majolika-blue hover:underline">majolika@majolika.sk</a></div>
+                  <div>Rezervácie dielní: <a href="mailto:prehliadky@majolika.sk" class="font-bold text-majolika-blue hover:underline">prehliadky@majolika.sk</a></div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Billing Info -->
+          <div class="p-4 rounded-2xl bg-gray-50 border border-gray-200 text-[11px] text-gray-500 leading-relaxed">
+            <strong>Fakturačné údaje:</strong> Slovenská ľudová majolika, ľudovoumelecké výrobné družstvo, Dolná 138, 900 01 Modra. IČO: 00 167 975, DIČ: 2020360155 (Platcovia DPH). IBAN: SK97 0900 0000 0051 3558 7112.
+          </div>
+
+        </div>
+
+        <!-- Right: Message Form & Map (7 Cols) -->
+        <div class="lg:col-span-7 space-y-6">
+          <div class="bg-majolika-cream rounded-3xl p-6 sm:p-8 border border-majolika-cream-dark shadow-sm">
+            <h3 class="font-serif text-2xl font-bold text-majolika-blue mb-2">Máte otázku alebo záujem o zákazku?</h3>
+            <p class="text-xs sm:text-sm text-gray-600 mb-6">Napíšte nám a náš tím vám odpovie zvyčajne do 24 hodín.</p>
+
+            <form onsubmit="handleContactSubmit(event)" class="space-y-4">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-bold uppercase text-majolika-blue mb-1">Meno a Priezvisko</label>
+                  <input type="text" required placeholder="Ján Novák" class="w-full bg-white border border-gray-200 rounded-xl px-4 py-3 text-sm text-majolika-charcoal focus:outline-none focus:border-majolika-blue">
+                </div>
+                <div>
+                  <label class="block text-xs font-bold uppercase text-majolika-blue mb-1">E-mail</label>
+                  <input type="email" required placeholder="jan.novak@example.com" class="w-full bg-white border border-gray-200 rounded-xl px-4 py-3 text-sm text-majolika-charcoal focus:outline-none focus:border-majolika-blue">
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-bold uppercase text-majolika-blue mb-1">Telefónne číslo</label>
+                  <input type="tel" placeholder="+421 9xx xxx xxx" class="w-full bg-white border border-gray-200 rounded-xl px-4 py-3 text-sm text-majolika-charcoal focus:outline-none focus:border-majolika-blue">
+                </div>
+                <div>
+                  <label class="block text-xs font-bold uppercase text-majolika-blue mb-1">Predmet dopytu</label>
+                  <select class="w-full bg-white border border-gray-200 rounded-xl px-4 py-3 text-sm text-majolika-charcoal focus:outline-none focus:border-majolika-blue">
+                    <option>Otázka k tvorivým dielňam a prehliadkam</option>
+                    <option>Zákazková výroba na mieru (svadba, jubileum)</option>
+                    <option>Firemné a reprezentačné darčeky</option>
+                    <option>Otázka k objednávke z e-shopu</option>
+                    <option>Iniciatíva: darovanie staršej keramiky</option>
+                    <option>Iné</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-xs font-bold uppercase text-majolika-blue mb-1">Vaša správa</label>
+                <textarea rows="4" required placeholder="Popíšte nám vašu predstavu, dátum návštevy alebo otázku..." class="w-full bg-white border border-gray-200 rounded-xl px-4 py-3 text-sm text-majolika-charcoal focus:outline-none focus:border-majolika-blue"></textarea>
+              </div>
+
+              <div class="flex items-center justify-between pt-2">
+                <label class="text-[11px] text-gray-500 flex items-center gap-2 cursor-pointer">
+                  <input type="checkbox" required class="rounded text-majolika-blue">
+                  <span>Súhlasím so spracovaním osobných údajov pre účel vybavenia dopytu</span>
+                </label>
+                <button type="submit" class="bg-majolika-blue hover:bg-majolika-blue-light text-white font-bold text-sm px-7 py-3 rounded-xl transition-all shadow-md flex items-center gap-2">
+                  <span>Odoslať správu</span>
+                  <i data-lucide="send" class="w-4 h-4"></i>
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <!-- Interactive Map Container -->
+          <div class="rounded-3xl overflow-hidden border border-majolika-cream-dark shadow-sm bg-white p-2">
+            <div class="relative aspect-[16/7] w-full rounded-2xl overflow-hidden bg-majolika-cream">
+              <!-- Visual Map representation with pin -->
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2653.2847113101837!2d17.313760976868843!3d48.32659104467006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476c977b7c019447%3A0xc2e180ace11ea78!2sSlovensk%C3%A1%20%C4%BEudov%C3%A1%20majolika!5e0!3m2!1ssk!2ssk!4v1700000000000!5m2!1ssk!2ssk" 
+                width="100%" 
+                height="100%" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade"
+                class="w-full h-full filter saturate-150">
+              </iframe>
+            </div>
+            <div class="p-3 flex items-center justify-between text-xs text-gray-600">
+              <span class="flex items-center gap-1.5"><i data-lucide="car" class="w-4 h-4 text-majolika-blue"></i> Bezplatné parkovanie vo dvore areálu</span>
+              <span class="flex items-center gap-1.5"><i data-lucide="bus" class="w-4 h-4 text-majolika-blue"></i> Autobusová zastávka Modra, Dolná (2 min pešo)</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-majolika-blue text-white pt-16 pb-12 border-t-4 border-majolika-gold">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-white/15">
+        
+        <!-- Col 1: Brand & Heritage (4 Cols) -->
+        <div class="lg:col-span-4 space-y-4">
+          <div class="flex items-center gap-3">
+            <img src="images/logo_slm.gif" alt="Logo Slovenská ľudová majolika" class="w-12 h-12 object-contain bg-white rounded-full p-1">
+            <div>
+              <div class="font-display text-lg font-bold tracking-wider leading-none">SLOVENSKÁ ĽUDOVÁ MAJOLIKA</div>
+              <div class="text-[10px] text-majolika-gold font-semibold uppercase tracking-widest mt-0.5">Výrobné družstvo Modra &bull; 1883</div>
+            </div>
+          </div>
+          <p class="text-xs text-white/70 leading-relaxed font-light">
+            Uchovávame a rozvíjame viac ako 140-ročné dedičstvo ručne točenej a maľovanej keramiky. Sme hrdým nositeľom zápisu v Reprezentatívnom zozname nehmotného kultúrneho dedičstva Slovenska a Chráneného zemepisného označenia EÚ.
+          </p>
+          <div class="pt-2 flex items-center gap-3">
+            <a href="https://www.facebook.com/majolikamodra" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-colors" aria-label="Facebook">
+              <i data-lucide="facebook" class="w-4 h-4"></i>
+            </a>
+            <a href="https://www.instagram.com/majolikamodra.sk" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-colors" aria-label="Instagram">
+              <i data-lucide="instagram" class="w-4 h-4"></i>
+            </a>
+            <a href="mailto:majolika@majolika.sk" class="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-colors" aria-label="Email">
+              <i data-lucide="mail" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Navigation Links (2 Cols) -->
+        <div class="lg:col-span-2 space-y-3">
+          <h4 class="font-bold text-sm uppercase tracking-wider text-majolika-gold">Rýchla navigácia</h4>
+          <ul class="space-y-2 text-xs text-white/80">
+            <li><a href="#o-nas" class="hover:text-white transition-colors">O nás a história</a></li>
+            <li><a href="#dekory" class="hover:text-white transition-colors">4 Tradičné dekóry</a></li>
+            <li><a href="#dielne" class="hover:text-white transition-colors">Tvorivé dielne & Prehliadky</a></li>
+            <li><a href="#eshop" class="hover:text-white transition-colors">E-shop & Kolekcie</a></li>
+            <li><a href="#zakazkova-vyroba" class="hover:text-white transition-colors">Zákazky na mieru</a></li>
+            <li><a href="#majstri" class="hover:text-white transition-colors">Naši majstri</a></li>
+            <li><a href="#aktuality" class="hover:text-white transition-colors">Aktuality a novinky</a></li>
+            <li><a href="#kontakt" class="hover:text-white transition-colors">Kontakt a predajňa</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Workshop Info (3 Cols) -->
+        <div class="lg:col-span-3 space-y-3">
+          <h4 class="font-bold text-sm uppercase tracking-wider text-majolika-gold">Zážitky & Otváracie hodiny</h4>
+          <div class="text-xs text-white/80 space-y-2">
+            <div>
+              <strong>Predajňa v Modre:</strong><br>
+              Pondelok – Piatok: 08:00 – 16:00<br>
+              Sobota – Nedeľa: 10:00 – 16:00
+            </div>
+            <div>
+              <strong>Víkendové dielne:</strong><br>
+              Každú celú hodinu 10:00, 11:00, 13:00, 14:00, 15:00
+            </div>
+            <div class="pt-2 text-majolika-gold font-semibold">
+              Adresa: Dolná 138, 900 01 Modra
+            </div>
+          </div>
+        </div>
+
+        <!-- Col 4: Newsletter (3 Cols) -->
+        <div class="lg:col-span-3 space-y-3">
+          <h4 class="font-bold text-sm uppercase tracking-wider text-majolika-gold">Spravodaj majoliky</h4>
+          <p class="text-xs text-white/70 leading-relaxed font-light">
+            Prihláste sa k odberu noviniek o nových kolekciách, termínoch špeciálnych workshopov a získajte <strong>10% zľavu</strong> na prvý nákup v e-shope.
+          </p>
+          <form onsubmit="handleNewsletterSubmit(event)" class="space-y-2">
+            <input type="email" required placeholder="Váš e-mail" class="w-full bg-white/10 border border-white/20 rounded-xl px-3.5 py-2.5 text-xs text-white placeholder-white/40 focus:outline-none focus:border-majolika-gold">
+            <button type="submit" class="w-full bg-majolika-clay hover:bg-majolika-clay-hover text-white font-bold text-xs py-2.5 rounded-xl transition-colors">
+              Odoberať novinky
+            </button>
+          </form>
+        </div>
+
+      </div>
+
+      <!-- Bottom Disclaimer -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/50">
+        <div>
+          &copy; 2026 Slovenská ľudová majolika, ľudovoumelecké výrobné družstvo Modra. Všetky práva vyhradené.
+        </div>
+        <div class="flex items-center gap-4">
+          <a href="#" class="hover:text-white transition-colors">Ochrana osobných údajov (GDPR)</a>
+          <span>&bull;</span>
+          <a href="#" class="hover:text-white transition-colors">Obchodné podmienky e-shopu</a>
+          <span>&bull;</span>
+          <a href="#" class="hover:text-white transition-colors">Cookies</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ================= SHOPPING CART DRAWER ================= -->
+  <div id="cartDrawerBackdrop" onclick="toggleCart()" class="hidden fixed inset-0 bg-black/50 backdrop-blur-sm z-50 transition-opacity"></div>
+  <div id="cartDrawer" class="fixed top-0 right-0 h-full w-full max-w-md bg-white shadow-2xl z-50 transform translate-x-full transition-transform duration-300 flex flex-col justify-between">
+    
+    <!-- Cart Header -->
+    <div class="p-6 border-b border-gray-100 flex items-center justify-between bg-majolika-cream">
+      <div class="flex items-center gap-2">
+        <i data-lucide="shopping-bag" class="w-5 h-5 text-majolika-blue"></i>
+        <h3 class="font-serif text-xl font-bold text-majolika-blue">Nákupný košík</h3>
+      </div>
+      <button onclick="toggleCart()" class="p-1.5 rounded-lg text-gray-500 hover:bg-white hover:text-majolika-charcoal">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+    </div>
+
+    <!-- Cart Items List -->
+    <div class="p-6 overflow-y-auto flex-1 space-y-4" id="cartItemsContainer">
+      <!-- Items dynamically populated via JS -->
+    </div>
+
+    <!-- Cart Footer & Checkout -->
+    <div class="p-6 border-t border-gray-100 bg-majolika-cream space-y-4">
+      <div class="space-y-1.5 text-xs text-gray-600">
+        <div class="flex justify-between">
+          <span>Medzisúčet:</span>
+          <span id="cartSubtotal" class="font-bold text-majolika-charcoal">€135.00</span>
+        </div>
+        <div class="flex justify-between">
+          <span>Doprava:</span>
+          <span class="text-majolika-green font-bold">Od €3.90 (Packeta)</span>
+        </div>
+        <div class="flex justify-between text-base font-bold text-majolika-blue pt-2 border-t border-gray-200">
+          <span>Spolu s DPH:</span>
+          <span id="cartTotal" class="font-serif text-2xl text-majolika-clay">€135.00</span>
+        </div>
+      </div>
+
+      <button onclick="simulateCheckout()" class="w-full bg-majolika-blue hover:bg-majolika-blue-light text-white font-bold py-3.5 rounded-xl shadow-majolika hover:shadow-lg transition-all flex items-center justify-center gap-2">
+        <span>Pokračovať k pokladni</span>
+        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+      </button>
+
+      <div class="text-[11px] text-gray-500 text-center">
+        100% ručne balené s ochrannou výstužou proti poškodeniu pri preprave.
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ================= PRODUCT QUICK VIEW MODAL ================= -->
+  <div id="productModal" class="hidden fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-2xl w-full overflow-hidden shadow-2xl border border-majolika-cream-dark relative">
+      <button onclick="closeProductModal()" class="absolute top-4 right-4 z-10 w-9 h-9 rounded-full bg-white/80 backdrop-blur-sm text-gray-600 hover:bg-white flex items-center justify-center shadow-sm">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+      <div class="grid grid-cols-1 md:grid-cols-2">
+        <div class="bg-majolika-cream aspect-square flex items-center justify-center p-6">
+          <img id="modalProductImg" src="images/misy.jpg" alt="Detail produktu" class="max-h-full object-contain">
+        </div>
+        <div class="p-6 md:p-8 flex flex-col justify-between">
+          <div class="space-y-3">
+            <span id="modalProductCategory" class="text-xs font-bold uppercase tracking-wider text-majolika-clay">Úžitková keramika</span>
+            <h3 id="modalProductTitle" class="font-serif text-2xl font-bold text-majolika-blue leading-tight">Misa na nohe s vlnkovým okrajom</h3>
+            <div id="modalProductPrice" class="font-serif text-3xl font-bold text-majolika-clay">€100.00</div>
+            <p id="modalProductDesc" class="text-xs text-gray-600 leading-relaxed">
+              Tradičná keramika z Modry, dvakrát pálená v peci. Povrchová úprava spĺňa všetky prísne hygienické normy pre styk s potravinami.
+            </p>
+            <div class="pt-2 space-y-1 text-xs text-gray-500">
+              <div>&bull; <strong>Rozmery:</strong> výška 14 cm, priemer 24 cm</div>
+              <div>&bull; <strong>Materiál:</strong> prírodná modranská hlina + cínová glazúra</div>
+              <div>&bull; <strong>Starostlivosť:</strong> odporúčame ručné umývanie</div>
+            </div>
+          </div>
+          <div class="pt-6 border-t border-gray-100 flex items-center gap-3">
+            <button onclick="addProductFromModal()" class="flex-1 bg-majolika-blue hover:bg-majolika-clay text-white font-bold text-xs py-3 rounded-xl transition-colors flex items-center justify-center gap-2">
+              <i data-lucide="shopping-cart" class="w-4 h-4"></i>
+              <span>Vložiť do košíka</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= INICIATÍVA DAROVANIE KERAMIKY MODAL ================= -->
+  <div id="donateModal" class="hidden fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-lg w-full p-8 shadow-2xl border border-majolika-cream-dark relative">
+      <button onclick="closeDonateModal()" class="absolute top-4 right-4 w-8 h-8 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-600 flex items-center justify-center">
+        <i data-lucide="x" class="w-4 h-4"></i>
+      </button>
+      <div class="text-center space-y-3">
+        <div class="w-14 h-14 bg-majolika-clay/10 text-majolika-clay rounded-2xl flex items-center justify-center mx-auto">
+          <i data-lucide="heart" class="w-8 h-8"></i>
+        </div>
+        <h3 class="font-serif text-2xl font-bold text-majolika-blue">Iniciatíva: Nevyhadzujte keramiku!</h3>
+        <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">
+          Zdedili ste keramiku alebo našli staré modranské kúsky na povale? Radi im nájdeme nový domov a priestor, kde budú ďalej robiť radosť.
+        </p>
+      </div>
+
+      <div class="mt-6 space-y-3 text-xs text-gray-600 bg-majolika-cream p-4 rounded-2xl border border-majolika-cream-dark">
+        <div class="flex items-start gap-2">
+          <i data-lucide="check" class="w-4 h-4 text-majolika-green shrink-0 mt-0.5"></i>
+          <span><strong>Do 50 km od Modry:</strong> radi prídeme po väčšie zbierky osobne.</span>
+        </div>
+        <div class="flex items-start gap-2">
+          <i data-lucide="check" class="w-4 h-4 text-majolika-green shrink-0 mt-0.5"></i>
+          <span><strong>Z celého Slovenska:</strong> preplatíme vám poštovné náklady na zaslanie.</span>
+        </div>
+        <div class="flex items-start gap-2">
+          <i data-lucide="check" class="w-4 h-4 text-majolika-green shrink-0 mt-0.5"></i>
+          <span><strong>Odmena pre vás:</strong> darujeme vám voľný vstup do našich tvorivých dielní.</span>
+        </div>
+      </div>
+
+      <div class="mt-6 flex flex-col gap-2">
+        <a href="mailto:majolika@majolika.sk?subject=Darovanie%20keramiky" class="w-full bg-majolika-blue hover:bg-majolika-blue-light text-white text-center font-bold text-xs py-3 rounded-xl transition-colors">
+          Napísať e-mail: majolika@majolika.sk
+        </a>
+        <a href="tel:+421911980105" class="w-full bg-majolika-cream hover:bg-majolika-cream-dark text-majolika-blue text-center font-bold text-xs py-2.5 rounded-xl transition-colors">
+          Zavolať: +421 911 980 105
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= JAVASCRIPT LOGIC ================= -->
+  <script>
+    // Initialize Lucide icons
+    lucide.createIcons();
+
+    // Set Default Booking Date (Next Saturday)
+    window.addEventListener('DOMContentLoaded', () => {
+      const dateInput = document.getElementById('bookingDate');
+      if (dateInput) {
+        const today = new Date();
+        const daysUntilSaturday = (6 - today.getDay() + 7) % 7 || 7;
+        const nextSat = new Date(today);
+        nextSat.setDate(today.getDate() + daysUntilSaturday);
+        dateInput.value = nextSat.toISOString().split('T')[0];
+        dateInput.min = today.toISOString().split('T')[0];
+      }
+      calculateBookingPrice();
+      renderCart();
+    });
+
+    // Mobile Navigation Toggle
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobileMenu');
+      const openIcon = document.getElementById('menuOpenIcon');
+      const closeIcon = document.getElementById('menuCloseIcon');
+      menu.classList.toggle('hidden');
+      openIcon.classList.toggle('hidden');
+      closeIcon.classList.toggle('hidden');
+    }
+
+    // 4 Decors Tab Switcher
+    function switchDecor(decorKey) {
+      // Update Buttons
+      document.querySelectorAll('.decor-tab-btn').forEach(btn => {
+        btn.classList.remove('bg-majolika-blue', 'text-white', 'shadow-md', 'active');
+        btn.classList.add('bg-majolika-cream', 'text-majolika-blue');
+      });
+      const activeBtn = document.getElementById(`tab-${decorKey}`);
+      if (activeBtn) {
+        activeBtn.classList.remove('bg-majolika-cream', 'text-majolika-blue');
+        activeBtn.classList.add('bg-majolika-blue', 'text-white', 'shadow-md', 'active');
+      }
+
+      // Update Panels
+      document.querySelectorAll('.decor-panel').forEach(panel => {
+        panel.classList.add('hidden');
+      });
+      const activePanel = document.getElementById(`content-${decorKey}`);
+      if (activePanel) {
+        activePanel.classList.remove('hidden');
+      }
+    }
+
+    // Booking Price Calculator
+    let bookingAdults = 2;
+    let bookingChildren = 0;
+
+    function adjustCount(type, delta) {
+      if (type === 'adults') {
+        bookingAdults = Math.max(1, bookingAdults + delta);
+        document.getElementById('adultCount').innerText = bookingAdults;
+      } else {
+        bookingChildren = Math.max(0, bookingChildren + delta);
+        document.getElementById('childCount').innerText = bookingChildren;
+      }
+      calculateBookingPrice();
+    }
+
+    function calculateBookingPrice() {
+      const selectedProgram = document.querySelector('input[name="program"]:checked')?.value || 'dielna';
+      const shipping = document.getElementById('shippingAddon')?.checked || false;
+      let total = 0;
+
+      if (selectedProgram === 'dielna') {
+        // Workshop is €30 per participant
+        total = (bookingAdults + bookingChildren) * 30.00;
+      } else {
+        // Guided Tour only: €6 adult, €4 child
+        total = (bookingAdults * 6.00) + (bookingChildren * 4.00);
+      }
+
+      if (shipping) {
+        total += 5.90;
+      }
+
+      const priceElem = document.getElementById('bookingTotalPrice');
+      if (priceElem) {
+        priceElem.innerText = `€${total.toFixed(2)}`;
+      }
+    }
+
+    function handleBookingSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('bookingName').value;
+      const date = document.getElementById('bookingDate').value;
+      const time = document.getElementById('bookingTime').value;
+      const price = document.getElementById('bookingTotalPrice').innerText;
+
+      const toast = document.getElementById('bookingSuccessToast');
+      const details = document.getElementById('bookingSuccessDetails');
+      details.innerHTML = `Vážený/á <strong>${name}</strong>, rezervácia na termín <strong>${date} o ${time}</strong> v hodnote <strong>${price}</strong> bola zaznamenaná. Potvrdenie sme odoslali na váš email.`;
+      toast.classList.remove('hidden');
+    }
+
+    function dismissBookingToast() {
+      document.getElementById('bookingSuccessToast').classList.add('hidden');
+    }
+
+    // E-Shop Filtering
+    function filterShop(category) {
+      document.querySelectorAll('.shop-filter-btn').forEach(btn => {
+        btn.classList.remove('bg-majolika-blue', 'text-white', 'active');
+        btn.classList.add('bg-majolika-cream', 'text-majolika-blue');
+      });
+      // Find matching button or default
+      const btn = Array.from(document.querySelectorAll('.shop-filter-btn')).find(b => b.getAttribute('onclick')?.includes(category));
+      if (btn) {
+        btn.classList.remove('bg-majolika-cream', 'text-majolika-blue');
+        btn.classList.add('bg-majolika-blue', 'text-white', 'active');
+      }
+
+      const items = document.querySelectorAll('.product-item');
+      items.forEach(item => {
+        if (category === 'all') {
+          item.classList.remove('hidden');
+        } else if (category === 'modry' || category === 'pestry' || category === 'habansky' || category === 'zeleny') {
+          if (item.getAttribute('data-decor') === category) {
+            item.classList.remove('hidden');
+          } else {
+            item.classList.add('hidden');
+          }
+        } else {
+          if (item.getAttribute('data-category') === category) {
+            item.classList.remove('hidden');
+          } else {
+            item.classList.add('hidden');
+          }
+        }
+      });
+    }
+
+    // Shopping Cart State
+    let cart = [
+      { name: 'Miska na nohe so zeleným dekórom', price: 100.00, img: 'images/misy.jpg', qty: 1 },
+      { name: 'Šálka na espresso s podšálkou', price: 35.00, img: 'images/hrnceky.jpg', qty: 1 }
+    ];
+
+    function toggleCart() {
+      const drawer = document.getElementById('cartDrawer');
+      const backdrop = document.getElementById('cartDrawerBackdrop');
+      const isClosed = drawer.classList.contains('translate-x-full');
+      if (isClosed) {
+        drawer.classList.remove('translate-x-full');
+        backdrop.classList.remove('hidden');
+      } else {
+        drawer.classList.add('translate-x-full');
+        backdrop.classList.add('hidden');
+      }
+    }
+
+    function addToCart(name, price, img) {
+      const existing = cart.find(item => item.name === name);
+      if (existing) {
+        existing.qty += 1;
+      } else {
+        cart.push({ name, price, img, qty: 1 });
+      }
+      renderCart();
+      toggleCart();
+    }
+
+    function updateCartQty(index, delta) {
+      cart[index].qty += delta;
+      if (cart[index].qty <= 0) {
+        cart.splice(index, 1);
+      }
+      renderCart();
+    }
+
+    function renderCart() {
+      const container = document.getElementById('cartItemsContainer');
+      const badge = document.getElementById('cartCountBadge');
+      const subtotalElem = document.getElementById('cartSubtotal');
+      const totalElem = document.getElementById('cartTotal');
+
+      const totalItems = cart.reduce((sum, item) => sum + item.qty, 0);
+      badge.innerText = totalItems;
+
+      if (cart.length === 0) {
+        container.innerHTML = `
+          <div class="text-center py-12 space-y-3 text-gray-500">
+            <i data-lucide="shopping-bag" class="w-12 h-12 mx-auto text-gray-300"></i>
+            <div class="text-sm font-bold text-majolika-blue">Váš košík je prázdny</div>
+            <div class="text-xs">Vyberte si z našich originálnych kúskov v e-shope.</div>
+          </div>
+        `;
+        subtotalElem.innerText = '€0.00';
+        totalElem.innerText = '€0.00';
+        lucide.createIcons();
+        return;
+      }
+
+      let subtotal = 0;
+      container.innerHTML = cart.map((item, idx) => {
+        subtotal += item.price * item.qty;
+        return `
+          <div class="flex items-center gap-3.5 p-3 rounded-2xl bg-majolika-cream border border-majolika-cream-dark">
+            <img src="${item.img}" alt="${item.name}" class="w-14 h-14 object-cover rounded-xl bg-white border border-gray-100">
+            <div class="flex-1 min-w-0">
+              <div class="font-bold text-xs text-majolika-blue truncate">${item.name}</div>
+              <div class="text-xs text-majolika-clay font-bold mt-0.5">€${item.price.toFixed(2)}</div>
+              <div class="flex items-center gap-2 mt-1.5">
+                <button onclick="updateCartQty(${idx}, -1)" class="w-6 h-6 rounded bg-white border border-gray-200 text-xs font-bold text-majolika-blue">-</button>
+                <span class="text-xs font-bold">${item.qty}</span>
+                <button onclick="updateCartQty(${idx}, 1)" class="w-6 h-6 rounded bg-white border border-gray-200 text-xs font-bold text-majolika-blue">+</button>
+              </div>
+            </div>
+            <button onclick="updateCartQty(${idx}, -${item.qty})" class="text-gray-400 hover:text-red-500 p-1">
+              <i data-lucide="trash-2" class="w-4 h-4"></i>
+            </button>
+          </div>
+        `;
+      }).join('');
+
+      subtotalElem.innerText = `€${subtotal.toFixed(2)}`;
+      totalElem.innerText = `€${subtotal.toFixed(2)}`;
+      lucide.createIcons();
+    }
+
+    function simulateCheckout() {
+      alert('Ďakujeme za váš záujem o nákup pravých modranských výrobkov! V reálnom e-shope nasleduje výber spôsobu doručenia (Packeta / DPD / Osobný odber v Modre) a bezpečná platobná brána.');
+    }
+
+    // Modal Details
+    let currentModalProduct = null;
+    const modalProducts = {
+      'misa-zeleny': {
+        title: 'Misa na nohe so zeleným dekórom',
+        category: 'Úžitková keramika',
+        price: '€100.00',
+        numericPrice: 100.00,
+        img: 'images/misy.jpg',
+        desc: 'Ručne vytočená misa s plastickým vlnkovaným okrajom a motívom malokarpatských bylín. Dvakrát pálená v peci pri 1020 °C.'
+      },
+      'salka-modry': {
+        title: 'Šálka na espresso s podšálkou',
+        category: 'Káva & Čaj',
+        price: '€35.00',
+        numericPrice: 35.00,
+        img: 'images/hrnceky.jpg',
+        desc: 'Klasický kobaltový motív na jemnej bielej glazúre. Ergonomické uško, objem 80 ml, ideálne pre pravé talianske espresso.'
+      },
+      'cajnik-pestry': {
+        title: 'Modranský čajník s pokrievkou (1.2 l)',
+        category: 'Tradičné servírovanie',
+        price: '€85.00',
+        numericPrice: 85.00,
+        img: 'images/cajniky.jpg',
+        desc: 'Výrazný pestro maľovaný kvetinový vzor, dokonalé vyváženie nalievacieho hrdla. Udrží váš bylinkový čaj dlho teplý.'
+      },
+      'panabeka': {
+        title: 'Miska PÁNABEKA (Minimalist)',
+        category: 'Autorská kolekcia',
+        price: '€40.00',
+        numericPrice: 40.00,
+        img: 'images/panabeka.jpg',
+        desc: 'Súčasný grafický pohľad dizajnérky Terezy Orviskej na tradičný modranský motív. Spojenie surovej textúry hliny a glazúry.'
+      },
+      'tanier-modry': {
+        title: 'Veľký tanier s vyrezávaným okrajom (Ø 32 cm)',
+        category: 'Výstavné & Servírovacie',
+        price: '€120.00',
+        numericPrice: 120.00,
+        img: 'images/taniere.jpg',
+        desc: 'Majstrovské dielo s perforovaným čipkovým okrajom a centrálnym motívom modranského viniča. Vhodné na stenu i na sviatočný stôl.'
+      },
+      'vaza-vystavna': {
+        title: 'Zberateľská váza v zlatej hodinke (38 cm)',
+        category: 'Unikátne solitéry',
+        price: '€240.00',
+        numericPrice: 240.00,
+        img: 'images/vazy_vystavne.jpg',
+        desc: 'Výpravný ručne maľovaný kus s bohatou figurálnou a vinohradníckou kompozíciou. Každá váza je neopakovateľný unikát.'
+      },
+      'kruhy': {
+        title: 'Hrnček KRUHY s kobaltovým akcentom',
+        category: 'Dizajnová séria',
+        price: '€28.00',
+        numericPrice: 28.00,
+        img: 'images/kruhy.jpg',
+        desc: 'Geometrický rytmus kruhov inšpirovaný otáčaním hrnčiarskeho kruhu od Emmy Kočnerovej. Objem 300 ml.'
+      },
+      'fragmenty': {
+        title: 'Sada tanierov FRAGMENTY (3 ks)',
+        category: 'Mladá majolika',
+        price: '€95.00',
+        numericPrice: 95.00,
+        img: 'images/fragmenty.jpg',
+        desc: 'Dekompozícia tradičného habánskeho motívu na moderných minimalistických tvaroch. Set dezertného, hlbokého a plytkého taniera.'
+      }
+    };
+
+    function openProductModal(key) {
+      const p = modalProducts[key];
+      if (!p) return;
+      currentModalProduct = p;
+      document.getElementById('modalProductImg').src = p.img;
+      document.getElementById('modalProductCategory').innerText = p.category;
+      document.getElementById('modalProductTitle').innerText = p.title;
+      document.getElementById('modalProductPrice').innerText = p.price;
+      document.getElementById('modalProductDesc').innerText = p.desc;
+      document.getElementById('productModal').classList.remove('hidden');
+    }
+
+    function closeProductModal() {
+      document.getElementById('productModal').classList.add('hidden');
+    }
+
+    function addProductFromModal() {
+      if (currentModalProduct) {
+        addToCart(currentModalProduct.title, currentModalProduct.numericPrice, currentModalProduct.img);
+        closeProductModal();
+      }
+    }
+
+    // Donation Modal
+    function openDonateModal() {
+      document.getElementById('donateModal').classList.remove('hidden');
+    }
+    function closeDonateModal() {
+      document.getElementById('donateModal').classList.add('hidden');
+    }
+
+    // Forms handling
+    function handleContactSubmit(e) {
+      e.preventDefault();
+      alert('Ďakujeme! Vaša správa bola úspešne odoslaná tímu Slovenskej ľudovej majoliky v Modre. Čoskoro sa vám ozveme.');
+      e.target.reset();
+    }
+
+    function handleNewsletterSubmit(e) {
+      e.preventDefault();
+      alert('Ďakujeme za prihlásenie! Váš 10% zľavový kód MAJOLIKA10 bol vygenerovaný a odoslaný na váš email.');
+      e.target.reset();
+    }
+  </script>
+
+</body>
+</html>
