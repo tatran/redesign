@@ -1,0 +1,2751 @@
+<!DOCTYPE html>
+<html lang="sk" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Husacina u Galika | Slovenský Grob – Tradičné pečené husi a husacie hody od roku 1994</title>
+  <meta name="description" content="Pravé grobské husacie hody v Slovenskom Grobe s 30-ročnou rodinnou tradíciou. Chrumkavé husi a kačice pečené v hlinených pekáčoch, delikátna husacia pečeň, domáce mastené lokše a malokarpatské vína. Salóniky na oslavy, terasa, ubytovanie i rozvoz.">
+  <meta name="keywords" content="husacina u galika, slovensky grob, husacie hody, pečená hus, husacia pečeň, lokše, rodinné oslavy, firemné večierky, pečené prasiatko">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Husacina u Galika | Slovenský Grob – Tradičné pečené husi">
+  <meta property="og:description" content="30 rokov tradície pečenia husí a kačíc v hlinených pekáčoch. Salóniky pre 10, 14, 30 a 50 hostí, letná a zimná terasa, domáce lokše.">
+  <meta property="og:image" content="images/hero_goose.jpg">
+  <meta property="og:type" content="restaurant">
+  <meta property="og:locale" content="sk_SK">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+  <!-- Google Fonts: Cormorant Garamond, Playfair Display & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,600&family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              charcoal: '#151210',
+              deep: '#1D1815',
+              card: '#241F1C',
+              terracotta: '#9E472A',
+              'terracotta-hover': '#863B22',
+              'terracotta-light': '#BC5D3D',
+              gold: '#D49A3D',
+              'gold-hover': '#C0862E',
+              'gold-light': '#F3C57B',
+              cream: '#FAF6EE',
+              'cream-dark': '#EFE7D8',
+              muted: '#A59B93',
+              border: '#3A322C'
+            }
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            display: ['"Cormorant Garamond"', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+          },
+          boxShadow: {
+            'warm-glow': '0 10px 30px -10px rgba(158, 71, 42, 0.35)',
+            'gold-glow': '0 10px 30px -10px rgba(212, 154, 61, 0.4)',
+            'card-elevated': '0 20px 40px -15px rgba(0, 0, 0, 0.5)'
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #151210;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #3A322C;
+      border-radius: 5px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #9E472A;
+    }
+
+    /* Textured subtle background */
+    .bg-pattern {
+      background-color: #151210;
+      background-image: radial-gradient(rgba(212, 154, 61, 0.04) 1px, transparent 0);
+      background-size: 32px 32px;
+    }
+
+    /* Glassmorphism */
+    .glass-nav {
+      background: rgba(21, 18, 16, 0.88);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+    .glass-card {
+      background: rgba(36, 31, 28, 0.75);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+
+    /* Badge Pulse */
+    @keyframes pulse-dot {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.4); opacity: 0.6; }
+    }
+    .animate-pulse-dot {
+      animation: pulse-dot 2s infinite ease-in-out;
+    }
+  </style>
+</head>
+<body class="bg-brand-charcoal text-brand-cream font-sans antialiased selection:bg-brand-terracotta selection:text-white pb-20 lg:pb-0 bg-pattern min-h-screen flex flex-col">
+
+  <!-- TOP BAR: ANNOUNCEMENTS & LIVE STATUS -->
+  <div class="bg-brand-deep border-b border-brand-border/60 text-xs py-2 px-4">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3">
+      <!-- Status Badge -->
+      <div class="flex items-center gap-2">
+        <span class="relative flex h-2.5 w-2.5">
+          <span id="liveStatusPulse" class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+          <span id="liveStatusDot" class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+        </span>
+        <span id="liveStatusText" class="font-medium text-brand-cream">Otváracie hodiny: Streda – Nedeľa | Mimo sezóny na objednávky</span>
+        <span class="hidden md:inline text-brand-muted">•</span>
+        <span class="hidden md:inline text-brand-muted">30 rokov tradície pečenia v hlinených pekáčoch (od r. 1994)</span>
+      </div>
+
+      <!-- Quick Contact Links -->
+      <div class="flex items-center gap-5 text-brand-muted">
+        <a href="tel:+421948777300" class="hover:text-brand-gold flex items-center gap-1.5 transition">
+          <i data-lucide="phone" class="w-3.5 h-3.5 text-brand-gold"></i>
+          <span class="font-semibold text-brand-cream">+421 948 777 300</span>
+        </a>
+        <a href="https://maps.google.com/?q=Lipova+21+Slovensky+Grob" target="_blank" rel="noopener noreferrer" class="hover:text-brand-gold flex items-center gap-1.5 transition">
+          <i data-lucide="map-pin" class="w-3.5 h-3.5 text-brand-terracotta"></i>
+          <span>Lipová 21, Slovenský Grob</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- STICKY HEADER -->
+  <header class="sticky top-0 z-40 glass-nav border-b border-brand-border/60 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Logo -->
+        <a href="#domov" class="flex items-center gap-3 group">
+          <img src="images/logo.png" alt="Husacina u Galika" class="h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105" onerror="this.onerror=null; this.src='images/favicon.png';">
+          <div class="flex flex-col">
+            <span class="font-serif text-xl sm:text-2xl font-bold tracking-tight text-white group-hover:text-brand-gold transition">
+              Husacina <span class="text-brand-terracotta">u Galika</span>
+            </span>
+            <span class="text-[10px] uppercase tracking-widest text-brand-muted">Slovenský Grob • Od roku 1994</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden lg:flex items-center gap-7 text-sm font-medium">
+          <a href="#domov" class="hover:text-brand-gold transition py-1 text-brand-cream/90">Domov</a>
+          <a href="#tradicia" class="hover:text-brand-gold transition py-1 text-brand-cream/90">Tradícia</a>
+          <a href="#menu" class="hover:text-brand-gold transition py-1 text-brand-cream/90 flex items-center gap-1">
+            Jedálny lístok
+            <span class="px-1.5 py-0.5 text-[10px] bg-brand-terracotta text-white rounded font-bold uppercase tracking-wider">Grob</span>
+          </a>
+          <a href="#kalkulacka" class="hover:text-brand-gold transition py-1 text-brand-cream/90">Kalkulačka hodov</a>
+          <a href="#priestory" class="hover:text-brand-gold transition py-1 text-brand-cream/90">Salóniky</a>
+          <a href="#poukaz" class="hover:text-brand-gold transition py-1 text-brand-cream/90 flex items-center gap-1">
+            Darčekový poukaz
+            <span class="px-1.5 py-0.5 text-[10px] bg-brand-gold/20 text-brand-gold border border-brand-gold/40 rounded font-semibold">-10%</span>
+          </a>
+          <a href="#galeria" class="hover:text-brand-gold transition py-1 text-brand-cream/90">Galéria</a>
+          <a href="#kontakt" class="hover:text-brand-gold transition py-1 text-brand-cream/90">Kontakt</a>
+        </nav>
+
+        <!-- Right Action Buttons -->
+        <div class="flex items-center gap-3">
+          <!-- Feast Basket / Wishlist trigger button -->
+          <button id="openBasketBtn" class="relative p-2.5 rounded-xl bg-brand-deep hover:bg-brand-card border border-brand-border text-brand-cream transition hover:border-brand-gold group" title="Váš výber hodov">
+            <i data-lucide="utensils" class="w-5 h-5 group-hover:text-brand-gold transition"></i>
+            <span id="basketCountBadge" class="hidden absolute -top-1.5 -right-1.5 bg-brand-terracotta text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full border border-brand-charcoal">
+              0
+            </span>
+          </button>
+
+          <!-- Book Table CTA Button -->
+          <a href="#rezervacia" class="hidden sm:inline-flex items-center gap-2 bg-gradient-to-r from-brand-terracotta to-brand-terracotta-hover hover:from-brand-terracotta-light hover:to-brand-terracotta text-white font-semibold text-sm px-5 py-2.5 rounded-xl shadow-warm-glow hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5">
+            <i data-lucide="calendar" class="w-4 h-4"></i>
+            <span>Rezervovať stôl</span>
+          </a>
+
+          <!-- Mobile Hamburger Toggle -->
+          <button id="mobileMenuBtn" class="lg:hidden p-2 rounded-lg bg-brand-deep text-brand-cream hover:text-brand-gold border border-brand-border focus:outline-none" aria-label="Otvoriť menu">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Slide-out Menu -->
+    <div id="mobileMenu" class="hidden lg:hidden border-t border-brand-border/60 bg-brand-deep/98 px-5 py-6 space-y-4">
+      <div class="grid grid-cols-2 gap-3 text-sm font-medium">
+        <a href="#domov" class="mobile-nav-link p-3 rounded-lg bg-brand-card/50 hover:bg-brand-card hover:text-brand-gold flex items-center gap-2">
+          <i data-lucide="home" class="w-4 h-4 text-brand-gold"></i> Domov
+        </a>
+        <a href="#tradicia" class="mobile-nav-link p-3 rounded-lg bg-brand-card/50 hover:bg-brand-card hover:text-brand-gold flex items-center gap-2">
+          <i data-lucide="flame" class="w-4 h-4 text-brand-terracotta"></i> 30 r. tradícia
+        </a>
+        <a href="#menu" class="mobile-nav-link p-3 rounded-lg bg-brand-card/50 hover:bg-brand-card hover:text-brand-gold flex items-center gap-2">
+          <i data-lucide="book-open" class="w-4 h-4 text-brand-gold"></i> Jedálny lístok
+        </a>
+        <a href="#kalkulacka" class="mobile-nav-link p-3 rounded-lg bg-brand-card/50 hover:bg-brand-card hover:text-brand-gold flex items-center gap-2">
+          <i data-lucide="calculator" class="w-4 h-4 text-brand-terracotta"></i> Kalkulačka hodov
+        </a>
+        <a href="#priestory" class="mobile-nav-link p-3 rounded-lg bg-brand-card/50 hover:bg-brand-card hover:text-brand-gold flex items-center gap-2">
+          <i data-lucide="users" class="w-4 h-4 text-brand-gold"></i> Salóniky & Terasa
+        </a>
+        <a href="#poukaz" class="mobile-nav-link p-3 rounded-lg bg-brand-card/50 hover:bg-brand-card hover:text-brand-gold flex items-center gap-2">
+          <i data-lucide="gift" class="w-4 h-4 text-brand-terracotta"></i> Poukaz (-10%)
+        </a>
+        <a href="#sluzby" class="mobile-nav-link p-3 rounded-lg bg-brand-card/50 hover:bg-brand-card hover:text-brand-gold flex items-center gap-2">
+          <i data-lucide="truck" class="w-4 h-4 text-brand-gold"></i> Catering & Rozvoz
+        </a>
+        <a href="#galeria" class="mobile-nav-link p-3 rounded-lg bg-brand-card/50 hover:bg-brand-card hover:text-brand-gold flex items-center gap-2">
+          <i data-lucide="image" class="w-4 h-4 text-brand-terracotta"></i> Fotogaléria
+        </a>
+      </div>
+
+      <div class="pt-2 border-t border-brand-border/40 flex flex-col gap-3">
+        <a href="#rezervacia" class="mobile-nav-link flex items-center justify-center gap-2 w-full py-3 bg-brand-terracotta text-white rounded-xl font-bold shadow-warm-glow">
+          <i data-lucide="calendar" class="w-4 h-4"></i> Rezervovať stôl alebo salónik
+        </a>
+        <a href="tel:+421948777300" class="flex items-center justify-center gap-2 w-full py-2.5 bg-brand-card border border-brand-border text-brand-cream rounded-xl font-semibold">
+          <i data-lucide="phone" class="w-4 h-4 text-brand-gold"></i> Zavolať: +421 948 777 300
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="flex-grow">
+
+    <!-- HERO SECTION -->
+    <section id="domov" class="relative min-h-[85vh] flex items-center justify-center overflow-hidden py-16 lg:py-24">
+      <!-- Background Image with Gradient Overlay -->
+      <div class="absolute inset-0 z-0">
+        <img src="images/hero_goose.jpg" alt="Tradičná pečená hus v hlinenom pekáči" class="w-full h-full object-cover object-center filter brightness-[0.38] contrast-[1.08] scale-105 transform animate-pulse-slow">
+        <div class="absolute inset-0 bg-gradient-to-t from-brand-charcoal via-brand-charcoal/60 to-brand-charcoal/30"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-brand-charcoal/90 via-transparent to-brand-charcoal/70"></div>
+      </div>
+
+      <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center sm:text-left flex flex-col lg:flex-row items-center justify-between gap-12">
+        
+        <!-- Left Hero Text -->
+        <div class="max-w-2xl space-y-6">
+          
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-terracotta/20 border border-brand-terracotta/40 text-brand-gold-light text-xs sm:text-sm font-semibold tracking-wide backdrop-blur-md">
+            <i data-lucide="award" class="w-4 h-4 text-brand-gold"></i>
+            <span>30 rokov poctivého grobského remesla • 1994 – 2026</span>
+          </div>
+
+          <h1 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-[1.15]">
+            Pravé husacie hody <br class="hidden sm:inline">
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-gold via-brand-gold-light to-brand-gold font-serif italic">
+              pečené v hlinených pekáčoch
+            </span>
+          </h1>
+
+          <p class="text-brand-cream/85 text-base sm:text-lg font-light leading-relaxed">
+            Vitajte v rodinnej reštaurácii <strong class="text-brand-gold font-medium">Husacina u Galika</strong> v Slovenskom Grobe. Už viac ako 30 rokov pečieme husi a kačice tradičnou pomalou metódou podľa receptúr starých mám. Vychutnajte si chrumkavú kôrku, jemnú husaciu pečeň s jablkami, domáce mastené lokše a vybrané malokarpatské vína.
+          </p>
+
+          <!-- Action buttons -->
+          <div class="pt-2 flex flex-wrap items-center justify-center sm:justify-start gap-4">
+            <a href="#rezervacia" class="flex items-center gap-2.5 bg-brand-terracotta hover:bg-brand-terracotta-hover text-white text-base font-bold px-7 py-3.5 rounded-xl shadow-warm-glow hover:shadow-2xl transition duration-300 transform hover:-translate-y-0.5">
+              <i data-lucide="calendar-check" class="w-5 h-5"></i>
+              <span>Rezervovať stôl</span>
+            </a>
+            <a href="#menu" class="flex items-center gap-2.5 bg-brand-card/80 hover:bg-brand-card border border-brand-border text-brand-cream hover:text-brand-gold text-base font-semibold px-6 py-3.5 rounded-xl transition duration-300">
+              <i data-lucide="utensils-crossed" class="w-5 h-5 text-brand-gold"></i>
+              <span>Jedálny lístok & Cenník</span>
+            </a>
+            <a href="#kalkulacka" class="flex items-center gap-2 text-brand-gold hover:text-brand-gold-light text-sm font-semibold underline underline-offset-4 px-2 py-1 transition">
+              <i data-lucide="calculator" class="w-4 h-4"></i>
+              <span>Kalkulačka porcií pre skupiny</span>
+            </a>
+          </div>
+
+          <!-- Trust Badges -->
+          <div class="pt-6 grid grid-cols-2 sm:grid-cols-4 gap-4 border-t border-brand-border/60 text-left">
+            <div>
+              <p class="text-2xl sm:text-3xl font-bold text-brand-gold font-serif">30+</p>
+              <p class="text-xs text-brand-muted">Rokov tradície v Grobe</p>
+            </div>
+            <div>
+              <p class="text-2xl sm:text-3xl font-bold text-brand-gold font-serif">100%</p>
+              <p class="text-xs text-brand-muted">Hlinené pekáče</p>
+            </div>
+            <div>
+              <p class="text-2xl sm:text-3xl font-bold text-brand-gold font-serif">100+</p>
+              <p class="text-xs text-brand-muted">Kapacita v 4 salónikoch</p>
+            </div>
+            <div>
+              <p class="text-2xl sm:text-3xl font-bold text-brand-gold font-serif">4.8 ★</p>
+              <p class="text-xs text-brand-muted">Hodnotenie spokojných hostí</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right Hero Interactive Feature Card -->
+        <div class="w-full max-w-md lg:max-w-sm">
+          <div class="glass-card p-6 sm:p-7 rounded-2xl border border-brand-border/80 shadow-card-elevated relative overflow-hidden">
+            
+            <div class="absolute -right-12 -top-12 w-36 h-36 bg-brand-terracotta/20 rounded-full blur-2xl pointer-events-none"></div>
+
+            <div class="flex items-center justify-between pb-4 border-b border-brand-border/60">
+              <div>
+                <span class="text-xs uppercase tracking-widest text-brand-terracotta font-bold">Dnešná ponuka</span>
+                <h3 class="text-lg font-serif font-bold text-white">Kráľovské grobské hody</h3>
+              </div>
+              <span class="p-2 bg-brand-terracotta/20 text-brand-gold rounded-lg">
+                <i data-lucide="sparkles" class="w-5 h-5"></i>
+              </span>
+            </div>
+
+            <!-- Highlights list -->
+            <div class="py-4 space-y-3 text-sm">
+              <div class="flex items-start gap-3">
+                <i data-lucide="check" class="w-4 h-4 text-brand-gold shrink-0 mt-0.5"></i>
+                <div>
+                  <strong class="text-white">Pečená domáca hus (1/4 alebo 1/2)</strong>
+                  <p class="text-xs text-brand-muted">Pomaly pečená dozlatista v hlinenej mise</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <i data-lucide="check" class="w-4 h-4 text-brand-gold shrink-0 mt-0.5"></i>
+                <div>
+                  <strong class="text-white">Husacia pečeň s jablkami</strong>
+                  <p class="text-xs text-brand-muted">Gurmánska delikatesa na rozpustenom sadle</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <i data-lucide="check" class="w-4 h-4 text-brand-gold shrink-0 mt-0.5"></i>
+                <div>
+                  <strong class="text-white">Čerstvo mastené zemiakové lokše</strong>
+                  <p class="text-xs text-brand-muted">Možnosť slaných, bezlepkových aj sladkých</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <i data-lucide="check" class="w-4 h-4 text-brand-gold shrink-0 mt-0.5"></i>
+                <div>
+                  <strong class="text-white">Dusená červená & biela kapusta</strong>
+                  <p class="text-xs text-brand-muted">Karolínsky domáci recept s jablkami a rascou</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Quick Reservation inside Hero card -->
+            <div class="pt-4 border-t border-brand-border/60">
+              <div class="flex items-center justify-between text-xs text-brand-muted mb-3">
+                <span>Stoly na víkend:</span>
+                <span class="text-emerald-400 font-semibold flex items-center gap-1">
+                  <span class="h-1.5 w-1.5 rounded-full bg-emerald-400 inline-block animate-pulse"></span>
+                  Prijímame rezervácie
+                </span>
+              </div>
+              <a href="#rezervacia" class="block w-full py-2.5 px-4 text-center rounded-xl bg-gradient-to-r from-brand-gold to-brand-gold-hover hover:from-brand-gold-light hover:to-brand-gold text-brand-charcoal font-bold text-sm shadow-gold-glow transition">
+                Rýchla nezáväzná rezervácia
+              </a>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- TRADITION & HERITAGE SECTION -->
+    <section id="tradicia" class="py-20 bg-brand-deep/80 relative border-y border-brand-border/40">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Title -->
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span class="text-brand-terracotta text-sm uppercase tracking-widest font-bold">Poctivé rodinné remeslo</span>
+          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-white mt-2">
+            Prečo chutí husacina u Galika inak?
+          </h2>
+          <div class="w-20 h-1 bg-brand-gold mx-auto my-4 rounded-full"></div>
+          <p class="text-brand-muted text-base sm:text-lg">
+            Slovenský Grob je preslávený ako hlavné mesto husaciny. U Galika udržiavame pôvodné pravidlá, ktoré robia husacie mäso dokonale krehkým, šťavnatým a voňavým.
+          </p>
+        </div>
+
+        <!-- 3 Pillars Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          
+          <!-- Pillar 1 -->
+          <div class="glass-card rounded-2xl overflow-hidden border border-brand-border group hover:border-brand-gold/60 transition-all duration-300">
+            <div class="h-56 overflow-hidden relative">
+              <img src="images/goose_pan.jpg" alt="Pomalé pečenie v hlinenom pekáči" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-brand-charcoal via-transparent to-transparent"></div>
+              <span class="absolute top-4 left-4 px-3 py-1 bg-brand-terracotta/90 text-white text-xs font-bold rounded-lg uppercase tracking-wider backdrop-blur-sm">
+                Tajomstvo chuti
+              </span>
+            </div>
+            <div class="p-6">
+              <h3 class="font-serif text-xl font-bold text-white mb-2 group-hover:text-brand-gold transition">
+                1. Tradičné hlinené pekáče
+              </h3>
+              <p class="text-brand-muted text-sm leading-relaxed">
+                Husi nepečieme v nerezových konvektomatoch. Používame špeciálne pórovité hlinené pekáče, ktoré teplo akumulujú pomaly a rovnomerne. Mäso sa podlieva len vlastnou masťou a vodou celých 3 až 4 hodiny, kým nie je kôrka chrumkavá a mäso neodpadáva od kosti.
+              </p>
+            </div>
+          </div>
+
+          <!-- Pillar 2 -->
+          <div class="glass-card rounded-2xl overflow-hidden border border-brand-border group hover:border-brand-gold/60 transition-all duration-300">
+            <div class="h-56 overflow-hidden relative">
+              <img src="images/lokse_dish.jpg" alt="Ručne vaľkané mastené lokše" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-brand-charcoal via-transparent to-transparent"></div>
+              <span class="absolute top-4 left-4 px-3 py-1 bg-brand-gold/90 text-brand-charcoal text-xs font-bold rounded-lg uppercase tracking-wider backdrop-blur-sm">
+                Ručná výroba
+              </span>
+            </div>
+            <div class="p-6">
+              <h3 class="font-serif text-xl font-bold text-white mb-2 group-hover:text-brand-gold transition">
+                2. Domáce zemiakové lokše
+              </h3>
+              <p class="text-brand-muted text-sm leading-relaxed">
+                Poctivé grobské lokše z uvarených zemiakov pečené nasucho na horúcej platni. Potreté čerstvou voňavou husacou masťou. V ponuke máme tradičné mastené, cesnakové, plnené dusenou kapustou či pečienkovou plnkou, ale aj makové, tvarohové a bezlepkové.
+              </p>
+            </div>
+          </div>
+
+          <!-- Pillar 3 -->
+          <div class="glass-card rounded-2xl overflow-hidden border border-brand-border group hover:border-brand-gold/60 transition-all duration-300">
+            <div class="h-56 overflow-hidden relative">
+              <img src="images/goose_liver.jpg" alt="Delikátna husacia pečeň s jablkami" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-brand-charcoal via-transparent to-transparent"></div>
+              <span class="absolute top-4 left-4 px-3 py-1 bg-brand-terracotta/90 text-white text-xs font-bold rounded-lg uppercase tracking-wider backdrop-blur-sm">
+                Gurmánsky klenot
+              </span>
+            </div>
+            <div class="p-6">
+              <h3 class="font-serif text-xl font-bold text-white mb-2 group-hover:text-brand-gold transition">
+                3. Husacia pečeň & malokarpatské vína
+              </h3>
+              <p class="text-brand-muted text-sm leading-relaxed">
+                Skutočný gurmánsky zážitok začína predjedlom – zamatovou husacou pečeňou restovanou s plátkami sladkých jabĺk na husacej masti. K husacine podávame vybrané vína z malokarpatského regiónu (Pezinok, Modra, Svätý Jur), ktoré dokonale pretnú bohatosť jedla.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Quote Banner -->
+        <div class="mt-14 p-8 rounded-2xl bg-gradient-to-r from-brand-card via-brand-deep to-brand-card border border-brand-gold/30 text-center relative overflow-hidden">
+          <i data-lucide="quote" class="w-16 h-16 text-brand-gold/10 absolute -left-2 -top-2"></i>
+          <p class="font-serif text-xl sm:text-2xl italic text-brand-cream max-w-3xl mx-auto leading-relaxed">
+            „Naším cieľom nie je masová gastronómia, ale zachovanie rodinnej atmosféry, kde každý hosť sedí ako u starej mamy pri stole plnom voňavých pekáčov.“
+          </p>
+          <p class="mt-4 text-xs tracking-widest uppercase text-brand-gold font-bold">
+            — Paula Galiková, rodinná reštaurácia Husacina u Galika
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- INTERACTIVE MENU & FOOD EXPLORER -->
+    <section id="menu" class="py-20 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Header -->
+        <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-12">
+          <div>
+            <span class="text-brand-terracotta text-sm uppercase tracking-widest font-bold">Autentická grobská ponuka</span>
+            <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-white mt-1">
+              Jedálny & Nápojový lístok
+            </h2>
+            <p class="text-brand-muted text-sm sm:text-base mt-2 max-w-xl">
+              Pripravené podľa tradičných receptúr. Kliknite na položku a pridajte si ju do vlastného plánu hostiny, ktorý môžete jedným klikom odoslať v rezervácii.
+            </p>
+          </div>
+
+          <!-- Search & Filter Controls -->
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full lg:w-auto">
+            <div class="relative min-w-[260px]">
+              <i data-lucide="search" class="w-4 h-4 text-brand-muted absolute left-3.5 top-1/2 -translate-y-1/2"></i>
+              <input type="text" id="menuSearchInput" placeholder="Hľadať v lístku (napr. pečeň, lokša, kačica)..." class="w-full bg-brand-deep border border-brand-border rounded-xl pl-10 pr-4 py-2.5 text-sm text-white placeholder-brand-muted focus:outline-none focus:border-brand-gold transition">
+              <button id="clearSearchBtn" class="hidden absolute right-3 top-1/2 -translate-y-1/2 text-brand-muted hover:text-white">
+                <i data-lucide="x" class="w-4 h-4"></i>
+              </button>
+            </div>
+
+            <!-- Download Official PDF -->
+            <a href="https://husacinaugalika.sk/wp-content/uploads/2026/03/Jedalny-zostava-2026-2.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-brand-deep hover:bg-brand-card border border-brand-border text-brand-cream text-xs font-semibold rounded-xl transition hover:border-brand-gold shrink-0" title="Stiahnuť pôvodný lístok v PDF">
+              <i data-lucide="file-text" class="w-4 h-4 text-brand-gold"></i>
+              <span>PDF lístok (2026)</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Category Tabs -->
+        <div class="flex items-center gap-2 overflow-x-auto pb-4 mb-8 scrollbar-none no-scrollbar">
+          <button class="menu-tab-btn active px-4 py-2 rounded-xl text-sm font-semibold transition shrink-0 bg-brand-terracotta text-white shadow-warm-glow" data-category="all">
+            Všetky špeciality
+          </button>
+          <button class="menu-tab-btn px-4 py-2 rounded-xl text-sm font-semibold transition shrink-0 bg-brand-deep hover:bg-brand-card text-brand-cream/90 border border-brand-border" data-category="hody">
+            Tradičné Husi & Kačice
+          </button>
+          <button class="menu-tab-btn px-4 py-2 rounded-xl text-sm font-semibold transition shrink-0 bg-brand-deep hover:bg-brand-card text-brand-cream/90 border border-brand-border" data-category="pecen">
+            Husacia pečeň & Predjedlá
+          </button>
+          <button class="menu-tab-btn px-4 py-2 rounded-xl text-sm font-semibold transition shrink-0 bg-brand-deep hover:bg-brand-card text-brand-cream/90 border border-brand-border" data-category="lokse">
+            Lokše & Prílohy
+          </button>
+          <button class="menu-tab-btn px-4 py-2 rounded-xl text-sm font-semibold transition shrink-0 bg-brand-deep hover:bg-brand-card text-brand-cream/90 border border-brand-border" data-category="menu">
+            Zostavené Menu (1 – 22)
+          </button>
+          <button class="menu-tab-btn px-4 py-2 rounded-xl text-sm font-semibold transition shrink-0 bg-brand-deep hover:bg-brand-card text-brand-cream/90 border border-brand-border" data-category="misy">
+            Misy & Pečené prasiatka
+          </button>
+          <button class="menu-tab-btn px-4 py-2 rounded-xl text-sm font-semibold transition shrink-0 bg-brand-deep hover:bg-brand-card text-brand-cream/90 border border-brand-border" data-category="napoj">
+            Vína & Nápoje
+          </button>
+          <button class="menu-tab-btn px-4 py-2 rounded-xl text-sm font-semibold transition shrink-0 bg-brand-deep hover:bg-brand-card text-brand-cream/90 border border-brand-border" data-category="dezerty">
+            Dezerty & Štrúdle
+          </button>
+        </div>
+
+        <!-- Menu Items Grid Container -->
+        <div id="menuItemsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Populated dynamically via JS -->
+        </div>
+
+        <!-- No results notification -->
+        <div id="noMenuResults" class="hidden py-16 text-center text-brand-muted">
+          <i data-lucide="utensils" class="w-12 h-12 mx-auto text-brand-border mb-3"></i>
+          <p class="text-lg font-medium text-brand-cream">Nenašli sa žiadne položky zodpovedajúce hľadaniu</p>
+          <p class="text-sm mt-1">Skúste zadať iný výraz alebo zrušiť filter kategórií.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- INTERACTIVE FEAST & PARTY CALCULATOR -->
+    <section id="kalkulacka" class="py-20 bg-gradient-to-b from-brand-deep to-brand-charcoal relative border-y border-brand-border/60">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-14">
+          <span class="text-brand-gold text-sm uppercase tracking-widest font-bold">Interaktívny plánovač hodov</span>
+          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-white mt-1">
+            Kalkulačka hostiny pre skupiny
+          </h2>
+          <div class="w-20 h-1 bg-brand-terracotta mx-auto my-4 rounded-full"></div>
+          <p class="text-brand-muted text-base">
+            Neviete, koľko husí a lokší objednať pre vašu rodinu či firmu? Nastavte počet hostí a preferencie. Náš algoritmus vám odporučí optimálne množstvo porcií, salónik a orientačnú cenu.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          
+          <!-- Controls Panel (Left 7 cols) -->
+          <div class="lg:col-span-7 glass-card p-6 sm:p-8 rounded-2xl border border-brand-border space-y-7 shadow-card-elevated">
+            
+            <!-- Guests Slider -->
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <label for="calcGuestsRange" class="font-semibold text-white flex items-center gap-2">
+                  <i data-lucide="users" class="w-5 h-5 text-brand-gold"></i>
+                  <span>Počet hostí na hostine:</span>
+                </label>
+                <div class="flex items-center gap-2">
+                  <span id="calcGuestsValue" class="text-2xl font-serif font-bold text-brand-gold">8</span>
+                  <span class="text-xs text-brand-muted">osôb</span>
+                </div>
+              </div>
+              <input type="range" id="calcGuestsRange" min="2" max="60" value="8" step="1" class="w-full h-2.5 bg-brand-deep rounded-lg appearance-none cursor-pointer accent-brand-terracotta">
+              <div class="flex justify-between text-[11px] text-brand-muted mt-2">
+                <span>2 (Romantické)</span>
+                <span>8 (Rodina)</span>
+                <span>20 (Veľká oslava)</span>
+                <span>40 (Firma)</span>
+                <span>60+ (Banket)</span>
+              </div>
+            </div>
+
+            <!-- Feast Style Select -->
+            <div>
+              <label class="font-semibold text-white block mb-3 flex items-center gap-2">
+                <i data-lucide="crown" class="w-5 h-5 text-brand-gold"></i>
+                <span>Úroveň hodov (Balíček):</span>
+              </label>
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-3" id="calcPackageOptions">
+                <button type="button" class="calc-package-btn active p-3 rounded-xl border border-brand-gold bg-brand-gold/10 text-left transition" data-package="klasik">
+                  <p class="font-bold text-white text-sm">Tradičný Klasik</p>
+                  <p class="text-xs text-brand-muted mt-1">Hus/kačica, kapusta, lokše a vývar</p>
+                  <p class="text-xs font-semibold text-brand-gold mt-2">cca ~28 € / os.</p>
+                </button>
+
+                <button type="button" class="calc-package-btn p-3 rounded-xl border border-brand-border bg-brand-deep hover:bg-brand-card text-left transition" data-package="kralovsky">
+                  <p class="font-bold text-white text-sm">Kráľovské Hody</p>
+                  <p class="text-xs text-brand-muted mt-1">Pečeň s jablkami, husacina, lokše, štrúdľa, víno</p>
+                  <p class="text-xs font-semibold text-brand-gold mt-2">cca ~45 € / os.</p>
+                </button>
+
+                <button type="button" class="calc-package-btn p-3 rounded-xl border border-brand-border bg-brand-deep hover:bg-brand-card text-left transition" data-package="gurman">
+                  <p class="font-bold text-white text-sm">Gurmánska Hostina</p>
+                  <p class="text-xs text-brand-muted mt-1">Husacina + pečené prasiatko / mäsová misa</p>
+                  <p class="text-xs font-semibold text-brand-gold mt-2">cca ~52 € / os.</p>
+                </button>
+              </div>
+            </div>
+
+            <!-- Preference Toggles -->
+            <div class="pt-2 border-t border-brand-border/60 space-y-3">
+              <span class="text-xs uppercase tracking-wider text-brand-muted font-bold block mb-2">Doplnky hostiny</span>
+              
+              <label class="flex items-center justify-between p-3 rounded-xl bg-brand-deep/60 hover:bg-brand-deep cursor-pointer border border-brand-border/60 transition">
+                <div class="flex items-center gap-3">
+                  <i data-lucide="wine" class="w-5 h-5 text-brand-terracotta"></i>
+                  <div>
+                    <span class="text-sm font-medium text-white">Vrátane malokarpatského vína</span>
+                    <p class="text-xs text-brand-muted">Počítame 1 fľašu akostného vína na 2 dospelé osoby</p>
+                  </div>
+                </div>
+                <input type="checkbox" id="calcWineToggle" checked class="w-5 h-5 accent-brand-terracotta rounded cursor-pointer">
+              </label>
+
+              <label class="flex items-center justify-between p-3 rounded-xl bg-brand-deep/60 hover:bg-brand-deep cursor-pointer border border-brand-border/60 transition">
+                <div class="flex items-center gap-3">
+                  <i data-lucide="cake" class="w-5 h-5 text-brand-gold"></i>
+                  <div>
+                    <span class="text-sm font-medium text-white">Domáce ťahané jablkové štrúdle</span>
+                    <p class="text-xs text-brand-muted">Maková, orechová alebo tvarohová ako sladká bodka</p>
+                  </div>
+                </div>
+                <input type="checkbox" id="calcStrudelToggle" checked class="w-5 h-5 accent-brand-terracotta rounded cursor-pointer">
+              </label>
+            </div>
+
+          </div>
+
+          <!-- Calculation Results (Right 5 cols) -->
+          <div class="lg:col-span-5 glass-card p-6 sm:p-8 rounded-2xl border-2 border-brand-gold/40 shadow-gold-glow relative overflow-hidden">
+            <div class="flex items-center justify-between pb-4 border-b border-brand-border/60">
+              <div class="flex items-center gap-2">
+                <i data-lucide="sparkles" class="w-5 h-5 text-brand-gold"></i>
+                <h3 class="font-serif text-lg font-bold text-white">Odporúčané zostavenie</h3>
+              </div>
+              <span class="text-xs px-2.5 py-1 bg-brand-gold/15 text-brand-gold border border-brand-gold/30 rounded-full font-bold">
+                Ideálne na oslavu
+              </span>
+            </div>
+
+            <!-- Dynamic Ingredients List -->
+            <div class="py-5 space-y-3.5 text-sm" id="calcSummaryList">
+              <!-- Populated by JS -->
+            </div>
+
+            <!-- Recommended Room Highlight -->
+            <div id="calcRecommendedRoom" class="p-4 rounded-xl bg-brand-deep border border-brand-border mb-6">
+              <p class="text-xs text-brand-muted uppercase tracking-wider font-semibold">Odporúčaný salónik:</p>
+              <p class="text-base font-bold text-brand-gold mt-0.5" id="calcRoomName">Salónik 1 (kapacita do 14 osôb)</p>
+              <p class="text-xs text-brand-muted mt-1" id="calcRoomDesc">Príjemné súkromné posedenie s vlastnou atmosférou.</p>
+            </div>
+
+            <!-- Price Breakdown -->
+            <div class="pt-4 border-t border-brand-border/80 flex items-baseline justify-between mb-6">
+              <div>
+                <p class="text-xs text-brand-muted">Odhadovaná cena hostiny:</p>
+                <p class="text-xs text-brand-muted">cca <span id="calcPerPersonPrice" class="font-semibold text-white">45,00 €</span> / osoba</p>
+              </div>
+              <div class="text-right">
+                <span id="calcTotalPrice" class="text-3xl font-serif font-bold text-brand-gold">360,00 €</span>
+                <p class="text-[10px] text-brand-muted">vrátane DPH a servisu</p>
+              </div>
+            </div>
+
+            <!-- Transfer to booking button -->
+            <button id="calcApplyToBookingBtn" class="w-full py-3.5 px-6 rounded-xl bg-gradient-to-r from-brand-terracotta to-brand-terracotta-hover hover:from-brand-terracotta-light hover:to-brand-terracotta text-white font-bold text-sm shadow-warm-glow flex items-center justify-center gap-2 transition duration-300">
+              <i data-lucide="calendar-plus" class="w-4 h-4"></i>
+              <span>Rezervovať túto hostinu</span>
+            </button>
+            <p class="text-[11px] text-center text-brand-muted mt-2">
+              Kalkulácia je nezáväzná. Konečné menu a špeciálne diéty doladíme telefonicky.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- VENUES & PRIVATE SALONS EXPLORER -->
+    <section id="priestory" class="py-20 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-14">
+          <span class="text-brand-terracotta text-sm uppercase tracking-widest font-bold">Priestory na mieru</span>
+          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-white mt-1">
+            Salóniky & Reštaurácia pre vašu udalosť
+          </h2>
+          <div class="w-20 h-1 bg-brand-gold mx-auto my-4 rounded-full"></div>
+          <p class="text-brand-muted text-base">
+            U Galika nájdete ideálny priestor pre akúkoľvek príležitosť – od intímnej rodinnej večere cez firemný teambuilding až po veľkú svadobnú hostinu či jubileum.
+          </p>
+        </div>
+
+        <!-- Room Selector Tabs -->
+        <div class="flex items-center justify-center gap-2 overflow-x-auto pb-4 mb-8">
+          <button class="room-tab-btn active px-4 py-2.5 rounded-xl text-sm font-semibold transition bg-brand-terracotta text-white shadow-warm-glow shrink-0" data-room="main">
+            Hlavná reštaurácia (50 os.)
+          </button>
+          <button class="room-tab-btn px-4 py-2.5 rounded-xl text-sm font-semibold transition bg-brand-deep hover:bg-brand-card text-brand-cream border border-brand-border shrink-0" data-room="salon30">
+            Salónik pre 30 osôb
+          </button>
+          <button class="room-tab-btn px-4 py-2.5 rounded-xl text-sm font-semibold transition bg-brand-deep hover:bg-brand-card text-brand-cream border border-brand-border shrink-0" data-room="salon14">
+            Salónik pre 14 osôb
+          </button>
+          <button class="room-tab-btn px-4 py-2.5 rounded-xl text-sm font-semibold transition bg-brand-deep hover:bg-brand-card text-brand-cream border border-brand-border shrink-0" data-room="salon10">
+            VIP Salónik pre 10 osôb
+          </button>
+          <button class="room-tab-btn px-4 py-2.5 rounded-xl text-sm font-semibold transition bg-brand-deep hover:bg-brand-card text-brand-cream border border-brand-border shrink-0" data-room="terasa">
+            Zimná & Letná Terasa
+          </button>
+        </div>
+
+        <!-- Room Display Container -->
+        <div id="roomDetailCard" class="glass-card rounded-2xl border border-brand-border overflow-hidden shadow-card-elevated">
+          <!-- Populated by JS -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- GIFT VOUCHER WITH LIVE PREVIEW -->
+    <section id="poukaz" class="py-20 bg-brand-deep/90 relative border-y border-brand-border/60">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <!-- Left: Voucher Configurator -->
+          <div class="lg:col-span-6 space-y-6">
+            <div>
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-brand-gold/20 text-brand-gold border border-brand-gold/40 rounded-full text-xs font-bold uppercase tracking-wider">
+                <i data-lucide="tag" class="w-3.5 h-3.5"></i>
+                Mimoriadny bonus: 10% zľava na nákup
+              </span>
+              <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white mt-3">
+                Darčekový poukaz na husacie hody
+              </h2>
+              <p class="text-brand-muted text-sm sm:text-base mt-2">
+                Potešte svojich blízkych, rodičov, zamestnancov alebo obchodných partnerov nezabudnuteľným kulinárskym zážitkom. Pri nákupe poukazu získavate <strong class="text-brand-gold">10% zľavu</strong> (napr. za 100 € poukaz zaplatíte len 90 €).
+              </p>
+            </div>
+
+            <!-- Value selection -->
+            <div>
+              <label class="block text-sm font-semibold text-white mb-2">Vyberte hodnotu poukazu:</label>
+              <div class="grid grid-cols-4 gap-2.5" id="voucherAmountGroup">
+                <button type="button" class="voucher-amt-btn p-3 rounded-xl border border-brand-border bg-brand-card hover:bg-brand-card/80 text-center font-bold text-brand-cream transition" data-amount="50">
+                  50 €
+                  <span class="block text-[10px] text-brand-gold font-normal">Platíte 45 €</span>
+                </button>
+                <button type="button" class="voucher-amt-btn active p-3 rounded-xl border border-brand-gold bg-brand-gold/15 text-center font-bold text-brand-gold transition" data-amount="100">
+                  100 €
+                  <span class="block text-[10px] text-brand-gold font-normal">Platíte 90 €</span>
+                </button>
+                <button type="button" class="voucher-amt-btn p-3 rounded-xl border border-brand-border bg-brand-card hover:bg-brand-card/80 text-center font-bold text-brand-cream transition" data-amount="150">
+                  150 €
+                  <span class="block text-[10px] text-brand-gold font-normal">Platíte 135 €</span>
+                </button>
+                <button type="button" class="voucher-amt-btn p-3 rounded-xl border border-brand-border bg-brand-card hover:bg-brand-card/80 text-center font-bold text-brand-cream transition" data-amount="200">
+                  200 €
+                  <span class="block text-[10px] text-brand-gold font-normal">Platíte 180 €</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Recipient & Note -->
+            <div class="space-y-3">
+              <div>
+                <label for="voucherRecipientInput" class="block text-xs font-semibold text-brand-muted uppercase tracking-wider mb-1">Meno obdarovanej osoby:</label>
+                <input type="text" id="voucherRecipientInput" value="Ján & Mária Novákovci" placeholder="Napr. Rodina Kováčová" class="w-full bg-brand-card border border-brand-border rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-brand-gold">
+              </div>
+
+              <div>
+                <label for="voucherNoteInput" class="block text-xs font-semibold text-brand-muted uppercase tracking-wider mb-1">Osobné venovanie (nepovinné):</label>
+                <input type="text" id="voucherNoteInput" value="K životnému jubileu s láskou od celej rodiny" placeholder="Napr. K 50. narodeninám..." class="w-full bg-brand-card border border-brand-border rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-brand-gold">
+              </div>
+            </div>
+
+            <!-- Features list -->
+            <div class="space-y-2 text-xs text-brand-muted">
+              <div class="flex items-center gap-2">
+                <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400"></i>
+                <span>Platnosť počas celého kalendárneho roka (vrátane hlavnej husacej sezóny)</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400"></i>
+                <span>Každý poukaz obsahuje unikátny verifikačný kód a pečiatku</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400"></i>
+                <span>Doručenie elektronicky do e-mailu alebo luxusné darčekové balenie poštou</span>
+              </div>
+            </div>
+
+            <button id="orderVoucherBtn" class="w-full sm:w-auto px-8 py-3.5 bg-brand-gold hover:bg-brand-gold-hover text-brand-charcoal font-bold rounded-xl shadow-gold-glow flex items-center justify-center gap-2 transition duration-300">
+              <i data-lucide="gift" class="w-4 h-4"></i>
+              <span>Objednať poukaz so zľavou 10%</span>
+            </button>
+
+          </div>
+
+          <!-- Right: Live Luxury Certificate Preview -->
+          <div class="lg:col-span-6 flex justify-center">
+            <div class="w-full max-w-md bg-gradient-to-br from-[#2D241E] via-[#211A16] to-[#17120F] border-2 border-brand-gold/60 p-8 rounded-2xl shadow-2xl relative overflow-hidden text-center space-y-6">
+              
+              <!-- Luxury Corners Ornament -->
+              <div class="absolute top-2 left-2 text-brand-gold/30 text-xs">✦</div>
+              <div class="absolute top-2 right-2 text-brand-gold/30 text-xs">✦</div>
+              <div class="absolute bottom-2 left-2 text-brand-gold/30 text-xs">✦</div>
+              <div class="absolute bottom-2 right-2 text-brand-gold/30 text-xs">✦</div>
+
+              <!-- Header -->
+              <div>
+                <p class="text-[10px] uppercase tracking-[0.3em] text-brand-gold font-bold">DARČEKOVÝ POUKAZ</p>
+                <h3 class="font-serif text-2xl font-bold text-white mt-1">Husacina u Galika</h3>
+                <p class="text-[11px] text-brand-muted">Slovenský Grob • Tradičné pečené husi</p>
+              </div>
+
+              <!-- Value Badge -->
+              <div class="py-3 px-6 bg-brand-charcoal/80 border border-brand-gold/40 rounded-xl inline-block mx-auto shadow-inner">
+                <span class="text-xs uppercase tracking-wider text-brand-muted block">HODNOTA POUKAZU</span>
+                <span id="previewVoucherAmount" class="text-4xl font-serif font-bold text-brand-gold tracking-tight">100 €</span>
+              </div>
+
+              <!-- Recipient & Message -->
+              <div class="space-y-2 border-t border-b border-brand-border/60 py-4">
+                <p class="text-xs text-brand-muted">Vystavené pre:</p>
+                <p id="previewVoucherRecipient" class="font-serif text-lg font-bold text-white italic">Ján & Mária Novákovci</p>
+                <p id="previewVoucherNote" class="text-xs text-brand-cream/80 italic font-light">„K životnému jubileu s láskou od celej rodiny“</p>
+              </div>
+
+              <!-- Footer with security stamp -->
+              <div class="flex items-center justify-between text-[11px] text-brand-muted pt-2">
+                <div class="text-left">
+                  <span>Kód: <strong class="text-white font-mono">GALIK-2026-X84</strong></span>
+                  <p class="text-[9px]">Overenie v reštaurácii</p>
+                </div>
+                <div class="flex items-center gap-1.5 text-brand-gold">
+                  <i data-lucide="shield-check" class="w-4 h-4"></i>
+                  <span class="font-semibold text-xs uppercase tracking-wider">Garancia originality</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SERVICES & CATERING & PIGLET SECTION -->
+    <section id="sluzby" class="py-20 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span class="text-brand-terracotta text-sm uppercase tracking-widest font-bold">Komplexný servis</span>
+          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-white mt-1">
+            Donáška, Catering & Pečené prasiatka
+          </h2>
+          <div class="w-20 h-1 bg-brand-gold mx-auto my-4 rounded-full"></div>
+          <p class="text-brand-muted text-base">
+            Nemôžete prísť do Slovenského Grobu? Žiaden problém. Kompletné teplé husacie hody, pečené prasiatka či mäsové misy vám privezieme priamo domov alebo do vašej firmy.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          
+          <!-- Service 1: Donáška & Termoboxy -->
+          <div class="glass-card p-7 rounded-2xl border border-brand-border hover:border-brand-gold transition duration-300 space-y-4">
+            <div class="w-12 h-12 rounded-xl bg-brand-terracotta/20 text-brand-terracotta flex items-center justify-center">
+              <i data-lucide="truck" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-serif text-xl font-bold text-white">Rozvoz v termoboxoch</h3>
+            <p class="text-sm text-brand-muted leading-relaxed">
+              Čerstvo upečené husi a kačice, teplé mastené lokše a dusenú kapustu balíme do profesionálnych termoboxov. Jedlo dorazí horúce a voňavé do Bratislavy, Pezinka, Senca a okolitých obcí.
+            </p>
+            <ul class="text-xs text-brand-cream/80 space-y-1.5 pt-2">
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-gold"></i> Objednávka aspoň 2 dni vopred</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-gold"></i> Dovoz podľa individuálnej dohody</li>
+            </ul>
+          </div>
+
+          <!-- Service 2: Pečené prasiatko -->
+          <div class="glass-card p-7 rounded-2xl border border-brand-border hover:border-brand-gold transition duration-300 space-y-4">
+            <div class="w-12 h-12 rounded-xl bg-brand-gold/20 text-brand-gold flex items-center justify-center">
+              <i data-lucide="flame" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-serif text-xl font-bold text-white">Pečené prasiatka vcelku</h3>
+            <p class="text-sm text-brand-muted leading-relaxed">
+              Tradičná slávnostná špecialita pre veľké oslavy a firemné udalosti. Prasiatko pečené s chrumkavou kožkou podávané s domácim chlebom, horčicou, chrenom, kyslými uhorkami a feferónkami.
+            </p>
+            <ul class="text-xs text-brand-cream/80 space-y-1.5 pt-2">
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-gold"></i> Objednávka aspoň 7 dní vopred</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-gold"></i> Možnosť dovozu alebo servírovania v salóniku</li>
+            </ul>
+          </div>
+
+          <!-- Service 3: Mäsové misy & Ubytovanie -->
+          <div class="glass-card p-7 rounded-2xl border border-brand-border hover:border-brand-gold transition duration-300 space-y-4">
+            <div class="w-12 h-12 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center">
+              <i data-lucide="bed-double" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-serif text-xl font-bold text-white">Mäsové misy & Ubytovanie</h3>
+            <p class="text-sm text-brand-muted leading-relaxed">
+              Pripravujeme bohaté teplé a studené mäsové misy (pečené rebierka, kolená, zabíjačkové špeciality). Pre hostí, ktorí si chcú vychutnať víno bez starostí o šoférovanie, ponúkame ubytovanie priamo v penzióne.
+            </p>
+            <ul class="text-xs text-brand-cream/80 space-y-1.5 pt-2">
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-gold"></i> Komfortné izby s kúpeľňou a Wi-Fi</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-gold"></i> Súkromné parkovanie vo dvore</li>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PHOTO GALLERY WITH LIGHTBOX -->
+    <section id="galeria" class="py-20 bg-brand-deep/80 relative border-t border-brand-border/60">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-12">
+          <div>
+            <span class="text-brand-terracotta text-sm uppercase tracking-widest font-bold">Atmosféra a jedlo</span>
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white mt-1">Fotogaléria reštaurácie</h2>
+            <p class="text-brand-muted text-sm mt-1">Pohľad do našej kuchyne, salónikov a na slávnostne prestreté stoly.</p>
+          </div>
+
+          <!-- Gallery Filter Buttons -->
+          <div class="flex items-center gap-2 overflow-x-auto pb-2">
+            <button class="gallery-filter-btn active px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-brand-terracotta text-white" data-filter="all">
+              Všetky (12)
+            </button>
+            <button class="gallery-filter-btn px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-brand-deep text-brand-muted border border-brand-border hover:text-white" data-filter="jedlo">
+              Jedlo & Špeciality
+            </button>
+            <button class="gallery-filter-btn px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-brand-deep text-brand-muted border border-brand-border hover:text-white" data-filter="priestory">
+              Salóniky & Terasa
+            </button>
+            <button class="gallery-filter-btn px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-brand-deep text-brand-muted border border-brand-border hover:text-white" data-filter="oslavy">
+              Oslavy & Hostiny
+            </button>
+          </div>
+        </div>
+
+        <!-- Gallery Grid -->
+        <div id="galleryGrid" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+          <!-- Populated by JS -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- RESERVATION & ONLINE BOOKING FORM -->
+    <section id="rezervacia" class="py-20 relative bg-brand-charcoal">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center mb-12">
+          <span class="text-brand-gold text-sm uppercase tracking-widest font-bold">Zabezpečte si stôl včas</span>
+          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-white mt-1">
+            Online rezervácia stola a hostiny
+          </h2>
+          <div class="w-20 h-1 bg-brand-terracotta mx-auto my-4 rounded-full"></div>
+          <p class="text-brand-muted text-sm sm:text-base max-w-xl mx-auto">
+            Vzhľadom na tradičnú niekoľkohodinovú prípravu čerstvých husí v pekáčoch odporúčame rezervovať stôl aspoň 2 dni vopred. Rezerváciu obratom potvrdíme.
+          </p>
+        </div>
+
+        <div class="glass-card p-6 sm:p-10 rounded-2xl border border-brand-border shadow-card-elevated">
+          
+          <form id="reservationForm" class="space-y-6">
+            
+            <!-- Reservation Type Tabs -->
+            <div class="grid grid-cols-2 gap-3 p-1.5 bg-brand-deep rounded-xl border border-brand-border/60">
+              <label class="flex items-center justify-center gap-2 py-2.5 px-4 rounded-lg cursor-pointer text-sm font-semibold transition has-[:checked]:bg-brand-terracotta has-[:checked]:text-white text-brand-muted">
+                <input type="radio" name="resType" value="restaurant" checked class="hidden">
+                <i data-lucide="store" class="w-4 h-4"></i>
+                <span>Stôl v reštaurácii</span>
+              </label>
+
+              <label class="flex items-center justify-center gap-2 py-2.5 px-4 rounded-lg cursor-pointer text-sm font-semibold transition has-[:checked]:bg-brand-terracotta has-[:checked]:text-white text-brand-muted">
+                <input type="radio" name="resType" value="delivery" class="hidden">
+                <i data-lucide="truck" class="w-4 h-4"></i>
+                <span>Donáška / Osobný odber</span>
+              </label>
+            </div>
+
+            <!-- Name, Phone, Email -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <div>
+                <label for="resName" class="block text-xs font-semibold text-brand-muted uppercase tracking-wider mb-1">Meno a Priezvisko *</label>
+                <input type="text" id="resName" required placeholder="Napr. Peter Novák" class="w-full bg-brand-deep border border-brand-border rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-brand-gold">
+              </div>
+
+              <div>
+                <label for="resPhone" class="block text-xs font-semibold text-brand-muted uppercase tracking-wider mb-1">Telefónne číslo *</label>
+                <input type="tel" id="resPhone" required placeholder="+421 900 000 000" class="w-full bg-brand-deep border border-brand-border rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-brand-gold">
+              </div>
+
+              <div>
+                <label for="resEmail" class="block text-xs font-semibold text-brand-muted uppercase tracking-wider mb-1">E-mailová adresa *</label>
+                <input type="email" id="resEmail" required placeholder="peter@example.com" class="w-full bg-brand-deep border border-brand-border rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-brand-gold">
+              </div>
+            </div>
+
+            <!-- Date, Time, Guests -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <div>
+                <label for="resDate" class="block text-xs font-semibold text-brand-muted uppercase tracking-wider mb-1">Dátum návštevy *</label>
+                <input type="date" id="resDate" required class="w-full bg-brand-deep border border-brand-border rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-brand-gold">
+              </div>
+
+              <div>
+                <label for="resTime" class="block text-xs font-semibold text-brand-muted uppercase tracking-wider mb-1">Čas príchodu *</label>
+                <select id="resTime" required class="w-full bg-brand-deep border border-brand-border rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-brand-gold">
+                  <option value="12:00">12:00 (Obed)</option>
+                  <option value="13:00">13:00</option>
+                  <option value="14:00">14:00</option>
+                  <option value="15:00">15:00</option>
+                  <option value="16:00">16:00</option>
+                  <option value="17:00" selected>17:00 (Podvečer)</option>
+                  <option value="18:00">18:00</option>
+                  <option value="19:00">19:00 (Večera)</option>
+                  <option value="20:00">20:00</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="resGuests" class="block text-xs font-semibold text-brand-muted uppercase tracking-wider mb-1">Počet osôb *</label>
+                <input type="number" id="resGuests" min="1" max="100" value="6" required class="w-full bg-brand-deep border border-brand-border rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-brand-gold">
+              </div>
+            </div>
+
+            <!-- Room Preference -->
+            <div id="roomPreferenceGroup">
+              <label for="resRoom" class="block text-xs font-semibold text-brand-muted uppercase tracking-wider mb-1">Preferovaný priestor / salónik</label>
+              <select id="resRoom" class="w-full bg-brand-deep border border-brand-border rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-brand-gold">
+                <option value="auto">Automaticky vybrať najvhodnejší priestor</option>
+                <option value="main">Hlavná reštaurácia (krb, do 50 osôb)</option>
+                <option value="salon30">Veľký salónik (privátny, do 30 osôb)</option>
+                <option value="salon14">Rodinný salónik (do 14 osôb)</option>
+                <option value="salon10">VIP salónik (do 10 osôb)</option>
+                <option value="terasa">Vyhrievaná terasa s výhľadom do záhrady</option>
+              </select>
+            </div>
+
+            <!-- Preselected items from Feast Plan -->
+            <div id="resFeastPlanNotice" class="hidden p-3.5 rounded-xl bg-brand-gold/15 border border-brand-gold/30 text-xs">
+              <p class="font-semibold text-brand-gold flex items-center gap-1.5">
+                <i data-lucide="check-circle" class="w-4 h-4"></i>
+                <span id="resFeastPlanTitle">K vašej rezervácii je priložený zostavený plán hodov:</span>
+              </p>
+              <p id="resFeastPlanItems" class="text-brand-cream/80 mt-1"></p>
+            </div>
+
+            <!-- Special Requests / Notes -->
+            <div>
+              <label for="resNote" class="block text-xs font-semibold text-brand-muted uppercase tracking-wider mb-1">Poznámka alebo želania (alergie, detská stolička, pečené prasiatko...)</label>
+              <textarea id="resNote" rows="3" placeholder="Uveďte prosím akékoľvek preferencie, bezlepkovú diétu, príležitosť (narodeniny, promócie)..." class="w-full bg-brand-deep border border-brand-border rounded-xl p-4 text-sm text-white focus:outline-none focus:border-brand-gold"></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="pt-2">
+              <button type="submit" class="w-full py-4 bg-gradient-to-r from-brand-terracotta to-brand-terracotta-hover hover:from-brand-terracotta-light hover:to-brand-terracotta text-white font-bold text-base rounded-xl shadow-warm-glow hover:shadow-2xl transition duration-300 flex items-center justify-center gap-2">
+                <i data-lucide="send" class="w-5 h-5"></i>
+                <span>Odoslať nezáväznú rezerváciu</span>
+              </button>
+              <p class="text-[11px] text-center text-brand-muted mt-2">
+                Kliknutím na odoslanie súhlasíte so spracovaním údajov pre účely rezervácie stola. V urgentných prípadoch volajte priamo na <a href="tel:+421948777300" class="text-brand-gold font-semibold underline">+421 948 777 300</a>.
+              </p>
+            </div>
+
+          </form>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS & REVIEWS SECTION -->
+    <section class="py-20 bg-brand-deep/80 relative border-t border-brand-border/60">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-14">
+          <span class="text-brand-gold text-sm uppercase tracking-widest font-bold">Hlasy našich hostí</span>
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white mt-1">
+            Overené recenzie návštevníkov
+          </h2>
+          <div class="w-20 h-1 bg-brand-gold mx-auto my-4 rounded-full"></div>
+          <p class="text-brand-muted text-sm sm:text-base">
+            Za 30 rokov nás navštívili desaťtisíce rodín a firiem zo Slovenska i zahraničia. Tu sú ich autentické skúsenosti.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          
+          <!-- Review 1 -->
+          <div class="glass-card p-6 rounded-2xl border border-brand-border space-y-4">
+            <div class="flex items-center gap-1 text-brand-gold">
+              <i data-lucide="star" class="w-4 h-4 fill-brand-gold"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-brand-gold"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-brand-gold"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-brand-gold"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-brand-gold"></i>
+            </div>
+            <p class="text-sm text-brand-cream/90 italic leading-relaxed">
+              „Boli sme tu na rodinnej oslave 60-tky v salóniku pre 14 osôb. Husacie hody boli famózne – hus mäkká ako maslo, kôrka chrumkavá a pečeň s jablkami úplný sen. Obsluha milá, rýchla a ústretová. Určite sa vrátime každú jeseň!“
+            </p>
+            <div class="pt-2 border-t border-brand-border/60 flex items-center justify-between">
+              <div>
+                <p class="font-bold text-white text-sm">Ing. Milan Kováčik</p>
+                <p class="text-xs text-brand-muted">Bratislava • Rodinná oslava</p>
+              </div>
+              <span class="text-xs text-brand-gold font-semibold">Google Recenzia</span>
+            </div>
+          </div>
+
+          <!-- Review 2 -->
+          <div class="glass-card p-6 rounded-2xl border border-brand-border space-y-4">
+            <div class="flex items-center gap-1 text-brand-gold">
+              <i data-lucide="star" class="w-4 h-4 fill-brand-gold"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-brand-gold"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-brand-gold"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-brand-gold"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-brand-gold"></i>
+            </div>
+            <p class="text-sm text-brand-cream/90 italic leading-relaxed">
+              „Ako IT firma sme tu robili teambuilding v salóniku pre 30 ľudí. Objednali sme Kráľovské hody aj pečené prasiatko. Všetko pripravené na čas, horúce, lokše čerstvo mastené. Zahraniční kolegovia boli unesení grobskou tradíciou.“
+            </p>
+            <div class="pt-2 border-t border-brand-border/60 flex items-center justify-between">
+              <div>
+                <p class="font-bold text-white text-sm">Mgr. Zuzana Bartošová</p>
+                <p class="text-xs text-brand-muted">Pezinok • Firemný večierok</p>
+              </div>
+              <span class="text-xs text-brand-gold font-semibold">Firemný klient</span>
+            </div>
+          </div>
+
+          <!-- Review 3 -->
+          <div class="glass-card p-6 rounded-2xl border border-brand-border space-y-4">
+            <div class="flex items-center gap-1 text-brand-gold">
+              <i data-lucide="star" class="w-4 h-4 fill-brand-gold"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-brand-gold"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-brand-gold"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-brand-gold"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-brand-gold"></i>
+            </div>
+            <p class="text-sm text-brand-cream/90 italic leading-relaxed">
+              „Oceňujem bezlepkové lokše a skvelé vegetariánske alternatívy, vďaka čomu sa u vás najedla celá naša rodina bez obmedzení. A domáca husacia masť so sebou v pohári je povinná jazda do chladničky na celú zimu!“
+            </p>
+            <div class="pt-2 border-t border-brand-border/60 flex items-center justify-between">
+              <div>
+                <p class="font-bold text-white text-sm">Monika Hrivnáková</p>
+                <p class="text-xs text-brand-muted">Trnava • Pravidelný hosť</p>
+              </div>
+              <span class="text-xs text-brand-gold font-semibold">Facebook Recenzia</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CONTACT, LOCATION & OPENING HOURS -->
+    <section id="kontakt" class="py-20 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+          
+          <!-- Contact Details (Left 5 cols) -->
+          <div class="lg:col-span-5 space-y-6">
+            <div>
+              <span class="text-brand-terracotta text-sm uppercase tracking-widest font-bold">Kde nás nájdete</span>
+              <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white mt-1">Kontakt & Adresa</h2>
+              <p class="text-brand-muted text-sm mt-2">
+                Reštaurácia sa nachádza v tichej uličke Slovenského Grobu s vlastným dvorom a bezplatným parkovaním.
+              </p>
+            </div>
+
+            <div class="space-y-4">
+              
+              <!-- Address -->
+              <div class="p-4 rounded-xl bg-brand-deep border border-brand-border flex items-start gap-3.5">
+                <i data-lucide="map-pin" class="w-5 h-5 text-brand-terracotta shrink-0 mt-0.5"></i>
+                <div>
+                  <h4 class="font-bold text-white text-sm">Husacina u Galika (Husacina Galik, s.r.o.)</h4>
+                  <p class="text-sm text-brand-muted mt-0.5">Lipová 21, 900 26 Slovenský Grob</p>
+                  <p class="text-xs text-brand-muted">IČO: 50983105 | DIČ: 2120563181</p>
+                  <p class="text-xs text-brand-muted">Zodpovedná vedúca: Paula Galiková</p>
+                </div>
+              </div>
+
+              <!-- Phone & Email -->
+              <div class="p-4 rounded-xl bg-brand-deep border border-brand-border flex items-start gap-3.5">
+                <i data-lucide="phone-call" class="w-5 h-5 text-brand-gold shrink-0 mt-0.5"></i>
+                <div>
+                  <h4 class="font-bold text-white text-sm">Rezervácie a informácie</h4>
+                  <p class="text-base font-semibold text-brand-gold mt-0.5">
+                    <a href="tel:+421948777300" class="hover:underline">+421 948 777 300</a>
+                  </p>
+                  <p class="text-xs text-brand-muted mt-1">
+                    <a href="mailto:info@husacinaugalika.sk" class="hover:text-white transition">info@husacinaugalika.sk</a> • 
+                    <a href="mailto:husacinaugalika@gmail.com" class="hover:text-white transition">husacinaugalika@gmail.com</a>
+                  </p>
+                </div>
+              </div>
+
+              <!-- Navigation CTA buttons -->
+              <div class="grid grid-cols-2 gap-3 pt-1">
+                <a href="https://maps.google.com/?q=Husacina+u+Galika+Lipova+21+Slovensky+Grob" target="_blank" rel="noopener noreferrer" class="p-3 rounded-xl bg-brand-card hover:bg-brand-card/80 border border-brand-border text-center text-xs font-semibold text-white flex items-center justify-center gap-1.5 transition">
+                  <i data-lucide="navigation" class="w-4 h-4 text-brand-gold"></i>
+                  <span>Google Maps</span>
+                </a>
+                <a href="https://waze.com/ul?q=Lipova%2021%20Slovensky%20Grob" target="_blank" rel="noopener noreferrer" class="p-3 rounded-xl bg-brand-card hover:bg-brand-card/80 border border-brand-border text-center text-xs font-semibold text-white flex items-center justify-center gap-1.5 transition">
+                  <i data-lucide="map" class="w-4 h-4 text-sky-400"></i>
+                  <span>Waze navigácia</span>
+                </a>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Opening Hours & Season Details (Right 7 cols) -->
+          <div class="lg:col-span-7 glass-card p-6 sm:p-8 rounded-2xl border border-brand-border shadow-card-elevated space-y-6">
+            
+            <div class="flex items-center justify-between pb-4 border-b border-brand-border/60">
+              <h3 class="font-serif text-xl font-bold text-white flex items-center gap-2">
+                <i data-lucide="clock" class="w-5 h-5 text-brand-gold"></i>
+                <span>Otváracie hodiny & Sezóny</span>
+              </h3>
+              <span class="text-xs px-2.5 py-1 rounded-full bg-emerald-500/15 text-emerald-400 border border-emerald-500/30 font-semibold">
+                Slovenský Grob
+              </span>
+            </div>
+
+            <!-- Standard Schedule Table -->
+            <div class="space-y-2.5 text-sm">
+              <div class="flex justify-between items-center py-1.5 border-b border-brand-border/40">
+                <span class="text-brand-muted">Pondelok – Utorok</span>
+                <span class="font-medium text-brand-cream/80 text-right">Zatvorené (len vopred ohlásené akcie od 10 osôb)</span>
+              </div>
+              <div class="flex justify-between items-center py-1.5 border-b border-brand-border/40">
+                <span class="text-white font-medium">Streda</span>
+                <span class="font-semibold text-brand-gold">13:00 – 22:00</span>
+              </div>
+              <div class="flex justify-between items-center py-1.5 border-b border-brand-border/40">
+                <span class="text-white font-medium">Štvrtok</span>
+                <span class="font-semibold text-brand-gold">13:00 – 22:00</span>
+              </div>
+              <div class="flex justify-between items-center py-1.5 border-b border-brand-border/40">
+                <span class="text-white font-medium">Piatok</span>
+                <span class="font-semibold text-brand-gold">13:00 – 22:00</span>
+              </div>
+              <div class="flex justify-between items-center py-1.5 border-b border-brand-border/40">
+                <span class="text-white font-medium">Sobota</span>
+                <span class="font-semibold text-brand-gold">12:00 – 22:00</span>
+              </div>
+              <div class="flex justify-between items-center py-1.5">
+                <span class="text-white font-medium">Nedeľa</span>
+                <span class="font-semibold text-brand-gold">12:00 – 18:00</span>
+              </div>
+            </div>
+
+            <!-- Seasonal Rule Box -->
+            <div class="p-4 rounded-xl bg-brand-deep/80 border border-brand-gold/30 text-xs text-brand-cream/90 space-y-2">
+              <p class="font-bold text-brand-gold flex items-center gap-1.5">
+                <i data-lucide="info" class="w-4 h-4"></i>
+                <span>Dôležité sezónne informácie:</span>
+              </p>
+              <p>
+                <strong>September – December (Hlavná husacia sezóna):</strong> Otvorené v plnom režime pre verejnosť, rodiny a firemné akcie. Odporúčame včasnú rezerváciu.
+              </p>
+              <p>
+                <strong>Január – August:</strong> Reštaurácia funguje na objednávky vopred pre skupiny, rodinné oslavy, svadby, firemné obedy a dohodnutý catering.
+              </p>
+            </div>
+
+            <!-- Amenities -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center text-xs text-brand-muted pt-2">
+              <div class="p-2.5 rounded-lg bg-brand-deep border border-brand-border">
+                <i data-lucide="car" class="w-4 h-4 mx-auto mb-1 text-brand-gold"></i>
+                <span>Parkovisko vo dvore</span>
+              </div>
+              <div class="p-2.5 rounded-lg bg-brand-deep border border-brand-border">
+                <i data-lucide="wifi" class="w-4 h-4 mx-auto mb-1 text-brand-gold"></i>
+                <span>Bezplatná Wi-Fi</span>
+              </div>
+              <div class="p-2.5 rounded-lg bg-brand-deep border border-brand-border">
+                <i data-lucide="credit-card" class="w-4 h-4 mx-auto mb-1 text-brand-gold"></i>
+                <span>Platba kartou</span>
+              </div>
+              <div class="p-2.5 rounded-lg bg-brand-deep border border-brand-border">
+                <i data-lucide="accessibility" class="w-4 h-4 mx-auto mb-1 text-brand-gold"></i>
+                <span>Prístup pre kočíky</span>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-brand-deep border-t border-brand-border/80 text-brand-muted text-sm pt-16 pb-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-brand-border/60">
+        
+        <!-- Brand column -->
+        <div class="space-y-4">
+          <div class="flex items-center gap-3">
+            <img src="images/logo.png" alt="Husacina u Galika Logo" class="h-10 w-auto" onerror="this.onerror=null; this.src='images/favicon.png';">
+            <span class="font-serif text-xl font-bold text-white">Husacina <span class="text-brand-terracotta">u Galika</span></span>
+          </div>
+          <p class="text-xs text-brand-muted leading-relaxed">
+            Tradičná rodinná reštaurácia v Slovenskom Grobe. Už 30 rokov pečieme husi a kačice v hlinených pekáčoch podľa osvedčených receptúr našich predkov.
+          </p>
+          <div class="flex items-center gap-3 pt-1">
+            <a href="https://www.facebook.com/husacinaugalika" target="_blank" rel="noopener noreferrer" class="p-2 rounded-lg bg-brand-card hover:bg-brand-terracotta text-brand-cream hover:text-white transition" aria-label="Facebook">
+              <i data-lucide="facebook" class="w-4 h-4"></i>
+            </a>
+            <a href="https://www.instagram.com/husacinaugalika/" target="_blank" rel="noopener noreferrer" class="p-2 rounded-lg bg-brand-card hover:bg-brand-terracotta text-brand-cream hover:text-white transition" aria-label="Instagram">
+              <i data-lucide="instagram" class="w-4 h-4"></i>
+            </a>
+            <a href="tel:+421948777300" class="p-2 rounded-lg bg-brand-card hover:bg-brand-terracotta text-brand-cream hover:text-white transition" aria-label="Zavolať">
+              <i data-lucide="phone" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="space-y-3">
+          <h4 class="text-xs uppercase tracking-widest font-bold text-white">Navigácia</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#domov" class="hover:text-brand-gold transition">Domov</a></li>
+            <li><a href="#tradicia" class="hover:text-brand-gold transition">30-ročná tradícia pečenia</a></li>
+            <li><a href="#menu" class="hover:text-brand-gold transition">Jedálny a nápojový lístok</a></li>
+            <li><a href="#kalkulacka" class="hover:text-brand-gold transition">Kalkulačka porcií pre skupiny</a></li>
+            <li><a href="#priestory" class="hover:text-brand-gold transition">Salóniky a priestory</a></li>
+            <li><a href="#poukaz" class="hover:text-brand-gold transition">Darčekový poukaz (-10%)</a></li>
+          </ul>
+        </div>
+
+        <!-- Food Specialties -->
+        <div class="space-y-3">
+          <h4 class="text-xs uppercase tracking-widest font-bold text-white">Naše špeciality</h4>
+          <ul class="space-y-2 text-xs">
+            <li><span class="text-brand-cream/80">Pečená domáca hus v pekáči</span></li>
+            <li><span class="text-brand-cream/80">Husacia pečeň s jablkami</span></li>
+            <li><span class="text-brand-cream/80">Ručne vaľkané mastené lokše</span></li>
+            <li><span class="text-brand-cream/80">Pečené prasiatka vcelku</span></li>
+            <li><span class="text-brand-cream/80">Teplé a studené mäsové misy</span></li>
+            <li><span class="text-brand-cream/80">Malokarpatské výberové vína</span></li>
+          </ul>
+        </div>
+
+        <!-- Contact summary -->
+        <div class="space-y-3">
+          <h4 class="text-xs uppercase tracking-widest font-bold text-white">Kontakt</h4>
+          <div class="space-y-2 text-xs">
+            <p class="text-brand-cream">Husacina Galik, s.r.o.</p>
+            <p>Lipová 21, 900 26 Slovenský Grob</p>
+            <p><a href="tel:+421948777300" class="text-brand-gold font-semibold hover:underline">+421 948 777 300</a></p>
+            <p><a href="mailto:info@husacinaugalika.sk" class="hover:text-white transition">info@husacinaugalika.sk</a></p>
+            <p class="text-[11px] text-brand-muted/80 pt-1">Otvorené St – Ne (cez sezónu), mimo sezóny na objednávky.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom bar -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs gap-4 text-brand-muted">
+        <p>© 1994 – 2026 Husacina u Galika (Husacina Galik, s.r.o.). Všetky práva vyhradené.</p>
+        <div class="flex items-center gap-6">
+          <a href="#" class="hover:text-brand-gold transition">Ochrana osobných údajov</a>
+          <a href="#" class="hover:text-brand-gold transition">Všeobecné podmienky</a>
+          <a href="#domov" class="hover:text-brand-gold transition flex items-center gap-1">
+            <span>Hore</span>
+            <i data-lucide="arrow-up" class="w-3.5 h-3.5"></i>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- MOBILE BOTTOM STICKY BAR -->
+  <div class="lg:hidden fixed bottom-0 left-0 right-0 z-40 bg-brand-deep/95 backdrop-blur-md border-t border-brand-border px-3 py-2 flex items-center justify-around shadow-2xl">
+    <a href="tel:+421948777300" class="flex flex-col items-center gap-1 text-[11px] text-brand-muted hover:text-brand-gold transition">
+      <i data-lucide="phone" class="w-5 h-5 text-brand-gold"></i>
+      <span>Zavolať</span>
+    </a>
+    <a href="#menu" class="flex flex-col items-center gap-1 text-[11px] text-brand-muted hover:text-brand-gold transition">
+      <i data-lucide="book-open" class="w-5 h-5 text-brand-gold"></i>
+      <span>Lístok</span>
+    </a>
+    <a href="#kalkulacka" class="flex flex-col items-center gap-1 text-[11px] text-brand-muted hover:text-brand-gold transition">
+      <i data-lucide="calculator" class="w-5 h-5 text-brand-gold"></i>
+      <span>Kalkulačka</span>
+    </a>
+    <a href="#rezervacia" class="flex flex-col items-center gap-1 text-[11px] font-bold text-white bg-brand-terracotta px-3 py-1.5 rounded-xl shadow-warm-glow">
+      <i data-lucide="calendar" class="w-4 h-4"></i>
+      <span>Rezervovať</span>
+    </a>
+  </div>
+
+  <!-- SLIDE-OVER BASKET (FEAST PLANNER / WISHLIST) DRAWER -->
+  <div id="basketDrawer" class="fixed inset-0 z-50 overflow-hidden pointer-events-none transition-opacity duration-300 opacity-0">
+    <div id="basketBackdrop" class="absolute inset-0 bg-black/70 backdrop-blur-sm transition-opacity"></div>
+    
+    <div class="fixed inset-y-0 right-0 max-w-full flex pl-10 pointer-events-auto">
+      <div class="w-screen max-w-md bg-brand-deep border-l border-brand-border shadow-2xl flex flex-col transform translate-x-full transition-transform duration-300 ease-in-out" id="basketPanel">
+        
+        <!-- Drawer Header -->
+        <div class="p-5 border-b border-brand-border flex items-center justify-between">
+          <div class="flex items-center gap-2.5">
+            <i data-lucide="utensils" class="w-5 h-5 text-brand-gold"></i>
+            <h3 class="font-serif text-lg font-bold text-white">Váš plán hodov</h3>
+          </div>
+          <button id="closeBasketBtn" class="p-2 text-brand-muted hover:text-white rounded-lg hover:bg-brand-card transition">
+            <i data-lucide="x" class="w-5 h-5"></i>
+          </button>
+        </div>
+
+        <!-- Drawer Content -->
+        <div class="flex-1 overflow-y-auto p-5 space-y-4" id="basketItemsList">
+          <!-- Populated by JS -->
+        </div>
+
+        <!-- Drawer Footer -->
+        <div class="p-5 border-t border-brand-border bg-brand-charcoal space-y-4">
+          <div class="flex justify-between items-baseline">
+            <span class="text-sm text-brand-muted">Celková odhadovaná suma:</span>
+            <span id="basketTotalAmount" class="text-2xl font-serif font-bold text-brand-gold">0,00 €</span>
+          </div>
+          
+          <button id="basketTransferBtn" class="w-full py-3 px-4 bg-brand-terracotta hover:bg-brand-terracotta-hover text-white font-bold rounded-xl shadow-warm-glow flex items-center justify-center gap-2 transition duration-300">
+            <i data-lucide="calendar-check" class="w-4 h-4"></i>
+            <span>Preniesť do rezervácie stola</span>
+          </button>
+          
+          <button id="basketClearBtn" class="w-full py-1 text-xs text-brand-muted hover:text-red-400 text-center transition">
+            Vyčistiť výber
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- LIGHTBOX MODAL FOR GALLERY -->
+  <div id="lightboxModal" class="fixed inset-0 z-50 hidden bg-black/95 flex items-center justify-center p-4">
+    <button id="closeLightboxBtn" class="absolute top-5 right-5 text-white/80 hover:text-white p-2 text-2xl z-10" aria-label="Zatvoriť">
+      <i data-lucide="x" class="w-8 h-8"></i>
+    </button>
+    <div class="max-w-4xl max-h-[90vh] flex flex-col items-center">
+      <img id="lightboxImg" src="" alt="Zväčšená fotografia" class="max-w-full max-h-[80vh] object-contain rounded-xl border border-brand-border shadow-2xl">
+      <p id="lightboxCaption" class="mt-4 text-center text-sm font-medium text-brand-cream/90"></p>
+    </div>
+  </div>
+
+  <!-- CONFIRMATION / FEEDBACK MODAL -->
+  <div id="feedbackModal" class="fixed inset-0 z-50 hidden bg-black/80 flex items-center justify-center p-4">
+    <div class="glass-card max-w-md w-full p-7 rounded-2xl border border-brand-gold shadow-2xl text-center space-y-4">
+      <div class="w-14 h-14 bg-emerald-500/20 text-emerald-400 rounded-full flex items-center justify-center mx-auto">
+        <i data-lucide="check" class="w-8 h-8"></i>
+      </div>
+      <h3 class="font-serif text-2xl font-bold text-white" id="feedbackTitle">Rezervácia bola odoslaná!</h3>
+      <p class="text-sm text-brand-muted leading-relaxed" id="feedbackMessage">
+        Ďakujeme. Vašu požiadavku sme zaevidovali. Náš tím vás bude v krátkom čase kontaktovať pre potvrdenie termínu a detailov hodov.
+      </p>
+      <div class="p-3 bg-brand-deep rounded-xl border border-brand-border text-xs text-brand-gold font-mono" id="feedbackRef">
+        Kód rezervácie: GALIK-2026-9142
+      </div>
+      <button id="closeFeedbackBtn" class="w-full py-3 bg-brand-terracotta hover:bg-brand-terracotta-hover text-white font-bold rounded-xl transition">
+        Zavrieť
+      </button>
+    </div>
+  </div>
+
+  <!-- JAVASCRIPT APPLICATION LOGIC -->
+  <script>
+    // --- REAL DATA FOR MENU ITEMS ---
+    const menuData = [
+      {
+        id: 'hus_cela',
+        name: 'Pečená domáca hus (Celá 1 ks)',
+        cat: 'hody',
+        badge: 'Tradičný pekáč',
+        weight: 'cca 4,2 kg v surovom stave',
+        price: 110.00,
+        desc: 'Pomaly pečená hus v hlinenom pekáči dozlatista. Vhodná pre 4 až 6 osôb.',
+        tags: ['Husacina', 'Grobská klasika'],
+        img: 'images/hero_goose.jpg'
+      },
+      {
+        id: 'hus_pol',
+        name: 'Pečená domáca hus (1/2 ks)',
+        cat: 'hody',
+        badge: 'Obľúbené',
+        weight: 'pre 2 až 3 osoby',
+        price: 55.00,
+        desc: 'Polovica chrumkavej zlatej husi priamo z pekáča. Šťavnaté stehno aj prsia.',
+        tags: ['Husacina', 'Pre dvoch'],
+        img: 'images/goose_pan.jpg'
+      },
+      {
+        id: 'hus_stvrt',
+        name: 'Pečená domáca hus (1/4 ks)',
+        cat: 'hody',
+        badge: 'Porcia pre 1 osobu',
+        weight: 'porcia',
+        price: 27.50,
+        desc: 'Štvrtka pečené husi (stehno alebo prsia) s chrumkavou kôrkou.',
+        tags: ['Husacina'],
+        img: 'images/hero_goose.jpg'
+      },
+      {
+        id: 'hus_sestina',
+        name: 'Pečená domáca hus (1/6 ks)',
+        cat: 'hody',
+        badge: 'Menšia porcia',
+        weight: 'porcia',
+        price: 18.50,
+        desc: 'Tradičná menšia porcia pečené husi.',
+        tags: ['Husacina'],
+        img: 'images/goose_pan.jpg'
+      },
+      {
+        id: 'kacica_cela',
+        name: 'Pečená domáca kačica (Celá 1 ks)',
+        cat: 'hody',
+        badge: 'Kačacie hody',
+        weight: 'cca 2,8 kg',
+        price: 80.00,
+        desc: 'Celá domáca kačica pečená do chrumkava v hlinenom pekáči. Pre 3 – 4 osoby.',
+        tags: ['Kačica'],
+        img: 'images/event_table.jpg'
+      },
+      {
+        id: 'kacica_pol',
+        name: 'Pečená domáca kačica (1/2 ks)',
+        cat: 'hody',
+        badge: 'Pre dvoch',
+        weight: 'porcia pre 2',
+        price: 40.00,
+        desc: 'Polovica poctivej domácej pečenej kačice.',
+        tags: ['Kačica'],
+        img: 'images/event_table.jpg'
+      },
+      {
+        id: 'kacica_stvrt',
+        name: 'Pečená domáca kačica (1/4 ks)',
+        cat: 'hody',
+        badge: 'Porcia',
+        weight: 'porcia',
+        price: 20.00,
+        desc: 'Štvrtka šťavnatej pečenej kačice so zlatistou kôrkou.',
+        tags: ['Kačica'],
+        img: 'images/event_table.jpg'
+      },
+      {
+        id: 'kacica_sestina',
+        name: 'Pečená domáca kačica (1/6 ks)',
+        cat: 'hody',
+        badge: 'Ochutnávka',
+        weight: 'porcia',
+        price: 13.50,
+        desc: 'Menšia porcia domácej pečenej kačice.',
+        tags: ['Kačica'],
+        img: 'images/event_table.jpg'
+      },
+      {
+        id: 'pecen_100',
+        name: 'Husacia pečeň s jablkami (100g)',
+        cat: 'pecen',
+        badge: 'Špecialita podniku',
+        weight: '100g',
+        price: 12.00,
+        desc: 'Delikátna husacia pečeň restovaná na husacej masti s plátkami sladkých jabĺk.',
+        tags: ['Pečeň', 'Predjedlo'],
+        img: 'images/goose_liver.jpg'
+      },
+      {
+        id: 'pecen_150',
+        name: 'Husacia pečeň s jablkami (150g)',
+        cat: 'pecen',
+        badge: 'Gurmánsky výber',
+        weight: '150g',
+        price: 18.00,
+        desc: 'Bohatšia porcia lahodnej husacej pečienky s jablkami a voňavým výpekom.',
+        tags: ['Pečeň', 'Predjedlo'],
+        img: 'images/goose_liver.jpg'
+      },
+      {
+        id: 'pecen_1kg',
+        name: 'Husacia pečeň s jablkami (1 kg balenie)',
+        cat: 'pecen',
+        badge: 'Na oslavu / Domov',
+        weight: '1000g',
+        price: 120.00,
+        desc: 'Veľké rodinné alebo firemné balenie pravej husacej pečene na masti.',
+        tags: ['Pečeň', 'Na objednávku'],
+        img: 'images/goose_liver.jpg'
+      },
+      {
+        id: 'chlieb_mast',
+        name: 'Chlieb s husacou masťou a cibuľkou',
+        cat: 'pecen',
+        badge: 'Tradičný úvod',
+        weight: '80g',
+        price: 3.00,
+        desc: 'Krajec čerstvého kváskového chleba štedro natretý domácou masťou s mladou cibuľkou.',
+        tags: ['Chuťovka'],
+        img: 'images/lokse_dish.jpg'
+      },
+      {
+        id: 'chlieb_pasteta',
+        name: 'Chlieb s domácou husacou paštétou',
+        cat: 'pecen',
+        badge: 'Domáca výroba',
+        weight: '100g',
+        price: 4.00,
+        desc: 'Hladká husacia paštéta z vlastnej kuchyne s cibuľkou.',
+        tags: ['Chuťovka'],
+        img: 'images/lokse_dish.jpg'
+      },
+      {
+        id: 'husacia_mast_pohar',
+        name: 'Domáca husacia masť (0,7 l sklíčko)',
+        cat: 'pecen',
+        badge: 'So sebou domov',
+        weight: '0,7 litra',
+        price: 4.00,
+        desc: 'Čistá vyškvarená husacia masť v pohári. Vynikajúca na varenie a mastenie.',
+        tags: ['So sebou'],
+        img: 'images/goose_pan.jpg'
+      },
+      {
+        id: 'loksa_mastena',
+        name: 'Lokša mastená husacou masťou',
+        cat: 'lokse',
+        badge: 'Kráľovná príloh',
+        weight: '60g',
+        price: 2.50,
+        desc: 'Ručne vaľkaná zemiaková lokša pečená nasucho a poctivo potretá husacou masťou.',
+        tags: ['Lokša', 'Tradičné'],
+        img: 'images/lokse_dish.jpg'
+      },
+      {
+        id: 'loksa_sucha',
+        name: 'Lokša suchá (nemastená)',
+        cat: 'lokse',
+        badge: 'Ľahká voľba',
+        weight: '60g',
+        price: 2.50,
+        desc: 'Čistá zemiaková lokša bez masti pre individuálne dochutenie.',
+        tags: ['Lokša'],
+        img: 'images/lokse_dish.jpg'
+      },
+      {
+        id: 'loksa_cesnakova',
+        name: 'Lokša cesnaková',
+        cat: 'lokse',
+        badge: 'Aromatická',
+        weight: '60g',
+        price: 2.70,
+        desc: 'Mastená lokša prevoňaná čerstvým lisovaným cesnakom.',
+        tags: ['Lokša'],
+        img: 'images/lokse_dish.jpg'
+      },
+      {
+        id: 'loksa_plnena_pecen',
+        name: 'Lokša plnená husacou pečienkou',
+        cat: 'lokse',
+        badge: 'Delikatesa',
+        weight: '95g',
+        price: 5.50,
+        desc: 'Zemiaková lokša plnená poctivou plnkou z jemnej husacej pečene.',
+        tags: ['Lokša', 'Plnená'],
+        img: 'images/goose_liver.jpg'
+      },
+      {
+        id: 'loksa_kapustova',
+        name: 'Lokša plnená dusenou kapustou',
+        cat: 'lokse',
+        badge: 'Obľúbené',
+        weight: '110g',
+        price: 4.50,
+        desc: 'Plnená skaramelizovanou červenou alebo bielou dusenou kapustou.',
+        tags: ['Lokša', 'Plnená'],
+        img: 'images/lokse_dish.jpg'
+      },
+      {
+        id: 'loksa_bezlepkova',
+        name: 'Lokša bezlepková',
+        cat: 'lokse',
+        badge: 'Bez lepku (Gluten-Free)',
+        weight: '60g',
+        price: 3.50,
+        desc: 'Pripravená zo zemiakov a certifikovanej bezlepkovej zmesi. Vhodná pre celiatikov.',
+        tags: ['Bezlepkové', 'Zdravie'],
+        img: 'images/lokse_dish.jpg'
+      },
+      {
+        id: 'loksa_mak_lekvar',
+        name: 'Lokša makovo-lekvárová',
+        cat: 'lokse',
+        badge: 'Sladká klasika',
+        weight: '95g',
+        price: 4.50,
+        desc: 'Plnená domácim slivkovým lekvárom a voňavým mletým makom.',
+        tags: ['Lokša', 'Sladké'],
+        img: 'images/lokse_dish.jpg'
+      },
+      {
+        id: 'loksa_orechova',
+        name: 'Lokša orechová',
+        cat: 'lokse',
+        badge: 'Sladká',
+        weight: '95g',
+        price: 4.50,
+        desc: 'Plnená zmesou vlašských orechov a cukru.',
+        tags: ['Lokša', 'Sladké'],
+        img: 'images/lokse_dish.jpg'
+      },
+      {
+        id: 'vyvar_husaci',
+        name: 'Husací vývar s mäsom a rezancami',
+        cat: 'lokse',
+        badge: 'Hrejivá polievka',
+        weight: '0,33 l',
+        price: 4.00,
+        desc: 'Silný domáci vývar z husacích kostí a drobkov, koreňová zelenina, domáce rezance.',
+        tags: ['Polievka'],
+        img: 'images/event_table.jpg'
+      },
+      {
+        id: 'kapusta_cervena',
+        name: 'Dusená červená kapusta na karameli',
+        cat: 'lokse',
+        badge: 'Príloha',
+        weight: '100g',
+        price: 2.00,
+        desc: 'Tradične pripravená na karameli, rasci a jablkách.',
+        tags: ['Príloha'],
+        img: 'images/lokse_dish.jpg'
+      },
+      {
+        id: 'salat_grobsky',
+        name: 'Tradičný zeleninový šalát / čalamáda',
+        cat: 'lokse',
+        badge: 'Kyslá obloha',
+        weight: '200g',
+        price: 4.00,
+        desc: 'Čalamáda, nakladané uhorky, baraní roh, alma paprika a feferónka.',
+        tags: ['Príloha'],
+        img: 'images/meat_platter_1.jpg'
+      },
+      // Zostavené Menu
+      {
+        id: 'menu_1',
+        name: 'Menu 1 – Kráľovské husacie menu s pečeňou',
+        cat: 'menu',
+        badge: 'Najpredávanejšie',
+        weight: 'Kompletná zostava pre 1 osobu',
+        price: 54.30,
+        desc: '100g husacia pečeň s jablkami, 1/4 pečenej domácej husi, 3x mastená lokša, dusená kapusta, domáci vývar, jablková štrúdľa.',
+        tags: ['Zostava', 'Husacina', 'Pečeň'],
+        img: 'images/goose_pan.jpg'
+      },
+      {
+        id: 'menu_2',
+        name: 'Menu 2 – Husacie menu bez polievky',
+        cat: 'menu',
+        badge: 'Gurmánska voľba',
+        weight: 'Zostava pre 1 osobu',
+        price: 47.00,
+        desc: '100g husacia pečeň s jablkami, 1/4 pečenej husi, 2x mastená lokša, dusená kapusta, dezert.',
+        tags: ['Zostava', 'Husacina'],
+        img: 'images/hero_goose.jpg'
+      },
+      {
+        id: 'menu_5',
+        name: 'Menu 5 – Kráľovské kačacie menu s pečeňou',
+        cat: 'menu',
+        badge: 'Kačací špeciál',
+        weight: 'Zostava pre 1 osobu',
+        price: 46.80,
+        desc: '100g husacia pečeň s jablkami, 1/4 pečenej kačice, 3x mastená lokša, dusená kapusta, vývar, štrúdľa.',
+        tags: ['Zostava', 'Kačica'],
+        img: 'images/event_table.jpg'
+      },
+      {
+        id: 'menu_7',
+        name: 'Menu 7 – Kačacie menu klasické',
+        cat: 'menu',
+        badge: 'Klasika',
+        weight: 'Zostava pre 1 osobu',
+        price: 33.00,
+        desc: '1/4 pečenej domácej kačice, 3x mastená lokša, dusená červená kapusta, šalát, vývar.',
+        tags: ['Zostava', 'Kačica'],
+        img: 'images/event_table.jpg'
+      },
+      {
+        id: 'menu_11',
+        name: 'Menu 11 – Gurmánske pečienkové menu',
+        cat: 'menu',
+        badge: 'Pre milovníkov pečene',
+        weight: 'Zostava pre 1 osobu',
+        price: 34.50,
+        desc: '150g husacej pečene s jablkami na masti, 3x mastená lokša, kváskový chlieb, dusená kapusta.',
+        tags: ['Zostava', 'Pečeň'],
+        img: 'images/goose_liver.jpg'
+      },
+      {
+        id: 'menu_18',
+        name: 'Menu 18 – Vegetariánske grobské menu',
+        cat: 'menu',
+        badge: 'Vegetariánske',
+        weight: 'Zostava pre 1 osobu',
+        price: 18.50,
+        desc: 'Grilovaný oštiepok, domáca zemiaková placka, 2x lokša plnená kapustou, miešaný zeleninový šalát.',
+        tags: ['Vegetariánske', 'Bez mäsa'],
+        img: 'images/lokse_dish.jpg'
+      },
+      {
+        id: 'menu_19',
+        name: 'Menu 19 – Rodinná husacia hostina (4 osoby)',
+        cat: 'menu',
+        badge: 'Rodinný balík',
+        weight: 'Zostava pre 4 osoby',
+        price: 128.40,
+        desc: '1/2 pečenej husi, 200g pečienky, 10x mastená lokša, 4x polievka, bohatá kapusta a domáce štrúdle.',
+        tags: ['Pre rodinu', 'Výhodné'],
+        img: 'images/meat_platter_1.jpg'
+      },
+      {
+        id: 'menu_21',
+        name: 'Menu 21 – Kráľovské grobské hody (8 osôb)',
+        cat: 'menu',
+        badge: 'Hostina na oslavu',
+        weight: 'Zostava pre 8 osôb',
+        price: 244.00,
+        desc: '1 celá pečená hus, 400g husacej pečene, 20x mastená lokša, 8x vývar, misy kapusty a šalátov, 2 fľaše vína a štrúdle.',
+        tags: ['Pre skupiny', 'Veľká oslava'],
+        img: 'images/salon_50.jpg'
+      },
+      // Misy & Prasiatka
+      {
+        id: 'prasa_pecene',
+        name: 'Pečené prasiatko vcelku (na objednávku)',
+        cat: 'misy',
+        badge: '7 dní vopred',
+        weight: 'cca 18 – 25 kg',
+        price: 320.00,
+        desc: 'Pomaly pečené prasiatko so zlatistou kôrkou. Podávané s chlebom, horčicou, chrenom a kyslou oblohou. Pre 15 – 25 osôb.',
+        tags: ['Prasiatko', 'Veľká akcia'],
+        img: 'images/roast_piglet.png'
+      },
+      {
+        id: 'misa_tepla',
+        name: 'Teplá pečená mäsová misa u Galika',
+        cat: 'misy',
+        badge: 'Mäsový špeciál',
+        weight: 'pre 4 – 6 osôb',
+        price: 65.00,
+        desc: 'Grilované bravčové koleno, pečené pikantné rebierka, klobásky, zemiakové placky, chren, horčica a feferónky.',
+        tags: ['Misa', 'Pivo & Víno'],
+        img: 'images/meat_platter_1.jpg'
+      },
+      {
+        id: 'misa_studena',
+        name: 'Sviatočná studená misa & Syrový tanier',
+        cat: 'misy',
+        badge: 'Raut & Oslava',
+        weight: 'pre 4 – 6 osôb',
+        price: 45.00,
+        desc: 'Výber zrejúcich syrov, domáce zabíjačkové špeciality, paštéty, hrozno a orechy.',
+        tags: ['Misa', 'Predjedlo'],
+        img: 'images/meat_platter_2.jpg'
+      },
+      // Vína & Nápoje
+      {
+        id: 'vino_veltin',
+        name: 'Veltlínske zelené (Pezinok / Sv. Jur)',
+        cat: 'napoj',
+        badge: 'Biele suché',
+        weight: '0,75 l',
+        price: 14.50,
+        desc: 'Svieže malokarpatské biele víno s jemnou mandľovo-korenistou vôňou. Dokonalé k husacine.',
+        tags: ['Víno', 'Malokarpatské'],
+        img: 'images/event_table.jpg'
+      },
+      {
+        id: 'vino_frankovka',
+        name: 'Frankovka modrá (Modra)',
+        cat: 'napoj',
+        badge: 'Červené suché',
+        weight: '0,75 l',
+        price: 16.00,
+        desc: 'Tradičné grobské červené víno s tónmi škorice a lesného ovocia.',
+        tags: ['Víno', 'Malokarpatské'],
+        img: 'images/event_table.jpg'
+      },
+      {
+        id: 'pivo_plzen',
+        name: 'Pilsner Urquell 12° čapované',
+        cat: 'napoj',
+        badge: 'Čapované pivo',
+        weight: '0,5 l',
+        price: 2.80,
+        desc: 'Správne vychladený prémiový ležiak.',
+        tags: ['Pivo'],
+        img: 'images/event_table.jpg'
+      },
+      {
+        id: 'domaca_limonada',
+        name: 'Domáca bylinkovo-citrónová limonáda',
+        cat: 'napoj',
+        badge: 'Nealko',
+        weight: '1,0 l džbán',
+        price: 5.50,
+        desc: 'Čerstvá mäta, citrónová šťava, trstinový sirup a sóda.',
+        tags: ['Nealko'],
+        img: 'images/event_table.jpg'
+      },
+      // Dezerty
+      {
+        id: 'strudla_mak',
+        name: 'Domáca ťahaná štrúdľa jablkovo-maková',
+        cat: 'dezerty',
+        badge: 'Sladká bodka',
+        weight: '130g',
+        price: 4.50,
+        desc: 'Pravé tenké ťahané cesto, šťavnaté jablká a štedrá dávka maku.',
+        tags: ['Dezert'],
+        img: 'images/lokse_dish.jpg'
+      },
+      {
+        id: 'strudla_orech',
+        name: 'Domáca ťahaná štrúdľa jablkovo-orechová',
+        cat: 'dezerty',
+        badge: 'Sladká bodka',
+        weight: '130g',
+        price: 4.50,
+        desc: 'Plnená mletými vlašskými orechmi a škoricovými jablkami.',
+        tags: ['Dezert'],
+        img: 'images/lokse_dish.jpg'
+      },
+      {
+        id: 'zmrzlinovy_pohar',
+        name: 'Zmrzlinový pohár s ovocím a šľahačkou',
+        cat: 'dezerty',
+        badge: 'Pre deti i dospelých',
+        weight: '200g',
+        price: 5.50,
+        desc: 'Tri kopčeky zmrzliny, lesné ovocie a pravá šľahačka.',
+        tags: ['Dezert'],
+        img: 'images/lokse_dish.jpg'
+      }
+    ];
+
+    // --- VENUES DATA ---
+    const roomsData = {
+      main: {
+        title: 'Hlavná reštauračná sála (Kapacita: 50 hostí)',
+        subtitle: 'Srdce našej reštaurácie s tradičným kamenným krbom a vôňou pekáčov',
+        desc: 'Veľkorysý rustikálny priestor zariadený masívnym dubovým drevom a dobovou keramikou. Dominuje mu otvorený krb, ktorý v chladných mesiacoch dotvára nezameniteľnú hrejivú atmosféru rodinných grobských hodov. Priestor je ideálny pre stredné i väčšie spoločnosti, narodeninové oslavy i firemné bankety.',
+        capacity: 'až 50 osôb',
+        features: ['Kamenný krb s ohňom', 'Masívne stoly', 'Možnosť vlastnej živej hudby / harmoniky', 'Plne klimatizované', 'Vlastný bar a obsluha'],
+        img: 'images/salon_50.jpg'
+      },
+      salon30: {
+        title: 'Veľký salónik (Kapacita: 30 hostí)',
+        subtitle: 'Úplné súkromie pre firemné večierky, prezentácie a rodinné jubileá',
+        desc: 'Samostatne uzatvárateľný elegantný salónik s priamym prechodom a vlastnou terasou. Ponúka absolútnu diskrétnosť pre vaše podujatie bez ruchu okolitých hostí. K dispozícii je možnosť zapojenia vlastnej hudby alebo premietania fotografií na oslavu.',
+        capacity: '15 až 30 osôb',
+        features: ['100% Súkromie a diskrétnosť', 'Možnosť premietania / prezentácie', 'Prístup na terasu', 'Klimatizované', 'Vlastný servisný personál'],
+        img: 'images/salon_30.jpg'
+      },
+      salon14: {
+        title: 'Rodinný salónik (Kapacita: 14 hostí)',
+        subtitle: 'Útulná komorná atmosféra pre promócie, krstiny a úzke rodinné kruhy',
+        desc: 'Salónik vytvorený pre nezabudnuteľné chvíle v kruhu najbližších. Umožňuje sedenie pri jednom spoločnom veľkom stole, kde má každý k sebe blízko a misy s chrumkavou husacinou sa servírujú priamo do stredu stola.',
+        capacity: '8 až 14 osôb',
+        features: ['Jeden veľký spoločný stôl', 'Komorná domácka atmosféra', 'Detská stolička na vyžiadanie', 'Rýchla obsluha'],
+        img: 'images/salon_14.jpg'
+      },
+      salon10: {
+        title: 'VIP Salónik (Kapacita: 10 hostí)',
+        subtitle: 'Diskrétne rokovania a luxusné rodinné posedenie',
+        desc: 'Náš najmenší salónik určený pre VIP obchodné stretnutia, slávnostné podpisy zmlúv či komorné večere pri sviečkach. Poskytuje maximálny pokoj, špičkový servis a nerušené rozhovory.',
+        capacity: '4 až 10 osôb',
+        features: ['Maximálna diskrétnosť pre biznis', 'Pohodlné čalúnené sedenie', 'Priame objednávanie personálu', 'Wi-Fi a zásuvky'],
+        img: 'images/salon_10.jpg'
+      },
+      terasa: {
+        title: 'Zasklená a v zime vyhrievaná terasa',
+        subtitle: 'Celoročné posedenie s výhľadom do zelenej záhrady',
+        desc: 'V letných mesiacoch otvorená vzdušná záhrada plná kvetov a zelene. V chladnejšom období a v zime je terasa plne zasklená a vyhrievaná s mäkkými teplými dekami, čo vytvára kúzelný kontrast medzi zimnou záhradou a horúcim jedlom.',
+        capacity: 'až 30 osôb',
+        features: ['Celoročné využitie (v zime vyhrievaná)', 'Výhľad do upravenej záhrady', 'Vhodné aj pre fajčiarov', 'Príjemný chládok v lete'],
+        img: 'images/terrace.jpg'
+      }
+    };
+
+    // --- GALLERY DATA ---
+    const galleryItems = [
+      { img: 'images/hero_goose.jpg', cat: 'jedlo', title: 'Pečená hus v hlinenom pekáči', desc: 'Zlatistá a chrumkavá priamo z rúry' },
+      { img: 'images/goose_pan.jpg', cat: 'jedlo', title: 'Hlinený pekáč a husacina', desc: 'Pomalé 4-hodinové pečenie u Galika' },
+      { img: 'images/goose_liver.jpg', cat: 'jedlo', title: 'Husacia pečeň s jablkami', desc: 'Gurmánsky klenot slovenskej kuchyne' },
+      { img: 'images/lokse_dish.jpg', cat: 'jedlo', title: 'Čerstvo mastené zemiakové lokše', desc: 'Ručná výroba pečená nasucho na platni' },
+      { img: 'images/meat_platter_1.jpg', cat: 'jedlo', title: 'Mäsové misy na objednávku', desc: 'Grilované kolená, rebierka a klobásy' },
+      { img: 'images/roast_piglet.png', cat: 'jedlo', title: 'Pečené prasiatko vcelku', desc: 'Slávnostná špecialita pre veľké oslavy' },
+      { img: 'images/salon_50.jpg', cat: 'priestory', title: 'Hlavná sála s krbom (50 os.)', desc: 'Tradičný interiér s masívnym drevom' },
+      { img: 'images/salon_30.jpg', cat: 'priestory', title: 'Veľký salónik pre 30 osôb', desc: 'Privátny priestor pre firmy a oslavy' },
+      { img: 'images/salon_14.jpg', cat: 'priestory', title: 'Rodinný salónik pre 14 osôb', desc: 'Útulné spoločné sedenie pri jednom stole' },
+      { img: 'images/salon_10.jpg', cat: 'priestory', title: 'VIP Salónik pre 10 osôb', desc: 'Diskrétne a tiché posedenie' },
+      { img: 'images/terrace.jpg', cat: 'priestory', title: 'Vyhrievaná terasa s výhľadom', desc: 'Kúzelná atmosféra v každom ročnom období' },
+      { img: 'images/event_table.jpg', cat: 'oslavy', title: 'Slávnostne prestretá hostina', desc: 'Pripravené na príchod oslávencov a hostí' }
+    ];
+
+    // --- STATE MANAGEMENT ---
+    let basket = [];
+    let activeCategory = 'all';
+    let activeGalleryFilter = 'all';
+
+    // --- INITIALIZATION ---
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. Initialize Lucide Icons
+      if (window.lucide) {
+        lucide.createIcons();
+      }
+
+      // 2. Render Menu Items
+      renderMenuItems(menuData);
+
+      // 3. Render Initial Room
+      renderRoom('main');
+
+      // 4. Render Gallery
+      renderGallery('all');
+
+      // 5. Setup Live Status Logic
+      updateLiveStatus();
+
+      // 6. Setup Feast Calculator
+      setupFeastCalculator();
+
+      // 7. Setup Voucher Customizer
+      setupVoucherCustomizer();
+
+      // 8. Setup Event Listeners
+      setupEventListeners();
+    });
+
+    // --- RENDER MENU ITEMS ---
+    function renderMenuItems(items) {
+      const container = document.getElementById('menuItemsGrid');
+      const noResults = document.getElementById('noMenuResults');
+      
+      const filtered = items.filter(item => {
+        const matchesCategory = (activeCategory === 'all' || item.cat === activeCategory);
+        const searchVal = document.getElementById('menuSearchInput').value.toLowerCase().trim();
+        const matchesSearch = !searchVal || 
+          item.name.toLowerCase().includes(searchVal) || 
+          item.desc.toLowerCase().includes(searchVal) ||
+          item.tags.some(t => t.toLowerCase().includes(searchVal));
+        
+        return matchesCategory && matchesSearch;
+      });
+
+      if (filtered.length === 0) {
+        container.innerHTML = '';
+        noResults.classList.remove('hidden');
+        return;
+      }
+
+      noResults.classList.add('hidden');
+      container.innerHTML = filtered.map(item => `
+        <div class="glass-card rounded-2xl border border-brand-border/80 overflow-hidden flex flex-col justify-between hover:border-brand-gold/60 transition duration-300 group">
+          <div>
+            <div class="h-44 overflow-hidden relative bg-brand-deep">
+              <img src="${item.img}" alt="${item.name}" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" loading="lazy">
+              <div class="absolute inset-0 bg-gradient-to-t from-brand-charcoal via-transparent to-transparent"></div>
+              <span class="absolute top-3 left-3 px-2.5 py-1 bg-brand-charcoal/90 text-brand-gold text-[11px] font-bold rounded-lg border border-brand-gold/30 backdrop-blur-sm">
+                ${item.badge}
+              </span>
+              <span class="absolute bottom-3 right-3 text-xs text-brand-cream/90 bg-brand-deep/80 px-2 py-0.5 rounded backdrop-blur-sm">
+                ${item.weight}
+              </span>
+            </div>
+
+            <div class="p-5">
+              <div class="flex items-start justify-between gap-2 mb-2">
+                <h3 class="font-serif text-lg font-bold text-white group-hover:text-brand-gold transition leading-snug">
+                  ${item.name}
+                </h3>
+              </div>
+              
+              <p class="text-xs text-brand-muted leading-relaxed mb-4">
+                ${item.desc}
+              </p>
+
+              <div class="flex flex-wrap gap-1.5 mb-2">
+                ${item.tags.map(t => `<span class="text-[10px] px-2 py-0.5 rounded bg-brand-deep text-brand-muted border border-brand-border/60">${t}</span>`).join('')}
+              </div>
+            </div>
+          </div>
+
+          <div class="p-5 pt-0 border-t border-brand-border/40 mt-2 flex items-center justify-between">
+            <div>
+              <span class="text-[10px] text-brand-muted uppercase block">Cena</span>
+              <span class="text-xl font-serif font-bold text-brand-gold">${item.price.toFixed(2).replace('.', ',')} €</span>
+            </div>
+
+            <button onclick="addToBasket('${item.id}')" class="px-3.5 py-2 bg-brand-deep hover:bg-brand-terracotta text-brand-cream hover:text-white border border-brand-border hover:border-brand-terracotta rounded-xl text-xs font-semibold flex items-center gap-1.5 transition">
+              <i data-lucide="plus" class="w-3.5 h-3.5"></i>
+              <span>Do plánu</span>
+            </button>
+          </div>
+        </div>
+      `).join('');
+
+      if (window.lucide) {
+        lucide.createIcons();
+      }
+    }
+
+    // --- FEAST BASKET / WISHLIST MANAGEMENT ---
+    window.addToBasket = function(itemId) {
+      const item = menuData.find(i => i.id === itemId);
+      if (!item) return;
+
+      const existing = basket.find(b => b.id === itemId);
+      if (existing) {
+        existing.qty += 1;
+      } else {
+        basket.push({ ...item, qty: 1 });
+      }
+
+      updateBasketUI();
+      openBasket();
+    };
+
+    window.removeFromBasket = function(itemId) {
+      basket = basket.filter(b => b.id !== itemId);
+      updateBasketUI();
+    };
+
+    window.updateBasketQty = function(itemId, delta) {
+      const existing = basket.find(b => b.id === itemId);
+      if (!existing) return;
+
+      existing.qty += delta;
+      if (existing.qty <= 0) {
+        basket = basket.filter(b => b.id !== itemId);
+      }
+      updateBasketUI();
+    };
+
+    function updateBasketUI() {
+      const countBadge = document.getElementById('basketCountBadge');
+      const itemsList = document.getElementById('basketItemsList');
+      const totalAmount = document.getElementById('basketTotalAmount');
+      
+      const totalItems = basket.reduce((acc, curr) => acc + curr.qty, 0);
+      const totalPrice = basket.reduce((acc, curr) => acc + (curr.price * curr.qty), 0);
+
+      // Badge
+      if (totalItems > 0) {
+        countBadge.innerText = totalItems;
+        countBadge.classList.remove('hidden');
+      } else {
+        countBadge.classList.add('hidden');
+      }
+
+      // Total
+      totalAmount.innerText = `${totalPrice.toFixed(2).replace('.', ',')} €`;
+
+      // Items in drawer
+      if (basket.length === 0) {
+        itemsList.innerHTML = `
+          <div class="py-16 text-center text-brand-muted">
+            <i data-lucide="shopping-bag" class="w-12 h-12 mx-auto text-brand-border mb-3"></i>
+            <p class="text-sm font-semibold text-white">Váš plán hodov je zatiaľ prázdny</p>
+            <p class="text-xs mt-1">Prejdite do jedálneho lístka a kliknite na "+ Do plánu".</p>
+          </div>
+        `;
+      } else {
+        itemsList.innerHTML = basket.map(item => `
+          <div class="p-3.5 rounded-xl bg-brand-card border border-brand-border flex items-center justify-between gap-3">
+            <div class="min-w-0">
+              <h4 class="font-serif text-sm font-bold text-white truncate">${item.name}</h4>
+              <p class="text-xs text-brand-gold font-semibold mt-0.5">${item.price.toFixed(2).replace('.', ',')} € / ks</p>
+            </div>
+
+            <div class="flex items-center gap-2 shrink-0">
+              <div class="flex items-center border border-brand-border rounded-lg bg-brand-deep">
+                <button onclick="updateBasketQty('${item.id}', -1)" class="px-2 py-1 text-brand-muted hover:text-white">-</button>
+                <span class="px-2 text-xs font-bold text-white">${item.qty}</span>
+                <button onclick="updateBasketQty('${item.id}', 1)" class="px-2 py-1 text-brand-muted hover:text-white">+</button>
+              </div>
+
+              <button onclick="removeFromBasket('${item.id}')" class="p-1.5 text-brand-muted hover:text-red-400" title="Odstrániť">
+                <i data-lucide="trash-2" class="w-4 h-4"></i>
+              </button>
+            </div>
+          </div>
+        `).join('');
+      }
+
+      if (window.lucide) {
+        lucide.createIcons();
+      }
+    }
+
+    function openBasket() {
+      const drawer = document.getElementById('basketDrawer');
+      const panel = document.getElementById('basketPanel');
+      drawer.classList.remove('opacity-0', 'pointer-events-none');
+      panel.classList.remove('translate-x-full');
+    }
+
+    function closeBasket() {
+      const drawer = document.getElementById('basketDrawer');
+      const panel = document.getElementById('basketPanel');
+      drawer.classList.add('opacity-0', 'pointer-events-none');
+      panel.classList.add('translate-x-full');
+    }
+
+    // --- VENUE DETAILS RENDERER ---
+    function renderRoom(roomKey) {
+      const room = roomsData[roomKey];
+      if (!room) return;
+
+      const container = document.getElementById('roomDetailCard');
+      container.innerHTML = `
+        <div class="grid grid-cols-1 lg:grid-cols-12 items-stretch">
+          
+          <!-- Image (7 cols) -->
+          <div class="lg:col-span-7 relative h-72 sm:h-96 lg:h-auto min-h-[350px]">
+            <img src="${room.img}" alt="${room.title}" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-charcoal via-transparent to-transparent lg:hidden"></div>
+            <div class="absolute top-4 left-4 px-3 py-1 bg-brand-terracotta text-white text-xs font-bold rounded-lg shadow-lg">
+              Kapacita: ${room.capacity}
+            </div>
+          </div>
+
+          <!-- Info (5 cols) -->
+          <div class="lg:col-span-5 p-6 sm:p-8 flex flex-col justify-between space-y-6">
+            <div>
+              <span class="text-xs uppercase tracking-widest text-brand-gold font-bold">Detail priestoru</span>
+              <h3 class="font-serif text-2xl font-bold text-white mt-1">${room.title}</h3>
+              <p class="text-sm text-brand-terracotta-light font-medium mt-0.5">${room.subtitle}</p>
+
+              <p class="text-xs sm:text-sm text-brand-muted leading-relaxed mt-4">
+                ${room.desc}
+              </p>
+
+              <div class="mt-6 pt-4 border-t border-brand-border/60">
+                <span class="text-xs uppercase tracking-wider text-brand-muted font-bold block mb-2.5">Vybavenie a prednosti:</span>
+                <ul class="space-y-2 text-xs text-brand-cream/90">
+                  ${room.features.map(f => `
+                    <li class="flex items-center gap-2">
+                      <i data-lucide="check" class="w-4 h-4 text-brand-gold shrink-0"></i>
+                      <span>${f}</span>
+                    </li>
+                  `).join('')}
+                </ul>
+              </div>
+            </div>
+
+            <div class="pt-4 border-t border-brand-border/60 flex items-center justify-between">
+              <a href="#rezervacia" onclick="selectRoomInForm('${roomKey}')" class="w-full py-3 px-4 bg-brand-gold hover:bg-brand-gold-hover text-brand-charcoal font-bold text-xs sm:text-sm rounded-xl text-center shadow-gold-glow transition">
+                Rezervovať tento priestor
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+      `;
+
+      if (window.lucide) {
+        lucide.createIcons();
+      }
+    }
+
+    window.selectRoomInForm = function(roomKey) {
+      const select = document.getElementById('resRoom');
+      if (select) {
+        select.value = roomKey;
+      }
+    };
+
+    // --- GALLERY RENDERER ---
+    function renderGallery(filter) {
+      const container = document.getElementById('galleryGrid');
+      const filtered = filter === 'all' ? galleryItems : galleryItems.filter(i => i.cat === filter);
+
+      container.innerHTML = filtered.map((item, index) => `
+        <div onclick="openLightbox('${item.img}', '${item.title} – ${item.desc}')" class="group relative rounded-xl overflow-hidden cursor-pointer h-48 sm:h-56 bg-brand-deep border border-brand-border hover:border-brand-gold transition duration-300">
+          <img src="${item.img}" alt="${item.title}" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" loading="lazy">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-4">
+            <span class="text-xs font-serif font-bold text-white">${item.title}</span>
+            <span class="text-[11px] text-brand-muted">${item.desc}</span>
+          </div>
+          <div class="absolute top-2 right-2 p-1.5 rounded-lg bg-black/60 text-white/80 opacity-0 group-hover:opacity-100 transition">
+            <i data-lucide="maximize-2" class="w-3.5 h-3.5"></i>
+          </div>
+        </div>
+      `).join('');
+
+      if (window.lucide) {
+        lucide.createIcons();
+      }
+    }
+
+    window.openLightbox = function(imgSrc, caption) {
+      const modal = document.getElementById('lightboxModal');
+      const img = document.getElementById('lightboxImg');
+      const cap = document.getElementById('lightboxCaption');
+      img.src = imgSrc;
+      cap.innerText = caption;
+      modal.classList.remove('hidden');
+    };
+
+    // --- FEAST CALCULATOR LOGIC ---
+    function setupFeastCalculator() {
+      const range = document.getElementById('calcGuestsRange');
+      const valDisplay = document.getElementById('calcGuestsValue');
+      const wineToggle = document.getElementById('calcWineToggle');
+      const strudelToggle = document.getElementById('calcStrudelToggle');
+      const packageButtons = document.querySelectorAll('.calc-package-btn');
+
+      let currentPackage = 'klasik';
+
+      function recalculate() {
+        const guests = parseInt(range.value, 10);
+        valDisplay.innerText = guests;
+
+        // Package multipliers
+        let geesePortion = 0;
+        let duckPortion = 0;
+        let liverGrams = 0;
+        let lokseCount = Math.round(guests * 3.5);
+        let cabbageGrams = guests * 120;
+        let soups = guests;
+        let strudels = strudelToggle.checked ? guests : 0;
+        let wineBottles = wineToggle.checked ? Math.ceil(guests / 2) : 0;
+        
+        let estPricePerPerson = 28;
+        let summaryHtml = '';
+
+        if (currentPackage === 'klasik') {
+          estPricePerPerson = 28;
+          geesePortion = Math.ceil(guests / 4); // 1 goose per 4 people
+          summaryHtml = `
+            <div class="flex items-center justify-between"><span class="text-brand-muted">Pečené husi v pekáči:</span><strong class="text-white">${geesePortion} ks celá domáca hus</strong></div>
+            <div class="flex items-center justify-between"><span class="text-brand-muted">Ručne mastené lokše:</span><strong class="text-white">${lokseCount} ks lokší</strong></div>
+            <div class="flex items-center justify-between"><span class="text-brand-muted">Dusená červená kapusta:</span><strong class="text-white">${(cabbageGrams/1000).toFixed(1)} kg</strong></div>
+            <div class="flex items-center justify-between"><span class="text-brand-muted">Domáci husací vývar:</span><strong class="text-white">${soups} porcií</strong></div>
+          `;
+        } else if (currentPackage === 'kralovsky') {
+          estPricePerPerson = 45;
+          geesePortion = Math.ceil(guests / 4);
+          liverGrams = guests * 100;
+          summaryHtml = `
+            <div class="flex items-center justify-between"><span class="text-brand-muted">Husacia pečeň s jablkami:</span><strong class="text-white">${liverGrams} g pečene na masti</strong></div>
+            <div class="flex items-center justify-between"><span class="text-brand-muted">Pečené husi v pekáči:</span><strong class="text-white">${geesePortion} ks celá hus</strong></div>
+            <div class="flex items-center justify-between"><span class="text-brand-muted">Mastené lokše (slaný & sladký výber):</span><strong class="text-white">${lokseCount} ks</strong></div>
+            <div class="flex items-center justify-between"><span class="text-brand-muted">Dusená kapusta & domáci vývar:</span><strong class="text-white">${soups}x kompletné prílohy</strong></div>
+          `;
+        } else if (currentPackage === 'gurman') {
+          estPricePerPerson = 52;
+          geesePortion = Math.ceil(guests / 6);
+          liverGrams = guests * 80;
+          summaryHtml = `
+            <div class="flex items-center justify-between"><span class="text-brand-muted">Husacina v pekáči:</span><strong class="text-white">${geesePortion} ks pečená hus</strong></div>
+            <div class="flex items-center justify-between"><span class="text-brand-muted">Mäsová misa / Pečené prasiatko:</span><strong class="text-white">Veľká misa pečených špecialít</strong></div>
+            <div class="flex items-center justify-between"><span class="text-brand-muted">Husacia pečeň:</span><strong class="text-white">${liverGrams} g</strong></div>
+            <div class="flex items-center justify-between"><span class="text-brand-muted">Domáce lokše & prílohy:</span><strong class="text-white">${lokseCount} ks lokší</strong></div>
+          `;
+        }
+
+        if (wineBottles > 0) {
+          estPricePerPerson += 7;
+          summaryHtml += `<div class="flex items-center justify-between text-brand-gold"><span class="text-brand-muted">Malokarpatské výberové vína:</span><strong>${wineBottles} fliaš (0,75 l)</strong></div>`;
+        }
+        if (strudels > 0) {
+          estPricePerPerson += 3.5;
+          summaryHtml += `<div class="flex items-center justify-between text-brand-gold"><span class="text-brand-muted">Domáce ťahané štrúdle:</span><strong>${strudels} ks</strong></div>`;
+        }
+
+        document.getElementById('calcSummaryList').innerHTML = summaryHtml;
+
+        const totalEst = guests * estPricePerPerson;
+        document.getElementById('calcPerPersonPrice').innerText = `${estPricePerPerson.toFixed(2).replace('.', ',')} €`;
+        document.getElementById('calcTotalPrice').innerText = `${totalEst.toFixed(2).replace('.', ',')} €`;
+
+        // Recommended Room logic
+        const roomNameEl = document.getElementById('calcRoomName');
+        const roomDescEl = document.getElementById('calcRoomDesc');
+        if (guests <= 10) {
+          roomNameEl.innerText = 'VIP Salónik (kapacita do 10 osôb)';
+          roomDescEl.innerText = 'Diskrétny priestor zaručujúci maximálny pokoj a súkromie.';
+        } else if (guests <= 14) {
+          roomNameEl.innerText = 'Rodinný salónik (kapacita do 14 osôb)';
+          roomDescEl.innerText = 'Pohodlné sedenie pri jednom veľkom rodinnom stole.';
+        } else if (guests <= 30) {
+          roomNameEl.innerText = 'Veľký salónik (kapacita do 30 osôb)';
+          roomDescEl.innerText = 'Ideálny na firemný večierok, jubileum s vlastným ozvučením.';
+        } else {
+          roomNameEl.innerText = 'Hlavná sála s krbom (kapacita do 50 osôb)';
+          roomDescEl.innerText = 'Veľkorysý rustikálny priestor pre veľkolepú hostinu.';
+        }
+      }
+
+      packageButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          packageButtons.forEach(b => {
+            b.classList.remove('active', 'border-brand-gold', 'bg-brand-gold/10');
+            b.classList.add('border-brand-border', 'bg-brand-deep');
+          });
+          btn.classList.add('active', 'border-brand-gold', 'bg-brand-gold/10');
+          btn.classList.remove('border-brand-border', 'bg-brand-deep');
+          currentPackage = btn.dataset.package;
+          recalculate();
+        });
+      });
+
+      range.addEventListener('input', recalculate);
+      wineToggle.addEventListener('change', recalculate);
+      strudelToggle.addEventListener('change', recalculate);
+
+      recalculate();
+
+      // Apply button to reservation form
+      document.getElementById('calcApplyToBookingBtn').addEventListener('click', () => {
+        const guests = range.value;
+        const guestsInput = document.getElementById('resGuests');
+        if (guestsInput) guestsInput.value = guests;
+
+        // Auto select room in form
+        const roomSelect = document.getElementById('resRoom');
+        if (roomSelect) {
+          if (guests <= 10) roomSelect.value = 'salon10';
+          else if (guests <= 14) roomSelect.value = 'salon14';
+          else if (guests <= 30) roomSelect.value = 'salon30';
+          else roomSelect.value = 'main';
+        }
+
+        // Set note
+        const noteInput = document.getElementById('resNote');
+        const total = document.getElementById('calcTotalPrice').innerText;
+        noteInput.value = `Záujem o kalkulovaný balíček [${currentPackage.toUpperCase()}] pre ${guests} osôb (odhad ${total}).`;
+
+        // Scroll to reservation
+        document.getElementById('rezervacia').scrollIntoView({ behavior: 'smooth' });
+      });
+    }
+
+    // --- VOUCHER CUSTOMIZER LOGIC ---
+    function setupVoucherCustomizer() {
+      const amtBtns = document.querySelectorAll('.voucher-amt-btn');
+      const recipientInput = document.getElementById('voucherRecipientInput');
+      const noteInput = document.getElementById('voucherNoteInput');
+
+      const previewAmt = document.getElementById('previewVoucherAmount');
+      const previewRecipient = document.getElementById('previewVoucherRecipient');
+      const previewNote = document.getElementById('previewVoucherNote');
+
+      amtBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          amtBtns.forEach(b => {
+            b.classList.remove('active', 'border-brand-gold', 'bg-brand-gold/15', 'text-brand-gold');
+            b.classList.add('border-brand-border', 'bg-brand-card', 'text-brand-cream');
+          });
+          btn.classList.add('active', 'border-brand-gold', 'bg-brand-gold/15', 'text-brand-gold');
+          btn.classList.remove('border-brand-border', 'bg-brand-card', 'text-brand-cream');
+          previewAmt.innerText = `${btn.dataset.amount} €`;
+        });
+      });
+
+      recipientInput.addEventListener('input', () => {
+        previewRecipient.innerText = recipientInput.value.trim() || 'Meno obdarovaného';
+      });
+
+      noteInput.addEventListener('input', () => {
+        previewNote.innerText = noteInput.value.trim() ? `„${noteInput.value.trim()}“` : '';
+      });
+
+      document.getElementById('orderVoucherBtn').addEventListener('click', () => {
+        const amt = document.querySelector('.voucher-amt-btn.active')?.dataset.amount || '100';
+        const recipient = recipientInput.value.trim() || 'Neuvedené';
+        
+        showFeedbackModal(
+          'Objednávka darčekového poukazu',
+          `Váš darčekový poukaz v hodnote ${amt} € (so zľavou 10% platíte len ${(amt*0.9).toFixed(0)} €) pre: ${recipient} bol zaznamenaný. Kontaktujeme vás ohľadom prevzatia.`,
+          `POUKAZ-GALIK-${Math.floor(1000 + Math.random() * 9000)}`
+        );
+      });
+    }
+
+    // --- EVENT LISTENERS SETUP ---
+    function setupEventListeners() {
+      // Mobile menu toggle
+      const mobileBtn = document.getElementById('mobileMenuBtn');
+      const mobileMenu = document.getElementById('mobileMenu');
+      mobileBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+
+      // Close mobile menu on link click
+      document.querySelectorAll('.mobile-nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+        });
+      });
+
+      // Menu Category Tabs
+      document.querySelectorAll('.menu-tab-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          document.querySelectorAll('.menu-tab-btn').forEach(b => {
+            b.classList.remove('active', 'bg-brand-terracotta', 'text-white', 'shadow-warm-glow');
+            b.classList.add('bg-brand-deep', 'text-brand-cream/90', 'border-brand-border');
+          });
+          btn.classList.add('active', 'bg-brand-terracotta', 'text-white', 'shadow-warm-glow');
+          btn.classList.remove('bg-brand-deep', 'text-brand-cream/90', 'border-brand-border');
+          activeCategory = btn.dataset.category;
+          renderMenuItems(menuData);
+        });
+      });
+
+      // Menu Search Input
+      const searchInput = document.getElementById('menuSearchInput');
+      const clearSearchBtn = document.getElementById('clearSearchBtn');
+      searchInput.addEventListener('input', () => {
+        if (searchInput.value.trim()) {
+          clearSearchBtn.classList.remove('hidden');
+        } else {
+          clearSearchBtn.classList.add('hidden');
+        }
+        renderMenuItems(menuData);
+      });
+      clearSearchBtn.addEventListener('click', () => {
+        searchInput.value = '';
+        clearSearchBtn.classList.add('hidden');
+        renderMenuItems(menuData);
+      });
+
+      // Room Selector Tabs
+      document.querySelectorAll('.room-tab-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          document.querySelectorAll('.room-tab-btn').forEach(b => {
+            b.classList.remove('active', 'bg-brand-terracotta', 'text-white', 'shadow-warm-glow');
+            b.classList.add('bg-brand-deep', 'text-brand-cream', 'border-brand-border');
+          });
+          btn.classList.add('active', 'bg-brand-terracotta', 'text-white', 'shadow-warm-glow');
+          btn.classList.remove('bg-brand-deep', 'text-brand-cream', 'border-brand-border');
+          renderRoom(btn.dataset.room);
+        });
+      });
+
+      // Gallery Filter Buttons
+      document.querySelectorAll('.gallery-filter-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          document.querySelectorAll('.gallery-filter-btn').forEach(b => {
+            b.classList.remove('active', 'bg-brand-terracotta', 'text-white');
+            b.classList.add('bg-brand-deep', 'text-brand-muted', 'border-brand-border');
+          });
+          btn.classList.add('active', 'bg-brand-terracotta', 'text-white');
+          btn.classList.remove('bg-brand-deep', 'text-brand-muted', 'border-brand-border');
+          activeGalleryFilter = btn.dataset.filter;
+          renderGallery(activeGalleryFilter);
+        });
+      });
+
+      // Basket Drawer Triggers
+      document.getElementById('openBasketBtn').addEventListener('click', openBasket);
+      document.getElementById('closeBasketBtn').addEventListener('click', closeBasket);
+      document.getElementById('basketBackdrop').addEventListener('click', closeBasket);
+      document.getElementById('basketClearBtn').addEventListener('click', () => {
+        basket = [];
+        updateBasketUI();
+      });
+
+      // Transfer basket to reservation form
+      document.getElementById('basketTransferBtn').addEventListener('click', () => {
+        closeBasket();
+        if (basket.length > 0) {
+          const planNotice = document.getElementById('resFeastPlanNotice');
+          const planItems = document.getElementById('resFeastPlanItems');
+          planNotice.classList.remove('hidden');
+          planItems.innerText = basket.map(b => `${b.qty}x ${b.name}`).join(' • ');
+          
+          const note = document.getElementById('resNote');
+          const summary = basket.map(b => `${b.qty}x ${b.name} (${(b.price * b.qty).toFixed(2)} €)`).join('\n');
+          note.value = `Objednané položky z menu:\n${summary}\n\nSpolu: ${document.getElementById('basketTotalAmount').innerText}`;
+        }
+        document.getElementById('rezervacia').scrollIntoView({ behavior: 'smooth' });
+      });
+
+      // Close Lightbox
+      document.getElementById('closeLightboxBtn').addEventListener('click', () => {
+        document.getElementById('lightboxModal').classList.add('hidden');
+      });
+      document.getElementById('lightboxModal').addEventListener('click', (e) => {
+        if (e.target.id === 'lightboxModal') {
+          document.getElementById('lightboxModal').classList.add('hidden');
+        }
+      });
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          document.getElementById('lightboxModal').classList.add('hidden');
+          document.getElementById('feedbackModal').classList.add('hidden');
+          closeBasket();
+        }
+      });
+
+      // Reservation Form Submission
+      const form = document.getElementById('reservationForm');
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        const name = document.getElementById('resName').value;
+        const guests = document.getElementById('resGuests').value;
+        const date = document.getElementById('resDate').value;
+        const time = document.getElementById('resTime').value;
+        const refCode = `GALIK-${new Date().getFullYear()}-${Math.floor(1000 + Math.random() * 9000)}`;
+
+        showFeedbackModal(
+          'Rezervácia úspešne odoslaná!',
+          `Vážený/á ${name}, Vašu rezerváciu stola pre ${guests} osôb na deň ${date} o ${time} sme prijali. Náš tím reštaurácie Husacina u Galika Vás bude v krátkom čase kontaktovať na overenie detailov.`,
+          `Kód rezervácie: ${refCode}`
+        );
+
+        form.reset();
+      });
+
+      // Close Feedback Modal
+      document.getElementById('closeFeedbackBtn').addEventListener('click', () => {
+        document.getElementById('feedbackModal').classList.add('hidden');
+      });
+
+      // Prevent past dates in reservation
+      const dateInput = document.getElementById('resDate');
+      if (dateInput) {
+        const today = new Date().toISOString().split('T')[0];
+        dateInput.min = today;
+        dateInput.value = today;
+      }
+    }
+
+    function showFeedbackModal(title, message, refCode) {
+      document.getElementById('feedbackTitle').innerText = title;
+      document.getElementById('feedbackMessage').innerText = message;
+      document.getElementById('feedbackRef').innerText = refCode;
+      document.getElementById('feedbackModal').classList.remove('hidden');
+    }
+
+    // --- LIVE STATUS ENGINE ---
+    function updateLiveStatus() {
+      const now = new Date();
+      const day = now.getDay(); // 0 = Sun, 1 = Mon, 2 = Tue, 3 = Wed, 4 = Thu, 5 = Fri, 6 = Sat
+      const hour = now.getHours();
+      const minute = now.getMinutes();
+      const timeNum = hour + minute / 60;
+
+      const dot = document.getElementById('liveStatusDot');
+      const pulse = document.getElementById('liveStatusPulse');
+      const text = document.getElementById('liveStatusText');
+
+      let isOpen = false;
+      let statusStr = '';
+
+      // Mon, Tue = Closed (orders only)
+      if (day === 1 || day === 2) {
+        isOpen = false;
+        statusStr = 'Pondelok/Utorok: Otvorené len na vopred ohlásené akcie od 10 osôb a obedové menu';
+      } else if (day >= 3 && day <= 5) {
+        // Wed - Fri: 13:00 - 22:00
+        if (timeNum >= 13 && timeNum < 22) {
+          isOpen = true;
+          statusStr = 'Práve máme otvorené • Dnes do 22:00 | Tešíme sa na vašu návštevu!';
+        } else if (timeNum < 13) {
+          isOpen = false;
+          statusStr = 'Dnes otvárame o 13:00 (Streda – Piatok: 13:00 – 22:00)';
+        } else {
+          isOpen = false;
+          statusStr = 'Dnes už máme zatvorené • Tešíme sa na vás zajtra';
+        }
+      } else if (day === 6) {
+        // Sat: 12:00 - 22:00
+        if (timeNum >= 12 && timeNum < 22) {
+          isOpen = true;
+          statusStr = 'Práve máme otvorené • Sobotné hody do 22:00';
+        } else {
+          isOpen = false;
+          statusStr = 'Sobota: Otvárame o 12:00 (12:00 – 22:00)';
+        }
+      } else if (day === 0) {
+        // Sun: 12:00 - 18:00
+        if (timeNum >= 12 && timeNum < 18) {
+          isOpen = true;
+          statusStr = 'Práve máme otvorené • Nedeľné rodinné hody do 18:00';
+        } else {
+          isOpen = false;
+          statusStr = 'Nedeľa: Otvorené 12:00 – 18:00';
+        }
+      }
+
+      if (isOpen) {
+        dot.className = 'relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500';
+        pulse.className = 'animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75';
+      } else {
+        dot.className = 'relative inline-flex rounded-full h-2.5 w-2.5 bg-amber-500';
+        pulse.className = 'hidden';
+      }
+
+      text.innerText = statusStr;
+    }
+  </script>
+</body>
+</html>
