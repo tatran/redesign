@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html lang="de" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="siteTitle">Biobauernhof Eliashof | Schladming-Rohrmoos | Zimmer & Appartements</title>
+  <meta name="description" content="Urlaub am Biobauernhof Eliashof in Rohrmoos bei Schladming auf 1.000m Seehöhe. Gemütliche Zimmer mit Frühstück & geräumige Vollholz-Appartements mit Dachsteinblick.">
+  <meta name="author" content="Familie Höflehner">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png">
+
+  <!-- Google Fonts: Outfit (Headings) & Plus Jakarta Sans (Body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Leaflet Map CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+
+  <!-- Design System CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ========================================================================
+       Top Info Bar
+       ======================================================================== -->
+  <aside class="topbar">
+    <div class="container topbar-inner">
+      <div class="topbar-left">
+        <span class="topbar-item" data-i18n="topBarAltitude">
+          📍 1.000 m Seehöhe • Schladming-Rohrmoos
+        </span>
+        <span class="topbar-badge" data-i18n="topBarFeature">
+          ⛷️ Direkt an der 4-Berge-Skischaukel • 🎫 Sommercard inklusive
+        </span>
+      </div>
+      <div class="topbar-right">
+        <span class="topbar-item">
+          📞 <a href="tel:+43368761475">+43 (0)3687 61 475</a>
+        </span>
+        <span class="topbar-item">
+          ✉️ <a href="mailto:urlaub@eliashof.at">urlaub@eliashof.at</a>
+        </span>
+        <div class="controls-group">
+          <!-- Theme Switcher (Light Default / Dark) -->
+          <button id="theme-toggle-btn" class="btn-ctrl" type="button" aria-label="Theme umschalten" title="Theme umschalten">
+            <span id="theme-icon">🌙</span>
+          </button>
+          <!-- Bilingual Language Switcher (DE / EN) -->
+          <button id="lang-toggle-btn" class="btn-ctrl" type="button" aria-label="Sprache wechseln" title="Sprache wechseln">
+            <span id="lang-label">EN 🇬🇧</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ========================================================================
+       Sticky Main Navigation Header
+       ======================================================================== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <!-- Brand & Emblem -->
+      <a href="#" class="brand-wrapper" aria-label="Eliashof Startseite">
+        <img src="images/all/logo-eliashof.png" alt="Logo Biobauernhof Eliashof" class="brand-logo-img">
+        <div class="brand-text">
+          <span class="brand-title">ELIASHOF</span>
+          <span class="brand-subtitle" data-i18n="heroBadgeTag">Biobauernhof • 3 Margeriten</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="nav-desktop" aria-label="Hauptnavigation">
+        <ul class="nav-links">
+          <li><a href="#about" class="nav-link" data-i18n="navAbout">Über uns</a></li>
+          <li><a href="#accommodations" class="nav-link" data-i18n="navAccommodations">Unterkünfte</a></li>
+          <li><a href="#rates" class="nav-link" data-i18n="navRates">Preise & Rechner</a></li>
+          <li><a href="#farm" class="nav-link" data-i18n="navFarm">Bauernhof & Tiere</a></li>
+          <li><a href="#waldhornalm" class="nav-link" data-i18n="navWaldhornalm">Waldhornalm</a></li>
+          <li><a href="#location" class="nav-link" data-i18n="navLocation">Lage & Anfahrt</a></li>
+          <li><a href="#faq" class="nav-link" data-i18n="navFaq">FAQ</a></li>
+        </ul>
+        <a href="#inquiry" class="btn btn--primary btn--sm" data-i18n="quickInquiryBtn">Jetzt Anfragen</a>
+      </nav>
+
+      <!-- Mobile Menu Toggle Button -->
+      <button id="mobile-menu-toggle" class="mobile-menu-toggle" type="button" aria-label="Menü öffnen">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <aside id="mobile-nav-drawer" class="mobile-nav-drawer" aria-label="Mobiles Menü">
+    <div class="mobile-drawer-header">
+      <div class="brand-wrapper">
+        <span class="brand-title">ELIASHOF</span>
+      </div>
+      <button id="mobile-drawer-close" class="btn-ctrl" type="button" aria-label="Menü schließen">✕</button>
+    </div>
+    <ul class="mobile-nav-links">
+      <li><a href="#about" class="nav-link" data-i18n="navAbout">Über uns</a></li>
+      <li><a href="#accommodations" class="nav-link" data-i18n="navAccommodations">Unterkünfte</a></li>
+      <li><a href="#rates" class="nav-link" data-i18n="navRates">Preise & Rechner</a></li>
+      <li><a href="#farm" class="nav-link" data-i18n="navFarm">Bauernhof & Tiere</a></li>
+      <li><a href="#waldhornalm" class="nav-link" data-i18n="navWaldhornalm">Waldhornalm</a></li>
+      <li><a href="#location" class="nav-link" data-i18n="navLocation">Lage & Anfahrt</a></li>
+      <li><a href="#faq" class="nav-link" data-i18n="navFaq">FAQ</a></li>
+      <li><a href="#inquiry" class="nav-link" data-i18n="navInquiry">Anfrage</a></li>
+    </ul>
+    <div style="display:flex; gap:1rem; margin-top:auto;">
+      <button id="theme-toggle-mobile" class="btn-ctrl" style="flex:1; padding:0.75rem;" type="button">
+        <span id="mobile-theme-icon">🌙</span> Theme
+      </button>
+      <button id="lang-toggle-mobile" class="btn-ctrl" style="flex:1; padding:0.75rem;" type="button">
+        <span id="mobile-lang-label">EN 🇬🇧</span>
+      </button>
+    </div>
+  </aside>
+
+  <!-- ========================================================================
+       Hero Section with Alpine Panorama Slideshow
+       ======================================================================== -->
+  <section class="hero-section">
+    <!-- Dynamic Slideshow Background -->
+    <div class="hero-slider-bg">
+      <div class="hero-slide is-active">
+        <img src="images/startseite/slideshow/eliashof-1920w.jpg" alt="Eliashof mit Dachstein Panorama" class="hero-slide-img">
+      </div>
+      <div class="hero-slide">
+        <img src="images/startseite/slideshow/zimmer-1920w.jpg" alt="Doppelzimmer am Bauernhof" class="hero-slide-img">
+      </div>
+      <div class="hero-slide">
+        <img src="images/startseite/slideshow/appartement-1920w.jpg" alt="Appartement im 200J. Bauernhaus" class="hero-slide-img">
+      </div>
+      <div class="hero-slide">
+        <img src="images/startseite/slideshow/rohrmoos-1920w.jpg" alt="Rohrmoos Schladming-Dachstein" class="hero-slide-img">
+      </div>
+      <div class="hero-slide">
+        <img src="images/startseite/slideshow/eliashof_02-1920w.jpg" alt="Der Eliashof von oben" class="hero-slide-img">
+      </div>
+    </div>
+    <div class="hero-overlay"></div>
+
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge-pill" data-i18n="heroBadgeTag">
+          🌾 Biobauernhof • 3 Margeriten
+        </div>
+        <h1 class="hero-title" data-i18n="heroTitle">
+          Urlaub am Biobauernhof mit Dachsteinblick
+        </h1>
+        <p class="hero-subtitle" data-i18n="heroSubtitle">
+          Ruhig gelegen auf 1.000 m Seehöhe in Rohrmoos oberhalb von Schladming. Genießen Sie echte steirische Herzlichkeit, gemütliche Doppelzimmer mit reichhaltigem Bio-Frühstück und großzügige Vollholz-Ferienwohnungen im 200 Jahre alten Bauernhaus.
+        </p>
+
+        <!-- Feature Chips -->
+        <div class="hero-badges-row">
+          <span class="hero-feat-chip" data-i18n="heroBadgeSki">⛷️ Ski-in / Ski-out Piste</span>
+          <span class="hero-feat-chip" data-i18n="heroBadgeCard">🎫 Sommercard inklusive</span>
+          <span class="hero-feat-chip" data-i18n="heroBadgeOrganic">🌿 Eigener Bio-Hof</span>
+          <span class="hero-feat-chip">🏔️ 1.000 m Seehöhe</span>
+        </div>
+
+        <div class="hero-ctas">
+          <a href="#accommodations" class="btn btn--primary" data-i18n="heroCtaPrimary">Unterkünfte entdecken</a>
+          <a href="#rates" class="btn btn--secondary" data-i18n="heroCtaSecondary">Preis kalkulieren</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       Fast Availability Finder Bar (Floating)
+       ======================================================================== -->
+  <div class="container finder-bar-wrapper">
+    <div class="finder-bar">
+      <form id="fast-finder-form" class="finder-form">
+        <div class="finder-field">
+          <label for="finder-arrival" class="finder-label" data-i18n="finderArrival">Anreise</label>
+          <input type="date" id="finder-arrival" class="finder-input" required>
+        </div>
+        <div class="finder-field">
+          <label for="finder-departure" class="finder-label" data-i18n="finderDeparture">Abreise</label>
+          <input type="date" id="finder-departure" class="finder-input" required>
+        </div>
+        <div class="finder-field">
+          <label for="finder-type" class="finder-label" data-i18n="finderType">Unterkunft</label>
+          <select id="finder-type" class="finder-select">
+            <option value="all" data-i18n="finderTypeAll">Alle Unterkünfte</option>
+            <option value="zimmer" data-i18n="finderTypeRooms">Doppelzimmer (mit Frühstück)</option>
+            <option value="app_og" data-i18n="finderTypeAppOg">Appartement Obergeschoss (90m²)</option>
+            <option value="app_dg" data-i18n="finderTypeAppDg">Appartement Dachgeschoss (70m²)</option>
+          </select>
+        </div>
+        <div class="finder-field">
+          <label for="finder-guests" class="finder-label" data-i18n="finderGuests">Gäste</label>
+          <select id="finder-guests" class="finder-select">
+            <option value="2" selected data-i18n="finderGuests2">2 Personen</option>
+            <option value="3" data-i18n="finderGuests3">3 Personen</option>
+            <option value="4" data-i18n="finderGuests4">4 Personen</option>
+            <option value="5" data-i18n="finderGuests5">5 Personen</option>
+            <option value="6" data-i18n="finderGuests6">6 Personen</option>
+            <option value="1" data-i18n="finderGuests1">1 Person</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn--accent" data-i18n="finderBtn">Verfügbarkeit prüfen</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       Highlights / USPs Section
+       ======================================================================== -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="uspsSectionTag">Ihre Urlaubsvorteile</span>
+        <h2 class="section-title" data-i18n="uspsTitle">Warum der Eliashof der perfekte Urlaubsort ist</h2>
+        <p class="section-subtitle" data-i18n="uspsSubtitle">
+          Ob Winterzauber auf zwei Brettern oder erfrischender Bergsommer – bei uns erleben Sie Erholung inmitten unverfälschter Natur.
+        </p>
+      </div>
+
+      <div class="usps-grid">
+        <!-- USP 1: Ski-in / Ski-out -->
+        <article class="usp-card">
+          <div class="usp-icon-box">⛷️</div>
+          <h3 class="usp-title" data-i18n="usp1Title">Direkt an der 4-Berge-Skischaukel</h3>
+          <p class="usp-desc" data-i18n="usp1Desc">
+            Über einen kurzen Skiweg steigen Sie direkt in die Pisten von Hochwurzen, Planai, Reiteralm und Hauser Kaibling ein. Nach dem Skitag fahren Sie mit Skiern bis vor den Hof!
+          </p>
+        </article>
+
+        <!-- USP 2: Sommercard -->
+        <article class="usp-card">
+          <div class="usp-icon-box">🎫</div>
+          <h3 class="usp-title" data-i18n="usp2Title">Schladming-Dachstein Sommercard</h3>
+          <p class="usp-desc" data-i18n="usp2Desc">
+            Kostenlos für all unsere Gäste im Sommer: Freie Fahrten mit Bergbahnen, Linien- und Wanderbussen, Mautstraßen, freier Eintritt in Bäder und Seen und über 100 Attraktionen.
+          </p>
+        </article>
+
+        <!-- USP 3: Bio Breakfast -->
+        <article class="usp-card">
+          <div class="usp-icon-box">🍳</div>
+          <h3 class="usp-title" data-i18n="usp3Title">Bio-Frühstück mit Hofprodukten</h3>
+          <p class="usp-desc" data-i18n="usp3Desc">
+            Stärken Sie sich in unserer gemütlichen Stube mit herrlichem Dachsteinblick: Frische Milch, Butter, Käse, Brot, Marmeladen und Eier direkt von unserem Bio-Hof.
+          </p>
+        </article>
+
+        <!-- USP 4: Waldhornalm -->
+        <article class="usp-card">
+          <div class="usp-icon-box">🏔️</div>
+          <h3 class="usp-title" data-i18n="usp4Title">Eigene Waldhornalm im Untertal</h3>
+          <p class="usp-desc" data-i18n="usp4Desc">
+            Unser Almschatz an der berühmten Klafferkessel-Wanderung. Genießen Sie selbstgemachten Steirerkas, Almbutter und hausgebackenes Brot – auf Wunsch mit Hüttenlager-Übernachtung.
+          </p>
+        </article>
+
+        <!-- USP 5: Animals & Nature -->
+        <article class="usp-card">
+          <div class="usp-icon-box">🐐</div>
+          <h3 class="usp-title" data-i18n="usp5Title">Tierparadies & Naturspielplatz</h3>
+          <p class="usp-desc" data-i18n="usp5Desc">
+            Auf den weitläufigen Wiesen rund um den Hof können Kinder unbeschwert spielen und Ziegen, Kaninchen, Kätzchen und Enten streicheln. Unsere Kühe und Schafe weiden im Sommer auf der Alm.
+          </p>
+        </article>
+
+        <!-- USP 6: Historic 200y Farmhouse -->
+        <article class="usp-card">
+          <div class="usp-icon-box">🪵</div>
+          <h3 class="usp-title" data-i18n="usp6Title">200 Jahre altes Vollholz-Bauernhaus</h3>
+          <p class="usp-desc" data-i18n="usp6Desc">
+            Beide Appartements befinden sich im denkmalgeschützten, stilvoll mit duftendem Vollholz renovierten Bauernhaus mit Balkon, eigener Küche und modernsten Badezimmern.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       Accommodations Section
+       ======================================================================== -->
+  <section id="accommodations" class="section section--subtle">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="accSectionTag">Wohnen & Erholen</span>
+        <h2 class="section-title" data-i18n="accTitle">Gemütliche Zimmer & Großzügige Appartements</h2>
+        <p class="section-subtitle" data-i18n="accSubtitle">
+          Natürliche Materialien, viel Holz, liebevolle Ausstattung und der spektakuläre Ausblick auf die Schladminger Bergwelt lassen Sie zur Ruhe kommen.
+        </p>
+      </div>
+
+      <!-- Filter Tabs -->
+      <div class="accommodations-tabs">
+        <button class="acc-tab-btn is-active" data-filter="all" data-i18n="tabAll">Alle Unterkünfte</button>
+        <button class="acc-tab-btn" data-filter="zimmer" data-i18n="tabRooms">Doppelzimmer</button>
+        <button class="acc-tab-btn" data-filter="app_og" data-i18n="tabAppOg">Appartement OG (90 m²)</button>
+        <button class="acc-tab-btn" data-filter="app_dg" data-i18n="tabAppDg">Appartement DG (70 m²)</button>
+      </div>
+
+      <div class="accommodations-grid">
+
+        <!-- Card 1: Doppelzimmer -->
+        <article class="acc-card" data-category="zimmer">
+          <div class="acc-card-media">
+            <img src="images/zimmer/zimmer-01.jpg" alt="Doppelzimmer Eliashof mit Dachsteinblick" class="acc-card-img">
+            <span class="acc-badge-location" data-i18n="badgeMainHouse">Haupthaus</span>
+            <div class="acc-badge-price">
+              <span class="acc-price-amount" data-i18n="roomPriceBadge">ab € 45,-</span>
+              <span class="acc-price-note" data-i18n="roomPriceUnit">pro Person / Nacht inkl. Abgabe & Sommercard</span>
+            </div>
+          </div>
+          <div class="acc-card-body">
+            <span class="acc-capacity-tag" data-i18n="roomCapacity">2 Personen • Im Haupthaus</span>
+            <h3 class="acc-title" data-i18n="roomTitle">Freundliche Doppelzimmer mit Dachsteinblick</h3>
+            <p class="acc-desc" data-i18n="roomDesc">
+              Unsere hellen Doppelzimmer laden nach einem aktiven Tag in den Bergen zum Wohlfühlen ein. Ausgestattet mit eigener Dusche/WC, Kabel-TV, WLAN und privatem Balkon mit Blick auf das imposante Dachsteinmassiv.
+            </p>
+            <ul class="acc-features-list">
+              <li class="acc-feature-item"><span class="acc-check-icon">✓</span> <span data-i18n="roomFeat1">Balkon mit freiem Panoramablick auf den Dachstein</span></li>
+              <li class="acc-feature-item"><span class="acc-check-icon">✓</span> <span data-i18n="roomFeat2">Reichhaltiges Bio-Frühstücksbuffet inklusive</span></li>
+              <li class="acc-feature-item"><span class="acc-check-icon">✓</span> <span data-i18n="roomFeat3">Eigenes Bad mit Dusche, WC & Haartrockner</span></li>
+              <li class="acc-feature-item"><span class="acc-check-icon">✓</span> <span data-i18n="roomFeat4">Kabel-TV & schnelles WLAN im gesamten Haus</span></li>
+              <li class="acc-feature-item"><span class="acc-check-icon">✓</span> <span data-i18n="roomFeat5">Beheizter Skiraum mit Skischuhtrockner</span></li>
+            </ul>
+            <div class="acc-card-actions">
+              <button type="button" class="btn btn--secondary btn--sm btn-calc-prefill" data-category="zimmer" data-i18n="btnCalculateThis">Angebot berechnen</button>
+              <a href="#inquiry" class="btn btn--primary btn--sm" data-i18n="quickInquiryBtn">Jetzt Anfragen</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 2: Appartement Obergeschoss (90m²) -->
+        <article class="acc-card" data-category="app_og">
+          <div class="acc-card-media">
+            <img src="images/appartement/appartement-og-01.jpg" alt="Appartement Obergeschoss 90m²" class="acc-card-img">
+            <span class="acc-badge-location" data-i18n="badgeOldHouse">Historisches Bauernhaus</span>
+            <div class="acc-badge-price">
+              <span class="acc-price-amount" data-i18n="appOgPriceBadge">ab € 100,-</span>
+              <span class="acc-price-note" data-i18n="appOgPriceUnit">pro Appartement / Nacht (2-6 P.)</span>
+            </div>
+          </div>
+          <div class="acc-card-body">
+            <span class="acc-capacity-tag" data-i18n="appOgCapacity">Für bis zu 6 Personen • 3 Schlafzimmer</span>
+            <h3 class="acc-title" data-i18n="appOgTitle">Appartement Obergeschoss (ca. 90 m²)</h3>
+            <p class="acc-desc" data-i18n="appOgDesc">
+              Viel Freiraum für die ganze Familie: Das Obergeschoss unseres renovierten, 200 Jahre alten Bauernhauses bietet eine große Wohnküche mit gemütlicher Sitzecke und Sofa, drei separate Schlafzimmer, zwei Badezimmer, ein separates WC und einen weitläufigen Sonnenbalkon.
+            </p>
+            <ul class="acc-features-list">
+              <li class="acc-feature-item"><span class="acc-check-icon">✓</span> <span data-i18n="appOgFeat1">90 m² Wohnfläche für 4 bis 6 Personen</span></li>
+              <li class="acc-feature-item"><span class="acc-check-icon">✓</span> <span data-i18n="appOgFeat2">3 separate Schlafzimmer mit Vollholzmöbeln</span></li>
+              <li class="acc-feature-item"><span class="acc-check-icon">✓</span> <span data-i18n="appOgFeat3">2 moderne Bäder (eines mit WC) + 1 separates WC</span></li>
+              <li class="acc-feature-item"><span class="acc-check-icon">✓</span> <span data-i18n="appOgFeat4">Komplett ausgestattete Wohnküche (E-Herd, Backrohr, Geschirrspüler, Kaffeemaschine)</span></li>
+              <li class="acc-feature-item"><span class="acc-check-icon">✓</span> <span data-i18n="appOgFeat5">Großer Balkon, Kabel-TV in allen Zimmern & WLAN</span></li>
+              <li class="acc-feature-item"><span class="acc-check-icon">✓</span> <span data-i18n="appOgFeat6">Frischer Brötchenservice am Morgen auf Wunsch</span></li>
+            </ul>
+            <div class="acc-card-actions">
+              <button type="button" class="btn btn--secondary btn--sm btn-calc-prefill" data-category="app_og" data-i18n="btnCalculateThis">Angebot berechnen</button>
+              <a href="#inquiry" class="btn btn--primary btn--sm" data-i18n="quickInquiryBtn">Jetzt Anfragen</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 3: Appartement Dachgeschoss (70m²) -->
+        <article class="acc-card" data-category="app_dg">
+          <div class="acc-card-media">
+            <img src="images/appartement/appartement-dg-01.jpg" alt="Appartement Dachgeschoss 70m²" class="acc-card-img">
+            <span class="acc-badge-location" data-i18n="badgeOldHouse">Historisches Bauernhaus</span>
+            <div class="acc-badge-price">
+              <span class="acc-price-amount" data-i18n="appDgPriceBadge">ab € 100,-</span>
+              <span class="acc-price-note" data-i18n="appDgPriceUnit">pro Appartement / Nacht (2-4 P.)</span>
+            </div>
+          </div>
+          <div class="acc-card-body">
+            <span class="acc-capacity-tag" data-i18n="appDgCapacity">Für bis zu 4 Personen • 2 Schlafzimmer</span>
+            <h3 class="acc-title" data-i18n="appDgTitle">Appartement Dachgeschoss (ca. 70 m²)</h3>
+            <p class="acc-desc" data-i18n="appDgDesc">
+              Alpiner Charme unter gemütlichen Dachschrägen: Auf 70 m² erwarten Sie eine großzügige Küche mit Essplatz und Couch, zwei behagliche Schlafzimmer, zwei Bäder und zwei separate WCs sowie ein privater Aussichtsbalkon.
+            </p>
+            <ul class="acc-features-list">
+              <li class="acc-feature-item"><span class="acc-check-icon">✓</span> <span data-i18n="appDgFeat1">70 m² Wohnfläche für bis zu 4 Personen</span></li>
+              <li class="acc-feature-item"><span class="acc-check-icon">✓</span> <span data-i18n="appDgFeat2">2 separate Schlafzimmer mit Doppelbetten</span></li>
+              <li class="acc-feature-item"><span class="acc-check-icon">✓</span> <span data-i18n="appDgFeat3">2 separate Bäder & 2 getrennte WCs</span></li>
+              <li class="acc-feature-item"><span class="acc-check-icon">✓</span> <span data-i18n="appDgFeat4">Vollwertige Küche mit E-Herd, Backofen, Geschirrspüler & Mikrowelle</span></li>
+              <li class="acc-feature-item"><span class="acc-check-icon">✓</span> <span data-i18n="appDgFeat5">Kabel-TV in Küche und Zimmern, kostenloses WLAN</span></li>
+              <li class="acc-feature-item"><span class="acc-check-icon">✓</span> <span data-i18n="appDgFeat6">Aussichtsbalkon mit Panorama über Rohrmoos</span></li>
+            </ul>
+            <div class="acc-card-actions">
+              <button type="button" class="btn btn--secondary btn--sm btn-calc-prefill" data-category="app_dg" data-i18n="btnCalculateThis">Angebot berechnen</button>
+              <a href="#inquiry" class="btn btn--primary btn--sm" data-i18n="quickInquiryBtn">Jetzt Anfragen</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       Live Price & Booking Calculator Section
+       ======================================================================== -->
+  <section id="rates" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="calcSectionTag">Transparente Preise</span>
+        <h2 class="section-title" data-i18n="calcTitle">Interaktiver Preisrechner & Buchungskalkulation</h2>
+        <p class="section-subtitle" data-i18n="calcSubtitle">
+          Berechnen Sie unverbindlich den Richtpreis für Ihren Wunschaufenthalt. Bei uns gibt es keine versteckten Aufschläge – Sommercard, Nächtigungsabgabe und Endreinigung sind bereits eingerechnet!
+        </p>
+      </div>
+
+      <div class="calculator-card">
+        <!-- Input Controls -->
+        <div class="calc-inputs-pane">
+          <div class="calc-grid">
+            <div class="calc-field calc-field-full">
+              <label for="calc-category" data-i18n="calcLabelCategory">1. Unterkunftsart wählen</label>
+              <select id="calc-category">
+                <option value="zimmer" selected data-i18n="calcOptRoom">Doppelzimmer (pro Person)</option>
+                <option value="app_og" data-i18n="calcOptAppOg">Appartement Obergeschoss 90m² (bis 6 P.)</option>
+                <option value="app_dg" data-i18n="calcOptAppDg">Appartement Dachgeschoss 70m² (bis 4 P.)</option>
+              </select>
+            </div>
+
+            <div class="calc-field">
+              <label for="calc-season" data-i18n="calcLabelSeason">2. Reisezeitraum / Saison</label>
+              <select id="calc-season">
+                <option value="summer" selected data-i18n="calcSeasonSummer">Sommer (inkl. Sommercard)</option>
+                <option value="winter" data-i18n="calcSeasonWinter">Winter (Ski-in / Ski-out)</option>
+              </select>
+            </div>
+
+            <div class="calc-field">
+              <label for="calc-guests" data-i18n="calcLabelGuests">3. Gästeanzahl</label>
+              <select id="calc-guests">
+                <option value="1">1 Person</option>
+                <option value="2" selected>2 Personen</option>
+                <option value="3">3 Personen</option>
+                <option value="4">4 Personen</option>
+                <option value="5">5 Personen</option>
+                <option value="6">6 Personen</option>
+              </select>
+            </div>
+
+            <div class="calc-field calc-field-full">
+              <label for="calc-nights" data-i18n="calcLabelNights">4. Aufenthaltsdauer (Nächte)</label>
+              <div class="calc-range-wrapper">
+                <input type="range" id="calc-nights" min="1" max="21" value="7" style="flex:1;">
+                <span id="calc-nights-val" class="calc-range-val">7 Nächte</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Real-Time Calculation Results -->
+        <div class="calc-results-pane">
+          <div>
+            <h3 class="calc-results-header" data-i18n="calcSummaryHeader">Ihre Preiskalkulation</h3>
+            <div class="calc-breakdown-row">
+              <span data-i18n="calcBaseRateLabel">Basispreis:</span>
+              <strong id="calc-base-rate">€ 90,- / Nacht</strong>
+            </div>
+            <div class="calc-breakdown-row">
+              <span data-i18n="calcLabelNights">Dauer:</span>
+              <strong id="calc-nights-summary">7 × € 90,-</strong>
+            </div>
+            <div class="calc-breakdown-row">
+              <span data-i18n="calcExtraGuestsLabel">Zusatzpersonen:</span>
+              <strong id="calc-extra-summary">Keine</strong>
+            </div>
+
+            <div class="calc-benefits-box">
+              <div class="calc-benefits-title" data-i18n="calcIncludedBenefitsTitle">Bereits im Preis enthalten:</div>
+              <ul class="calc-benefits-list">
+                <li data-i18n="calcBenefit1">✓ Nächtigungsabgabe voll inklusive</li>
+                <li data-i18n="calcBenefit2">✓ Endreinigung ohne Aufpreis enthalten</li>
+                <li data-i18n="calcBenefit3">✓ Schladming-Dachstein Sommercard im Sommer gratis (Wert > € 70,-/Tag)</li>
+                <li data-i18n="calcBenefit4">✓ Reichhaltiges Bio-Frühstück (bei Zimmerbuchung)</li>
+                <li data-i18n="calcBenefit5">✓ Skiraum mit Schuhtrockner & Parkplätze direkt am Hof</li>
+              </ul>
+            </div>
+          </div>
+
+          <div>
+            <div class="calc-total-box">
+              <span class="calc-total-label" data-i18n="calcTotalLabel">Gesamtpreis Richtwert:</span>
+              <div class="calc-total-price" id="calc-total-price">€ 630,-</div>
+            </div>
+            <button type="button" id="calc-apply-btn" class="btn btn--accent" style="width:100%;" data-i18n="calcApplyButton">
+              Berechnung in Anfrageformular übernehmen &rarr;
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Official Pricing Tables Container -->
+      <div class="pricing-table-container">
+        <table class="pricing-table">
+          <thead>
+            <tr>
+              <th data-i18n="thAppType">Standardbelegung</th>
+              <th data-i18n="thAppSummer">Sommer (inkl. Sommercard)</th>
+              <th data-i18n="thAppWinter">Winter (4-Berge-Skischaukel)</th>
+              <th data-i18n="thAppExtra">Jede weitere Person</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong data-i18n="tabPriceRooms">Doppelzimmer</strong> <small>(pro Person / Nacht inkl. Frühstück)</small></td>
+              <td><span class="rate-highlight" data-i18n="rowSummerRoomsRate">ab € 45,-</span></td>
+              <td><span class="rate-highlight" data-i18n="rowWinterRoomsRate">ab € 45,-</span></td>
+              <td>–</td>
+            </tr>
+            <tr>
+              <td><strong data-i18n="rowApp2">Appartement (2 Personen)</strong></td>
+              <td><span class="rate-highlight" data-i18n="rowApp2Summer">€ 100,-</span></td>
+              <td><span data-i18n="rowApp2Winter">–</span></td>
+              <td><span data-i18n="rowAppExtraRate">€ 20,- / Tag</span></td>
+            </tr>
+            <tr>
+              <td><strong data-i18n="rowApp4">Appartement (4 Personen)</strong></td>
+              <td><span class="rate-highlight" data-i18n="rowApp4Summer">€ 150,-</span></td>
+              <td><span class="rate-highlight" data-i18n="rowApp4Winter">€ 170,-</span></td>
+              <td><span data-i18n="rowAppExtraRate">€ 20,- / Tag</span></td>
+            </tr>
+            <tr>
+              <td><strong data-i18n="rowApp6">Appartement (6 Personen)</strong></td>
+              <td><span class="rate-highlight" data-i18n="rowApp6Summer">€ 220,-</span></td>
+              <td><span class="rate-highlight" data-i18n="rowApp6Winter">€ 250,-</span></td>
+              <td><span data-i18n="rowAppExtraRate">€ 20,- / Tag</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       Farm Life & Animals Section
+       ======================================================================== -->
+  <section id="farm" class="section section--subtle">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="farmSectionTag">Das Hofleben</span>
+        <h2 class="section-title" data-i18n="farmTitle">Biobauernhof & Tiere hautnah erleben</h2>
+        <p class="section-subtitle" data-i18n="farmSubtitle">
+          Auf unserem Bio-Bauernhof auf 1.000 m Seehöhe erleben Groß und Klein unverfälschte Natur, frische Bergluft und lebendiges Hofgeschehen.
+        </p>
+      </div>
+
+      <div class="farm-intro-grid">
+        <div class="farm-intro-text">
+          <p data-i18n="farmTextP1">
+            Auf den großzügigen Grünflächen rund um unseren Hof können sich die Kinder nach Herzenslust austoben, rennen und auf dem Spielplatz spielen. Beobachtet von unseren zutraulichen Ziegen genießen Eltern wie Kinder die wohltuende Ruhe und das majestätische Bergpanorama.
+          </p>
+          <p data-i18n="farmTextP2">
+            Zahlreiche Tiere nennen den Eliashof ihr Zuhause: Schnurrende Kätzchen, neugierige Ziegen, flauschige Kaninchen und Enten. Unsere Kühe und Schafe verbringen die saftigen Sommermonate oben auf den Hochalmen, wo sie die besten Bergkräuter für ein gesundes Leben finden. Beim traditionellen Schafabtrieb im Herbst kehren sie festlich geschmückt zurück ins Tal.
+          </p>
+          <div class="farm-highlight-badge">
+            <img src="images/all/logo-urlaub-am-bauernhof.png" alt="Urlaub am Bauernhof Logo">
+            <img src="images/all/drei-margeriten.png" alt="Drei Margeriten Auszeichnung">
+            <div>
+              <strong>Urlaub am Bauernhof</strong><br>
+              <span style="font-size:0.85rem; color:var(--text-muted);" data-i18n="footerCertMargerite">Ausgezeichnet mit 3 Margeriten</span>
+            </div>
+          </div>
+        </div>
+
+        <div style="position:relative; border-radius:var(--radius-xl); overflow:hidden; box-shadow:var(--card-shadow); border:1px solid var(--border-color);">
+          <img src="images/bauernhof/bauernhof-01.jpg" alt="Eliashof von oben" style="width:100%; height:100%; object-fit:cover;">
+        </div>
+      </div>
+
+      <!-- Photo Gallery Filters -->
+      <div class="gallery-filter-bar">
+        <button class="gallery-filter-btn is-active" data-tag="all" data-i18n="farmTagAll">Alle Fotos</button>
+        <button class="gallery-filter-btn" data-tag="animals" data-i18n="farmTagAnimals">Tiere am Hof</button>
+        <button class="gallery-filter-btn" data-tag="nature" data-i18n="farmTagLife">Hof & Natur</button>
+        <button class="gallery-filter-btn" data-tag="tradition" data-i18n="farmTagTradition">Almabtrieb & Tradition</button>
+      </div>
+
+      <!-- Authentic Gallery Grid -->
+      <div class="gallery-grid">
+        <div class="gallery-item" data-tag="nature" data-full="images/bauernhof/bauernhof-01.jpg" data-caption="Eliashof von oben">
+          <img src="images/bauernhof/bauernhof-01.jpg" alt="Eliashof von oben" class="gallery-thumb" loading="lazy">
+          <div class="gallery-overlay"><span class="gallery-caption">Eliashof von oben</span></div>
+        </div>
+        <div class="gallery-item" data-tag="nature" data-full="images/bauernhof/bauernhof-02.jpg" data-caption="Großer Spielplatz für Kinder">
+          <img src="images/bauernhof/bauernhof-02.jpg" alt="Großer Spielplatz" class="gallery-thumb" loading="lazy">
+          <div class="gallery-overlay"><span class="gallery-caption">Großer Spielplatz</span></div>
+        </div>
+        <div class="gallery-item" data-tag="animals" data-full="images/bauernhof/bauernhof-03.jpg" data-caption="Kaninchen zum Streicheln">
+          <img src="images/bauernhof/bauernhof-03.jpg" alt="Kaninchen zum Streicheln" class="gallery-thumb" loading="lazy">
+          <div class="gallery-overlay"><span class="gallery-caption">Kaninchen zum Streicheln</span></div>
+        </div>
+        <div class="gallery-item" data-tag="animals" data-full="images/bauernhof/bauernhof-04.jpg" data-caption="Ziegenunterstand">
+          <img src="images/bauernhof/bauernhof-04.jpg" alt="Ziegenunterstand" class="gallery-thumb" loading="lazy">
+          <div class="gallery-overlay"><span class="gallery-caption">Ziegenunterstand</span></div>
+        </div>
+        <div class="gallery-item" data-tag="animals" data-full="images/bauernhof/bauernhof-05.jpg" data-caption="Enten am Hof">
+          <img src="images/bauernhof/bauernhof-05.jpg" alt="Enten" class="gallery-thumb" loading="lazy">
+          <div class="gallery-overlay"><span class="gallery-caption">Enten am Hof</span></div>
+        </div>
+        <div class="gallery-item" data-tag="animals" data-full="images/bauernhof/bauernhof-06.jpg" data-caption="Junge Kätzchen am Hof">
+          <img src="images/bauernhof/bauernhof-06.jpg" alt="Junge Kätzchen" class="gallery-thumb" loading="lazy">
+          <div class="gallery-overlay"><span class="gallery-caption">Junge Kätzchen</span></div>
+        </div>
+        <div class="gallery-item" data-tag="animals" data-full="images/bauernhof/bauernhof-07.jpg" data-caption="Ziegen hinterm Haus">
+          <img src="images/bauernhof/bauernhof-07.jpg" alt="Ziegen hinterm Haus" class="gallery-thumb" loading="lazy">
+          <div class="gallery-overlay"><span class="gallery-caption">Ziegen hinterm Haus</span></div>
+        </div>
+        <div class="gallery-item" data-tag="tradition" data-full="images/bauernhof/bauernhof-08.jpg" data-caption="Traditioneller Schafabtrieb">
+          <img src="images/bauernhof/bauernhof-08.jpg" alt="Schafabtrieb" class="gallery-thumb" loading="lazy">
+          <div class="gallery-overlay"><span class="gallery-caption">Traditioneller Schafabtrieb</span></div>
+        </div>
+        <div class="gallery-item" data-tag="tradition" data-full="images/bauernhof/bauernhof-09.jpg" data-caption="Schafabtrieb im Herbst">
+          <img src="images/bauernhof/bauernhof-09.jpg" alt="Schafabtrieb" class="gallery-thumb" loading="lazy">
+          <div class="gallery-overlay"><span class="gallery-caption">Schafabtrieb im Herbst</span></div>
+        </div>
+        <div class="gallery-item" data-tag="tradition" data-full="images/bauernhof/bauernhof-10.jpg" data-caption="Almauftrieb im Frühsommer">
+          <img src="images/bauernhof/bauernhof-10.jpg" alt="Almauftrieb" class="gallery-thumb" loading="lazy">
+          <div class="gallery-overlay"><span class="gallery-caption">Almauftrieb im Frühsommer</span></div>
+        </div>
+        <div class="gallery-item" data-tag="nature" data-full="images/bauernhof/bauernhof-11.jpg" data-caption="Die urige Waldhornalm">
+          <img src="images/bauernhof/bauernhof-11.jpg" alt="Waldhornalm" class="gallery-thumb" loading="lazy">
+          <div class="gallery-overlay"><span class="gallery-caption">Waldhornalm im Untertal</span></div>
+        </div>
+        <div class="gallery-item" data-tag="tradition" data-full="images/bauernhof/bauernhof-12.jpg" data-caption="Selbstgemacht: Brot, Butter & Steirerkas">
+          <img src="images/bauernhof/bauernhof-12.jpg" alt="Brot, Butter, Steirerkas." class="gallery-thumb" loading="lazy">
+          <div class="gallery-overlay"><span class="gallery-caption">Brot, Butter & Steirerkas</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       Waldhornalm Mountain Hut Feature
+       ======================================================================== -->
+  <section id="waldhornalm" class="section">
+    <div class="container">
+      <div class="waldhorn-banner">
+        <div class="waldhorn-content">
+          <span class="section-tag" data-i18n="waldhornSectionTag">Unser Almschatz</span>
+          <h2 class="waldhorn-title" data-i18n="waldhornTitle">Die Waldhornalm im wildromantischen Untertal</h2>
+          <p class="waldhorn-text" data-i18n="waldhornTextP1">
+            Ein ganz spezielles Sommer-Highlight bietet unsere familieneigene Waldhornalm im Untertal. In einer atemberaubenden Naturkulisse, umgeben von schroffen Gipfeln und glasklaren Gebirgsseen, empfangen wir Wanderer und Naturgenießer in unserer traditionell bewirtschafteten Schutzhütte.
+          </p>
+          <p class="waldhorn-text" data-i18n="waldhornTextP2">
+            Sie erreichen die Waldhornalm nach einer lohnenden Wanderung von ca. 2,5 Stunden Gehzeit ab dem Parkplatz Riesachfall. Oben angekommen stärken wir Sie mit hausgemachten Schmankerln: Frisches Bauernbrot, echte Almbutter und der herzhafte Ennstaler Steirerkas werden hier nach überliefertem Rezept zubereitet.
+          </p>
+          <ul class="waldhorn-checklist">
+            <li class="waldhorn-check-item">✨ <span data-i18n="waldhornFeature1">2,5 Stunden Wanderung ab Riesachfall / Untertal</span></li>
+            <li class="waldhorn-check-item">🧀 <span data-i18n="waldhornFeature2">Hausgemachter Steirerkas, frische Almbutter & Bauernbrot</span></li>
+            <li class="waldhorn-check-item">🛏️ <span data-i18n="waldhornFeature3">Übernachtung im Hüttenlager auf Anfrage möglich</span></li>
+            <li class="waldhorn-check-item">🥾 <span data-i18n="waldhornFeature4">Perfekter Ausgangspunkt für die Klafferkessel-Rundtour</span></li>
+          </ul>
+          <a href="#inquiry" class="btn btn--accent" data-i18n="quickInquiryBtn">Jetzt Anfragen</a>
+        </div>
+
+        <div class="waldhorn-media-box">
+          <div class="waldhorn-img-card">
+            <img src="images/bauernhof/bauernhof-11.jpg" alt="Waldhornalm Hütte" loading="lazy">
+          </div>
+          <div class="waldhorn-img-card">
+            <img src="images/bauernhof/bauernhof-12.jpg" alt="Almbrot und Steirerkas" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       Location, Map & Activities
+       ======================================================================== -->
+  <section id="location" class="section section--subtle">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="locSectionTag">Lage & Region</span>
+        <h2 class="section-title" data-i18n="locTitle">Ihr Logenplatz oberhalb von Schladming</h2>
+        <p class="section-subtitle" data-i18n="locSubtitle">
+          Ruhig gelegen und dennoch mittendrin: In wenigen Minuten im Zentrum von Rohrmoos und mit direktem Skiweg auf die Pisten.
+        </p>
+      </div>
+
+      <div class="location-grid">
+        <!-- Info Card -->
+        <div class="location-info-card">
+          <div>
+            <div class="loc-block">
+              <h3 class="loc-block-title">⛷️ <span data-i18n="locWinterHeadline">Winter am Eliashof (Ski amadé)</span></h3>
+              <p class="loc-block-desc" data-i18n="locWinterText">
+                Über einen kurzen Skiweg gelangen Sie direkt in die 4-Berge-Skischaukel Hochwurzen, Planai, Reiteralm und Hauser Kaibling mit 123 zusammenhängenden Pistenkilometern. Nach einem traumhaften Skitag fahren Sie mit den Skiern bis vor den Bauernhof ab! Nur 5 Fahrminuten entfernt liegt die beleuchtete 7 km Rodelbahn und Nachtpiste Hochwurzen sowie romantische Pferdeschlittenfahrten ins Obertal und Untertal.
+              </p>
+            </div>
+
+            <div class="loc-block">
+              <h3 class="loc-block-title">☀️ <span data-i18n="locSummerHeadline">Bergsommer & Schladming-Dachstein Sommercard</span></h3>
+              <p class="loc-block-desc" data-i18n="locSummerText">
+                Herrliche Wanderwege starten direkt vor unserer Haustüre. Der Wanderbus hält nur 15 Gehminuten entfernt und bringt Sie bequem in die Täler oder nach Schladming. Mit der im Nächtigungspreis inkludierten Sommercard nutzen Sie Bergbahnen, Busse, Mautstraßen, Freibäder und Badeseen gratis!
+              </p>
+            </div>
+
+            <div class="loc-block">
+              <h3 class="loc-block-title">🚗 <span data-i18n="locDirectionsTitle">So finden Sie zu uns (Anfahrt)</span></h3>
+              <p class="loc-block-desc" data-i18n="locDirectionsText">
+                Von der B320 bei 'Schladming Mitte' (ÖAMTC) abfahren und rechts Richtung Schladming-Zentrum abbiegen. Beide Kreisverkehre geradeaus Richtung Rohrmoos passieren. Auf der Rohrmoosstraße ca. 4 km bergauf fahren. Den Kreisverkehr Rohrmoos geradeaus Richtung Hochwurzen überqueren. Nach ca. 250 m (nach der Erlebniswelt Rohrmoos) rechts abbiegen und 600 m folgen. Hier links halten – nach 400 m haben Sie den Eliashof erreicht!
+              </p>
+            </div>
+          </div>
+
+          <div style="padding-top:1.5rem; border-top:1px solid var(--border-color);">
+            <div style="font-weight:700; color:var(--text-primary); margin-bottom:0.25rem;" data-i18n="locAddressTitle">Adresse & Navigation</div>
+            <div style="color:var(--text-secondary); margin-bottom:0.75rem;" data-i18n="locAddressLine">Reiterkreuzweg 13, 8971 Schladming (Rohrmoos), Österreich</div>
+            <div style="font-size:0.875rem; color:var(--text-muted); margin-bottom:1rem;" data-i18n="locGpsCoords">GPS: N: +47.383576 | O: +13.656984</div>
+            <a href="https://maps.google.com/?q=47.383576,13.656984" target="_blank" rel="noopener noreferrer" class="btn btn--secondary btn--sm" data-i18n="locOpenInMaps">
+              In Google Maps öffnen &rarr;
+            </a>
+          </div>
+        </div>
+
+        <!-- Interactive Alpine Leaflet Map -->
+        <div class="map-container">
+          <div id="leaflet-map"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       FAQ Section (Accordion)
+       ======================================================================== -->
+  <section id="faq" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="faqSectionTag">Gut zu wissen</span>
+        <h2 class="section-title" data-i18n="faqTitle">Wichtige Informationen & Häufige Fragen</h2>
+        <p class="section-subtitle" data-i18n="faqSubtitle">
+          Alles Wichtige für Ihre Urlaubsplanung auf einen Blick.
+        </p>
+      </div>
+
+      <div class="faq-accordion">
+        <!-- Q1: Check-in / Check-out -->
+        <div class="faq-item">
+          <button type="button" class="faq-trigger">
+            <span data-i18n="faqQ1">Wann ist Check-in und Check-out?</span>
+            <span class="faq-icon">▼</span>
+          </button>
+          <div class="faq-content">
+            <p data-i18n="faqA1">Am Anreisetag steht Ihnen Ihre Unterkunft ab 15:00 Uhr zur Verfügung. Am Abreisetag bitten wir Sie, das Zimmer bzw. das Appartement bis 10:00 Uhr freizugeben.</p>
+          </div>
+        </div>
+
+        <!-- Q2: Payment -->
+        <div class="faq-item">
+          <button type="button" class="faq-trigger">
+            <span data-i18n="faqQ2">Wie erfolgt die Bezahlung?</span>
+            <span class="faq-icon">▼</span>
+          </button>
+          <div class="faq-content">
+            <p data-i18n="faqA2">Die Bezahlung Ihres Aufenthalts ist ausschließlich in Bar vor Ort möglich. Im Ortszentrum von Rohrmoos und Schladming stehen Ihnen Bankomaten zur Verfügung.</p>
+          </div>
+        </div>
+
+        <!-- Q3: Pets -->
+        <div class="faq-item">
+          <button type="button" class="faq-trigger">
+            <span data-i18n="faqQ3">Sind Haustiere erlaubt?</span>
+            <span class="faq-icon">▼</span>
+          </button>
+          <div class="faq-content">
+            <p data-i18n="faqA3">Leider ist die Mitnahme von Haustieren mit Rücksicht auf unsere Hoftiere sowie für einen allergenarmen Aufenthalt aller Gäste nicht gestattet.</p>
+          </div>
+        </div>
+
+        <!-- Q4: Smoking -->
+        <div class="faq-item">
+          <button type="button" class="faq-trigger">
+            <span data-i18n="faqQ4">Darf in den Zimmern oder Appartements geraucht werden?</span>
+            <span class="faq-icon">▼</span>
+          </button>
+          <div class="faq-content">
+            <p data-i18n="faqA4">Nein, alle unsere Zimmer, Appartements und Gemeinschaftsräume sind strikte Nichtraucherbereiche. Auf den Balkonen stehen für Sie Aschenbecher bereit.</p>
+          </div>
+        </div>
+
+        <!-- Q5: Cancellation -->
+        <div class="faq-item">
+          <button type="button" class="faq-trigger">
+            <span data-i18n="faqQ5">Welche Stornobedingungen gelten?</span>
+            <span class="faq-icon">▼</span>
+          </button>
+          <div class="faq-content">
+            <p data-i18n="faqA5">Stornierungen sind nur schriftlich gültig. Bis 3 Monate vor Anreise fällt keine Stornogebühr an; 3 Monate bis 1 Monat: 40%; 1 Monat bis 1 Woche: 70%; in der letzten Woche: 90%. Es gelten die Bestimmungen der AGBH 2006. Wir empfehlen den Abschluss einer Reiserücktrittsversicherung.</p>
+          </div>
+        </div>
+
+        <!-- Q6: Ski Storage -->
+        <div class="faq-item">
+          <button type="button" class="faq-trigger">
+            <span data-i18n="faqQ6">Gibt es einen Skiraum und Skischuhtrockner?</span>
+            <span class="faq-icon">▼</span>
+          </button>
+          <div class="faq-content">
+            <p data-i18n="faqA6">Ja, für Ihre Skiausrüstung steht ein verschließbarer Skiraum mit modernem Skischuhtrockner bereit, damit Sie morgens immer in warme und trockene Schuhe schlüpfen können.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       Booking Inquiry Form Section
+       ======================================================================== -->
+  <section id="inquiry" class="section section--subtle">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="formSectionTag">Kontakt & Buchung</span>
+        <h2 class="section-title" data-i18n="formTitle">Unverbindliche Buchungsanfrage</h2>
+        <p class="section-subtitle" data-i18n="formSubtitle">
+          Fragen Sie Ihren Wunschurlaub direkt bei Familie Höflehner an. Wir antworten Ihnen persönlich und schnellstmöglich mit einem maßgeschneiderten Angebot.
+        </p>
+      </div>
+
+      <div class="inquiry-wrapper">
+        <form id="main-inquiry-form" class="inquiry-form">
+          <div class="form-grid-2">
+            <div class="form-field">
+              <label for="inq-firstname" data-i18n="formFirstName">Vorname</label>
+              <input type="text" id="inq-firstname" required placeholder="z.B. Maria">
+            </div>
+            <div class="form-field">
+              <label for="inq-lastname" data-i18n="formLastName">Nachname</label>
+              <input type="text" id="inq-lastname" required placeholder="z.B. Muster">
+            </div>
+          </div>
+
+          <div class="form-grid-2">
+            <div class="form-field">
+              <label for="inq-email" data-i18n="formEmail">E-Mail-Adresse</label>
+              <input type="email" id="inq-email" required placeholder="ihre.email@beispiel.at">
+            </div>
+            <div class="form-field">
+              <label for="inq-phone" data-i18n="formPhone">Telefonnummer</label>
+              <input type="tel" id="inq-phone" required placeholder="+43 664 1234567">
+            </div>
+          </div>
+
+          <div class="form-grid-2">
+            <div class="form-field">
+              <label for="inq-arrival" data-i18n="formArrival">Anreisetag</label>
+              <input type="date" id="inq-arrival" required>
+            </div>
+            <div class="form-field">
+              <label for="inq-departure" data-i18n="formDeparture">Abreisetag</label>
+              <input type="date" id="inq-departure" required>
+            </div>
+          </div>
+
+          <div class="form-grid-2">
+            <div class="form-field">
+              <label for="inq-accommodation" data-i18n="formAccom">Gewünschte Unterkunft</label>
+              <select id="inq-accommodation" required>
+                <option value="zimmer" data-i18n="formAccomZimmer">Doppelzimmer mit Frühstück</option>
+                <option value="app_og" data-i18n="formAccomAppOg">Appartement Obergeschoss (90 m², bis 6 P.)</option>
+                <option value="app_dg" data-i18n="formAccomAppDg">Appartement Dachgeschoss (70 m², bis 4 P.)</option>
+                <option value="both" data-i18n="formAccomBoth">Zimmer & Appartement kombiniert</option>
+              </select>
+            </div>
+            <div class="form-field" style="display:grid; grid-template-columns:1fr 1fr; gap:0.75rem;">
+              <div>
+                <label for="inq-adults" data-i18n="formAdults">Erwachsene</label>
+                <input type="number" id="inq-adults" min="1" max="10" value="2" required>
+              </div>
+              <div>
+                <label for="inq-children" data-i18n="formChildren">Kinder</label>
+                <input type="number" id="inq-children" min="0" max="10" value="0">
+              </div>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="inq-notes" data-i18n="formNotes">Ihre Anmerkungen oder Fragen (z.B. Kinderbett, voraussichtliche Ankunftszeit)</label>
+            <textarea id="inq-notes" rows="4" placeholder="Gerne gehen wir auf Ihre individuellen Urlaubswünsche ein..."></textarea>
+          </div>
+
+          <div class="form-checkbox-wrapper">
+            <input type="checkbox" id="inq-privacy" required>
+            <label for="inq-privacy" data-i18n="formPrivacyNote">
+              Ich habe die Datenschutzerklärung zur Kenntnis genommen und stimme der Verarbeitung meiner Angaben zur Bearbeitung der Anfrage zu.
+            </label>
+          </div>
+
+          <button type="submit" class="btn btn--primary" style="align-self:flex-start; padding:1rem 2.25rem;" data-i18n="formSubmitBtn">
+            Unverbindliche Anfrage absenden
+          </button>
+        </form>
+
+        <!-- Success Message on Submission -->
+        <div id="inquiry-success-box" class="form-success-box">
+          <div style="font-size:3rem; margin-bottom:1rem;">🎉</div>
+          <h3 class="form-success-title" data-i18n="formSuccessTitle">Vielen Dank für Ihre Anfrage!</h3>
+          <p style="color:var(--text-secondary); margin-bottom:1.5rem;" data-i18n="formSuccessMsg">
+            Ihre Urlaubswünsche wurden erfolgreich übermittelt. Familie Höflehner wird sich schnellstmöglich mit einem persönlichen Angebot bei Ihnen melden.
+          </p>
+          <button type="button" id="inquiry-send-another" class="btn btn--secondary btn--sm" data-i18n="formSendAnother">
+            Weitere Anfrage stellen
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       Footer
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <!-- Col 1: Brand Info -->
+        <div>
+          <img src="images/all/logo-eliashof.png" alt="Logo Eliashof" class="footer-brand-logo">
+          <p class="footer-tagline" data-i18n="footerTagline">
+            Biobauernhof Eliashof • Urlaub am Bauernhof in Schladming-Rohrmoos auf 1.000m Seehöhe mit Dachsteinblick.
+          </p>
+          <div style="font-size:0.875rem; color:var(--text-muted);">
+            Familie Höflehner<br>
+            Reiterkreuzweg 13<br>
+            8971 Schladming, Österreich
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div>
+          <h4 class="footer-col-title" data-i18n="footerQuickLinks">Schnellnavigation</h4>
+          <ul class="footer-links-list">
+            <li><a href="#about" data-i18n="navAbout">Über uns</a></li>
+            <li><a href="#accommodations" data-i18n="navAccommodations">Unterkünfte</a></li>
+            <li><a href="#rates" data-i18n="navRates">Preise & Rechner</a></li>
+            <li><a href="#farm" data-i18n="navFarm">Bauernhof & Tiere</a></li>
+            <li><a href="#waldhornalm" data-i18n="navWaldhornalm">Waldhornalm</a></li>
+            <li><a href="#location" data-i18n="navLocation">Lage & Anfahrt</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Contact Details -->
+        <div>
+          <h4 class="footer-col-title" data-i18n="footerContactHeading">Kontakt & Anschrift</h4>
+          <ul class="footer-links-list">
+            <li>
+              📞 <a href="tel:+43368761475" data-i18n="footerPhone">+43 (0)3687 61 475</a>
+            </li>
+            <li>
+              ✉️ <a href="mailto:urlaub@eliashof.at" data-i18n="footerEmail">urlaub@eliashof.at</a>
+            </li>
+            <li>
+              🌐 <a href="https://eliashof.at">www.eliashof.at</a>
+            </li>
+            <li style="margin-top:0.5rem;">
+              <a href="https://www.facebook.com/Eliashof/" target="_blank" rel="noopener noreferrer" style="display:inline-flex; align-items:center; gap:0.4rem;">
+                <img src="images/all/icon-facebook.svg" alt="Facebook" style="width:20px; height:20px; display:inline-block;"> Facebook Seite
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Partner Logos -->
+        <div>
+          <h4 class="footer-col-title" data-i18n="footerPartners">Auszeichnungen & Partner</h4>
+          <div class="footer-partners-grid">
+            <a href="https://www.urlaubambauernhof.at/hoefe/elias" target="_blank" rel="noopener noreferrer" title="Urlaub am Bauernhof">
+              <img src="images/all/logo-urlaub-am-bauernhof.png" alt="Urlaub am Bauernhof" class="footer-partner-logo">
+            </a>
+            <a href="https://www.sommercard.info" target="_blank" rel="noopener noreferrer" title="Sommercard Schladming-Dachstein">
+              <img src="images/startseite/logo-sommercard.png" alt="Sommercard" class="footer-partner-logo">
+            </a>
+            <a href="https://www.skiamade.com" target="_blank" rel="noopener noreferrer" title="Ski amadé">
+              <img src="images/all/logo-ski-amade.png" alt="Ski amadé" class="footer-partner-logo">
+            </a>
+            <img src="images/all/logo-schladming-dachstein.png" alt="Schladming-Dachstein" class="footer-partner-logo">
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom-bar">
+        <span data-i18n="footerCopyright">© 2026 Biobauernhof Eliashof – Familie Höflehner. Alle Rechte vorbehalten.</span>
+        <div class="footer-legal-links">
+          <a href="#" data-legal-modal="impressum" data-i18n="footerLegalImpressum">Impressum</a>
+          <a href="#" data-legal-modal="datenschutz" data-i18n="footerLegalDatenschutz">Datenschutz</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       Modals: Image Lightbox & Legal Info
+       ======================================================================== -->
+  <!-- Image Lightbox Modal -->
+  <div id="lightbox-modal" class="modal-overlay" aria-hidden="true">
+    <div class="modal-container lightbox-content">
+      <button id="lightbox-close" class="modal-close-btn" type="button" aria-label="Schließen">✕</button>
+      <img id="lightbox-img" src="" alt="Großansicht" class="lightbox-img">
+      <div id="lightbox-caption" class="lightbox-caption"></div>
+    </div>
+  </div>
+
+  <!-- Legal Modal (Impressum / Datenschutz) -->
+  <div id="legal-modal" class="modal-overlay" aria-hidden="true">
+    <div class="modal-container">
+      <button id="legal-modal-close" class="modal-close-btn" type="button" aria-label="Schließen">✕</button>
+      <h3 id="legal-modal-title" class="section-title" style="font-size:1.8rem; margin-bottom:1.25rem;">Impressum</h3>
+      <div id="legal-modal-body" style="font-size:0.95rem; line-height:1.7; color:var(--text-secondary);"></div>
+    </div>
+  </div>
+
+  <!-- Back to Top Button -->
+  <button id="back-to-top" class="back-to-top" type="button" aria-label="Nach oben scrollen" title="Nach oben scrollen">
+    ▲
+  </button>
+
+  <!-- Leaflet Map JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+  <!-- Bilingual Translations & Application Logic -->
+  <script src="js/i18n.js"></script>
+  <script src="js/app.js"></script>
+
+</body>
+</html>
