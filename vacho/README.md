@@ -101,6 +101,7 @@ Preto sme pre VACHO Modra navrhli a kompletne naprogramovali funkčný prototyp 
   s novým fullscreen lightboxom a detailmi materiálov.
 ✓ Prezentácia nemeckého CNC strojového parku a 2 mm ABS hrán s vodoodolným PUR lepidlom.
 ✓ Vzorkovník prémiových dekorov Egger (Feelwood, Supermat) a doživotná garancia kovania Blum.
+✓ Oficiálny banner „Napísali o nás... čítajte viac“ s priamym interaktívnym odkazom na 4-stranovú reportáž v Drevárskom magazíne (PDF).
 ✓ 100% blesková rýchlosť a bezchybné zobrazenie na smartfónoch a tabletoch.
 
 Funkčný prototyp si môžete okamžite vyskúšať priamo vo Vašom prehliadači.
@@ -119,5 +120,6 @@ Tel.: 0905 650 129 | E-mail: vacho@vacho.sk
 
 - **`index.html`** — Kompletná moderná Single-Page aplikácia s Tailwind CSS, Lucide ikonami, svetlým + tmavým režimom, kalkulátorom a galériou.
 - **`promotional-email.html`** — Responzívny propagačný HTML e-mail pre klientov a vedenie spoločnosti.
+- **`DM_2012-10_Reportaz_Vacho.pdf`** — Kompletná 4-stranová autentická reportáž v Drevárskom magazíne (10/2012) o spoločnosti VACHO s.r.o. Modra.
 - **`README.md`** — Táto komplexná projektová dokumentácia a audit.
-- **`images/`** — 424 originálnych fotografií realizácií (kuchyne, byty, kancelárie, Cinemax Trenčín, 3D návrhy a nemecké CNC stroje).
+- **`images/`** — 424 originálnych fotografií realizácií (kuchyne, byty, kancelárie, Cinemax Trenčín, 3D návrhy a nemecké CNC stroje) + oficiálne logá a banner „Napísali o nás“.
