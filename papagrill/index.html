@@ -1,0 +1,2202 @@
+<!DOCTYPE html>
+<html lang="sk" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PAPA GRILL | Prémiový Catering, Závodné Stravovanie & Eventová Sála | Malacky</title>
+  <meta name="description" content="Komplexné gastronomické služby na kľúč v Bratislavskom a Trnavskom kraji. Zážitkový catering až do 1000 osôb, moderné závodné stravovanie s kapacitou 2000 jedál denne v 650 m² kuchyni, Event Hall Malacky a poctivá Vaša Táckareň. Certifikát kvality ISO 9001.">
+  <meta name="keywords" content="catering Malacky, catering Bratislava, závodné stravovanie, eventová sála Malacky, Event Hall, firemný večierok, svadobný catering, grilovanie, Vaša Táckareň, gastropark, Papa Grill">
+  <link rel="icon" type="image/svg+xml" href="images/logo_main.svg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6.5.1 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Leaflet CSS for Map -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            flame: {
+              50: '#fff7ed',
+              100: '#ffedd5',
+              200: '#fed7aa',
+              300: '#fdba74',
+              400: '#fb923c',
+              500: '#f97316',
+              600: '#ea580c',
+              700: '#c2410c',
+              800: '#9a3412',
+              900: '#7c2d12',
+              950: '#431407'
+            },
+            amber: {
+              400: '#fbbf24',
+              500: '#f59e0b',
+              600: '#d97706'
+            },
+            grill: {
+              charcoal: '#0b0f17',
+              dark: '#111827',
+              surface: '#151e2e',
+              card: '#1a2436',
+              border: '#243247'
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+            display: ['"Outfit"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace']
+          },
+          boxShadow: {
+            'flame': '0 10px 30px -5px rgba(249, 115, 22, 0.3)',
+            'flame-lg': '0 20px 40px -10px rgba(249, 115, 22, 0.45)',
+            'dark-card': '0 10px 30px -5px rgba(0, 0, 0, 0.7)'
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Theme transitions */
+    html {
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    
+    /* Scrollbar */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f1f5f9;
+    }
+    .dark ::-webkit-scrollbar-track {
+      background: #0b0f17;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 5px;
+    }
+    .dark ::-webkit-scrollbar-thumb {
+      background: #334155;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #ea580c;
+    }
+
+    /* Marquee animation */
+    @keyframes marquee {
+      0% { transform: translateX(0%); }
+      100% { transform: translateX(-50%); }
+    }
+    .animate-marquee {
+      display: flex;
+      width: max-content;
+      animation: marquee 28s linear infinite;
+    }
+    .animate-marquee:hover {
+      animation-play-state: paused;
+    }
+
+    /* Logo invert in dark mode */
+    .dark .logo-adaptive {
+      filter: brightness(0) invert(1);
+    }
+
+    /* Print styles for calculator quote */
+    @media print {
+      body * {
+        visibility: hidden;
+      }
+      #print-quote-area, #print-quote-area * {
+        visibility: visible;
+      }
+      #print-quote-area {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        background: white !important;
+        color: black !important;
+        padding: 20px;
+      }
+      .no-print {
+        display: none !important;
+      }
+    }
+  </style>
+</head>
+<body class="bg-[#fdfbf7] dark:bg-[#0b0f17] text-slate-800 dark:text-slate-100 font-sans antialiased selection:bg-flame-500 selection:text-white transition-colors duration-300">
+
+  <!-- ================= TOP ANNOUNCEMENT BAR ================= -->
+  <div class="bg-gradient-to-r from-flame-600 via-amber-600 to-flame-700 text-white text-xs sm:text-sm font-medium py-2.5 px-4 shadow-sm relative z-50">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
+      <div class="flex items-center gap-2">
+        <span class="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-extrabold bg-white text-flame-700 uppercase tracking-wider animate-pulse">
+          Sezóna 2026
+        </span>
+        <span class="hidden sm:inline">🎄 <strong>Vianočné a koncoročné eventy 2026:</strong> Prijímame rezervácie na firemné večierky, kapustnice a vianočné trhy!</span>
+        <span class="sm:hidden">🎄 Rezervujte si vianočný večierok 2026!</span>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="#vianocne" class="underline underline-offset-4 hover:text-amber-200 transition-colors font-bold">
+          Overiť voľný termín &rarr;
+        </a>
+        <span class="hidden md:inline text-amber-200/60">|</span>
+        <a href="tel:+421910333511" class="hidden md:flex items-center gap-1.5 hover:text-amber-200 transition-colors font-mono">
+          <i class="fa-solid fa-phone text-xs"></i> +421 910 333 511
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= STICKY HEADER & NAVBAR ================= -->
+  <header id="main-header" class="sticky top-0 z-40 bg-white/92 dark:bg-[#0e1420]/92 backdrop-blur-md border-b border-amber-100/80 dark:border-slate-800/80 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Brand Logo -->
+        <a href="#" class="flex items-center gap-3.5 group">
+          <div class="h-10 sm:h-12 flex items-center">
+            <img src="images/logo_wide.svg" alt="PAPA GRILL Logo" class="h-8 sm:h-9 w-auto logo-adaptive transition-all duration-300 group-hover:scale-105">
+          </div>
+          <div class="hidden lg:flex flex-col border-l border-slate-200 dark:border-slate-700/80 pl-3">
+            <span class="text-[11px] font-extrabold tracking-widest uppercase text-flame-600 dark:text-flame-400 font-display">Gastro Park</span>
+            <span class="text-[10px] text-slate-500 dark:text-slate-400 font-medium">Malacky & Záhorie</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden xl:flex items-center gap-7 text-sm font-semibold tracking-wide">
+          <div class="relative group">
+            <button class="flex items-center gap-1 text-slate-700 dark:text-slate-200 hover:text-flame-600 dark:hover:text-flame-400 py-2 transition-colors">
+              Služby <i class="fa-solid fa-chevron-down text-[10px] transition-transform duration-200 group-hover:rotate-180"></i>
+            </button>
+            <div class="absolute top-full left-0 w-72 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-1 group-hover:translate-y-0">
+              <div class="bg-white dark:bg-[#141b29] rounded-2xl shadow-2xl border border-slate-100 dark:border-slate-800 p-3 space-y-1">
+                <a href="#sluzby" class="flex items-center gap-3.5 p-2.5 rounded-xl hover:bg-flame-50 dark:hover:bg-slate-800/70 transition-colors">
+                  <div class="w-9 h-9 rounded-xl bg-flame-100 dark:bg-flame-900/50 text-flame-600 flex items-center justify-center text-sm shadow-sm">
+                    <i class="fa-solid fa-utensils"></i>
+                  </div>
+                  <div>
+                    <div class="text-slate-900 dark:text-white font-bold text-xs">Zážitkový Catering</div>
+                    <div class="text-[11px] text-slate-500 dark:text-slate-400">Na kľúč až do 1000 hostí</div>
+                  </div>
+                </a>
+                <a href="#sluzby" class="flex items-center gap-3.5 p-2.5 rounded-xl hover:bg-flame-50 dark:hover:bg-slate-800/70 transition-colors">
+                  <div class="w-9 h-9 rounded-xl bg-amber-100 dark:bg-amber-900/50 text-amber-600 flex items-center justify-center text-sm shadow-sm">
+                    <i class="fa-solid fa-industry"></i>
+                  </div>
+                  <div>
+                    <div class="text-slate-900 dark:text-white font-bold text-xs">Závodné Stravovanie</div>
+                    <div class="text-[11px] text-slate-500 dark:text-slate-400">Pre priemyselné & firemné parky</div>
+                  </div>
+                </a>
+                <a href="#eventhall" class="flex items-center gap-3.5 p-2.5 rounded-xl hover:bg-flame-50 dark:hover:bg-slate-800/70 transition-colors">
+                  <div class="w-9 h-9 rounded-xl bg-rose-100 dark:bg-rose-900/50 text-rose-600 flex items-center justify-center text-sm shadow-sm">
+                    <i class="fa-solid fa-champagne-glasses"></i>
+                  </div>
+                  <div>
+                    <div class="text-slate-900 dark:text-white font-bold text-xs">Event Hall Malacky</div>
+                    <div class="text-[11px] text-slate-500 dark:text-slate-400">Exkluzívna sála pre 180 osôb</div>
+                  </div>
+                </a>
+                <a href="#tackaren" class="flex items-center gap-3.5 p-2.5 rounded-xl hover:bg-flame-50 dark:hover:bg-slate-800/70 transition-colors">
+                  <div class="w-9 h-9 rounded-xl bg-emerald-100 dark:bg-emerald-900/50 text-emerald-600 flex items-center justify-center text-sm shadow-sm">
+                    <i class="fa-solid fa-bowl-food"></i>
+                  </div>
+                  <div>
+                    <div class="text-slate-900 dark:text-white font-bold text-xs">Vaša Táckareň</div>
+                    <div class="text-[11px] text-slate-500 dark:text-slate-400">Poctivé denné obedové menu</div>
+                  </div>
+                </a>
+                <a href="#vianocne" class="flex items-center gap-3.5 p-2.5 rounded-xl hover:bg-flame-50 dark:hover:bg-slate-800/70 transition-colors">
+                  <div class="w-9 h-9 rounded-xl bg-red-100 dark:bg-red-900/50 text-red-600 flex items-center justify-center text-sm shadow-sm">
+                    <i class="fa-solid fa-snowflake"></i>
+                  </div>
+                  <div>
+                    <div class="text-slate-900 dark:text-white font-bold text-xs">Vianočné Eventy 2026</div>
+                    <div class="text-[11px] text-slate-500 dark:text-slate-400">Večierky, trhy & kapustnica</div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <a href="#kalkulator" class="text-slate-700 dark:text-slate-200 hover:text-flame-600 dark:hover:text-flame-400 transition-colors flex items-center gap-1.5">
+            <span class="w-2 h-2 rounded-full bg-flame-500 animate-ping"></span>
+            Kalkulátor Ceny
+          </a>
+          <a href="#tackaren" class="text-slate-700 dark:text-slate-200 hover:text-flame-600 dark:hover:text-flame-400 transition-colors">Denné Menu</a>
+          <a href="#o-nas" class="text-slate-700 dark:text-slate-200 hover:text-flame-600 dark:hover:text-flame-400 transition-colors">O nás & Forbes</a>
+          <a href="#referencie" class="text-slate-700 dark:text-slate-200 hover:text-flame-600 dark:hover:text-flame-400 transition-colors">Klienti</a>
+          <a href="#galeria" class="text-slate-700 dark:text-slate-200 hover:text-flame-600 dark:hover:text-flame-400 transition-colors">Galéria</a>
+          <a href="#kontakt" class="text-slate-700 dark:text-slate-200 hover:text-flame-600 dark:hover:text-flame-400 transition-colors">Kontakt</a>
+        </nav>
+
+        <!-- Right Side: Theme Switcher, Quick Phone, Main CTA -->
+        <div class="flex items-center gap-3">
+          
+          <!-- Theme Toggle Button -->
+          <button id="theme-toggle" aria-label="Prepnúť svetlý/tmavý režim" class="relative p-2.5 rounded-xl border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all focus:outline-none focus:ring-2 focus:ring-flame-500">
+            <i id="theme-icon-light" class="fa-solid fa-moon text-lg hidden text-slate-700"></i>
+            <i id="theme-icon-dark" class="fa-solid fa-sun text-lg text-amber-400"></i>
+          </button>
+
+          <!-- Quick Phone Link (Desktop) -->
+          <a href="tel:+421910333511" class="hidden md:flex items-center gap-2 px-3.5 py-2.5 rounded-xl text-xs font-bold bg-slate-100 dark:bg-slate-800/80 text-slate-800 dark:text-slate-200 hover:bg-flame-50 dark:hover:bg-flame-950/40 hover:text-flame-600 transition-colors border border-transparent hover:border-flame-300">
+            <i class="fa-solid fa-phone text-flame-600"></i>
+            <span class="font-mono">+421 910 333 511</span>
+          </a>
+
+          <!-- Primary CTA Button -->
+          <a href="#kalkulator" class="inline-flex items-center gap-2 px-4 sm:px-5 py-2.5 rounded-xl font-bold text-xs sm:text-sm text-white bg-gradient-to-r from-flame-500 to-amber-600 hover:from-flame-600 hover:to-amber-700 shadow-flame hover:shadow-flame-lg transform active:scale-95 transition-all">
+            <i class="fa-solid fa-calculator text-xs"></i>
+            <span class="hidden sm:inline">Cenová ponuka</span>
+            <span class="sm:hidden">Kalkulátor</span>
+          </a>
+
+          <!-- Mobile Hamburger Button -->
+          <button id="mobile-menu-btn" aria-label="Otvoriť menu" class="xl:hidden p-2.5 rounded-xl text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 focus:outline-none">
+            <i class="fa-solid fa-bars text-xl"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobile-menu" class="hidden xl:hidden bg-white/98 dark:bg-[#0e1420]/98 border-b border-slate-200 dark:border-slate-800 px-6 py-6 space-y-4 shadow-2xl">
+      <div class="grid grid-cols-2 gap-2 text-xs font-bold text-slate-700 dark:text-slate-200">
+        <a href="#sluzby" class="mobile-nav-link p-3 rounded-xl bg-slate-50 dark:bg-slate-800/60 flex items-center gap-2.5">
+          <i class="fa-solid fa-utensils text-flame-500"></i> Služby
+        </a>
+        <a href="#kalkulator" class="mobile-nav-link p-3 rounded-xl bg-slate-50 dark:bg-slate-800/60 flex items-center gap-2.5">
+          <i class="fa-solid fa-calculator text-amber-500"></i> Kalkulátor
+        </a>
+        <a href="#tackaren" class="mobile-nav-link p-3 rounded-xl bg-slate-50 dark:bg-slate-800/60 flex items-center gap-2.5">
+          <i class="fa-solid fa-bowl-food text-emerald-500"></i> Denné Menu
+        </a>
+        <a href="#eventhall" class="mobile-nav-link p-3 rounded-xl bg-slate-50 dark:bg-slate-800/60 flex items-center gap-2.5">
+          <i class="fa-solid fa-champagne-glasses text-rose-500"></i> Event Hall
+        </a>
+        <a href="#vianocne" class="mobile-nav-link p-3 rounded-xl bg-slate-50 dark:bg-slate-800/60 flex items-center gap-2.5">
+          <i class="fa-solid fa-snowflake text-red-500"></i> Vianoce 2026
+        </a>
+        <a href="#o-nas" class="mobile-nav-link p-3 rounded-xl bg-slate-50 dark:bg-slate-800/60 flex items-center gap-2.5">
+          <i class="fa-solid fa-newspaper text-blue-500"></i> Forbes & O nás
+        </a>
+        <a href="#referencie" class="mobile-nav-link p-3 rounded-xl bg-slate-50 dark:bg-slate-800/60 flex items-center gap-2.5">
+          <i class="fa-solid fa-star text-amber-400"></i> Klienti
+        </a>
+        <a href="#kontakt" class="mobile-nav-link p-3 rounded-xl bg-slate-50 dark:bg-slate-800/60 flex items-center gap-2.5">
+          <i class="fa-solid fa-envelope text-flame-500"></i> Kontakt
+        </a>
+      </div>
+      <div class="pt-3 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between">
+        <a href="tel:+421910333511" class="flex items-center gap-2 text-sm font-bold text-flame-600 dark:text-flame-400">
+          <i class="fa-solid fa-phone"></i> +421 910 333 511
+        </a>
+        <span class="text-xs text-slate-500 dark:text-slate-400">Táckareň: Po-Pi 10:00-14:00</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= HERO SECTION ================= -->
+  <section class="relative pt-12 pb-20 lg:pt-20 lg:pb-32 overflow-hidden">
+    <!-- Background Ambient Glow -->
+    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-tr from-flame-500/10 via-amber-500/10 to-transparent rounded-full blur-3xl pointer-events-none -z-10"></div>
+    
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        
+        <!-- Left Column: Copy, Trust Badges, CTAs -->
+        <div class="lg:col-span-7 space-y-8">
+          
+          <!-- Top Tag / Pill -->
+          <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-flame-100/80 dark:bg-flame-950/60 border border-flame-200 dark:border-flame-800/60 text-flame-800 dark:text-flame-300 text-xs font-bold tracking-wide">
+            <span class="flex h-2 w-2 rounded-full bg-flame-500 animate-pulse"></span>
+            Líder v kulinárskom a zážitkovom cateringu na Záhorí
+          </div>
+
+          <!-- Main Headline -->
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold font-display tracking-tight text-slate-900 dark:text-white leading-[1.12]">
+            Kulinárske umenie, <span class="bg-gradient-to-r from-flame-600 via-amber-500 to-flame-500 bg-clip-text text-transparent">precízny catering</span> & moderné stravovanie na kľúč.
+          </h1>
+
+          <!-- Subtitle -->
+          <p class="text-base sm:text-lg text-slate-600 dark:text-slate-300 leading-relaxed max-w-2xl">
+            Sme špecialisti na zážitkové eventy, svadby, firemné večierky a veľkokapacitné stravovanie v Bratislavskom a Trnavskom kraji. Jedlo nerobíme iba ako nutnosť, ale ako <strong>vášeň, precíznosť a skutočné umenie</strong>.
+          </p>
+
+          <!-- Dual CTAs -->
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
+            <a href="#kalkulator" class="inline-flex items-center justify-center gap-3 px-7 py-4 rounded-2xl font-extrabold text-sm sm:text-base text-white bg-gradient-to-r from-flame-500 via-amber-600 to-flame-600 hover:from-flame-600 hover:to-amber-700 shadow-flame hover:shadow-flame-lg transform active:scale-95 transition-all">
+              <i class="fa-solid fa-calculator"></i>
+              <span>Vypočítať cenu cateringu</span>
+              <i class="fa-solid fa-arrow-right text-xs"></i>
+            </a>
+            <a href="#tackaren" class="inline-flex items-center justify-center gap-2.5 px-6 py-4 rounded-2xl font-bold text-sm sm:text-base text-slate-800 dark:text-slate-200 bg-white dark:bg-slate-800/90 border border-slate-200 dark:border-slate-700 hover:border-flame-400 dark:hover:border-flame-500 shadow-sm hover:shadow-md transition-all">
+              <i class="fa-solid fa-bowl-food text-flame-500"></i>
+              <span>Dnešné menu (Táckareň)</span>
+            </a>
+          </div>
+
+          <!-- Key Metrics / Fast Stats Grid -->
+          <div class="pt-6 border-t border-slate-200/80 dark:border-slate-800/80 grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6">
+            <div>
+              <div class="text-2xl sm:text-3xl font-extrabold font-display text-slate-900 dark:text-white flex items-center">
+                650<span class="text-flame-500 text-lg">m²</span>
+              </div>
+              <div class="text-xs text-slate-500 dark:text-slate-400 font-medium mt-0.5">Moderná kuchyňa</div>
+            </div>
+            <div>
+              <div class="text-2xl sm:text-3xl font-extrabold font-display text-slate-900 dark:text-white flex items-center">
+                2 000<span class="text-flame-500 text-lg">+</span>
+              </div>
+              <div class="text-xs text-slate-500 dark:text-slate-400 font-medium mt-0.5">Jedál denne</div>
+            </div>
+            <div>
+              <div class="text-2xl sm:text-3xl font-extrabold font-display text-slate-900 dark:text-white flex items-center">
+                1 000<span class="text-flame-500 text-lg">+</span>
+              </div>
+              <div class="text-xs text-slate-500 dark:text-slate-400 font-medium mt-0.5">Kapacita cateringu</div>
+            </div>
+            <div>
+              <div class="text-2xl sm:text-3xl font-extrabold font-display text-slate-900 dark:text-white flex items-center">
+                ISO<span class="text-flame-500 text-sm ml-1 font-mono">9001</span>
+              </div>
+              <div class="text-xs text-slate-500 dark:text-slate-400 font-medium mt-0.5">HACCP & Certifikát</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Visual Showcase & Floating Cards -->
+        <div class="lg:col-span-5 relative">
+          <div class="relative mx-auto max-w-md lg:max-w-none">
+            
+            <!-- Main Hero Image Frame -->
+            <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white dark:border-slate-800 group">
+              <img src="images/catering_hero.webp" alt="PAPA GRILL Profesionálny Catering" class="w-full h-[420px] sm:h-[480px] object-cover group-hover:scale-105 transition-transform duration-700">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+              
+              <!-- Bottom caption on image -->
+              <div class="absolute bottom-6 left-6 right-6 text-white">
+                <span class="px-2.5 py-1 rounded-md bg-flame-600 text-[11px] font-extrabold uppercase tracking-wider">Live BBQ & Banquet</span>
+                <h3 class="text-lg sm:text-xl font-bold font-display mt-2 leading-snug">Zážitková gastronómia pripravená majstrami kuchármi</h3>
+                <p class="text-xs text-slate-200 mt-1 flex items-center gap-1.5">
+                  <i class="fa-solid fa-location-dot text-flame-400"></i> Malacky, Bratislava, Trnava a okolie
+                </p>
+              </div>
+            </div>
+
+            <!-- Floating Card: Forbes Feature -->
+            <div class="absolute -top-6 -right-4 sm:-right-6 bg-white dark:bg-[#141b29] p-4 rounded-2xl shadow-xl border border-slate-100 dark:border-slate-800 max-w-[220px] hidden sm:block animate-pulse-subtle">
+              <div class="flex items-center gap-2.5 mb-2">
+                <img src="images/client_forbes.webp" alt="Forbes logo" class="h-4 w-auto dark:invert">
+                <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">Médiá</span>
+              </div>
+              <p class="text-[11px] font-semibold text-slate-800 dark:text-slate-200 italic leading-snug">
+                "Začali so stánkom, dnes majú firmu s miliónovými obratmi."
+              </p>
+            </div>
+
+            <!-- Floating Card: Client Rating -->
+            <div class="absolute -bottom-6 -left-4 sm:-left-6 bg-white dark:bg-[#141b29] p-4 rounded-2xl shadow-xl border border-slate-100 dark:border-slate-800 flex items-center gap-3.5">
+              <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-500 flex items-center justify-center text-xl">
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <div>
+                <div class="flex items-center gap-1 text-amber-400 text-xs">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <span class="font-extrabold text-slate-900 dark:text-white ml-1">4.9 / 5</span>
+                </div>
+                <div class="text-[11px] text-slate-500 dark:text-slate-400 font-medium">350+ firemných & súkromných akcií</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FORBES & MEDIA ACCREDITATION BANNER ================= -->
+  <section class="py-8 bg-amber-50/50 dark:bg-[#0f1624] border-y border-amber-100 dark:border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 rounded-2xl bg-white dark:bg-slate-800 shadow-md flex items-center justify-center p-2.5">
+            <img src="images/client_forbes.webp" alt="Forbes" class="w-full h-auto dark:invert">
+          </div>
+          <div>
+            <div class="text-xs font-bold uppercase tracking-widest text-flame-600 dark:text-flame-400">Forbes Slovensko o Papa Grill</div>
+            <div class="text-sm sm:text-base font-bold text-slate-900 dark:text-white">
+              „Neženieme sa za rekordmi. Ľudia, kvalita a inovácie sú prvoradé.“
+            </div>
+          </div>
+        </div>
+        <div class="flex items-center gap-3 text-xs font-semibold">
+          <a href="https://www.forbes.sk/papa-grill-zacali-so-stankom-na-parkovisku-dnes-maju-firmu-s-milionovymi-obratmi/" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-white dark:bg-slate-800 text-slate-800 dark:text-slate-200 border border-slate-200 dark:border-slate-700 hover:text-flame-600 transition-colors shadow-sm">
+            <span>Prečítať príbeh na Forbes.sk</span>
+            <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CLIENT PARTNERS LOGO MARQUEE ================= -->
+  <section class="py-12 bg-white dark:bg-[#090d14] overflow-hidden border-b border-slate-100 dark:border-slate-800/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-6 text-center">
+      <p class="text-xs font-extrabold uppercase tracking-widest text-slate-400 dark:text-slate-500">
+        Dôverujú nám poprední európski zamestnávatelia a korporátne značky
+      </p>
+    </div>
+    
+    <!-- Marquee Track -->
+    <div class="relative w-full overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
+      <div class="animate-marquee flex items-center gap-12 sm:gap-16">
+        <!-- Set 1 -->
+        <img src="images/client_mercedes.webp" alt="Mercedes-Benz" class="h-8 sm:h-10 w-auto opacity-70 hover:opacity-100 transition-opacity grayscale hover:grayscale-0 dark:invert">
+        <img src="images/client_ikea.webp" alt="IKEA Industry" class="h-7 sm:h-9 w-auto opacity-70 hover:opacity-100 transition-opacity grayscale hover:grayscale-0 dark:invert">
+        <img src="images/client_benteler.webp" alt="Benteler Automotive" class="h-6 sm:h-8 w-auto opacity-70 hover:opacity-100 transition-opacity grayscale hover:grayscale-0 dark:invert">
+        <img src="images/client_faurecia.png" alt="Faurecia" class="h-7 sm:h-9 w-auto opacity-70 hover:opacity-100 transition-opacity grayscale hover:grayscale-0 dark:invert">
+        <img src="images/client_lear.png" alt="Lear Corporation" class="h-6 sm:h-8 w-auto opacity-70 hover:opacity-100 transition-opacity grayscale hover:grayscale-0 dark:invert">
+        <img src="images/client_sisecam.png" alt="Sisecam" class="h-7 sm:h-9 w-auto opacity-70 hover:opacity-100 transition-opacity grayscale hover:grayscale-0 dark:invert">
+        <img src="images/client_brose.webp" alt="Brose" class="h-6 sm:h-8 w-auto opacity-70 hover:opacity-100 transition-opacity grayscale hover:grayscale-0 dark:invert">
+        <img src="images/client_ford.webp" alt="Ford" class="h-7 sm:h-9 w-auto opacity-70 hover:opacity-100 transition-opacity grayscale hover:grayscale-0 dark:invert">
+        <img src="images/client_motorcar.webp" alt="Motor-Car" class="h-6 sm:h-8 w-auto opacity-70 hover:opacity-100 transition-opacity grayscale hover:grayscale-0 dark:invert">
+        <img src="images/client_hilek.webp" alt="Hílek" class="h-6 sm:h-8 w-auto opacity-70 hover:opacity-100 transition-opacity grayscale hover:grayscale-0 dark:invert">
+        <img src="images/client_stu.webp" alt="STU Bratislava" class="h-7 sm:h-9 w-auto opacity-70 hover:opacity-100 transition-opacity grayscale hover:grayscale-0 dark:invert">
+
+        <!-- Set 2 (Duplicate for seamless loop) -->
+        <img src="images/client_mercedes.webp" alt="Mercedes-Benz" class="h-8 sm:h-10 w-auto opacity-70 hover:opacity-100 transition-opacity grayscale hover:grayscale-0 dark:invert">
+        <img src="images/client_ikea.webp" alt="IKEA Industry" class="h-7 sm:h-9 w-auto opacity-70 hover:opacity-100 transition-opacity grayscale hover:grayscale-0 dark:invert">
+        <img src="images/client_benteler.webp" alt="Benteler Automotive" class="h-6 sm:h-8 w-auto opacity-70 hover:opacity-100 transition-opacity grayscale hover:grayscale-0 dark:invert">
+        <img src="images/client_faurecia.png" alt="Faurecia" class="h-7 sm:h-9 w-auto opacity-70 hover:opacity-100 transition-opacity grayscale hover:grayscale-0 dark:invert">
+        <img src="images/client_lear.png" alt="Lear Corporation" class="h-6 sm:h-8 w-auto opacity-70 hover:opacity-100 transition-opacity grayscale hover:grayscale-0 dark:invert">
+        <img src="images/client_sisecam.png" alt="Sisecam" class="h-7 sm:h-9 w-auto opacity-70 hover:opacity-100 transition-opacity grayscale hover:grayscale-0 dark:invert">
+        <img src="images/client_brose.webp" alt="Brose" class="h-6 sm:h-8 w-auto opacity-70 hover:opacity-100 transition-opacity grayscale hover:grayscale-0 dark:invert">
+        <img src="images/client_ford.webp" alt="Ford" class="h-7 sm:h-9 w-auto opacity-70 hover:opacity-100 transition-opacity grayscale hover:grayscale-0 dark:invert">
+        <img src="images/client_motorcar.webp" alt="Motor-Car" class="h-6 sm:h-8 w-auto opacity-70 hover:opacity-100 transition-opacity grayscale hover:grayscale-0 dark:invert">
+        <img src="images/client_hilek.webp" alt="Hílek" class="h-6 sm:h-8 w-auto opacity-70 hover:opacity-100 transition-opacity grayscale hover:grayscale-0 dark:invert">
+        <img src="images/client_stu.webp" alt="STU Bratislava" class="h-7 sm:h-9 w-auto opacity-70 hover:opacity-100 transition-opacity grayscale hover:grayscale-0 dark:invert">
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= INTERACTIVE CATERING CALCULATOR & WIZARD ================= -->
+  <section id="kalkulator" class="py-20 lg:py-28 bg-[#f8f5ee] dark:bg-[#0d131f] relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-flame-100 dark:bg-flame-950/60 text-flame-600 dark:text-flame-400 text-xs font-bold uppercase tracking-wider">
+          <i class="fa-solid fa-calculator"></i> Inteligentný Konfigurátor
+        </div>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-display text-slate-900 dark:text-white">
+          Vypočítajte si nezáväznú cenu <span class="text-flame-600 dark:text-flame-400">cateringu na mieru</span>
+        </h2>
+        <p class="text-slate-600 dark:text-slate-300 text-sm sm:text-base">
+          Zvoľte si typ udalosti, počet hostí, preferované bufety, nápoje a vybavenie. Náš kalkulátor vám okamžite zobrazí orientačný rozpočet s možnosťou stiahnutia ponuky alebo odoslania dopytu.
+        </p>
+      </div>
+
+      <!-- Calculator Interactive Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- Controls & Selections (Col 7) -->
+        <div class="lg:col-span-7 bg-white dark:bg-[#141c2c] rounded-3xl p-6 sm:p-8 shadow-xl border border-slate-200/80 dark:border-slate-800 space-y-8">
+          
+          <!-- STEP 1: Event Type -->
+          <div>
+            <label class="block text-xs font-extrabold uppercase tracking-wider text-slate-400 dark:text-slate-400 mb-3">
+              1. Typ udalosti
+            </label>
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-2.5" id="calc-event-types">
+              <button type="button" data-event="firemny" class="calc-btn-event active p-3 rounded-2xl border text-left transition-all flex flex-col justify-between h-24 border-flame-500 bg-flame-50 dark:bg-flame-950/40 text-flame-800 dark:text-flame-200 font-bold shadow-sm">
+                <i class="fa-solid fa-briefcase text-lg text-flame-600"></i>
+                <span class="text-xs">Firemný večierok</span>
+              </button>
+              <button type="button" data-event="svadba" class="calc-btn-event p-3 rounded-2xl border text-left transition-all flex flex-col justify-between h-24 border-slate-200 dark:border-slate-700/80 hover:border-flame-300 dark:hover:border-flame-600 bg-white dark:bg-slate-800/40 text-slate-700 dark:text-slate-300 font-bold">
+                <i class="fa-solid fa-rings-wedding text-lg text-slate-400"></i>
+                <span class="text-xs">Svadobná hostina</span>
+              </button>
+              <button type="button" data-event="garden" class="calc-btn-event p-3 rounded-2xl border text-left transition-all flex flex-col justify-between h-24 border-slate-200 dark:border-slate-700/80 hover:border-flame-300 dark:hover:border-flame-600 bg-white dark:bg-slate-800/40 text-slate-700 dark:text-slate-300 font-bold">
+                <i class="fa-solid fa-fire text-lg text-slate-400"></i>
+                <span class="text-xs">Garden Party & BBQ</span>
+              </button>
+              <button type="button" data-event="coffee" class="calc-btn-event p-3 rounded-2xl border text-left transition-all flex flex-col justify-between h-24 border-slate-200 dark:border-slate-700/80 hover:border-flame-300 dark:hover:border-flame-600 bg-white dark:bg-slate-800/40 text-slate-700 dark:text-slate-300 font-bold">
+                <i class="fa-solid fa-mug-hot text-lg text-slate-400"></i>
+                <span class="text-xs">Coffee Break / Školenie</span>
+              </button>
+              <button type="button" data-event="sport" class="calc-btn-event p-3 rounded-2xl border text-left transition-all flex flex-col justify-between h-24 border-slate-200 dark:border-slate-700/80 hover:border-flame-300 dark:hover:border-flame-600 bg-white dark:bg-slate-800/40 text-slate-700 dark:text-slate-300 font-bold">
+                <i class="fa-solid fa-futbol text-lg text-slate-400"></i>
+                <span class="text-xs">Športový deň / Family Day</span>
+              </button>
+              <button type="button" data-event="vianocny" class="calc-btn-event p-3 rounded-2xl border text-left transition-all flex flex-col justify-between h-24 border-slate-200 dark:border-slate-700/80 hover:border-flame-300 dark:hover:border-flame-600 bg-white dark:bg-slate-800/40 text-slate-700 dark:text-slate-300 font-bold">
+                <i class="fa-solid fa-snowflake text-lg text-slate-400"></i>
+                <span class="text-xs">Vianočná kapustnica</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- STEP 2: Guest Count Slider -->
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <label class="text-xs font-extrabold uppercase tracking-wider text-slate-400 dark:text-slate-400">
+                2. Počet hostí
+              </label>
+              <div class="flex items-center gap-2">
+                <span id="calc-guests-display" class="font-display font-extrabold text-2xl text-flame-600 dark:text-flame-400 font-mono">60</span>
+                <span class="text-xs text-slate-500 font-bold">osôb</span>
+              </div>
+            </div>
+            <input type="range" id="calc-guests-slider" min="10" max="500" step="5" value="60" class="w-full h-2.5 bg-slate-200 dark:bg-slate-700 rounded-lg appearance-none cursor-pointer accent-flame-500">
+            <!-- Preset Pills -->
+            <div class="flex flex-wrap gap-2 mt-3">
+              <button type="button" onclick="setGuests(25)" class="px-2.5 py-1 rounded-lg text-xs font-semibold bg-slate-100 dark:bg-slate-800 hover:bg-flame-100 dark:hover:bg-slate-700 text-slate-600 dark:text-slate-300 transition-colors">25 osôb</button>
+              <button type="button" onclick="setGuests(50)" class="px-2.5 py-1 rounded-lg text-xs font-semibold bg-slate-100 dark:bg-slate-800 hover:bg-flame-100 dark:hover:bg-slate-700 text-slate-600 dark:text-slate-300 transition-colors">50 osôb</button>
+              <button type="button" onclick="setGuests(100)" class="px-2.5 py-1 rounded-lg text-xs font-semibold bg-slate-100 dark:bg-slate-800 hover:bg-flame-100 dark:hover:bg-slate-700 text-slate-600 dark:text-slate-300 transition-colors">100 osôb</button>
+              <button type="button" onclick="setGuests(200)" class="px-2.5 py-1 rounded-lg text-xs font-semibold bg-slate-100 dark:bg-slate-800 hover:bg-flame-100 dark:hover:bg-slate-700 text-slate-600 dark:text-slate-300 transition-colors">200 osôb</button>
+              <button type="button" onclick="setGuests(350)" class="px-2.5 py-1 rounded-lg text-xs font-semibold bg-slate-100 dark:bg-slate-800 hover:bg-flame-100 dark:hover:bg-slate-700 text-slate-600 dark:text-slate-300 transition-colors">350+ osôb</button>
+            </div>
+          </div>
+
+          <!-- STEP 3: Food / Buffets -->
+          <div>
+            <label class="block text-xs font-extrabold uppercase tracking-wider text-slate-400 dark:text-slate-400 mb-3">
+              3. Gastronómia & Štýl Bufetov (výber viac možností)
+            </label>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3" id="calc-food-options">
+              <label class="flex items-start gap-3 p-3.5 rounded-2xl border border-slate-200 dark:border-slate-700/80 hover:border-flame-300 dark:hover:border-flame-600 cursor-pointer transition-all bg-white dark:bg-slate-800/40">
+                <input type="checkbox" id="food-teply" checked class="mt-1 w-4 h-4 rounded text-flame-600 focus:ring-flame-500 accent-flame-500">
+                <div>
+                  <div class="text-xs font-bold text-slate-900 dark:text-white">Teplý bufet (Hlavné jedlá)</div>
+                  <div class="text-[11px] text-slate-500 dark:text-slate-400">Pečené mäso, špeciality, prílohy (+14 €/os)</div>
+                </div>
+              </label>
+
+              <label class="flex items-start gap-3 p-3.5 rounded-2xl border border-slate-200 dark:border-slate-700/80 hover:border-flame-300 dark:hover:border-flame-600 cursor-pointer transition-all bg-white dark:bg-slate-800/40">
+                <input type="checkbox" id="food-studeny" checked class="mt-1 w-4 h-4 rounded text-flame-600 focus:ring-flame-500 accent-flame-500">
+                <div>
+                  <div class="text-xs font-bold text-slate-900 dark:text-white">Studený bufet & Finger food</div>
+                  <div class="text-[11px] text-slate-500 dark:text-slate-400">Kanapky, syrové & mäsové misy (+9 €/os)</div>
+                </div>
+              </label>
+
+              <label class="flex items-start gap-3 p-3.5 rounded-2xl border border-slate-200 dark:border-slate-700/80 hover:border-flame-300 dark:hover:border-flame-600 cursor-pointer transition-all bg-white dark:bg-slate-800/40">
+                <input type="checkbox" id="food-bbq" class="mt-1 w-4 h-4 rounded text-flame-600 focus:ring-flame-500 accent-flame-500">
+                <div>
+                  <div class="text-xs font-bold text-slate-900 dark:text-white">Live BBQ Grilovanie majstrami</div>
+                  <div class="text-[11px] text-slate-500 dark:text-slate-400">Burgre, steaky, grilované syry (+12 €/os)</div>
+                </div>
+              </label>
+
+              <label class="flex items-start gap-3 p-3.5 rounded-2xl border border-slate-200 dark:border-slate-700/80 hover:border-flame-300 dark:hover:border-flame-600 cursor-pointer transition-all bg-white dark:bg-slate-800/40">
+                <input type="checkbox" id="food-candy" class="mt-1 w-4 h-4 rounded text-flame-600 focus:ring-flame-500 accent-flame-500">
+                <div>
+                  <div class="text-xs font-bold text-slate-900 dark:text-white">Candy Bar & Domáce Dezerty</div>
+                  <div class="text-[11px] text-slate-500 dark:text-slate-400">Panna cotta, tartaletky, ovocie (+5 €/os)</div>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <!-- STEP 4: Staff & Service -->
+          <div>
+            <label class="block text-xs font-extrabold uppercase tracking-wider text-slate-400 dark:text-slate-400 mb-3">
+              4. Obsluha a servis
+            </label>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <label class="flex items-center gap-3 p-3.5 rounded-2xl border border-flame-500 bg-flame-50/50 dark:bg-flame-950/30 cursor-pointer transition-all">
+                <input type="radio" name="calc-service" value="full" checked class="w-4 h-4 text-flame-600 focus:ring-flame-500 accent-flame-500">
+                <div>
+                  <div class="text-xs font-bold text-slate-900 dark:text-white">S profesionálnou obsluhou</div>
+                  <div class="text-[11px] text-slate-500 dark:text-slate-400">Čašníci, kuchári, debaras (+6 €/os)</div>
+                </div>
+              </label>
+              <label class="flex items-center gap-3 p-3.5 rounded-2xl border border-slate-200 dark:border-slate-700/80 cursor-pointer transition-all">
+                <input type="radio" name="calc-service" value="delivery" class="w-4 h-4 text-flame-600 focus:ring-flame-500 accent-flame-500">
+                <div>
+                  <div class="text-xs font-bold text-slate-900 dark:text-white">Len dovoz a inštalácia</div>
+                  <div class="text-[11px] text-slate-500 dark:text-slate-400">Bez prítomnosti obsluhy (0 €)</div>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <!-- STEP 5: Drinks & Beverages -->
+          <div>
+            <label class="block text-xs font-extrabold uppercase tracking-wider text-slate-400 dark:text-slate-400 mb-3">
+              5. Nápojový servis
+            </label>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <label class="flex items-start gap-3 p-3.5 rounded-2xl border border-slate-200 dark:border-slate-700/80 cursor-pointer transition-all bg-white dark:bg-slate-800/40">
+                <input type="checkbox" id="drink-nealko" checked class="mt-1 w-4 h-4 text-flame-600 focus:ring-flame-500 accent-flame-500">
+                <div>
+                  <div class="text-xs font-bold text-slate-900 dark:text-white">Nealko balík & Domáce limonády</div>
+                  <div class="text-[11px] text-slate-500 dark:text-slate-400">Káva, čaje, vody, domáce sirupy (+4 €/os)</div>
+                </div>
+              </label>
+              <label class="flex items-start gap-3 p-3.5 rounded-2xl border border-slate-200 dark:border-slate-700/80 cursor-pointer transition-all bg-white dark:bg-slate-800/40">
+                <input type="checkbox" id="drink-alko" class="mt-1 w-4 h-4 text-flame-600 focus:ring-flame-500 accent-flame-500">
+                <div>
+                  <div class="text-xs font-bold text-slate-900 dark:text-white">Víno & Remeselné pivo</div>
+                  <div class="text-[11px] text-slate-500 dark:text-slate-400">Výber z Malokarpatských vín & čapované pivo (+7 €/os)</div>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <!-- STEP 6: Inventory & Equipment -->
+          <div>
+            <label class="block text-xs font-extrabold uppercase tracking-wider text-slate-400 dark:text-slate-400 mb-3">
+              6. Gastro inventár a vybavenie
+            </label>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <label class="flex items-start gap-3 p-3 rounded-xl border border-slate-200 dark:border-slate-700/80 cursor-pointer transition-all">
+                <input type="checkbox" id="equip-porcelan" checked class="mt-0.5 w-4 h-4 text-flame-600 focus:ring-flame-500 accent-flame-500">
+                <span class="text-xs font-semibold text-slate-800 dark:text-slate-200">Porcelán, sklo a nerezové príbory (+2.5 €/os)</span>
+              </label>
+              <label class="flex items-start gap-3 p-3 rounded-xl border border-slate-200 dark:border-slate-700/80 cursor-pointer transition-all">
+                <input type="checkbox" id="equip-stoly" class="mt-0.5 w-4 h-4 text-flame-600 focus:ring-flame-500 accent-flame-500">
+                <span class="text-xs font-semibold text-slate-800 dark:text-slate-200">Banketové stoly & Stand-by stoly (+3 €/os)</span>
+              </label>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Live Estimate & Summary Card (Col 5) -->
+        <div class="lg:col-span-5 lg:sticky lg:top-28 space-y-6">
+          <div id="print-quote-area" class="bg-gradient-to-b from-white to-amber-50/40 dark:from-[#172133] dark:to-[#111827] rounded-3xl p-6 sm:p-8 shadow-2xl border-2 border-flame-500/20 dark:border-flame-500/30">
+            
+            <div class="flex items-center justify-between pb-6 border-b border-slate-200 dark:border-slate-700/80">
+              <div>
+                <span class="text-xs font-extrabold uppercase tracking-widest text-flame-600 dark:text-flame-400">Kalkulácia</span>
+                <h3 class="text-xl font-bold font-display text-slate-900 dark:text-white">Orientačný rozpočet</h3>
+              </div>
+              <div class="w-10 h-10 rounded-2xl bg-flame-500/10 text-flame-600 flex items-center justify-center">
+                <i class="fa-solid fa-receipt text-lg"></i>
+              </div>
+            </div>
+
+            <!-- Price Breakdown Header -->
+            <div class="py-6 space-y-4">
+              <div class="flex items-baseline justify-between">
+                <span class="text-sm text-slate-600 dark:text-slate-300 font-medium">Odhadovaná cena / osoba:</span>
+                <span class="text-2xl font-extrabold font-mono text-slate-900 dark:text-white" id="summary-per-person">29.00 €</span>
+              </div>
+              <div class="flex items-baseline justify-between">
+                <span class="text-sm text-slate-600 dark:text-slate-300 font-medium">Počet hostí:</span>
+                <span class="text-base font-bold font-mono text-slate-900 dark:text-white" id="summary-guests">60 osôb</span>
+              </div>
+              
+              <div class="pt-4 border-t border-slate-200/80 dark:border-slate-700/80">
+                <div class="flex items-baseline justify-between text-xs text-slate-500 dark:text-slate-400 mb-1">
+                  <span>Celková orientačná suma:</span>
+                  <span>bez DPH</span>
+                </div>
+                <div class="flex items-baseline justify-between">
+                  <span class="text-3xl sm:text-4xl font-extrabold font-display text-flame-600 dark:text-flame-400" id="summary-total">1 740 €</span>
+                  <span class="text-xs font-semibold px-2 py-1 rounded bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300">Garancia 24h ponuky</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Itemized Checklist -->
+            <div class="p-4 rounded-2xl bg-slate-50 dark:bg-[#0d1422] border border-slate-200/60 dark:border-slate-800 text-xs space-y-2 text-slate-600 dark:text-slate-300">
+              <div class="font-bold text-slate-900 dark:text-white flex items-center gap-1.5 mb-2">
+                <i class="fa-solid fa-circle-check text-flame-500"></i> Zahrnuté v kalkulácii:
+              </div>
+              <div id="summary-items" class="space-y-1 font-mono text-[11px]">
+                <div>• Udalosť: <span class="font-bold text-slate-800 dark:text-slate-200" id="sum-event">Firemný večierok</span></div>
+                <div>• Bufety: <span class="font-bold text-slate-800 dark:text-slate-200" id="sum-food">Teplý, Studený</span></div>
+                <div>• Servis: <span class="font-bold text-slate-800 dark:text-slate-200" id="sum-service">S obsluhou</span></div>
+                <div>• Nápoje: <span class="font-bold text-slate-800 dark:text-slate-200" id="sum-drinks">Nealko balík</span></div>
+                <div>• Inventár: <span class="font-bold text-slate-800 dark:text-slate-200" id="sum-equip">Porcelán & sklo</span></div>
+              </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="pt-6 space-y-3 no-print">
+              <button type="button" onclick="openQuoteModalWithCalc()" class="w-full py-4 rounded-2xl font-extrabold text-sm text-white bg-gradient-to-r from-flame-500 via-amber-600 to-flame-600 hover:from-flame-600 hover:to-amber-700 shadow-flame hover:shadow-flame-lg transition-all flex items-center justify-center gap-2">
+                <i class="fa-solid fa-paper-plane"></i>
+                <span>Odoslať dopyt s touto kalkuláciou</span>
+              </button>
+
+              <button type="button" onclick="window.print()" class="w-full py-3 rounded-xl font-bold text-xs text-slate-700 dark:text-slate-300 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors flex items-center justify-center gap-2">
+                <i class="fa-solid fa-print"></i>
+                <span>Vytlačiť / Uložiť ponuku do PDF</span>
+              </button>
+            </div>
+
+            <p class="text-[11px] text-slate-400 dark:text-slate-400 text-center mt-4">
+              *Uvedená kalkulácia je nezáväzná. Konečná cena závisí od presného zloženia menu a logistiky.
+            </p>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= 4 NOSNÉ GASTRONOMICKÉ DIVÍZIE ================= -->
+  <section id="sluzby" class="py-20 lg:py-28 bg-white dark:bg-[#0b0f17]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Title -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+        <div>
+          <span class="text-xs font-extrabold uppercase tracking-widest text-flame-600 dark:text-flame-400">Naše Divízie & Služby</span>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-display text-slate-900 dark:text-white mt-2">
+            Komplexné riešenia od <span class="text-flame-600 dark:text-flame-400">raňajok po banket</span>
+          </h2>
+        </div>
+        <p class="text-slate-600 dark:text-slate-400 text-sm max-w-md">
+          Pozorne vnímame požiadavky firemných klientov aj rodín. Naše služby neustále inovujeme, aby bol každý detail perfektný.
+        </p>
+      </div>
+
+      <!-- Services Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Service 1: Zážitkový Catering -->
+        <div class="bg-[#fdfbf7] dark:bg-[#131b2a] rounded-3xl overflow-hidden border border-slate-200/80 dark:border-slate-800 shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col group">
+          <div class="relative h-60 overflow-hidden">
+            <img src="images/catering_buffet.webp" alt="Zážitkový catering" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+            <span class="absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-extrabold bg-flame-600 text-white shadow-md">
+              Až do 1000 hostí
+            </span>
+            <div class="absolute bottom-4 left-4 right-4 text-white">
+              <h3 class="text-xl font-bold font-display">Zážitkový Catering na kľúč</h3>
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+            <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+              Zabezpečíme pre vás garden party, svadobnú hostinu, firemné raňajky, coffee breaky či plesy. Vlastné BBQ udiarne, teplé a studené bufety, profesionálna obsluha a kompletný inventár.
+            </p>
+            <div class="space-y-2 border-t border-slate-200/80 dark:border-slate-800 pt-4 text-xs font-semibold text-slate-700 dark:text-slate-300">
+              <div class="flex items-center gap-2"><i class="fa-solid fa-check text-flame-500"></i> Garden party & Live grilovanie</div>
+              <div class="flex items-center gap-2"><i class="fa-solid fa-check text-flame-500"></i> Svadobný catering a bankety</div>
+              <div class="flex items-center gap-2"><i class="fa-solid fa-check text-flame-500"></i> Firemné raňajky & Coffee breaky</div>
+            </div>
+            <a href="#kalkulator" class="mt-4 inline-flex items-center gap-2 text-sm font-bold text-flame-600 dark:text-flame-400 group-hover:translate-x-1 transition-transform">
+              <span>Nakonfigurovať catering</span> &rarr;
+            </a>
+          </div>
+        </div>
+
+        <!-- Service 2: Závodné Stravovanie & Gastro Park -->
+        <div class="bg-[#fdfbf7] dark:bg-[#131b2a] rounded-3xl overflow-hidden border border-slate-200/80 dark:border-slate-800 shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col group">
+          <div class="relative h-60 overflow-hidden">
+            <img src="images/catering_spread.webp" alt="Závodné stravovanie" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+            <span class="absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-extrabold bg-amber-600 text-white shadow-md">
+              Kapacita 2000 jedál / deň
+            </span>
+            <div class="absolute bottom-4 left-4 right-4 text-white">
+              <h3 class="text-xl font-bold font-display">Závodné Stravovanie & Bufety</h3>
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+            <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+              Disponujeme najmodernejšou kuchyňou v Malackách a okolí s rozlohou <strong>650 m²</strong>. Poskytujeme kompletné stravovanie pre výrobné fabriky a priemyselné parky od projektu až po prevádzkovanie.
+            </p>
+            <div class="space-y-2 border-t border-slate-200/80 dark:border-slate-800 pt-4 text-xs font-semibold text-slate-700 dark:text-slate-300">
+              <div class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-500"></i> Kuchyne a výdajne jedál na kľúč</div>
+              <div class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-500"></i> Certifikáty ISO 9001 & prísny HACCP</div>
+              <div class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-500"></i> Denný rozvoz obedov do firiem</div>
+            </div>
+            <a href="#kontakt" class="mt-4 inline-flex items-center gap-2 text-sm font-bold text-amber-600 dark:text-amber-400 group-hover:translate-x-1 transition-transform">
+              <span>Zistiť možnosti pre firmu</span> &rarr;
+            </a>
+          </div>
+        </div>
+
+        <!-- Service 3: Event Hall Malacky -->
+        <div id="eventhall" class="bg-[#fdfbf7] dark:bg-[#131b2a] rounded-3xl overflow-hidden border border-slate-200/80 dark:border-slate-800 shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col group">
+          <div class="relative h-60 overflow-hidden">
+            <img src="images/catering_wedding.jpg" alt="Event Hall Malacky" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+            <span class="absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-extrabold bg-rose-600 text-white shadow-md">
+              Kapacita 180 osôb sedenie
+            </span>
+            <div class="absolute bottom-4 left-4 right-4 text-white">
+              <h3 class="text-xl font-bold font-display">Event Hall Malacky</h3>
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+            <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+              Exkluzívny priestor na organizovanie svadieb, stužkových, firemných večierkov a konferencií. Možnosť civilného svadobného obradu priamo v sále pod jednou strechou.
+            </p>
+            <div class="space-y-2 border-t border-slate-200/80 dark:border-slate-800 pt-4 text-xs font-semibold text-slate-700 dark:text-slate-300">
+              <div class="flex items-center gap-2"><i class="fa-solid fa-check text-rose-500"></i> 160 – 180 osôb banket / 250 raut</div>
+              <div class="flex items-center gap-2"><i class="fa-solid fa-check text-rose-500"></i> Zvuková, svetelná technika & pódium</div>
+              <div class="flex items-center gap-2"><i class="fa-solid fa-check text-rose-500"></i> Veľké parkovisko priamo pred halou</div>
+            </div>
+            <a href="#kontakt" class="mt-4 inline-flex items-center gap-2 text-sm font-bold text-rose-600 dark:text-rose-400 group-hover:translate-x-1 transition-transform">
+              <span>Rezervovať priestory sály</span> &rarr;
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= VAŠA TÁCKAREŇ: INTERAKTÍVNE DENNÉ MENU ================= -->
+  <section id="tackaren" class="py-20 lg:py-28 bg-[#fdfbf7] dark:bg-[#090d14] border-t border-slate-200/80 dark:border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Title & Info Banner -->
+      <div class="flex flex-col lg:flex-row lg:items-end justify-between mb-12 gap-8">
+        <div>
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-300 text-xs font-bold uppercase tracking-wider mb-3">
+            <i class="fa-solid fa-bowl-food"></i> Poctivá Samoobslužná Jedáleň
+          </div>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-display text-slate-900 dark:text-white">
+            Vaša Táckareň <span class="text-emerald-600 dark:text-emerald-400">Malacky</span>
+          </h2>
+          <p class="text-slate-600 dark:text-slate-400 text-sm max-w-xl mt-2">
+            Rýchly, teplý a poctivo navarený obed bez dlhého čakania. Každý pracovný deň od 10:00 do 14:00 v hale BASSO (1. poschodie), Priemyselná 5863, Malacky.
+          </p>
+        </div>
+
+        <!-- Badges on right -->
+        <div class="flex flex-wrap items-center gap-3">
+          <div class="px-4 py-3 rounded-2xl bg-white dark:bg-[#141c2c] border border-slate-200 dark:border-slate-800 shadow-sm text-xs">
+            <div class="text-slate-400 font-medium">Otvorené Po – Pi</div>
+            <div class="text-slate-900 dark:text-white font-extrabold font-mono text-sm">10:00 – 14:00</div>
+          </div>
+          <div class="px-4 py-3 rounded-2xl bg-white dark:bg-[#141c2c] border border-slate-200 dark:border-slate-800 shadow-sm text-xs">
+            <div class="text-slate-400 font-medium">Lokalita</div>
+            <div class="text-slate-900 dark:text-white font-extrabold text-sm">Priemyselná 5863, Malacky</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Interactive Day Switcher Tabs -->
+      <div class="flex items-center gap-2 overflow-x-auto pb-4 mb-8" id="menu-days">
+        <button type="button" onclick="selectMenuDay('pondelok')" data-day="pondelok" class="menu-day-btn active px-5 py-2.5 rounded-2xl font-bold text-xs sm:text-sm whitespace-nowrap transition-all border border-emerald-500 bg-emerald-500 text-white shadow-md">
+          Pondelok
+        </button>
+        <button type="button" onclick="selectMenuDay('utorok')" data-day="utorok" class="menu-day-btn px-5 py-2.5 rounded-2xl font-bold text-xs sm:text-sm whitespace-nowrap transition-all border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-800/60 text-slate-700 dark:text-slate-300 hover:border-emerald-400">
+          Utorok
+        </button>
+        <button type="button" onclick="selectMenuDay('streda')" data-day="streda" class="menu-day-btn px-5 py-2.5 rounded-2xl font-bold text-xs sm:text-sm whitespace-nowrap transition-all border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-800/60 text-slate-700 dark:text-slate-300 hover:border-emerald-400">
+          Streda
+        </button>
+        <button type="button" onclick="selectMenuDay('stvrtok')" data-day="stvrtok" class="menu-day-btn px-5 py-2.5 rounded-2xl font-bold text-xs sm:text-sm whitespace-nowrap transition-all border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-800/60 text-slate-700 dark:text-slate-300 hover:border-emerald-400">
+          Štvrtok
+        </button>
+        <button type="button" onclick="selectMenuDay('piatok')" data-day="piatok" class="menu-day-btn px-5 py-2.5 rounded-2xl font-bold text-xs sm:text-sm whitespace-nowrap transition-all border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-800/60 text-slate-700 dark:text-slate-300 hover:border-emerald-400">
+          Piatok
+        </button>
+      </div>
+
+      <!-- Daily Menu Display Cards -->
+      <div id="menu-content" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Content will be injected dynamically by JS -->
+      </div>
+
+      <!-- Takeaway & Delivery Note -->
+      <div class="mt-10 p-6 rounded-3xl bg-amber-50/60 dark:bg-slate-800/40 border border-amber-200/80 dark:border-slate-700/80 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="flex items-center gap-3.5">
+          <div class="w-10 h-10 rounded-xl bg-amber-500/20 text-amber-600 dark:text-amber-400 flex items-center justify-center text-lg">
+            <i class="fa-solid fa-box-open"></i>
+          </div>
+          <div>
+            <div class="text-sm font-bold text-slate-900 dark:text-white">Nestíhate obedovať v jedálni? Zabalieme vám ho so sebou!</div>
+            <div class="text-xs text-slate-500 dark:text-slate-400">Možnosť platby stravnými kartami aj hotovosťou. Ekologické termo obaly.</div>
+          </div>
+        </div>
+        <a href="tel:+421910333511" class="px-5 py-2.5 rounded-xl bg-white dark:bg-slate-800 text-xs font-bold text-slate-800 dark:text-white border border-slate-200 dark:border-slate-700 hover:border-amber-400 transition-colors whitespace-nowrap">
+          <i class="fa-solid fa-phone mr-1.5 text-flame-500"></i> Objednať balenie: +421 910 333 511
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= VIANOČNÉ & SEZÓNNE EVENTY 2026 ================= -->
+  <section id="vianocne" class="py-20 lg:py-28 bg-gradient-to-b from-[#111827] via-[#1a2333] to-[#0f172a] text-white relative overflow-hidden">
+    <!-- Festive Glow -->
+    <div class="absolute -top-20 -right-20 w-96 h-96 bg-red-600/20 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute -bottom-20 -left-20 w-96 h-96 bg-amber-500/20 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left: Copy & Details -->
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-red-500/20 border border-red-500/30 text-red-300 text-xs font-bold uppercase tracking-wider">
+            <i class="fa-solid fa-snowflake text-amber-300"></i> Sezóna 2026
+          </div>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-display leading-tight">
+            Tieto Vianoce oslavujete vy. <span class="bg-gradient-to-r from-red-400 via-amber-300 to-amber-400 bg-clip-text text-transparent">Ostatné nechajte na nás.</span>
+          </h2>
+          <p class="text-slate-300 text-base leading-relaxed">
+            Hľadáte ideálne miesto a catering pre firemný vianočný večierok, vianočné trhy priamo u vás vo firme alebo koncoročnú kapustnicu? Máme pre vás pripravené kompletné zázemie: vlastnú sálu <strong>Event Hall</strong>, voňavé vianočné špeciality, pečené prasiatka, varený punč a personál.
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+            <div class="p-4 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm">
+              <i class="fa-solid fa-wine-glass text-amber-400 text-xl mb-2"></i>
+              <h4 class="font-bold text-sm text-white">Firemný Vianočný Večierok</h4>
+              <p class="text-xs text-slate-300 mt-1">V priestoroch Event Hall Malacky alebo priamo vo vašich firemných priestoroch.</p>
+            </div>
+            <div class="p-4 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm">
+              <i class="fa-solid fa-store text-red-400 text-xl mb-2"></i>
+              <h4 class="font-bold text-sm text-white">Vianočné Trhy na kľúč</h4>
+              <p class="text-xs text-slate-300 mt-1">Drevené stánky, kotlíková kapustnica, lokše, varené vínko a punč vo vašom areáli.</p>
+            </div>
+          </div>
+
+          <div class="pt-4 flex flex-wrap items-center gap-4">
+            <a href="#kontakt" class="px-6 py-3.5 rounded-2xl font-extrabold text-sm bg-gradient-to-r from-red-500 to-amber-500 hover:from-red-600 hover:to-amber-600 text-white shadow-lg transition-all">
+              Overiť voľný termín v decembri &rarr;
+            </a>
+            <span class="text-xs text-slate-400 font-medium">Úvodná konzultácia a obhliadka bezplatne</span>
+          </div>
+        </div>
+
+        <!-- Right: Image Collage -->
+        <div class="lg:col-span-5 grid grid-cols-2 gap-4">
+          <div class="space-y-4">
+            <div class="rounded-2xl overflow-hidden shadow-xl border border-white/10">
+              <img src="images/xmas_hero.webp" alt="Vianočné eventy" class="w-full h-48 object-cover hover:scale-105 transition-transform duration-500">
+            </div>
+            <div class="rounded-2xl overflow-hidden shadow-xl border border-white/10">
+              <img src="images/xmas_market.webp" alt="Vianočné trhy" class="w-full h-36 object-cover hover:scale-105 transition-transform duration-500">
+            </div>
+          </div>
+          <div class="space-y-4 pt-6">
+            <div class="rounded-2xl overflow-hidden shadow-xl border border-white/10">
+              <img src="images/xmas_event.webp" alt="Večierok vianoce" class="w-full h-36 object-cover hover:scale-105 transition-transform duration-500">
+            </div>
+            <div class="rounded-2xl overflow-hidden shadow-xl border border-white/10">
+              <img src="images/catering_christmas.jpg" alt="Vianočný catering" class="w-full h-48 object-cover hover:scale-105 transition-transform duration-500">
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= O NÁS & 4 PILIERE DOKONALOSTI ================= -->
+  <section id="o-nas" class="py-20 lg:py-28 bg-[#fdfbf7] dark:bg-[#0b0f17]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="max-w-3xl mb-16 space-y-4">
+        <span class="text-xs font-extrabold uppercase tracking-widest text-flame-600 dark:text-flame-400">Príbeh & Hodnoty</span>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-display text-slate-900 dark:text-white">
+          Od stánku na parkovisku k <span class="text-flame-600 dark:text-flame-400">miliónovým obratom</span>
+        </h2>
+        <p class="text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed">
+          Náš príbeh začal láskou k poctivému grilovaniu a dobrému jedlu. Postupne sme vybudovali moderný Gastro Park v Malackách s najmodernejším vybavením v regióne. Dnes dodávame tisíce jedál denne a tvoríme bankety pre najvýznamnejšie spoločnosti.
+        </p>
+      </div>
+
+      <!-- 4 Pillars Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Pillar 1: Precíznosť -->
+        <div class="p-8 rounded-3xl bg-white dark:bg-[#131b2a] border border-slate-200/80 dark:border-slate-800 shadow-md hover:shadow-xl transition-all">
+          <div class="w-12 h-12 rounded-2xl bg-flame-100 dark:bg-flame-950/60 text-flame-600 flex items-center justify-center text-xl mb-6">
+            <i class="fa-solid fa-bullseye"></i>
+          </div>
+          <h3 class="text-lg font-bold font-display text-slate-900 dark:text-white mb-2">Precíznosť</h3>
+          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+            Každý detail stolovania, teplota servírovaných pokrmov aj načasovanie výdaja sú u nás naplánované do poslednej sekundy.
+          </p>
+        </div>
+
+        <!-- Pillar 2: Jedinečnosť -->
+        <div class="p-8 rounded-3xl bg-white dark:bg-[#131b2a] border border-slate-200/80 dark:border-slate-800 shadow-md hover:shadow-xl transition-all">
+          <div class="w-12 h-12 rounded-2xl bg-amber-100 dark:bg-amber-950/60 text-amber-600 flex items-center justify-center text-xl mb-6">
+            <i class="fa-solid fa-fire-burner"></i>
+          </div>
+          <h3 class="text-lg font-bold font-display text-slate-900 dark:text-white mb-2">Jedinečnosť</h3>
+          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+            Vlastné autorské receptúry, špeciálne marinády a vôňa živého ohňa. Žiadne unifikované polotovary z veľkoskladu.
+          </p>
+        </div>
+
+        <!-- Pillar 3: Inovatívnosť -->
+        <div class="p-8 rounded-3xl bg-white dark:bg-[#131b2a] border border-slate-200/80 dark:border-slate-800 shadow-md hover:shadow-xl transition-all">
+          <div class="w-12 h-12 rounded-2xl bg-blue-100 dark:bg-blue-950/60 text-blue-600 flex items-center justify-center text-xl mb-6">
+            <i class="fa-solid fa-microchip"></i>
+          </div>
+          <h3 class="text-lg font-bold font-display text-slate-900 dark:text-white mb-2">Inovatívnosť</h3>
+          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+            Moderné nemecké konvektomaty Rational, sous-vide technológie a šokové chladenie pre maximálnu šťavnatosť a vitamíny.
+          </p>
+        </div>
+
+        <!-- Pillar 4: Zodpovednosť -->
+        <div class="p-8 rounded-3xl bg-white dark:bg-[#131b2a] border border-slate-200/80 dark:border-slate-800 shadow-md hover:shadow-xl transition-all">
+          <div class="w-12 h-12 rounded-2xl bg-emerald-100 dark:bg-emerald-950/60 text-emerald-600 flex items-center justify-center text-xl mb-6">
+            <i class="fa-solid fa-shield-halved"></i>
+          </div>
+          <h3 class="text-lg font-bold font-display text-slate-900 dark:text-white mb-2">Zodpovednosť</h3>
+          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+            Striktné dodržiavanie normy ISO 9001 a HACCP. Podporujeme lokálnych pestovateľov a dodávateľov zo Slovenska.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= REFERENCIE & KLIENTSKÉ RECENZIE ================= -->
+  <section id="referencie" class="py-20 lg:py-28 bg-white dark:bg-[#090d14] border-t border-slate-200/80 dark:border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Title -->
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+        <span class="text-xs font-extrabold uppercase tracking-widest text-flame-600 dark:text-flame-400">Skúsenosti našich klientov</span>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-display text-slate-900 dark:text-white">
+          Slová, ktoré nás zaväzujú k <span class="text-flame-600 dark:text-flame-400">dokonalosti</span>
+        </h2>
+        <p class="text-slate-600 dark:text-slate-400 text-sm sm:text-base">
+          Prečítajte si, ako hodnotia spoluprácu s Papa Grillom naši dlhodobí firemní klienti a zákazníci eventov.
+        </p>
+      </div>
+
+      <!-- Testimonials Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Review 1 -->
+        <div class="p-8 rounded-3xl bg-[#fdfbf7] dark:bg-[#131b2a] border border-slate-200/80 dark:border-slate-800 shadow-md flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex items-center gap-1 text-amber-400 text-sm">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="text-sm text-slate-700 dark:text-slate-300 italic leading-relaxed">
+              „Papa Grill pre náš priemyselný závod v Malackách denne zabezpečuje obedové menu pre viac než 400 zamestnancov v 3-zmennej prevádzke. Vynikajúca pestrosť, čistota a profesionálny prístup. Zamestnanci sú maximálne spokojní.“
+            </p>
+          </div>
+          <div class="mt-6 pt-6 border-t border-slate-200/80 dark:border-slate-800 flex items-center gap-3.5">
+            <div class="w-10 h-10 rounded-full bg-slate-200 dark:bg-slate-700 flex items-center justify-center font-bold text-slate-600 dark:text-slate-300">
+              MP
+            </div>
+            <div>
+              <div class="text-xs font-bold text-slate-900 dark:text-white">Ing. Martin Pavlík</div>
+              <div class="text-[11px] text-slate-500">HR Riaditeľ, Automobilový priemyselný park</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="p-8 rounded-3xl bg-[#fdfbf7] dark:bg-[#131b2a] border border-slate-200/80 dark:border-slate-800 shadow-md flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex items-center gap-1 text-amber-400 text-sm">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="text-sm text-slate-700 dark:text-slate-300 italic leading-relaxed">
+              „Organizovali sme vianočný večierok pre 180 ľudí v Event Hall. Catering predčil všetky naše očakávania – teplý bufet, live grilované steaky aj dezertný bar boli fantastické. Organizácia bola bezchybná od prvého kontaktu.“
+            </p>
+          </div>
+          <div class="mt-6 pt-6 border-t border-slate-200/80 dark:border-slate-800 flex items-center gap-3.5">
+            <div class="w-10 h-10 rounded-full bg-slate-200 dark:bg-slate-700 flex items-center justify-center font-bold text-slate-600 dark:text-slate-300">
+              LK
+            </div>
+            <div>
+              <div class="text-xs font-bold text-slate-900 dark:text-white">Lucia Kováčová</div>
+              <div class="text-[11px] text-slate-500">Event Manager, Medzinárodná logistika</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="p-8 rounded-3xl bg-[#fdfbf7] dark:bg-[#131b2a] border border-slate-200/80 dark:border-slate-800 shadow-md flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex items-center gap-1 text-amber-400 text-sm">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="text-sm text-slate-700 dark:text-slate-300 italic leading-relaxed">
+              „Naša svadobná hostina v Event Hall bola ako zo sna. Civilný obrad priamo v sále bol nádherný a hostia doteraz chvália jedlo a grilovaný bufet. Všetko malo noblesu a obsluha bola vždy poruke s úsmevom.“
+            </p>
+          </div>
+          <div class="mt-6 pt-6 border-t border-slate-200/80 dark:border-slate-800 flex items-center gap-3.5">
+            <div class="w-10 h-10 rounded-full bg-slate-200 dark:bg-slate-700 flex items-center justify-center font-bold text-slate-600 dark:text-slate-300">
+              ZS
+            </div>
+            <div>
+              <div class="text-xs font-bold text-slate-900 dark:text-white">Zuzana & Tomáš S.</div>
+              <div class="text-[11px] text-slate-500">Svadobná hostina, 130 hostí</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= INTERAKTÍVNA GALÉRIA ================= -->
+  <section id="galeria" class="py-20 lg:py-28 bg-[#f8f5ee] dark:bg-[#0d131f]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+        <div>
+          <span class="text-xs font-extrabold uppercase tracking-widest text-flame-600 dark:text-flame-400">Fotogaléria</span>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-display text-slate-900 dark:text-white mt-2">
+            Pohľad na našu <span class="text-flame-600 dark:text-flame-400">prácu a atmosféru</span>
+          </h2>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="flex flex-wrap items-center gap-2" id="gallery-filters">
+          <button type="button" onclick="filterGallery('all')" data-filter="all" class="gal-filter-btn active px-4 py-2 rounded-xl text-xs font-bold border border-flame-500 bg-flame-500 text-white shadow-sm transition-all">
+            Všetko
+          </button>
+          <button type="button" onclick="filterGallery('catering')" data-filter="catering" class="gal-filter-btn px-4 py-2 rounded-xl text-xs font-bold border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:border-flame-400 transition-all">
+            Catering & Bufety
+          </button>
+          <button type="button" onclick="filterGallery('events')" data-filter="events" class="gal-filter-btn px-4 py-2 rounded-xl text-xs font-bold border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:border-flame-400 transition-all">
+            Eventy & Večierky
+          </button>
+          <button type="button" onclick="filterGallery('svadba')" data-filter="svadba" class="gal-filter-btn px-4 py-2 rounded-xl text-xs font-bold border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:border-flame-400 transition-all">
+            Svadby & Oslavy
+          </button>
+        </div>
+      </div>
+
+      <!-- Gallery Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" id="gallery-grid">
+        
+        <!-- Photo 1 -->
+        <div class="gal-item catering group relative rounded-3xl overflow-hidden shadow-md cursor-pointer h-64 bg-slate-200 dark:bg-slate-800" onclick="openLightbox('images/catering_buffet.webp', 'Zážitkový raut a studený bufet')">
+          <img src="images/catering_buffet.webp" alt="Raut a bufet" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+          <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-lg">
+            <i class="fa-solid fa-magnifying-glass-plus"></i>
+          </div>
+          <div class="absolute bottom-3 left-3 right-3 text-white text-xs font-bold drop-shadow">Raut a studený bufet</div>
+        </div>
+
+        <!-- Photo 2 -->
+        <div class="gal-item svadba group relative rounded-3xl overflow-hidden shadow-md cursor-pointer h-64 bg-slate-200 dark:bg-slate-800" onclick="openLightbox('images/catering_wedding.jpg', 'Svadobná hostina v Event Hall')">
+          <img src="images/catering_wedding.jpg" alt="Svadba" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+          <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-lg">
+            <i class="fa-solid fa-magnifying-glass-plus"></i>
+          </div>
+          <div class="absolute bottom-3 left-3 right-3 text-white text-xs font-bold drop-shadow">Svadobná hostina</div>
+        </div>
+
+        <!-- Photo 3 -->
+        <div class="gal-item events group relative rounded-3xl overflow-hidden shadow-md cursor-pointer h-64 bg-slate-200 dark:bg-slate-800" onclick="openLightbox('images/catering_corporate.jpg', 'Firemný večierok s live obsluhou')">
+          <img src="images/catering_corporate.jpg" alt="Firemný večierok" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+          <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-lg">
+            <i class="fa-solid fa-magnifying-glass-plus"></i>
+          </div>
+          <div class="absolute bottom-3 left-3 right-3 text-white text-xs font-bold drop-shadow">Firemný večierok</div>
+        </div>
+
+        <!-- Photo 4 -->
+        <div class="gal-item catering group relative rounded-3xl overflow-hidden shadow-md cursor-pointer h-64 bg-slate-200 dark:bg-slate-800" onclick="openLightbox('images/catering_breakfast.jpg', 'Gurmánske firemné raňajky')">
+          <img src="images/catering_breakfast.jpg" alt="Firemné raňajky" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+          <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-lg">
+            <i class="fa-solid fa-magnifying-glass-plus"></i>
+          </div>
+          <div class="absolute bottom-3 left-3 right-3 text-white text-xs font-bold drop-shadow">Firemné raňajky</div>
+        </div>
+
+        <!-- Photo 5 -->
+        <div class="gal-item catering group relative rounded-3xl overflow-hidden shadow-md cursor-pointer h-64 bg-slate-200 dark:bg-slate-800" onclick="openLightbox('images/catering_coffee_break.jpg', 'Coffee break pre školenia')">
+          <img src="images/catering_coffee_break.jpg" alt="Coffee break" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+          <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-lg">
+            <i class="fa-solid fa-magnifying-glass-plus"></i>
+          </div>
+          <div class="absolute bottom-3 left-3 right-3 text-white text-xs font-bold drop-shadow">Coffee break</div>
+        </div>
+
+        <!-- Photo 6 -->
+        <div class="gal-item events group relative rounded-3xl overflow-hidden shadow-md cursor-pointer h-64 bg-slate-200 dark:bg-slate-800" onclick="openLightbox('images/catering_sports.jpg', 'Športové dni a Family Days')">
+          <img src="images/catering_sports.jpg" alt="Športové dni" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+          <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-lg">
+            <i class="fa-solid fa-magnifying-glass-plus"></i>
+          </div>
+          <div class="absolute bottom-3 left-3 right-3 text-white text-xs font-bold drop-shadow">Športový deň & Family Day</div>
+        </div>
+
+        <!-- Photo 7 -->
+        <div class="gal-item svadba group relative rounded-3xl overflow-hidden shadow-md cursor-pointer h-64 bg-slate-200 dark:bg-slate-800" onclick="openLightbox('images/catering_kids.jpg', 'Rodinné a detské oslavy')">
+          <img src="images/catering_kids.jpg" alt="Detské oslavy" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+          <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-lg">
+            <i class="fa-solid fa-magnifying-glass-plus"></i>
+          </div>
+          <div class="absolute bottom-3 left-3 right-3 text-white text-xs font-bold drop-shadow">Rodinné & detské oslavy</div>
+        </div>
+
+        <!-- Photo 8 -->
+        <div class="gal-item events group relative rounded-3xl overflow-hidden shadow-md cursor-pointer h-64 bg-slate-200 dark:bg-slate-800" onclick="openLightbox('images/xmas_hero.webp', 'Vianočné a koncoročné bankety')">
+          <img src="images/xmas_hero.webp" alt="Vianočný banket" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+          <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-lg">
+            <i class="fa-solid fa-magnifying-glass-plus"></i>
+          </div>
+          <div class="absolute bottom-3 left-3 right-3 text-white text-xs font-bold drop-shadow">Vianočný banket 2026</div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= ČASTO KLADENÉ OTÁZKY (FAQ) ================= -->
+  <section id="faq" class="py-20 bg-white dark:bg-[#0b0f17] border-t border-slate-200/80 dark:border-slate-800/80">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center mb-16 space-y-3">
+        <span class="text-xs font-extrabold uppercase tracking-widest text-flame-600 dark:text-flame-400">Poradňa & Odpovede</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold font-display text-slate-900 dark:text-white">
+          Často kladené otázky
+        </h2>
+      </div>
+
+      <div class="space-y-4" id="faq-accordion">
+        
+        <div class="border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden bg-white dark:bg-[#131b2a]">
+          <button type="button" class="faq-btn w-full p-5 text-left font-bold text-sm sm:text-base text-slate-900 dark:text-white flex items-center justify-between gap-4">
+            <span>S akým predstihom je potrebné rezervovať catering na event?</span>
+            <i class="fa-solid fa-plus text-xs text-flame-500 transition-transform duration-200"></i>
+          </button>
+          <div class="faq-panel px-5 pb-5 text-xs sm:text-sm text-slate-600 dark:text-slate-300 hidden leading-relaxed">
+            Pri menších firemných raňajkách a coffee breakoch vieme reagovať aj do 48 až 72 hodín. Pri väčších eventoch, svadbách a vianočných večierkoch odporúčame rezerváciu aspoň 2 až 4 týždne vopred (v prípade piatkových a sobotných termínov v decembri čo najskôr).
+          </div>
+        </div>
+
+        <div class="border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden bg-white dark:bg-[#131b2a]">
+          <button type="button" class="faq-btn w-full p-5 text-left font-bold text-sm sm:text-base text-slate-900 dark:text-white flex items-center justify-between gap-4">
+            <span>Aké regióny pokrývate donáškou a obsluhou?</span>
+            <i class="fa-solid fa-plus text-xs text-flame-500 transition-transform duration-200"></i>
+          </button>
+          <div class="faq-panel px-5 pb-5 text-xs sm:text-sm text-slate-600 dark:text-slate-300 hidden leading-relaxed">
+            Pôsobíme primárne v Bratislavskom a Trnavskom kraji a na celom Záhorí (Malacky, Bratislava, Stupava, Senica, Pezinok, Trnava, Modra). Pri väčších zákazkách po dohode radi pricestujeme aj do iných regiónov západného Slovenska.
+          </div>
+        </div>
+
+        <div class="border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden bg-white dark:bg-[#131b2a]">
+          <button type="button" class="faq-btn w-full p-5 text-left font-bold text-sm sm:text-base text-slate-900 dark:text-white flex items-center justify-between gap-4">
+            <span>Zabezpečíte aj inventár, stany, mobiliár a obsluhu?</span>
+            <i class="fa-solid fa-plus text-xs text-flame-500 transition-transform duration-200"></i>
+          </button>
+          <div class="faq-panel px-5 pb-5 text-xs sm:text-sm text-slate-600 dark:text-slate-300 hidden leading-relaxed">
+            Áno, zabezpečujeme 100% full-service. Dodávame porcelán, príbory, poháre, ohrevné chafingy, banketové aj stand-by bistro stoly, obrusy, párty stany a profesionálny tím čašníkov a kuchárov, ktorí sa postarajú o celú realizáciu.
+          </div>
+        </div>
+
+        <div class="border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden bg-white dark:bg-[#131b2a]">
+          <button type="button" class="faq-btn w-full p-5 text-left font-bold text-sm sm:text-base text-slate-900 dark:text-white flex items-center justify-between gap-4">
+            <span>Ako funguje spolupráca pri závodnom stravovaní pre fabriky a firmy?</span>
+            <i class="fa-solid fa-plus text-xs text-flame-500 transition-transform duration-200"></i>
+          </button>
+          <div class="faq-panel px-5 pb-5 text-xs sm:text-sm text-slate-600 dark:text-slate-300 hidden leading-relaxed">
+            Poskytujeme kompletné riešenie: od auditov a návrhu výdajne jedál cez dodávku technológií až po každodenný dovoz a výdaj čerstvých teplých jedál v certifikovaných termoboxoch. Spĺňame najprísnejšie normy ISO 9001 a hygienické štandardy.
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= INTERAKTÍVNY KONTAKT & DOPYTOVÝ FORMULÁR ================= -->
+  <section id="kontakt" class="py-20 lg:py-28 bg-[#fdfbf7] dark:bg-[#0d131f] border-t border-slate-200/80 dark:border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        
+        <!-- Left: Contact Details & Leaflet Map (Col 5) -->
+        <div class="lg:col-span-5 space-y-8">
+          <div>
+            <span class="text-xs font-extrabold uppercase tracking-widest text-flame-600 dark:text-flame-400">Zákaznícky servis</span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold font-display text-slate-900 dark:text-white mt-2">
+              Sme tu pre vás <span class="text-flame-600 dark:text-flame-400">v Malackách</span>
+            </h2>
+            <p class="text-slate-600 dark:text-slate-300 text-sm mt-3 leading-relaxed">
+              Dohodnite si bezplatnú osobnú ochutnávku, obhliadku Event Hall alebo nám pošlite vaše predstavy. Radi vám pripravíme nezáväznú ponuku do 24 hodín.
+            </p>
+          </div>
+
+          <!-- Quick Contact Cards -->
+          <div class="space-y-4 text-xs sm:text-sm">
+            
+            <a href="tel:+421910333511" class="p-4 rounded-2xl bg-white dark:bg-[#131b2a] border border-slate-200/80 dark:border-slate-800 shadow-sm flex items-center gap-4 hover:border-flame-400 transition-colors">
+              <div class="w-12 h-12 rounded-xl bg-flame-100 dark:bg-flame-950/60 text-flame-600 flex items-center justify-center text-lg">
+                <i class="fa-solid fa-phone"></i>
+              </div>
+              <div>
+                <div class="text-[11px] font-bold text-slate-400 uppercase tracking-wider">Catering & Event dispečing</div>
+                <div class="text-slate-900 dark:text-white font-extrabold text-base font-mono">+421 910 333 511</div>
+              </div>
+            </a>
+
+            <a href="mailto:info@papagrill.sk" class="p-4 rounded-2xl bg-white dark:bg-[#131b2a] border border-slate-200/80 dark:border-slate-800 shadow-sm flex items-center gap-4 hover:border-flame-400 transition-colors">
+              <div class="w-12 h-12 rounded-xl bg-amber-100 dark:bg-amber-950/60 text-amber-600 flex items-center justify-center text-lg">
+                <i class="fa-solid fa-envelope"></i>
+              </div>
+              <div>
+                <div class="text-[11px] font-bold text-slate-400 uppercase tracking-wider">E-mailové dopyty</div>
+                <div class="text-slate-900 dark:text-white font-extrabold text-base font-mono">info@papagrill.sk</div>
+              </div>
+            </a>
+
+            <div class="p-4 rounded-2xl bg-white dark:bg-[#131b2a] border border-slate-200/80 dark:border-slate-800 shadow-sm flex items-center gap-4">
+              <div class="w-12 h-12 rounded-xl bg-emerald-100 dark:bg-emerald-950/60 text-emerald-600 flex items-center justify-center text-lg">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <div>
+                <div class="text-[11px] font-bold text-slate-400 uppercase tracking-wider">Adresa Gastro Parku</div>
+                <div class="text-slate-900 dark:text-white font-extrabold text-sm">Priemyselná 5863 (hala BASSO, 1. posch.)</div>
+                <div class="text-[11px] text-slate-500">901 01 Malacky, Slovensko</div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Leaflet Interactive Map -->
+          <div class="rounded-3xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-lg">
+            <div id="leaflet-map" class="w-full h-56 bg-slate-100 dark:bg-slate-800"></div>
+            <div class="p-3 bg-white dark:bg-[#131b2a] flex items-center justify-between text-xs font-semibold">
+              <span class="text-slate-500"><i class="fa-solid fa-compass text-flame-500 mr-1"></i> GPS: 48.4243° N, 17.0267° E</span>
+              <a href="https://maps.google.com/?q=48.4243409,17.0267768" target="_blank" rel="noopener" class="text-flame-600 dark:text-flame-400 hover:underline">
+                Navigovať cez Google Maps &rarr;
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right: Inquiry Form (Col 7) -->
+        <div class="lg:col-span-7 bg-white dark:bg-[#141c2c] rounded-3xl p-6 sm:p-10 shadow-2xl border border-slate-200/80 dark:border-slate-800">
+          <div class="mb-8">
+            <h3 class="text-2xl font-bold font-display text-slate-900 dark:text-white">Nezáväzný dopyt & cenová ponuka</h3>
+            <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-1">
+              Vyplňte formulár a náš event manažér sa vám ozve do 24 hodín s podrobným návrhom.
+            </p>
+          </div>
+
+          <form id="contact-form" onsubmit="handleFormSubmit(event)" class="space-y-5">
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div>
+                <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 uppercase tracking-wider mb-2">
+                  Meno a priezvisko *
+                </label>
+                <input type="text" id="form-name" required placeholder="Ján Novák" class="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-flame-500 transition-all">
+              </div>
+
+              <div>
+                <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 uppercase tracking-wider mb-2">
+                  Spoločnosť / Firma (voliteľné)
+                </label>
+                <input type="text" id="form-company" placeholder="Názov firmy s.r.o." class="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-flame-500 transition-all">
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div>
+                <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 uppercase tracking-wider mb-2">
+                  Telefónne číslo *
+                </label>
+                <input type="tel" id="form-phone" required placeholder="+421 900 000 000" class="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-flame-500 transition-all">
+              </div>
+
+              <div>
+                <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 uppercase tracking-wider mb-2">
+                  E-mailová adresa *
+                </label>
+                <input type="email" id="form-email" required placeholder="jan.novak@firma.sk" class="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-flame-500 transition-all">
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-5">
+              <div>
+                <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 uppercase tracking-wider mb-2">
+                  Typ služby
+                </label>
+                <select id="form-service" class="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-flame-500 transition-all">
+                  <option value="Catering na kľúč">Catering na kľúč</option>
+                  <option value="Firemný večierok">Firemný večierok</option>
+                  <option value="Svadobná hostina">Svadobná hostina</option>
+                  <option value="Závodné stravovanie">Závodné stravovanie</option>
+                  <option value="Event Hall prenájom">Event Hall prenájom</option>
+                  <option value="Vianočný event 2026">Vianočný event 2026</option>
+                </select>
+              </div>
+
+              <div>
+                <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 uppercase tracking-wider mb-2">
+                  Dátum akcie
+                </label>
+                <input type="date" id="form-date" class="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-flame-500 transition-all">
+              </div>
+
+              <div>
+                <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 uppercase tracking-wider mb-2">
+                  Orientačný počet osôb
+                </label>
+                <input type="number" id="form-people" placeholder="napr. 60" min="5" max="2000" class="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-flame-500 transition-all">
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 uppercase tracking-wider mb-2">
+                Vaša predstava a špeciálne požiadavky
+              </label>
+              <textarea id="form-message" rows="4" placeholder="Napíšte nám preferované jedlá, lokalitu alebo požiadavku na obsluhu a stany..." class="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-flame-500 transition-all"></textarea>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <input type="checkbox" id="form-gdpr" required class="mt-1 w-4 h-4 text-flame-600 focus:ring-flame-500 accent-flame-500">
+              <label for="form-gdpr" class="text-xs text-slate-500 dark:text-slate-400">
+                Súhlasím so spracovaním osobných údajov pre účely vypracovania nezáväznej cenovej ponuky v zmysle GDPR.
+              </label>
+            </div>
+
+            <button type="submit" class="w-full py-4 rounded-2xl font-extrabold text-sm sm:text-base text-white bg-gradient-to-r from-flame-500 via-amber-600 to-flame-600 hover:from-flame-600 hover:to-amber-700 shadow-flame hover:shadow-flame-lg transition-all flex items-center justify-center gap-2">
+              <i class="fa-solid fa-paper-plane"></i>
+              <span>Odoslať nezáväzný dopyt</span>
+            </button>
+
+          </form>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= COMPREHENSIVE FOOTER ================= -->
+  <footer class="bg-slate-900 text-slate-300 text-xs py-16 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-slate-800">
+        
+        <!-- Col 1: Brand & Bio -->
+        <div class="lg:col-span-2 space-y-4">
+          <img src="images/logo_wide.svg" alt="PAPA GRILL Logo" class="h-9 w-auto brightness-0 invert">
+          <p class="text-slate-400 text-xs leading-relaxed max-w-sm">
+            PAPA Grill gastro park & catering. Sme tím profesionálov, ktorí sa venujú jedlu s vášňou a precíznosťou. Prevádzkujeme modernú 650 m² kuchyňu, Event Hall Malacky a dennú samoobslužnú jedáleň Vaša Táckareň.
+          </p>
+          <div class="flex items-center gap-3 pt-2">
+            <a href="https://www.facebook.com/papagrillgastropark/" target="_blank" rel="noopener" aria-label="Facebook" class="w-9 h-9 rounded-xl bg-slate-800 hover:bg-flame-600 text-slate-300 hover:text-white flex items-center justify-center transition-colors">
+              <i class="fa-brands fa-facebook-f text-sm"></i>
+            </a>
+            <a href="https://www.instagram.com/papagrillgastropark/" target="_blank" rel="noopener" aria-label="Instagram" class="w-9 h-9 rounded-xl bg-slate-800 hover:bg-flame-600 text-slate-300 hover:text-white flex items-center justify-center transition-colors">
+              <i class="fa-brands fa-instagram text-sm"></i>
+            </a>
+            <a href="https://www.youtube.com/channel/UC-ypiGijL_vQLyftkosGOsw/videos" target="_blank" rel="noopener" aria-label="YouTube" class="w-9 h-9 rounded-xl bg-slate-800 hover:bg-flame-600 text-slate-300 hover:text-white flex items-center justify-center transition-colors">
+              <i class="fa-brands fa-youtube text-sm"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Služby -->
+        <div class="space-y-3">
+          <div class="font-bold text-white uppercase tracking-wider text-xs">Divízie & Služby</div>
+          <ul class="space-y-2 text-slate-400">
+            <li><a href="#sluzby" class="hover:text-flame-400 transition-colors">Zážitkový catering</a></li>
+            <li><a href="#sluzby" class="hover:text-flame-400 transition-colors">Závodné stravovanie</a></li>
+            <li><a href="#eventhall" class="hover:text-flame-400 transition-colors">Event Hall Malacky</a></li>
+            <li><a href="#tackaren" class="hover:text-flame-400 transition-colors">Vaša Táckareň (Obedy)</a></li>
+            <li><a href="#vianocne" class="hover:text-flame-400 transition-colors">Vianočné večierky 2026</a></li>
+            <li><a href="#kalkulator" class="hover:text-flame-400 transition-colors">Kalkulátor cien</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Otváracie hodiny & Prevádzka -->
+        <div class="space-y-3">
+          <div class="font-bold text-white uppercase tracking-wider text-xs">Vaša Táckareň</div>
+          <p class="text-slate-400 leading-relaxed">
+            Hala BASSO (1. poschodie)<br>
+            Priemyselná 5863, Malacky<br>
+            <span class="text-emerald-400 font-bold mt-1 inline-block">Po – Pi: 10:00 – 14:00</span>
+          </p>
+          <div class="font-bold text-white uppercase tracking-wider text-xs pt-2">Catering & Eventy</div>
+          <p class="text-slate-400">Objednávky a realizácie 24/7 po dohode.</p>
+        </div>
+
+        <!-- Col 4: Fakturačné údaje -->
+        <div class="space-y-3">
+          <div class="font-bold text-white uppercase tracking-wider text-xs">Fakturačné údaje</div>
+          <p class="text-slate-400 leading-relaxed font-mono text-[11px]">
+            PAPA Grill gastro park<br>
+            Priemyselná 5863<br>
+            901 01 Malacky<br>
+            IČO: 45 689 679<br>
+            DIČ: 2023089079<br>
+            ISO 9001:2015 Certifikát
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-slate-500 text-[11px]">
+        <div>
+          &copy; 2026 PAPA Grill s.r.o. Všetky práva vyhradené. Redizajn & Vývoj 2026.
+        </div>
+        <div class="flex items-center gap-4">
+          <a href="#" class="hover:underline">Všeobecné obchodné podmienky</a>
+          <span>•</span>
+          <a href="#" class="hover:underline">Ochrana osobných údajov (GDPR)</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ================= LIGHTBOX MODAL ================= -->
+  <div id="lightbox-modal" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden items-center justify-center p-4">
+    <button type="button" onclick="closeLightbox()" aria-label="Zavrieť" class="absolute top-6 right-6 text-white text-3xl hover:text-flame-400 transition-colors">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+    <div class="max-w-4xl max-h-[85vh] flex flex-col items-center">
+      <img id="lightbox-img" src="" alt="Zväčšený náhľad" class="max-h-[75vh] w-auto rounded-2xl shadow-2xl object-contain">
+      <div id="lightbox-caption" class="text-white text-sm font-semibold mt-4 text-center"></div>
+    </div>
+  </div>
+
+  <!-- ================= SUCCESS MODAL (POST FORM SUBMIT) ================= -->
+  <div id="success-modal" class="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm hidden items-center justify-center p-4">
+    <div class="bg-white dark:bg-[#141c2c] rounded-3xl p-8 max-w-md w-full shadow-2xl border border-slate-200 dark:border-slate-800 text-center space-y-4 animate-in zoom-in-95 duration-200">
+      <div class="w-16 h-16 rounded-full bg-emerald-100 dark:bg-emerald-950/60 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-3xl mx-auto shadow-inner">
+        <i class="fa-solid fa-check"></i>
+      </div>
+      <h3 class="text-2xl font-bold font-display text-slate-900 dark:text-white">Dopyt úspešne odoslaný!</h3>
+      <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed" id="success-modal-message">
+        Ďakujeme za váš záujem o služby Papa Grill. Náš event manažér vás bude kontaktovať v priebehu 24 hodín s podrobnou cenovou ponukou.
+      </p>
+      <button type="button" onclick="closeSuccessModal()" class="w-full py-3.5 rounded-xl font-bold text-xs uppercase tracking-wider text-white bg-flame-600 hover:bg-flame-700 transition-colors shadow-md">
+        Rozumiem & Zavrieť
+      </button>
+    </div>
+  </div>
+
+  <!-- ================= LEAFLET JS FOR MAP ================= -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+  <!-- ================= MAIN APP SCRIPT ================= -->
+  <script>
+    // --- 1. LIGHT / DARK THEME MANAGEMENT ---
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const lightIcon = document.getElementById('theme-icon-light');
+    const darkIcon = document.getElementById('theme-icon-dark');
+
+    function initTheme() {
+      const storedTheme = localStorage.getItem('papagrill-theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      
+      if (storedTheme === 'dark' || (!storedTheme && prefersDark)) {
+        document.documentElement.classList.add('dark');
+        lightIcon.classList.remove('hidden');
+        darkIcon.classList.add('hidden');
+      } else {
+        document.documentElement.classList.remove('dark');
+        lightIcon.classList.add('hidden');
+        darkIcon.classList.remove('hidden');
+      }
+    }
+
+    function toggleTheme() {
+      const isDark = document.documentElement.classList.toggle('dark');
+      localStorage.setItem('papagrill-theme', isDark ? 'dark' : 'light');
+      if (isDark) {
+        lightIcon.classList.remove('hidden');
+        darkIcon.classList.add('hidden');
+      } else {
+        lightIcon.classList.add('hidden');
+        darkIcon.classList.remove('hidden');
+      }
+    }
+
+    themeToggleBtn.addEventListener('click', toggleTheme);
+    initTheme();
+
+    // --- 2. MOBILE MENU ---
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+
+    // --- 3. CATERING CALCULATOR LOGIC ---
+    let calcState = {
+      event: 'firemny',
+      eventName: 'Firemný večierok',
+      basePrice: 16,
+      guests: 60,
+      foodTeply: true,
+      foodStudeny: true,
+      foodBbq: false,
+      foodCandy: false,
+      service: 'full',
+      drinkNealko: true,
+      drinkAlko: false,
+      equipPorcelan: true,
+      equipStoly: false
+    };
+
+    const eventConfig = {
+      firemny: { name: 'Firemný večierok', base: 14 },
+      svadba: { name: 'Svadobná hostina', base: 22 },
+      garden: { name: 'Garden Party & BBQ', base: 16 },
+      coffee: { name: 'Coffee Break / Školenie', base: 8 },
+      sport: { name: 'Športový deň / Family Day', base: 12 },
+      vianocny: { name: 'Vianočná kapustnica & trhy', base: 18 }
+    };
+
+    // Event type buttons
+    const eventBtns = document.querySelectorAll('.calc-btn-event');
+    eventBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        eventBtns.forEach(b => {
+          b.classList.remove('border-flame-500', 'bg-flame-50', 'dark:bg-flame-950/40', 'text-flame-800', 'dark:text-flame-200');
+          b.classList.add('border-slate-200', 'dark:border-slate-700/80', 'bg-white', 'dark:bg-slate-800/40', 'text-slate-700', 'dark:text-slate-300');
+          b.querySelector('i').classList.remove('text-flame-600');
+          b.querySelector('i').classList.add('text-slate-400');
+        });
+        btn.classList.add('border-flame-500', 'bg-flame-50', 'dark:bg-flame-950/40', 'text-flame-800', 'dark:text-flame-200');
+        btn.classList.remove('border-slate-200', 'dark:border-slate-700/80', 'bg-white', 'dark:bg-slate-800/40', 'text-slate-700', 'dark:text-slate-300');
+        btn.querySelector('i').classList.add('text-flame-600');
+        btn.querySelector('i').classList.remove('text-slate-400');
+
+        const key = btn.getAttribute('data-event');
+        calcState.event = key;
+        calcState.eventName = eventConfig[key].name;
+        calcState.basePrice = eventConfig[key].base;
+        recalculate();
+      });
+    });
+
+    // Slider
+    const slider = document.getElementById('calc-guests-slider');
+    const guestsDisplay = document.getElementById('calc-guests-display');
+    slider.addEventListener('input', (e) => {
+      calcState.guests = parseInt(e.target.value);
+      guestsDisplay.textContent = calcState.guests;
+      recalculate();
+    });
+
+    function setGuests(val) {
+      slider.value = val;
+      calcState.guests = val;
+      guestsDisplay.textContent = val;
+      recalculate();
+    }
+
+    // Checkboxes
+    const chkTeply = document.getElementById('food-teply');
+    const chkStudeny = document.getElementById('food-studeny');
+    const chkBbq = document.getElementById('food-bbq');
+    const chkCandy = document.getElementById('food-candy');
+    const chkNealko = document.getElementById('drink-nealko');
+    const chkAlko = document.getElementById('drink-alko');
+    const chkPorcelan = document.getElementById('equip-porcelan');
+    const chkStoly = document.getElementById('equip-stoly');
+
+    [chkTeply, chkStudeny, chkBbq, chkCandy, chkNealko, chkAlko, chkPorcelan, chkStoly].forEach(input => {
+      input.addEventListener('change', () => {
+        calcState.foodTeply = chkTeply.checked;
+        calcState.foodStudeny = chkStudeny.checked;
+        calcState.foodBbq = chkBbq.checked;
+        calcState.foodCandy = chkCandy.checked;
+        calcState.drinkNealko = chkNealko.checked;
+        calcState.drinkAlko = chkAlko.checked;
+        calcState.equipPorcelan = chkPorcelan.checked;
+        calcState.equipStoly = chkStoly.checked;
+        recalculate();
+      });
+    });
+
+    // Radio
+    document.querySelectorAll('input[name="calc-service"]').forEach(r => {
+      r.addEventListener('change', (e) => {
+        calcState.service = e.target.value;
+        recalculate();
+      });
+    });
+
+    function recalculate() {
+      let perPerson = calcState.basePrice;
+
+      if (calcState.foodTeply) perPerson += 14;
+      if (calcState.foodStudeny) perPerson += 9;
+      if (calcState.foodBbq) perPerson += 12;
+      if (calcState.foodCandy) perPerson += 5;
+
+      if (calcState.service === 'full') perPerson += 6;
+
+      if (calcState.drinkNealko) perPerson += 4;
+      if (calcState.drinkAlko) perPerson += 7;
+
+      if (calcState.equipPorcelan) perPerson += 2.5;
+      if (calcState.equipStoly) perPerson += 3;
+
+      // Group discount for large events (>150 guests 5%, >300 guests 10%)
+      if (calcState.guests >= 300) perPerson *= 0.90;
+      else if (calcState.guests >= 150) perPerson *= 0.95;
+
+      const total = Math.round(perPerson * calcState.guests);
+
+      document.getElementById('summary-per-person').textContent = perPerson.toFixed(2) + ' €';
+      document.getElementById('summary-guests').textContent = calcState.guests + ' osôb';
+      document.getElementById('summary-total').textContent = total.toLocaleString('sk-SK') + ' €';
+
+      // Update itemized list
+      document.getElementById('sum-event').textContent = calcState.eventName;
+      
+      const foods = [];
+      if (calcState.foodTeply) foods.push('Teplý');
+      if (calcState.foodStudeny) foods.push('Studený');
+      if (calcState.foodBbq) foods.push('Live BBQ');
+      if (calcState.foodCandy) foods.push('Candy bar');
+      document.getElementById('sum-food').textContent = foods.length ? foods.join(', ') : 'Základ';
+
+      document.getElementById('sum-service').textContent = calcState.service === 'full' ? 'S kompletnou obsluhou' : 'Len dovoz';
+      
+      const drinks = [];
+      if (calcState.drinkNealko) drinks.push('Nealko');
+      if (calcState.drinkAlko) drinks.push('Víno & Pivo');
+      document.getElementById('sum-drinks').textContent = drinks.length ? drinks.join(', ') : 'Bez nápojov';
+
+      const equips = [];
+      if (calcState.equipPorcelan) equips.push('Porcelán & sklo');
+      if (calcState.equipStoly) equips.push('Stoly & sedenie');
+      document.getElementById('sum-equip').textContent = equips.length ? equips.join(', ') : 'Základný';
+    }
+
+    recalculate();
+
+    function openQuoteModalWithCalc() {
+      const contactSection = document.getElementById('kontakt');
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+
+      // Populate form fields
+      document.getElementById('form-service').value = calcState.eventName.includes('Vianoč') ? 'Vianočný event 2026' : (calcState.eventName.includes('Svad') ? 'Svadobná hostina' : 'Catering na kľúč');
+      document.getElementById('form-people').value = calcState.guests;
+      document.getElementById('form-message').value = `Konfigurácia z kalkulátora: ${calcState.eventName}, ${calcState.guests} osôb. Orientačná cena: ${document.getElementById('summary-total').textContent} (${document.getElementById('summary-per-person').textContent} / os). Bufety: ${document.getElementById('sum-food').textContent}. Servis: ${document.getElementById('sum-service').textContent}.`;
+    }
+
+    // --- 4. VAŠA TÁCKAREŇ: WEEKLY MENU DATA & SWITCHER ---
+    const weeklyMenu = {
+      pondelok: [
+        {
+          type: 'Polievka 1',
+          name: 'Hovädzí vývar s pečeňovými haluškami a zeleninou',
+          weight: '0.33 l',
+          allergens: '1, 3, 9',
+          price: 'V cene menu'
+        },
+        {
+          type: 'Polievka 2',
+          name: 'Hrachová polievka s údeným mäsom a krutónmi',
+          weight: '0.33 l',
+          allergens: '1',
+          price: 'V cene menu'
+        },
+        {
+          type: 'Menu 1',
+          name: 'Pomaly pečená bravčová krkovička na cesnaku a rozmaríne, dusená červená kapusta, domáca parená knedľa',
+          weight: '150g / 200g',
+          allergens: '1, 3, 7',
+          price: '7.20 €'
+        },
+        {
+          type: 'Menu 2 (Gourmet)',
+          name: 'Kurací steak sous-vide s grilovanou zelenou špargľou a jemnou bylinkovo-maslovou omáčkou, jazmínová ryža',
+          weight: '150g / 180g',
+          allergens: '7',
+          price: '7.80 €'
+        },
+        {
+          type: 'Menu 3 (Vegetarian)',
+          name: 'Domáce bryndzové halušky s chrumkavou cibuľkou a pažítkou (na želanie s údenou slaninkou)',
+          weight: '350g',
+          allergens: '1, 3, 7',
+          price: '6.90 €'
+        },
+        {
+          type: 'Menu 4 (Papa Burger)',
+          name: 'Papa Grill Burger: 100% hovädzie mäso, cheddar, chrumkavá slanina, BBQ dresing, domáce hranolky',
+          weight: '180g / 150g',
+          allergens: '1, 3, 7, 10, 11',
+          price: '8.90 €'
+        }
+      ],
+      utorok: [
+        {
+          type: 'Polievka 1',
+          name: 'Slepačí vývar s mäsom a domácimi rezancami',
+          weight: '0.33 l',
+          allergens: '1, 3, 9',
+          price: 'V cene menu'
+        },
+        {
+          type: 'Polievka 2',
+          name: 'Krémová tekvicová polievka Hokkaido s tekvicovými semienkami',
+          weight: '0.33 l',
+          allergens: '7',
+          price: 'V cene menu'
+        },
+        {
+          type: 'Menu 1',
+          name: 'Viedenský bravčový rezeň v trojobale s bavorským zemiakovým šalátom a citrónom',
+          weight: '150g / 200g',
+          allergens: '1, 3, 7, 10',
+          price: '7.50 €'
+        },
+        {
+          type: 'Menu 2',
+          name: 'Hovädzie ragú na červenom víne s koreňovou zeleninou a maslovými haluškami',
+          weight: '150g / 200g',
+          allergens: '1, 7, 9',
+          price: '8.20 €'
+        },
+        {
+          type: 'Menu 3',
+          name: 'Talianske rizoto s lesnými hríbikmi, hoblinami parmezánu a čerstvým tymianom',
+          weight: '320g',
+          allergens: '7',
+          price: '7.10 €'
+        },
+        {
+          type: 'Menu 4',
+          name: 'Grilované kuracie krídelká v medovo-pikantnej marináde, cesnakový dip, zelerové hranolky',
+          weight: '350g',
+          allergens: '6, 7, 9, 10',
+          price: '7.90 €'
+        }
+      ],
+      streda: [
+        {
+          type: 'Polievka 1',
+          name: 'Frankfurtská polievka s párkom a zemiakmi',
+          weight: '0.33 l',
+          allergens: '1',
+          price: 'V cene menu'
+        },
+        {
+          type: 'Polievka 2',
+          name: 'Zeleninový boršč so zakysanou smotanou',
+          weight: '0.33 l',
+          allergens: '7, 9',
+          price: 'V cene menu'
+        },
+        {
+          type: 'Menu 1',
+          name: 'Pečené kačacie stehno na mede, dusená červená kapusta na jablkách, lokša & knedľa',
+          weight: '240g / 200g',
+          allergens: '1, 3',
+          price: '9.20 €'
+        },
+        {
+          type: 'Menu 2',
+          name: 'Vyprážaný syr Gouda v bylinkovej strúhanke s varenými maslovými zemiakmi a domácou tatárskou omáčkou',
+          weight: '140g / 200g',
+          allergens: '1, 3, 7, 10',
+          price: '6.90 €'
+        },
+        {
+          type: 'Menu 3',
+          name: 'Grilovaný losos na pare s holandskou omáčkou a mladými zemiačikmi',
+          weight: '150g / 180g',
+          allergens: '3, 4, 7',
+          price: '9.50 €'
+        },
+        {
+          type: 'Menu 4',
+          name: 'Tortilla plnená trhaným hovädzím mäsom, jalapeños, cheddarom a guacamole šalátom',
+          weight: '320g',
+          allergens: '1, 7',
+          price: '8.50 €'
+        }
+      ],
+      stvrtok: [
+        {
+          type: 'Polievka 1',
+          name: 'Tradičná slovenská kapustnica s klobásou a hubami',
+          weight: '0.33 l',
+          allergens: '1',
+          price: 'V cene menu'
+        },
+        {
+          type: 'Polievka 2',
+          name: 'Karfiolový krém s praženou mandľovou strúhankou',
+          weight: '0.33 l',
+          allergens: '1, 7, 8',
+          price: 'V cene menu'
+        },
+        {
+          type: 'Menu 1',
+          name: 'Hovädzia sviečková na smotane s brusnicami a parenou knedľou',
+          weight: '150g / 200g',
+          allergens: '1, 3, 7, 9, 10',
+          price: '8.80 €'
+        },
+        {
+          type: 'Menu 2',
+          name: 'Prírodný bravčový rezeň na lesných šampiňónoch, ryža a pečené zemiaky',
+          weight: '150g / 200g',
+          allergens: '1',
+          price: '7.40 €'
+        },
+        {
+          type: 'Menu 3',
+          name: 'Cestoviny Penne s pestom zo sušených paradajok, baby špenátom a mozzarellou',
+          weight: '320g',
+          allergens: '1, 7',
+          price: '6.90 €'
+        },
+        {
+          type: 'Menu 4',
+          name: 'PAPA BBQ Pulled Pork Bageta: chrumkavá ciabatta, trhané bravčové, coleslaw šalát',
+          weight: '280g',
+          allergens: '1, 3, 7, 10',
+          price: '7.80 €'
+        }
+      ],
+      piatok: [
+        {
+          type: 'Polievka 1',
+          name: 'Cesnačka v bochníku s údeným syrom a krutónmi',
+          weight: '0.33 l',
+          allergens: '1, 7',
+          price: 'V cene menu'
+        },
+        {
+          type: 'Polievka 2',
+          name: 'Šošovicová polievka na kyslo so zemiakmi',
+          weight: '0.33 l',
+          allergens: '1, 7',
+          price: 'V cene menu'
+        },
+        {
+          type: 'Menu 1',
+          name: 'Pečené marinované bravčové rebierka v medovo-pikantnej glazúre, chlieb, baranie rohy, horčica',
+          weight: '400g / 100g',
+          allergens: '1, 10',
+          price: '8.90 €'
+        },
+        {
+          type: 'Menu 2',
+          name: 'Grilovaný zubáč na bylinkovom masle s batátovým pyré a grilovanou zeleninou',
+          weight: '150g / 180g',
+          allergens: '4, 7',
+          price: '9.40 €'
+        },
+        {
+          type: 'Menu 3',
+          name: 'Šúľance z varených zemiakov s makom a prepusteným maslom, marhuľový džem',
+          weight: '300g',
+          allergens: '1, 3, 7',
+          price: '6.70 €'
+        },
+        {
+          type: 'Menu 4 (Chef Special)',
+          name: 'Hovädzí Flank steak s grilovanou kukuricou a omáčkou zo zeleného korenia',
+          weight: '180g / 180g',
+          allergens: '7, 9',
+          price: '10.50 €'
+        }
+      ]
+    };
+
+    function selectMenuDay(day) {
+      document.querySelectorAll('.menu-day-btn').forEach(btn => {
+        if (btn.getAttribute('data-day') === day) {
+          btn.classList.add('border-emerald-500', 'bg-emerald-500', 'text-white', 'shadow-md');
+          btn.classList.remove('border-slate-200', 'dark:border-slate-800', 'bg-white', 'dark:bg-slate-800/60', 'text-slate-700', 'dark:text-slate-300');
+        } else {
+          btn.classList.remove('border-emerald-500', 'bg-emerald-500', 'text-white', 'shadow-md');
+          btn.classList.add('border-slate-200', 'dark:border-slate-800', 'bg-white', 'dark:bg-slate-800/60', 'text-slate-700', 'dark:text-slate-300');
+        }
+      });
+
+      const container = document.getElementById('menu-content');
+      const items = weeklyMenu[day] || weeklyMenu.pondelok;
+
+      container.innerHTML = items.map((item, idx) => {
+        const isSoup = item.type.includes('Polievka');
+        const badgeColor = isSoup ? 'bg-amber-100 text-amber-800 dark:bg-amber-950 dark:text-amber-300' : (item.type.includes('Special') || item.type.includes('Burger') ? 'bg-flame-100 text-flame-800 dark:bg-flame-950 dark:text-flame-300' : 'bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300');
+
+        return `
+          <div class="p-6 rounded-3xl bg-white dark:bg-[#131b2a] border border-slate-200/80 dark:border-slate-800 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+            <div class="space-y-2.5">
+              <div class="flex items-center justify-between">
+                <span class="px-2.5 py-1 rounded-lg text-[10px] font-extrabold uppercase tracking-wider ${badgeColor}">
+                  ${item.type}
+                </span>
+                <span class="text-xs font-mono font-bold text-slate-400">${item.weight}</span>
+              </div>
+              <h4 class="font-bold text-sm text-slate-900 dark:text-white leading-snug">${item.name}</h4>
+              <div class="text-[11px] text-slate-400 font-mono">Alergény: ${item.allergens}</div>
+            </div>
+            <div class="mt-4 pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+              <span class="text-xs text-slate-400 font-medium">${isSoup ? 'K menu' : 'Cena:'}</span>
+              <span class="text-base font-extrabold font-mono text-flame-600 dark:text-flame-400">${item.price}</span>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    // Initialize with Monday
+    selectMenuDay('pondelok');
+
+    // --- 5. GALLERY FILTERING & LIGHTBOX ---
+    function filterGallery(category) {
+      document.querySelectorAll('.gal-filter-btn').forEach(btn => {
+        if (btn.getAttribute('data-filter') === category) {
+          btn.classList.add('border-flame-500', 'bg-flame-500', 'text-white', 'shadow-sm');
+          btn.classList.remove('border-slate-200', 'dark:border-slate-700', 'bg-white', 'dark:bg-slate-800', 'text-slate-700', 'dark:text-slate-300');
+        } else {
+          btn.classList.remove('border-flame-500', 'bg-flame-500', 'text-white', 'shadow-sm');
+          btn.classList.add('border-slate-200', 'dark:border-slate-700', 'bg-white', 'dark:bg-slate-800', 'text-slate-700', 'dark:text-slate-300');
+        }
+      });
+
+      const items = document.querySelectorAll('.gal-item');
+      items.forEach(item => {
+        if (category === 'all' || item.classList.contains(category)) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    }
+
+    const lightboxModal = document.getElementById('lightbox-modal');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxCaption = document.getElementById('lightbox-caption');
+
+    function openLightbox(src, caption) {
+      lightboxImg.src = src;
+      lightboxCaption.textContent = caption;
+      lightboxModal.classList.remove('hidden');
+      lightboxModal.classList.add('flex');
+    }
+
+    function closeLightbox() {
+      lightboxModal.classList.add('hidden');
+      lightboxModal.classList.remove('flex');
+    }
+
+    lightboxModal.addEventListener('click', (e) => {
+      if (e.target === lightboxModal) closeLightbox();
+    });
+
+    // --- 6. FAQ ACCORDION ---
+    document.querySelectorAll('.faq-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const panel = btn.nextElementSibling;
+        const icon = btn.querySelector('i');
+        const isOpen = !panel.classList.contains('hidden');
+
+        document.querySelectorAll('.faq-panel').forEach(p => p.classList.add('hidden'));
+        document.querySelectorAll('.faq-btn i').forEach(i => {
+          i.classList.remove('rotate-45');
+          i.classList.add('fa-plus');
+          i.classList.remove('fa-xmark');
+        });
+
+        if (!isOpen) {
+          panel.classList.remove('hidden');
+          icon.classList.add('rotate-45');
+        }
+      });
+    });
+
+    // --- 7. LEAFLET INTERACTIVE MAP ---
+    document.addEventListener('DOMContentLoaded', () => {
+      const coords = [48.4243409, 17.0267768]; // Priemyselná 5863, Malacky
+      const map = L.map('leaflet-map', {
+        scrollWheelZoom: false
+      }).setView(coords, 14);
+
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; OpenStreetMap contributors'
+      }).addTo(map);
+
+      // Custom Amber Pin
+      const icon = L.divIcon({
+        className: 'custom-map-marker',
+        html: '<div style="background-color: #ea580c; width: 34px; height: 34px; border-radius: 50%; border: 3px solid white; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 10px rgba(0,0,0,0.4);"><i class="fa-solid fa-utensils" style="color: white; font-size: 14px;"></i></div>',
+        iconSize: [34, 34],
+        iconAnchor: [17, 17]
+      });
+
+      L.marker(coords, { icon: icon }).addTo(map)
+        .bindPopup('<strong>PAPA GRILL Gastro Park</strong><br>Priemyselná 5863, Malacky<br>Hala BASSO (1. poschodie)')
+        .openPopup();
+    });
+
+    // --- 8. FORM SUBMISSION & SUCCESS MODAL ---
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('form-name').value;
+      const phone = document.getElementById('form-phone').value;
+      const service = document.getElementById('form-service').value;
+      const people = document.getElementById('form-people').value || 'neuvedený';
+
+      const modalMessage = document.getElementById('success-modal-message');
+      modalMessage.innerHTML = `Ďakujeme, pán/pani <strong>${name}</strong>. Váš dopyt na <strong>${service}</strong> (pre ${people} osôb) sme úspešne prijali. V priebehu 24 hodín vás budeme kontaktovať na čísle <strong>${phone}</strong>.`;
+
+      document.getElementById('success-modal').classList.remove('hidden');
+      document.getElementById('success-modal').classList.add('flex');
+      e.target.reset();
+    }
+
+    function closeSuccessModal() {
+      document.getElementById('success-modal').classList.add('hidden');
+      document.getElementById('success-modal').classList.remove('flex');
+    }
+  </script>
+</body>
+</html>
