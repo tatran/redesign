@@ -1,6 +1,6 @@
 /**
  * Biobauernhof Eliashof - Interactive Alpine Application
- * Handles: Theme (Light default / Dark), Bilingual i18n (DE/EN),
+ * Handles: Theme (Light default / Dark), Multilingual i18n (DE/EN/CS/HU/IT),
  * Dynamic Hero Slider, Live Rate Calculator, Accommodations Filter,
  * Lightbox Gallery, Leaflet Alpine Map, FAQ Accordion, Inquiry Form & Modals.
  */
@@ -10,16 +10,30 @@ document.addEventListener('DOMContentLoaded', () => {
   // ------------------------------------------------------------------------
   // 1. Language & Theme State
   // ------------------------------------------------------------------------
-  let currentLang = localStorage.getItem('eliashof_lang') || 'de';
+  const savedLang = localStorage.getItem('eliashof_lang') || 'de';
+  let currentLang = (typeof translations !== 'undefined' && translations[savedLang]) ? savedLang : 'de';
   // User explicitly requested Light as default theme!
   let currentTheme = localStorage.getItem('eliashof_theme') || 'light';
 
   const themeToggleBtn = document.getElementById('theme-toggle-btn');
   const themeToggleMobile = document.getElementById('theme-toggle-mobile');
-  const langToggleBtn = document.getElementById('lang-toggle-btn');
-  const langToggleMobile = document.getElementById('lang-toggle-mobile');
+  const themeToggleHeader = document.getElementById('theme-toggle-header');
+  const langButtons = document.querySelectorAll('.lang-btn[data-lang]');
+  const mobileLangSelect = document.getElementById('mobile-lang-select');
   const themeIcon = document.getElementById('theme-icon');
-  const langLabel = document.getElementById('lang-label');
+  const headerThemeIcon = document.getElementById('header-theme-icon');
+  let mapMarkers = null;
+
+  function getDict(lang) {
+    if (typeof translations === 'undefined') return {};
+    return translations[lang] || translations.de || {};
+  }
+
+  function formatNights(n, dict) {
+    if (n === 1) return dict.calcNightSg || 'Nacht';
+    if (n >= 2 && n <= 4) return dict.calcNightPl || 'Nächte';
+    return dict.calcNightPl5 || dict.calcNightPl || 'Nächte';
+  }
 
   // Apply Theme
   function applyTheme(theme) {
@@ -27,30 +41,41 @@ document.addEventListener('DOMContentLoaded', () => {
     document.documentElement.setAttribute('data-theme', theme);
     localStorage.setItem('eliashof_theme', theme);
     const isDark = theme === 'dark';
+    const icon = isDark ? '☀️' : '🌙';
     if (themeIcon) {
-      themeIcon.textContent = isDark ? '☀️' : '🌙';
+      themeIcon.textContent = icon;
+    }
+    if (headerThemeIcon) {
+      headerThemeIcon.textContent = icon;
     }
     const mobileThemeIcon = document.getElementById('mobile-theme-icon');
     if (mobileThemeIcon) {
-      mobileThemeIcon.textContent = isDark ? '☀️' : '🌙';
+      mobileThemeIcon.textContent = icon;
     }
   }
 
   // Apply Language
   function applyLanguage(lang) {
+    if (typeof translations !== 'undefined' && !translations[lang]) {
+      lang = 'de';
+    }
     currentLang = lang;
     localStorage.setItem('eliashof_lang', lang);
     document.documentElement.setAttribute('lang', lang);
 
-    if (langLabel) {
-      langLabel.textContent = lang === 'de' ? 'EN 🇬🇧' : 'DE 🇦🇹';
-    }
-    const mobileLangLabel = document.getElementById('mobile-lang-label');
-    if (mobileLangLabel) {
-      mobileLangLabel.textContent = lang === 'de' ? 'EN 🇬🇧' : 'DE 🇦🇹';
+    langButtons.forEach(btn => {
+      const active = btn.getAttribute('data-lang') === lang;
+      btn.classList.toggle('is-active', active);
+      btn.setAttribute('aria-pressed', active ? 'true' : 'false');
+    });
+    if (mobileLangSelect && mobileLangSelect.value !== lang) {
+      mobileLangSelect.value = lang;
     }
 
-    const dict = (typeof translations !== 'undefined' && translations[lang]) ? translations[lang] : {};
+    const dict = getDict(lang);
+    if (dict.siteTitle) {
+      document.title = dict.siteTitle;
+    }
 
     // Elements with data-i18n
     document.querySelectorAll('[data-i18n]').forEach(el => {
@@ -76,33 +101,27 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-    // Recalculate price in current language
+    // Recalculate price and refresh map popups in current language
     calculatePrice();
+    updateMapPopups(lang);
   }
 
-  // Init Theme & Lang
-  applyTheme(currentTheme);
-  applyLanguage(currentLang);
+  // Register Theme & Language Listeners first so UI controls are always wired
+  const toggleTheme = () => {
+    applyTheme(currentTheme === 'light' ? 'dark' : 'light');
+  };
+  if (themeToggleBtn) themeToggleBtn.addEventListener('click', toggleTheme);
+  if (themeToggleMobile) themeToggleMobile.addEventListener('click', toggleTheme);
+  if (themeToggleHeader) themeToggleHeader.addEventListener('click', toggleTheme);
 
-  if (themeToggleBtn) {
-    themeToggleBtn.addEventListener('click', () => {
-      applyTheme(currentTheme === 'light' ? 'dark' : 'light');
+  langButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      applyLanguage(btn.getAttribute('data-lang'));
     });
-  }
-  if (themeToggleMobile) {
-    themeToggleMobile.addEventListener('click', () => {
-      applyTheme(currentTheme === 'light' ? 'dark' : 'light');
-    });
-  }
-
-  if (langToggleBtn) {
-    langToggleBtn.addEventListener('click', () => {
-      applyLanguage(currentLang === 'de' ? 'en' : 'de');
-    });
-  }
-  if (langToggleMobile) {
-    langToggleMobile.addEventListener('click', () => {
-      applyLanguage(currentLang === 'de' ? 'en' : 'de');
+  });
+  if (mobileLangSelect) {
+    mobileLangSelect.addEventListener('change', (e) => {
+      applyLanguage(e.target.value);
     });
   }
 
@@ -220,23 +239,28 @@ document.addEventListener('DOMContentLoaded', () => {
   function calculatePrice() {
     if (!calcCategory || !calcSeason || !calcGuests || !calcNights) return;
 
+    const dict = getDict(currentLang);
+    const persUnit = dict.calcPersUnit || 'Pers.';
+    const upTo4 = dict.calcUpTo4 || 'bis 4 Pers.';
+    const nightUnit = dict.calcNightUnit || 'Nacht';
+
     const cat = calcCategory.value;
     const season = calcSeason.value; // 'summer' or 'winter'
     const guests = parseInt(calcGuests.value, 10) || 2;
     const nights = parseInt(calcNights.value, 10) || 1;
 
     if (calcNightsVal) {
-      calcNightsVal.textContent = `${nights} ${currentLang === 'de' ? (nights === 1 ? 'Nacht' : 'Nächte') : (nights === 1 ? 'Night' : 'Nights')}`;
+      calcNightsVal.textContent = `${nights} ${formatNights(nights, dict)}`;
     }
 
     let ratePerNight = 0;
     let baseNote = '';
-    let extraNote = currentLang === 'de' ? 'Keine' : 'None';
+    const extraNote = dict.calcNone || 'Keine';
 
     if (cat === 'zimmer') {
       // 45 EUR per person per night (summer or winter)
       ratePerNight = 45 * guests;
-      baseNote = `€ 45,- × ${guests} ${currentLang === 'de' ? 'Pers.' : 'guests'}`;
+      baseNote = `€ 45,- × ${guests} ${persUnit}`;
     } else if (cat === 'app_og') {
       // Appartement OG (90m², up to 6 P.)
       // Summer: 2 P = €100, 4 P = €150, 6 P = €220. (Other guests: +€20/day)
@@ -244,22 +268,22 @@ document.addEventListener('DOMContentLoaded', () => {
       if (season === 'summer') {
         if (guests <= 2) {
           ratePerNight = 100;
-          baseNote = '€ 100,- (2 Pers.)';
+          baseNote = `€ 100,- (2 ${persUnit})`;
         } else if (guests <= 4) {
           ratePerNight = 150;
-          baseNote = '€ 150,- (4 Pers.)';
+          baseNote = `€ 150,- (4 ${persUnit})`;
         } else {
           ratePerNight = 220;
-          baseNote = '€ 220,- (6 Pers.)';
+          baseNote = `€ 220,- (6 ${persUnit})`;
         }
       } else {
         // Winter
         if (guests <= 4) {
           ratePerNight = 170;
-          baseNote = '€ 170,- (4 Pers.)';
+          baseNote = `€ 170,- (4 ${persUnit})`;
         } else {
           ratePerNight = 250;
-          baseNote = '€ 250,- (6 Pers.)';
+          baseNote = `€ 250,- (6 ${persUnit})`;
         }
       }
     } else if (cat === 'app_dg') {
@@ -269,20 +293,20 @@ document.addEventListener('DOMContentLoaded', () => {
       if (season === 'summer') {
         if (guests <= 2) {
           ratePerNight = 100;
-          baseNote = '€ 100,- (2 Pers.)';
+          baseNote = `€ 100,- (2 ${persUnit})`;
         } else {
           ratePerNight = 150;
-          baseNote = '€ 150,- (4 Pers.)';
+          baseNote = `€ 150,- (4 ${persUnit})`;
         }
       } else {
         ratePerNight = 170;
-        baseNote = '€ 170,- (bis 4 Pers.)';
+        baseNote = `€ 170,- (${upTo4})`;
       }
     }
 
     const totalPrice = ratePerNight * nights;
 
-    if (calcBaseRateEl) calcBaseRateEl.textContent = `€ ${ratePerNight},- / ${currentLang === 'de' ? 'Nacht' : 'night'} (${baseNote})`;
+    if (calcBaseRateEl) calcBaseRateEl.textContent = `€ ${ratePerNight},- / ${nightUnit} (${baseNote})`;
     if (calcNightsSummaryEl) calcNightsSummaryEl.textContent = `${nights} × € ${ratePerNight},-`;
     if (calcExtraSummaryEl) calcExtraSummaryEl.textContent = extraNote;
     if (calcTotalPriceEl) calcTotalPriceEl.textContent = `€ ${totalPrice.toLocaleString()},-`;
@@ -327,9 +351,14 @@ document.addEventListener('DOMContentLoaded', () => {
       if (inqAccom) inqAccom.value = cat;
       if (inqAdults) inqAdults.value = guests;
       if (inqNotes) {
-        const prefillNote = currentLang === 'de' 
-          ? `[Kalkulation vom Preisrechner]\nUnterkunft: ${calcCategory.options[calcCategory.selectedIndex].text}\nSaison: ${season}\nGäste: ${guests} Person(en)\nDauer: ${nights} Nächte\nGeschätzter Gesamtbetrag: ${totalPrice}\n\n`
-          : `[Calculated via Rate Calculator]\nAccommodation: ${calcCategory.options[calcCategory.selectedIndex].text}\nSeason: ${season}\nGuests: ${guests} person(s)\nDuration: ${nights} nights\nEstimated Total: ${totalPrice}\n\n`;
+        const dict = getDict(currentLang);
+        const nightsNum = parseInt(nights, 10) || 1;
+        const prefillNote = `${dict.calcPrefillHeader || '[Kalkulation vom Preisrechner]'}\n` +
+          `${dict.calcPrefillAccom || 'Unterkunft'}: ${calcCategory.options[calcCategory.selectedIndex].text}\n` +
+          `${dict.calcPrefillSeason || 'Saison'}: ${season}\n` +
+          `${dict.calcPrefillGuests || 'Gäste'}: ${guests} ${dict.calcPersUnit || 'Pers.'}\n` +
+          `${dict.calcPrefillDuration || 'Dauer'}: ${nightsNum} ${formatNights(nightsNum, dict)}\n` +
+          `${dict.calcPrefillTotal || 'Geschätzter Gesamtbetrag'}: ${totalPrice}\n\n`;
         inqNotes.value = prefillNote + inqNotes.value;
       }
 
@@ -385,7 +414,8 @@ document.addEventListener('DOMContentLoaded', () => {
   galleryItems.forEach(item => {
     item.addEventListener('click', () => {
       const fullSrc = item.getAttribute('data-full');
-      const caption = item.getAttribute('data-caption');
+      const captionEl = item.querySelector('.gallery-caption');
+      const caption = (captionEl && captionEl.textContent.trim()) || item.getAttribute('data-caption');
       openLightbox(fullSrc, caption);
     });
   });
@@ -460,27 +490,49 @@ document.addEventListener('DOMContentLoaded', () => {
       iconAnchor: [16, 16]
     });
 
+    const dict = getDict(currentLang);
+
     // Marker 1: Eliashof
-    L.marker(eliashofCoords, { icon: farmIcon })
+    const eliashofMarker = L.marker(eliashofCoords, { icon: farmIcon })
       .addTo(map)
-      .bindPopup(`<strong>Biobauernhof Eliashof</strong><br>Reiterkreuzweg 13, 8971 Schladming<br><em>1.000m Seehöhe</em>`)
+      .bindPopup(dict.mapEliashofPopup || `<strong>Biobauernhof Eliashof</strong><br>Reiterkreuzweg 13, 8971 Schladming<br><em>1.000m Seehöhe</em>`)
       .openPopup();
 
     // Marker 2: Hochwurzen Gipfelbahn
-    L.marker([47.3752, 13.6391], { icon: skiIcon })
+    const hochwurzenMarker = L.marker([47.3752, 13.6391], { icon: skiIcon })
       .addTo(map)
-      .bindPopup(`<strong>Hochwurzen Bergbahn</strong><br>4-Berge-Skischaukel & 7km Rodelbahn`);
+      .bindPopup(dict.mapHochwurzenPopup || `<strong>Hochwurzen Bergbahn</strong><br>4-Berge-Skischaukel & 7km Rodelbahn`);
 
     // Marker 3: Planai Schladming
-    L.marker([47.3912, 13.6934], { icon: skiIcon })
+    const planaiMarker = L.marker([47.3912, 13.6934], { icon: skiIcon })
       .addTo(map)
-      .bindPopup(`<strong>Planai Seilbahn</strong><br>Schladming Zentrum`);
+      .bindPopup(dict.mapPlanaiPopup || `<strong>Planai Seilbahn</strong><br>Schladming Zentrum`);
 
     // Marker 4: Waldhornalm Untertal
-    L.marker([47.3110, 13.7540], { icon: hutIcon })
+    const waldhornalmMarker = L.marker([47.3110, 13.7540], { icon: hutIcon })
       .addTo(map)
-      .bindPopup(`<strong>Waldhornalm (Hütte)</strong><br>Klafferkessel Wanderung & Hüttenlager`);
+      .bindPopup(dict.mapWaldhornalmPopup || `<strong>Waldhornalm (Hütte)</strong><br>Klafferkessel Wanderung & Hüttenlager`);
+
+    mapMarkers = {
+      eliashof: eliashofMarker,
+      hochwurzen: hochwurzenMarker,
+      planai: planaiMarker,
+      waldhornalm: waldhornalmMarker
+    };
   }
+
+  function updateMapPopups(lang) {
+    if (!mapMarkers) return;
+    const dict = getDict(lang);
+    if (dict.mapEliashofPopup) mapMarkers.eliashof.setPopupContent(dict.mapEliashofPopup);
+    if (dict.mapHochwurzenPopup) mapMarkers.hochwurzen.setPopupContent(dict.mapHochwurzenPopup);
+    if (dict.mapPlanaiPopup) mapMarkers.planai.setPopupContent(dict.mapPlanaiPopup);
+    if (dict.mapWaldhornalmPopup) mapMarkers.waldhornalm.setPopupContent(dict.mapWaldhornalmPopup);
+  }
+
+  // Init Theme & Language after all DOM references and functions are initialized
+  applyTheme(currentTheme);
+  applyLanguage(currentLang);
 
   // Lazy map init
   if (typeof L !== 'undefined') {
@@ -527,24 +579,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function openLegalModal(type) {
     if (!legalModal) return;
+    const dict = getDict(currentLang);
     if (type === 'impressum') {
-      legalModalTitle.textContent = currentLang === 'de' ? 'Impressum & Kontakt' : 'Legal Notice & Imprint';
-      legalModalBody.innerHTML = `
-        <p><strong>Biobauernhof Eliashof</strong><br>Familie Höflehner<br>Reiterkreuzweg 13, 8971 Schladming, Österreich</p>
-        <p>Telefon: <a href="tel:+43368761475">+43 (0)3687 61 475</a><br>E-Mail: <a href="mailto:urlaub@eliashof.at">urlaub@eliashof.at</a><br>Internet: <a href="https://eliashof.at">www.eliashof.at</a></p>
-        <p><strong>Unternehmensgegenstand:</strong> Vermietung von Privatzimmern und Ferienwohnungen (Urlaub am Bauernhof).</p>
-        <p><strong>Zuständige Behörde:</strong> Bezirkshauptmannschaft Liezen</p>
-        <p><strong>Fotos & Urheberrechte:</strong> Tourismusverband Schladming-Dachstein, Steiermark Tourismus, Ski amadé, Familie Höflehner, Gerald Petter.</p>
-      `;
+      legalModalTitle.textContent = dict.legalImpressumTitle || 'Impressum & Kontakt';
+      legalModalBody.innerHTML = dict.legalImpressumHtml || '';
     } else {
-      legalModalTitle.textContent = currentLang === 'de' ? 'Datenschutzerklärung' : 'Privacy Policy';
-      legalModalBody.innerHTML = `
-        <p>Der Schutz Ihrer persönlichen Daten ist uns ein besonderes Anliegen. Wir verarbeiten Ihre Daten daher ausschließlich auf Grundlage der gesetzlichen Bestimmungen (DSGVO, TKG 2003).</p>
-        <h4>Kontakt mit uns</h4>
-        <p>Wenn Sie per Formular auf der Website oder per E-Mail Kontakt mit uns aufnehmen, werden Ihre angegebenen Daten zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.</p>
-        <h4>Ihre Rechte</h4>
-        <p>Ihnen stehen grundsätzlich die Rechte auf Auskunft, Berichtigung, Löschung, Einschränkung, Datenübertragbarkeit, Widerruf und Widerspruch zu.</p>
-      `;
+      legalModalTitle.textContent = dict.legalDatenschutzTitle || 'Datenschutzerklärung';
+      legalModalBody.innerHTML = dict.legalDatenschutzHtml || '';
     }
     legalModal.classList.add('is-active');
     document.body.style.overflow = 'hidden';

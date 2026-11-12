@@ -33,7 +33,7 @@
           📍 1.000 m Seehöhe • Schladming-Rohrmoos
         </span>
         <span class="topbar-badge" data-i18n="topBarFeature">
-          ⛷️ Direkt an der 4-Berge-Skischaukel • 🎫 Sommercard inklusive
+          ⛷️ Ski-in / Ski-out • 🎫 Sommercard inkl.
         </span>
       </div>
       <div class="topbar-right">
@@ -48,10 +48,14 @@
           <button id="theme-toggle-btn" class="btn-ctrl" type="button" aria-label="Theme umschalten" title="Theme umschalten">
             <span id="theme-icon">🌙</span>
           </button>
-          <!-- Bilingual Language Switcher (DE / EN) -->
-          <button id="lang-toggle-btn" class="btn-ctrl" type="button" aria-label="Sprache wechseln" title="Sprache wechseln">
-            <span id="lang-label">EN 🇬🇧</span>
-          </button>
+          <!-- 5-Language Switcher (DE / EN / CS / HU / IT) -->
+          <div class="lang-switcher" role="group" aria-label="Language switcher">
+            <button class="lang-btn is-active" type="button" data-lang="de" title="Deutsch">DE</button>
+            <button class="lang-btn" type="button" data-lang="en" title="English">EN</button>
+            <button class="lang-btn" type="button" data-lang="cs" title="Čeština">CS</button>
+            <button class="lang-btn" type="button" data-lang="hu" title="Magyar">HU</button>
+            <button class="lang-btn" type="button" data-lang="it" title="Italiano">IT</button>
+          </div>
         </div>
       </div>
     </div>
@@ -62,13 +66,9 @@
        ======================================================================== -->
   <header class="site-header">
     <div class="container header-inner">
-      <!-- Brand & Emblem -->
-      <a href="#" class="brand-wrapper" aria-label="Eliashof Startseite">
+      <!-- Brand Logo (clean wordmark without duplicate text) -->
+      <a href="#" class="brand-wrapper" aria-label="Biobauernhof Eliashof">
         <img src="images/all/logo-eliashof.png" alt="Logo Biobauernhof Eliashof" class="brand-logo-img">
-        <div class="brand-text">
-          <span class="brand-title">ELIASHOF</span>
-          <span class="brand-subtitle" data-i18n="heroBadgeTag">Biobauernhof • 3 Margeriten</span>
-        </div>
       </a>
 
       <!-- Desktop Nav -->
@@ -84,6 +84,20 @@
         </ul>
         <a href="#inquiry" class="btn btn--primary btn--sm" data-i18n="quickInquiryBtn">Jetzt Anfragen</a>
       </nav>
+
+      <!-- Mobile Quick Controls (visible <= 768px when topbar is hidden) -->
+      <div class="mobile-header-controls">
+        <button id="theme-toggle-header" class="btn-ctrl btn-ctrl--compact" type="button" aria-label="Theme umschalten">
+          <span id="header-theme-icon">🌙</span>
+        </button>
+        <select id="mobile-lang-select" class="mobile-lang-select" aria-label="Language">
+          <option value="de">DE</option>
+          <option value="en">EN</option>
+          <option value="cs">CS</option>
+          <option value="hu">HU</option>
+          <option value="it">IT</option>
+        </select>
+      </div>
 
       <!-- Mobile Menu Toggle Button -->
       <button id="mobile-menu-toggle" class="mobile-menu-toggle" type="button" aria-label="Menü öffnen">
@@ -114,12 +128,16 @@
       <li><a href="#faq" class="nav-link" data-i18n="navFaq">FAQ</a></li>
       <li><a href="#inquiry" class="nav-link" data-i18n="navInquiry">Anfrage</a></li>
     </ul>
-    <div style="display:flex; gap:1rem; margin-top:auto;">
-      <button id="theme-toggle-mobile" class="btn-ctrl" style="flex:1; padding:0.75rem;" type="button">
+    <div style="display:flex; flex-direction:column; gap:0.75rem; margin-top:auto;">
+      <div class="lang-switcher lang-switcher--drawer" role="group" aria-label="Language switcher">
+        <button class="lang-btn is-active" type="button" data-lang="de" title="Deutsch">DE</button>
+        <button class="lang-btn" type="button" data-lang="en" title="English">EN</button>
+        <button class="lang-btn" type="button" data-lang="cs" title="Čeština">CS</button>
+        <button class="lang-btn" type="button" data-lang="hu" title="Magyar">HU</button>
+        <button class="lang-btn" type="button" data-lang="it" title="Italiano">IT</button>
+      </div>
+      <button id="theme-toggle-mobile" class="btn-ctrl" style="width:100%; padding:0.75rem;" type="button">
         <span id="mobile-theme-icon">🌙</span> Theme
-      </button>
-      <button id="lang-toggle-mobile" class="btn-ctrl" style="flex:1; padding:0.75rem;" type="button">
-        <span id="mobile-lang-label">EN 🇬🇧</span>
       </button>
     </div>
   </aside>
@@ -165,7 +183,7 @@
           <span class="hero-feat-chip" data-i18n="heroBadgeSki">⛷️ Ski-in / Ski-out Piste</span>
           <span class="hero-feat-chip" data-i18n="heroBadgeCard">🎫 Sommercard inklusive</span>
           <span class="hero-feat-chip" data-i18n="heroBadgeOrganic">🌿 Eigener Bio-Hof</span>
-          <span class="hero-feat-chip">🏔️ 1.000 m Seehöhe</span>
+          <span class="hero-feat-chip" data-i18n="heroBadgeAltitude">🏔️ 1.000 m Seehöhe</span>
         </div>
 
         <div class="hero-ctas">
@@ -442,12 +460,12 @@
             <div class="calc-field">
               <label for="calc-guests" data-i18n="calcLabelGuests">3. Gästeanzahl</label>
               <select id="calc-guests">
-                <option value="1">1 Person</option>
-                <option value="2" selected>2 Personen</option>
-                <option value="3">3 Personen</option>
-                <option value="4">4 Personen</option>
-                <option value="5">5 Personen</option>
-                <option value="6">6 Personen</option>
+                <option value="1" data-i18n="finderGuests1">1 Person</option>
+                <option value="2" selected data-i18n="finderGuests2">2 Personen</option>
+                <option value="3" data-i18n="finderGuests3">3 Personen</option>
+                <option value="4" data-i18n="finderGuests4">4 Personen</option>
+                <option value="5" data-i18n="finderGuests5">5 Personen</option>
+                <option value="6" data-i18n="finderGuests6">6 Personen</option>
               </select>
             </div>
 
@@ -515,7 +533,7 @@
           </thead>
           <tbody>
             <tr>
-              <td><strong data-i18n="tabPriceRooms">Doppelzimmer</strong> <small>(pro Person / Nacht inkl. Frühstück)</small></td>
+              <td><strong data-i18n="tabPriceRooms">Doppelzimmer</strong> <small data-i18n="tableRoomsNote">(pro Person / Nacht inkl. Frühstück)</small></td>
               <td><span class="rate-highlight" data-i18n="rowSummerRoomsRate">ab € 45,-</span></td>
               <td><span class="rate-highlight" data-i18n="rowWinterRoomsRate">ab € 45,-</span></td>
               <td>–</td>
@@ -593,51 +611,51 @@
       <div class="gallery-grid">
         <div class="gallery-item" data-tag="nature" data-full="images/bauernhof/bauernhof-01.jpg" data-caption="Eliashof von oben">
           <img src="images/bauernhof/bauernhof-01.jpg" alt="Eliashof von oben" class="gallery-thumb" loading="lazy">
-          <div class="gallery-overlay"><span class="gallery-caption">Eliashof von oben</span></div>
+          <div class="gallery-overlay"><span class="gallery-caption" data-i18n="gal1">Eliashof von oben</span></div>
         </div>
         <div class="gallery-item" data-tag="nature" data-full="images/bauernhof/bauernhof-02.jpg" data-caption="Großer Spielplatz für Kinder">
           <img src="images/bauernhof/bauernhof-02.jpg" alt="Großer Spielplatz" class="gallery-thumb" loading="lazy">
-          <div class="gallery-overlay"><span class="gallery-caption">Großer Spielplatz</span></div>
+          <div class="gallery-overlay"><span class="gallery-caption" data-i18n="gal2">Großer Spielplatz</span></div>
         </div>
         <div class="gallery-item" data-tag="animals" data-full="images/bauernhof/bauernhof-03.jpg" data-caption="Kaninchen zum Streicheln">
           <img src="images/bauernhof/bauernhof-03.jpg" alt="Kaninchen zum Streicheln" class="gallery-thumb" loading="lazy">
-          <div class="gallery-overlay"><span class="gallery-caption">Kaninchen zum Streicheln</span></div>
+          <div class="gallery-overlay"><span class="gallery-caption" data-i18n="gal3">Kaninchen zum Streicheln</span></div>
         </div>
         <div class="gallery-item" data-tag="animals" data-full="images/bauernhof/bauernhof-04.jpg" data-caption="Ziegenunterstand">
           <img src="images/bauernhof/bauernhof-04.jpg" alt="Ziegenunterstand" class="gallery-thumb" loading="lazy">
-          <div class="gallery-overlay"><span class="gallery-caption">Ziegenunterstand</span></div>
+          <div class="gallery-overlay"><span class="gallery-caption" data-i18n="gal4">Ziegenunterstand</span></div>
         </div>
         <div class="gallery-item" data-tag="animals" data-full="images/bauernhof/bauernhof-05.jpg" data-caption="Enten am Hof">
           <img src="images/bauernhof/bauernhof-05.jpg" alt="Enten" class="gallery-thumb" loading="lazy">
-          <div class="gallery-overlay"><span class="gallery-caption">Enten am Hof</span></div>
+          <div class="gallery-overlay"><span class="gallery-caption" data-i18n="gal5">Enten am Hof</span></div>
         </div>
         <div class="gallery-item" data-tag="animals" data-full="images/bauernhof/bauernhof-06.jpg" data-caption="Junge Kätzchen am Hof">
           <img src="images/bauernhof/bauernhof-06.jpg" alt="Junge Kätzchen" class="gallery-thumb" loading="lazy">
-          <div class="gallery-overlay"><span class="gallery-caption">Junge Kätzchen</span></div>
+          <div class="gallery-overlay"><span class="gallery-caption" data-i18n="gal6">Junge Kätzchen</span></div>
         </div>
         <div class="gallery-item" data-tag="animals" data-full="images/bauernhof/bauernhof-07.jpg" data-caption="Ziegen hinterm Haus">
           <img src="images/bauernhof/bauernhof-07.jpg" alt="Ziegen hinterm Haus" class="gallery-thumb" loading="lazy">
-          <div class="gallery-overlay"><span class="gallery-caption">Ziegen hinterm Haus</span></div>
+          <div class="gallery-overlay"><span class="gallery-caption" data-i18n="gal7">Ziegen hinterm Haus</span></div>
         </div>
         <div class="gallery-item" data-tag="tradition" data-full="images/bauernhof/bauernhof-08.jpg" data-caption="Traditioneller Schafabtrieb">
           <img src="images/bauernhof/bauernhof-08.jpg" alt="Schafabtrieb" class="gallery-thumb" loading="lazy">
-          <div class="gallery-overlay"><span class="gallery-caption">Traditioneller Schafabtrieb</span></div>
+          <div class="gallery-overlay"><span class="gallery-caption" data-i18n="gal8">Traditioneller Schafabtrieb</span></div>
         </div>
         <div class="gallery-item" data-tag="tradition" data-full="images/bauernhof/bauernhof-09.jpg" data-caption="Schafabtrieb im Herbst">
           <img src="images/bauernhof/bauernhof-09.jpg" alt="Schafabtrieb" class="gallery-thumb" loading="lazy">
-          <div class="gallery-overlay"><span class="gallery-caption">Schafabtrieb im Herbst</span></div>
+          <div class="gallery-overlay"><span class="gallery-caption" data-i18n="gal9">Schafabtrieb im Herbst</span></div>
         </div>
         <div class="gallery-item" data-tag="tradition" data-full="images/bauernhof/bauernhof-10.jpg" data-caption="Almauftrieb im Frühsommer">
           <img src="images/bauernhof/bauernhof-10.jpg" alt="Almauftrieb" class="gallery-thumb" loading="lazy">
-          <div class="gallery-overlay"><span class="gallery-caption">Almauftrieb im Frühsommer</span></div>
+          <div class="gallery-overlay"><span class="gallery-caption" data-i18n="gal10">Almauftrieb im Frühsommer</span></div>
         </div>
         <div class="gallery-item" data-tag="nature" data-full="images/bauernhof/bauernhof-11.jpg" data-caption="Die urige Waldhornalm">
           <img src="images/bauernhof/bauernhof-11.jpg" alt="Waldhornalm" class="gallery-thumb" loading="lazy">
-          <div class="gallery-overlay"><span class="gallery-caption">Waldhornalm im Untertal</span></div>
+          <div class="gallery-overlay"><span class="gallery-caption" data-i18n="gal11">Waldhornalm im Untertal</span></div>
         </div>
         <div class="gallery-item" data-tag="tradition" data-full="images/bauernhof/bauernhof-12.jpg" data-caption="Selbstgemacht: Brot, Butter & Steirerkas">
           <img src="images/bauernhof/bauernhof-12.jpg" alt="Brot, Butter, Steirerkas." class="gallery-thumb" loading="lazy">
-          <div class="gallery-overlay"><span class="gallery-caption">Brot, Butter & Steirerkas</span></div>
+          <div class="gallery-overlay"><span class="gallery-caption" data-i18n="gal12">Brot, Butter & Steirerkas</span></div>
         </div>
       </div>
     </div>
@@ -837,18 +855,18 @@
           <div class="form-grid-2">
             <div class="form-field">
               <label for="inq-firstname" data-i18n="formFirstName">Vorname</label>
-              <input type="text" id="inq-firstname" required placeholder="z.B. Maria">
+              <input type="text" id="inq-firstname" required placeholder="z.B. Maria" data-i18n-placeholder="phFirstName">
             </div>
             <div class="form-field">
               <label for="inq-lastname" data-i18n="formLastName">Nachname</label>
-              <input type="text" id="inq-lastname" required placeholder="z.B. Muster">
+              <input type="text" id="inq-lastname" required placeholder="z.B. Muster" data-i18n-placeholder="phLastName">
             </div>
           </div>
 
           <div class="form-grid-2">
             <div class="form-field">
               <label for="inq-email" data-i18n="formEmail">E-Mail-Adresse</label>
-              <input type="email" id="inq-email" required placeholder="ihre.email@beispiel.at">
+              <input type="email" id="inq-email" required placeholder="ihre.email@beispiel.at" data-i18n-placeholder="phEmail">
             </div>
             <div class="form-field">
               <label for="inq-phone" data-i18n="formPhone">Telefonnummer</label>
@@ -891,7 +909,7 @@
 
           <div class="form-field">
             <label for="inq-notes" data-i18n="formNotes">Ihre Anmerkungen oder Fragen (z.B. Kinderbett, voraussichtliche Ankunftszeit)</label>
-            <textarea id="inq-notes" rows="4" placeholder="Gerne gehen wir auf Ihre individuellen Urlaubswünsche ein..."></textarea>
+            <textarea id="inq-notes" rows="4" placeholder="Gerne gehen wir auf Ihre individuellen Urlaubswünsche ein..." data-i18n-placeholder="phNotes"></textarea>
           </div>
 
           <div class="form-checkbox-wrapper">
@@ -936,7 +954,7 @@
           <div style="font-size:0.875rem; color:var(--text-muted);">
             Familie Höflehner<br>
             Reiterkreuzweg 13<br>
-            8971 Schladming, Österreich
+            8971 Schladming, <span data-i18n="footerCountry">Österreich</span>
           </div>
         </div>
 
@@ -968,7 +986,7 @@
             </li>
             <li style="margin-top:0.5rem;">
               <a href="https://www.facebook.com/Eliashof/" target="_blank" rel="noopener noreferrer" style="display:inline-flex; align-items:center; gap:0.4rem;">
-                <img src="images/all/icon-facebook.svg" alt="Facebook" style="width:20px; height:20px; display:inline-block;"> Facebook Seite
+                <img src="images/all/icon-facebook.svg" alt="Facebook" style="width:20px; height:20px; display:inline-block;"> <span data-i18n="footerFacebook">Facebook Seite</span>
               </a>
             </li>
           </ul>
