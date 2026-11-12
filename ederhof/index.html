@@ -1,0 +1,1344 @@
+<!DOCTYPE html>
+<html lang="de" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="siteTitle">Reha-Zentrum Ederhof | Spezialisierte Rehabilitation für Kinder, Jugendliche & Familien</title>
+  <meta name="description" content="Rehabilitationszentrum Ederhof in Osttirol: Europaweit einzigartige Facheinrichtung für Kinder und Jugendliche vor und nach Organtransplantation sowie deren Familien.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/ederhof_logo.png">
+
+  <!-- Google Fonts: Outfit (Headings) & Inter (Body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Leaflet Map CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+
+  <!-- Main Design System CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <aside class="announcement-bar">
+    <div class="container announcement-content">
+      <span data-i18n="tickerText">🌟 Neue Reha-Termine für 2027 ab sofort verfügbar • Vor-Ort Hämodialyse • 35+ Jahre Erfahrung</span>
+      <a href="#schedule" class="announcement-link" data-i18n="heroCtaSecondary">Termine 2027 einsehen &rarr;</a>
+    </div>
+  </aside>
+
+  <!-- Clean, Spacious Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#" class="brand-wrapper" aria-label="Ederhof Startseite">
+        <!-- Crisp Alpine Heart Emblem -->
+        <div class="brand-emblem-box">
+          <svg class="brand-emblem-svg" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="40" height="40" rx="10" fill="currentColor" fill-opacity="0.12"/>
+            <path d="M7 29L16 15L22 24L26 19L33 29H7Z" fill="var(--primary)" fill-opacity="0.9"/>
+            <path d="M20 12C20 10.5 21.5 9 23 9C24.5 9 26 10.5 26 12C26 14.5 20 18 20 18C20 18 14 14.5 14 12C14 10.5 15.5 9 17 9C18.5 9 20 10.5 20 12Z" fill="#e11d48"/>
+          </svg>
+        </div>
+        <div class="brand-text-block">
+          <span class="brand-name">EDERHOF</span>
+          <span class="brand-sub">Rudolf Pichlmayr-Stiftung</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation (Clean & Uncrowded) -->
+      <nav aria-label="Hauptnavigation">
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#about" class="nav-link" data-i18n="navAbout">Über uns</a></li>
+          <li><a href="#programs" class="nav-link" data-i18n="navPrograms">Programme</a></li>
+          <li><a href="#schedule" class="nav-link" data-i18n="navSchedule">Termine 2027</a></li>
+          <li><a href="#care" class="nav-link" data-i18n="navTherapy">Therapie</a></li>
+          <li><a href="#steps" class="nav-link" data-i18n="navApplication">Antrag & Ablauf</a></li>
+          <li><a href="#contact" class="nav-link" data-i18n="navContact">Kontakt</a></li>
+        </ul>
+      </nav>
+
+      <!-- Action Controls (Proportional & Elegant) -->
+      <div class="header-actions">
+        <!-- Language Switcher -->
+        <button id="lang-toggle-btn" class="ctrl-btn-compact" aria-label="Sprache wechseln" title="Sprache wechseln">
+          <span id="lang-text">EN 🇬🇧</span>
+        </button>
+
+        <!-- Theme Toggle -->
+        <button id="theme-toggle-btn" class="ctrl-btn-icon" aria-label="Designmodus umschalten" title="Hell/Dunkel Design">
+          <span id="theme-icon">🌙</span>
+        </button>
+
+        <!-- Donation Pill -->
+        <a href="#donations" class="btn-donate-pill" data-i18n="btnDonateHeader">Spenden ❤️</a>
+
+        <!-- Fast Inquiry CTA -->
+        <button class="btn-header-cta open-contact-modal-btn" data-i18n="btnApplyHeader">Reha anfragen</button>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Menü öffnen">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="about">
+      <div class="container hero-grid">
+        <div class="hero-content-col">
+          <div class="hero-badge" data-i18n="heroBadge">
+            🏆 Europaweit einzigartige Facheinrichtung
+          </div>
+          <h1 class="hero-title" data-i18n="heroTitle">
+            Neuer Mut und neue Kraft für Kinder vor und nach Organtransplantation
+          </h1>
+          <p class="hero-subtitle" data-i18n="heroSubtitle">
+            Seit über 35 Jahren begleiten wir auf 1.150 m Seehöhe in Osttirol chronisch nieren-, leber-, herz- und lungenerkrankte Kinder, Jugendliche und ihre gesamten Familien ganzheitlich zurück ins Leben.
+          </p>
+
+          <div class="hero-ctas">
+            <a href="#finder" class="btn-primary" data-i18n="heroCtaPrimary">Passende Reha finden</a>
+            <a href="#schedule" class="btn-secondary" data-i18n="heroCtaSecondary">Termine 2027 einsehen</a>
+            <a href="#donations" class="btn-secondary" data-i18n="heroCtaDonate">Spenden & Helfen</a>
+          </div>
+
+          <!-- Key Metrics Counter Strip -->
+          <div class="stats-strip">
+            <div class="stat-item">
+              <span class="stat-val" data-i18n="statYearsVal">35+</span>
+              <span class="stat-label" data-i18n="statYearsLabel">Jahre Erfahrung</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-val" data-i18n="statFamiliesVal">130+</span>
+              <span class="stat-label" data-i18n="statFamiliesLabel">Familien pro Jahr</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-val" data-i18n="statAltitudeVal">1.150 m</span>
+              <span class="stat-label" data-i18n="statAltitudeLabel">Alpines Heilklima</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-val" data-i18n="statCertVal">100%</span>
+              <span class="stat-label" data-i18n="statCertLabel">Kostenträger-Anerkennung</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Media Presentation -->
+        <div class="hero-media-wrapper">
+          <div class="hero-main-card">
+            <img src="images/hero_ederhof.jpg" alt="Rehabilitationszentrum Ederhof in Iselsberg-Stronach" class="hero-main-img">
+            <div class="hero-floating-badge">
+              <div class="floating-icon">🏔️</div>
+              <div>
+                <div class="floating-text-title">Iselsberg-Stronach • Osttirol</div>
+                <div class="floating-text-sub">Blick auf die Lienzer Dolomiten</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE REHA-FINDER -->
+    <section class="finder-section" id="finder">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag" data-i18n="navFinder">Reha-Finder</span>
+          <h2 class="section-title" data-i18n="finderTitle">Interaktiver Reha-Finder</h2>
+          <p class="section-desc" data-i18n="finderSubtitle">Finden Sie mit 3 Klicks die optimale Rehabilitation für Ihr Kind und Ihre Familie.</p>
+        </div>
+
+        <div class="finder-card-box">
+          <div class="finder-steps-grid">
+            <!-- Step 1: Age -->
+            <div class="finder-step-col">
+              <h4 data-i18n="finderStep1Title">1. Alter des Kindes / Jugendlichen</h4>
+              <div class="finder-options">
+                <button type="button" class="finder-opt-btn" data-step="age" data-val="toddler" data-i18n="finderStep1Opt1">
+                  👶 0 – 6 Jahre (Kleinkind)
+                </button>
+                <button type="button" class="finder-opt-btn active" data-step="age" data-val="school" data-i18n="finderStep1Opt2">
+                  🎒 7 – 13 Jahre (Schulkind)
+                </button>
+                <button type="button" class="finder-opt-btn" data-step="age" data-val="youth" data-i18n="finderStep1Opt3">
+                  🚀 14 – 18+ Jahre (Jugendliche/r)
+                </button>
+              </div>
+            </div>
+
+            <!-- Step 2: Treatment Status -->
+            <div class="finder-step-col">
+              <h4 data-i18n="finderStep2Title">2. Behandlungsstatus</h4>
+              <div class="finder-options">
+                <button type="button" class="finder-opt-btn active" data-step="status" data-val="post" data-i18n="finderStep2Opt1">
+                  🌱 Nach Transplantation (3-6+ Mo.)
+                </button>
+                <button type="button" class="finder-opt-btn" data-step="status" data-val="pre" data-i18n="finderStep2Opt2">
+                  ⏳ Vor Transplantation / Warteliste
+                </button>
+                <button type="button" class="finder-opt-btn" data-step="status" data-val="dialysis" data-i18n="finderStep2Opt3">
+                  💉 Mit Hämodialyse / Peritonealdialyse
+                </button>
+              </div>
+            </div>
+
+            <!-- Step 3: Preferred Focus -->
+            <div class="finder-step-col">
+              <h4 data-i18n="finderStep3Title">3. Gewünschter Schwerpunkt</h4>
+              <div class="finder-options">
+                <button type="button" class="finder-opt-btn active" data-step="focus" data-val="holistic" data-i18n="finderStep3Opt1">
+                  🏡 Familienorientiert & Heilstättenschule
+                </button>
+                <button type="button" class="finder-opt-btn" data-step="focus" data-val="winter" data-i18n="finderStep3Opt2">
+                  ⛷️ Winter & Skikurs in den Alpen
+                </button>
+                <button type="button" class="finder-opt-btn" data-step="focus" data-val="transition" data-i18n="finderStep3Opt3">
+                  🎯 Selbstständigkeit & Transition
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dynamic Result Box -->
+          <div class="finder-result-panel">
+            <div class="result-info">
+              <span class="result-badge" id="finder-result-badge" data-i18n="finderResultBadge">Empfohlener Turnus:</span>
+              <h3 class="result-title" id="finder-result-title">Familienorientierte Reha für Schulkinder (Turnus 324)</h3>
+              <p class="result-desc" id="finder-result-desc">
+                Mit eigener Heilstättenschule in Kleingruppen, Bewegungstherapie, Naturerlebnissen und speziellem Geschwisterkinder-Projekt.
+              </p>
+            </div>
+            <div class="result-actions">
+              <button class="btn-primary" id="finder-btn-book" data-i18n="finderBtnBook">Diesen Turnus anfragen</button>
+              <button class="btn-secondary" id="finder-reset-btn" data-i18n="finderReset">Zurücksetzen</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CORE REHABILITATION PROGRAMS -->
+    <section class="programs-section" id="programs">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag" data-i18n="navPrograms">Reha-Angebote</span>
+          <h2 class="section-title" data-i18n="programsTitle">Unsere spezialisierten Reha-Programme</h2>
+          <p class="section-desc" data-i18n="programsSubtitle">
+            Jedes Alter und jede Lebensphase nach einer Organtransplantation braucht eine maßgeschneiderte Begleitung. Alle Familien reisen am selben Tag an und erleben den 4-wöchigen Turnus gemeinsam.
+          </p>
+        </div>
+
+        <div class="programs-grid">
+          <!-- Program 1: Toddler -->
+          <article class="program-card">
+            <div class="program-media">
+              <img src="images/kids_therapy.jpg" alt="Kleinkindreha am Ederhof" class="program-img">
+              <span class="program-tag-pill" data-i18n="prog1Tag">0 bis 6 Jahre</span>
+            </div>
+            <div class="program-body">
+              <h3 class="program-title" data-i18n="prog1Title">Familienorientierte Reha für Kleinkinder</h3>
+              <p class="program-desc" data-i18n="prog1Desc">
+                Für unsere jüngsten Patientinnen und Patienten zusammen mit Eltern und Geschwistern. Ein behutsamer Tagesrhythmus, spielerische Entwicklungsförderung, Psychomotorik und intensiver Austausch für entlastete Eltern.
+              </p>
+              <ul class="program-features">
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span data-i18n="prog1Feat1">Begleitung durch beide Elternteile & Geschwister</span>
+                </li>
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span data-i18n="prog1Feat2">Spezielle Elternschulung zu Immunsuppressiva & Hygiene</span>
+                </li>
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span data-i18n="prog1Feat3">Geführte Spielgruppen und psychomotorische Frühförderung</span>
+                </li>
+              </ul>
+              <div class="program-footer">
+                <span class="badge-tag">Turnus 323 & 331</span>
+                <button class="btn-secondary btn-apply-turnus" data-turnus-info="Kleinkindreha (Turnus 323 / 331)" data-i18n="btnApplyTurnus">Auswählen</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Program 2: School Children -->
+          <article class="program-card">
+            <div class="program-media">
+              <img src="images/nature_activity.jpg" alt="Familienreha für Schulkinder" class="program-img">
+              <span class="program-tag-pill" data-i18n="prog2Tag">6 bis 14 Jahre</span>
+            </div>
+            <div class="program-body">
+              <h3 class="program-title" data-i18n="prog2Title">Familienorientierte Reha für Schulkinder</h3>
+              <p class="program-desc" data-i18n="prog2Desc">
+                Ganzheitliche Reha mit eigener staatlich anerkannter Heilstättenschule vor Ort. So verlieren die Kinder keinen Schulanschluss, während sie in Bewegungstherapie, Sport und Natur neues Zutrauen fassen.
+              </p>
+              <ul class="program-features">
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span data-i18n="prog2Feat1">Eigene Ederhof-Krankenhausschule in Kleinstgruppen</span>
+                </li>
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span data-i18n="prog2Feat2">Geschwisterkinder-Projekt mit eigener therapeutischer Zuwendung</span>
+                </li>
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span data-i18n="prog2Feat3">Stärkung der körperlichen Belastbarkeit und Sportfreude</span>
+                </li>
+              </ul>
+              <div class="program-footer">
+                <span class="badge-tag">Turnus 324, 325, 327, 329, 330</span>
+                <button class="btn-secondary btn-apply-turnus" data-turnus-info="Familienreha Schulkinder (Turnus 324/325/327/329/330)" data-i18n="btnApplyTurnus">Auswählen</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Program 3: Youth Rehab -->
+          <article class="program-card">
+            <div class="program-media">
+              <img src="images/kira_youth.jpg" alt="Jugendreha ohne Eltern am Ederhof" class="program-img">
+              <span class="program-tag-pill" data-i18n="prog3Tag">14 bis 18+ Jahre</span>
+            </div>
+            <div class="program-body">
+              <h3 class="program-title" data-i18n="prog3Title">Jugendreha (Eigenständig & ohne Eltern)</h3>
+              <p class="program-desc" data-i18n="prog3Desc">
+                Für Jugendliche, die ihren eigenen Weg mit der Transplantation finden wollen. Schwerpunkte sind Eigenverantwortung, Medikationsmanagement, Berufsorientierung und die Vorbereitung auf die Erwachsenenmedizin (Transition).
+              </p>
+              <ul class="program-features">
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span data-i18n="prog3Feat1">Erwachsenwerden mit Spenderorgan & Peer-Support</span>
+                </li>
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span data-i18n="prog3Feat2">Outdoor-Aktivitäten, Klettersteige, Wandern & Teambuilding</span>
+                </li>
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span data-i18n="prog3Feat3">Schulung zur Transition (KfH-Transferprogramm)</span>
+                </li>
+              </ul>
+              <div class="program-footer">
+                <span class="badge-tag">Turnus 328 (17.07 – 07.08)</span>
+                <button class="btn-secondary btn-apply-turnus" data-turnus-info="Jugendreha (Turnus 328)" data-i18n="btnApplyTurnus">Auswählen</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Program 4: Winter Rehab -->
+          <article class="program-card">
+            <div class="program-media">
+              <img src="images/winter_skiing.jpg" alt="Familienorientierte Winter-Reha mit Skikurs" class="program-img">
+              <span class="program-tag-pill" data-i18n="prog4Tag">Besonderes Highlight</span>
+            </div>
+            <div class="program-body">
+              <h3 class="program-title" data-i18n="prog4Title">Familienorientierte Winter-Reha</h3>
+              <p class="program-desc" data-i18n="prog4Desc">
+                Einzigartig in Europa: Kinder nach Organtransplantation lernen im heilsamen Schnee der Osttiroler Bergwelt Skifahren – unter ständiger ärztlicher und physiotherapeutischer Begleitung.
+              </p>
+              <ul class="program-features">
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span data-i18n="prog4Feat1">Kindgerechter Skikurs mit geschulten Skilehrer:innen</span>
+                </li>
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span data-i18n="prog4Feat2">Überwindung von Ängsten & gewaltiger Zuwachs an Selbstvertrauen</span>
+                </li>
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span data-i18n="prog4Feat3">Volles medizinisches und therapeutisches Reha-Programm</span>
+                </li>
+              </ul>
+              <div class="program-footer">
+                <span class="badge-tag winter">Turnus 322 (30.01 – 27.02)</span>
+                <button class="btn-secondary btn-apply-turnus" data-turnus-info="Winter-Reha (Turnus 322)" data-i18n="btnApplyTurnus">Auswählen</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCHEDULE 2027 SECTION -->
+    <section class="schedule-section" id="schedule">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag" data-i18n="navSchedule">Termine 2027</span>
+          <h2 class="section-title" data-i18n="scheduleTitle">Aktuelle Reha-Termine 2027</h2>
+          <p class="section-desc" data-i18n="scheduleSubtitle">
+            Übersicht aller 4-wöchigen Turnusse für das Jahr 2027. Sichern Sie sich rechtzeitig Ihren Platz für die Antragsstellung.
+          </p>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="schedule-filters">
+          <button class="sched-filter-btn active" data-filter="all" data-i18n="filterAll">Alle Termine</button>
+          <button class="sched-filter-btn" data-filter="toddler" data-i18n="filterToddler">Kleinkinder (0-6)</button>
+          <button class="sched-filter-btn" data-filter="school" data-i18n="filterSchool">Familienreha (Schulkinder)</button>
+          <button class="sched-filter-btn" data-filter="youth" data-i18n="filterYouth">Jugendreha</button>
+          <button class="sched-filter-btn" data-filter="winter" data-i18n="filterWinter">Winter-Reha</button>
+          <button class="sched-filter-btn" data-filter="dialysis" data-i18n="filterDialysis">Mit Hämodialyse</button>
+        </div>
+
+        <!-- Interactive Schedule Table -->
+        <div class="schedule-table-wrap">
+          <table class="schedule-table">
+            <thead>
+              <tr>
+                <th data-i18n="colTurnus">Turnus</th>
+                <th data-i18n="colDates">Zeitraum</th>
+                <th data-i18n="colProgram">Programm & Zielgruppe</th>
+                <th data-i18n="colNotes">Besonderheiten</th>
+                <th data-i18n="colAction">Anfrage</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- 322 Winter -->
+              <tr class="sched-row" data-category="winter all">
+                <td><span class="turnus-badge">322</span></td>
+                <td><span class="date-range">30.01. – 27.02.2027</span></td>
+                <td><strong>Familienorientierte Winter-Reha</strong></td>
+                <td><span class="badge-tag winter">⛷️ Skifahren & Alpinsport</span></td>
+                <td><button class="btn-primary btn-apply-turnus" data-turnus-info="Turnus 322 (30.01-27.02.2027 Winter-Reha)" data-i18n="btnApplyTurnus">Auswählen</button></td>
+              </tr>
+              <!-- Transfer KfH -->
+              <tr class="sched-row" data-category="youth all">
+                <td><span class="turnus-badge">KfH</span></td>
+                <td><span class="date-range">16.01. – 23.01.2027</span></td>
+                <td><strong>„Endlich Erwachsen“ Transferprogramm des KfH</strong></td>
+                <td><span class="badge-tag">🎯 Transition für junge Erwachsene</span></td>
+                <td><button class="btn-primary btn-apply-turnus" data-turnus-info="KfH Programm (16.01-23.01.2027)" data-i18n="btnApplyTurnus">Auswählen</button></td>
+              </tr>
+              <!-- 323 Toddler -->
+              <tr class="sched-row" data-category="toddler all">
+                <td><span class="turnus-badge">323</span></td>
+                <td><span class="date-range">27.02. – 27.03.2027</span></td>
+                <td><strong>Familienorientierte Reha für Kleinkinder</strong></td>
+                <td><span class="badge-tag">👶 Patient:innen 0–6 Jahre</span></td>
+                <td><button class="btn-primary btn-apply-turnus" data-turnus-info="Turnus 323 (27.02-27.03.2027 Kleinkindreha)" data-i18n="btnApplyTurnus">Auswählen</button></td>
+              </tr>
+              <!-- 324 School -->
+              <tr class="sched-row" data-category="school all">
+                <td><span class="turnus-badge">324</span></td>
+                <td><span class="date-range">27.03. – 24.04.2027</span></td>
+                <td><strong>Familienorientierte Reha (FOR)</strong></td>
+                <td><span class="badge-tag">🏫 Inkl. Heilstättenschule</span></td>
+                <td><button class="btn-primary btn-apply-turnus" data-turnus-info="Turnus 324 (27.03-24.04.2027 Familienreha)" data-i18n="btnApplyTurnus">Auswählen</button></td>
+              </tr>
+              <!-- 325 School -->
+              <tr class="sched-row" data-category="school all">
+                <td><span class="turnus-badge">325</span></td>
+                <td><span class="date-range">24.04. – 22.05.2027</span></td>
+                <td><strong>Familienorientierte Reha (FOR)</strong></td>
+                <td><span class="badge-tag">🏫 Inkl. Heilstättenschule</span></td>
+                <td><button class="btn-primary btn-apply-turnus" data-turnus-info="Turnus 325 (24.04-22.05.2027 Familienreha)" data-i18n="btnApplyTurnus">Auswählen</button></td>
+              </tr>
+              <!-- 326 Dialysis -->
+              <tr class="sched-row" data-category="dialysis school all">
+                <td><span class="turnus-badge">326</span></td>
+                <td><span class="date-range">22.05. – 19.06.2027</span></td>
+                <td><strong>Familienorientierte Reha HD</strong></td>
+                <td><span class="badge-tag dialysis" data-i18n="badgeDialysis">💉 Hämodialyse möglich</span></td>
+                <td><button class="btn-primary btn-apply-turnus" data-turnus-info="Turnus 326 (22.05-19.06.2027 Reha HD)" data-i18n="btnApplyTurnus">Auswählen</button></td>
+              </tr>
+              <!-- 327 School -->
+              <tr class="sched-row" data-category="school all">
+                <td><span class="turnus-badge">327</span></td>
+                <td><span class="date-range">19.06. – 17.07.2027</span></td>
+                <td><strong>Familienorientierte Reha (Sommerstart)</strong></td>
+                <td><span class="badge-tag">☀️ Bergsommer & Naturaktivität</span></td>
+                <td><button class="btn-primary btn-apply-turnus" data-turnus-info="Turnus 327 (19.06-17.07.2027 Familienreha)" data-i18n="btnApplyTurnus">Auswählen</button></td>
+              </tr>
+              <!-- 328 Youth -->
+              <tr class="sched-row" data-category="youth dialysis all">
+                <td><span class="turnus-badge">328</span></td>
+                <td><span class="date-range">17.07. – 07.08.2027</span></td>
+                <td><strong>Jugendreha (Eigenständig & ohne Familie)</strong></td>
+                <td><span class="badge-tag dialysis">💉 Hämodialyse & Klettersport</span></td>
+                <td><button class="btn-primary btn-apply-turnus" data-turnus-info="Turnus 328 (17.07-07.08.2027 Jugendreha)" data-i18n="btnApplyTurnus">Auswählen</button></td>
+              </tr>
+              <!-- 329 School -->
+              <tr class="sched-row" data-category="school all">
+                <td><span class="turnus-badge">329</span></td>
+                <td><span class="date-range">14.08. – 11.09.2027</span></td>
+                <td><strong>Familienorientierte Reha (Sommerturnus)</strong></td>
+                <td><span class="badge-tag">🏔️ Vollbetreuung für Eltern & Geschwister</span></td>
+                <td><button class="btn-primary btn-apply-turnus" data-turnus-info="Turnus 329 (14.08-11.09.2027 Familienreha)" data-i18n="btnApplyTurnus">Auswählen</button></td>
+              </tr>
+              <!-- 330 School -->
+              <tr class="sched-row" data-category="school all">
+                <td><span class="turnus-badge">330</span></td>
+                <td><span class="date-range">11.09. – 09.10.2027</span></td>
+                <td><strong>Familienorientierte Reha (Herbstturnus)</strong></td>
+                <td><span class="badge-tag">🏫 Schulbegleitung & Therapiegarten</span></td>
+                <td><button class="btn-primary btn-apply-turnus" data-turnus-info="Turnus 330 (11.09-09.10.2027 Familienreha)" data-i18n="btnApplyTurnus">Auswählen</button></td>
+              </tr>
+              <!-- 331 Toddler -->
+              <tr class="sched-row" data-category="toddler all">
+                <td><span class="turnus-badge">331</span></td>
+                <td><span class="date-range">30.10. – 27.11.2027</span></td>
+                <td><strong>Familienorientierte Reha für Kleinkinder</strong></td>
+                <td><span class="badge-tag">👶 Patient:innen 0–6 Jahre</span></td>
+                <td><button class="btn-primary btn-apply-turnus" data-turnus-info="Turnus 331 (30.10-27.11.2027 Kleinkindreha)" data-i18n="btnApplyTurnus">Auswählen</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOLISTIC THERAPEUTIC & MEDICAL CARE MATRIX -->
+    <section class="care-section" id="care">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag" data-i18n="navTherapy">Ganzheitliche Betreuung</span>
+          <h2 class="section-title" data-i18n="careTitle">Interdisziplinäre Spitzenmedizin & Menschlichkeit</h2>
+          <p class="section-desc" data-i18n="careSubtitle">
+            Am Ederhof arbeiten Medizin, Pflege, Therapie, Pädagogik und Psychologie nahtlos Hand in Hand.
+          </p>
+        </div>
+
+        <div class="care-grid">
+          <!-- Card 1 -->
+          <div class="care-card">
+            <div class="care-icon-box">🩺</div>
+            <h3 data-i18n="careCard1Title">Ärztlicher Beirat & Spitzenmedizin</h3>
+            <p data-i18n="careCard1Desc">
+              13 renommierte Fachärztinnen und Fachärzte für Pädiatrie und pädiatrische Nephrologie/Gastroenterologie aus führenden Transplantationszentren Deutschlands und Österreichs.
+            </p>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="care-card">
+            <div class="care-icon-box">💉</div>
+            <h3 data-i18n="careCard2Title">Vor-Ort Dialysezentrum</h3>
+            <p data-i18n="careCard2Desc">
+              Modernste Hämodialyse und Peritonealdialyse direkt in der Klinik in Iselsberg. So können auch nierenkranke Kinder auf der Warteliste sorgenfrei zur Reha reisen.
+            </p>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="care-card">
+            <div class="care-icon-box">🏃</div>
+            <h3 data-i18n="careCard3Title">Therapieformen & Motorik</h3>
+            <p data-i18n="careCard3Desc">
+              Physiotherapie, Ergotherapie, Osteopathie, Psychomotorik und Sporttherapie zur Wiedererlangung von Bewegungsfreude und Kraft.
+            </p>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="care-card">
+            <div class="care-icon-box">🧠</div>
+            <h3 data-i18n="careCard4Title">Psychotherapie & Seelische Stärkung</h3>
+            <p data-i18n="careCard4Desc">
+              Verarbeitung von Trauma, Krankenhausängsten und Ungewissheit für betroffene Kinder, entlastende Gespräche für Eltern und gezielte Betreuung für Geschwister.
+            </p>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="care-card">
+            <div class="care-icon-box">🥗</div>
+            <h3 data-i18n="careCard5Title">Ernährungsberatung & Esstraining</h3>
+            <p data-i18n="careCard5Desc">
+              Erfahrene Diätologinnen trainieren das Essen nach langer Sondenernährung und schulen im hygienischen Umgang mit Nahrungsmitteln unter Immunsuppression.
+            </p>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="care-card">
+            <div class="care-icon-box">🌲</div>
+            <h3 data-i18n="careCard6Title">Natur, Heilwald & Therapiegarten</h3>
+            <p data-i18n="careCard6Desc">
+              Einzigartige Lage auf 1.150 m Seehöhe mit eigenem Heilwald, barrierefreiem Therapiegarten, Erlebnis-Spielplatz und kreativem Bauwagen.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LEADERSHIP & TEAM -->
+    <section class="team-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag" data-i18n="navAbout">Unser Leitungsteam</span>
+          <h2 class="section-title" data-i18n="teamTitle">Die Leitung des Ederhofs</h2>
+          <p class="section-desc" data-i18n="teamSubtitle">Verantwortung mit Herz, Kompetenz und Weitblick.</p>
+        </div>
+
+        <div class="team-grid">
+          <!-- Member 1 -->
+          <div class="team-card">
+            <div class="team-img-wrap">
+              <img src="images/dr_eckhard_nagel.jpg" alt="Prof. Dr. mult. Eckhard Nagel" class="team-img">
+            </div>
+            <div class="team-info">
+              <span class="team-role" data-i18n="roleNagel">Ärztliche Direktion</span>
+              <h4 class="team-name" data-i18n="nameNagel">Prof. Dr. mult. Eckhard Nagel</h4>
+              <p class="team-desc" data-i18n="descNagel">
+                Renommierter Transplantationsmediziner, Chirurg und Medizinethiker; langjähriger Wegbegleiter von Prof. Rudolf Pichlmayr.
+              </p>
+            </div>
+          </div>
+
+          <!-- Member 2 -->
+          <div class="team-card">
+            <div class="team-img-wrap">
+              <img src="images/robert_weichselbraun.jpg" alt="Robert Weichselbraun, MBA" class="team-img">
+            </div>
+            <div class="team-info">
+              <span class="team-role" data-i18n="roleWeichselbraun">Geschäftsführung</span>
+              <h4 class="team-name" data-i18n="nameWeichselbraun">Robert Weichselbraun, MBA</h4>
+              <p class="team-desc" data-i18n="descWeichselbraun">
+                Leitet seit vielen Jahren die wirtschaftlichen und organisatorischen Geschicke der Klinik mit Weitblick und familiärem Geist.
+              </p>
+            </div>
+          </div>
+
+          <!-- Member 3 -->
+          <div class="team-card">
+            <div class="team-img-wrap">
+              <img src="images/doris_etzelsberger.jpg" alt="Doris Etzelsberger" class="team-img">
+            </div>
+            <div class="team-info">
+              <span class="team-role" data-i18n="roleEtzelsberger">Pflegedienstleitung</span>
+              <h4 class="team-name" data-i18n="nameEtzelsberger">Doris Etzelsberger</h4>
+              <p class="team-desc" data-i18n="descEtzelsberger">
+                Verantwortet das einfühlsame, hochqualifizierte Pflegeteam, das Tag und Nacht für das Wohlbefinden der Kinder sorgt.
+              </p>
+            </div>
+          </div>
+
+          <!-- Member 4 -->
+          <div class="team-card">
+            <div class="team-img-wrap">
+              <img src="images/team_dr_kuwertz.jpg" alt="Dr. Eberhard Kuwertz-Bröking" class="team-img">
+            </div>
+            <div class="team-info">
+              <span class="team-role" data-i18n="roleKuwertz">Sprecher des Ärztlichen Beirats</span>
+              <h4 class="team-name" data-i18n="nameKuwertz">Dr. Eberhard Kuwertz-Bröking</h4>
+              <p class="team-desc" data-i18n="descKuwertz">
+                Ehemaliger Chefarzt der Kindernephrologie am Universitätsklinikum Münster und engagierter Förderer der jungen Patientinnen und Patienten.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- APPLICATION STEPS & DIGITAL PACKING CHECKLIST -->
+    <section class="application-section" id="steps">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag" data-i18n="navApplication">Antrag & Ablauf</span>
+          <h2 class="section-title" data-i18n="stepsTitle">In 5 Schritten zu Eurer Reha auf dem Ederhof</h2>
+          <p class="section-desc" data-i18n="stepsSubtitle">
+            Der Ederhof ist als offizielle Krankenanstalt anerkannt. Die Kosten für Patient:innen und Begleitpersonen werden bei Bewilligung von den Kostenträgern (z.B. Deutsche Rentenversicherung oder Krankenkassen in DE & AT) übernommen.
+          </p>
+        </div>
+
+        <!-- 5 Steps Horizontal Container -->
+        <div class="steps-container">
+          <div class="step-card">
+            <div class="step-num-circle">1</div>
+            <h4 data-i18n="step1Title">Reha-Bedarf feststellen</h4>
+            <p data-i18n="step1Desc">Sprechen Sie Ihr behandelndes Transplantationszentrum oder den Kinderarzt an. Meist wird der Bedarf vor oder 3-6 Monate nach Transplantation bescheinigt.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-num-circle">2</div>
+            <h4 data-i18n="step2Title">Wunsch- und Wahlrecht nutzen</h4>
+            <p data-i18n="step2Desc">Geben Sie auf dem Reha-Antrag explizit das 'Rehabilitationszentrum Ederhof, Iselsberg-Stronach' als Wunschklinik an. Sie haben gesetzlichen Anspruch darauf!</p>
+          </div>
+          <div class="step-card">
+            <div class="step-num-circle">3</div>
+            <h4 data-i18n="step3Title">Antrag bei Kostenträger einreichen</h4>
+            <p data-i18n="step3Desc">Antrag bei der Deutschen Rentenversicherung (DRV) oder Krankenkasse (bzw. PVA/ÖGK in Österreich) einreichen. Gerne hilft unser Beratungsteam bei Formularen.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-num-circle">4</div>
+            <h4 data-i18n="step4Title">Terminabstimmung mit dem Ederhof</h4>
+            <p data-i18n="step4Desc">Sobald die Bewilligung vorliegt (oder bereits währenddessen), reservieren wir gemeinsam den passenden Turnus für Ihre Familie.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-num-circle">5</div>
+            <h4 data-i18n="step5Title">Entspannt anreisen & aufatmen</h4>
+            <p data-i18n="step5Desc">Am Anreisesamstag ab 14:00 Uhr empfängt Sie unser Team persönlich. Keine Hektik, kein Stress – Ihre Auszeit beginnt.</p>
+          </div>
+        </div>
+
+        <!-- Interactive Digital Packing Checklist -->
+        <div class="checklist-card">
+          <div class="check-header">
+            <div>
+              <h3 data-i18n="checkTitle">Interaktive Pack-Checkliste für Ihre Reha</h3>
+              <p class="section-desc" data-i18n="checkSubtitle">Haken Sie ab, was Sie schon eingepackt haben. Ihr Fortschritt wird automatisch im Browser gespeichert.</p>
+            </div>
+            <div class="check-progress-wrapper">
+              <div class="progress-info">
+                <span data-i18n="checkProgressLabel">Gepackt:</span>
+                <span id="checklist-progress-text">0 / 11 gepackt (0%)</span>
+              </div>
+              <div class="progress-bar-bg">
+                <div class="progress-bar-fill" id="checklist-progress-bar"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="checklist-grid">
+            <!-- Group 1 -->
+            <div class="check-group">
+              <h5 data-i18n="checkCat1">🩺 Wichtigste medizinische Unterlagen</h5>
+              <ul class="check-items-list">
+                <li>
+                  <label class="check-item-label" for="cb-item-1">
+                    <input type="checkbox" id="cb-item-1" class="checklist-input">
+                    <span data-i18n="checkItem1">Ausreichender Medikamentenvorrat für 4 Wochen (inkl. Reserve)</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="check-item-label" for="cb-item-2">
+                    <input type="checkbox" id="cb-item-2" class="checklist-input">
+                    <span data-i18n="checkItem2">Aktueller Arztbrief / Epikrise des Transplantationszentrums</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="check-item-label" for="cb-item-3">
+                    <input type="checkbox" id="cb-item-3" class="checklist-input">
+                    <span data-i18n="checkItem3">Impfpässe des Kindes und aller Begleitpersonen</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="check-item-label" for="cb-item-4">
+                    <input type="checkbox" id="cb-item-4" class="checklist-input">
+                    <span data-i18n="checkItem4">Krankenkassenkarte / EHIC & Bewilligungsbescheid des Kostenträgers</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="check-item-label" for="cb-item-5">
+                    <input type="checkbox" id="cb-item-5" class="checklist-input">
+                    <span data-i18n="checkItem5">Blutdruckmessgerät & Blutzuckermessgerät (falls verordnet)</span>
+                  </label>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Group 2 -->
+            <div class="check-group">
+              <h5 data-i18n="checkCat2">📚 Schule & Lernen</h5>
+              <ul class="check-items-list">
+                <li>
+                  <label class="check-item-label" for="cb-item-6">
+                    <input type="checkbox" id="cb-item-6" class="checklist-input">
+                    <span data-i18n="checkItem6">Schulbücher und Arbeitspläne der Heimatschule</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="check-item-label" for="cb-item-7">
+                    <input type="checkbox" id="cb-item-7" class="checklist-input">
+                    <span data-i18n="checkItem7">Mäppchen, Schreibhefte und Zeichenutensilien</span>
+                  </label>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Group 3 -->
+            <div class="check-group">
+              <h5 data-i18n="checkCat3">👟 Kleidung & Alpine Ausrüstung</h5>
+              <ul class="check-items-list">
+                <li>
+                  <label class="check-item-label" for="cb-item-8">
+                    <input type="checkbox" id="cb-item-8" class="checklist-input">
+                    <span data-i18n="checkItem8">Feste Wanderschuhe & wetterfeste Outdoor-Jacken</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="check-item-label" for="cb-item-9">
+                    <input type="checkbox" id="cb-item-9" class="checklist-input">
+                    <span data-i18n="checkItem9">Badebekleidung für Wassertherapie / Hallenbadbesuche</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="check-item-label" for="cb-item-10">
+                    <input type="checkbox" id="cb-item-10" class="checklist-input">
+                    <span data-i18n="checkItem10">Bequeme Sport- und Hallenschuhe (mit heller Sohle)</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="check-item-label" for="cb-item-11">
+                    <input type="checkbox" id="cb-item-11" class="checklist-input">
+                    <span data-i18n="checkItem11">Winter-Reha: Warme Skikleidung, Handschuhe, Helm & Thermounterwäsche</span>
+                  </label>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="check-actions-bar">
+            <button class="btn-secondary" id="checklist-reset-btn" data-i18n="checkBtnReset">Checkliste zurücksetzen</button>
+            <button class="btn-primary" id="checklist-print-btn" data-i18n="checkBtnPrint">Checkliste drucken</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INSPIRING FAMILY STORIES (CAROUSEL) -->
+    <section class="stories-section" id="stories">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag" data-i18n="navStories">Erfahrungsberichte</span>
+          <h2 class="section-title" data-i18n="storiesTitle">Stimmen, die Mut machen</h2>
+          <p class="section-desc" data-i18n="storiesSubtitle">
+            Echte Erfahrungen von Familien und Jugendlichen, deren Leben durch den Ederhof neue Kraft gewonnen hat.
+          </p>
+        </div>
+
+        <div class="stories-carousel-wrap">
+          <div class="story-card">
+            <div class="story-media">
+              <img src="images/fam_waninger.jpg" alt="Familie am Ederhof" class="story-img" id="story-img">
+            </div>
+            <div class="story-content">
+              <div class="quote-mark">“</div>
+              <p class="story-quote" id="story-quote" data-i18n="quote2Text">
+                „Endlich wurde uns Eltern die Angst genommen. Wie selbstverständlich tauschen sich die Kinder beim Spielen aus, zeigen sich gegenseitig ihre Narben und reden darüber, wer welche Medis nimmt. Uns Eltern geht es danach einfach besser!“
+              </p>
+              <div>
+                <h4 class="story-author-name" id="story-author-name" data-i18n="quote2Author">Familie Wanninger</h4>
+                <div class="story-author-detail" id="story-author-detail" data-i18n="quote2Detail">Bereits dreimal am Ederhof; Sohn Hannes ist lebertransplantiert.</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Controls -->
+          <div class="carousel-controls">
+            <button class="carousel-btn" id="carousel-prev" aria-label="Vorherige Geschichte">&larr;</button>
+            <div class="carousel-dots" id="carousel-dots"></div>
+            <button class="carousel-btn" id="carousel-next" aria-label="Nächste Geschichte">&rarr;</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIRTUAL TOUR & CAMPUS GALLERY -->
+    <section class="gallery-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Fotogalerie</span>
+          <h2 class="section-title" data-i18n="galleryTitle">Ein Rundgang über den Ederhof</h2>
+          <p class="section-desc" data-i18n="gallerySubtitle">
+            Eingebettet in die spektakuläre Kulisse der Lienzer Dolomiten auf 1.150 m Seehöhe.
+          </p>
+        </div>
+
+        <div class="gallery-tabs">
+          <button class="gal-tab-btn active" data-cat="all" data-i18n="galTabAll">Alle</button>
+          <button class="gal-tab-btn" data-cat="campus" data-i18n="galTabCampus">Gelände & Natur</button>
+          <button class="gal-tab-btn" data-cat="therapy" data-i18n="galTabTherapy">Therapie & Medizin</button>
+          <button class="gal-tab-btn" data-cat="winter" data-i18n="galTabWinter">Winter & Sport</button>
+          <button class="gal-tab-btn" data-cat="community" data-i18n="galTabCommunity">Leben am Hof</button>
+        </div>
+
+        <div class="gallery-grid">
+          <div class="gal-item" data-cat="campus">
+            <img src="images/therapiehaus.jpg" alt="Therapiehaus Ederhof" class="gal-img">
+            <div class="gal-overlay">
+              <span class="gal-caption">Modernes Therapiehaus im alpinen Holzbaustil</span>
+            </div>
+          </div>
+          <div class="gal-item" data-cat="campus">
+            <img src="images/alps_panorama.jpg" alt="Panorama Osttirol" class="gal-img">
+            <div class="gal-overlay">
+              <span class="gal-caption">Panoramablick auf die Lienzer Dolomiten</span>
+            </div>
+          </div>
+          <div class="gal-item" data-cat="therapy">
+            <img src="images/dialysis_unit.jpg" alt="Dialysestation Ederhof" class="gal-img">
+            <div class="gal-overlay">
+              <span class="gal-caption">In-House Hämodialysestation</span>
+            </div>
+          </div>
+          <div class="gal-item" data-cat="winter">
+            <img src="images/winter_skiing.jpg" alt="Skikurs Winterreha" class="gal-img">
+            <div class="gal-overlay">
+              <span class="gal-caption">Skifahren lernen in der Winter-Reha</span>
+            </div>
+          </div>
+          <div class="gal-item" data-cat="therapy">
+            <img src="images/kids_therapy.jpg" alt="Therapie für Kleinkinder" class="gal-img">
+            <div class="gal-overlay">
+              <span class="gal-caption">Einfühlsame Bewegungs- und Spieltherapie</span>
+            </div>
+          </div>
+          <div class="gal-item" data-cat="community">
+            <img src="images/ederhof_team.jpg" alt="Das gesamte Ederhof-Team" class="gal-img">
+            <div class="gal-overlay">
+              <span class="gal-caption">Unser multiprofessionelles Mitarbeiterteam</span>
+            </div>
+          </div>
+          <div class="gal-item" data-cat="winter">
+            <img src="images/winter_landscape.jpg" alt="Winterlandschaft Iselsberg" class="gal-img">
+            <div class="gal-overlay">
+              <span class="gal-caption">Heilsame Schneelandschaft auf 1.150 m Seehöhe</span>
+            </div>
+          </div>
+          <div class="gal-item" data-cat="community">
+            <img src="images/luise_falao.jpg" alt="Familie am Ederhof" class="gal-img">
+            <div class="gal-overlay">
+              <span class="gal-caption">Zusammenhalt und Geborgenheit für die ganze Familie</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROMINENT AMBASSADORS -->
+    <section class="ambassadors-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Gemeinschaft</span>
+          <h2 class="section-title" data-i18n="ambassadorsTitle">Prominente Botschafter & Partner</h2>
+          <p class="section-desc" data-i18n="ambassadorsSubtitle">Starke Persönlichkeiten, die sich mit ganzem Herzen für den Ederhof einsetzen.</p>
+        </div>
+
+        <div class="ambassadors-grid">
+          <!-- Roland Kaiser -->
+          <div class="ambassador-card">
+            <div class="amb-img-wrap">
+              <img src="images/roland_kaiser.jpg" alt="Roland Kaiser am Ederhof" class="amb-img">
+            </div>
+            <div class="amb-body">
+              <h4 class="amb-name" data-i18n="ambRolandName">Roland Kaiser</h4>
+              <span class="amb-role" data-i18n="ambRolandRole">Sänger & Schirmherr</span>
+              <p class="amb-quote" data-i18n="ambRolandQuote">
+                „Wenn die Kinder spüren, dass sie nicht alleine gelassen werden, gibt ihnen das die Kraft, durch die Transplantation einen neuen Anfang zu wagen.“ (Selbst lungentransplantiert, regelmäßiger Gast auf dem Ederhof)
+              </p>
+            </div>
+          </div>
+
+          <!-- Milky Chance -->
+          <div class="ambassador-card">
+            <div class="amb-img-wrap">
+              <img src="images/milky_chance.png" alt="Milky Chance" class="amb-img">
+            </div>
+            <div class="amb-body">
+              <h4 class="amb-name" data-i18n="ambMilkyName">Milky Chance</h4>
+              <span class="amb-role" data-i18n="ambMilkyRole">Internationale Musiker</span>
+              <p class="amb-quote" data-i18n="ambMilkyQuote">
+                „Wir haben in unserem Leben Glück gehabt und möchten dieses Glück teilen!“ (Clemens & Philipp unterstützen den Ederhof seit vielen Jahren)
+              </p>
+            </div>
+          </div>
+
+          <!-- Toni Kroos Stiftung -->
+          <div class="ambassador-card">
+            <div class="amb-img-wrap">
+              <img src="images/therapiehaus.jpg" alt="Toni Kroos Stiftung" class="amb-img">
+            </div>
+            <div class="amb-body">
+              <h4 class="amb-name" data-i18n="ambKroosName">Toni Kroos Stiftung</h4>
+              <span class="amb-role" data-i18n="ambKroosRole">Förderpartner</span>
+              <p class="amb-quote" data-i18n="ambKroosQuote">
+                Unterstützung von schwerkranken Kindern und deren Familien durch gezielte Förderung therapeutischer Projekte am Ederhof.
+              </p>
+            </div>
+          </div>
+
+          <!-- Tamara Schwab -->
+          <div class="ambassador-card">
+            <div class="amb-img-wrap">
+              <img src="images/nature_activity.jpg" alt="Tamara Schwab" class="amb-img">
+            </div>
+            <div class="amb-body">
+              <h4 class="amb-name" data-i18n="ambSchwabName">Tamara Schwab</h4>
+              <span class="amb-role" data-i18n="ambSchwabRole">Autorin & Herztransplantierte</span>
+              <p class="amb-quote" data-i18n="ambSchwabQuote">
+                Besucht den Ederhof regelmäßig, um Jugendlichen Mut zu machen, an ihre Zukunft zu glauben.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DONATION & IMPACT SECTION -->
+    <section class="donation-section" id="donations">
+      <div class="container">
+        <div class="donation-box">
+          <div class="section-header" style="margin-bottom: 2rem;">
+            <span class="section-tag" data-i18n="donateSectionBadge">Gemeinnützig & Steuerlich absetzbar</span>
+            <h2 class="section-title" data-i18n="donateTitle">Ihre Spende schenkt neue Lebensfreude</h2>
+            <p class="section-desc" data-i18n="donateSubtitle">
+              Die gesetzlichen Kostenträger decken nur die medizinische Basisversorgung ab. Besondere Angebote wie der barrierefreie Therapiegarten, die Geschwisterprojekte, die Heilstättenschule und der Skikurs werden ausschließlich über Spenden finanziert.
+            </p>
+          </div>
+
+          <h4 style="text-align: center; margin-bottom: 1rem;" data-i18n="donateCalcTitle">Was Ihre Spende konkret bewirkt:</h4>
+
+          <!-- Interactive Impact Cards -->
+          <div class="impact-cards-grid">
+            <div class="impact-card active">
+              <div class="impact-amount" data-i18n="donation25">25 €</div>
+              <p class="impact-desc" data-i18n="donation25Desc">
+                Finanziert Kunst-, Werk- und Spielmaterial für die Schule und die Geschwisterwerkstatt.
+              </p>
+            </div>
+            <div class="impact-card">
+              <div class="impact-amount" data-i18n="donation50">50 €</div>
+              <p class="impact-desc" data-i18n="donation50Desc">
+                Ermöglicht eine Einheit tiergestützte Therapie oder sensorisches Gartentraining.
+              </p>
+            </div>
+            <div class="impact-card">
+              <div class="impact-amount" data-i18n="donation100">100 €</div>
+              <p class="impact-desc" data-i18n="donation100Desc">
+                Schenkt einem Geschwisterkind einen ganzen Tag gezielte psychologische Stärkung.
+              </p>
+            </div>
+            <div class="impact-card">
+              <div class="impact-amount" data-i18n="donation250">250 €</div>
+              <p class="impact-desc" data-i18n="donation250Desc">
+                Finanziert die alpine Spezialausrüstung für die Winter-Reha eines transplantierten Kindes.
+              </p>
+            </div>
+          </div>
+
+          <!-- Direct Bank Accounts with 1-Click Copy -->
+          <div class="donation-accounts-grid">
+            <div class="account-card">
+              <h5 class="account-title" data-i18n="accountFoerderverein">Förderverein Ederhof e.V.</h5>
+              <div>IBAN: <span class="iban-code">DE27 3606 0295 1000 2740 26</span></div>
+              <div style="font-size: 0.85rem; color: var(--text-muted);">BIC: GENODED1BBE • Volksbank Kraichgau</div>
+              <button class="btn-secondary btn-copy-iban" style="margin-top: 1rem;" data-iban="DE27360602951000274026" data-i18n="copyIban">IBAN kopieren</button>
+            </div>
+
+            <div class="account-card">
+              <h5 class="account-title" data-i18n="accountStiftung">Rudolf Pichlmayr-Stiftung</h5>
+              <div>IBAN: <span class="iban-code">DE12 2507 0024 0570 0125 00</span></div>
+              <div style="font-size: 0.85rem; color: var(--text-muted);">BIC: DEUTDEDBHAN • Deutsche Bank Hannover</div>
+              <button class="btn-secondary btn-copy-iban" style="margin-top: 1rem;" data-iban="DE12250700240570012500" data-i18n="copyIban">IBAN kopieren</button>
+            </div>
+          </div>
+
+          <p style="text-align: center; margin-top: 2rem; font-size: 0.85rem; color: var(--text-muted);" data-i18n="taxDeductibleNote">
+            Beide Träger sind als gemeinnützig anerkannt. Spenden sind in Deutschland und Österreich steuerlich voll absetzbar.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- LIVE SEARCH FAQ SECTION -->
+    <section class="faq-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Wissenswertes</span>
+          <h2 class="section-title" data-i18n="faqTitle">Häufig gestellte Fragen (FAQ)</h2>
+          <p class="section-desc" data-i18n="faqSubtitle">
+            Schnelle Antworten auf die wichtigsten Fragen von Eltern und Betroffenen.
+          </p>
+        </div>
+
+        <div class="faq-search-wrap">
+          <span class="faq-search-icon">🔍</span>
+          <input type="text" id="faq-search-input" class="faq-search-input" placeholder="Frage durchsuchen (z.B. Kosten, Dialyse, Geschwister...)" data-i18n-placeholder="faqSearchPlaceholder">
+        </div>
+
+        <div class="faq-accordion">
+          <!-- Item 1 -->
+          <div class="faq-item active">
+            <button class="faq-question">
+              <span data-i18n="faqQ1">Wer kann zur Reha auf den Ederhof kommen?</span>
+              <span class="faq-icon">&#9662;</span>
+            </button>
+            <div class="faq-answer">
+              <p data-i18n="faqA1">
+                Der Ederhof richtet sich an Kinder und Jugendliche (0-18 Jahre) mit chronischen Erkrankungen an Leber, Niere, Herz, Lunge oder Bauchspeicheldrüse, die eine Organtransplantation erfordern oder bereits transplantiert sind. Auch Kinder an der Dialyse (Hämodialyse und Peritonealdialyse) werden bei uns bestens betreut.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="faq-item">
+            <button class="faq-question">
+              <span data-i18n="faqQ2">Wie lange sollte die Transplantation her sein?</span>
+              <span class="faq-icon">&#9662;</span>
+            </button>
+            <div class="faq-answer">
+              <p data-i18n="faqA2">
+                In der Regel nehmen wir Kinder ab ca. 3 bis 6 Monaten nach erfolgreicher Transplantation auf. Die Wundheilung sollte abgeschlossen sein und das Kind muss rehafähig und stabil eingestellt sein.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="faq-item">
+            <button class="faq-question">
+              <span data-i18n="faqQ3">Dürfen Eltern und Geschwister mitkommen?</span>
+              <span class="faq-icon">&#9662;</span>
+            </button>
+            <div class="faq-answer">
+              <p data-i18n="faqA3">
+                Ja, unbedingt! Unser Konzept ist familienorientiert (FOR). Eine schwere Krankheit betrifft immer das ganze Familiensystem. Geschwisterkinder ('Schattenkinder') erhalten bei uns ein eigenes, speziell auf sie zugeschnittenes Programm. Lediglich die Jugendreha findet bewusst ohne Eltern statt, um die Selbstständigkeit zu fördern.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="faq-item">
+            <button class="faq-question">
+              <span data-i18n="faqQ4">Wer übernimmt die Kosten für den Aufenthalt?</span>
+              <span class="faq-icon">&#9662;</span>
+            </button>
+            <div class="faq-answer">
+              <p data-i18n="faqA4">
+                Bei Vorliegen einer Bewilligung übernimmt der zuständige Kostenträger (in Deutschland zumeist die Deutsche Rentenversicherung DRV oder gesetzliche/private Krankenkassen, in Österreich PVA oder ÖGK) die Kosten für das Patient Kind sowie für notwendige Begleitpersonen und Geschwister.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 5 -->
+          <div class="faq-item">
+            <button class="faq-question">
+              <span data-i18n="faqQ5">Was ist, wenn mein Kind während der Reha Dialyse benötigt?</span>
+              <span class="faq-icon">&#9662;</span>
+            </button>
+            <div class="faq-answer">
+              <p data-i18n="faqA5">
+                Der Ederhof verfügt über eigene Dialyseplätze für Hämodialyse direkt im Haus, betreut durch erfahrene Fachkräfte und kooperierende Nephrologen. Für Peritonealdialyse (CAPD/APD) sind wir vollumfänglich ausgestattet.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 6 -->
+          <div class="faq-item">
+            <button class="faq-question">
+              <span data-i18n="faqQ6">Verpasst mein Kind in der 4-wöchigen Reha Schulstoff?</span>
+              <span class="faq-icon">&#9662;</span>
+            </button>
+            <div class="faq-answer">
+              <p data-i18n="faqA6">
+                Nein. An unserer hauseigenen Heilstättenschule unterrichten ausgebildete Pädagoginnen in Kleinstgruppen nach den Lehrplänen der jeweiligen Heimatschule. Bringen Sie einfach die Arbeitspläne mit.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT, LEAFLET MAP & CONSULTATION -->
+    <section class="contact-section" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag" data-i18n="navContact">Persönliche Beratung</span>
+          <h2 class="section-title" data-i18n="contactTitle">Wir sind persönlich für Sie da</h2>
+          <p class="section-desc" data-i18n="contactSubtitle">
+            Haben Sie Fragen zum Antrag, zur medizinischen Eignung oder zu den Terminen? Daniel Bernsteiner und Claudia Jester beraten Sie herzlich und diskret.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Info & Interactive Alpine Map -->
+          <div class="contact-info-card">
+            <h3>Rehabilitationszentrum Ederhof</h3>
+            <p style="color: var(--text-muted); margin-top: 0.25rem;">Trägerschaft: Rudolf Pichlmayr-Stiftung</p>
+
+            <ul class="contact-details-list">
+              <li class="contact-detail-item">
+                <div class="contact-icon-bubble">📍</div>
+                <div>
+                  <strong>Anschrift:</strong><br>
+                  Stronach 7, 9992 Iselsberg-Stronach, Osttirol, Österreich
+                </div>
+              </li>
+              <li class="contact-detail-item">
+                <div class="contact-icon-bubble">📞</div>
+                <div>
+                  <strong>Telefon:</strong><br>
+                  <a href="tel:+43485269990" style="font-weight: 700; color: var(--primary);">+43 4852 69 990</a><br>
+                  <span style="font-size: 0.85rem; color: var(--text-muted);">Fax: +43 4852 69 990 28</span>
+                </div>
+              </li>
+              <li class="contact-detail-item">
+                <div class="contact-icon-bubble">✉️</div>
+                <div>
+                  <strong>E-Mail:</strong><br>
+                  <a href="mailto:info@ederhof.eu" style="font-weight: 700; color: var(--primary);">info@ederhof.eu</a>
+                </div>
+              </li>
+              <li class="contact-detail-item">
+                <div class="contact-icon-bubble">🕒</div>
+                <div>
+                  <strong>Bürozeiten:</strong><br>
+                  <span data-i18n="contactHours">Mo – Do: 08:00 – 16:00 Uhr | Fr: 08:00 – 13:00 Uhr</span>
+                </div>
+              </li>
+            </ul>
+
+            <!-- Interactive Alpine Leaflet Map -->
+            <div class="map-container-box">
+              <div id="ederhof-map" title="Interaktive Karte Ederhof"></div>
+            </div>
+          </div>
+
+          <!-- Direct Inquiry Form -->
+          <div class="contact-form-box">
+            <h3 style="margin-bottom: 1.5rem;">Unverbindliche Reha-Anfrage</h3>
+            <form id="direct-contact-form">
+              <div class="form-group">
+                <label for="contact-name" data-i18n="formName">Ihr vollständiger Name *</label>
+                <input type="text" id="contact-name" class="form-control" required placeholder="Vor- und Nachname">
+              </div>
+
+              <div class="form-group">
+                <label for="contact-email" data-i18n="formEmail">Ihre E-Mail-Adresse *</label>
+                <input type="email" id="contact-email" class="form-control" required placeholder="name@beispiel.de">
+              </div>
+
+              <div class="form-group">
+                <label for="contact-phone" data-i18n="formPhone">Telefonnummer für Rückfragen</label>
+                <input type="tel" id="contact-phone" class="form-control" placeholder="+49 / +43 ...">
+              </div>
+
+              <div class="form-group">
+                <label for="contact-child" data-i18n="formChildAge">Alter des Kindes & Organ / Diagnose</label>
+                <input type="text" id="contact-child" class="form-control" placeholder="z.B. 8 Jahre, Lebertransplantation">
+              </div>
+
+              <div class="form-group">
+                <label for="contact-msg" data-i18n="formMessage">Ihre Nachricht oder Fragen an uns...</label>
+                <textarea id="contact-msg" class="form-control" rows="4" placeholder="Wie können wir Ihnen weiterhelfen?"></textarea>
+              </div>
+
+              <button type="submit" class="btn-primary" style="width: 100%;" data-i18n="formSubmit">Unverbindliche Anfrage senden</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- SITE FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <!-- Emergency Medical Callout -->
+      <div class="emergency-notice">
+        <span>⚠️</span>
+        <span data-i18n="footerEmergency">
+          Medizinischer Notfall? Bei akuten Transplantationskomplikationen wenden Sie sich bitte sofort an Ihr primäres Transplantationszentrum oder den Notruf 112 / 144.
+        </span>
+      </div>
+
+      <div class="footer-top-grid">
+        <div class="footer-brand">
+          <div class="brand-wrapper">
+            <img src="images/ederhof_logo.png" alt="Ederhof Logo" style="height: 42px;">
+            <span class="brand-name">EDERHOF</span>
+          </div>
+          <p data-i18n="footerAbout">
+            Das Reha-Zentrum Ederhof ist eine anerkannte Sonderkrankenanstalt für Kinder, Jugendliche und Familien vor und nach Organtransplantation in Trägerschaft der Rudolf Pichlmayr-Stiftung.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h5 data-i18n="footerNavQuick">Schnellzugriff</h5>
+          <ul class="footer-links">
+            <li><a href="#about" data-i18n="navAbout">Der Ederhof</a></li>
+            <li><a href="#programs" data-i18n="navPrograms">Reha-Angebote</a></li>
+            <li><a href="#schedule" data-i18n="navSchedule">Reha-Termine 2027</a></li>
+            <li><a href="#care" data-i18n="navTherapy">Therapie & Begleitung</a></li>
+            <li><a href="#steps" data-i18n="navApplication">Antrag & Aufnahme</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Träger & Partner</h5>
+          <ul class="footer-links">
+            <li><a href="https://pichlmayr-stiftung.de" target="_blank" rel="noopener">Rudolf Pichlmayr-Stiftung</a></li>
+            <li><a href="#donations">Förderverein Ederhof e.V.</a></li>
+            <li><a href="#stories">Patientengeschichten</a></li>
+            <li><a href="#donations">Spenden & Helfen</a></li>
+            <li><a href="#contact">Anreise & Lage</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5 data-i18n="footerNavLegal">Rechtliches & Qualität</h5>
+          <ul class="footer-links">
+            <li><a href="https://www.ederhof.eu/impressum" target="_blank" rel="noopener" data-i18n="footerImprint">Impressum</a></li>
+            <li><a href="https://www.ederhof.eu/datenschutz" target="_blank" rel="noopener" data-i18n="footerPrivacy">Datenschutz (DSGVO)</a></li>
+            <li><a href="#" data-i18n="footerTerms">Qualitätsmanagement QMS-Reha</a></li>
+            <li><a href="#contact" data-i18n="navContact">Kontakt</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span data-i18n="footerRights">© 2026 Rehabilitationszentrum Ederhof. Alle Rechte vorbehalten.</span>
+        <span>Akkreditierte Krankenanstalt • QMS-Reha zertifiziert</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODALS -->
+  <!-- 1. Turnus Inquiry Modal -->
+  <div class="modal-overlay" id="contact-modal" aria-hidden="true" role="dialog">
+    <div class="modal-card">
+      <button class="modal-close-btn" id="contact-modal-close" aria-label="Schließen">&times;</button>
+      <h3 style="margin-bottom: 0.5rem;" data-i18n="btnApplyHeader">Reha auf dem Ederhof anfragen</h3>
+      <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.5rem;">
+        Sichern Sie sich Ihren Wunschtermin. Wir begleiten Sie von der Antragsstellung bis zur Anreise.
+      </p>
+
+      <form id="modal-inquiry-form">
+        <div class="form-group">
+          <label for="modal-turnus-select" data-i18n="formTurnusSelect">Bevorzugter Reha-Turnus 2027</label>
+          <input type="text" id="modal-turnus-select" class="form-control" readonly value="Turnus 324 (27.03 – 24.04.2027)">
+        </div>
+
+        <div class="form-group">
+          <label for="modal-name" data-i18n="formName">Ihr vollständiger Name *</label>
+          <input type="text" id="modal-name" class="form-control" required placeholder="Vor- und Nachname">
+        </div>
+
+        <div class="form-group">
+          <label for="modal-email" data-i18n="formEmail">Ihre E-Mail-Adresse *</label>
+          <input type="email" id="modal-email" class="form-control" required placeholder="name@beispiel.de">
+        </div>
+
+        <div class="form-group">
+          <label for="modal-phone" data-i18n="formPhone">Telefonnummer für Rückfragen</label>
+          <input type="tel" id="modal-phone" class="form-control" placeholder="+49 / +43 ...">
+        </div>
+
+        <div class="form-group">
+          <label for="modal-notes" data-i18n="formMessage">Ihre Nachricht oder Fragen an uns...</label>
+          <textarea id="modal-notes" class="form-control" rows="3" placeholder="Besonderheiten (z.B. Dialyse, Begleitpersonen, Alter des Kindes)"></textarea>
+        </div>
+
+        <button type="submit" class="btn-primary" style="width: 100%;" data-i18n="formSubmit">Unverbindliche Anfrage senden</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- 2. Lightbox Modal -->
+  <div class="lightbox-modal" id="lightbox-modal" aria-hidden="true">
+    <img src="" alt="Großansicht" class="lightbox-img" id="lightbox-img">
+    <button class="modal-close-btn" id="lightbox-close" style="color: #ffffff; top: 2rem; right: 2rem; font-size: 2.5rem;" aria-label="Schließen">&times;</button>
+  </div>
+
+  <!-- Back to Top Button -->
+  <button id="back-to-top" class="back-to-top-btn" aria-label="Nach oben scrollen" title="Nach oben">&uarr;</button>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-msg" id="toast-msg" role="status" aria-live="polite"></div>
+
+  <!-- Leaflet Map JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+  <!-- App Scripts -->
+  <script src="js/translations.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
