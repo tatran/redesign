@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="is" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Búvís ehf. | Landbúnaðarvörur, áburður & búvélar á Akureyri</title>
+  <meta name="description" content="Búvís ehf. - Hágæða búvélar, áburður, rúlluplast, rúllunet, Kränzle háþrýstidælur og lambamerki. Stofnað 2006 á Akureyri.">
+  <link rel="icon" type="image/png" href="images/logo.png">
+
+  <!-- Leaflet Map CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ==========================================
+       TOP ANNOUNCEMENT & CONTACT TICKER
+       ========================================== -->
+  <aside class="ticker-bar">
+    <div class="container" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+      <div class="ticker-content">
+        <span class="ticker-pill">Nýtt 2026</span>
+        <span data-i18n="announcement">🚜 Vorverðskrá áburðar 2026 er tilbúin! • Forpantanir á ASPLA & Barbier rúlluplasti í gangi • Sími: 465 1332</span>
+      </div>
+      <div class="ticker-contacts">
+        <a href="tel:+3544651332">
+          <span>📞</span> <span>465 1332</span>
+        </a>
+        <a href="mailto:buvis@buvis.is">
+          <span>✉️</span> <span>buvis@buvis.is</span>
+        </a>
+        <span style="color: #cbd5e1;">📍 Grímseyjargata 1, Akureyri</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ==========================================
+       MAIN NAVIGATION HEADER
+       ========================================== -->
+  <header class="main-header">
+    <div class="container header-inner">
+      <!-- Logo -->
+      <a href="#forsida" class="brand-logo" aria-label="Búvís Heim">
+        <img src="images/logo.png" alt="Búvís Logo" onerror="this.onerror=null; this.src='images/logo_alt.png';">
+        <span class="tag">AKUREYRI • 2006</span>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="main-nav" aria-label="Aðalvalmynd">
+        <a href="#forsida" class="nav-link active" data-i18n="nav_home">Forsíða</a>
+        <a href="#vorur" class="nav-link" data-i18n="nav_products">Vörur</a>
+        <a href="#reiknivelar" class="nav-link" data-i18n="nav_calculators">Reiknivélar</a>
+        <a href="#vorumerki" class="nav-link" data-i18n="nav_brands">Vörumerki</a>
+        <a href="#thjonusta" class="nav-link" data-i18n="nav_services">Þjónusta</a>
+        <a href="#um-okkur" class="nav-link" data-i18n="nav_about">Um Okkur</a>
+        <a href="#hafa-samband" class="nav-link" data-i18n="nav_contact">Hafa Samband</a>
+      </nav>
+
+      <!-- Action Controls (Theme, Language, Cart, Mobile Toggle) -->
+      <div class="header-actions">
+        <!-- Theme Toggle -->
+        <button id="theme-toggle-btn" class="btn-icon" aria-label="Skipta um þema (Ljóst/Dökkt)" title="Skipta um þema">
+          <span id="theme-icon">🌙</span>
+        </button>
+
+        <!-- Language Switcher -->
+        <button id="lang-toggle-btn" class="lang-switch" aria-label="Skipta um tungumál">
+          <span id="lang-label">IS 🇮🇸</span>
+        </button>
+
+        <!-- Quote Basket Drawer Trigger -->
+        <button id="open-cart-btn" class="btn btn-primary" style="padding: 9px 16px; font-size: 0.9rem; position: relative;">
+          <span>📋</span>
+          <span data-i18n="quote_cart_btn">Tilboðskarfa</span>
+          <span id="cart-badge" class="cart-badge" style="display: none;">0</span>
+        </button>
+
+        <!-- Mobile Menu Hamburger -->
+        <button id="mobile-menu-toggle" class="btn-icon mobile-toggle" aria-label="Valmynd">
+          <span>☰</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div id="mobile-nav" style="display: none; background: var(--bg-surface); border-bottom: 2px solid var(--border-color); padding: 20px 24px;">
+    <div style="display: flex; flex-direction: column; gap: 14px; font-weight: 700;">
+      <a href="#forsida" class="nav-link" data-i18n="nav_home">Forsíða</a>
+      <a href="#vorur" class="nav-link" data-i18n="nav_products">Vörur</a>
+      <a href="#reiknivelar" class="nav-link" data-i18n="nav_calculators">Reiknivélar</a>
+      <a href="#vorumerki" class="nav-link" data-i18n="nav_brands">Vörumerki</a>
+      <a href="#thjonusta" class="nav-link" data-i18n="nav_services">Þjónusta</a>
+      <a href="#um-okkur" class="nav-link" data-i18n="nav_about">Um Okkur</a>
+      <a href="#hafa-samband" class="nav-link" data-i18n="nav_contact">Hafa Samband</a>
+    </div>
+  </div>
+
+  <main>
+    <!-- ==========================================
+         HERO SECTION
+         ========================================== -->
+    <section id="forsida" class="hero-section">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <span class="section-badge" data-i18n="hero_badge">Traustur félagi íslenskra bænda síðan 2006</span>
+          <h1 data-i18n="hero_title">Gæðabúnaður, áburður og örugg þjónusta fyrir íslenskan landbúnað</h1>
+          <p data-i18n="hero_subtitle">Í næstum tvo áratugi hefur Búvís brotið einokun á markaði, boðið samkeppnishæf verð á hágæða áburði, rúlluplasti, vélum og tryggt bændum persónulega þjónustu frá Akureyri.</p>
+          
+          <div class="hero-cta-group">
+            <a href="#vorur" class="btn btn-primary" data-i18n="hero_cta_products">Skoða Vöruúrval</a>
+            <a href="#reiknivelar" class="btn btn-outline" data-i18n="hero_cta_calc">Reikna Rúlluplast & Áburð</a>
+            <a href="#reiknivelar" onclick="document.querySelector('[data-tab=tab-lambamerki-content]').click()" class="btn btn-warm" data-i18n="hero_cta_tags">Panta Lambamerki</a>
+          </div>
+
+          <div class="hero-stats-row">
+            <div class="stat-item">
+              <span class="stat-val" data-i18n="hero_stat_1_val">20 Ár</span>
+              <span class="stat-lbl" data-i18n="hero_stat_1_lbl">Frumkvöðlar í samkeppni frá 2006</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-val" data-i18n="hero_stat_2_val">120+ Vörur</span>
+              <span class="stat-lbl" data-i18n="hero_stat_2_lbl">Úrvalsvélar og rekstrarvörur</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-val" data-i18n="hero_stat_3_val">100%</span>
+              <span class="stat-lbl" data-i18n="hero_stat_3_lbl">Varahlutir og verkstæði á Akureyri</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-val" data-i18n="hero_stat_4_val">Um allt land</span>
+              <span class="stat-lbl" data-i18n="hero_stat_4_lbl">Öruggar afgreiðslur og flutningar</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual-card">
+          <img src="images/hero_mix.jpg" alt="Búvís Vélaúrval og Landbúnaðarlausnir">
+          <div class="hero-floating-badge">
+            <div class="badge-info">
+              <h4>Búvís Starfsstöð & Vélaskemma</h4>
+              <p>Grímseyjargata 1, 600 Akureyri • Opið 08:00–17:00</p>
+            </div>
+            <a href="tel:+3544651332" class="btn btn-warm" style="padding: 6px 14px; font-size: 0.85rem;">Hringja 465 1332</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         FEATURE PILLARS ROW
+         ========================================== -->
+    <section class="feature-cards-section">
+      <div class="container feature-grid">
+        <!-- Pillar 1: Fertilizer -->
+        <div class="feature-card">
+          <div class="card-icon">🌱</div>
+          <h3 data-i18n="feat_aburdur_title">Áburður 2026</h3>
+          <p data-i18n="feat_aburdur_desc">Yara og evrópskur gæðaáburður á hagstæðu verði. Tryggðu þér áburðinn tímanlega fyrir vorið.</p>
+          <a href="#vorur" onclick="document.querySelector('[data-category=aburdur]').click()" class="card-link">
+            <span data-i18n="feat_aburdur_link">Skoða áburð</span> →
+          </a>
+        </div>
+
+        <!-- Pillar 2: Silage Film -->
+        <div class="feature-card">
+          <div class="card-icon">🌾</div>
+          <h3 data-i18n="feat_wrap_title">Rúlluplast & Net</h3>
+          <p data-i18n="feat_wrap_desc">ASPLA Powerstretch, Barbier Bal'Ensil og Tama net. Hámarksstyrkur og gæði fyrir íslenskar rúllur.</p>
+          <a href="#reiknivelar" class="card-link">
+            <span data-i18n="feat_wrap_link">Forpanta rúlluplast</span> →
+          </a>
+        </div>
+
+        <!-- Pillar 3: Machinery -->
+        <div class="feature-card">
+          <div class="card-icon">🚜</div>
+          <h3 data-i18n="feat_machinery_title">Heyvinnslutæki</h3>
+          <p data-i18n="feat_machinery_desc">SaMASZ sláttuvélar og rakstrarvélar, Malone heytætlur og sterkbyggð herfi fyrir krefjandi aðstæður.</p>
+          <a href="#vorur" onclick="document.querySelector('[data-category=heyvinnsla]').click()" class="card-link">
+            <span data-i18n="feat_machinery_link">Skoða vélar</span> →
+          </a>
+        </div>
+
+        <!-- Pillar 4: Kränzle Washers -->
+        <div class="feature-card">
+          <div class="card-icon">💧</div>
+          <h3 data-i18n="feat_kranzle_title">Kränzle Háþrýstidælur</h3>
+          <p data-i18n="feat_kranzle_desc">Þýsk hágæðatækni með koparhaus og keramikstimplum. Byggðar til að endast í fjósinu og á verkstæðinu.</p>
+          <a href="#vorur" onclick="document.querySelector('[data-category=hathrystidaelur]').click()" class="card-link">
+            <span data-i18n="feat_kranzle_link">Skoða Kränzle</span> →
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         INTERACTIVE AGRICULTURAL CALCULATORS
+         ========================================== -->
+    <section id="reiknivelar" class="calculators-section">
+      <div class="container">
+        <div style="text-align: center; max-width: 720px; margin: 0 auto 36px;">
+          <span class="section-badge" data-i18n="calc_badge">Gagnvirkar Reiknivélar Bænda</span>
+          <h2 class="section-title" data-i18n="calc_title">Reiknaðu þarfir búsins fljótt og örugglega</h2>
+          <p class="section-subtitle" style="margin: 0 auto;" data-i18n="calc_subtitle">Notaðu sérsniðnu reiknivélarnar okkar til að áætla rúlluplast, rúllunet og áburðarmagn á augabragði, eða fylltu út pöntun á lambamerkjum.</p>
+        </div>
+
+        <div class="calc-container">
+          <!-- Calculator Tabs Header -->
+          <div class="calc-tabs">
+            <button class="calc-tab-btn active" data-tab="tab-wrap-content">
+              <span data-i18n="tab_wrap">🌾 Rúlluplast & Net</span>
+            </button>
+            <button class="calc-tab-btn" data-tab="tab-fert-content">
+              <span data-i18n="tab_fertilizer">🌱 Áburðaráætlun</span>
+            </button>
+            <button class="calc-tab-btn" data-tab="tab-lambamerki-content">
+              <span data-i18n="tab_lambamerki">🏷️ Panta Lambamerki</span>
+            </button>
+          </div>
+
+          <!-- TAB 1: SILAGE WRAP & NET CALCULATOR -->
+          <div id="tab-wrap-content" class="calc-tab-content active">
+            <div class="calc-layout-grid">
+              <div class="calc-inputs-panel">
+                <!-- Slider: Bale Count -->
+                <div class="form-group">
+                  <div class="form-label">
+                    <span data-i18n="wrap_bale_count">Áætlaður fjöldi rúlla:</span>
+                    <span id="calc-bale-count-val" class="value-pill">500</span>
+                  </div>
+                  <input type="range" id="calc-bale-count" class="range-slider" min="50" max="3000" step="25" value="500">
+                </div>
+
+                <!-- Radio: Layers -->
+                <div class="form-group">
+                  <label class="form-label" data-i18n="wrap_layers">Fjöldi laga á rúllu:</label>
+                  <div class="radio-pills">
+                    <label class="radio-pill-label" data-group="layers">
+                      <input type="radio" name="wrap-layers" value="4"> 4 Lög
+                    </label>
+                    <label class="radio-pill-label active" data-group="layers">
+                      <input type="radio" name="wrap-layers" value="6" checked> 6 Lög (Mælt með)
+                    </label>
+                    <label class="radio-pill-label" data-group="layers">
+                      <input type="radio" name="wrap-layers" value="8"> 8 Lög (Hámarksvernd)
+                    </label>
+                  </div>
+                </div>
+
+                <!-- Radio: Bale Diameter -->
+                <div class="form-group">
+                  <label class="form-label" data-i18n="wrap_bale_size">Stærð rúlla (þvermál):</label>
+                  <div class="radio-pills">
+                    <label class="radio-pill-label active" data-group="size">
+                      <input type="radio" name="bale-size" value="120" checked>
+                      <span data-i18n="wrap_size_120">120 cm (Staðall)</span>
+                    </label>
+                    <label class="radio-pill-label" data-group="size">
+                      <input type="radio" name="bale-size" value="130">
+                      <span data-i18n="wrap_size_130">130 cm (Stærri rúllur)</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Output Box -->
+              <div class="calc-result-box">
+                <div>
+                  <h4 data-i18n="wrap_result_title">Áætluð efnisnotkun:</h4>
+                  <div class="result-row">
+                    <span class="result-label" data-i18n="wrap_res_film">Rúlluplast (ASPLA / Barbier):</span>
+                    <span id="calc-wrap-result-film" class="result-val">19 rúllur</span>
+                  </div>
+                  <div class="result-row">
+                    <span class="result-label" data-i18n="wrap_res_net">Rúllunet (Tama Netwrap):</span>
+                    <span id="calc-wrap-result-net" class="result-val">2 rúllur</span>
+                  </div>
+
+                  <div class="calc-tip-box">
+                    <strong data-i18n="wrap_res_recommendation">Gæðaráð Búvís:</strong>
+                    <p style="margin-top: 4px;" data-i18n="wrap_tip">Fyrir 6 laga bindingu dugar ein 1500m rúlla af plasti í u.þ.b. 25–28 rúllur af 120 cm þvermáli. Við mælum með 6 lögum að lágmarki fyrir vothey á Íslandi.</p>
+                  </div>
+                </div>
+
+                <button id="btn-add-wrap-quote" class="btn btn-primary" style="width: 100%;" data-i18n="btn_request_wrap_quote">
+                  Senda fyrirspurn um rúlluplast
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- TAB 2: FERTILIZER DEMAND PLANNER -->
+          <div id="tab-fert-content" class="calc-tab-content">
+            <div class="calc-layout-grid">
+              <div class="calc-inputs-panel">
+                <!-- Slider: Hectares -->
+                <div class="form-group">
+                  <div class="form-label">
+                    <span data-i18n="fert_hectares">Ræktarland í hekturum (ha):</span>
+                    <span id="calc-fert-ha-val" class="value-pill">40 ha</span>
+                  </div>
+                  <input type="range" id="calc-fert-ha" class="range-slider" min="5" max="250" step="5" value="40">
+                </div>
+
+                <!-- Dropdown: Land Use -->
+                <div class="form-group">
+                  <label class="form-label" data-i18n="fert_usage">Nýting lands / Ræktun:</label>
+                  <select id="calc-fert-usage" class="form-control">
+                    <option value="hay" data-i18n="fert_usage_hay">Heyfengur (2 slættir - hágæða fóður)</option>
+                    <option value="pasture" data-i18n="fert_usage_pasture">Beitiland og úthagar</option>
+                    <option value="grain" data-i18n="fert_usage_grain">Kornrækt (Bygg/hafrar)</option>
+                  </select>
+                </div>
+
+                <!-- Radio: Application Intensity -->
+                <div class="form-group">
+                  <label class="form-label" data-i18n="fert_intensity">Áburðarstyrkur:</label>
+                  <div class="radio-pills">
+                    <label class="radio-pill-label active" data-group="fert-intensity">
+                      <input type="radio" name="fert-intensity" value="moderate" checked>
+                      <span data-i18n="fert_int_opt1">Hóflegur (venjulegur búskapur)</span>
+                    </label>
+                    <label class="radio-pill-label" data-group="fert-intensity">
+                      <input type="radio" name="fert-intensity" value="intensive">
+                      <span data-i18n="fert_int_opt2">Mikill (hámarks uppskera)</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Output Box -->
+              <div class="calc-result-box">
+                <div>
+                  <h4 data-i18n="fert_res_title">Áætluð áburðarþörf:</h4>
+                  <div class="result-row">
+                    <span class="result-label" data-i18n="fert_res_tons">Heildarmagn áburðar:</span>
+                    <span id="calc-fert-result-tons" class="result-val">16.0 tonn</span>
+                  </div>
+                  <div class="result-row">
+                    <span class="result-label" data-i18n="fert_res_bags">Fjöldi 600 kg stórsekkja:</span>
+                    <span id="calc-fert-result-bags" class="result-val">27 stórsekkir</span>
+                  </div>
+                  <div class="result-row">
+                    <span class="result-label" data-i18n="fert_res_blend">Ráðlögð blanda:</span>
+                    <span id="calc-fert-result-blend" style="font-weight: 700; color: var(--accent-warm);">YaraBela KRAFTUR 27</span>
+                  </div>
+                </div>
+
+                <button id="btn-add-fert-quote" class="btn btn-warm" style="width: 100%; margin-top: 20px;" data-i18n="btn_request_fert_quote">
+                  Óska eftir tilboði í áburð 2026
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- TAB 3: SHEEP EAR TAG ORDER FORM & PREVIEW -->
+          <div id="tab-lambamerki-content" class="calc-tab-content">
+            <div class="calc-layout-grid">
+              <div class="calc-inputs-panel">
+                <div class="form-row-2">
+                  <div class="form-group">
+                    <label class="form-label" data-i18n="tag_farm_id">Búsnúmer (t.d. IS-123456):</label>
+                    <input type="text" id="tag-farm-id" class="form-control" value="IS-600AK" placeholder="IS-123456">
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" data-i18n="tag_farm_name">Nafn bæjar / Býlis:</label>
+                    <input type="text" id="tag-farm-name" class="form-control" value="Hólar í Eyjafirði" placeholder="Bær">
+                  </div>
+                </div>
+
+                <div class="form-row-2">
+                  <div class="form-group">
+                    <label class="form-label" data-i18n="tag_count">Fjöldi lamba / merkja:</label>
+                    <input type="number" id="tag-count-input" class="form-control" value="150" min="10" max="5000" step="10">
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" data-i18n="tag_start_num">Upphafsnúmer raðar:</label>
+                    <input type="text" id="tag-start-num" class="form-control" value="0001" placeholder="0001">
+                  </div>
+                </div>
+
+                <div class="form-row-2">
+                  <div class="form-group">
+                    <label class="form-label" data-i18n="tag_color">Litur merkja:</label>
+                    <select id="tag-color-select" class="form-control">
+                      <option value="yellow" data-i18n="tag_color_yellow">Gulur (Staðall)</option>
+                      <option value="green" data-i18n="tag_color_green">Grænn</option>
+                      <option value="blue" data-i18n="tag_color_blue">Blár</option>
+                      <option value="red" data-i18n="tag_color_red">Rauður</option>
+                      <option value="white" data-i18n="tag_color_white">Hvítur</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" data-i18n="tag_type">Tegund merkis:</label>
+                    <select id="tag-type-select" class="form-control">
+                      <option value="std" data-i18n="tag_type_std">Tvöföld hefðbundin plastmerki</option>
+                      <option value="rfid" data-i18n="tag_type_rfid">Rafræn RFID merki (Búnaðarstofa samþykkt)</option>
+                      <option value="tissue" data-i18n="tag_type_tissue">Vefjasýnamerki (DNA ræktunarmerki)</option>
+                    </select>
+                  </div>
+                </div>
+
+                <button id="btn-submit-tag-order" class="btn btn-primary" style="width: 100%; margin-top: 10px;" data-i18n="btn_submit_tag_order">
+                  Senda pöntun á lambamerkjum
+                </button>
+              </div>
+
+              <!-- Live Ear Tag Preview -->
+              <div class="tag-preview-canvas">
+                <span style="font-size: 0.82rem; font-weight: 700; text-transform: uppercase; margin-bottom: 12px; color: var(--text-muted);" data-i18n="tag_preview_title">Forskoðun á lambamerki:</span>
+                <div id="sheep-tag-preview" class="sheep-tag-mockup color-yellow">
+                  <div class="tag-hole"></div>
+                  <div id="tag-preview-farm" class="tag-farm-code">IS-600AK</div>
+                  <div class="tag-barcode"></div>
+                  <div id="tag-preview-serial" class="tag-serial">0001</div>
+                  <div id="tag-chip-indicator" class="tag-chip-indicator" style="display: none;">
+                    <span>📡 RFID CHIP</span>
+                  </div>
+                  <div style="font-size: 0.65rem; font-weight: 700; opacity: 0.7;">BÚVÍS OFFICIAL</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         BRAND PARTNERS SHOWCASE
+         ========================================== -->
+    <section id="vorumerki" class="brands-section">
+      <div class="container">
+        <div class="brands-header">
+          <span class="section-badge" data-i18n="brands_badge">Heimsþekkt Vörumerki</span>
+          <h2 class="section-title" data-i18n="brands_title">Aðeins það besta í samstarfi við Búvís</h2>
+          <p class="section-subtitle" style="margin: 0 auto;" data-i18n="brands_desc">Við flytjum inn beint frá framleiðendum og ábyrgjumst fullan varahlutastuðning og þjónustu.</p>
+        </div>
+
+        <div class="brands-logo-grid">
+          <div class="brand-badge-item">
+            <img src="images/brand_kranzle.jpg" alt="Kränzle Germany" title="Kränzle High Pressure Washers">
+          </div>
+          <div class="brand-badge-item">
+            <img src="images/brand_palmse.png" alt="Palmse Trailer" title="Palmse Trailer Machinery & Dump">
+          </div>
+          <div class="brand-badge-item">
+            <img src="images/brand_bauer.jpg" alt="Bauer Slurry Technology" title="Bauer Slurry Separation & Agitators">
+          </div>
+          <div class="brand-badge-item">
+            <img src="images/brand_tiki.jpg" alt="TIKI Trailers" title="TIKI Trailers">
+          </div>
+          <div class="brand-badge-item">
+            <img src="images/brand_rauch.jpg" alt="Rauch Fertilizer Spreaders" title="Rauch Landmaschinen">
+          </div>
+          <div class="brand-badge-item">
+            <img src="images/brand_metalfach.png" alt="Metal-Fach" title="Metal-Fach Agricultural Machinery">
+          </div>
+          <div class="brand-badge-item">
+            <img src="images/brand_tama.jpg" alt="Tama Netwrap" title="Tama Plastic Industry">
+          </div>
+          <div class="brand-badge-item">
+            <img src="images/brand_barbier.png" alt="Barbier Silage Film" title="Barbier Agricultural Plastics">
+          </div>
+          <div class="brand-badge-item">
+            <img src="images/brand_agrofactory.jpg" alt="Agro Factory" title="Agro Factory Harrows & Cultivators">
+          </div>
+          <div class="brand-badge-item">
+            <span style="font-weight: 900; font-size: 1.2rem; color: var(--text-secondary);">ASPLA</span>
+          </div>
+          <div class="brand-badge-item">
+            <span style="font-weight: 900; font-size: 1.2rem; color: var(--text-secondary);">SaMASZ</span>
+          </div>
+          <div class="brand-badge-item">
+            <span style="font-weight: 900; font-size: 1.2rem; color: var(--text-secondary);">MORRIS</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         PRODUCT CATALOG EXPLORER
+         ========================================== -->
+    <section id="vorur" class="catalog-section">
+      <div class="container">
+        <div class="catalog-header-bar">
+          <div>
+            <span class="section-badge" data-i18n="catalog_badge">Vörulisti</span>
+            <h2 class="section-title" data-i18n="catalog_title">Vöruúrval Búvís ehf.</h2>
+            <p class="section-subtitle" data-i18n="catalog_desc">120+ hágæða vörur fyrir landbúnað, verktaka og sveitarfélög. Notaðu síurnar til að finna rétta búnaðinn.</p>
+          </div>
+
+          <!-- Controls: Search & Dropdowns -->
+          <div class="search-and-controls">
+            <div class="search-input-wrapper">
+              <span class="search-icon-svg">🔍</span>
+              <input type="text" id="catalog-search-input" class="search-input" placeholder="Leita í 120+ vörum og vélum... (Ýttu á /)" data-i18n-placeholder="search_placeholder">
+            </div>
+
+            <select id="catalog-brand-select" class="custom-select">
+              <option value="all" data-i18n="brand_filter_all">Öll vörumerki</option>
+            </select>
+
+            <select id="catalog-sort-select" class="custom-select">
+              <option value="featured" data-i18n="sort_featured">Röðun: Úrval fyrst</option>
+              <option value="name_asc" data-i18n="sort_name_asc">Heiti: A til Ö</option>
+              <option value="name_desc" data-i18n="sort_name_desc">Heiti: Ö til A</option>
+            </select>
+          </div>
+
+          <!-- Category Filter Pills -->
+          <div class="category-filter-pills">
+            <button class="cat-pill active" data-category="all" data-i18n="filter_all">Allar vörur (120)</button>
+            <button class="cat-pill" data-category="aburdur" data-i18n="filter_aburdur">Áburður</button>
+            <button class="cat-pill" data-category="plast_net" data-i18n="filter_plast_net">Rúlluplast & Net</button>
+            <button class="cat-pill" data-category="heyvinnsla" data-i18n="filter_heyvinnsla">Hey- og jarðvinnsla</button>
+            <button class="cat-pill" data-category="vagnar" data-i18n="filter_vagnar">Vagnar og kerrur</button>
+            <button class="cat-pill" data-category="haugtaeki" data-i18n="filter_haugtaeki">Haugtæki & mykja</button>
+            <button class="cat-pill" data-category="hathrystidaelur" data-i18n="filter_hathrystidaelur">Háþrýstidælur (Kränzle)</button>
+            <button class="cat-pill" data-category="lambamerki" data-i18n="filter_lambamerki">Sauðfjárbúnaður</button>
+            <button class="cat-pill" data-category="rekstur_annad" data-i18n="filter_rekstur_annad">Rekstrarvörur & Annað</button>
+          </div>
+        </div>
+
+        <!-- Dynamic Product Cards Grid -->
+        <div id="products-grid" class="products-grid">
+          <!-- Populated by main.js from BUVIS_PRODUCTS -->
+        </div>
+
+        <!-- Catalog Footer (Pagination / Load More) -->
+        <div class="catalog-footer-actions">
+          <div id="showing-counter" class="showing-counter"></div>
+          <button id="load-more-btn" class="btn btn-outline" data-i18n="btn_load_more">
+            Hlaða fleiri vörum
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SERVICES & SPARE PARTS WORKSHOP
+         ========================================== -->
+    <section id="thjonusta" class="services-section">
+      <div class="container">
+        <div style="text-align: center; max-width: 720px; margin: 0 auto 48px;">
+          <span class="section-badge" data-i18n="serv_badge">Öruggur Bakhjarl</span>
+          <h2 class="section-title" data-i18n="serv_title">Verkstæði, varahlutir og ráðgjöf</h2>
+          <p class="section-subtitle" style="margin: 0 auto;" data-i18n="serv_desc">Vélar verða að virka þegar á reynir. Við hjá Búvís leggjum sérstakan metnað í að eiga slithluti, hnífa, dæluhluti og tengi á lager á Akureyri.</p>
+        </div>
+
+        <div class="services-grid">
+          <div class="service-box">
+            <div class="service-icon-wrap">🛠️</div>
+            <h3 data-i18n="serv_item_1_title">Fullbúið verkstæði á Akureyri</h3>
+            <p data-i18n="serv_item_1_desc">Sérhæfð viðgerðar- og viðhaldsþjónusta á Kränzle háþrýstidælum, haugdælum og heyvinnslutækjum.</p>
+          </div>
+
+          <div class="service-box">
+            <div class="service-icon-wrap">📦</div>
+            <h3 data-i18n="serv_item_2_title">Varahlutir á lager</h3>
+            <p data-i18n="serv_item_2_desc">Sláttuhnífar, boltar, reimar, dæluþétti, olíur og tengi send daglega með flugi eða pósti um allt land.</p>
+          </div>
+
+          <div class="service-box">
+            <div class="service-icon-wrap">🤝</div>
+            <h3 data-i18n="serv_item_3_title">Ráðgjöf frá fagfólki</h3>
+            <p data-i18n="serv_item_3_desc">Einar og Gunnar búa yfir áratuga reynslu og aðstoða þig við val á réttum tækjum, áburðaráætlunum og efnismagni.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         ABOUT US & TEAM LEADERSHIP
+         ========================================== -->
+    <section id="um-okkur" class="about-section">
+      <div class="container about-grid">
+        <div class="about-text">
+          <span class="section-badge" data-i18n="about_badge">Um Búvís ehf.</span>
+          <h2 data-i18n="about_title">Sagan okkar: Samkeppni sem skilar sér til bænda</h2>
+          <p data-i18n="about_p1">Búvís var stofnað í janúar 2006 með það skýra markmið að skapa raunverulega samkeppni á íslenska landbúnaðarmarkaðnum. Á þeim tíma ríkti fákeppni á sölu áburðar og rekstrarvara sem hélt verði háu gagnvart bændum.</p>
+          <p data-i18n="about_p2">Með því að flytja inn hágæða vörur beint frá traustum evrópskum framleiðendum og halda rekstrarkostnaði í lágmarki tókst Búvís að lækka áburðarverð verulega og veita persónulega þjónustu. Í dag þjónum við bændum og verktökum um land allt frá starfsstöð okkar að Grímseyjargötu 1 á Akureyri.</p>
+          
+          <div style="display: flex; gap: 20px; margin-top: 24px;">
+            <div style="border-left: 3px solid var(--accent-primary); padding-left: 14px;">
+              <strong style="font-size: 1.3rem; color: var(--text-main);">680106-2590</strong>
+              <div style="font-size: 0.85rem; color: var(--text-muted);">Kennitala Búvís ehf.</div>
+            </div>
+            <div style="border-left: 3px solid var(--accent-warm); padding-left: 14px;">
+              <strong style="font-size: 1.3rem; color: var(--text-main);">Janúar 2006</strong>
+              <div style="font-size: 0.85rem; color: var(--text-muted);">Stofnár félagsins</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Team Stack -->
+        <div class="team-cards-stack">
+          <h4 style="font-size: 1.15rem; font-weight: 800; margin-bottom: 8px;" data-i18n="team_title">Lykilstjórnendur Búvís</h4>
+          
+          <!-- Einar -->
+          <div class="person-card">
+            <div class="person-avatar">EG</div>
+            <div class="person-details">
+              <h4>Einar Guðmundsson</h4>
+              <p data-i18n="team_role_1">Framkvæmdastjóri & Véladeild</p>
+              <div class="person-contacts">
+                <a href="tel:+3546601648">📞 660 1648</a>
+                <a href="mailto:einar@buvis.is">✉️ einar@buvis.is</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Gunnar -->
+          <div class="person-card">
+            <div class="person-avatar" style="background-color: var(--accent-warm-light); color: var(--accent-warm);">GG</div>
+            <div class="person-details">
+              <h4>Gunnar Guðmundarson</h4>
+              <p data-i18n="team_role_2">Sölustjóri & Rekstrarvörur</p>
+              <div class="person-contacts">
+                <a href="tel:+3548999193">📞 899 9193</a>
+                <a href="mailto:gunnar@buvis.is">✉️ gunnar@buvis.is</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- General Store -->
+          <div class="person-card">
+            <div class="person-avatar" style="background-color: var(--accent-blue-light); color: var(--accent-blue);">BV</div>
+            <div class="person-details">
+              <h4>Afgreiðsla & Varahlutir</h4>
+              <p data-i18n="team_role_gen">Afgreiðsla & Varahlutir</p>
+              <div class="person-contacts">
+                <a href="tel:+3544651332">📞 465 1332</a>
+                <a href="mailto:buvis@buvis.is">✉️ buvis@buvis.is</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         LOCATION MAP & DIRECT CONTACT FORM
+         ========================================== -->
+    <section id="hafa-samband" class="contact-section">
+      <div class="container contact-grid">
+        <!-- Left: Map & Info -->
+        <div class="contact-info-panel">
+          <div>
+            <span class="section-badge" data-i18n="contact_badge">Hafðu Samband</span>
+            <h2 class="section-title" data-i18n="contact_title">Komdu í heimsókn eða heyrðu í okkur</h2>
+            <p class="section-subtitle" data-i18n="contact_subtitle">Við erum staðsett að Grímseyjargötu 1 á Akureyri. Heitt á könnunni og fagleg ráðgjöf.</p>
+          </div>
+
+          <!-- Interactive Leaflet Map Container -->
+          <div class="map-card-wrapper">
+            <div id="akureyri-map"></div>
+          </div>
+
+          <div class="info-cards-row">
+            <div class="info-card-item">
+              <h5 data-i18n="contact_address_lbl">Heimilisfang:</h5>
+              <p data-i18n="contact_address_val">Grímseyjargata 1, 600 Akureyri</p>
+            </div>
+            <div class="info-card-item">
+              <h5 data-i18n="contact_hours_lbl">Afgreiðslutími:</h5>
+              <p data-i18n="contact_hours_val">Mánudaga – Föstudaga: 08:00 – 17:00</p>
+            </div>
+            <div class="info-card-item">
+              <h5 data-i18n="contact_phone_lbl">Aðalsími:</h5>
+              <a href="tel:+3544651332">465 1332</a>
+            </div>
+            <div class="info-card-item">
+              <h5 data-i18n="contact_email_lbl">Netfang:</h5>
+              <a href="mailto:buvis@buvis.is">buvis@buvis.is</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Inquiry Form -->
+        <div class="contact-form-panel">
+          <h3 data-i18n="contact_title">Hafa samband</h3>
+          <p style="font-size: 0.92rem; color: var(--text-muted); margin-bottom: 24px;" data-i18n="contact_subtitle">Sendu okkur línu og við svörum um hæl.</p>
+          
+          <form id="main-contact-form">
+            <div class="form-row-2">
+              <div class="form-group">
+                <label class="form-label" data-i18n="form_name_lbl">Nafn þitt:</label>
+                <input type="text" id="contact-name" class="form-control" required placeholder="Jón Jónsson">
+              </div>
+              <div class="form-group">
+                <label class="form-label" data-i18n="form_email_lbl">Netfang:</label>
+                <input type="email" class="form-control" required placeholder="jon@bondi.is">
+              </div>
+            </div>
+
+            <div class="form-row-2">
+              <div class="form-group">
+                <label class="form-label" data-i18n="form_phone_lbl">Símanúmer:</label>
+                <input type="tel" class="form-control" required placeholder="899 0000">
+              </div>
+              <div class="form-group">
+                <label class="form-label" data-i18n="form_farm_lbl">Nafn bús / Fyrirtækis:</label>
+                <input type="text" class="form-control" placeholder="Hvammur">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" data-i18n="form_subject_lbl">Efni fyrirspurnar:</label>
+              <select class="form-control">
+                <option data-i18n="form_sub_opt1">Tilboð í áburð 2026</option>
+                <option data-i18n="form_sub_opt2">Forpöntun á rúlluplasti / neti</option>
+                <option data-i18n="form_sub_opt3">Fyrirspurn um vél / kerrur</option>
+                <option data-i18n="form_sub_opt4">Varahlutir & viðhald</option>
+                <option data-i18n="form_sub_opt5">Annað</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" data-i18n="form_msg_lbl">Skilaboð:</label>
+              <textarea class="form-control" required placeholder="Góðan dag, mig langar að fá tilboð í..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%;" data-i18n="form_submit_btn">
+              Senda skilaboð
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================
+       SLIDE-OUT QUOTE BASKET DRAWER
+       ========================================== -->
+  <div id="drawer-overlay" class="drawer-overlay"></div>
+  <aside id="quote-drawer" class="quote-drawer" aria-label="Tilboðskarfa">
+    <div class="drawer-header">
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <span style="font-size: 1.4rem;">📋</span>
+        <h3 data-i18n="drawer_title">Tilboðskarfa Búvís</h3>
+      </div>
+      <button id="close-drawer-btn" class="btn-icon" aria-label="Loka körfu">&times;</button>
+    </div>
+
+    <div class="drawer-body">
+      <div id="drawer-empty-msg" style="text-align: center; padding: 40px 0; color: var(--text-muted);">
+        <div style="font-size: 2.5rem; margin-bottom: 8px;">🌾</div>
+        <p data-i18n="drawer_empty">Karfann er tóm. Bættu við vélum eða vörum til að fá verðtilboð.</p>
+      </div>
+
+      <div id="drawer-items-list" class="cart-items-list">
+        <!-- Rendered by JS -->
+      </div>
+
+      <form id="drawer-quote-form" style="display: none; border-top: 1px solid var(--border-color); padding-top: 16px;">
+        <div class="form-group">
+          <label class="form-label" data-i18n="drawer_farm_input">Býli / Tengiliður:</label>
+          <input type="text" id="drawer-farm-name" class="form-control" required placeholder="Bæjarnafn eða nafn tengiliðar">
+        </div>
+        <div class="form-group">
+          <label class="form-label" data-i18n="drawer_phone_input">Símanúmer:</label>
+          <input type="tel" id="drawer-phone" class="form-control" required placeholder="Sími">
+        </div>
+        <div class="form-group">
+          <label class="form-label" data-i18n="drawer_notes_input">Athugasemdir eða afhendingarstaður:</label>
+          <textarea class="form-control" rows="2" placeholder="Óskir um afhendingu, magn o.s.frv."></textarea>
+        </div>
+        <button type="submit" class="btn btn-warm" style="width: 100%;" data-i18n="drawer_submit_btn">
+          Senda tilboðsbeiðni
+        </button>
+      </form>
+    </div>
+
+    <div class="drawer-footer" style="display: flex; justify-content: space-between; align-items: center;">
+      <button id="drawer-clear-btn" style="color: var(--text-muted); font-size: 0.85rem; text-decoration: underline;" data-i18n="drawer_clear_all">
+        Tæma körfu
+      </button>
+      <span style="font-size: 0.85rem; color: var(--text-muted);">Búvís ehf. • Akureyri</span>
+    </div>
+  </aside>
+
+  <!-- ==========================================
+       QUICK VIEW PRODUCT MODAL
+       ========================================== -->
+  <div id="quick-view-modal" class="modal-overlay">
+    <div class="modal-dialog">
+      <button id="modal-close-btn" class="modal-close-btn" aria-label="Loka">&times;</button>
+      <div class="modal-content-grid">
+        <div class="modal-img-wrap">
+          <img id="modal-img" src="" alt="">
+        </div>
+        <div class="modal-info-panel">
+          <span id="modal-brand" class="section-badge" style="margin-bottom: 8px;">BRAND</span>
+          <h3 id="modal-title">Product Title</h3>
+          <p id="modal-desc" style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6;"></p>
+
+          <h5 style="margin-top: 18px; font-size: 0.92rem; text-transform: uppercase;" data-i18n="modal_specs_title">Tæknilegar upplýsingar & eiginleikar:</h5>
+          <ul id="modal-specs" class="modal-specs-list"></ul>
+
+          <button id="modal-inquire-btn" class="btn btn-primary" style="width: 100%;" data-i18n="modal_inquire_btn">
+            Bæta við og biðja um verð
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       FOOTER
+       ========================================== -->
+  <footer class="main-footer">
+    <div class="container footer-top-grid">
+      <div class="footer-col">
+        <a href="#forsida" class="brand-logo" style="margin-bottom: 14px;">
+          <img src="images/logo.png" alt="Búvís Logo" style="height: 38px;">
+        </a>
+        <p style="font-size: 0.95rem; color: var(--text-muted); max-width: 320px; line-height: 1.6;" data-i18n="footer_tagline">
+          Traustur félagi íslensks landbúnaðar síðan í janúar 2006.
+        </p>
+        <div style="margin-top: 16px; font-size: 0.85rem; color: var(--text-muted);">
+          Kt. 680106-2590 • VSK nr. 89280
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4 data-i18n="footer_quick_links">Flýtivísar</h4>
+        <ul class="footer-links">
+          <li><a href="#forsida" data-i18n="nav_home">Forsíða</a></li>
+          <li><a href="#vorur" data-i18n="nav_products">Vörur</a></li>
+          <li><a href="#reiknivelar" data-i18n="nav_calculators">Reiknivélar</a></li>
+          <li><a href="#vorumerki" data-i18n="nav_brands">Vörumerki</a></li>
+          <li><a href="#thjonusta" data-i18n="nav_services">Þjónusta & Varahlutir</a></li>
+          <li><a href="#um-okkur" data-i18n="nav_about">Um Okkur</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 data-i18n="footer_categories">Vöruflokkar</h4>
+        <ul class="footer-links">
+          <li><a href="#vorur" onclick="document.querySelector('[data-category=aburdur]').click()" data-i18n="filter_aburdur">Áburður</a></li>
+          <li><a href="#vorur" onclick="document.querySelector('[data-category=plast_net]').click()" data-i18n="filter_plast_net">Rúlluplast & Net</a></li>
+          <li><a href="#vorur" onclick="document.querySelector('[data-category=heyvinnsla]').click()" data-i18n="filter_heyvinnsla">Hey- og jarðvinnsla</a></li>
+          <li><a href="#vorur" onclick="document.querySelector('[data-category=vagnar]').click()" data-i18n="filter_vagnar">Vagnar og kerrur</a></li>
+          <li><a href="#vorur" onclick="document.querySelector('[data-category=hathrystidaelur]').click()" data-i18n="filter_hathrystidaelur">Háþrýstidælur (Kränzle)</a></li>
+          <li><a href="#vorur" onclick="document.querySelector('[data-category=lambamerki]').click()" data-i18n="filter_lambamerki">Sauðfjárbúnaður</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 data-i18n="footer_contact_info">Hafa samband</h4>
+        <div style="display: flex; flex-direction: column; gap: 10px; font-size: 0.92rem;">
+          <p><strong>Búvís ehf.</strong></p>
+          <p>Grímseyjargata 1, 600 Akureyri</p>
+          <p>Sími: <a href="tel:+3544651332" style="color: var(--accent-primary); font-weight: 700;">465 1332</a></p>
+          <p>Netfang: <a href="mailto:buvis@buvis.is" style="color: var(--accent-primary);">buvis@buvis.is</a></p>
+          <p>Opið virka daga 08:00 – 17:00</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <div data-i18n="footer_rights">
+        © 2006–2026 Búvís ehf. Öll réttindi áskilin.
+      </div>
+      <div>
+        <a href="#forsida" style="color: var(--accent-primary); font-weight: 700;" data-i18n="back_to_top">Efst á síðu ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Leaflet Map JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+  <!-- Application Scripts -->
+  <script src="js/products-data.js"></script>
+  <script src="js/translations.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
