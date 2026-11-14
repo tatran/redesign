@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="sk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="JuOs-Stav zo Senca realizuje strojové omietky, zateplenie budov a výstavbu rodinných domov na kľúč.">
+  <meta name="theme-color" content="#f8fafc">
+  <title>JuOs-Stav | Strojové omietky a stavebné práce · Senec</title>
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    try {
+      const theme = localStorage.getItem('juos-theme');
+      document.documentElement.dataset.theme = theme === 'light' || theme === 'dark'
+        ? theme
+        : matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    } catch {}
+  </script>
+  <script src="js/translations.js" defer></script>
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main" data-i18n="skip">Preskočiť na obsah</a>
+  <div class="topbar" id="top">
+    <div class="container topbar-inner">
+      <span class="topbar-location"><span class="location-dot" aria-hidden="true"></span><span data-i18n="topLocation">Stavebná firma · Senec</span></span>
+      <div class="topbar-right">
+        <a href="tel:+421914148162">+421 914 148 162</a>
+        <a href="mailto:ostrovsky.juraj@gmail.com">ostrovsky.juraj@gmail.com</a>
+      </div>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#top" class="brand-link" aria-label="JuOs-Stav">
+        <span class="brand-logo-wrap"><img src="images/logo.png" width="290" height="150" alt=""></span>
+        <span class="brand-text-group">
+          <strong>JuOs-Stav</strong>
+          <small data-i18n="brandTag">Stavebné práce</small>
+        </span>
+      </a>
+
+      <nav id="site-nav" aria-label="Hlavná navigácia" data-i18n-aria="navLabel">
+        <ul class="nav-links">
+          <li><a href="#sluzby" data-i18n="services">Služby</a></li>
+          <li><a href="#realizacie" data-i18n="projects">Naše práce</a></li>
+          <li><a href="#o-nas" data-i18n="about">O nás</a></li>
+          <li><a href="#kontakt" data-i18n="contact">Kontakt</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-controls">
+        <div class="lang-switcher" role="group" aria-label="Jazyk stránky" data-i18n-aria="langLabel">
+          <button type="button" data-lang="sk" lang="sk" aria-label="Slovenčina" title="Slovenčina" aria-pressed="true">SK</button>
+          <button type="button" data-lang="de" lang="de" aria-label="Deutsch" title="Deutsch" aria-pressed="false">DE</button>
+          <button type="button" data-lang="en" lang="en" aria-label="English" title="English" aria-pressed="false">EN</button>
+          <button type="button" data-lang="hu" lang="hu" aria-label="Magyar" title="Magyar" aria-pressed="false">HU</button>
+        </div>
+        <button type="button" class="icon-btn theme-btn" id="theme-toggle" aria-label="Tmavý režim" data-i18n-aria="darkMode" aria-pressed="false">
+          <span class="moon" aria-hidden="true">☾</span><span class="sun" aria-hidden="true">☀</span>
+        </button>
+        <a href="#dopyt" class="btn btn-primary btn-sm header-cta"><span data-i18n="requestShort">Získať ponuku</span><span aria-hidden="true">↗</span></a>
+        <button type="button" class="icon-btn mobile-menu-btn" id="menu-toggle" aria-label="Menu" data-i18n-aria="menu" aria-expanded="false" aria-controls="site-nav">
+          <span class="menu-lines" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-content">
+            <p class="eyebrow-badge"><span class="location-dot" aria-hidden="true"></span><span data-i18n="heroBadge">JuOs-Stav · Senec</span></p>
+            <h1 class="hero-title" id="hero-title"><span data-i18n="heroTitle">Strojové omietky</span> <span class="hero-accent" data-i18n="heroAccent">a stavebné práce</span></h1>
+            <p class="hero-subtitle" data-i18n="heroText">Realizujeme vnútorné aj vonkajšie omietky, zatepľujeme budovy a staviame rodinné domy na kľúč.</p>
+            <div class="hero-actions">
+              <a href="#dopyt" class="btn btn-primary"><span data-i18n="requestQuote">Požiadať o cenovú ponuku</span><span aria-hidden="true">↗</span></a>
+              <a href="#realizacie" class="btn btn-outline"><span data-i18n="viewWork">Pozrieť naše práce</span><span aria-hidden="true">↓</span></a>
+            </div>
+            <div class="dispatch-strip">
+              <div><p class="dispatch-strip-label" data-i18n="directContact">Priamy kontakt</p><a href="tel:+421914148162" class="dispatch-phone">+421 914 148 162</a></div>
+              <div><p class="dispatch-strip-label" data-i18n="email">E-mail</p><a href="mailto:ostrovsky.juraj@gmail.com">ostrovsky.juraj@gmail.com</a></div>
+            </div>
+          </div>
+
+          <figure class="hero-photo-frame">
+            <img src="images/dom-na-kluc.jpg" width="1024" height="497" fetchpriority="high" alt="Prízemný rodinný dom so svetlou fasádou a tmavou strechou" data-i18n-alt="homeAlt">
+            <figcaption class="hero-photo-caption">
+              <div><strong data-i18n="house">Rodinné domy na kľúč</strong><span data-i18n="photoCaption">Ukážka z našich prác</span></div>
+              <a href="#realizacie"><span data-i18n="gallery">Galéria</span><span aria-hidden="true">↗</span></a>
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="stats-section">
+          <a class="stat-card" href="#omietky"><span class="stat-val" data-i18n="plasterShort">Omietky</span><span class="stat-lbl" data-i18n="plasterQuick">Vnútorné aj vonkajšie</span><span class="stat-arrow" aria-hidden="true">↘</span></a>
+          <a class="stat-card" href="#zateplenie"><span class="stat-val" data-i18n="insulationShort">Zateplenie</span><span class="stat-lbl" data-i18n="insulationQuick">Fasády a tepelný komfort</span><span class="stat-arrow" aria-hidden="true">↘</span></a>
+          <a class="stat-card" href="#domy"><span class="stat-val" data-i18n="houseShort">Domy na kľúč</span><span class="stat-lbl" data-i18n="houseQuick">Výstavba rodinných domov</span><span class="stat-arrow" aria-hidden="true">↘</span></a>
+          <a class="stat-card" href="#kontakt"><span class="stat-val">Senec</span><span class="stat-lbl" data-i18n="contactQuick">Sídlo a kontakt</span><span class="stat-arrow" aria-hidden="true">↘</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="sluzby" aria-labelledby="services-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow" data-i18n="services">Služby</span>
+          <h2 class="section-title" id="services-title" data-i18n="servicesTitle">Od omietky po hotový dom</h2>
+          <p class="section-subtitle" data-i18n="servicesText">Vyberte si službu podľa toho, čo vaša stavba potrebuje.</p>
+        </div>
+        <div class="services-grid">
+          <article class="service-card" id="omietky">
+            <span class="service-icon" aria-hidden="true">▤</span>
+            <h3 data-i18n="plaster">Strojové omietky</h3>
+            <p data-i18n="plasterText">V interiéri robíme sadrové a vápenno-cementové omietky. Na vonkajšie steny používame vápenno-cementové alebo tepelnoizolačné omietky.</p>
+            <a class="service-link" href="#dopyt" data-topic="plaster"><span data-i18n="askService">Mám záujem</span><span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="service-card" id="zateplenie">
+            <span class="service-icon" aria-hidden="true">▧</span>
+            <h3 data-i18n="insulation">Zateplenie budov</h3>
+            <p data-i18n="insulationText">Zatepľujeme fasády, aby cez obvodové steny unikalo menej tepla. Riešenie prispôsobíme stavu budovy.</p>
+            <a class="service-link" href="#dopyt" data-topic="insulation"><span data-i18n="askService">Mám záujem</span><span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="service-card" id="domy">
+            <span class="service-icon" aria-hidden="true">⌂</span>
+            <h3 data-i18n="house">Rodinné domy na kľúč</h3>
+            <p data-i18n="houseText">Zabezpečujeme výstavbu rodinných domov na kľúč. Rozsah prác si dohodneme podľa projektu a vašich potrieb.</p>
+            <a class="service-link" href="#dopyt" data-topic="house"><span data-i18n="askService">Mám záujem</span><span aria-hidden="true">↗</span></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="realizacie" aria-labelledby="projects-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow" data-i18n="gallery">Galéria</span>
+          <h2 class="section-title" id="projects-title" data-i18n="projectsTitle">Ukážky našich prác</h2>
+        </div>
+        <div class="projects-grid">
+          <a class="project-card" href="images/omietky.jpg">
+            <div class="project-img-wrap"><img src="images/omietky.jpg" width="768" height="1024" loading="lazy" alt="Pracovník JuOs-Stav pri omietaní v interiéri" data-i18n-alt="plasterAlt"></div>
+            <div class="project-body"><strong data-i18n="plaster">Strojové omietky</strong><span aria-hidden="true">↗</span></div>
+          </a>
+          <a class="project-card" href="images/zateplenie.jpg">
+            <div class="project-img-wrap"><img src="images/zateplenie.jpg" width="1024" height="768" loading="lazy" alt="Budovy s lešením počas prác na fasáde" data-i18n-alt="insulationAlt"></div>
+            <div class="project-body"><strong data-i18n="insulation">Zateplenie budov</strong><span aria-hidden="true">↗</span></div>
+          </a>
+          <a class="project-card" href="images/dom-na-kluc.jpg">
+            <div class="project-img-wrap"><img src="images/dom-na-kluc.jpg" width="1024" height="497" loading="lazy" alt="Prízemný rodinný dom so svetlou fasádou a tmavou strechou" data-i18n-alt="homeAlt"></div>
+            <div class="project-body"><strong data-i18n="house">Rodinné domy na kľúč</strong><span aria-hidden="true">↗</span></div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="o-nas" aria-labelledby="about-title">
+      <div class="container about-grid">
+        <div class="section-header">
+          <span class="section-eyebrow" data-i18n="about">O nás</span>
+          <h2 class="section-title" id="about-title" data-i18n="aboutTitle">Stavebná firma zo Senca</h2>
+          <p class="section-subtitle" data-i18n="aboutText">V JuOs-Stav sa venujeme strojovým omietkam, zatepľovaniu a výstavbe rodinných domov. Pred začiatkom prác s vami preberieme rozsah zákazky aj termíny.</p>
+        </div>
+        <ul class="values-list">
+          <li><strong data-i18n="valueQuality">Poctivé prevedenie</strong><p data-i18n="valueQualityText">Pri omietaní dbáme na rovné a hladké povrchy.</p></li>
+          <li><strong data-i18n="valueIndividual">Individuálny prístup</strong><p data-i18n="valueIndividualText">Postup volíme podľa stavby a vašich požiadaviek.</p></li>
+          <li><strong data-i18n="valueTrust">Otvorená komunikácia</strong><p data-i18n="valueTrustText">Zakladáme si na transparentnosti a dodržiavaní dohodnutých termínov.</p></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="kontakt" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow" data-i18n="contact">Kontakt</span>
+          <h2 class="section-title" id="contact-title" data-i18n="contactTitle">Povedzte nám o svojej stavbe</h2>
+          <p class="section-subtitle" data-i18n="contactText">Napíšte, aké práce potrebujete, kde je stavba a aký termín zvažujete.</p>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-info-card">
+            <h3>JuOs-Stav s.r.o.</h3>
+            <dl class="contact-details">
+              <div><dt data-i18n="phone">Telefón</dt><dd><a href="tel:+421914148162">+421 914 148 162</a></dd></div>
+              <div><dt data-i18n="email">E-mail</dt><dd><a href="mailto:ostrovsky.juraj@gmail.com">ostrovsky.juraj@gmail.com</a></dd></div>
+              <div><dt data-i18n="address">Adresa</dt><dd>Svätého Urbana 5764/10<br>903 01 Senec, <span data-i18n="country">Slovensko</span></dd></div>
+            </dl>
+            <iframe class="contact-map" id="contact-map" title="Poloha JuOs-Stav na mape" loading="lazy" width="520" height="265" referrerpolicy="no-referrer" allowfullscreen
+              src="https://maps.google.com/maps?q=Sv%C3%A4t%C3%A9ho%20Urbana%205764%2F10%2C%20903%2001%20Senec%2C%20Slovensko&amp;z=15&amp;hl=sk&amp;output=embed"></iframe>
+          </div>
+          <div class="contact-form-card" id="dopyt">
+            <h3 data-i18n="formTitle">Dopyt na stavebné práce</h3>
+            <form id="inquiry-form" aria-describedby="form-note">
+              <div class="form-row">
+                <label><span data-i18n="name">Meno a priezvisko</span><input name="name" autocomplete="name" required maxlength="120"></label>
+                <label><span data-i18n="email">E-mail</span><input name="email" type="email" autocomplete="email" required maxlength="254"></label>
+              </div>
+              <label><span data-i18n="topic">Typ prác</span>
+                <select name="topic">
+                  <option value="" data-i18n="topicPlaceholder">Vyberte službu</option>
+                  <option value="plaster" data-i18n="plaster">Strojové omietky</option>
+                  <option value="insulation" data-i18n="insulation">Zateplenie budov</option>
+                  <option value="house" data-i18n="house">Rodinné domy na kľúč</option>
+                  <option value="other" data-i18n="other">Iné / viac služieb</option>
+                </select>
+              </label>
+              <label><span data-i18n="message">Informácie o projekte</span><textarea name="message" rows="4" required maxlength="2000"></textarea></label>
+              <div class="form-actions">
+                <button class="btn btn-primary" type="submit"><span data-i18n="submit">Pripraviť e-mail</span><span aria-hidden="true">↗</span></button>
+                <p id="form-note" data-i18n="formNote">Otvorí sa vaša e-mailová aplikácia s vyplneným dopytom.</p>
+              </div>
+            </form>
+            <noscript><p>Dopyt môžete poslať na <a href="mailto:ostrovsky.juraj@gmail.com">ostrovsky.juraj@gmail.com</a>.</p></noscript>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <a class="footer-brand" href="#top">JuOs-Stav s.r.o.</a>
+        <a href="#top"><span data-i18n="backToTop">Späť hore</span> <span aria-hidden="true">↑</span></a>
+      </div>
+      <div class="footer-bottom">
+        <span>Svätého Urbana 5764/10, 903 01 Senec</span>
+        <span><span data-i18n="companyId">IČO</span> 48202151 · <span data-i18n="taxId">DIČ</span> 2120084527 · <span data-i18n="vatId">IČ DPH</span> SK2120084527</span>
+      </div>
+    </div>
+  </footer>
+
+  <dialog class="photo-dialog" id="photo-dialog" aria-labelledby="photo-dialog-title">
+    <form method="dialog"><button class="icon-btn" aria-label="Zavrieť fotografiu" data-i18n-aria="closePhoto" autofocus>×</button></form>
+    <figure><img alt=""><figcaption id="photo-dialog-title"></figcaption></figure>
+  </dialog>
+</body>
+</html>
