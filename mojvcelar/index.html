@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="sk" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Môj včelár (mojvcelar.sk) – Včelárenie rodina Kaplánová, Čataj (okres Senec). Pravý slovenský včelí med ocenený na kongresoch APISLAVIA a AGRA, obnôžkový peľ, propolis, včelí vosk a domáci cesnak Mojmír spod slamy. Bezplatný dovoz BA, Senec, Trnava, Pezinok." />
+  <meta name="theme-color" content="#c87a08" />
+  <title>Môj včelár | Včelárenie rodina Kaplánová · Čataj (Slovenský včelí med, peľ, propolis)</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Top Information Bar -->
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <div class="topbar-items">
+        <span class="topbar-item" data-i18n="topbar.location">📍 Agátová 144, 900 83 Čataj (8 km od Senca · 18 km od Trnavy)</span>
+        <span class="topbar-item" data-i18n="topbar.delivery">🚗 Bezplatný dovoz po dohode: Bratislava, Senec, Trnava, Pezinok, Šenkvice &amp; trasa Žilina</span>
+      </div>
+      <div class="topbar-items">
+        <span class="topbar-badge" data-i18n="topbar.award">🏆 Víťazi APISLAVIA 2016 (1. a 3. miesto) &amp; AGRA 2022 (Zlato &amp; Striebro)</span>
+        <span class="topbar-item">📞 <a href="tel:+421949657020">0949 657 020</a></span>
+        <span class="topbar-item">✉️ <a href="mailto:vcelarenie1@gmail.com">vcelarenie1@gmail.com</a></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sticky Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#uvod" class="brand" aria-label="Môj včelár – Včelárenie rodina Kaplánová">
+        <img src="favicon.svg" alt="Môj včelár logo" class="brand-mark" width="44" height="44" />
+        <div class="brand-text">
+          <span class="brand-title">Môj <span>včelár</span>.sk</span>
+          <span class="brand-subtitle" data-i18n="brand.subtitle">Včelárenie rodina Kaplánová · Čataj</span>
+        </div>
+      </a>
+
+      <nav class="main-nav" id="mainNav" aria-label="Main Navigation">
+        <a href="#ponuka" data-i18n="nav.products">Ponuka 2026</a>
+        <a href="#kalkulacka" data-i18n="nav.calculator">Objednávka &amp; Lekáreň</a>
+        <a href="#ocenenia" data-i18n="nav.awards">Ocenenia</a>
+        <a href="#pribeh" data-i18n="nav.story">Náš príbeh</a>
+        <a href="#clanky" data-i18n="nav.knowledge">Včelárske rady</a>
+        <a href="#kontakt" data-i18n="nav.contact">Kontakt &amp; Dovoz</a>
+      </nav>
+
+      <div class="header-controls">
+        <div class="lang-switcher" role="group" aria-label="Language switcher">
+          <button type="button" class="lang-btn active" data-lang="sk">SK</button>
+          <button type="button" class="lang-btn" data-lang="de">DE</button>
+          <button type="button" class="lang-btn" data-lang="en">EN</button>
+          <button type="button" class="lang-btn" data-lang="hu">HU</button>
+        </div>
+        <button type="button" class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌙</button>
+        <button type="button" class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="uvod">
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="eyebrow" data-i18n="hero.eyebrow">🐝 Slovenský včelí med priamo od včelára · Od roku 2007</div>
+          <h1 data-i18n="hero.title">Keď je poctivá kvalita <span class="highlight">na 1. mieste.</span> Med svetovej úrovne z Čataja.</h1>
+          <p class="hero-lead" data-i18n="hero.lead">
+            Sme traja bratia Kaplánovci (Ing. Lukáš, Ing. Daniel a Marek). V podkarpatskej oblasti okresu Senec sa s láskou staráme o včelstvá, sadíme medonosné lipy a prinášame Vám 100 % pravý slovenský med, obnôžkový peľ, propolis a vosk ocenený zlatými medailami na kongresoch APISLAVIA a AGRA.
+          </p>
+          <div class="hero-actions">
+            <a href="#ponuka" class="btn btn-primary" data-i18n="hero.ctaPrimary">🍯 Pozrieť ponuku medu 2026</a>
+            <a href="#kalkulacka" class="btn btn-outline" data-i18n="hero.ctaSecondary">🧮 Kalkulačka &amp; Bezplatný dovoz</a>
+          </div>
+          <div class="hero-stats">
+            <div class="stat-card">
+              <div class="stat-value" data-i18n="hero.stat1Val">1. miesto</div>
+              <div class="stat-label" data-i18n="hero.stat1Label">Najlepší európsky med APISLAVIA</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-value" data-i18n="hero.stat2Val">10+ medailí</div>
+              <div class="stat-label" data-i18n="hero.stat2Label">AGRA Slovinsko &amp; Agrokomplex</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-value" data-i18n="hero.stat3Val">Od r. 2007</div>
+              <div class="stat-label" data-i18n="hero.stat3Label">Od prvého roja po vzorovú včelnicu</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-value" data-i18n="hero.stat4Val">0 € dovoz</div>
+              <div class="stat-label" data-i18n="hero.stat4Label">BA, Senec, Trnava, Pezinok a okolie</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-card-frame">
+            <img src="images/hero-med-kaplan.jpg" alt="Pestrosť našich medov – Včelárenie rodina Kaplánová Čataj" />
+            <div class="hero-caption-bar">
+              <div>
+                <strong style="display:block; font-size:0.95rem;" data-i18n="hero.captionTitle">Pestrosť prírody vo farbách našich medíkov</strong>
+                <span style="font-size:0.8rem; color:var(--text-muted);" data-i18n="hero.captionSub">Držitelia ochrannej známky Slovenský med · SZV ZO Senec</span>
+              </div>
+              <img src="images/badge-szv.gif" alt="Slovenský zväz včelárov" style="height:42px; width:auto;" />
+            </div>
+          </div>
+          <div class="hero-floating-badge">
+            <img src="images/badge-apislavia-2016.png" alt="APISLAVIA 2016" />
+            <div>
+              <strong style="display:block; font-size:0.86rem; color:var(--primary);" data-i18n="hero.badgeTitle">Zlatá &amp; Bronzová medaila</strong>
+              <span style="font-size:0.76rem; color:var(--text-secondary);" data-i18n="hero.badgeSub">21. kongres APISLAVIA &amp; AGRA 2018 / 2022</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2026 Product Catalog Section -->
+    <section class="section" id="ponuka">
+      <div class="container">
+        <div class="section-header">
+          <div class="eyebrow" data-i18n="products.eyebrow">🍯 Aktuálna ponuka &amp; Sezónny prehľad 2026</div>
+          <h2 data-i18n="products.title">Pravé včelie produkty a úroda spod slamy</h2>
+          <p data-i18n="products.subtitle">
+            Každý pohár medu pochádza priamo z našich včelníc v Čataji a podkarpatskej oblasti. Produkty skladom majú uvedenú cenu, pri sezónnych medoch Vám radi overíme aktuálnu dostupnosť.
+          </p>
+        </div>
+
+        <div class="filter-bar" role="tablist" aria-label="Product category filter">
+          <button type="button" class="filter-btn active" data-filter="all" data-i18n="filter.all">Všetky produkty (11)</button>
+          <button type="button" class="filter-btn" data-filter="inStock" data-i18n="filter.inStock">Skladom s cenou (6)</button>
+          <button type="button" class="filter-btn" data-filter="honey" data-i18n="filter.honey">Slovenské medy (7)</button>
+          <button type="button" class="filter-btn" data-filter="apitherapy" data-i18n="filter.apitherapy">Peľ, Propolis &amp; Vosk (3)</button>
+          <button type="button" class="filter-btn" data-filter="garden" data-i18n="filter.garden">Cesnak &amp; Zemiaky spod slamy (2)</button>
+        </div>
+
+        <div class="product-grid" id="productGrid"></div>
+      </div>
+    </section>
+
+    <!-- Interactive Bundle Calculator & Natural Apitherapy Advisor -->
+    <section class="section section-alt" id="kalkulacka">
+      <div class="container">
+        <div class="section-header">
+          <div class="eyebrow" data-i18n="tools.eyebrow">🧮 Interaktívna objednávka &amp; Prírodná apiterapia</div>
+          <h2 data-i18n="tools.title">Vyskladajte si balíček s bezplatným dovozom</h2>
+          <p data-i18n="tools.subtitle">
+            Spočítajte si orientačnú cenu produktov skladom, vyberte si lokalitu doručenia a zistite, ktorý včelí produkt je najvhodnejší pre Vaše zdravie.
+          </p>
+        </div>
+
+        <div class="tools-grid">
+          <!-- Left: Bundle & Free Delivery Calculator -->
+          <div class="panel-card">
+            <h3 data-i18n="calc.title">1. Kalkulačka balíčka &amp; Bezplatného dovozu</h3>
+            <p class="panel-subtitle" data-i18n="calc.subtitle">Upravte počet kusov alebo pridajte produkty priamo z katalógu vyššie:</p>
+
+            <div class="calc-item-list" id="calcItems"></div>
+
+            <div class="delivery-selector">
+              <label for="deliveryRoute" data-i18n="calc.routeLabel">Vyberte spôsob odberu / lokalitu bezplatného dovozu:</label>
+              <select id="deliveryRoute">
+                <option value="cataj" data-i18n="calc.route1">Osobný odber: Čataj, Agátová 144 (8 km od Senca) — 0 €</option>
+                <option value="senec" data-i18n="calc.route2">Bezplatný dovoz po dohode: Senec, Pezinok, Šenkvice a okolie — 0 €</option>
+                <option value="ba-tt" data-i18n="calc.route3">Bezplatný dovoz po dohode: Bratislava / Trnava a blízke okolie — 0 €</option>
+                <option value="zilina" data-i18n="calc.route4">Dovoz po trase smer Žilina (po vzájomnej dohode) — 0 €</option>
+                <option value="posta" data-i18n="calc.route5">Zaslanie poštou na dobierku (peľ, propolis, vosk, sušený cesnak)</option>
+              </select>
+            </div>
+
+            <div class="calc-summary-box">
+              <div class="calc-total-line">
+                <strong data-i18n="calc.totalLabel">Orientačná suma vybraných produktov:</strong>
+                <span class="calc-total-price" id="calcTotal">27 €</span>
+              </div>
+              <div class="calc-delivery-badge" data-i18n="calc.deliveryNote">
+                ✓ Bezplatné doručenie po dohode v rámci našej trasy (Čataj, Senec, Trnava, Pezinok, BA)
+              </div>
+            </div>
+
+            <button type="button" class="btn btn-primary" id="transferOrderBtn" style="width:100%;" data-i18n="calc.transferBtn">
+              📩 Preniesť výber do objednávkového formulára
+            </button>
+          </div>
+
+          <!-- Right: Apitherapy & Health Advisor -->
+          <div class="panel-card">
+            <h3 data-i18n="advisor.title">2. Med je lekáreň, ktorá je vždy po ruke</h3>
+            <p class="panel-subtitle" data-i18n="advisor.subtitle">
+              Vyberte oblasť, ktorú chcete prirodzene podporiť – zobrazíme Vám odporúčanie a osvedčený recept z našej praxe:
+            </p>
+
+            <div class="symptom-buttons" role="tablist">
+              <button type="button" class="symptom-btn active" data-symptom="throat" data-i18n="sym.throat">🫁 Prechladnutie, hrdlo &amp; imunita</button>
+              <button type="button" class="symptom-btn" data-symptom="stomach" data-i18n="sym.stomach">🌿 Trávenie, žalúdok &amp; črevá</button>
+              <button type="button" class="symptom-btn" data-symptom="heart" data-i18n="sym.heart">❤️ Srdce, cievy, kosti &amp; selén</button>
+              <button type="button" class="symptom-btn" data-symptom="sleep" data-i18n="sym.sleep">😴 Spánok, nervy, stres &amp; prostata</button>
+              <button type="button" class="symptom-btn" data-symptom="oral" data-i18n="sym.oral">🦷 Zuby, ďasná, afty &amp; hojenie kože</button>
+            </div>
+
+            <div class="advisor-result" id="advisorOutput"></div>
+
+            <div style="margin-top:20px; display:grid; grid-template-columns:1fr 1fr; gap:12px;">
+              <img src="images/article-pel.jpg" alt="Včela s obnôžkami peľu" style="border-radius:12px; height:135px; width:100%; object-fit:cover; border:1px solid var(--border);" loading="lazy" />
+              <img src="images/article-propolis.jpg" alt="Propolis a včelia lekáreň" style="border-radius:12px; height:135px; width:100%; object-fit:cover; border:1px solid var(--border);" loading="lazy" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- International & National Awards Section -->
+    <section class="section" id="ocenenia">
+      <div class="container">
+        <div class="section-header">
+          <div class="eyebrow" data-i18n="awards.eyebrow">🏆 Medzinárodné a národné uznanie</div>
+          <h2 data-i18n="awards.title">Ocenenia našej práce vo svete a na Slovensku</h2>
+          <p data-i18n="awards.subtitle">
+            Naša snaživosť a zanietenie k včelárstvu priniesli slovenskému medu z Čataja medaily zo svetových kongresov v Kazachstane, Poľsku, Slovinsku aj na výstavisku Agrokomplex v Nitre.
+          </p>
+        </div>
+
+        <div class="awards-grid">
+          <article class="award-card">
+            <div class="award-card-img">
+              <img src="images/award-agra-2022.jpg" alt="AGRA 2022 zlatá a strieborná medaila Daniel Kaplán" loading="lazy" />
+              <span class="award-year-tag" data-i18n="award1.year">AGRA 2022 · Slovinsko (Gornja Radgona)</span>
+            </div>
+            <div class="award-card-body">
+              <h3 data-i18n="award1.title">1. miesto &amp; Zlatá medaila + 2. miesto &amp; Strieborná medaila</h3>
+              <p data-i18n="award1.desc">
+                Ing. Daniel Kaplán získal 21. augusta 2022 na medzinárodnom veľtrhu AGRA v Slovinsku 1. miesto a zlatú medailu za najlepší viacdruhový med (Slovenský med lúčny) a 2. miesto a striebornú medailu za najlepší svetlý med (Slovenský med lipový).
+              </p>
+            </div>
+          </article>
+
+          <article class="award-card">
+            <div class="award-card-img">
+              <img src="images/award-apislavia-2016.jpg" alt="APISLAVIA 2016 Kazachstan Alma-Ata Zlatá a bronzová medaila Lukáš a Daniel Kaplán" loading="lazy" />
+              <span class="award-year-tag" data-i18n="award2.year">APISLAVIA 2016 · Kazachstan (Alma-Ata)</span>
+            </div>
+            <div class="award-card-body">
+              <h3 data-i18n="award2.title">1. miesto (Zlato) &amp; 3. miesto (Bronz) – Najlepší európsky med</h3>
+              <p data-i18n="award2.desc">
+                Na 21. kongrese medzinárodnej organizácie APISLAVIA v Alma-Ate (14.–18. 9. 2016) vybojoval Ing. Lukáš Kaplán 1. miesto, zlatú medailu a sošku a Ing. Daniel Kaplán 3. miesto a bronzovú medailu za najlepší európsky jednodruhový med.
+              </p>
+            </div>
+          </article>
+
+          <article class="award-card">
+            <div class="award-card-img">
+              <img src="images/award-agra-2018.jpg" alt="AGRA 2018 Slovinsko zlatá medaila slnečnicový med Lukáš Kaplán" loading="lazy" />
+              <span class="award-year-tag" data-i18n="award3.year">AGRA 2018 · Slovinsko (102 včelárov / 5 krajín)</span>
+            </div>
+            <div class="award-card-body">
+              <h3 data-i18n="award3.title">Zlato za slnečnicový med &amp; 2× Striebro (lipový a kvetový)</h3>
+              <p data-i18n="award3.desc">
+                V konkurencii 146 vzoriek zo Slovenska, Slovinska, Srbska, Macedónska a Chorvátska získali všetky 3 naše súťažné vzorky medaily: 1. miesto (zlato) za slnečnicový med a dve strieborné medaily za lipový a kvetový med.
+              </p>
+            </div>
+          </article>
+
+          <article class="award-card">
+            <div class="award-card-img">
+              <img src="images/award-apislavia-2012.jpg" alt="APISLAVIA 2012 Poľsko Pszczela Wola a Agrokomplex Nitra" loading="lazy" />
+              <span class="award-year-tag" data-i18n="award4.year">APISLAVIA 2012 (Poľsko) &amp; AGROKOMPLEX Nitra</span>
+            </div>
+            <div class="award-card-body">
+              <h3 data-i18n="award4.title">Striebro v Pszczela Wola 2012 &amp; 1., 2. a 3. miesto Agrokomplex</h3>
+              <p data-i18n="award4.desc">
+                Strieborná medaila na XIX. kongrese APISLAVIA 2012 v Poľsku (najlepšie hodnotený kvetový med súťaže), 1. miesto na súťaži o najlepší slovenský med Agrokomplex 2013 a 2. aj 3. miesto na Agrokomplexe 2016.
+              </p>
+            </div>
+          </article>
+
+          <article class="award-card">
+            <div class="award-card-img">
+              <img src="images/award-slovensky-med.jpg" alt="Certifikát kvality medu a ochranná známka Slovenský med" loading="lazy" />
+              <span class="award-year-tag" data-i18n="award5.year">Ochranná známka &amp; Odborné osvedčenia</span>
+            </div>
+            <div class="award-card-body">
+              <h3 data-i18n="award5.title">Značka „Slovenský med“, AÚVL &amp; Ekologický chov včiel</h3>
+              <p data-i18n="award5.desc">
+                Držitelia Osvedčenia za vynikajúce kvalitatívne parametre medu (ochranná známka Slovenský med), osvedčenia Asistent úradného veterinárneho lekára (AÚVL), Včelárske minimum, Ekologický a Ekonomický chov včelstiev (ECHO).
+              </p>
+            </div>
+          </article>
+
+          <article class="award-card">
+            <div class="award-card-img">
+              <img src="images/story-odovzdavanie-trencin.jpg" alt="Slávnostné odovzdávanie ocenení APISLAVIA v Trenčíne" loading="lazy" />
+              <span class="award-year-tag" data-i18n="award6.year">Slávnostné odovzdávanie ocenení · Trenčín</span>
+            </div>
+            <div class="award-card-body">
+              <h3 data-i18n="award6.title">Reprezentácia Slovenského zväzu včelárov (SZV)</h3>
+              <p data-i18n="award6.desc">
+                Slávnostné prevzatie medailí z rúk predstaviteľov PPA, SZV a ČSV na XX. konferencii zlepšovateľov a vynálezcov vo včelárstve. Ing. Daniel Kaplán pôsobí ako predseda ZO SZV Senec.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <div class="org-logos-strip">
+          <div class="org-logo-item">
+            <img src="images/badge-szv.gif" alt="Slovenský zväz včelárov" loading="lazy" />
+            <span data-i18n="org.szv">Slovenský zväz včelárov (ZO SZV Senec)</span>
+          </div>
+          <div class="org-logo-item">
+            <img src="images/badge-apislavia.png" alt="APISLAVIA" loading="lazy" />
+            <span data-i18n="org.apislavia">Medzinárodná federácia APISLAVIA</span>
+          </div>
+          <div class="org-logo-item">
+            <img src="images/badge-apislavia-2012.png" alt="APISLAVIA 2012 Pszczela Wola" loading="lazy" />
+            <span data-i18n="org.poland">XIX. Kongres APISLAVIA 2012 · Pszczela Wola</span>
+          </div>
+          <div class="org-logo-item">
+            <img src="images/badge-apislavia-2016.png" alt="APISLAVIA 2016 Alma-Ata" loading="lazy" />
+            <span data-i18n="org.kazakh">XXI. Kongres APISLAVIA 2016 · Alma-Ata</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Family Story & Photo Gallery Section -->
+    <section class="section section-alt" id="pribeh">
+      <div class="container story-grid">
+        <div class="story-copy">
+          <div class="eyebrow" data-i18n="story.eyebrow">👨‍👦‍👦 Náš príbeh · Bratia Lukáš, Daniel a Marek Kaplánovci</div>
+          <h2 style="font-size:clamp(1.75rem, 3vw, 2.4rem); margin-bottom:18px;" data-i18n="story.title">
+            Začali sme sami z ničoho – s papierovou krabicou a jedným rojom v máji 2007
+          </h2>
+          <p style="margin-bottom:14px; color:var(--text-secondary);" data-i18n="story.p1">
+            Pri stretnutiach sa nás ľudia často pýtajú: „Ako ste sa dostali ku včeláreniu? Prebrali ste štafetu po otcovi či dedkovi?“ Naša odpoveď je iná: začali sme úplne sami z ničoho ešte ako študenti základných a stredných technických škôl (neskôr FEI STU v Bratislave). Kým rovesníci behali za futbalovou loptou, my sme študovali odbornú včelársku literatúru.
+          </p>
+          <p style="margin-bottom:14px; color:var(--text-secondary);" data-i18n="story.p2">
+            Príbeh sa začal písať koncom jari 2007, keď čosi hučiace zatienilo oblohu za našou záhradou v Čataji. Na kríku sa usadil roj včiel veľký ako strapec viniča. Najstarší Lukáš sa odhodlal priblížiť s papierovou krabicou s malým otvorom. Včielky s radostným bzučaním a mávaním krídel napochodovali dnu – a ostali u nás dodnes.
+          </p>
+          <blockquote class="story-quote" data-i18n="story.quote">
+            „Pochopili sme, že krabica nie je včelí úľ. :) O pár rokov vyrástla v našej záhrade včelnica, vlastnoručne sme opravili staré domce, navrhli vlastné napájadlá a peľochyty a zo semien sme začali pestovať stovky líp pre celú obec.“
+          </blockquote>
+          <p style="color:var(--text-secondary);" data-i18n="story.p3">
+            Dnes obhospodarujeme včelstvá v podkarpatskej oblasti okresu Senec, vedieme Základnú organizáciu SZV Senec a popri včelách pestujeme v živej pôde pod slamou bez chémie domáci cesnak Mojmír a zemiaky Agria.
+          </p>
+        </div>
+
+        <div class="story-gallery">
+          <figure class="story-photo">
+            <img src="images/story-bratia-kaplanovci.jpg" alt="Bratia včelári Daniel, Lukáš a Marek Kaplánovci" loading="lazy" />
+            <figcaption data-i18n="story.cap1">Bratia včelári (zľava): Daniel, Lukáš a Marek Kaplánovci</figcaption>
+          </figure>
+          <figure class="story-photo">
+            <img src="images/story-vcelnica.jpg" alt="Včelnica a opravené domce v Čataji" loading="lazy" />
+            <figcaption data-i18n="story.cap2">Náš opravený včelín (domec) a úle v záhrade v Čataji</figcaption>
+          </figure>
+          <figure class="story-photo">
+            <img src="images/story-trhy-stanok.jpg" alt="Stánok Včelárstva Kaplán na Slovenských trhoch" loading="lazy" />
+            <figcaption data-i18n="story.cap3">Stánok Včelárstva Kaplán na Slovenských trhoch v Bratislave</figcaption>
+          </figure>
+          <figure class="story-photo">
+            <img src="images/story-roj-2007.jpg" alt="Odchyt včelieho roja v záhrade" loading="lazy" />
+            <figcaption data-i18n="story.cap4">Prvý odchyt včelieho roja, ktorým sa v roku 2007 všetko začalo</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Knowledge Base & Media Section -->
+    <section class="section" id="clanky">
+      <div class="container">
+        <div class="section-header">
+          <div class="eyebrow" data-i18n="knowledge.eyebrow">📚 Z našej včelárskej praxe &amp; Médiá</div>
+          <h2 data-i18n="knowledge.title">Odborné články, inovácie a rozhovory v rádiách</h2>
+          <p data-i18n="knowledge.subtitle">
+            Na stránke mojvcelar.sk sa delíme o skúsenosti z chovu včiel, pastovania medu, výsadby medonosných stromov a ekologického pestovania pod slamou.
+          </p>
+        </div>
+
+        <div class="knowledge-grid">
+          <article class="knowledge-card">
+            <img src="images/prod-pastovany.jpg" alt="Pastovaný med a suché kryštály" loading="lazy" />
+            <div class="knowledge-body">
+              <span class="knowledge-tag" data-i18n="art1.tag">Technológia &amp; Kvalita</span>
+              <h3 data-i18n="art1.title">Pastovaný med a tajomstvo „suchých kryštálov“</h3>
+              <p data-i18n="art1.desc">
+                Prečo sú biele obrazce v skryštalizovanom mede dôkazom najvyššej hustoty a pravosti a ako 3× denne miešame repkový med na jemný krém (10 μm).
+              </p>
+            </div>
+          </article>
+
+          <article class="knowledge-card">
+            <img src="images/article-lipa.jpg" alt="Pestovanie lipy zo semien" loading="lazy" />
+            <div class="knowledge-body">
+              <span class="knowledge-tag" data-i18n="art2.tag">Medonosná krajina</span>
+              <h3 data-i18n="art2.title">Pestovanie lipy zo semien &amp; Pozor na lipu striebornú</h3>
+              <p data-i18n="art2.desc">
+                Ako zbierať semená lipy malolistej a veľkolistej „za zelena“ začiatkom augusta a prečo nektár okrasnej lipy striebornej (Tilia tomentosa) paralyzuje hmyz.
+              </p>
+            </div>
+          </article>
+
+          <article class="knowledge-card">
+            <img src="images/article-napajadlo.jpg" alt="Napájadlo pre včely" loading="lazy" />
+            <div class="knowledge-body">
+              <span class="knowledge-tag" data-i18n="art3.tag">Zlepšovák z včelnice</span>
+              <h3 data-i18n="art3.title">Bezpečné plávajúce napájadlo pre včely s morskou soľou</h3>
+              <p data-i18n="art3.desc">
+                Náš osvedčený recept z plastovej materskej mriežky, polystyrénu a riečnych kameňov s 10 g morskej soli na 10 l vody, aby sa včielky na jar netopili.
+              </p>
+            </div>
+          </article>
+
+          <article class="knowledge-card">
+            <img src="images/prod-odvieckovance.jpg" alt="Odviečkovance a SZV ZO Senec" loading="lazy" />
+            <div class="knowledge-body">
+              <span class="knowledge-tag" data-i18n="art4.tag">SZV ZO Senec</span>
+              <h3 data-i18n="art4.title">Pozvánka do Slovenského zväzu včelárov ZO Senec</h3>
+              <p data-i18n="art4.desc">
+                Predseda ZO SZV Senec Ing. Daniel Kaplán (+421 949 695 101) pozýva včelárov z okresu Senec: prednášky, liečenie včelstiev, dotácie a výhodné poháre.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <div class="media-strip">
+          <h3 data-i18n="media.title">🎙️ Napísali o nás a odvysielali rozhovory:</h3>
+          <div class="media-badges">
+            <div class="media-item">
+              <strong data-i18n="media1.name">RTVS Rádio Regina – Západ</strong>
+              <span data-i18n="media1.desc">Hodinový rozhovor s Tatianou Šuškovou v Čataji o živote včiel a pestovaní cesnaku pod slamou (2022 / 2023).</span>
+            </div>
+            <div class="media-item">
+              <strong data-i18n="media2.name">Rádio LUMEN &amp; Rádio Mária</strong>
+              <span data-i18n="media2.desc">Relácie o apiterapii, podpore imunity propolisom a „Včely sú darom od Boha“ s Lukášom Kaplánom.</span>
+            </div>
+            <div class="media-item">
+              <strong data-i18n="media3.name">Časopis Záhradkár &amp; Život</strong>
+              <span data-i18n="media3.desc">Špeciálna príloha „Nebojte sa včelárenia – ako začať“ a reportáž „Med svetovej kvality z Čataja do Kazachstanu“.</span>
+            </div>
+            <div class="media-item">
+              <strong data-i18n="media4.name">Rodina a zdravie &amp; OZ Palikerav</strong>
+              <span data-i18n="media4.desc">Odborný článok o liečivých účinkoch domáceho medu a charitatívna podpora rodín v núdzi.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact & Free Delivery Section -->
+    <section class="section section-alt" id="kontakt">
+      <div class="container">
+        <div class="section-header">
+          <div class="eyebrow" data-i18n="contact.eyebrow">📬 Kontakt, Osobný odber &amp; Bezplatný dovoz</div>
+          <h2 data-i18n="contact.title">Spojte sa priamo s bratmi Kaplánovcami</h2>
+          <p data-i18n="contact.subtitle">
+            Radi Vám poradíme s výberom medu, peľu či propolisu, overíme aktuálnu sezónnu zásobu a dohodneme osobný odber v Čataji alebo bezplatný dovoz až k Vám domov.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <div>
+            <div class="contact-info-list">
+              <div class="contact-info-item">
+                <div class="contact-icon">📍</div>
+                <div>
+                  <strong style="display:block; margin-bottom:2px;" data-i18n="contact.addrTitle">Adresa včelnice &amp; Osobného odberu</strong>
+                  <span style="font-size:0.9rem; color:var(--text-secondary);" data-i18n="contact.addrText">
+                    Agátová 144, 900 83 Čataj (okres Senec, Bratislavský kraj · 8 km od Senca, 18 km od Trnavy)
+                  </span>
+                </div>
+              </div>
+
+              <div class="contact-info-item">
+                <div class="contact-icon">📞</div>
+                <div>
+                  <strong style="display:block; margin-bottom:2px;" data-i18n="contact.phoneTitle">Telefónne kontakty (Priamo na včelárov)</strong>
+                  <span style="font-size:0.9rem; color:var(--text-secondary);" data-i18n="contact.phoneText">
+                    <a href="tel:+421949657020">0949 657 020</a> (Predaj medu &amp; včelích produktov) · <a href="tel:+421949657019">0949 657 019</a> (Ing. Lukáš Kaplán – cesnak, zemiaky, dreviny) · <a href="tel:+421949695101">+421 949 695 101</a> (Ing. Daniel Kaplán – predseda ZO SZV Senec)
+                  </span>
+                </div>
+              </div>
+
+              <div class="contact-info-item">
+                <div class="contact-icon">✉️</div>
+                <div>
+                  <strong style="display:block; margin-bottom:2px;" data-i18n="contact.emailTitle">E-mailová adresa (Odkrytá bez antispam bariéry)</strong>
+                  <a href="mailto:vcelarenie1@gmail.com" style="font-size:1rem; font-weight:800;">vcelarenie1@gmail.com</a>
+                </div>
+              </div>
+
+              <div class="contact-info-item">
+                <div class="contact-icon">🚗</div>
+                <div>
+                  <strong style="display:block; margin-bottom:2px;" data-i18n="contact.routeTitle">Trasy bezplatného dovozu po dohode</strong>
+                  <span style="font-size:0.9rem; color:var(--text-secondary);" data-i18n="contact.routeText">
+                    Čataj · Senec · Trnava · Pezinok · Šenkvice · Bratislava a blízke okolie (+ príležitostne trasa smer Žilina)
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="map-embed">
+              <iframe
+                title="Mapa Čataj, Agátová 144"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=17.445%2C48.248%2C17.505%2C48.278&amp;layer=mapnik&amp;marker=48.2632%2C17.4765"
+                loading="lazy">
+              </iframe>
+            </div>
+          </div>
+
+          <div class="panel-card">
+            <h3 style="margin-bottom:18px;" data-i18n="form.title">Nezáväzná objednávka / Overenie dostupnosti medu</h3>
+            <form id="orderForm">
+              <div class="form-grid">
+                <div class="form-group">
+                  <label for="orderName" data-i18n="form.name">Vaše meno a priezvisko *</label>
+                  <input type="text" id="orderName" class="form-control" required placeholder="Ján Novák" />
+                </div>
+                <div class="form-group">
+                  <label for="orderPhone" data-i18n="form.phone">Telefónne číslo *</label>
+                  <input type="tel" id="orderPhone" class="form-control" required placeholder="+421 9XX XXX XXX" />
+                </div>
+              </div>
+
+              <div class="form-grid">
+                <div class="form-group">
+                  <label for="orderEmail" data-i18n="form.email">E-mailová adresa</label>
+                  <input type="email" id="orderEmail" class="form-control" placeholder="vas@email.sk" />
+                </div>
+                <div class="form-group">
+                  <label for="orderLocation" data-i18n="form.location">Mesto / Obec doručenia (napr. Senec, Bratislava, Čataj)</label>
+                  <input type="text" id="orderLocation" class="form-control" placeholder="Senec / Bratislava / Čataj" />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="orderMessage" data-i18n="form.message">Vybrané produkty a Vaša správa pre bratov Kaplánovcov *</label>
+                <textarea id="orderMessage" class="form-control" rows="6" required>• 1× Agátový med (900 g) – 10 €
+• 1× Jemne skryštalizovaný med – Lúčne kvety (900 g) – 10 €
+• 1× Obnôžkový včelí peľ sušený (100 g) – 3 €
+• 1× Propolisová tinktúra (30 ml) – 4 €
+Orientačná suma skladových položiek: 27 €</textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width:100%;" data-i18n="form.submit">
+                🍯 Odoslať dopyt včelárom (vcelarenie1@gmail.com)
+              </button>
+              <p style="margin-top:10px; font-size:0.8rem; color:var(--text-muted); text-align:center;" data-i18n="form.note">
+                Odoslaním sa vytvorí prehľadný súhrn objednávky priamo pre vcelarenie1@gmail.com alebo Vám zavoláme späť z čísla 0949 657 020.
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div style="display:flex; align-items:center; gap:10px; margin-bottom:12px;">
+            <img src="favicon.svg" alt="Môj včelár" width="36" height="36" />
+            <strong style="font-family:'Fraunces',serif; font-size:1.2rem; color:#ffffff;">Môj včelár.sk</strong>
+          </div>
+          <p style="font-size:0.88rem; color:#d4c29a;" data-i18n="footer.about">
+            Rodinné včelárstvo bratov Lukáša, Daniela a Mareka Kaplánovcov v obci Čataj (okres Senec). Držitelia ochrannej známky Slovenský med a víťazi medzinárodných súťaží APISLAVIA a AGRA.
+          </p>
+        </div>
+
+        <div>
+          <h4 data-i18n="footer.navTitle">Rýchla navigácia</h4>
+          <ul class="footer-links">
+            <li><a href="#ponuka" data-i18n="nav.products">Ponuka 2026</a></li>
+            <li><a href="#kalkulacka" data-i18n="nav.calculator">Objednávka &amp; Lekáreň</a></li>
+            <li><a href="#ocenenia" data-i18n="nav.awards">Ocenenia</a></li>
+            <li><a href="#pribeh" data-i18n="nav.story">Náš príbeh</a></li>
+            <li><a href="#clanky" data-i18n="nav.knowledge">Včelárske rady</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 data-i18n="footer.prodTitle">Naše produkty</h4>
+          <ul class="footer-links">
+            <li><a href="#ponuka">Agátový &amp; Lúčny med (10 € / 900 g)</a></li>
+            <li><a href="#ponuka">Lipový, Slnečnicový &amp; Repkový med</a></li>
+            <li><a href="#ponuka">Obnôžkový peľ sušený (3 € / 100 g)</a></li>
+            <li><a href="#ponuka">Propolisová tinktúra (4 € / 6 € / 10 €)</a></li>
+            <li><a href="#ponuka">Pravý včelí vosk (4 € / 70 g)</a></li>
+            <li><a href="#ponuka">Sušený cesnak Mojmír spod slamy</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 data-i18n="footer.contactTitle">Priamy kontakt</h4>
+          <ul class="footer-links">
+            <li>📍 Agátová 144, 900 83 Čataj</li>
+            <li>📞 <a href="tel:+421949657020">+421 949 657 020</a> (Med &amp; Peľ)</li>
+            <li>📞 <a href="tel:+421949657019">+421 949 657 019</a> (Ing. Lukáš Kaplán)</li>
+            <li>📞 <a href="tel:+421949695101">+421 949 695 101</a> (Ing. Daniel Kaplán · SZV)</li>
+            <li>✉️ <a href="mailto:vcelarenie1@gmail.com">vcelarenie1@gmail.com</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span data-i18n="footer.rights">© 2009–2026 Včelárenie rodina Kaplánová (mojvcelar.sk) · Ing. Lukáš Kaplán &amp; Ing. Daniel Kaplán. Všetky práva vyhradené.</span>
+        <span>SK · DE · EN · HU | Light &amp; Dark Theme</span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/translations.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

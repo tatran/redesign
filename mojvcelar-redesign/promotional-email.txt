@@ -1,0 +1,37 @@
+Predmet: Návrh modernej 4-jazyčnej prezentácie & interaktívneho katalógu Ponuky medu 2026 | Môj včelár – Včelárenie rodina Kaplánová (SK / DE / EN / HU · Svetlý + Tmavý režim)
+Komu: vcelarenie1@gmail.com
+
+Vážení bratia Kaplánovci – milý pán Ing. Lukáš Kaplán, pán Ing. Daniel Kaplán a pán Marek Kaplán,
+
+Váš autentický príbeh, ktorý sa začal na jar 2007 odchytom prvého včelieho roja do papierovej krabice ešte počas štúdia a vyústil až do svetových ocenení na kongresoch APISLAVIA 2016 v Alma-Ate (1. miesto – zlatá medaila a 3. miesto – bronzová medaila za najlepší európsky med), AGRA 2022 a 2018 v Slovinsku (zlaté a strieborné medaily za lúčny, lipový a slnečnicový med) či Agrokomplex Nitra, je na Slovensku absolútnou raritou. Rovnako obdivuhodná je Vaša práca vo vedení ZO SZV Senec, výsadba líp zo semien aj pestovanie cesnaku Mojmír a zemiakov Agria pod slamou bez chémie.
+
+Keďže ste pán Ing. Lukáš Kaplán ako absolvent FEI STU pôvodnú stránku mojvcelar.sk sám vytvoril a poctivo ju aktualizujete (vrátane čerstvej aktualizácie Ponuky medu 2026), pripravil som pre Vás s maximálnou úctou k Vašej práci moderný, rýchly a plne responzívny prototyp nového webu, ktorý odstraňuje technické obmedzenia starej šablóny Joomla! Beez3:
+
+1. Pevná šírka 1000 px (Joomla! Beez3 & DJ-ImageSlider) na smartfónoch: Dnes viac ako 75 % zákazníkov hľadá domáci med cez mobil. Pôvodný slider so šírkou 1000 px a staré rozbaľovacie menu swMenuFree núti mobilných návštevníkov približovať obrazovku.
+2. Ponuka medu 2026 bez 1-klikového košíka a dopytového formulára: Vaše produkty skladom (Agátový med 10 € / 900 g, Lúčny skryštalizovaný med 10 € / 900 g, Obnôžkový peľ 3 € / 100 g, Propolisová tinktúra 4 € / 6 € / 10 €, Včelí vosk 4 € / 70 g, Sušený cesnak Mojmír 2 € / 14 €) sú uvedené len ako statický text a e-mail je v článkoch skrytý hláškou „Táto e-mailová adresa je chránená pred spamovacími robotmi“.
+3. Zastarané skripty (Universal Analytics UA-27230121-3 & nezabezpečené HTTP počítadlá): V pätičke sa načítavajú externé HTTP počítadlá (toplist.cz, blueboard.cz) a viditeľný blok SEO kľúčových slov.
+4. Absencia jazykových mutácií (DE / EN / HU): Okres Senec, Bratislava a prihraničný región (Rakúsko, Maďarsko) aj Vaše medzinárodné tituly z kongresov APISLAVIA a AGRA si zaslúžia reprezentatívnu 4-jazyčnú prezentáciu.
+
+Aby bol návrh modernizácie okamžite uchopiteľný, pripravil som pre Vás kompletný, funkčný interaktívny prototyp nového webu:
+
+👉 Vyskúšať hotový interaktívny prototyp online:
+https://livingpixelstudios.com/redesign/mojvcelar/
+
+Čo pripravený redesign prototyp pre Včelárstvo rodiny Kaplánovcov ponúka:
+- Interaktívny katalóg Ponuky medu 2026 & Kalkulačka balíčka s výberom trasy bezplatného dovozu (Čataj, Senec, Trnava, Pezinok, Šenkvice, Bratislava, Žilina alebo dobierka)
+- Interaktívny poradca „Med je lekáreň, ktorá je vždy po ruke“ s presným odporúčaním medu, peľu a propolisu podľa zdravotných ťažkostí
+- Dôstojná sieň slávy ocenení (APISLAVIA 2016 & 2012, AGRA 2022 & 2018, Agrokomplex, ochranná známka Slovenský med), príbeh 3 bratov od roku 2007 a prehľad relácií v Rádiu Regina Západ, Rádiu LUMEN a časopise Záhradkár
+- 4 plnohodnotné jazyky (SK / DE / EN / HU) s odbornou včelárskou terminológiou
+- Svetlý medovo-jantárový a prémiový tmavý režim (Dark Mode)
+
+Návrh nezáväzného ďalšieho kroku:
+Rád Vám tento prototyp bezplatne a nezáväzne predvediem (telefonicky, cez krátky 15-minútový videohovor alebo osobne u Vás v Čataji či v Senci). V prípade záujmu vieme nové riešenie nasadiť priamo na Vašu doménu mojvcelar.sk bez výpadku prevádzky.
+
+Ktorý deň v priebehu tohto alebo budúceho týždňa by Vám vyhovoval na krátky rozhovor?
+
+S úctou, vďakou za Vašu prácu pre slovenské včelárstvo a prianím bohatej znášky,
+
+Ing. Luboš Kostroš
+LivingPixel Studios – Špecialista na moderné viacjazyčné webové prezentácie & interaktívne katalógy
+E-mail: info@livingpixelstudios.com
+Web: https://livingpixelstudios.com/
