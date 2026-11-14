@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BUGÁR, s.r.o. | Voda · Kúrenie · Plyn · Kúpeľňové štúdio Šamorín</title>
+  <meta name="description" content="Sme tu pre vás už 33 rokov. Predaj, montáž, servis a realizácie na kľúč v oblasti voda, kúrenie, plyn a kúpeľňového vybavenia v Šamoríne a Dunajskej Strede." />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="alternate icon" type="image/png" href="images/favicon.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
+  <link rel="stylesheet" href="css/style.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HomeAndConstructionBusiness",
+    "name": "BUGÁR, s.r.o.",
+    "url": "https://bugarsro.sk/",
+    "telephone": "+421910144022",
+    "email": "eshop@bugarsro.sk",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Bratislavská 89/21",
+      "addressLocality": "Šamorín",
+      "postalCode": "931 01",
+      "addressCountry": "SK"
+    },
+    "sameAs": [
+      "https://www.facebook.com/bugarsro",
+      "https://www.instagram.com/bugarsro/",
+      "https://www.youtube.com/@bugar_sro"
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="top-utility">
+      <div class="container top-utility-inner">
+        <div class="utility-meta">
+          <span class="utility-item"><span class="utility-dot" aria-hidden="true"></span> Bratislavská 89/21, Šamorín</span>
+          <span class="utility-item">📞 <a href="tel:+421910144022">+421 910 144 022</a></span>
+          <span class="utility-item">✉️ <a href="mailto:eshop@bugarsro.sk">eshop@bugarsro.sk</a></span>
+          <span class="utility-item" data-i18n="brand.years">Už 33 rokov s vami</span>
+        </div>
+        <div class="utility-socials">
+          <a href="https://www.facebook.com/bugarsro" target="_blank" rel="noopener noreferrer">Facebook</a>
+          <a href="https://www.instagram.com/bugarsro/" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="https://www.youtube.com/@bugar_sro" target="_blank" rel="noopener noreferrer">YouTube</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container navbar-main">
+      <a href="#top" class="brand-lockup" aria-label="BUGÁR, s.r.o.">
+        <img src="images/bugar-emblem.png" alt="BUGÁR logo" class="brand-emblem" />
+        <div class="brand-text">
+          <span class="brand-name">BUGÁR, s.r.o.</span>
+          <span class="brand-sub" data-i18n="brand.sub">VODA · KÚRENIE · PLYN</span>
+        </div>
+      </a>
+
+      <nav aria-label="Primary Navigation">
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#services" data-i18n="nav.services">Služby</a></li>
+          <li><a href="#portfolio" data-i18n="nav.portfolio">Realizácie</a></li>
+          <li><a href="#catalog" data-i18n="nav.catalog">Katalóg</a></li>
+          <li><a href="#calculator" data-i18n="nav.calculator">Kalkulačka</a></li>
+          <li><a href="#about" data-i18n="nav.about">O nás</a></li>
+          <li><a href="#contact" data-i18n="nav.contact">Kontakt</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <div class="lang-switcher" role="group" aria-label="Language switcher">
+          <button type="button" class="lang-btn active" data-lang="sk">SK</button>
+          <button type="button" class="lang-btn" data-lang="de">DE</button>
+          <button type="button" class="lang-btn" data-lang="en">EN</button>
+          <button type="button" class="lang-btn" data-lang="hu">HU</button>
+        </div>
+
+        <button type="button" class="icon-btn" id="themeToggle" aria-label="Toggle theme" title="Light / Dark">
+          <span id="themeIcon">🌙</span>
+        </button>
+
+        <button type="button" class="btn-basket" id="openBasketBtn">
+          <span>🛒</span>
+          <span data-i18n="nav.quoteBag">Dopyt</span>
+          <span class="basket-count" id="basketCount">0</span>
+        </button>
+
+        <button type="button" class="icon-btn hamburger-btn" id="mobileMenuBtn" aria-label="Menu" aria-expanded="false">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="hero-badge">
+            <span class="hero-tri-dots" aria-hidden="true">
+              <span class="dot-water"></span>
+              <span class="dot-heat"></span>
+              <span class="dot-gas"></span>
+            </span>
+            <span data-i18n="hero.badge">Šamorín &amp; Dunajská Streda • Od roku 1993</span>
+          </div>
+
+          <h1 class="hero-title">
+            <span data-i18n="hero.titlePre">Komplexné riešenia pre </span><span class="txt-water" data-i18n="hero.titleWater">vodu</span>, <span class="txt-heat" data-i18n="hero.titleHeat">kúrenie</span>, <span class="txt-gas" data-i18n="hero.titleGas">plyn</span><span data-i18n="hero.titlePost"> a vašu novú kúpeľňu.</span>
+          </h1>
+
+          <p class="hero-lead" data-i18n="hero.lead">
+            Sme tu pre vás už 33 rokov. Od návrhu kúpeľne v 3D vizualizácii a predaja overenej tepelnej techniky až po odbornú montáž, servis a kompletnú realizáciu na kľúč.
+          </p>
+
+          <div class="hero-ctas">
+            <a href="#contact" class="btn btn-primary" data-i18n="hero.ctaQuote">Nezáväzná ponuka</a>
+            <button type="button" class="btn btn-water" id="heroBookStudioBtn" data-i18n="hero.ctaStudio">Objednať 3D návrh kúpeľne</button>
+            <a href="#portfolio" class="btn btn-secondary" data-i18n="hero.ctaWork">Pozrieť realizácie</a>
+          </div>
+
+          <div class="hero-stats">
+            <div>
+              <div class="stat-value">33+</div>
+              <div class="stat-label" data-i18n="hero.statYearsLabel">rokov skúseností</div>
+            </div>
+            <div>
+              <div class="stat-value">14</div>
+              <div class="stat-label" data-i18n="hero.statCatsLabel">sortimentných kategórií</div>
+            </div>
+            <div>
+              <div class="stat-value">2</div>
+              <div class="stat-label" data-i18n="hero.statBranchesLabel">pobočky na Žitnom ostrove</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-mosaic">
+          <div class="mosaic-card wide">
+            <img src="images/portfolio/fb-cover-showroom.png" alt="BUGÁR s.r.o. Showroom Šamorín" />
+            <div class="mosaic-overlay">
+              <div class="mosaic-tag" data-i18n="hero.cardShowroomTag">Showroom Šamorín · Bratislavská 89/21</div>
+              <div class="mosaic-title" data-i18n="hero.cardShowroomTitle">Kúpeľňové štúdio &amp; 3D návrhy</div>
+            </div>
+          </div>
+          <div class="mosaic-card square">
+            <img src="images/banners/kupelnove-studio-01.png" alt="3D návrh kúpeľne BUGÁR" />
+          </div>
+          <div class="mosaic-card square">
+            <img src="images/portfolio/ig-4-floor-heating-pex.png" alt="Podlahové kúrenie BUGÁR" />
+            <div class="mosaic-overlay">
+              <div class="mosaic-tag" data-i18n="hero.cardHeatTag">Realizácia TZB</div>
+              <div class="mosaic-title" data-i18n="hero.cardHeatTitle">Podlahové kúrenie &amp; kotolne</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tri-Element Pillars -->
+    <div class="pillars-strip">
+      <div class="container pillars-grid">
+        <article class="pillar-card water">
+          <div class="pillar-icon" aria-hidden="true">💧</div>
+          <div>
+            <h3 data-i18n="pillars.waterTitle">Voda &amp; Sanita</h3>
+            <p data-i18n="pillars.waterDesc">Kompletné rozvody vody a odpadu, dizajnové batérie, sprchové kúty so žľabmi, vane, nábytok a úprava vody.</p>
+          </div>
+        </article>
+        <article class="pillar-card heat">
+          <div class="pillar-icon" aria-hidden="true">🔥</div>
+          <div>
+            <h3 data-i18n="pillars.heatTitle">Kúrenie &amp; OZE</h3>
+            <p data-i18n="pillars.heatDesc">Tepelné čerpadlá, podlahové vykurovanie, nerezové rozdeľovače, radiátory Korado/Stelrad a solárne systémy.</p>
+          </div>
+        </article>
+        <article class="pillar-card gas">
+          <div class="pillar-icon" aria-hidden="true">🟡</div>
+          <div>
+            <h3 data-i18n="pillars.gasTitle">Plyn &amp; Kotly</h3>
+            <p data-i18n="pillars.gasDesc">Plynoinštalácie, kondenzačné kotly Protherm, Viessmann a Vaillant, uvedenie do prevádzky a ročný servis.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <!-- 5 Official Service Pillars -->
+    <section class="section" id="services">
+      <div class="container">
+        <header class="section-header">
+          <div class="section-eyebrow" data-i18n="services.eyebrow">5 pilierov našej práce</div>
+          <h2 class="section-title" data-i18n="services.title">Od jednotlivého dielu až po realizáciu na kľúč</h2>
+          <p class="section-subtitle" data-i18n="services.subtitle">Na jednom mieste v Šamoríne spájame veľkoobchod a maloobchod materiálu s vlastným 3D kúpeľňovým štúdiom, montážnymi tímami a záručným servisom.</p>
+        </header>
+
+        <div class="services-grid" id="servicesGrid"></div>
+      </div>
+    </section>
+
+    <!-- Interactive Heating & Bathroom Estimator -->
+    <section class="section section-alt" id="calculator">
+      <div class="container">
+        <header class="section-header">
+          <div class="section-eyebrow" data-i18n="calculator.eyebrow">Orientačná kalkulačka</div>
+          <h2 class="section-title" data-i18n="calculator.title">Naplánujte si kúrenie alebo kúpeľňu vopred</h2>
+          <p class="section-subtitle" data-i18n="calculator.subtitle">Získajte rýchly orientačný odhad výkonu, rozsahu prác a investície. Výsledok jedným klikom prenesiete do formulára pre presnú ponuku.</p>
+        </header>
+
+        <div class="calc-shell">
+          <div class="calc-tabs" role="tablist">
+            <button type="button" class="calc-tab active" data-calc-tab="heating" id="tabHeating">🔥 <span data-i18n="calculator.tabHeating">Vykurovanie &amp; Kotolňa</span></button>
+            <button type="button" class="calc-tab" data-calc-tab="bath" id="tabBath">🛁 <span data-i18n="calculator.tabBath">Kúpeľňa na kľúč &amp; 3D</span></button>
+          </div>
+
+          <div class="calc-body">
+            <!-- Heating Controls -->
+            <div class="calc-controls" id="heatingControls">
+              <div class="control-group">
+                <label for="heatAreaRange">
+                  <span data-i18n="calculator.areaLabel">Vykurovaná / podlahová plocha</span>
+                  <span class="control-val" id="heatAreaVal">140 m²</span>
+                </label>
+                <input type="range" id="heatAreaRange" min="50" max="350" step="10" value="140" />
+              </div>
+
+              <div class="control-group">
+                <label data-i18n="calculator.propTypeLabel">Typ objektu</label>
+                <div class="option-grid" id="propTypeGroup">
+                  <button type="button" class="option-pill active" data-val="new" data-i18n="calculator.propNew">Novostavba (nízkoenergetická)</button>
+                  <button type="button" class="option-pill" data-val="reno" data-i18n="calculator.propReno">Rekonštrukcia domu / bytu</button>
+                </div>
+              </div>
+
+              <div class="control-group">
+                <label data-i18n="calculator.sourceLabel">Zdroj tepla</label>
+                <div class="option-grid" id="heatSourceGroup">
+                  <button type="button" class="option-pill active" data-val="heatpump" data-i18n="calculator.srcHeatPump">Tepelné čerpadlo vzduch–voda</button>
+                  <button type="button" class="option-pill" data-val="gas" data-i18n="calculator.srcGasBoiler">Kondenzačný plynový kotol</button>
+                  <button type="button" class="option-pill" data-val="electric" data-i18n="calculator.srcElectric">Elektrokotol + bojler</button>
+                </div>
+              </div>
+
+              <div class="control-group">
+                <label data-i18n="calculator.distLabel">Vykurovacia sústava</label>
+                <div class="option-grid" id="heatDistGroup">
+                  <button type="button" class="option-pill active" data-val="floor" data-i18n="calculator.distFloor">Podlahové vykurovanie</button>
+                  <button type="button" class="option-pill" data-val="rad" data-i18n="calculator.distRad">Doskové radiátory</button>
+                  <button type="button" class="option-pill" data-val="combo" data-i18n="calculator.distCombo">Kombinácia (podlaha + rebríky)</button>
+                </div>
+              </div>
+
+              <label class="toggle-row">
+                <input type="checkbox" id="solarAddonCheck" />
+                <span data-i18n="calculator.solarToggle">Pridať solárny ohrev teplej vody (TÚV)</span>
+              </label>
+            </div>
+
+            <!-- Bathroom Controls -->
+            <div class="calc-controls" id="bathControls" hidden>
+              <div class="control-group">
+                <label for="bathAreaRange">
+                  <span data-i18n="calculator.bathAreaLabel">Plocha kúpeľne</span>
+                  <span class="control-val" id="bathAreaVal">9 m²</span>
+                </label>
+                <input type="range" id="bathAreaRange" min="4" max="28" step="1" value="9" />
+              </div>
+
+              <div class="control-group">
+                <label data-i18n="calculator.bathTierLabel">Úroveň vyhotovenia</label>
+                <div class="option-grid" id="bathTierGroup">
+                  <button type="button" class="option-pill" data-val="standard" data-i18n="calculator.tierStandard">Štandard (klasické obklady &amp; sanita)</button>
+                  <button type="button" class="option-pill active" data-val="comfort" data-i18n="calculator.tierComfort">Komfort (walk-in žľab &amp; podomietkové WC)</button>
+                  <button type="button" class="option-pill" data-val="premium" data-i18n="calculator.tierPremium">Prémium (veľkoformát, 45° Jolly hrany, LED niky)</button>
+                </div>
+              </div>
+
+              <label class="toggle-row">
+                <input type="checkbox" id="bath3dCheck" checked />
+                <span data-i18n="calculator.bath3dToggle">Vrátane 3D vizualizácie v štúdiu Šamorín</span>
+              </label>
+            </div>
+
+            <!-- Result Card -->
+            <div class="calc-result">
+              <div>
+                <h3 data-i18n="calculator.resTitle">Orientačný technický &amp; cenový súhrn</h3>
+                <div class="res-metrics" style="margin-top: 1.15rem;">
+                  <div class="res-row" id="resRow1">
+                    <span id="resLabel1" data-i18n="calculator.resHeatLoad">Odhadovaný tepelný výkon</span>
+                    <strong id="resVal1">8.4 kW</strong>
+                  </div>
+                  <div class="res-row" id="resRow2">
+                    <span id="resLabel2" data-i18n="calculator.resCircuits">Počet okruhov / telies</span>
+                    <strong id="resVal2">11 okruhov</strong>
+                  </div>
+                  <div class="res-row">
+                    <span data-i18n="calculator.resTimeline">Orientačný čas realizácie</span>
+                    <strong id="resTimeline">5 – 8 dní</strong>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <div class="res-price-box">
+                  <div class="res-price-label" data-i18n="calculator.resPrice">Orientačný rozsah investície (vrátane DPH)</div>
+                  <div class="res-price-value" id="resPriceRange">€ 11 400 – € 14 200</div>
+                </div>
+                <p class="res-note" style="margin: 0.75rem 0 1rem;" data-i18n="calculator.resNote">* Ide o nezáväzný orientačný odhad. Finálnu cenovú ponuku vypracujeme po bezplatnej konzultácii alebo obhliadke.</p>
+                <button type="button" class="btn btn-primary" style="width: 100%;" id="transferCalcBtn" data-i18n="calculator.btnTransfer">Preniesť špecifikáciu do dopytu</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Showcase (Facebook & Instagram Real Work) -->
+    <section class="section" id="portfolio">
+      <div class="container">
+        <header class="section-header">
+          <div class="section-eyebrow" data-i18n="portfolio.eyebrow">Priamo z našich stavieb &amp; sociálnych sietí</div>
+          <h2 class="section-title" data-i18n="portfolio.title">Realizácie, ktoré hovoria za nás</h2>
+          <p class="section-subtitle" data-i18n="portfolio.subtitle">Pozrite si aktuálnu prácu nášho tímu z Facebooku (@bugarsro) a Instagramu (@bugarsro) — od hrubej inštalácie podlahového kúrenia až po luxusné kúpeľne.</p>
+        </header>
+
+        <div class="portfolio-toolbar">
+          <div class="filter-pills" id="portfolioFilters">
+            <button type="button" class="filter-pill active" data-pf="all" data-i18n="portfolio.filterAll">Všetko</button>
+            <button type="button" class="filter-pill" data-pf="bathrooms" data-i18n="portfolio.filterBathrooms">Kúpeľne &amp; Sprchy</button>
+            <button type="button" class="filter-pill" data-pf="heating" data-i18n="portfolio.filterHeating">Podlahové kúrenie</button>
+            <button type="button" class="filter-pill" data-pf="showroom" data-i18n="portfolio.filterShowroom">Showroom Šamorín</button>
+            <button type="button" class="filter-pill" data-pf="interiors" data-i18n="portfolio.filterInteriors">Stavebné detaily</button>
+          </div>
+          <div class="social-links-row">
+            <a href="https://www.facebook.com/bugarsro" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">📘 <span data-i18n="portfolio.followFb">Sledovať Facebook</span></a>
+            <a href="https://www.instagram.com/bugarsro/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">📸 <span data-i18n="portfolio.followIg">Sledovať Instagram</span></a>
+          </div>
+        </div>
+
+        <div class="portfolio-grid" id="portfolioGrid"></div>
+      </div>
+    </section>
+
+    <!-- Supply Catalog & Quick Quote -->
+    <section class="section section-alt" id="catalog">
+      <div class="container">
+        <header class="section-header">
+          <div class="section-eyebrow" data-i18n="catalog.eyebrow">Katalóg sortimentu &amp; E-shop dopyt</div>
+          <h2 class="section-title" data-i18n="catalog.title">14 produktových skupín skladom aj na objednávku</h2>
+          <p class="section-subtitle" data-i18n="catalog.subtitle">Vyberte si kategóriu alebo vyhľadajte značku. Položky môžete pridať priamo do dopytového košíka a obratom vám naceníme dostupnosť aj dopravu.</p>
+        </header>
+
+        <div class="category-grid" id="categoryGrid"></div>
+
+        <div class="catalog-controls">
+          <div class="search-box">
+            <span class="search-icon" aria-hidden="true">🔍</span>
+            <input type="search" id="catalogSearch" placeholder="Hľadať produkt, značku (napr. Protherm, Geberit, Korado)..." />
+          </div>
+          <button type="button" class="btn btn-secondary btn-sm" id="catalogResetBtn" data-i18n="catalog.allCats">Všetky kategórie</button>
+        </div>
+
+        <div class="products-grid" id="productsGrid"></div>
+      </div>
+    </section>
+
+    <!-- Partners -->
+    <section class="section">
+      <div class="container">
+        <header class="section-header">
+          <div class="section-eyebrow" data-i18n="partners.eyebrow">Overení výrobcovia</div>
+          <h2 class="section-title" data-i18n="partners.title">Oficiálni partneri a značky v našej ponuke</h2>
+          <p class="section-subtitle" data-i18n="partners.subtitle">Spolupracujeme výhradne s certifikovanými výrobcami vykurovacej a sanitárnej techniky s dostupnými náhradnými dielmi.</p>
+        </header>
+        <div class="partners-grid" id="partnersGrid"></div>
+      </div>
+    </section>
+
+    <!-- About & Heritage -->
+    <section class="section section-alt" id="about">
+      <div class="container about-grid">
+        <div>
+          <div class="section-eyebrow" data-i18n="about.eyebrow">Naša história &amp; prístup</div>
+          <h2 class="section-title" data-i18n="about.title">Už 33 rokov rodinná tradícia odbornosti na Žitnom ostrove</h2>
+          <p data-i18n="about.p1">Spoločnosť BUGÁR, s.r.o. stavia na viac ako troch desaťročiach praktických skúseností v oblasti vody, kúrenia a plynu. Či už vymieňate starý kotol, staviate nízkoenergetický dom alebo snívate o novej kúpeľni, u nás nájdete materiál, 3D návrh aj realizáciu na jednom mieste.</p>
+          <blockquote class="quote-callout" data-i18n="about.p2">„Je Vaša kúpeľňa už zastaralá? Chcete vymeniť podlahu, dvere alebo zrekonštruovať celý byt? Príďte sa k nám inšpirovať a naši kolegovia vám ochotne poradia.“</blockquote>
+          <div class="sla-card">
+            <h4 data-i18n="about.slaTitle">Garancia komunikácie &amp; servisnej podpory</h4>
+            <p data-i18n="about.slaDesc">Poctivo dbáme na záručný aj pozáručný servis. Každú servisnú alebo reklamačnú požiadavku evidujeme s jasným termínom výjazdu technika a priamym kontaktom na predajňu.</p>
+          </div>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-item">
+            <h4 data-i18n="about.m1Title">1993 — Začiatky v plynárenstve</h4>
+            <p data-i18n="about.m1Desc">Prvé montáže plynových rozvodov, kotlov a vykurovacích sústav v regióne Dunajskej Stredy.</p>
+          </article>
+          <article class="timeline-item">
+            <h4 data-i18n="about.m2Title">Rozšírenie o predajňu &amp; sklad v Šamoríne</h4>
+            <p data-i18n="about.m2Desc">Vybudovanie moderného zázemia na Bratislavská 89/21 s ranným výdajom od 07:00 pre majstrov.</p>
+          </article>
+          <article class="timeline-item">
+            <h4 data-i18n="about.m3Title">3D Kúpeľňové štúdio &amp; Realizácie na kľúč</h4>
+            <p data-i18n="about.m3Desc">Vlastný showroom kúpeľní, 3D vizualizácie a kompletné interiérové rekonštrukcie vrátane obkladov.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact, Dual-Branch Map & Inquiry Form -->
+    <section class="section" id="contact">
+      <div class="container">
+        <header class="section-header">
+          <div class="section-eyebrow" data-i18n="contact.eyebrow">Kde nás nájdete &amp; Kontakt</div>
+          <h2 class="section-title" data-i18n="contact.title">Navštívte showroom v Šamoríne alebo nám napíšte</h2>
+          <p class="section-subtitle" data-i18n="contact.subtitle">Sme k dispozícii súkromným investorom, stavebným firmám aj inštalatérom zo Šamorína, Dunajskej Stredy, Bratislavy a okolia.</p>
+        </header>
+
+        <div class="contact-grid">
+          <div class="branches-stack">
+            <div class="info-card">
+              <h3 data-i18n="contact.branchSamorinTitle">Predajňa, Kúpeľňové štúdio &amp; Sklad — Šamorín</h3>
+              <p style="margin: 0.25rem 0;">📍 <strong>Bratislavská 89/21, 931 01 Šamorín</strong></p>
+              <p style="margin: 0.25rem 0;">📞 <a href="tel:+421910144022" style="color: var(--water); font-weight: 700;">+421 910 144 022</a> · ✉️ <a href="mailto:eshop@bugarsro.sk">eshop@bugarsro.sk</a></p>
+            </div>
+
+            <div class="info-card">
+              <h3 data-i18n="contact.hoursTitle">Otváracie hodiny (Šamorín)</h3>
+              <table class="hours-table">
+                <thead>
+                  <tr>
+                    <th data-i18n="contact.warehouseLabel">Sklad (výdaj materiálu)</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td data-i18n="contact.monFri">Po – Pi</td><td>07:00 – 18:00</td></tr>
+                  <tr><td data-i18n="contact.sat">Sobota</td><td>08:00 – 12:00</td></tr>
+                  <tr><td data-i18n="contact.sun">Nedeľa</td><td data-i18n="contact.closed">Zatvorené</td></tr>
+                </tbody>
+                <thead>
+                  <tr>
+                    <th style="padding-top: 0.85rem;" data-i18n="contact.storeLabel">Predajňa &amp; 3D Štúdio</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td data-i18n="contact.monFri">Po – Pi</td><td>08:00 – 18:00</td></tr>
+                  <tr><td data-i18n="contact.sat">Sobota</td><td>08:00 – 12:00</td></tr>
+                  <tr><td data-i18n="contact.sun">Nedeľa</td><td data-i18n="contact.closed">Zatvorené</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="info-card">
+              <h3 data-i18n="contact.branchDsTitle">Sídlo spoločnosti — Dunajská Streda</h3>
+              <p style="margin: 0 0 0.65rem;">📍 <strong>Hlavná 1538/31, 929 01 Dunajská Streda</strong> · IČO: 36264482 · IČ DPH: SK2021905039</p>
+              <div class="map-switcher">
+                <button type="button" class="btn btn-secondary btn-sm" id="focusSamorin" data-i18n="contact.btnCenterSamorin">Zobraziť Šamorín</button>
+                <button type="button" class="btn btn-secondary btn-sm" id="focusDs" data-i18n="contact.btnCenterDs">Zobraziť Dunajskú Stredu</button>
+              </div>
+              <div class="map-box" id="branchMap" aria-label="BUGÁR locations map"></div>
+            </div>
+          </div>
+
+          <div class="form-card">
+            <h3 data-i18n="contact.formTitle">Odoslať dopyt / Objednať konzultáciu</h3>
+            <form id="contactForm" class="form-grid" novalidate>
+              <input type="text" name="website_hp" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;" aria-hidden="true" />
+              <div class="form-row-2">
+                <div class="field">
+                  <label for="contactName" data-i18n="contact.nameLabel">Meno a priezvisko *</label>
+                  <input type="text" id="contactName" required />
+                </div>
+                <div class="field">
+                  <label for="contactPhone" data-i18n="contact.phoneLabel">Telefónne číslo *</label>
+                  <input type="tel" id="contactPhone" placeholder="+421 ..." required />
+                </div>
+              </div>
+
+              <div class="form-row-2">
+                <div class="field">
+                  <label for="contactEmail" data-i18n="contact.emailLabel">E-mailová adresa *</label>
+                  <input type="email" id="contactEmail" required />
+                </div>
+                <div class="field">
+                  <label for="contactService" data-i18n="contact.serviceLabel">Téma dopytu</label>
+                  <select id="contactService">
+                    <option value="heating" data-i18n="contact.serviceOptQuote">Cenová ponuka — Vykurovanie / Kotol / TČ</option>
+                    <option value="bathroom" data-i18n="contact.serviceOptBath">3D návrh kúpeľne / Rekonštrukcia na kľúč</option>
+                    <option value="service" data-i18n="contact.serviceOptService">Servis &amp; Revízia zariadenia</option>
+                    <option value="material" data-i18n="contact.serviceOptMaterial">Objednávka materiálu / E-shop</option>
+                    <option value="other" data-i18n="contact.serviceOptOther">Nehnuteľnosti / Iná požiadavka</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="field">
+                <label for="contactMessage" data-i18n="contact.msgLabel">Stručný popis projektu alebo požiadavky *</label>
+                <textarea id="contactMessage" rows="5" required placeholder="Napr. lokalita stavby, plocha v m², požadovaný termín alebo katalógové položky..."></textarea>
+              </div>
+
+              <label class="toggle-row">
+                <input type="checkbox" id="contactGdpr" required />
+                <span data-i18n="contact.gdprConsent">Súhlasím so spracovaním osobných údajov pre vybavenie môjho dopytu.</span>
+              </label>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%;" data-i18n="contact.submitBtn">Odoslať nezáväzný dopyt</button>
+            </form>
+
+            <div id="contactSuccessBox" hidden style="margin-top: 1.25rem; padding: 1.15rem; border-radius: 12px; background: var(--water-soft); border: 1px solid var(--water);">
+              <strong style="display:block; margin-bottom: 0.3rem;" data-i18n="contact.successTitle">Ďakujeme! Váš dopyt sme zaevidovali.</strong>
+              <span style="font-size: 0.9rem;" data-i18n="contact.successDesc">Náš odborný tím zo Šamorína sa vám ozve v pracovných hodinách na uvedený telefón alebo e-mail.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4 data-i18n="footer.colShop">Nákup &amp; Podmienky</h4>
+          <ul class="footer-links">
+            <li><button type="button" data-legal="terms" data-i18n="footer.terms">Obchodné podmienky</button></li>
+            <li><button type="button" data-legal="privacy" data-i18n="footer.privacy">Ochrana osobných údajov</button></li>
+            <li><button type="button" data-legal="cookies" data-i18n="footer.cookies">Zásady používania cookies</button></li>
+            <li><button type="button" data-legal="imprint" data-i18n="footer.imprint">Fakturačné &amp; registračné údaje</button></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-i18n="footer.colCompany">BUGÁR, s.r.o.</h4>
+          <ul class="footer-links">
+            <li>Bratislavská 89/21, 931 01 Šamorín</li>
+            <li>Hlavná 1538/31, 929 01 Dunajská Streda</li>
+            <li>IČO: 36264482 · DIČ: 2021905039</li>
+            <li>IČ DPH: SK2021905039</li>
+            <li><a href="tel:+421910144022">+421 910 144 022</a> · <a href="mailto:eshop@bugarsro.sk">eshop@bugarsro.sk</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-i18n="footer.colHours">Otváracie hodiny</h4>
+          <ul class="footer-links">
+            <li><strong data-i18n="contact.warehouseLabel">Sklad</strong>: Po–Pi 07:00–18:00 · So 08:00–12:00</li>
+            <li><strong data-i18n="contact.storeLabel">Predajňa</strong>: Po–Pi 08:00–18:00 · So 08:00–12:00</li>
+            <li><span data-i18n="contact.sun">Nedeľa</span>: <span data-i18n="contact.closed">Zatvorené</span></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-i18n="footer.colSocial">Sociálne siete</h4>
+          <ul class="footer-links">
+            <li><a href="https://www.facebook.com/bugarsro" target="_blank" rel="noopener noreferrer">Facebook (@bugarsro)</a></li>
+            <li><a href="https://www.instagram.com/bugarsro/" target="_blank" rel="noopener noreferrer">Instagram (@bugarsro)</a></li>
+            <li><a href="https://www.youtube.com/@bugar_sro" target="_blank" rel="noopener noreferrer">YouTube (@bugar_sro)</a></li>
+            <li><a href="https://bugarsro.sk/" target="_blank" rel="noopener noreferrer">bugarsro.sk</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span data-i18n="footer.copyright">© 2026 BUGÁR, s.r.o. · Voda · Kúrenie · Plyn · Šamorín &amp; Dunajská Streda.</span>
+        <span id="registerNote"></span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile Bottom Sticky Bar -->
+  <div class="mobile-sticky-bar">
+    <a href="tel:+421910144022" class="btn btn-secondary btn-sm">📞 <span data-i18n="nav.callNow">Zavolať</span></a>
+    <a href="#contact" class="btn btn-primary btn-sm" data-i18n="hero.ctaQuote">Nezáväzná ponuka</a>
+  </div>
+
+  <!-- Quote Basket Drawer -->
+  <div class="drawer-backdrop" id="basketDrawer" role="dialog" aria-modal="true" aria-labelledby="basketDrawerTitle">
+    <div class="drawer-panel">
+      <div class="drawer-head">
+        <h3 id="basketDrawerTitle" style="margin:0; font-family:var(--font-display);" data-i18n="basket.title">Dopytový košík</h3>
+        <button type="button" class="icon-btn" id="closeBasketBtn" aria-label="Close">✕</button>
+      </div>
+      <div class="drawer-body">
+        <div id="basketItemsList" style="display:grid; gap:0.65rem;"></div>
+
+        <form id="basketForm" class="form-grid" style="border-top:1px solid var(--border); padding-top:1rem;">
+          <label class="toggle-row">
+            <input type="checkbox" id="b2bToggle" />
+            <span data-i18n="basket.b2bToggle">Nákup / dopyt na firmu (IČO, DIČ, IČ DPH)</span>
+          </label>
+
+          <div id="b2bFields" class="form-grid" hidden>
+            <div class="field"><input type="text" id="b2bCompany" placeholder="Názov firmy" /></div>
+            <div class="form-row-2">
+              <div class="field"><input type="text" id="b2bIco" placeholder="IČO" /></div>
+              <div class="field"><input type="text" id="b2bDic" placeholder="DIČ" /></div>
+            </div>
+            <div class="field"><input type="text" id="b2bIcDph" placeholder="IČ DPH" /></div>
+          </div>
+
+          <div class="field">
+            <input type="text" id="basketContact" required placeholder="Váš e-mail alebo telefón *" />
+          </div>
+          <div class="field">
+            <textarea id="basketNote" rows="2" placeholder="Poznámka k dopytu / doprave..."></textarea>
+          </div>
+          <div style="display:flex; gap:0.5rem;">
+            <button type="submit" class="btn btn-primary" style="flex:1;" data-i18n="basket.submit">Odoslať zoznam na nacenenie</button>
+            <button type="button" class="btn btn-secondary btn-sm" id="clearBasketBtn" data-i18n="basket.clear">Vyprázdniť</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Legal Modal -->
+  <div class="modal-backdrop" id="legalModal" role="dialog" aria-modal="true">
+    <div class="modal-card">
+      <div class="modal-head">
+        <h3 id="legalModalTitle" style="margin:0; font-family:var(--font-display);"></h3>
+        <button type="button" class="icon-btn" id="closeLegalBtn" aria-label="Close">✕</button>
+      </div>
+      <div class="modal-body">
+        <p id="legalModalBody" style="margin:0; color:var(--text-muted); line-height:1.7;"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Lightbox Modal -->
+  <div class="lightbox-backdrop" id="lightboxModal" role="dialog" aria-modal="true">
+    <div class="lightbox-card">
+      <button type="button" class="lb-close" id="lbClose" aria-label="Close">✕</button>
+      <button type="button" class="lb-nav lb-prev" id="lbPrev" aria-label="Previous">‹</button>
+      <button type="button" class="lb-nav lb-next" id="lbNext" aria-label="Next">›</button>
+      <div class="lightbox-img-box">
+        <img id="lbImage" src="" alt="" />
+      </div>
+      <div class="lightbox-caption">
+        <div id="lbMeta" style="font-size:0.78rem; color:var(--gold); font-weight:700; margin-bottom:0.25rem;"></div>
+        <h4 id="lbTitle" style="margin:0 0 0.35rem; font-family:var(--font-display);"></h4>
+        <p id="lbDesc" style="margin:0; font-size:0.9rem; color:#cbd5e1;"></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+  <script src="js/data.js"></script>
+  <script src="js/translations.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
