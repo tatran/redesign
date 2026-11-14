@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="de" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Neumayer BAU Ges.m.b.H. | Hochbau, Tiefbau &amp; Sanierung – Purbach</title>
+  <meta name="description" content="Neumayer BAU Ges.m.b.H. in Purbach am Neusiedler See: Ihr Familien-Bauunternehmen in 3. Generation seit 1960 für Hochbau, Tiefbau und Sanierung im Burgenland, Niederösterreich und Wien." />
+  <link rel="icon" type="image/png" href="images/brand/icon-512.png" />
+
+  <!-- Fonts with full Central European diacritics -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Leaflet Regional Map -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Top Utility Bar -->
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <div class="topbar-left">
+        <span class="topbar-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+            <circle cx="12" cy="10" r="3" />
+          </svg>
+          <span data-i18n="topbar.location">Fellnergasse 101a · 7083 Purbach am Neusiedler See</span>
+        </span>
+        <a href="tel:+4326835522" class="topbar-item topbar-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+          </svg>
+          <span data-i18n="topbar.phone">+43 (0)2683 / 55 22</span>
+        </a>
+        <a href="mailto:office@neumayer-bau.at" class="topbar-item topbar-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <rect x="2" y="4" width="20" height="16" rx="2" />
+            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+          </svg>
+          <span data-i18n="topbar.email">office@neumayer-bau.at</span>
+        </a>
+      </div>
+
+      <div class="topbar-right">
+        <span class="topbar-badge" data-i18n="topbar.regionTag">Burgenland · NÖ · Wien</span>
+        <div class="controls-group">
+          <div class="lang-switcher" role="group" aria-label="Language switcher">
+            <button type="button" class="lang-btn is-active" data-lang="de" aria-pressed="true">DE</button>
+            <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+            <button type="button" class="lang-btn" data-lang="hu" aria-pressed="false">HU</button>
+            <button type="button" class="lang-btn" data-lang="cs" aria-pressed="false">CS</button>
+          </div>
+          <button type="button" id="theme-toggle-btn" class="btn-ctrl" title="Hell- / Dunkelmodus umschalten" aria-label="Dunkelmodus" aria-pressed="false">
+            <span id="theme-icon" aria-hidden="true">&#9790;</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sticky Navigation Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#top" class="brand-wrapper" aria-label="Neumayer BAU Start">
+        <img src="images/brand/logo-main.png" alt="Neumayer BAU Ges.m.b.H. Logo" class="brand-logo-img" />
+      </a>
+
+      <nav class="nav-desktop" aria-label="Primary Navigation">
+        <ul class="nav-links">
+          <li><a href="#services" class="nav-link" data-i18n="nav.services">Leistungen</a></li>
+          <li><a href="#estimator" class="nav-link" data-i18n="nav.estimator">Kalkulator</a></li>
+          <li><a href="#projects" class="nav-link" data-i18n="nav.projects">Projekte</a></li>
+          <li><a href="#history" class="nav-link" data-i18n="nav.history">Geschichte</a></li>
+          <li><a href="#team" class="nav-link" data-i18n="nav.team">Team</a></li>
+          <li><a href="#careers" class="nav-link" data-i18n="nav.careers">Jobs</a></li>
+          <li><a href="#contact" class="nav-link" data-i18n="nav.contact">Kontakt</a></li>
+        </ul>
+        <a href="#contact" class="btn btn--primary btn--sm" data-i18n="nav.cta">Projekt anfragen</a>
+      </nav>
+
+      <div class="mobile-header-controls">
+        <select id="mobile-lang-select" class="mobile-lang-select" aria-label="Sprache">
+          <option value="de">DE</option>
+          <option value="en">EN</option>
+          <option value="hu">HU</option>
+          <option value="cs">CS</option>
+        </select>
+        <button type="button" id="theme-toggle-header" class="btn-ctrl btn-ctrl--header" title="Hell- / Dunkelmodus umschalten" aria-label="Dunkelmodus" aria-pressed="false">
+          <span id="header-theme-icon" aria-hidden="true">&#9790;</span>
+        </button>
+        <button type="button" id="mobile-menu-toggle" class="mobile-menu-toggle" aria-expanded="false" aria-controls="mobile-nav-drawer" data-i18n-aria="mobile.open">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+            <line x1="3" y1="6" x2="21" y2="6" />
+            <line x1="3" y1="12" x2="21" y2="12" />
+            <line x1="3" y1="18" x2="21" y2="18" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Slide Drawer -->
+  <div id="mobile-drawer-overlay" class="mobile-drawer-overlay" aria-hidden="true"></div>
+  <aside id="mobile-nav-drawer" class="mobile-drawer" aria-hidden="true">
+    <div class="mobile-drawer-header">
+      <div class="brand-wrapper">
+        <img src="images/brand/logo-main.png" alt="Neumayer BAU" class="brand-logo-img" />
+      </div>
+      <button type="button" id="mobile-drawer-close" class="modal-close" data-i18n-aria="mobile.close">&#10005;</button>
+    </div>
+    <ul class="mobile-nav-list">
+      <li><a href="#top" data-i18n="nav.home">Start</a></li>
+      <li><a href="#services" data-i18n="nav.services">Leistungen</a></li>
+      <li><a href="#estimator" data-i18n="nav.estimator">Kalkulator</a></li>
+      <li><a href="#projects" data-i18n="nav.projects">Projekte</a></li>
+      <li><a href="#history" data-i18n="nav.history">Geschichte</a></li>
+      <li><a href="#team" data-i18n="nav.team">Team</a></li>
+      <li><a href="#careers" data-i18n="nav.careers">Jobs</a></li>
+      <li><a href="#contact" data-i18n="nav.contact">Kontakt</a></li>
+    </ul>
+    <a href="#contact" class="btn btn--primary" data-i18n="nav.cta">Projekt anfragen</a>
+  </aside>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="top" class="hero-section">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <span class="hero-eyebrow" data-i18n="hero.eyebrow">Seit 1960 · Familienbetrieb in 3. Generation</span>
+          <h1 class="hero-title">
+            <span data-i18n="hero.titleLead">Wir bauen Ihre Zukunft.</span><br />
+            <span class="hero-title-accent" data-i18n="hero.titleAccent">Verlässlich. Handschlagqualität.</span>
+          </h1>
+          <p class="hero-subtitle" data-i18n="hero.subtitle">
+            Umfassende Beratung, fundierte Planung und präzise Umsetzung im Hochbau, Tiefbau und in der Sanierung – für Privatkunden, Gewerbe und Gemeinden in Purbach, Nordburgenland, Niederösterreich und Wien.
+          </p>
+
+          <div class="hero-trust-row">
+            <span class="trust-pill"><span class="trust-pill-check">&#10003;</span> <span data-i18n="hero.trust1">Traditionsbetrieb seit 1960</span></span>
+            <span class="trust-pill"><span class="trust-pill-check">&#10003;</span> <span data-i18n="hero.trust2">Rund 30 Fachkräfte</span></span>
+            <span class="trust-pill"><span class="trust-pill-check">&#10003;</span> <span data-i18n="hero.trust3">Fixpreis- &amp; Termingarantie</span></span>
+          </div>
+
+          <div class="hero-cta-group">
+            <a href="#estimator" class="btn btn--primary" data-i18n="hero.ctaPrimary">Bauprojekt kalkulieren</a>
+            <a href="#projects" class="btn btn--secondary" data-i18n="hero.ctaSecondary">Referenzen ansehen</a>
+          </div>
+
+          <div class="hero-metrics">
+            <div>
+              <div class="metric-value" data-i18n="hero.metric1Val">65+</div>
+              <div class="metric-label" data-i18n="hero.metric1Label">Jahre Bauerfahrung</div>
+            </div>
+            <div>
+              <div class="metric-value" data-i18n="hero.metric2Val">~30</div>
+              <div class="metric-label" data-i18n="hero.metric2Label">Stamm-Mitarbeiter</div>
+            </div>
+            <div>
+              <div class="metric-value" data-i18n="hero.metric3Val">3. Gen.</div>
+              <div class="metric-label" data-i18n="hero.metric3Label">Familienführung</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual-col">
+          <div class="hero-media-frame">
+            <img src="images/projects/firma-neumayer-main.jpg" alt="Firmenzentrale Neumayer BAU Ges.m.b.H. in Purbach" class="hero-main-img" />
+            <div class="hero-caption-bar">
+              <div>
+                <div class="hero-caption-title" data-i18n="hero.captionTitle">Firmenzentrale Purbach</div>
+                <div class="hero-caption-sub" data-i18n="hero.captionSub">Fellnergasse 101a · Moderne Büros &amp; Bauhof am Neusiedler See</div>
+              </div>
+              <span class="hero-caption-badge" data-i18n="hero.blueprintValue">Hochbau · Tiefbau · Sanierung</span>
+            </div>
+          </div>
+          <div class="hero-floating-blueprint" aria-hidden="true">
+            <img src="images/hero/fa-neumayer-42.jpg" alt="Bauplanung und technische Zeichnung" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3 Pillars Section (replaces static flattened eigenschaft.jpg) -->
+    <section id="pillars" class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow" data-i18n="pillars.eyebrow">Wofür wir stehen</span>
+          <h2 class="section-title" data-i18n="pillars.title">Drei Säulen für Ihr Bauvorhaben</h2>
+          <p class="section-subtitle" data-i18n="pillars.subtitle">Vom ersten Beratungsgespräch über transparente Kalkulation bis zur sauberen Schlüsselübergabe.</p>
+        </div>
+
+        <div class="pillars-grid">
+          <article class="pillar-card">
+            <div class="pillar-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              </svg>
+            </div>
+            <h3 data-i18n="pillars.p1Title">Zuverlässig &amp; Traditionell</h3>
+            <p data-i18n="pillars.p1Text">Seit 1960 fest im Nordburgenland verankert: verbindliche Terminzusagen, kurze Wege und persönliche Betreuung durch die Geschäftsführung.</p>
+          </article>
+
+          <article class="pillar-card">
+            <div class="pillar-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                <polyline points="9 22 9 12 15 12 15 22" />
+              </svg>
+            </div>
+            <h3 data-i18n="pillars.p2Title">Leistbar &amp; Hochwertig</h3>
+            <p data-i18n="pillars.p2Text">Durchdachte Materialauswahl, präzise Massenermittlung und klare Fixpreiskalkulation schützen Ihr Budget vor unerwarteten Überraschungen.</p>
+          </article>
+
+          <article class="pillar-card">
+            <div class="pillar-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="12 2 2 7 12 12 22 7 12 2" />
+                <polyline points="2 17 12 22 22 17" />
+                <polyline points="2 12 12 17 22 12" />
+              </svg>
+            </div>
+            <h3 data-i18n="pillars.p3Title">Kompetent &amp; Flexibel</h3>
+            <p data-i18n="pillars.p3Text">Ein eingespieltes Team aus rund 30 Bauleitern, Technikern und Facharbeitern meistert Einfamilienhäuser ebenso souverän wie Gewerbebauten.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services & 6 Core Values Section (replaces Leistungen.jpg & eigenschaft3.jpg) -->
+    <section id="services" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow" data-i18n="services.eyebrow">Leistungsportfolio</span>
+          <h2 class="section-title" data-i18n="services.title">Hochbau, Tiefbau &amp; Sanierung aus einer Hand</h2>
+          <p class="section-subtitle" data-i18n="services.subtitle">Ob Eigenheim, kommunaler Bildungsbau oder Industrieprojekt – wir begleiten Sie mit handwerklicher Präzision.</p>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card">
+            <div class="service-card-top">
+              <span class="service-num">01</span>
+              <span class="service-tag" data-i18n="services.s1Cat">Hochbau</span>
+            </div>
+            <h3 data-i18n="services.s1Title">Ein- &amp; Mehrfamilienhäuser</h3>
+            <p data-i18n="services.s1Desc">Individuelle Massivbauweise vom Keller über das Mauerwerk bis zur bezugsfertigen Übergabe – energieeffizient und wertbeständig.</p>
+            <div class="service-tags">
+              <span class="service-tag" data-i18n="services.s1Tag1">Einfamilienhäuser</span>
+              <span class="service-tag" data-i18n="services.s1Tag2">Doppel- &amp; Reihenhäuser</span>
+              <span class="service-tag" data-i18n="services.s1Tag3">Wohnanlagen</span>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <div class="service-card-top">
+              <span class="service-num">02</span>
+              <span class="service-tag" data-i18n="services.s2Cat">Gewerbe</span>
+            </div>
+            <h3 data-i18n="services.s2Title">Betriebs- &amp; Lagerhallen</h3>
+            <p data-i18n="services.s2Desc">Wirtschaftliche Produktions-, Lager- und Logistikhallen samt hochbelastbaren Industrieböden und Termintreue.</p>
+            <div class="service-tags">
+              <span class="service-tag" data-i18n="services.s2Tag1">Industriehallen</span>
+              <span class="service-tag" data-i18n="services.s2Tag2">Bürogebäude</span>
+              <span class="service-tag" data-i18n="services.s2Tag3">Logistikzentren</span>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <div class="service-card-top">
+              <span class="service-num">03</span>
+              <span class="service-tag" data-i18n="services.s3Cat">Kommunal &amp; Tourismus</span>
+            </div>
+            <h3 data-i18n="services.s3Title">Öffentliche &amp; Hotelbauten</h3>
+            <p data-i18n="services.s3Desc">Qualitätsbau für Gemeinden und Tourismus: Kindergärten, Bildungsbauten, Hotelanlagen und Ortsinfrastruktur.</p>
+            <div class="service-tags">
+              <span class="service-tag" data-i18n="services.s3Tag1">Kindergärten</span>
+              <span class="service-tag" data-i18n="services.s3Tag2">Hotels</span>
+              <span class="service-tag" data-i18n="services.s3Tag3">Kommunalbauten</span>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <div class="service-card-top">
+              <span class="service-num">04</span>
+              <span class="service-tag" data-i18n="services.s4Cat">Tiefbau</span>
+            </div>
+            <h3 data-i18n="services.s4Title">Leitungsbau &amp; Schächte</h3>
+            <p data-i18n="services.s4Desc">Zuverlässige Ver- und Entsorgungsinfrastruktur: Aushub, Kanal- und Leitungsbau sowie präzise Hausanschlussschächte.</p>
+            <div class="service-tags">
+              <span class="service-tag" data-i18n="services.s4Tag1">Leitungsbau</span>
+              <span class="service-tag" data-i18n="services.s4Tag2">Hausanschlussschächte</span>
+              <span class="service-tag" data-i18n="services.s4Tag3">Fundamentierung</span>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <div class="service-card-top">
+              <span class="service-num">05</span>
+              <span class="service-tag" data-i18n="services.s5Cat">Außenanlagen</span>
+            </div>
+            <h3 data-i18n="services.s5Title">Parkflächen &amp; Gestaltung</h3>
+            <p data-i18n="services.s5Desc">Belastbare Verkehrs-, Hof- und Parkflächen sowie Stützmauern, Einfriedungen und sauber ausgeführte Pflasterungen.</p>
+            <div class="service-tags">
+              <span class="service-tag" data-i18n="services.s5Tag1">Parkflächen</span>
+              <span class="service-tag" data-i18n="services.s5Tag2">Pflasterungen</span>
+              <span class="service-tag" data-i18n="services.s5Tag3">Einfriedungen</span>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <div class="service-card-top">
+              <span class="service-num">06</span>
+              <span class="service-tag" data-i18n="services.s6Cat">Sanierung</span>
+            </div>
+            <h3 data-i18n="services.s6Title">Altbau- &amp; Struktursanierung</h3>
+            <p data-i18n="services.s6Desc">Substanzerhaltende Modernisierung, Zu- und Umbauten sowie Sanierungsarbeiten im Hoch- und Tiefbau bei Bestandsgebäuden.</p>
+            <div class="service-tags">
+              <span class="service-tag" data-i18n="services.s6Tag1">Hochbausanierung</span>
+              <span class="service-tag" data-i18n="services.s6Tag2">Tiefbausanierung</span>
+              <span class="service-tag" data-i18n="services.s6Tag3">Umbau &amp; Zubau</span>
+            </div>
+          </article>
+        </div>
+
+        <div class="values-banner">
+          <div class="values-banner-header">
+            <div>
+              <h3 data-i18n="services.valuesTitle">Unsere 6 Bau-Werte auf jeder Baustelle</h3>
+              <p class="section-subtitle" data-i18n="services.valuesSub">Transparenz und Partnerschaftlichkeit bilden das Fundament jedes gemeinsamen Projekts.</p>
+            </div>
+          </div>
+
+          <div class="values-grid">
+            <div class="value-item">
+              <h4><span aria-hidden="true">&#10003;</span> <span data-i18n="services.v1">Traditionell</span></h4>
+              <p data-i18n="services.v1Desc">Regional verankertes Familienunternehmen in 3. Generation seit 1960.</p>
+            </div>
+            <div class="value-item">
+              <h4><span aria-hidden="true">&#10003;</span> <span data-i18n="services.v2">Kompetent</span></h4>
+              <p data-i18n="services.v2Desc">Geschultes Stammpersonal unter persönlicher Bauleitung vor Ort.</p>
+            </div>
+            <div class="value-item">
+              <h4><span aria-hidden="true">&#10003;</span> <span data-i18n="services.v3">Flexibel</span></h4>
+              <p data-i18n="services.v3Desc">Pragmatische Anpassung an Grundstück, Planwünsche und Bauablauf.</p>
+            </div>
+            <div class="value-item">
+              <h4><span aria-hidden="true">&#10003;</span> <span data-i18n="services.v4">Fixpreisgarantie</span></h4>
+              <p data-i18n="services.v4Desc">Verlässliche Kostenplanung ohne unliebsame Überraschungen.</p>
+            </div>
+            <div class="value-item">
+              <h4><span aria-hidden="true">&#10003;</span> <span data-i18n="services.v5">Schlüsselfertig</span></h4>
+              <p data-i18n="services.v5Desc">Koordinierte Komplettlösungen vom Spatenstich bis zum Einzug.</p>
+            </div>
+            <div class="value-item">
+              <h4><span aria-hidden="true">&#10003;</span> <span data-i18n="services.v6">Verlässlich</span></h4>
+              <p data-i18n="services.v6Desc">Termingerechte Fertigstellung mit echter Handschlagqualität.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Cost & Scope Estimator -->
+    <section id="estimator" class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow" data-i18n="estimator.eyebrow">Digitaler Richtwert-Rechner</span>
+          <h2 class="section-title" data-i18n="estimator.title">Bauprojekt vorab kalkulieren</h2>
+          <p class="section-subtitle" data-i18n="estimator.subtitle">Stellen Sie Projektart, Leistungsumfang, Nutzfläche und Region zusammen – für eine unverbindliche Erstorientierung zu Budget und Bauzeit.</p>
+        </div>
+
+        <div class="estimator-shell">
+          <div class="estimator-controls">
+            <div>
+              <span class="estimator-group-label" data-i18n="estimator.catLabel">1. Art des Bauvorhabens</span>
+              <div class="option-pills" role="group" aria-label="Category">
+                <button type="button" class="option-pill is-selected" data-est-category="efh" aria-pressed="true" data-i18n="estimator.catEfh">Einfamilienhaus</button>
+                <button type="button" class="option-pill" data-est-category="mfh" aria-pressed="false" data-i18n="estimator.catMfh">Reihen- / Mehrfamilienhaus</button>
+                <button type="button" class="option-pill" data-est-category="hall" aria-pressed="false" data-i18n="estimator.catHall">Gewerbe- / Hallenbau</button>
+                <button type="button" class="option-pill" data-est-category="reno" aria-pressed="false" data-i18n="estimator.catReno">Umbau / Sanierung</button>
+                <button type="button" class="option-pill" data-est-category="civil" aria-pressed="false" data-i18n="estimator.catCivil">Tiefbau / Außenanlage</button>
+              </div>
+            </div>
+
+            <div>
+              <span class="estimator-group-label" data-i18n="estimator.scopeLabel">2. Gewünschte Ausbaustufe</span>
+              <div class="option-pills" role="group" aria-label="Completion Scope">
+                <button type="button" class="option-pill" data-est-scope="shell" aria-pressed="false" data-i18n="estimator.scopeShell">Rohbau</button>
+                <button type="button" class="option-pill" data-est-scope="belag" aria-pressed="false" data-i18n="estimator.scopeBelag">Belagsfertig</button>
+                <button type="button" class="option-pill is-selected" data-est-scope="turnkey" aria-pressed="true" data-i18n="estimator.scopeTurnkey">Schlüsselfertig</button>
+              </div>
+            </div>
+
+            <div class="estimator-two-col">
+              <div>
+                <div class="range-header">
+                  <label for="est-area-range" class="estimator-group-label" style="margin-bottom:0;" data-i18n="estimator.areaLabel">3. Geschätzte Brutto- / Nutzfläche</label>
+                  <span id="est-area-value" class="range-badge">160 m²</span>
+                </div>
+                <input type="range" id="est-area-range" min="40" max="1200" step="10" value="160" />
+              </div>
+
+              <div>
+                <label for="est-region-select" class="estimator-group-label" data-i18n="estimator.regionLabel">4. Projektregion</label>
+                <select id="est-region-select" class="form-select">
+                  <option value="burgenland" data-i18n="estimator.regionBurgenland">Nordburgenland (Purbach / Eisenstadt / Neusiedl)</option>
+                  <option value="noe" data-i18n="estimator.regionNoe">Niederösterreich (Bruck / Schwechat / Himberg)</option>
+                  <option value="wien" data-i18n="estimator.regionVienna">Wien &amp; direktes Umland</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <span class="estimator-group-label" data-i18n="estimator.extrasLabel">5. Optionale Zusatzleistungen</span>
+              <div class="extras-grid">
+                <label class="extra-check">
+                  <input type="checkbox" id="extra-basement" />
+                  <span data-i18n="estimator.extraBasement">Unterkellerung / Fundamentplatte verstärkt</span>
+                </label>
+                <label class="extra-check">
+                  <input type="checkbox" id="extra-exterior" />
+                  <span data-i18n="estimator.extraExterior">Außenanlagen, Pflasterung &amp; Einfriedung</span>
+                </label>
+                <label class="extra-check">
+                  <input type="checkbox" id="extra-demolition" />
+                  <span data-i18n="estimator.extraDemolition">Abbruch &amp; Entsorgung von Altbestand</span>
+                </label>
+                <label class="extra-check">
+                  <input type="checkbox" id="extra-planning" />
+                  <span data-i18n="estimator.extraPlanning">Unterstützung bei Einreichung &amp; Polierplanung</span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <aside class="estimator-summary" aria-live="polite">
+            <div>
+              <span class="summary-price-label" data-i18n="estimator.summaryEyebrow">Unverbindliche Erstorientierung</span>
+              <h3 data-i18n="estimator.summaryTitle">Geschätzter Projekt-Richtwert</h3>
+            </div>
+
+            <div class="summary-price-box">
+              <div class="summary-price-label" data-i18n="estimator.summaryCostLabel">Richtwert Baukostenrahmen</div>
+              <div id="est-cost-output" class="summary-price-range">€ 264.000 – € 344.000</div>
+            </div>
+
+            <ul class="summary-meta-list">
+              <li>
+                <span data-i18n="estimator.summaryTimeLabel">Geschätzte Bauzeit</span>
+                <strong id="est-time-output">10 – 13 Monate</strong>
+              </li>
+              <li>
+                <span data-i18n="estimator.summaryScopeBadge">Stufe</span>
+                <strong id="est-sum-scope">Einfamilienhaus · Schlüsselfertig</strong>
+              </li>
+              <li>
+                <span data-i18n="estimator.summaryAreaBadge">Fläche</span>
+                <strong id="est-sum-area">160 m²</strong>
+              </li>
+              <li>
+                <span data-i18n="estimator.summaryRegionBadge">Region</span>
+                <strong id="est-sum-region">Nordburgenland</strong>
+              </li>
+            </ul>
+
+            <p class="summary-disclaimer" data-i18n="estimator.disclaimer">
+              Hinweis: Diese Zahlen dienen ausschließlich als unverbindlicher Richtwert ohne Angebotscharakter. Nach Plandurchsicht und Besichtigung erstellen wir Ihr detailliertes Fixpreis-Angebot.
+            </p>
+
+            <button type="button" id="apply-estimate-btn" class="btn btn--accent" data-i18n="estimator.applyBtn">
+              Konfiguration in Anfrage übernehmen
+            </button>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Portfolio Section -->
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow" data-i18n="projects.eyebrow">Projekt-Galerie</span>
+          <h2 class="section-title" data-i18n="projects.title">Referenzobjekte in Burgenland, NÖ &amp; Wien</h2>
+          <p class="section-subtitle" data-i18n="projects.subtitle">Entdecken Sie abgeschlossene Privat-, Gewerbe-, Hotel- und Kommunalbauten. Klicken Sie auf eine Karte für die Großansicht &amp; Baucollage.</p>
+        </div>
+
+        <div class="filter-bar" role="group" aria-label="Project Filter">
+          <button type="button" class="filter-btn is-active" data-project-filter="all" aria-pressed="true" data-i18n="projects.filterAll">Alle (11)</button>
+          <button type="button" class="filter-btn" data-project-filter="house" aria-pressed="false" data-i18n="projects.filterHouse">Wohnbau</button>
+          <button type="button" class="filter-btn" data-project-filter="commercial" aria-pressed="false" data-i18n="projects.filterCommercial">Gewerbe &amp; Industrie</button>
+          <button type="button" class="filter-btn" data-project-filter="public" aria-pressed="false" data-i18n="projects.filterPublic">Kommunal</button>
+          <button type="button" class="filter-btn" data-project-filter="hotel" aria-pressed="false" data-i18n="projects.filterHotel">Hotel &amp; Tourismus</button>
+        </div>
+
+        <div id="projects-grid" class="projects-grid"></div>
+      </div>
+    </section>
+
+    <!-- Interactive Timeline / Company Chronicle (replaces static timeline PNGs) -->
+    <section id="history" class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow" data-i18n="history.eyebrow">Unsere Geschichte</span>
+          <h2 class="section-title" data-i18n="history.title">Gewachsen seit 1960 – von Generation zu Generation</h2>
+          <p class="section-subtitle" data-i18n="history.subtitle">Neun prägende Kapitel zeigen, wie aus einem Purbacher Einmannbetrieb ein verlässlicher Baupartner für die gesamte Ostregion wurde.</p>
+        </div>
+
+        <div class="history-layout">
+          <aside class="history-intro-card">
+            <span class="section-eyebrow" data-i18n="history.cardBadge">1960 – Heute · 3. Generation</span>
+            <h3 data-i18n="history.cardTitle">Kontinuität in Führung &amp; Handwerk</h3>
+            <p class="section-subtitle" style="margin-top:12px;" data-i18n="history.cardText">
+              Nach der Gründung durch Josef Neumayer übernahm 1996 Ing. Harald Neumayer die Geschäftsführung. Seit 2024 leitet Ing. Florian Neumayer das Familienunternehmen in dritter Generation mit modernem Blick auf Qualität und Digitalisierung.
+            </p>
+            <img src="images/hero/bergmann-1.jpg" alt="Modernes Bürogebäude der Neumayer BAU Ges.m.b.H. am Abend" loading="lazy" />
+          </aside>
+
+          <div id="timeline-list" class="timeline-list"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow" data-i18n="team.eyebrow">Führung &amp; Büro-Team</span>
+          <h2 class="section-title" data-i18n="team.title">Verlässliche Köpfe hinter jedem Bauprojekt</h2>
+          <p class="section-subtitle" data-i18n="team.subtitle">Rund 30 erfahrene Fachkräfte am Bau sowie ein kompetentes Team in Bauleitung, Kalkulation und Verwaltung stehen Ihnen persönlich zur Seite.</p>
+        </div>
+
+        <div class="team-hero-banner">
+          <div class="team-hero-photo">
+            <img src="images/team/team-group.jpg" alt="Team der Neumayer BAU Ges.m.b.H. in Purbach" loading="lazy" />
+          </div>
+          <div class="team-hero-copy">
+            <span class="section-eyebrow" data-i18n="team.bannerBadge">Gesamtes Team · Purbach</span>
+            <h3 data-i18n="team.bannerTitle">Gemeinsam stark auf jeder Baustelle</h3>
+            <p class="section-subtitle" data-i18n="team.bannerText">Geführt von Ing. Harald Neumayer und Ing. Florian Neumayer – mit langjährigen Stammarbeitern aus der Region.</p>
+            <div class="trust-pill">
+              <strong data-i18n="team.leadNoteLabel">Geschäftsführung</strong>:&nbsp;
+              <span data-i18n="team.leadNoteText">Ing. Harald Neumayer (seit 1996) &amp; Ing. Florian Neumayer (seit 2024)</span>
+            </div>
+          </div>
+        </div>
+
+        <div id="team-grid" class="team-grid"></div>
+      </div>
+    </section>
+
+    <!-- Careers Section -->
+    <section id="careers" class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow" data-i18n="careers.eyebrow">Karriere &amp; offene Stellen</span>
+          <h2 class="section-title" data-i18n="careers.title">Verstärken Sie unser Bauteam in Purbach</h2>
+          <p class="section-subtitle" data-i18n="careers.subtitle">Regionale Baustellen, ganzjährige Perspektive, moderne Infrastruktur und leistungsgerechte Entlohnung deutlich über Kollektivvertrag je nach Erfahrung.</p>
+        </div>
+
+        <div id="jobs-grid" class="jobs-grid"></div>
+      </div>
+    </section>
+
+    <!-- Contact, Interactive Map & Dual Inquiry Form -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow" data-i18n="contact.eyebrow">Kontakt &amp; Anfahrt</span>
+          <h2 class="section-title" data-i18n="contact.title">Persönliche Beratung in Purbach am Neusiedler See</h2>
+          <p class="section-subtitle" data-i18n="contact.subtitle">Ob konkreter Bauplan, unverbindliches Erstgespräch oder Bewerbung – unser Team meldet sich rasch und unkompliziert bei Ihnen.</p>
+        </div>
+
+        <div class="contact-layout">
+          <div class="contact-info-stack">
+            <div class="contact-cards-grid">
+              <div class="contact-mini-card">
+                <div class="contact-mini-label" data-i18n="contact.addressTitle">Firmensitz &amp; Bauhof</div>
+                <div class="contact-mini-val">
+                  <span data-i18n="contact.addressLine1">Neumayer BAU Ges.m.b.H.</span><br />
+                  <span data-i18n="contact.addressLine2">Fellnergasse 101a, A-7083 Purbach am Neusiedler See</span>
+                </div>
+              </div>
+
+              <div class="contact-mini-card">
+                <div class="contact-mini-label" data-i18n="contact.phoneTitle">Telefon &amp; Fax</div>
+                <div class="contact-mini-val">
+                  <a href="tel:+4326835522" data-i18n="contact.phoneVal">Tel: +43 (0)2683 / 55 22</a><br />
+                  <span data-i18n="contact.faxVal">Fax: +43 (0)2683 / 55 22-4</span>
+                </div>
+              </div>
+
+              <div class="contact-mini-card">
+                <div class="contact-mini-label" data-i18n="contact.emailTitle">Direkter E-Mail-Kontakt</div>
+                <div class="contact-mini-val">
+                  <a href="mailto:office@neumayer-bau.at" data-i18n="contact.emailVal">office@neumayer-bau.at</a>
+                </div>
+              </div>
+
+              <div class="contact-mini-card">
+                <div class="contact-mini-label" data-i18n="contact.legalTitle">Firmenbuch &amp; WKO</div>
+                <div class="contact-mini-val" data-i18n="contact.legalVal">FN 109119 w · LG Eisenstadt · UID ATU55076401</div>
+              </div>
+
+              <div class="contact-mini-card form-field-full">
+                <div class="contact-mini-label" data-i18n="contact.areaTitle">Einsatzgebiet</div>
+                <div class="contact-mini-val" data-i18n="contact.areaVal">Purbach, Eisenstadt &amp; Umgebung, Bezirk Neusiedl/See, Bruck/Leitha, Niederösterreich &amp; Wien</div>
+              </div>
+            </div>
+
+            <div class="map-card">
+              <div id="neumayer-map" role="region" aria-label="Neumayer BAU Regional Map"></div>
+              <div class="map-caption">
+                <strong data-i18n="contact.mapTitle">Standort Purbach &amp; Einsatzregion</strong> ·
+                <span data-i18n="contact.mapHint">Interaktive Karte · Klicken Sie auf die Regionen-Marker</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-form-card">
+            <div class="form-tabs" role="tablist">
+              <button type="button" class="form-tab-btn is-active" data-form-tab="project" role="tab" aria-selected="true" data-i18n="contact.tabProject">Projektanfrage</button>
+              <button type="button" class="form-tab-btn" data-form-tab="career" role="tab" aria-selected="false" data-i18n="contact.tabCareer">Bewerbung</button>
+            </div>
+
+            <form id="contact-form" novalidate>
+              <div class="form-grid">
+                <div>
+                  <label for="contact-name" class="form-label" data-i18n="contact.fieldName">Vor- und Nachname *</label>
+                  <input type="text" id="contact-name" class="form-input" data-i18n-placeholder="contact.placeholderName" placeholder="z. B. Lukas Weber" required />
+                </div>
+                <div>
+                  <label for="contact-email" class="form-label" data-i18n="contact.fieldEmail">E-Mail-Adresse *</label>
+                  <input type="email" id="contact-email" class="form-input" data-i18n-placeholder="contact.placeholderEmail" placeholder="name@beispiel.at" required />
+                </div>
+                <div>
+                  <label for="contact-phone" class="form-label" data-i18n="contact.fieldPhone">Telefonnummer</label>
+                  <input type="tel" id="contact-phone" class="form-input" data-i18n-placeholder="contact.placeholderPhone" placeholder="+43 ..." />
+                </div>
+                <div>
+                  <label for="contact-region" class="form-label" data-i18n="contact.fieldRegion">Bauort / Bezirk</label>
+                  <input type="text" id="contact-region" class="form-input" data-i18n-placeholder="contact.placeholderRegion" placeholder="z. B. Purbach / Eisenstadt / Wien" />
+                </div>
+
+                <div id="project-only-fields" class="form-field-full">
+                  <label for="project-category-select" class="form-label" data-i18n="contact.fieldCategory">Leistungsbereich</label>
+                  <select id="project-category-select" class="form-select"></select>
+                </div>
+
+                <div id="career-only-fields" class="form-field-full" style="display:none;">
+                  <label for="career-position-select" class="form-label" data-i18n="contact.fieldPosition">Gewünschte Position</label>
+                  <select id="career-position-select" class="form-select"></select>
+                </div>
+
+                <div class="form-field-full">
+                  <label for="contact-message" class="form-label" data-i18n="contact.fieldMessage">Ihre Nachricht / Projektdaten *</label>
+                  <textarea id="contact-message" rows="5" class="form-textarea" data-i18n-placeholder="contact.placeholderMessage" placeholder="Beschreiben Sie kurz Ihr geplantes Bauvorhaben, Grundstück, gewünschten Baustart oder Ihren Werdegang..." required></textarea>
+                </div>
+
+                <div class="form-field-full">
+                  <label class="extra-check">
+                    <input type="checkbox" id="contact-consent" required />
+                    <span data-i18n="contact.privacyLabel">Ich bin damit einverstanden, dass meine Angaben zur Bearbeitung meiner Anfrage bzw. Bewerbung gemäß Datenschutzerklärung verarbeitet werden. *</span>
+                  </label>
+                </div>
+
+                <div class="form-field-full">
+                  <button type="submit" id="contact-submit-btn" class="btn btn--primary" style="width:100%;" data-i18n="contact.submitProject">
+                    Unverbindliche Anfrage senden
+                  </button>
+                </div>
+              </div>
+
+              <div id="form-feedback" class="form-feedback" role="status" aria-live="polite"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand-box">
+            <img src="images/brand/logo-main.png" alt="Neumayer BAU Ges.m.b.H." />
+          </div>
+          <p data-i18n="footer.desc">
+            Ihr Familien-Bauunternehmen in 3. Generation in Purbach am Neusiedler See. Qualität im Hochbau, Tiefbau und bei Sanierungen seit 1960.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-i18n="footer.navTitle">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="#top" data-i18n="nav.home">Start</a></li>
+            <li><a href="#estimator" data-i18n="nav.estimator">Kalkulator</a></li>
+            <li><a href="#projects" data-i18n="nav.projects">Projekte</a></li>
+            <li><a href="#history" data-i18n="nav.history">Geschichte</a></li>
+            <li><a href="#careers" data-i18n="nav.careers">Jobs</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-i18n="footer.servicesTitle">Baubereiche</h4>
+          <ul class="footer-links">
+            <li><a href="#services" data-i18n="services.s1Title">Ein- &amp; Mehrfamilienhäuser</a></li>
+            <li><a href="#services" data-i18n="services.s2Title">Betriebs- &amp; Lagerhallen</a></li>
+            <li><a href="#services" data-i18n="services.s3Title">Öffentliche &amp; Hotelbauten</a></li>
+            <li><a href="#services" data-i18n="services.s4Title">Leitungsbau &amp; Schächte</a></li>
+            <li><a href="#services" data-i18n="services.s6Title">Altbau- &amp; Struktursanierung</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-i18n="footer.contactTitle">Kontakt &amp; Rechtliches</h4>
+          <ul class="footer-links">
+            <li>Fellnergasse 101a · A-7083 Purbach</li>
+            <li><a href="tel:+4326835522" data-i18n="topbar.phone">+43 (0)2683 / 55 22</a></li>
+            <li><a href="mailto:office@neumayer-bau.at" data-i18n="topbar.email">office@neumayer-bau.at</a></li>
+            <li>UID: ATU55076401 · FN 109119 w</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span data-i18n="footer.copyright">© 2026 Neumayer BAU Ges.m.b.H. · Purbach am Neusiedler See · Alle Rechte vorbehalten.</span>
+        <div class="footer-legal-btns">
+          <button type="button" data-open-legal="impressum" data-i18n="footer.impressumBtn">Impressum</button>
+          <button type="button" data-open-legal="privacy" data-i18n="footer.privacyBtn">Datenschutz (DSGVO)</button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Project Lightbox Modal -->
+  <div id="project-lightbox" class="modal-backdrop" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="lightbox-title">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 id="lightbox-title">Projekt</h3>
+        <button type="button" id="lightbox-close-btn" class="modal-close" data-i18n-aria="lightbox.close">&#10005;</button>
+      </div>
+      <div class="modal-body">
+        <div class="lightbox-tabs" role="tablist">
+          <button type="button" class="filter-btn is-active" data-lightbox-tab="photo" data-i18n="lightbox.tabPhoto">Projektfoto</button>
+          <button type="button" class="filter-btn" data-lightbox-tab="collage" data-i18n="lightbox.tabCollage">Baucollage</button>
+        </div>
+        <div class="lightbox-img-wrap">
+          <img id="lightbox-img" src="images/projects/firma-neumayer-main.jpg" alt="Projektansicht" />
+        </div>
+        <div id="lightbox-meta" class="contact-mini-label"></div>
+        <p id="lightbox-desc"></p>
+        <div>
+          <button type="button" id="lightbox-inquire-btn" class="btn btn--primary btn--sm" data-i18n="lightbox.inquireBtn">Ähnliches Projekt anfragen</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Legal / DSGVO Modal -->
+  <div id="legal-modal" class="modal-backdrop" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="legal-modal-title">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 id="legal-modal-title">Impressum</h3>
+        <button type="button" id="legal-modal-close" class="modal-close" data-i18n-aria="modals.close">&#10005;</button>
+      </div>
+      <div id="legal-modal-body" class="modal-body"></div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+  <script src="js/translations.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
