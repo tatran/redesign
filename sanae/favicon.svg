@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="sanaeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff4b4b"/>
+      <stop offset="100%" stop-color="#d90429"/>
+    </linearGradient>
+    <linearGradient id="glowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="16" fill="#0f172a"/>
+  <!-- Checkmark shield badge -->
+  <path d="M32 8 L50 16 V32 C50 43 42 52 32 56 C22 52 14 43 14 32 V16 Z" fill="url(#sanaeGrad)"/>
+  <path d="M24 31 L29 36 L40 25" fill="none" stroke="#ffffff" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Corner pulse indicator -->
+  <circle cx="50" cy="14" r="5" fill="#10b981"/>
+</svg>

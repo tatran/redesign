@@ -1,0 +1,1312 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="siteTitle">Schlapferhof | Urlaub am Bauernhof in Ramsau am Dachstein (1.100 m)</title>
+  <meta name="description" content="Herzlich willkommen am Schlapferhof in Ramsau am Dachstein! Familienfreundlicher Bauernhof auf 1.100 m, gemütliche Zimmer mit Hof-Frühstück, Ponyreiten & romantische Pferdeschlittenfahrten.">
+  
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Schlapferhof | Urlaub am Bauernhof in Ramsau am Dachstein">
+  <meta property="og:description" content="Familienfreundlicher Bauernhof auf 1.100 m Seehöhe am Vorberg in Ramsau am Dachstein. Gemütliche Zimmer mit Frühstück, Tiere zum Streicheln & romantische Pferdeschlittenfahrten.">
+  <meta property="og:image" content="images/farm-house-summer.jpg">
+  <meta property="og:url" content="https://www.schlapferhof.at/">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+  <!-- Google Fonts: Outfit (Headings) & Plus Jakarta Sans (Body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Leaflet Map CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+
+  <!-- Design System CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <aside class="top-bar">
+    <div class="container top-bar-inner">
+      <div class="top-bar-left">
+        <div class="top-bar-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3v3a2 2 0 0 1-2 2H3m18 0h-3a2 2 0 0 1-2-2V3m0 18v-3a2 2 0 0 1 2-2h3M3 16h3a2 2 0 0 1 2 2v3"/></svg>
+          <span data-i18n="topBarAltitude">1.100 m Seehöhe • Vorberg, Ramsau am Dachstein</span>
+        </div>
+        <div class="top-bar-item top-bar-highlight">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <span data-i18n="topBarHighlight">Direkt an der Langlaufloipe & Winterwanderweg • Reiten & Pferdeschlittenfahrten</span>
+        </div>
+      </div>
+      <div class="top-bar-right">
+        <a href="tel:+43368781838" class="top-bar-item top-bar-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span data-i18n="topBarPhone">+43 3687 81838</span>
+        </a>
+        <a href="mailto:info@schlapferhof.at" class="top-bar-item top-bar-link top-bar-email">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <span data-i18n="topBarEmail">info@schlapferhof.at</span>
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Sticky Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <!-- Brand Emblem & Logo -->
+      <a href="#" class="brand" aria-label="Schlapferhof Startseite">
+        <div class="brand-emblem">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+            <polyline points="9 22 9 12 15 12 15 22"/>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">SCHLAPFERHOF</span>
+          <span class="brand-sub">Ramsau am Dachstein</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="desktop-nav" aria-label="Hauptnavigation">
+        <ul class="nav-list">
+          <li><a href="#about" class="nav-link" data-i18n="navAbout">Über uns</a></li>
+          <li><a href="#rooms" class="nav-link" data-i18n="navRooms">Zimmer</a></li>
+          <li><a href="#sleigh" class="nav-link" data-i18n="navSleigh">Schlittenfahrten</a></li>
+          <li><a href="#animals" class="nav-link" data-i18n="navAnimals">Tiere & Reiten</a></li>
+          <li><a href="#calculator" class="nav-link" data-i18n="navCalculator">Urlaubsrechner</a></li>
+          <li><a href="#gallery" class="nav-link" data-i18n="navGallery">Galerie</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Actions: Language Switcher & Inquiry CTA -->
+      <div class="header-actions">
+        <!-- 4-Language Switcher (DE, EN, CS, HU) -->
+        <div class="lang-switcher" aria-label="Sprachauswahl">
+          <button type="button" class="lang-btn active" data-lang="de" title="Deutsch">DE</button>
+          <button type="button" class="lang-btn" data-lang="en" title="English">EN</button>
+          <button type="button" class="lang-btn" data-lang="cs" title="Čeština">CS</button>
+          <button type="button" class="lang-btn" data-lang="hu" title="Magyar">HU</button>
+        </div>
+
+        <a href="#inquiry" class="btn btn-primary btn-header" data-i18n="btnInquireNow">Urlaub anfragen</a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button type="button" class="mobile-toggle" id="mobileToggle" aria-label="Menü öffnen">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-drawer-overlay" id="mobileOverlay"></div>
+  <aside class="mobile-drawer" id="mobileDrawer" aria-label="Mobiles Navigationsmenü">
+    <div class="mobile-drawer-header">
+      <div class="brand">
+        <div class="brand-emblem">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">SCHLAPFERHOF</span>
+          <span class="brand-sub">Ramsau am Dachstein</span>
+        </div>
+      </div>
+      <button type="button" class="mobile-close-btn" id="mobileClose" aria-label="Menü schließen">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+
+    <!-- Mobile Language Selector -->
+    <div class="lang-switcher" style="margin-bottom: 1.5rem; justify-content: center;">
+      <button type="button" class="lang-btn active" data-lang="de">DE</button>
+      <button type="button" class="lang-btn" data-lang="en">EN</button>
+      <button type="button" class="lang-btn" data-lang="cs">CS</button>
+      <button type="button" class="lang-btn" data-lang="hu">HU</button>
+    </div>
+
+    <ul class="mobile-nav-list">
+      <li><a href="#about" class="mobile-nav-link" data-i18n="navAbout">Über uns</a></li>
+      <li><a href="#rooms" class="mobile-nav-link" data-i18n="navRooms">Zimmer</a></li>
+      <li><a href="#sleigh" class="mobile-nav-link" data-i18n="navSleigh">Schlittenfahrten</a></li>
+      <li><a href="#animals" class="mobile-nav-link" data-i18n="navAnimals">Tiere & Reiten</a></li>
+      <li><a href="#seasons" class="mobile-nav-link" data-i18n="navSeasons">Sommer & Winter</a></li>
+      <li><a href="#calculator" class="mobile-nav-link" data-i18n="navCalculator">Urlaubsrechner</a></li>
+      <li><a href="#gallery" class="mobile-nav-link" data-i18n="navGallery">Galerie</a></li>
+      <li><a href="#location" class="mobile-nav-link" data-i18n="navLocation">Lage & Anfahrt</a></li>
+      <li><a href="#faq" class="mobile-nav-link" data-i18n="navFaq">FAQ</a></li>
+      <li><a href="#inquiry" class="mobile-nav-link" data-i18n="navContact">Kontakt</a></li>
+    </ul>
+
+    <a href="#inquiry" class="btn btn-primary" style="width: 100%; margin-bottom: 1rem;" data-i18n="btnInquireNow">Urlaub anfragen</a>
+    <a href="tel:+43368781838" class="btn btn-outline-pine" style="width: 100%;" data-i18n="btnQuickCall">Jetzt anrufen</a>
+  </aside>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <span data-i18n="heroBadge">Urlaub am Bauernhof • Familie Fuchs</span>
+        </div>
+        <h1 class="hero-title" data-i18n="heroTitle">Echter Bauernhofurlaub am Fuße des Dachsteins</h1>
+        <p class="hero-subtitle" data-i18n="heroSubtitle">In herrlich sonniger, ruhiger Einzellage auf 1.100 m Seehöhe am Vorberg in Ramsau am Dachstein. Genießen Sie herzliche Gastfreundschaft, gemütliche Gästezimmer mit köstlichem Hof-Frühstück, Streicheltiere für Kinder und unvergessliche Pferdeschlittenfahrten.</p>
+
+        <!-- USPs Hero Badges -->
+        <div class="hero-badges-grid">
+          <div class="hero-badge-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <span data-i18n="heroFeature1">100% Hofeigene Produkte</span>
+          </div>
+          <div class="hero-badge-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            <span data-i18n="heroFeature2">Direkter Loipeneinstieg</span>
+          </div>
+          <div class="hero-badge-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+            <span data-i18n="heroFeature3">Pony- & Eselreiten</span>
+          </div>
+          <div class="hero-badge-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            <span data-i18n="heroFeature4">Noriker-Schlittenfahrten</span>
+          </div>
+        </div>
+
+        <div class="hero-cta-group">
+          <a href="#rooms" class="btn btn-amber" data-i18n="heroCtaPrimary">Zimmer & Angebote entdecken</a>
+          <a href="#calculator" class="btn btn-outline-white" data-i18n="heroCtaSecondary">Preis berechnen</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Fast Finder Bar (Floating Availability / Inquiry Bar) -->
+  <div class="container finder-wrapper">
+    <div class="finder-card">
+      <h3 class="finder-card-title">
+        <svg style="width:22px;height:22px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        <span data-i18n="finderTitle">Schnellanfrage für Ihren Urlaub</span>
+      </h3>
+      <form id="finderForm" class="finder-form-grid">
+        <div class="finder-group">
+          <label class="finder-label" for="finderArrival" data-i18n="finderArrival">Anreise</label>
+          <input type="date" id="finderArrival" class="finder-input" required>
+        </div>
+        <div class="finder-group">
+          <label class="finder-label" for="finderDeparture" data-i18n="finderDeparture">Abreise</label>
+          <input type="date" id="finderDeparture" class="finder-input" required>
+        </div>
+        <div class="finder-group">
+          <label class="finder-label" for="finderRoom" data-i18n="finderRoom">Zimmerkategorie</label>
+          <select id="finderRoom" class="finder-select">
+            <option value="all" data-i18n="finderRoomAll">Alle Zimmer</option>
+            <option value="ensuite" data-i18n="finderRoomEnsuite">Zimmer mit Dusche/WC</option>
+            <option value="shared" data-i18n="finderRoomShared">Zimmer mit Etagendusche</option>
+          </select>
+        </div>
+        <div class="finder-group">
+          <label class="finder-label" for="finderGuests" data-i18n="finderGuests">Gäste (Erwachsene)</label>
+          <select id="finderGuests" class="finder-select">
+            <option value="1">1 Person</option>
+            <option value="2" selected>2 Personen</option>
+            <option value="3">3 Personen</option>
+            <option value="4">4 Personen</option>
+            <option value="5">5 Personen</option>
+            <option value="6">6+ Personen</option>
+          </select>
+        </div>
+        <div class="finder-group">
+          <label class="finder-label" for="finderChildren" data-i18n="finderChildren">Kinder</label>
+          <select id="finderChildren" class="finder-select">
+            <option value="0" selected>0 Kinder</option>
+            <option value="1">1 Kind</option>
+            <option value="2">2 Kinder</option>
+            <option value="3">3 Kinder</option>
+            <option value="4">4+ Kinder</option>
+          </select>
+        </div>
+        <div class="finder-btn-wrap">
+          <button type="submit" class="btn btn-primary" style="width: 100%; height: 48px;" data-i18n="finderBtn">Verfügbarkeit prüfen</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- USPs / Highlights Section -->
+  <section class="section-padding" id="usps">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="uspSectionTag">Ihre Vorteile am Schlapferhof</span>
+        <h2 class="section-title" data-i18n="uspSectionTitle">Warum Familien & Naturgenießer uns lieben</h2>
+        <p class="section-subtitle" data-i18n="uspSectionSubtitle">Ein Rückzugsort für alle Sinne – umgeben von grünen Almwiesen im Sommer und glitzernden Schneefeldern im Winter.</p>
+      </div>
+
+      <div class="usps-grid">
+        <!-- USP 1 -->
+        <div class="usp-card">
+          <div class="usp-icon-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3v3a2 2 0 0 1-2 2H3m18 0h-3a2 2 0 0 1-2-2V3m0 18v-3a2 2 0 0 1 2-2h3M3 16h3a2 2 0 0 1 2 2v3"/></svg>
+          </div>
+          <h3 class="usp-title" data-i18n="usp1Title">Gesundes Höhenklima auf 1.100 m</h3>
+          <p class="usp-desc" data-i18n="usp1Desc">Ramsau am Dachstein ist ein anerkannter Luftkur- und Erholungsort. Genießen Sie reine Bergluft und sonnige Ruhe fernab von Hektik und Verkehr.</p>
+        </div>
+
+        <!-- USP 2 -->
+        <div class="usp-card">
+          <div class="usp-icon-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+          </div>
+          <h3 class="usp-title" data-i18n="usp2Title">Frühstück mit hofeigenen Produkten</h3>
+          <p class="usp-desc" data-i18n="usp2Desc">Starten Sie jeden Tag mit frischer Milch, cremigem Joghurt, hausgemachtem Topfen und Eiern von glücklichen Freilandhühnern direkt vom Hof.</p>
+        </div>
+
+        <!-- USP 3 -->
+        <div class="usp-card">
+          <div class="usp-icon-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          </div>
+          <h3 class="usp-title" data-i18n="usp3Title">Echte Noriker-Pferdeschlittenfahrten</h3>
+          <p class="usp-desc" data-i18n="usp3Desc">Geführt von Willi Royer & Familie Fuchs: 11 km Winterromantik rund um den Kulmberg mit zünftiger Einkehr in einer traditionellen Steirerhütte.</p>
+        </div>
+
+        <!-- USP 4 -->
+        <div class="usp-card">
+          <div class="usp-icon-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+          </div>
+          <h3 class="usp-title" data-i18n="usp4Title">Tierparadies & Reiten für Kinder</h3>
+          <p class="usp-desc" data-i18n="usp4Desc">Haflinger, Ponys, Esel, Kühe, Kälber, Ziegen, Hasen, Enten und Pfaue. Geführte Ponyrunden durch den Bergwald lassen Kinderherzen höher schlagen.</p>
+        </div>
+
+        <!-- USP 5 -->
+        <div class="usp-card">
+          <div class="usp-icon-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          </div>
+          <h3 class="usp-title" data-i18n="usp5Title">Direkt an Loipe & Wanderweg</h3>
+          <p class="usp-desc" data-i18n="usp5Desc">Schnallen Sie die Langlaufski direkt vor der Haustür an oder spazieren Sie auf täglich mit Pistengeräten präparierten Winterwanderwegen durch die Natur.</p>
+        </div>
+
+        <!-- USP 6 -->
+        <div class="usp-card">
+          <div class="usp-icon-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </div>
+          <h3 class="usp-title" data-i18n="usp6Title">Familiäre Herzlichkeit seit Generationen</h3>
+          <p class="usp-desc" data-i18n="usp6Desc">Bernhard und Kunigunde Fuchs umsorgen Sie mit persönlicher Gastfreundschaft, wertvollen Ausflugstipps und ehrlicher steirischer Gemütlichkeit.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section & Host Story -->
+  <section class="section-padding" id="about" style="background-color: var(--white);">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-content">
+          <span class="section-tag" data-i18n="aboutTag">Herzlich Willkommen</span>
+          <h2 class="section-title" data-i18n="aboutTitle">Tradition, Natur & Herzlichkeit am Schlapferhof</h2>
+          <p class="about-lead" data-i18n="aboutLead">Unser Hof liegt auf einem sonnigen Hochplateau in Vorberg – einem der idyllischsten Ortsteile von Ramsau am Dachstein.</p>
+          <p class="about-text" data-i18n="aboutText1">Schon seit vielen Generationen wird der Schlapferhof mit Liebe und Respekt zur Natur geführt. Als kinderfreundlicher Familienbetrieb schaffen wir eine Umgebung, in der sich Eltern vollkommen entspannen und Kinder die Natur hautnah entdecken können.</p>
+          <p class="about-text" data-i18n="aboutText2">Hier riecht das Heu noch nach Sommerwiese, morgens weckt Sie das sanfte Bimmeln der Kuhglocken, und nach einem reichhaltigen Frühstück starten Sie direkt vom Haus in unberührte Natur. Ob beim Streicheln der Esel oder bei einer romantischen Schlittenfahrt – bei uns wird Urlaub zur bleibenden Erinnerung.</p>
+          
+          <div class="about-quote-box">
+            <p class="about-quote" data-i18n="aboutQuote">»Auf dem Rücken der Pferde und in der Stille der Berge liegt das wahre Glück.«</p>
+            <p class="about-hosts" data-i18n="aboutHosts">Ihre Gastgeber Familie Kunigunde & Bernhard Fuchs</p>
+          </div>
+
+          <div class="about-stats">
+            <div class="stat-item">
+              <span class="stat-num" data-i18n="statAltitude">1.100 m</span>
+              <span class="stat-label" data-i18n="statAltitudeLabel">Seehöhe / Plateau</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num" data-i18n="statLoipen">220 km</span>
+              <span class="stat-label" data-i18n="statLoipenLabel">Loipennetz direkt am Haus</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num" data-i18n="statTradition">100%</span>
+              <span class="stat-label" data-i18n="statTraditionLabel">Echter Bauernhofbetrieb</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-media-stack">
+          <img src="images/farm-house-summer.jpg" alt="Schlapferhof Bauernhaus in Vorberg Ramsau" class="about-img-main">
+          <div class="about-img-badge">
+            <img src="images/hosts-fuchs-portrait.jpg" alt="Familie Bernhard & Kunigunde Fuchs" class="badge-avatar">
+            <div>
+              <div class="badge-text-title">Familie Fuchs</div>
+              <div class="badge-text-sub">Persönliche Betreuung seit Generationen</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rooms & Farm Breakfast Section -->
+  <section class="section-padding" id="rooms">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="roomsTag">Wohlfühlen & Ausschlafen</span>
+        <h2 class="section-title" data-i18n="roomsTitle">Gemütliche Zimmer im alpinen Holzstil</h2>
+        <p class="section-subtitle" data-i18n="roomsSubtitle">Traditionelle Vollholzmöbel, duftende Bettwäsche und der Blick auf die Dachstein-Südwand oder die Schladminger Tauern garantieren erholsamen Schlaf.</p>
+      </div>
+
+      <!-- Breakfast Highlight Banner -->
+      <div class="breakfast-banner">
+        <div class="breakfast-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+        </div>
+        <div class="breakfast-info">
+          <h3 data-i18n="breakfastBadgeTitle">Inklusive reichhaltigem Bauernfrühstück</h3>
+          <p data-i18n="breakfastBadgeDesc">Täglich frische Vollmilch, selbstgemachter Topfen, fruchtiger Joghurt, frische Eier und regionale Schmankerl im gemütlichen Frühstücksraum.</p>
+        </div>
+      </div>
+
+      <div class="rooms-grid">
+        <!-- Room 1: Komfortzimmer Dusche/WC -->
+        <div class="room-card">
+          <div class="room-image-wrap">
+            <img src="images/farm-room-double.jpg" alt="Komfort-Doppelzimmer mit Dusche und WC" class="room-image">
+            <span class="room-badge">Kategorie 1</span>
+          </div>
+          <div class="room-body">
+            <h3 class="room-title" data-i18n="room1Name">Komfort-Doppelzimmer mit Dusche & WC</h3>
+            <div class="room-subtitle" data-i18n="room1Subtitle">Helles Wohlfühlzimmer mit privatem Badezimmer</div>
+            <p class="room-desc" data-i18n="room1Desc">Geräumiges Doppelzimmer mit hochwertiger Massivholzausstattung, eigenem Badezimmer (Dusche/WC), Sitzecke, TV, kostenlosem WLAN und herrlichem Ausblick in die Ramsauer Natur.</p>
+
+            <div class="room-features-list">
+              <div class="room-feature-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span data-i18n="room1Feature1">Privates Bad mit Dusche & WC</span>
+              </div>
+              <div class="room-feature-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span data-i18n="room1Feature2">Gemütliches Doppelbett aus Vollholz</span>
+              </div>
+              <div class="room-feature-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span data-i18n="room1Feature3">Reichhaltiges Hof-Frühstück inklusive</span>
+              </div>
+              <div class="room-feature-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span data-i18n="room1Feature4">Balkon / Bergblick & gratis WLAN</span>
+              </div>
+            </div>
+
+            <div class="room-price-box">
+              <div class="room-price-row">
+                <span class="room-price-season">Sommersaison:</span>
+                <span class="room-price-val" data-i18n="room1PriceSummer">ab € 30,00</span>
+              </div>
+              <div class="room-price-row">
+                <span class="room-price-season">Wintersaison:</span>
+                <span class="room-price-val" data-i18n="room1PriceWinter">ab € 32,00</span>
+              </div>
+              <div class="room-price-unit" data-i18n="roomPricePerPerson">pro Person / Nacht</div>
+            </div>
+
+            <a href="#inquiry" class="btn btn-primary" style="width: 100%;" data-i18n="roomBookBtn">Dieses Zimmer anfragen</a>
+          </div>
+        </div>
+
+        <!-- Room 2: Zimmer mit Etagendusche -->
+        <div class="room-card">
+          <div class="room-image-wrap">
+            <img src="images/farm-room-double.jpg" alt="Gemütliches Gästezimmer mit fließendem Wasser" class="room-image">
+            <span class="room-badge">Kategorie 2</span>
+          </div>
+          <div class="room-body">
+            <h3 class="room-title" data-i18n="room2Name">Gemütliches Gästezimmer mit Etagendusche</h3>
+            <div class="room-subtitle" data-i18n="room2Subtitle">Authentisches Bauernhofzimmer mit fließendem Wasser</div>
+            <p class="room-desc" data-i18n="room2Desc">Uriger alpiner Charme für Preisbewusste, Bergsteiger und Familien. Zimmer mit eigenem Waschbecken (fließend Kalt- und Warmwasser) und einer stets gepflegten Etagendusche direkt nebenan.</p>
+
+            <div class="room-features-list">
+              <div class="room-feature-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span data-i18n="room2Feature1">Fließend Kalt- & Warmwasser im Zimmer</span>
+              </div>
+              <div class="room-feature-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span data-i18n="room2Feature2">Gepflegte Etagendusche & separates WC</span>
+              </div>
+              <div class="room-feature-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span data-i18n="room2Feature3">Reichhaltiges Hof-Frühstück inklusive</span>
+              </div>
+              <div class="room-feature-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span data-i18n="room2Feature4">Hervorragendes Preis-Leistungs-Verhältnis</span>
+              </div>
+            </div>
+
+            <div class="room-price-box">
+              <div class="room-price-row">
+                <span class="room-price-season">Sommersaison:</span>
+                <span class="room-price-val" data-i18n="room2PriceSummer">ab € 26,00</span>
+              </div>
+              <div class="room-price-row">
+                <span class="room-price-season">Wintersaison:</span>
+                <span class="room-price-val" data-i18n="room2PriceWinter">ab € 28,00</span>
+              </div>
+              <div class="room-price-unit" data-i18n="roomPricePerPerson">pro Person / Nacht</div>
+            </div>
+
+            <a href="#inquiry" class="btn btn-primary" style="width: 100%;" data-i18n="roomBookBtn">Dieses Zimmer anfragen</a>
+          </div>
+        </div>
+      </div>
+
+      <p class="room-tax-note" data-i18n="roomTaxNote">Preise verstehen sich inklusive Frühstück und exklusive der gesetzlichen Nächtigungsabgabe (€ 3,50 pro Person ab 15 Jahren / Nacht). Kinderermäßigung auf Anfrage.</p>
+    </div>
+  </section>
+
+  <!-- Sleigh & Carriage Rides Section (Signature Highlight) -->
+  <section class="section-padding sleigh-section" id="sleigh">
+    <div class="container">
+      <div class="sleigh-grid">
+        <div class="sleigh-content">
+          <span class="section-tag" style="background: rgba(201, 151, 56, 0.25); color: var(--amber-300);" data-i18n="sleighTag">Wintertraum & Sommervergnügen</span>
+          <h2 class="section-title" data-i18n="sleighTitle">Pferdeschlitten- & Kutschenfahrten mit Norikern</h2>
+          <p class="sleigh-lead" data-i18n="sleighLead">Erleben Sie die zauberhafte Winterlandschaft der Ramsau am Fuße des Dachsteins eingekuschelt in warme Decken im traditionellen Pferdeschlitten.</p>
+          <p class="sleigh-text" data-i18n="sleighText1">Unsere romantischen Pferdeschlittenfahrten führen rund um den malerischen Kulmberg über eine Strecke von ca. 11 Kilometern. Unterwegs kehren wir in eine urige Hütte ein – bei heißem Jagatee, Glühwein oder einer zünftigen Steirischen Jause.</p>
+
+          <div class="sleigh-features-list">
+            <div class="sleigh-feature-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span data-i18n="sleighFeature1">11 km Panoramatour rund um den Kulmberg</span>
+            </div>
+            <div class="sleigh-feature-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span data-i18n="sleighFeature2">2 bis 3 Stunden Gesamterlebnis inkl. Einkehr</span>
+            </div>
+            <div class="sleigh-feature-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span data-i18n="sleighFeature3">Kräftige, gutmütige Norikerpferde & erfahrener Kutscher</span>
+            </div>
+            <div class="sleigh-feature-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span data-i18n="sleighFeature4">Kuschelig warme Decken & echtes Schellengeläut</span>
+            </div>
+            <div class="sleigh-feature-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span data-i18n="sleighFeature5">Im Sommer: Stimmungsvolle Kutschenfahrten über blühende Wiesen</span>
+            </div>
+          </div>
+
+          <!-- Sleigh Pricing Card -->
+          <div class="sleigh-pricing-card">
+            <div class="sleigh-price-highlight" data-i18n="sleighPriceMin">Mindestgebühr pro Schlitten: € 125,00</div>
+            <div class="sleigh-price-sub" data-i18n="sleighPriceExtra">ab 5 Personen pro Person: € 25,00 • <span data-i18n="sleighPriceKids">Ermäßigte Tarife für Kinder</span></div>
+            <div class="sleigh-note" data-i18n="sleighBookingNote">Für kurzfristige Terminreservierungen und Fahrten am Wochenende bitten wir um telefonische Voranmeldung unter +43 3687 81838.</div>
+          </div>
+
+          <div>
+            <a href="#inquiry" class="btn btn-amber" data-i18n="sleighBtn">Schlittenfahrt reservieren</a>
+          </div>
+        </div>
+
+        <!-- Sleigh Gallery Grid -->
+        <div class="sleigh-gallery-grid">
+          <img src="images/sleigh-winter-noriker.jpg" alt="Noriker Pferdeschlittenfahrt im Tiefschnee" class="sleigh-img span-2">
+          <img src="images/sleigh-winter-panoramic.jpg" alt="Schlittenfahrt Kulmberg Winterlandschaft" class="sleigh-img">
+          <img src="images/sleigh-winter-group.jpg" alt="Pferdeschlittengruppe Ramsau" class="sleigh-img">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Animals & Horseback Riding Section -->
+  <section class="section-padding" id="animals" style="background-color: var(--white);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="animalsTag">Tiere am Bauernhof</span>
+        <h2 class="section-title" data-i18n="animalsTitle">Ein Paradies für kleine & große Tierfreunde</h2>
+        <p class="section-subtitle" data-i18n="animalsSubtitle">Täglicher Kontakt zu Tieren gehört bei uns zum Hofleben dazu. Streicheln, füttern, staunen und reiten!</p>
+      </div>
+
+      <div class="animals-grid">
+        <!-- Card 1: Pony & Donkey Riding -->
+        <div class="animal-feature-card">
+          <img src="images/pony-riding-forest.jpg" alt="Ponyreiten für Kinder im Wald" class="animal-card-img">
+          <div class="animal-card-body">
+            <h3 class="animal-card-title" data-i18n="animalsPonyTitle">Geführte Pony- & Eselrunden im Wald</h3>
+            <p class="animal-card-desc" data-i18n="animalsPonyDesc">Im Sommer bieten wir für unsere jüngsten Gäste geführte Runden mit unseren geduldigen Ponys und Eseln durch den schattigen Bergwald an. Auch kleine Reitstunden auf Haflingern sind möglich.</p>
+          </div>
+        </div>
+
+        <!-- Card 2: Farm Animals & Petting Zoo -->
+        <div class="animal-feature-card">
+          <img src="images/farm-animals-calf.jpg" alt="Kälbchen und Kühe am Schlapferhof" class="animal-card-img">
+          <div class="animal-card-body">
+            <h3 class="animal-card-title" data-i18n="animalsLead">Auf dem Rücken der Pferde...</h3>
+            <p class="animal-card-desc" data-i18n="animalsText1">Auf unserem Hof leben Noriker- und Haflingerpferde, sanftmütige Ponys, Esel, Milchkühe mit ihren Kälbchen, zutrauliche Ziegen, flauschige Hasen, Gänse, Enten, Hühner, stolze Pfaue und unsere braven Hofhunde.</p>
+          </div>
+        </div>
+
+        <!-- Card 3: Horse Sales & Breeding -->
+        <div class="animal-feature-card">
+          <img src="images/farm-animals-horse.jpg" alt="Noriker Pferdezucht und Verkaufstiere" class="animal-card-img">
+          <div class="animal-card-body">
+            <h3 class="animal-card-title" data-i18n="animalsSaleTitle">Verkaufstiere & Pferdezucht</h3>
+            <p class="animal-card-desc" data-i18n="animalsSaleDesc">Aus unserer Zucht stehen regelmäßig Norikerpferde, Haflinger und Fohlen aus besten Blutlinien zum Verkauf. Sprechen Sie uns bei Interesse gerne persönlich an.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seasons Section (Winter & Summer Interactive Tabs) -->
+  <section class="section-padding seasons-section" id="seasons">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="seasonsTag">Aktiv in jeder Jahreszeit</span>
+        <h2 class="section-title" data-i18n="seasonsTitle">Ramsau am Dachstein im Wandel des Jahres</h2>
+        <p class="section-subtitle" data-i18n="seasonsSubtitle">Wählen Sie Ihre liebste Reisezeit – jede Saison birgt ihren eigenen unvergleichlichen Zauber.</p>
+      </div>
+
+      <!-- Tab Buttons -->
+      <div class="season-tabs">
+        <button type="button" class="season-tab-btn active" data-season="winter">
+          <svg style="width:20px;height:20px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m4.93 4.93 4.24 4.24"/><path d="m14.83 9.17 4.24-4.24"/><path d="m14.83 14.83 4.24 4.24"/><path d="m9.17 14.83-4.24 4.24"/></svg>
+          <span data-i18n="tabWinter">Winterzauber (Schnee & Loipe)</span>
+        </button>
+        <button type="button" class="season-tab-btn" data-season="summer">
+          <svg style="width:20px;height:20px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <span data-i18n="tabSummer">Sommerfrische (Wandern & Bike)</span>
+        </button>
+      </div>
+
+      <!-- Pane: Winter -->
+      <div class="season-content-pane active" id="pane-winter">
+        <div class="season-layout">
+          <div class="season-details">
+            <h3 data-i18n="winterTitle">Winterparadies direkt vor der Haustür</h3>
+            <p data-i18n="winterText1">Ramsau am Dachstein genießt Weltruf für sein 220 km großes Loipennetz (30 km Skating und 120 km klassische Loipen), das täglich perfekt gespurt wird und direkt an unserem Hof vorbeiführt.</p>
+            <p data-i18n="winterText2">Besonders einzigartig: Bei uns brauchen Sie nicht an der Straße zu gehen! Ein 70 km langes Netz aus Winterwanderwegen führt nur über tiefverschneite Wiesen und wird täglich mit Pistengeräten präpariert. Zudem hält der Skibus zur 4-Berge-Skischaukel (Planai, Hauser Kaibling, Hochwurzen, Reiteralm) und zum Dachsteingletscher in unmittelbarer Nähe.</p>
+
+            <div class="season-highlights-grid">
+              <div class="season-hl-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span data-i18n="winterHighlight1">Direkter Einstieg in die Langlaufloipen</span>
+              </div>
+              <div class="season-hl-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span data-i18n="winterHighlight2">Präparierte Wiesen-Winterwanderwege ohne Verkehr</span>
+              </div>
+              <div class="season-hl-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span data-i18n="winterHighlight3">Skibus zur Planai & Dachsteingletscher</span>
+              </div>
+              <div class="season-hl-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span data-i18n="winterHighlight4">Pferdeschlittenfahrten & Naturrodelbahnen</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="season-images-grid">
+            <img src="images/winter-crosscountry-loipe.jpg" alt="Ramsau Langlaufloipe im Schnee">
+            <img src="images/winter-snow-plateau.jpg" alt="Verschneites Vorberg Plateau">
+            <img src="images/winter-panorama-mountains.jpg" alt="Dachstein Bergpanorama im Winter">
+          </div>
+        </div>
+      </div>
+
+      <!-- Pane: Summer -->
+      <div class="season-content-pane" id="pane-summer">
+        <div class="season-layout">
+          <div class="season-details">
+            <h3 data-i18n="summerTitle">Sommerfrische & alpine Abenteuer</h3>
+            <p data-i18n="summerText1">Im Sommer verwandelt sich das Hochplateau in ein saftig grünes Wander- und Kletterparadies. Unzählige markierte Wanderwege, Klettersteige an der Dachstein-Südwand und urige Almhütten warten auf Sie.</p>
+            <p data-i18n="summerText2">Radsportler schätzen die anspruchsvollen Mountainbike- und E-Bike-Touren. An heißen Sommertagen sorgt der angelegte Freizeit- und Badesee »Ramsau Beach« für willkommene Abkühlung bei der ganzen Familie.</p>
+
+            <div class="season-highlights-grid">
+              <div class="season-hl-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span data-i18n="summerHighlight1">1.000 km Wanderwege & Alpentouren</span>
+              </div>
+              <div class="season-hl-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span data-i18n="summerHighlight2">Klettersteige (Via Ferrata) am Dachsteinmassiv</span>
+              </div>
+              <div class="season-hl-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span data-i18n="summerHighlight3">Badesee Ramsau Beach & Erlebnisparks</span>
+              </div>
+              <div class="season-hl-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span data-i18n="summerHighlight4">Pony-Waldrunden & Sommer-Kutschenfahrten</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="season-images-grid">
+            <img src="images/summer-dachstein-panorama.jpg" alt="Dachstein Südwand im Sommer">
+            <img src="images/summer-hiking-meadow.jpg" alt="Almwiesen in Ramsau">
+            <img src="images/summer-trail-view.jpg" alt="Wanderweg in Vorberg">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Holiday Price Calculator (Urlaubsrechner) -->
+  <section class="section-padding calc-section" id="calculator">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="calcTag">Transparente Kostenplanung</span>
+        <h2 class="section-title" data-i18n="calcTitle">Interaktiver Schlapferhof-Urlaubsrechner</h2>
+        <p class="section-subtitle" data-i18n="calcSubtitle">Berechnen Sie unverbindlich den Richtpreis für Ihren Aufenthalt inklusive Hof-Frühstück und optionaler Pferdeschlittenfahrt.</p>
+      </div>
+
+      <div class="calc-card">
+        <div class="calc-grid">
+          <!-- Inputs Column -->
+          <div class="calc-inputs">
+            <div class="calc-group">
+              <label class="calc-label" for="calcRoom" data-i18n="calcRoomLabel">Gewünschtes Zimmer:</label>
+              <select id="calcRoom" class="calc-select">
+                <option value="ensuite" selected>Komfortzimmer mit Dusche & WC (€ 30/€ 32)</option>
+                <option value="shared">Gemütliches Zimmer mit Etagendusche (€ 26/€ 28)</option>
+              </select>
+            </div>
+
+            <div class="calc-group">
+              <label class="calc-label" for="calcSeason" data-i18n="calcSeasonLabel">Reisezeitraum (Saison):</label>
+              <select id="calcSeason" class="calc-select">
+                <option value="summer" data-i18n="calcSeasonSummer">Sommersaison (Juni – Okt)</option>
+                <option value="winter" selected data-i18n="calcSeasonWinter">Wintersaison (Dez – April)</option>
+              </select>
+            </div>
+
+            <div class="calc-row-2">
+              <div class="calc-group">
+                <label class="calc-label" for="calcAdults" data-i18n="calcAdultsLabel">Erwachsene (ab 15 J.):</label>
+                <select id="calcAdults" class="calc-select">
+                  <option value="1">1 Erwachsener</option>
+                  <option value="2" selected>2 Erwachsene</option>
+                  <option value="3">3 Erwachsene</option>
+                  <option value="4">4 Erwachsene</option>
+                  <option value="5">5 Erwachsene</option>
+                  <option value="6">6+ Erwachsene</option>
+                </select>
+              </div>
+
+              <div class="calc-group">
+                <label class="calc-label" for="calcKids" data-i18n="calcKidsLabel">Kinder (unter 15 J.):</label>
+                <select id="calcKids" class="calc-select">
+                  <option value="0" selected>0 Kinder</option>
+                  <option value="1">1 Kind (-50%)</option>
+                  <option value="2">2 Kinder (-50%)</option>
+                  <option value="3">3 Kinder (-50%)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="calc-group">
+              <label class="calc-label" for="calcNights" data-i18n="calcNightsLabel">Anzahl Nächte:</label>
+              <select id="calcNights" class="calc-select">
+                <option value="2">2 Nächte (Kurztrip)</option>
+                <option value="3">3 Nächte (Langes Wochenende)</option>
+                <option value="5" selected>5 Nächte</option>
+                <option value="7">7 Nächte (1 Woche Urlaub)</option>
+                <option value="10">10 Nächte</option>
+                <option value="14">14 Nächte (2 Wochen)</option>
+              </select>
+            </div>
+
+            <div class="calc-group">
+              <label class="calc-label" for="calcSleigh" data-i18n="calcSleighLabel">Pferdeschlittenfahrt rund um den Kulmberg hinzubuchen?</label>
+              <select id="calcSleigh" class="calc-select">
+                <option value="no" data-i18n="calcSleighOptionNo">Nein, nur Unterkunft</option>
+                <option value="yes" selected data-i18n="calcSleighOptionYes">Ja, Pferdeschlittenfahrt für unsere Reisegruppe</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Summary Column -->
+          <div class="calc-summary-box">
+            <div>
+              <h3 class="calc-summary-title" data-i18n="calcSummaryTitle">Kalkulierte Übersicht</h3>
+              <div class="calc-summary-rows">
+                <div class="calc-sum-row">
+                  <span data-i18n="calcRowAcc">Unterkunft inkl. Bauernfrühstück:</span>
+                  <strong id="calcSumAcc">€ 320.00</strong>
+                </div>
+                <div class="calc-sum-row">
+                  <span data-i18n="calcRowTax">Ortstaxe (Nächtigungsabgabe € 3,50):</span>
+                  <strong id="calcSumTax">€ 35.00</strong>
+                </div>
+                <div class="calc-sum-row">
+                  <span data-i18n="calcRowSleigh">Pferdeschlittenfahrt (Kulmbergrunde):</span>
+                  <strong id="calcSumSleigh">€ 125.00</strong>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <div class="calc-total-wrap">
+                <div class="calc-total-label" data-i18n="calcTotalLabel">Geschätzter Gesamtpreis:</div>
+                <div class="calc-total-val" id="calcTotalDisplay">€ 480.00</div>
+                <div class="calc-per-person-note">
+                  <span data-i18n="calcPerPersonNight">entspricht ca.</span> <strong id="calcPerPersonVal">€ 48.00</strong> <span data-i18n="calcPerPersonNightUnit">pro Erwachsenen/Nacht</span>
+                </div>
+              </div>
+
+              <button type="button" class="btn btn-amber" id="btnApplyCalc" style="width: 100%;" data-i18n="calcTransferBtn">Diesen Richtpreis in Anfrage übernehmen</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Photo Gallery Section -->
+  <section class="section-padding" id="gallery" style="background-color: var(--white);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="galleryTag">Eindrücke vom Hof</span>
+        <h2 class="section-title" data-i18n="galleryTitle">Bildergalerie vom Schlapferhof</h2>
+        <p class="section-subtitle" data-i18n="gallerySubtitle">Klicken Sie auf ein Bild, um es hochauflösend zu vergrößern.</p>
+      </div>
+
+      <!-- Gallery Filters -->
+      <div class="gallery-filters">
+        <button type="button" class="gallery-filter-btn active" data-filter="all" data-i18n="filterAll">Alle Bilder</button>
+        <button type="button" class="gallery-filter-btn" data-filter="farm" data-i18n="filterFarm">Hof & Zimmer</button>
+        <button type="button" class="gallery-filter-btn" data-filter="sleigh" data-i18n="filterSleigh">Pferdeschlitten</button>
+        <button type="button" class="gallery-filter-btn" data-filter="animals" data-i18n="filterAnimals">Tiere & Reiten</button>
+        <button type="button" class="gallery-filter-btn" data-filter="seasons" data-i18n="filterSeasons">Sommer & Winter</button>
+      </div>
+
+      <!-- Gallery Grid -->
+      <div class="gallery-masonry" id="galleryGrid">
+        <div class="gallery-item" data-category="farm">
+          <img src="images/farm-house-summer.jpg" alt="Schlapferhof Bauernhaus Sommer" loading="lazy">
+          <div class="gallery-overlay"><span class="gallery-caption">Schlapferhof Bauernhaus in sonniger Lage</span></div>
+        </div>
+        <div class="gallery-item" data-category="farm">
+          <img src="images/farm-room-double.jpg" alt="Gästezimmer Vollholz" loading="lazy">
+          <div class="gallery-overlay"><span class="gallery-caption">Gemütliches Gästezimmer</span></div>
+        </div>
+        <div class="gallery-item" data-category="sleigh">
+          <img src="images/sleigh-winter-noriker.jpg" alt="Noriker Pferdeschlittenfahrt" loading="lazy">
+          <div class="gallery-overlay"><span class="gallery-caption">Pferdeschlittenfahrt im Pulverschnee</span></div>
+        </div>
+        <div class="gallery-item" data-category="sleigh">
+          <img src="images/sleigh-winter-panoramic.jpg" alt="Schlittenfahrt Kulmberg" loading="lazy">
+          <div class="gallery-overlay"><span class="gallery-caption">Panoramablick am Kulmberg</span></div>
+        </div>
+        <div class="gallery-item" data-category="sleigh">
+          <img src="images/sleigh-winter-group.jpg" alt="Gäste im Pferdeschlitten" loading="lazy">
+          <div class="gallery-overlay"><span class="gallery-caption">Gemütliche Runde mit Einkehr</span></div>
+        </div>
+        <div class="gallery-item" data-category="animals">
+          <img src="images/pony-riding-forest.jpg" alt="Kinder Ponyreiten im Wald" loading="lazy">
+          <div class="gallery-overlay"><span class="gallery-caption">Ponyreiten für Kinder im Wald</span></div>
+        </div>
+        <div class="gallery-item" data-category="animals">
+          <img src="images/donkey-riding.jpg" alt="Eselreiten am Schlapferhof" loading="lazy">
+          <div class="gallery-overlay"><span class="gallery-caption">Zutrauliche Esel auf der Koppel</span></div>
+        </div>
+        <div class="gallery-item" data-category="animals">
+          <img src="images/farm-animals-calf.jpg" alt="Kälbchen auf der Weide" loading="lazy">
+          <div class="gallery-overlay"><span class="gallery-caption">Neugeborenes Kälbchen</span></div>
+        </div>
+        <div class="gallery-item" data-category="animals">
+          <img src="images/farm-animals-horse.jpg" alt="Noriker Zuchtpferd" loading="lazy">
+          <div class="gallery-overlay"><span class="gallery-caption">Noriker Zuchtpferde</span></div>
+        </div>
+        <div class="gallery-item" data-category="animals">
+          <img src="images/farm-animals-goats.jpg" alt="Ziegen am Hof" loading="lazy">
+          <div class="gallery-overlay"><span class="gallery-caption">Zutrauliche Zwergziegen</span></div>
+        </div>
+        <div class="gallery-item" data-category="animals">
+          <img src="images/farm-animals-rabbits.jpg" alt="Hasen zum Streicheln" loading="lazy">
+          <div class="gallery-overlay"><span class="gallery-caption">Flauschige Hasen im Freigehege</span></div>
+        </div>
+        <div class="gallery-item" data-category="animals">
+          <img src="images/farm-animals-peacock.jpg" alt="Pfau am Hof" loading="lazy">
+          <div class="gallery-overlay"><span class="gallery-caption">Stolze Pfaue & Geflügel</span></div>
+        </div>
+        <div class="gallery-item" data-category="seasons">
+          <img src="images/winter-crosscountry-loipe.jpg" alt="Langlaufloipe vor dem Hof" loading="lazy">
+          <div class="gallery-overlay"><span class="gallery-caption">Langlaufloipe direkt vor der Haustür</span></div>
+        </div>
+        <div class="gallery-item" data-category="seasons">
+          <img src="images/summer-dachstein-panorama.jpg" alt="Dachstein Südwand im Sommer" loading="lazy">
+          <div class="gallery-overlay"><span class="gallery-caption">Dachsteinmassiv im Sommer</span></div>
+        </div>
+        <div class="gallery-item" data-category="seasons">
+          <img src="images/summer-hiking-meadow.jpg" alt="Wanderwege in Ramsau" loading="lazy">
+          <div class="gallery-overlay"><span class="gallery-caption">Blühende Almwiesen am Hochplateau</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Guest Testimonials -->
+  <section class="section-padding" style="background-color: var(--snow-100);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="reviewsTag">Gästestimmen</span>
+        <h2 class="section-title" data-i18n="reviewsTitle">Was unsere Gäste über den Schlapferhof sagen</h2>
+      </div>
+
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text" data-i18n="review1Text">»Wir kommen seit 5 Jahren mit den Kindern zum Schlapferhof. Das Frühstück mit frischer Milch und dem leckeren Topfen ist ein Traum. Die Schlittenfahrt mit Bernhard und den Norikern war wieder das absolute Highlight!«</p>
+          <div class="review-author-wrap">
+            <div class="review-avatar">G</div>
+            <div>
+              <div class="review-author" data-i18n="review1Author">Familie Gruber</div>
+              <div class="review-origin" data-i18n="review1Origin">Linz, Österreich</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text" data-i18n="review2Text">»Absolut ruhige Lage, man kann direkt mit den Langlaufskiern losstarten. Die Zimmer sind sauber, rustikal und gemütlich. Sehr herzliche Gastgeber, wir haben uns sofort wie zuhause gefühlt.«</p>
+          <div class="review-author-wrap">
+            <div class="review-avatar">M</div>
+            <div>
+              <div class="review-author" data-i18n="review2Author">Markus & Sandra</div>
+              <div class="review-origin" data-i18n="review2Origin">München, Deutschland</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text" data-i18n="review3Text">»Krásná dovolená na statku! Děti milovaly poníky, oslíky a zvířátka. Skvělá lokalita na běžky a výlety pod Dachsteinem. Určitě se vrátíme!«</p>
+          <div class="review-author-wrap">
+            <div class="review-avatar">N</div>
+            <div>
+              <div class="review-author" data-i18n="review3Author">Rodina Novákova</div>
+              <div class="review-origin" data-i18n="review3Origin">Praha, Tschechien</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text" data-i18n="review4Text">»Csodálatos családi gazdaság Ramsauban. A házi tej és a reggeli fantasztikus, a lovasszán túra pedig felejthetetlen élmény volt a havas hegyek között.«</p>
+          <div class="review-author-wrap">
+            <div class="review-avatar">H</div>
+            <div>
+              <div class="review-author" data-i18n="review4Author">Horváth család</div>
+              <div class="review-origin" data-i18n="review4Origin">Budapest, Ungarn</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Accordion Section -->
+  <section class="section-padding" id="faq" style="background-color: var(--white);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="faqTag">Häufige Fragen</span>
+        <h2 class="section-title" data-i18n="faqTitle">Wissenswertes für Ihren Aufenthalt</h2>
+      </div>
+
+      <div class="faq-wrap">
+        <div class="faq-item">
+          <button type="button" class="faq-question-btn">
+            <span data-i18n="faq1Q">Wie sind die An- und Abreisezeiten?</span>
+            <svg class="faq-icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner" data-i18n="faq1A">Die Zimmer stehen Ihnen am Anreisetag in der Regel ab 14:00 Uhr zur Verfügung. Am Abreisetag bitten wir Sie, das Zimmer bis 10:00 Uhr freizugeben. Sollten Sie später anreisen, geben Sie uns bitte kurz telefonisch Bescheid.</div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button type="button" class="faq-question-btn">
+            <span data-i18n="faq2Q">Wann wird das Frühstück serviert?</span>
+            <svg class="faq-icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner" data-i18n="faq2A">Unser reichhaltiges Bauernfrühstück mit hofeigenen Produkten (frische Milch, Joghurt, Topfen, Eier) servieren wir Ihnen täglich von 07:30 bis 09:30 Uhr im gemütlichen Frühstücksraum.</div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button type="button" class="faq-question-btn">
+            <span data-i18n="faq3Q">Muss eine Pferdeschlittenfahrt im Voraus gebucht werden?</span>
+            <svg class="faq-icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner" data-i18n="faq3A">Ja, da unsere Schlittenfahrten um den Kulmberg sehr begehrt sind, empfehlen wir eine rechtzeitige telefonische oder schriftliche Reservierung vorab. Gerne können Sie Ihren Wunschtermin direkt bei der Zimmeranfrage angeben.</div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button type="button" class="faq-question-btn">
+            <span data-i18n="faq4Q">Wie weit ist es zu den Skigebieten und Loipen?</span>
+            <svg class="faq-icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner" data-i18n="faq4A">Die Langlaufloipe und die präparierten Winterwanderwege führen direkt am Hof vorbei. Der Skibus zur 4-Berge-Skischaukel Schladming (Planai, Hauser Kaibling) sowie zum Dachsteingletscher hält in unmittelbarer Nähe.</div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button type="button" class="faq-question-btn">
+            <span data-i18n="faq5Q">Sind Haustiere am Schlapferhof erlaubt?</span>
+            <svg class="faq-icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner" data-i18n="faq5A">Auf unserem Hof leben bereits viele eigene Tiere (Pferde, Kühe, Hunde, Katzen, Geflügel). Bitte kontaktieren Sie uns vor Ihrer Buchung, falls Sie Ihren Hund mitbringen möchten, damit wir dies individuell absprechen können.</div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button type="button" class="faq-question-btn">
+            <span data-i18n="faq6Q">Welche Zahlungsmöglichkeiten gibt es?</span>
+            <svg class="faq-icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner" data-i18n="faq6A">Sie können Ihren Aufenthalt bequem vor Ort in bar oder vorab per Banküberweisung begleichen. Kreditkartenzahlung ist vor Ort nur eingeschränkt möglich.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Map & Location Section -->
+  <section class="section-padding" id="location" style="background-color: var(--snow-100);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="locationTag">So finden Sie uns</span>
+        <h2 class="section-title" data-i18n="locationTitle">Lage & Anreise zum Schlapferhof</h2>
+        <p class="section-subtitle" data-i18n="locationSubtitle">Ruhig gelegen im Ortsteil Vorberg, ca. 4 km vom Ortszentrum Ramsau entfernt.</p>
+      </div>
+
+      <div class="location-grid">
+        <div class="location-info-card">
+          <div>
+            <h3 class="loc-title" data-i18n="addressTitle">Adresse & Kontaktdaten</h3>
+            <div class="loc-detail-group">
+              <strong data-i18n="addressLine1">Schlapferhof – Familie Fuchs</strong>
+              <span data-i18n="addressLine2">Vorberg 34</span>
+              <span data-i18n="addressLine3">A-8972 Ramsau am Dachstein</span>
+              <span data-i18n="addressLine4">Steiermark, Österreich</span>
+            </div>
+          </div>
+
+          <div class="loc-gps-box">
+            <div style="font-weight: 700; color: var(--pine-900); margin-bottom: 0.25rem;" data-i18n="gpsTitle">GPS-Koordinaten für Ihr Navi:</div>
+            <div class="loc-gps-coords" data-i18n="gpsCoords">N 47° 24' 13.9" • E 013° 39' 55.0" (47.40386° N, 13.66528° E)</div>
+          </div>
+
+          <div>
+            <div style="margin-bottom: 0.5rem;">
+              <strong data-i18n="phoneLabel">Telefon & Fax:</strong>
+              <a href="tel:+43368781838" style="color: var(--pine-700); font-weight: 700; margin-left: 0.5rem;">+43 3687 81838</a>
+            </div>
+            <div>
+              <strong data-i18n="emailLabel">E-Mail:</strong>
+              <a href="mailto:info@schlapferhof.at" style="color: var(--pine-700); font-weight: 700; margin-left: 0.5rem;">info@schlapferhof.at</a>
+            </div>
+          </div>
+
+          <div>
+            <h4 style="font-family: var(--font-heading); color: var(--pine-900); margin-bottom: 0.5rem;" data-i18n="routeTitle">Anreiseempfehlungen:</h4>
+            <p style="font-size: 0.88rem; color: var(--slate-600); line-height: 1.5; margin-bottom: 0.5rem;" data-i18n="routeDe">Von Norden/Westen (D, Salzburg): A10 Tauernautobahn, Ausfahrt Graz/Schladming (Exit 63), auf der B320 nach Schladming, dort Abzweigung nach Ramsau am Dachstein nehmen und der Vorberg-Straße folgen.</p>
+            <p style="font-size: 0.88rem; color: var(--slate-600); line-height: 1.5;" data-i18n="routeCz">Von Tschechien (Prag, Linz): A7 / Phyrnautobahn A9 via Liezen auf die B320 Richtung Schladming / Ramsau Vorberg.</p>
+          </div>
+        </div>
+
+        <div class="map-container-wrap">
+          <div id="map"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Booking Inquiry Form Section -->
+  <section class="section-padding inquiry-section" id="inquiry">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="formTag">Direkt beim Gastgeber</span>
+        <h2 class="section-title" data-i18n="formTitle">Unverbindliche Buchungsanfrage</h2>
+        <p class="section-subtitle" data-i18n="formSubtitle">Füllen Sie einfach das folgende Formular aus. Wir melden uns umgehend mit einem maßgeschneiderten Angebot bei Ihnen!</p>
+      </div>
+
+      <div class="inquiry-card">
+        <div class="inquiry-urgent-alert">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          <span data-i18n="formNoticeInstant">Für dringende Anfragen oder kurzfristige Buchungen rufen Sie uns bitte direkt an: +43 3687 81838.</span>
+        </div>
+
+        <form id="inquiryForm">
+          <!-- Anti-Spam Honeypot -->
+          <input type="text" id="formHoneypot" style="display: none;" tabindex="-1" autocomplete="off">
+
+          <div class="form-grid">
+            <div class="form-group">
+              <label class="form-label" for="inquiryName" data-i18n="fieldName">Vollständiger Name *</label>
+              <input type="text" id="inquiryName" class="form-input" required placeholder="z.B. Max Mustermann">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="inquiryEmail" data-i18n="fieldEmail">E-Mail-Adresse *</label>
+              <input type="email" id="inquiryEmail" class="form-input" required placeholder="ihre-email@beispiel.at">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="inquiryPhone" data-i18n="fieldPhone">Telefonnummer (für Rückfragen)</label>
+              <input type="tel" id="inquiryPhone" class="form-input" placeholder="+43 664 ...">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="inquiryRoom" data-i18n="fieldRoomType">Gewünschtes Zimmer *</label>
+              <select id="inquiryRoom" class="form-select" required>
+                <option value="ensuite" selected data-i18n="finderRoomEnsuite">Zimmer mit Dusche/WC</option>
+                <option value="shared" data-i18n="finderRoomShared">Zimmer mit Etagendusche</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="inquiryArrival" data-i18n="fieldArrival">Geplantes Anreisedatum *</label>
+              <input type="date" id="inquiryArrival" class="form-input" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="inquiryDeparture" data-i18n="fieldDeparture">Geplantes Abreisedatum *</label>
+              <input type="date" id="inquiryDeparture" class="form-input" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="inquiryAdults" data-i18n="fieldAdults">Erwachsene (ab 15 J.) *</label>
+              <select id="inquiryAdults" class="form-select" required>
+                <option value="1">1 Erwachsener</option>
+                <option value="2" selected>2 Erwachsene</option>
+                <option value="3">3 Erwachsene</option>
+                <option value="4">4 Erwachsene</option>
+                <option value="5">5 Erwachsene</option>
+                <option value="6">6+ Erwachsene</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="inquiryKids" data-i18n="fieldChildren">Kinder (unter 15 J.)</label>
+              <select id="inquiryKids" class="form-select">
+                <option value="0" selected>0 Kinder</option>
+                <option value="1">1 Kind</option>
+                <option value="2">2 Kinder</option>
+                <option value="3">3 Kinder</option>
+                <option value="4">4+ Kinder</option>
+              </select>
+            </div>
+
+            <div class="form-group form-col-span-2">
+              <label class="form-label" for="inquirySleigh" data-i18n="fieldSleighInterest">Interesse an Pferdeschlitten- / Kutschenfahrt</label>
+              <select id="inquirySleigh" class="form-select">
+                <option value="yes" selected data-i18n="fieldSleighYes">Ja, bitte Schlittenfahrt mit reservieren</option>
+                <option value="no" data-i18n="fieldSleighNo">Nein, danke</option>
+              </select>
+            </div>
+
+            <div class="form-group form-col-span-2">
+              <label class="form-label" for="inquiryMessage" data-i18n="fieldMessage">Ihre Nachricht, Fragen oder Wünsche</label>
+              <textarea id="inquiryMessage" class="form-textarea" placeholder="Teilen Sie uns gerne das Alter Ihrer Kinder, Ankunftszeit oder sonstige Wünsche mit..." data-i18n-placeholder="fieldMessagePlaceholder"></textarea>
+            </div>
+
+            <div class="form-group form-col-span-2">
+              <label class="checkbox-group">
+                <input type="checkbox" required checked>
+                <span data-i18n="fieldPrivacy">Ich stimme zu, dass meine Angaben zur Bearbeitung meiner Anfrage gespeichert und verarbeitet werden. (Datenschutz)</span>
+              </label>
+            </div>
+
+            <div class="form-col-span-2" style="margin-top: 1rem;">
+              <button type="submit" class="btn btn-primary" style="width: 100%; height: 52px; font-size: 1.05rem;" data-i18n="btnSubmit">Unverbindliche Anfrage absenden</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand">
+            <div class="brand-emblem" style="background: var(--amber-500); color: var(--pine-900);">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+            </div>
+            <div class="brand-text">
+              <span class="brand-name">SCHLAPFERHOF</span>
+              <span class="brand-sub" style="color: var(--amber-400);">Ramsau am Dachstein</span>
+            </div>
+          </div>
+          <p class="footer-brand-desc" data-i18n="footerDesc">Kinderfreundlicher Familienbetrieb und Urlaub am Bauernhof auf 1.100 m Seehöhe in Vorberg, Ramsau am Dachstein. Zimmer mit Hof-Frühstück, Ponyreiten und echte Noriker-Pferdeschlittenfahrten.</p>
+        </div>
+
+        <div>
+          <h4 class="footer-heading" data-i18n="footerNavTitle">Navigation</h4>
+          <ul class="footer-links-list">
+            <li><a href="#about" class="footer-link" data-i18n="navAbout">Über den Hof</a></li>
+            <li><a href="#rooms" class="footer-link" data-i18n="navRooms">Zimmer & Preise</a></li>
+            <li><a href="#sleigh" class="footer-link" data-i18n="navSleigh">Schlittenfahrten</a></li>
+            <li><a href="#animals" class="footer-link" data-i18n="navAnimals">Tiere & Reiten</a></li>
+            <li><a href="#calculator" class="footer-link" data-i18n="navCalculator">Urlaubsrechner</a></li>
+            <li><a href="#gallery" class="footer-link" data-i18n="navGallery">Bildergalerie</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading" data-i18n="footerContactTitle">Kontakt</h4>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>Vorberg 34, 8972 Ramsau am Dachstein, Steiermark</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <a href="tel:+43368781838" class="footer-link">+43 3687 81838</a>
+          </div>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <a href="mailto:info@schlapferhof.at" class="footer-link">info@schlapferhof.at</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-heading" data-i18n="footerLegalTitle">Rechtliches</h4>
+          <ul class="footer-links-list">
+            <li><a href="#" class="footer-link open-impressum" data-i18n="footerImpressum">Impressum</a></li>
+            <li><a href="#" class="footer-link open-privacy" data-i18n="footerDatenschutz">Datenschutz</a></li>
+            <li><a href="https://www.ramsau.com" target="_blank" rel="noopener" class="footer-link">Tourismusverband Ramsau</a></li>
+            <li><a href="https://www.schladming-dachstein.at" target="_blank" rel="noopener" class="footer-link">Region Schladming-Dachstein</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div data-i18n="footerCopyright">© 2026 Schlapferhof – Bernhard & Kunigunde Fuchs. Alle Rechte vorbehalten.</div>
+        <div data-i18n="footerJimdoNote">Modernes Redesign des originalen Webauftritts von schlapferhof.at.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox Modal -->
+  <div class="lightbox-modal" id="lightboxModal" role="dialog" aria-modal="true" aria-label="Bildergalerie Vergrößerung">
+    <button type="button" class="lightbox-close" id="lightboxClose" aria-label="Schließen">
+      <svg style="width:28px;height:28px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <button type="button" class="lightbox-prev" id="lightboxPrev" aria-label="Vorheriges Bild">
+      <svg style="width:28px;height:28px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+    </button>
+    <div class="lightbox-content">
+      <img src="" alt="" class="lightbox-img" id="lightboxImg">
+      <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+    <button type="button" class="lightbox-next" id="lightboxNext" aria-label="Nächstes Bild">
+      <svg style="width:28px;height:28px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+    </button>
+  </div>
+
+  <!-- Success Modal for Booking Inquiry -->
+  <div class="modal" id="successModal" role="dialog" aria-modal="true">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3 class="modal-title" data-i18n="formSuccessTitle">Vielen Dank für Ihre Anfrage!</h3>
+        <button type="button" class="modal-close-btn" id="successClose" aria-label="Schließen">
+          <svg style="width:24px;height:24px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+      <div class="modal-body" style="text-align: center; padding: 3rem 2rem;">
+        <div style="width: 64px; height: 64px; background: var(--pine-100); color: var(--pine-800); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem;">
+          <svg style="width:36px;height:36px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <p style="font-size: 1.15rem; color: var(--slate-700); margin-bottom: 2rem;" data-i18n="formSuccessMsg">Wir haben Ihre Nachricht erhalten und werden uns schnellstmöglich persönlich mit einem passenden Angebot bei Ihnen melden.</p>
+        <button type="button" class="btn btn-primary modal-close-btn">Alles klar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Impressum Modal -->
+  <div class="modal" id="impressumModal" role="dialog" aria-modal="true">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3 class="modal-title" data-i18n="footerImpressum">Impressum</h3>
+        <button type="button" class="modal-close-btn" aria-label="Schließen">
+          <svg style="width:24px;height:24px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h4>Angaben gemäß § 5 TMG / Mediengesetz</h4>
+        <p><strong>Schlapferhof</strong><br>
+        Inhaber: Kunigunde und Bernhard Fuchs<br>
+        Vorberg 34<br>
+        A-8972 Ramsau am Dachstein<br>
+        Steiermark, Österreich</p>
+
+        <h4>Kontakt</h4>
+        <p>Telefon: +43 3687 81838<br>
+        Fax: +43 3687 81838<br>
+        E-Mail: info@schlapferhof.at<br>
+        Web: www.schlapferhof.at</p>
+
+        <h4>Gewerberechtliche Vorschriften</h4>
+        <p>Urlaub am Bauernhof (Land- und forstwirtschaftlicher Nebenerwerbsbetrieb)<br>
+        Zuständige Kammer: Landwirtschaftskammer Steiermark</p>
+
+        <h4>Haftung für Inhalte und Links</h4>
+        <p>Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen. Verweise und Links auf fremde Websites liegen außerhalb unseres Verantwortungsbereiches.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Datenschutz Modal -->
+  <div class="modal" id="privacyModal" role="dialog" aria-modal="true">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3 class="modal-title" data-i18n="footerDatenschutz">Datenschutzerklärung</h3>
+        <button type="button" class="modal-close-btn" aria-label="Schließen">
+          <svg style="width:24px;height:24px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h4>1. Datenschutz auf einen Blick</h4>
+        <p>Der Schutz Ihrer persönlichen Daten ist uns ein besonderes Anliegen. Wir verarbeiten Ihre Daten ausschließlich auf Grundlage der gesetzlichen Bestimmungen (DSGVO, TKG 2003).</p>
+
+        <h4>2. Kontakt mit uns</h4>
+        <p>Wenn Sie per Formular auf der Website oder per E-Mail Kontakt mit uns aufnehmen, werden Ihre angegebenen Daten zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.</p>
+
+        <h4>3. Ihre Rechte</h4>
+        <p>Ihnen stehen grundsätzlich die Rechte auf Auskunft, Berichtigung, Löschung, Einschränkung, Datenübertragbarkeit, Widerruf und Widerspruch zu. Wenn Sie glauben, dass die Verarbeitung Ihrer Daten gegen das Datenschutzrecht verstößt, können Sie sich bei der Aufsichtsbehörde beschweren (in Österreich die Datenschutzbehörde).</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Quick Action Floating Bar -->
+  <div class="mobile-quick-bar">
+    <div class="mobile-quick-inner">
+      <a href="tel:+43368781838" class="btn btn-outline-pine" style="padding: 0.65rem 0.5rem; font-size: 0.9rem;" data-i18n="btnQuickCall">Jetzt anrufen</a>
+      <a href="#inquiry" class="btn btn-primary" style="padding: 0.65rem 0.5rem; font-size: 0.9rem;" data-i18n="btnInquireNow">Urlaub anfragen</a>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="js/translations.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

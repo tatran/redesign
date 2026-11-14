@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SANAE | GO LIVE with us - Quality Assurance & Software Testing Portal</title>
+  <meta name="description" content="Redesign of sanae.sk using Lovable.dev 'Expense It' mobile-first template style. QA solutions, AI requirements scanner, policy gatekeeper, test automation, and ISTQB Gold Partner certifications.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+  <!-- Fonts: Outfit (Headings) & Plus Jakarta Sans (Body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Top Showcase & Device Mode Control Strip -->
+  <aside class="showcase-toolbar">
+    <div class="toolbar-brand">
+      <img src="images/sanae-logo.png" alt="SANAE Logo" class="toolbar-logo">
+      <div class="toolbar-badge">
+        <span class="pulse-dot"></span>
+        <span>QA GATEKEEPER ACTIVE</span>
+      </div>
+    </div>
+
+    <div class="toolbar-controls">
+      <!-- Persona Switcher -->
+      <div class="persona-wrap">
+        <select id="personaSelect" class="persona-select" title="Switch Persona View">
+          <option value="cto" selected>👔 CTO / Client</option>
+          <option value="qa">🧪 Lead QA Eng</option>
+          <option value="pm">📊 Product Mgr</option>
+        </select>
+      </div>
+
+      <!-- Viewport Mode Switcher (Mobile PWA Simulator vs Fullscreen Desktop) -->
+      <div class="view-mode-toggle">
+        <button type="button" class="view-btn active" id="viewMobileBtn" title="Mobile App Simulator">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="3"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+          <span>Mobile</span>
+        </button>
+        <button type="button" class="view-btn" id="viewDesktopBtn" title="Responsive Desktop Portal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          <span>Portal</span>
+        </button>
+      </div>
+
+      <!-- Dark / Light Theme Toggle -->
+      <button type="button" class="theme-toggle-btn" id="themeToggleBtn" title="Toggle Theme" aria-label="Toggle theme">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+      </button>
+
+      <!-- Quick Action Hire Us -->
+      <button type="button" class="btn-primary-red open-hire-modal" style="padding: 0.4rem 0.95rem; font-size: 0.8rem;">
+        Hire Us
+      </button>
+    </div>
+  </aside>
+
+  <!-- App Viewport (Can toggle between Smartphone Shell and Fullscreen Portal) -->
+  <main class="app-viewport" id="appViewport">
+    <div class="device-frame">
+      <!-- Simulated Mobile Phone Status Bar & Dynamic Island -->
+      <div class="device-status-bar">
+        <span>09:41</span>
+        <div class="device-island">
+          <div class="island-camera"></div>
+        </div>
+        <div style="display: flex; align-items: center; gap: 4px;">
+          <svg style="width: 14px; height: 14px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg>
+          <svg style="width: 14px; height: 14px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="6" width="18" height="12" rx="2"/><line x1="23" y1="11" x2="23" y2="13"/></svg>
+        </div>
+      </div>
+
+      <!-- Internal App Shell -->
+      <div class="app-shell">
+        <!-- App Header -->
+        <header class="app-header">
+          <div class="app-brand">
+            <img src="images/sanae-logo.png" alt="SANAE" class="app-brand-logo">
+            <div class="app-brand-text">
+              <span class="app-brand-title">SANAE QA</span>
+              <span class="app-brand-sub">GO LIVE with us</span>
+            </div>
+          </div>
+
+          <div class="app-header-actions">
+            <!-- Ask AI Assistant Button -->
+            <button type="button" class="header-action-btn open-ai-btn" title="Ask AI QA Advisor" aria-label="Ask AI">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 0 1 10 10c0 5.52-4.48 10-10 10S2 17.52 2 12A10 10 0 0 1 12 2z"/><path d="m9 12 2 2 4-4"/></svg>
+            </button>
+
+            <!-- Notifications Button with Badge -->
+            <button type="button" class="header-action-btn open-hire-modal" title="Request QA Team" aria-label="Notifications">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+              <span class="header-badge-count">3</span>
+            </button>
+          </div>
+        </header>
+
+        <!-- Scrollable App Body -->
+        <div class="app-body">
+          
+          <!-- TAB 1: DASHBOARD / OVERVIEW (DEFAULT) -->
+          <section class="tab-pane active" id="tab-dashboard">
+            <!-- Welcome Banner -->
+            <div class="welcome-banner">
+              <div class="banner-status-pill">
+                <svg style="width: 12px; height: 12px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Zero-Defect Release Gate</span>
+              </div>
+              <h2 class="welcome-title">Confidence in Software</h2>
+              <p class="welcome-subtitle" id="personaBannerNote">
+                Viewing as CTO / Executive: Quality gates, ROI analytics, ISTQB compliance and budget approvals.
+              </p>
+            </div>
+
+            <!-- Key Metric Cards (ExpenseIt Stat Cards with Trend Badges) -->
+            <div class="metrics-grid">
+              <!-- Metric 1: Automated Test Runs -->
+              <div class="metric-card">
+                <div class="metric-header">
+                  <div class="metric-icon-box red">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                  </div>
+                  <span class="metric-badge green">+18% MoM</span>
+                </div>
+                <div>
+                  <div class="metric-val">1,420</div>
+                  <div class="metric-label">Automated Test Cases</div>
+                </div>
+              </div>
+
+              <!-- Metric 2: Defect Detection Efficiency -->
+              <div class="metric-card">
+                <div class="metric-header">
+                  <div class="metric-icon-box cyan">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                  </div>
+                  <span class="metric-badge green">0 in Prod</span>
+                </div>
+                <div>
+                  <div class="metric-val">99.4%</div>
+                  <div class="metric-label">Defect Detection (DDE)</div>
+                </div>
+              </div>
+
+              <!-- Metric 3: ISTQB Certified Staff -->
+              <div class="metric-card">
+                <div class="metric-header">
+                  <div class="metric-icon-box emerald">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+                  </div>
+                  <span class="metric-badge blue">Gold Partner</span>
+                </div>
+                <div>
+                  <div class="metric-val">100%</div>
+                  <div class="metric-label">Certified Test Engineers</div>
+                </div>
+              </div>
+
+              <!-- Metric 4: Production Cost Saved -->
+              <div class="metric-card">
+                <div class="metric-header">
+                  <div class="metric-icon-box purple">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                  </div>
+                  <span class="metric-badge green">+340% ROI</span>
+                </div>
+                <div>
+                  <div class="metric-val">€348k</div>
+                  <div class="metric-label">Saved in Defect Costs</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Quick Action Chips (ExpenseIt Horizontal Scroll Action Bar) -->
+            <div class="quick-actions-bar">
+              <button type="button" class="action-pill highlight" data-action-tab="scanner">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M3 7V5a2 2 0 0 1 2-2h2m10 0h2a2 2 0 0 1 2 2v2m0 10v2a2 2 0 0 1-2 2h-2m-10 0H5a2 2 0 0 1-2-2v-2"/></svg>
+                <span>Scan Spec (AI)</span>
+              </button>
+              <button type="button" class="action-pill open-hire-modal">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg>
+                <span>Request QA Team</span>
+              </button>
+              <button type="button" class="action-pill open-ai-btn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                <span>Ask AI Advisor</span>
+              </button>
+              <button type="button" class="action-pill" data-action-tab="calculator">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="16" y1="14" x2="16" y2="18"/><path d="M16 10h.01"/><path d="M12 10h.01"/><path d="M8 10h.01"/><path d="M12 14h.01"/><path d="M8 14h.01"/><path d="M12 18h.01"/><path d="M8 18h.01"/></svg>
+                <span>Budget Calculator</span>
+              </button>
+              <button type="button" class="action-pill" data-action-tab="beer">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 11h1a3 3 0 0 1 0 6h-1"/><path d="M9 12v6"/><path d="M13 12v6"/><path d="M14 7.5c-1 0-1.44.5-3 .5s-2-.5-3-.5-1.72.5-2.5.5a2.5 2.5 0 0 1 0-5c.78 0 1.57.5 2.5.5s1.44-.5 3-.5 2 .5 3 .5 1.72-.5 2.5-.5a2.5 2.5 0 0 1 0 5c-.78 0-1.5-.5-2.5-.5Z"/><path d="M5 8v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V8"/></svg>
+                <span>BEER.EX 2026</span>
+              </button>
+            </div>
+
+            <!-- Quality Policy Gatekeeper (ExpenseIt Policy Checks) -->
+            <div class="policy-card-widget">
+              <div class="policy-widget-header">
+                <div class="policy-title">
+                  <svg style="width: 18px; height: 18px; color: var(--sanae-red);" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                  <span>Pre-Release Policy Gatekeeper</span>
+                </div>
+                <span class="policy-badge-status">5 / 5 PASSED</span>
+              </div>
+
+              <div class="policy-list">
+                <div class="policy-item">
+                  <div class="policy-item-name">
+                    <svg class="policy-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>Zero Sev-1 Blocker Defects</span>
+                  </div>
+                  <span class="policy-item-val" style="color: #34d399;">0 Blocker</span>
+                </div>
+
+                <div class="policy-item">
+                  <div class="policy-item-name">
+                    <svg class="policy-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>Automated Regression Coverage</span>
+                  </div>
+                  <span class="policy-item-val">86.4% (Threshold 80%)</span>
+                </div>
+
+                <div class="policy-item">
+                  <div class="policy-item-name">
+                    <svg class="policy-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>Multi-Device & Browser Matrix</span>
+                  </div>
+                  <span class="policy-item-val">14 Devices Verified</span>
+                </div>
+
+                <div class="policy-item">
+                  <div class="policy-item-name">
+                    <svg class="policy-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>OWASP Top 10 Security Scan</span>
+                  </div>
+                  <span class="policy-item-val" style="color: #34d399;">Clean Scan</span>
+                </div>
+
+                <div class="policy-item">
+                  <div class="policy-item-name">
+                    <svg class="policy-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>ISTQB Gold Lead Sign-off</span>
+                  </div>
+                  <span class="policy-item-val">Certified</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Active Engagements (ExpenseIt Trips & Claims List) -->
+            <div class="tab-section-header">
+              <h3 class="tab-section-title">
+                <svg style="width: 18px; height: 18px; color: var(--accent-cyan);" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                <span>Active QA Engagements</span>
+              </h3>
+              <a href="#" class="tab-section-link open-hire-modal">+ New Audit</a>
+            </div>
+
+            <div class="project-card-list">
+              <!-- Item 1: Tatra Banka -->
+              <div class="project-item-card" data-action-tab="services">
+                <div class="project-left">
+                  <div class="project-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+                  </div>
+                  <div class="project-details">
+                    <div class="project-title">Tatra Banka – Core Banking Migration</div>
+                    <div class="project-meta">Copado Robotic Testing • Sprint 14 • 8 Testers</div>
+                  </div>
+                </div>
+                <div class="project-right">
+                  <span class="project-status status-active">In Progress</span>
+                  <span class="project-score">99.2% Pass</span>
+                </div>
+              </div>
+
+              <!-- Item 2: Emerson Network Power -->
+              <div class="project-item-card" data-action-tab="services">
+                <div class="project-left">
+                  <div class="project-icon" style="color: var(--accent-cyan);">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                  </div>
+                  <div class="project-details">
+                    <div class="project-title">Emerson – Global Oracle ERP Upgrade</div>
+                    <div class="project-meta">Robot Framework • 13 Business Units • USD 100M</div>
+                  </div>
+                </div>
+                <div class="project-right">
+                  <span class="project-status status-cert">Certified</span>
+                  <span class="project-score">100% Release</span>
+                </div>
+              </div>
+
+              <!-- Item 3: Aiviro AI Testing -->
+              <div class="project-item-card" data-action-tab="services">
+                <div class="project-left">
+                  <div class="project-icon" style="color: var(--accent-purple);">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 1 0 10 10H12V2z"/><path d="M12 12 2.1 12.5"/></svg>
+                  </div>
+                  <div class="project-details">
+                    <div class="project-title">Healthcare Telehealth Portal</div>
+                    <div class="project-meta">Aiviro AI Testing • Visual Regression & HIPAA</div>
+                  </div>
+                </div>
+                <div class="project-right">
+                  <span class="project-status status-audit">Audit Gate</span>
+                  <span class="project-score">98.5% Pass</span>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- TAB 2: SERVICES & QA CATALOG -->
+          <section class="tab-pane" id="tab-services">
+            <div class="tab-section-header">
+              <h2 class="tab-section-title">
+                <svg style="width: 20px; height: 20px; color: var(--sanae-red);" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                <span>QA Solutions & Outsourcing</span>
+              </h2>
+              <span class="toolbar-badge">ISTQB GOLD</span>
+            </div>
+
+            <div class="services-catalog">
+              <!-- Service 1: Automated Testing -->
+              <div class="service-card">
+                <div class="service-card-top">
+                  <div class="service-icon-box">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                  </div>
+                  <div class="service-title-block">
+                    <h3>Test Automation Architecture</h3>
+                    <p>Continuous Testing in CI/CD Pipelines</p>
+                  </div>
+                </div>
+                <p class="service-desc">
+                  Design, build, and maintain highly maintainable automated test suites. We eliminate manual regression bottlenecks using keyword-driven and code-first frameworks.
+                </p>
+                <div class="service-tech-tags">
+                  <span class="tech-tag">Robot Framework</span>
+                  <span class="tech-tag">Playwright</span>
+                  <span class="tech-tag">Copado</span>
+                  <span class="tech-tag">Cypress</span>
+                  <span class="tech-tag">Selenium</span>
+                  <span class="tech-tag">Python</span>
+                </div>
+                <div class="service-btn-row">
+                  <span class="service-sla-tag">
+                    <svg style="width: 14px; height: 14px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                    SLA: 24h Setup Time
+                  </span>
+                  <button type="button" class="btn-primary-red open-hire-modal" style="padding: 0.35rem 0.85rem; font-size: 0.75rem;">Deploy Team</button>
+                </div>
+              </div>
+
+              <!-- Service 2: Copado Robotic Testing -->
+              <div class="service-card">
+                <div class="service-card-top">
+                  <div class="service-icon-box" style="background: rgba(6, 182, 212, 0.15); color: var(--accent-cyan);">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
+                  </div>
+                  <div class="service-title-block">
+                    <h3>Copado Robotic Testing</h3>
+                    <p>Salesforce & Cloud Ecosystem Automation</p>
+                  </div>
+                </div>
+                <p class="service-desc">
+                  Certified Copado partner delivering AI-powered, self-healing test automation tailored for Salesforce, enterprise ERPs, and cloud business software.
+                </p>
+                <div class="service-tech-tags">
+                  <span class="tech-tag">Copado Cloud</span>
+                  <span class="tech-tag">Salesforce QA</span>
+                  <span class="tech-tag">AI Self-Healing</span>
+                  <span class="tech-tag">Cross-Cloud</span>
+                </div>
+                <div class="service-btn-row">
+                  <span class="service-sla-tag">
+                    <svg style="width: 14px; height: 14px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                    Official Partner
+                  </span>
+                  <button type="button" class="btn-primary-red open-hire-modal" style="padding: 0.35rem 0.85rem; font-size: 0.75rem;">Deploy Team</button>
+                </div>
+              </div>
+
+              <!-- Service 3: QA Team Augmentation -->
+              <div class="service-card">
+                <div class="service-card-top">
+                  <div class="service-icon-box" style="background: rgba(16, 185, 129, 0.15); color: var(--accent-emerald);">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                  </div>
+                  <div class="service-title-block">
+                    <h3>QA Outsourcing & Staffing</h3>
+                    <p>Dedicated ISTQB Certified Engineers</p>
+                  </div>
+                </div>
+                <p class="service-desc">
+                  Scale your IT capacity with verified, battle-tested software testing professionals. Fast ramp-up into your agile ceremonies, Jira boards, and release cycles.
+                </p>
+                <div class="service-tech-tags">
+                  <span class="tech-tag">ISTQB Advanced</span>
+                  <span class="tech-tag">Scrum / Agile</span>
+                  <span class="tech-tag">Jira / Xray</span>
+                  <span class="tech-tag">TestRail</span>
+                </div>
+                <div class="service-btn-row">
+                  <span class="service-sla-tag">
+                    <svg style="width: 14px; height: 14px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                    Immediate Allocation
+                  </span>
+                  <button type="button" class="btn-primary-red open-hire-modal" style="padding: 0.35rem 0.85rem; font-size: 0.75rem;">Deploy Team</button>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- TAB 3: AI SPEC & REQUIREMENTS SCANNER (ExpenseIt Camera Feature) -->
+          <section class="tab-pane" id="tab-scanner">
+            <div class="tab-section-header">
+              <h2 class="tab-section-title">
+                <svg style="width: 20px; height: 20px; color: var(--sanae-red);" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+                <span>AI Requirements Scanner</span>
+              </h2>
+              <span class="toolbar-badge">AUTO-EXTRACT</span>
+            </div>
+
+            <div class="scanner-container">
+              <!-- Interactive Viewfinder (Simulates Camera Snap & File Scan) -->
+              <div class="scanner-viewfinder" id="scannerViewfinder">
+                <div class="scanner-laser"></div>
+                <div class="scanner-icon-circle">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+                </div>
+                <div class="scanner-hint-title">Snap or Drop Requirement / Spec</div>
+                <div class="scanner-hint-sub">AI extracts acceptance criteria, test cases, and flags ISTQB quality risks automatically.</div>
+              </div>
+
+              <!-- Quick Presets -->
+              <div class="presets-group">
+                <div class="presets-label">Or choose sample feature spec:</div>
+                <div class="presets-chips">
+                  <button type="button" class="preset-chip" data-preset="fintech">💳 Fintech Gateway</button>
+                  <button type="button" class="preset-chip" data-preset="telehealth">🏥 Telehealth EHR</button>
+                  <button type="button" class="preset-chip" data-preset="ecommerce">🛍️ 1-Page Checkout</button>
+                  <button type="button" class="preset-chip" data-preset="erp">☁️ Cloud ERP</button>
+                </div>
+              </div>
+
+              <!-- Scanner Results Card -->
+              <div class="scanner-results-card" id="scannerResults">
+                <div class="results-header">
+                  <div>
+                    <span style="font-size: 0.72rem; color: #34d399; font-weight: 800; text-transform: uppercase;">Scan Analysis Complete</span>
+                    <h3 class="results-spec-title" id="resSpecTitle">Fintech Payment Gateway & 3D-Secure 2.0</h3>
+                  </div>
+                  <span class="status-active" style="padding: 0.2rem 0.55rem; border-radius: 9999px; font-size: 0.7rem; font-weight: 700;">Ready for QA</span>
+                </div>
+
+                <div class="results-grid-2">
+                  <div class="res-stat-box">
+                    <div class="res-stat-label">Generated Tests</div>
+                    <div class="res-stat-num" id="resCasesCount">28 Cases</div>
+                  </div>
+                  <div class="res-stat-box">
+                    <div class="res-stat-label">Estimated Effort</div>
+                    <div class="res-stat-num" id="resHoursEst">44 Hrs</div>
+                  </div>
+                  <div class="res-stat-box" style="grid-column: span 2;">
+                    <div class="res-stat-label">Automation Feasibility (Robot / Playwright)</div>
+                    <div class="res-stat-num" id="resAutoFeasible" style="color: var(--accent-cyan); font-size: 1.1rem;">96% (High Feasibility)</div>
+                  </div>
+                </div>
+
+                <div class="results-label" style="font-size: 0.75rem; font-weight: 700; color: var(--text-secondary); margin-bottom: 0.4rem; text-transform: uppercase;">
+                  Key Test Scenarios Extracted:
+                </div>
+
+                <div class="extracted-cases-list" id="resCasesList">
+                  <!-- Cases injected dynamically -->
+                </div>
+
+                <button type="button" class="btn-primary-red open-hire-modal" style="width: 100%; height: 42px;">
+                  Export to QA Plan & Request SANAE Team
+                </button>
+              </div>
+            </div>
+          </section>
+
+          <!-- TAB 4: QA BUDGET & ROI CALCULATOR (ExpenseIt Reimbursement Flow) -->
+          <section class="tab-pane" id="tab-calculator">
+            <div class="tab-section-header">
+              <h2 class="tab-section-title">
+                <svg style="width: 20px; height: 20px; color: var(--sanae-red);" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                <span>QA Budget & ROI Calculator</span>
+              </h2>
+              <span class="toolbar-badge">SPEND OPTIMIZER</span>
+            </div>
+
+            <div class="calc-module-card">
+              <!-- Slider 1: Sprint Duration -->
+              <div class="calc-control-group">
+                <div class="calc-slider-label-row">
+                  <span class="calc-slider-label">Project / Sprint Duration</span>
+                  <span class="calc-slider-val" id="calcWeeksVal">6 Weeks</span>
+                </div>
+                <input type="range" id="calcWeeks" class="calc-range" min="2" max="24" value="6" step="1">
+              </div>
+
+              <!-- Slider 2: Number of QA Engineers -->
+              <div class="calc-control-group">
+                <div class="calc-slider-label-row">
+                  <span class="calc-slider-label">Dedicated QA Engineers (FTE)</span>
+                  <span class="calc-slider-val" id="calcEngineersVal">2 QAs</span>
+                </div>
+                <input type="range" id="calcEngineers" class="calc-range" min="1" max="10" value="2" step="1">
+              </div>
+
+              <!-- Selects -->
+              <div class="calc-select-row">
+                <div class="calc-field-group">
+                  <label class="calc-field-label" for="calcType">Testing Focus</label>
+                  <select id="calcType" class="calc-select-input">
+                    <option value="automation" selected>Automation Framework</option>
+                    <option value="fullcycle">Full-Cycle QA</option>
+                    <option value="manual">Functional Manual</option>
+                    <option value="security">Security & Pen Test</option>
+                  </select>
+                </div>
+
+                <div class="calc-field-group">
+                  <label class="calc-field-label" for="calcSeniority">Team Seniority</label>
+                  <select id="calcSeniority" class="calc-select-input">
+                    <option value="mid">Mid QA Specialist</option>
+                    <option value="senior" selected>Senior Automation Lead</option>
+                    <option value="lead">Principal QA Architect</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <!-- ROI Output Banner -->
+            <div class="roi-output-banner">
+              <div class="roi-row">
+                <span style="color: var(--text-secondary); font-weight: 600;">Total QA Investment:</span>
+                <span class="roi-total-val" id="outTotalBudget">€ 39,000</span>
+              </div>
+              <div class="roi-row">
+                <span style="color: var(--text-secondary);">Projected Defects Caught in QA:</span>
+                <strong id="outBugsCaught" style="color: var(--accent-cyan); font-family: var(--font-heading);">102 Defects</strong>
+              </div>
+              <div class="roi-row" style="padding-top: 0.5rem; border-top: 1px dashed rgba(255, 255, 255, 0.15);">
+                <span style="color: var(--text-primary); font-weight: 700;">Est. Cost Saved (Production Avoidance):</span>
+                <span class="roi-saved-badge" id="outCostSaved">€ 185,400</span>
+              </div>
+              <div class="roi-row">
+                <span style="color: var(--text-secondary); font-size: 0.78rem;">Projected Net QA Return:</span>
+                <span id="outRoiPercent" style="color: #34d399; font-weight: 800; font-family: var(--font-heading);">+375% ROI</span>
+              </div>
+
+              <button type="button" class="btn-primary-red open-hire-modal" style="width: 100%; height: 42px; margin-top: 0.5rem;">
+                Lock In This Budget & Hire Team
+              </button>
+            </div>
+          </section>
+
+          <!-- TAB 5: BEER.EX & COMMUNITY -->
+          <section class="tab-pane" id="tab-beer">
+            <div class="beer-banner-card">
+              <div class="beer-badge">
+                <svg style="width: 14px; height: 14px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 11h1a3 3 0 0 1 0 6h-1"/><path d="M9 12v6"/><path d="M13 12v6"/><path d="M5 8v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V8"/></svg>
+                <span>ANNUAL QA CONFERENCE</span>
+              </div>
+              <h2 class="beer-title">SANAE Software Testing BEER.EX</h2>
+              <p class="beer-desc">
+                Central Europe’s most authentic QA & testing conference. Held at the Waterworks Museum in Bratislava, bringing together world-class speakers, automation workshops, and networking.
+              </p>
+              <button type="button" class="btn-primary-red" onclick="window.open('https://sanae.beer', '_blank')">
+                Explore BEER.EX 2026
+              </button>
+            </div>
+
+            <!-- Partner Accreditations Strip -->
+            <div class="tab-section-header">
+              <h3 class="tab-section-title">
+                <svg style="width: 18px; height: 18px; color: var(--accent-emerald);" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Official Partnerships</span>
+              </h3>
+            </div>
+
+            <div class="partner-logo-strip">
+              <div class="partner-logo-item" title="ISTQB Gold Partner">
+                <img src="images/istqb-gold-partner-logo.jpg" alt="ISTQB Gold Partner">
+              </div>
+              <div class="partner-logo-item" title="Robot Framework Foundation">
+                <img src="images/rbtfrm1200_300-e1716898617705.png" alt="Robot Framework">
+              </div>
+              <div class="partner-logo-item" title="Copado Robotic Testing">
+                <img src="images/Copado-Logo-2.png" alt="Copado">
+              </div>
+              <div class="partner-logo-item" title="Aiviro AI Computer Vision">
+                <img src="images/aiviro-logo-v01-basic-fullcolour-RGB.png" alt="Aiviro">
+              </div>
+            </div>
+
+            <!-- Testimonials -->
+            <div class="tab-section-header">
+              <h3 class="tab-section-title">Verified Client Endorsements</h3>
+            </div>
+
+            <div class="testimonial-card">
+              <p class="test-quote">
+                "I worked with SANAE on a USD 100M Global program across 13 business units. They take ownership of issues and have the command skills to drive cross-functional challenges to resolution."
+              </p>
+              <div class="test-author">Supervisor Oracle System & Applications, Emerson</div>
+            </div>
+
+            <div class="testimonial-card">
+              <p class="test-quote">
+                "SANAE participated on our technological Upgrade Globus project at Tatra Banka. They tested loan products according to specifications and applied solid methodology."
+              </p>
+              <div class="test-author">IT Test Manager, Tatra Banka a.s.</div>
+            </div>
+
+            <!-- Corporate Info -->
+            <div style="margin-top: 1.5rem; padding: 1rem; background-color: var(--bg-card); border-radius: var(--radius-md); border: 1px solid var(--border-subtle); font-size: 0.8rem; color: var(--text-secondary);">
+              <strong style="color: var(--text-primary); display: block; margin-bottom: 0.35rem;">SANAE Slovakia, s. r. o.</strong>
+              Dúbravská cesta 14, 841 04 Bratislava, Slovakia<br>
+              Also offices in Ireland (Galway) & USA (Florida)<br>
+              Web: <a href="https://sanae.sk" style="color: var(--sanae-red);">sanae.sk</a> • Email: info@sanae.sk
+            </div>
+          </section>
+
+        </div>
+
+        <!-- Docked Bottom Navigation Bar (ExpenseIt Mobile PWA Bottom Nav) -->
+        <nav class="app-bottom-nav">
+          <!-- Tab 1: Dashboard -->
+          <button type="button" class="nav-tab-item active" data-tab="dashboard">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            <span class="nav-tab-label">Dashboard</span>
+          </button>
+
+          <!-- Tab 2: Services -->
+          <button type="button" class="nav-tab-item" data-tab="services">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+            <span class="nav-tab-label">Services</span>
+          </button>
+
+          <!-- Tab 3: Center Floating AI Scanner Button -->
+          <div class="nav-tab-center">
+            <button type="button" class="floating-scan-btn" data-tab="scanner" title="Scan Requirements Spec">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+            </button>
+          </div>
+
+          <!-- Tab 4: Calculator -->
+          <button type="button" class="nav-tab-item" data-tab="calculator">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            <span class="nav-tab-label">Budget</span>
+          </button>
+
+          <!-- Tab 5: BEER.EX & Community -->
+          <button type="button" class="nav-tab-item" data-tab="beer">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 11h1a3 3 0 0 1 0 6h-1"/><path d="M9 12v6"/><path d="M13 12v6"/><path d="M5 8v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V8"/></svg>
+            <span class="nav-tab-label">BEER.EX</span>
+          </button>
+        </nav>
+      </div>
+    </div>
+  </main>
+
+  <!-- Ask AI QA Advisor Floating Drawer (ExpenseIt AI Assistant) -->
+  <div class="ai-drawer-overlay" id="aiOverlay"></div>
+  <aside class="ai-drawer" id="aiDrawer">
+    <div class="ai-drawer-handle"></div>
+    <div class="ai-drawer-header">
+      <div class="ai-drawer-title">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 0 1 10 10c0 5.52-4.48 10-10 10S2 17.52 2 12A10 10 0 0 1 12 2z"/><path d="m9 12 2 2 4-4"/></svg>
+        <span>Ask SANAE AI Advisor</span>
+      </div>
+      <button type="button" class="ai-drawer-close" id="aiCloseBtn" aria-label="Close Assistant">
+        <svg style="width: 22px; height: 22px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+
+    <div class="ai-chat-messages" id="aiChatMessages">
+      <div class="ai-msg bot">
+        Hello! I am your SANAE Quality Assurance Advisor. Ask me anything about test automation with Robot Framework, Copado Robotic Testing, ISTQB standards, or estimating testing effort for your project.
+      </div>
+    </div>
+
+    <!-- Suggested Quick Prompts -->
+    <div class="ai-prompts-chips">
+      <button type="button" class="ai-prompt-chip">Copado vs Robot Framework?</button>
+      <button type="button" class="ai-prompt-chip">How does SANAE ensure ISTQB compliance?</button>
+      <button type="button" class="ai-prompt-chip">Typical QA rates and pricing?</button>
+    </div>
+
+    <div class="ai-chat-input-row">
+      <input type="text" id="aiChatInput" class="ai-chat-input" placeholder="Ask about QA strategy, frameworks, pricing...">
+      <button type="button" id="aiSendBtn" class="ai-send-btn" aria-label="Send Message">
+        <svg style="width: 18px; height: 18px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+      </button>
+    </div>
+  </aside>
+
+  <!-- Hire QA Team / Request Audit Modal -->
+  <div class="app-modal" id="hireModal">
+    <div class="modal-content-box">
+      <h3 class="modal-title">Request QA Team Allocation</h3>
+      <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 1rem;">
+        Speak directly with SANAE testing architects in Bratislava. We provide verified QA capacity tailored to your sprint objectives.
+      </p>
+
+      <form id="hireForm">
+        <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+          <div>
+            <label style="font-size: 0.75rem; font-weight: 700; color: var(--text-secondary); display: block; margin-bottom: 0.25rem;">Your Name *</label>
+            <input type="text" required class="calc-select-input" style="width: 100%;" placeholder="e.g. John Doe">
+          </div>
+          <div>
+            <label style="font-size: 0.75rem; font-weight: 700; color: var(--text-secondary); display: block; margin-bottom: 0.25rem;">Work Email *</label>
+            <input type="email" required class="calc-select-input" style="width: 100%;" placeholder="john@company.com">
+          </div>
+          <div>
+            <label style="font-size: 0.75rem; font-weight: 700; color: var(--text-secondary); display: block; margin-bottom: 0.25rem;">Project Domain / Requirement</label>
+            <select class="calc-select-input" style="width: 100%;">
+              <option>Core Banking / Fintech QA</option>
+              <option>Salesforce & Copado Automation</option>
+              <option>Web & Mobile Full-Cycle QA</option>
+              <option>Security & Compliance Audit</option>
+            </select>
+          </div>
+          <div>
+            <label style="font-size: 0.75rem; font-weight: 700; color: var(--text-secondary); display: block; margin-bottom: 0.25rem;">Message</label>
+            <textarea class="calc-select-input" style="width: 100%; min-height: 70px; resize: none;" placeholder="Brief overview of timeline, team size or tech stack..."></textarea>
+          </div>
+        </div>
+
+        <div class="modal-btn-row">
+          <button type="button" class="btn-secondary" id="hireModalClose" style="flex: 1;">Cancel</button>
+          <button type="submit" class="btn-primary-red" style="flex: 1.5;">Submit Request</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Toast Notification Element -->
+  <div class="app-toast" id="appToast">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+    <span class="toast-text">Action completed successfully</span>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/app.js"></script>
+</body>
+</html>
