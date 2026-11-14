@@ -56,6 +56,7 @@ arktis-redesign/
 │   ├── catalog-data.js      # Complete 16-category product & 35-series manual database
 │   └── translations.js      # Quad-lingual dictionaries (SK, DE, EN, HU)
 └── images/
+    ├── redesign-preview.jpg # Hero preview screenshot embedded in promotional email
     ├── logo_arktis.png      # Official ARKTIS header logo
     ├── logo_arktis_footer.png # Official ARKTIS footer emblem
     ├── kontakt.jpg          # Staviteľská 3 Bratislava headquarters entrance
