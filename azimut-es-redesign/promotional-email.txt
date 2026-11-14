@@ -1,0 +1,37 @@
+Predmet: Návrh modernej viacjazyčnej online prezentácie & kalkulátora výkonu | Azimut ES, s.r.o. (SK / DE / EN / HU · Svetlý + Tmavý režim)
+Komu: azimut@azimut-es.com, info@azimut-es.com
+
+Vážené vedenie a odborný tím spoločnosti Azimut ES, s.r.o.,
+
+Vaše viac než 100 zrealizovaných projektov záložného napájania na kľúč, výhradné a autorizované zastúpenie svetových značiek (ELCOS, CGM, HIMOINSA, GTEC), certifikovaný systém kvality ISO 9001:2015 a ocenenia Dôveryhodná firma ELITE / GOLD sú najlepšou vizitkou Vašej práce a filozofie „Sme stále plní energie – viac partnerom ako len dodávateľom“.
+
+Pri detailnej analýze Vášho súčasného webu azimut-es.com som si však všimol niekoľko technických a prezentačných obmedzení, ktoré zbytočne uberajú Vášmu webu na konverziách pri oslovovaní nových B2B aj súkromných klientov:
+
+1. Zabudnuté testovacie telefónne číslo v hornej lište (+421000111222): V hlavičke každej podstránky sa návštevníkom zobrazuje nefunkčný placeholder +421000111222 namiesto Vašich reálnych liniek (+421 944 315 478 a +421 948 700 540), čo pri havarijnom výpadku prúdu môže odradiť volajúceho klienta.
+2. Akciová ponuka elektrocentrál CGM bez priameho dopytového tlačidla a filtrov: Modely CGM 3000SE (377 €), CGM 3300IE Invertor (824 €), CGM 9000STE (694 €) a CGM C13000TE (2 588 €) s bonusom 5 l akrylátového benzínu sú prezentované len ako statický text bez možnosti 1-klikového objednania alebo filtrovania 230 V / 400 V / Invertor.
+3. Požičovňa generátorov je skrytá a chýba jej interaktívny kalkulátor výkonu (kVA): Podstránka Požičajte si generátor obsahuje len 3 vety bez dopytového formulára a bez pomôcky, ktorá by klientovi pomohla prepočítať príkon spotrebičov (kW) na potrebný zdanlivý výkon agregátu (kVA) s rozbehovou rezervou.
+4. Absencia jazykových mutácií (DE / EN / HU): Prevádzka v Čakanoch a sídlo v Senci ležia v bezprostrednom dosahu Dunajskej Stredy, Bratislavy, Rakúska a Maďarska. Plnohodnotná 4-jazyčná prezentácia posilňuje pozíciu pri rokovaniach so zahraničnými výrobnými podnikmi, logistickými parkami a dodávateľmi.
+
+Aby bol návrh modernizácie okamžite uchopiteľný, pripravil som pre Vás kompletný, funkčný interaktívny prototyp nového webu:
+
+👉 Vyskúšať hotový interaktívny prototyp online:
+https://livingpixelstudios.com/redesign/azimut-es/
+
+Čo pripravený redesign prototyp pre Azimut ES, s.r.o. ponúka:
+- Interaktívny kalkulátor výkonu (kVA / kW) & požičovne generátorov s automatickým výpočtom rozbehovej rezervy a 1-klikovým prenosom dopytu
+- Prehľadný, filtrovateľný katalóg akciových elektrocentrál CGM (3000SE, 3300IE Invertor, 9000STE, C13000TE) s bonusom 5 l akrylátového benzínu
+- Prezentácia zastúpených značiek ELCOS, CGM, HIMOINSA, GTEC, všetkých 4 pilierov realizácie na kľúč a Politiky kvality ISO 9001:2015 (PDF)
+- 4 plnohodnotné jazyky (SK / DE / EN / HU) s odbornou energetickou terminológiou
+- Svetlý a prémiový tmavý režim (Dark Mode) v korporátnej zeleno-limetkovej identite Azimut ES (#a3d060)
+
+Návrh nezáväzného ďalšieho kroku:
+Rád Vám tento prototyp bezplatne a nezáväzne predvediem (telefonicky, cez krátky 15-minútový videohovor alebo osobne u Vás v Senci či v Čakanoch). V prípade záujmu vieme nové riešenie nasadiť na Vašu doménu azimut-es.com bez výpadku prevádzky.
+
+Ktorý deň v priebehu tohto alebo budúceho týždňa by Vám vyhovoval na krátky rozhovor?
+
+S úctou a pozdravom,
+
+Ing. Luboš Kostroš
+LivingPixel Studios – Špecialista na moderné B2B webové prezentácie & interaktívne konfigurátory
+E-mail: info@livingpixelstudios.com
+Web: https://livingpixelstudios.com/

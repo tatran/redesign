@@ -1,0 +1,1255 @@
+/* ==========================================================================
+   AZIMUT ES, s.r.o. — Modern Quad-Lingual Backup Power & Energy Systems Portal
+   Light & Dark Theme ("STILL FULL OF ENERGY" / Power Grid Control Room)
+   ========================================================================== */
+
+:root,
+[data-theme="light"] {
+  --bg-body: #f5f8f3;
+  --bg-surface: #ffffff;
+  --bg-surface-alt: #edf3e8;
+  --bg-elevated: #ffffff;
+  --bg-glass: rgba(255, 255, 255, 0.92);
+  --text-primary: #111c14;
+  --text-secondary: #37493c;
+  --text-muted: #5e7264;
+  --brand-lime: #a3d060;
+  --brand-green: #5b9118;
+  --brand-green-hover: #497611;
+  --brand-green-soft: rgba(163, 208, 96, 0.22);
+  --accent-amber: #d97706;
+  --accent-amber-soft: rgba(217, 119, 6, 0.14);
+  --border-color: #d6e2cf;
+  --border-strong: #b6cca9;
+  --shadow-sm: 0 2px 8px rgba(17, 28, 20, 0.05);
+  --shadow-md: 0 10px 28px rgba(17, 28, 20, 0.08);
+  --shadow-lg: 0 20px 44px rgba(17, 28, 20, 0.12);
+  --hero-bg-grad: linear-gradient(135deg, #0c1710 0%, #15271b 55%, #1f3b22 100%);
+  --topbar-bg: #0c160f;
+  --topbar-text: #d7e6db;
+  --badge-bg: #eaf5d8;
+  --badge-text: #3f6a0b;
+  --input-bg: #ffffff;
+}
+
+[data-theme="dark"] {
+  --bg-body: #09100b;
+  --bg-surface: #111c14;
+  --bg-surface-alt: #16241a;
+  --bg-elevated: #19291e;
+  --bg-glass: rgba(17, 28, 20, 0.92);
+  --text-primary: #eff6f0;
+  --text-secondary: #bdd0c1;
+  --text-muted: #869e8b;
+  --brand-lime: #a3d060;
+  --brand-green: #a3d060;
+  --brand-green-hover: #b6df78;
+  --brand-green-soft: rgba(163, 208, 96, 0.16);
+  --accent-amber: #fbbf24;
+  --accent-amber-soft: rgba(251, 191, 36, 0.16);
+  --border-color: #233628;
+  --border-strong: #34523b;
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.35);
+  --shadow-md: 0 12px 32px rgba(0, 0, 0, 0.45);
+  --shadow-lg: 0 24px 54px rgba(0, 0, 0, 0.6);
+  --hero-bg-grad: linear-gradient(135deg, #060b07 0%, #0e1a11 55%, #172b1a 100%);
+  --topbar-bg: #050906;
+  --topbar-text: #c6d9cb;
+  --badge-bg: rgba(163, 208, 96, 0.16);
+  --badge-text: #b8e178;
+  --input-bg: #0d1610;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--bg-body);
+  color: var(--text-primary);
+  line-height: 1.6;
+  transition: background-color 0.25s ease, color 0.25s ease;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: var(--brand-green);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--brand-green-hover);
+}
+
+.container {
+  width: 100%;
+  max-width: 1260px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ==========================================================================
+   Topbar
+   ========================================================================== */
+.topbar {
+  background-color: var(--topbar-bg);
+  color: var(--topbar-text);
+  font-size: 0.82rem;
+  border-bottom: 1px solid rgba(163, 208, 96, 0.2);
+  padding: 8px 0;
+}
+
+.topbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.topbar-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 500;
+}
+
+.pulse-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #a3d060;
+  box-shadow: 0 0 0 4px rgba(163, 208, 96, 0.25);
+  display: inline-block;
+}
+
+.topbar-right {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.topbar-right a {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.topbar-right a:hover {
+  color: #a3d060;
+}
+
+/* ==========================================================================
+   Sticky Header & Navigation
+   ========================================================================== */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: var(--bg-glass);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: 76px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.brand-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.brand-logo-wrap {
+  background-color: #ffffff;
+  padding: 6px 12px;
+  border-radius: 10px;
+  border: 1px solid #d6e2cf;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand-logo {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+}
+
+.brand-text-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-name {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+.brand-tagline {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--brand-green);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 4px;
+}
+
+.nav-links a {
+  display: inline-block;
+  padding: 8px 11px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  border-radius: 8px;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: var(--text-primary);
+  background-color: var(--brand-green-soft);
+}
+
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.lang-switcher {
+  display: inline-flex;
+  background-color: var(--bg-surface-alt);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 3px;
+  gap: 2px;
+}
+
+.lang-btn {
+  border: none;
+  background: transparent;
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 5px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.18s ease;
+}
+
+.lang-btn:hover {
+  color: var(--text-primary);
+}
+
+.lang-btn.active {
+  background-color: #a3d060;
+  color: #0d1710;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+}
+
+.theme-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: var(--bg-surface-alt);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 7px 11px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.theme-btn:hover {
+  border-color: var(--brand-green);
+}
+
+.mobile-menu-btn {
+  display: none;
+  background: var(--bg-surface-alt);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  border-radius: 8px;
+  padding: 7px 11px;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+/* ==========================================================================
+   Buttons & Badges
+   ========================================================================== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 13px 24px;
+  border-radius: 10px;
+  font-size: 0.94rem;
+  font-weight: 700;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.btn-sm {
+  padding: 8px 15px;
+  font-size: 0.82rem;
+  border-radius: 8px;
+}
+
+.btn-primary {
+  background-color: #a3d060;
+  color: #0b140d;
+  box-shadow: 0 6px 18px rgba(163, 208, 96, 0.32);
+}
+
+.btn-primary:hover {
+  background-color: #b4de73;
+  color: #070e09;
+  transform: translateY(-1px);
+}
+
+.btn-outline {
+  background-color: transparent;
+  border-color: var(--border-strong);
+  color: var(--text-primary);
+}
+
+.btn-outline:hover {
+  border-color: var(--brand-green);
+  background-color: var(--brand-green-soft);
+  color: var(--text-primary);
+}
+
+.btn-hero-outline {
+  background-color: rgba(255, 255, 255, 0.08);
+  border-color: rgba(163, 208, 96, 0.5);
+  color: #ffffff;
+}
+
+.btn-hero-outline:hover {
+  background-color: rgba(163, 208, 96, 0.2);
+  color: #ffffff;
+}
+
+/* ==========================================================================
+   Hero Section
+   ========================================================================== */
+.hero {
+  background: var(--hero-bg-grad);
+  color: #ffffff;
+  padding: 64px 0 72px;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 3px solid #a3d060;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(163, 208, 96, 0.14) 1px, transparent 1px);
+  background-size: 28px 28px;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.hero-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1.08fr 0.92fr;
+  gap: 44px;
+  align-items: center;
+}
+
+.eyebrow-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background-color: rgba(163, 208, 96, 0.16);
+  border: 1px solid rgba(163, 208, 96, 0.45);
+  color: #c5e88c;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.hero-title {
+  font-size: clamp(2rem, 3.6vw, 3.05rem);
+  font-weight: 900;
+  line-height: 1.14;
+  letter-spacing: -0.025em;
+  margin-bottom: 18px;
+  color: #ffffff;
+}
+
+.hero-title .highlight {
+  color: #a3d060;
+}
+
+.hero-subtitle {
+  font-size: 1.04rem;
+  color: #d0e0d4;
+  line-height: 1.68;
+  margin-bottom: 28px;
+  max-width: 630px;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 30px;
+}
+
+.hero-hotline-strip {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  background: rgba(11, 22, 14, 0.78);
+  border: 1px solid rgba(163, 208, 96, 0.32);
+  border-radius: 12px;
+  padding: 14px 18px;
+}
+
+.hotline-item-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #a3d060;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+.hotline-item-value {
+  font-size: 0.96rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.hotline-item-value a {
+  color: #ffffff;
+}
+
+.hotline-item-value a:hover {
+  color: #a3d060;
+}
+
+.hero-visual {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.hero-frame {
+  background: #09120c;
+  border: 1px solid rgba(163, 208, 96, 0.4);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.55);
+}
+
+.hero-frame img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.hero-frame-caption {
+  padding: 14px 18px;
+  background: rgba(15, 27, 18, 0.95);
+  border-top: 1px solid rgba(163, 208, 96, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.hero-frame-caption strong {
+  display: block;
+  font-size: 0.92rem;
+  color: #ffffff;
+}
+
+.hero-frame-caption span {
+  font-size: 0.8rem;
+  color: #b5c9ba;
+}
+
+.hero-pill {
+  background-color: #a3d060;
+  color: #0b140d;
+  font-weight: 800;
+  font-size: 0.76rem;
+  padding: 5px 12px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.hero-stats-bar {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.hero-stat-card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(163, 208, 96, 0.25);
+  border-radius: 12px;
+  padding: 12px 14px;
+  text-align: center;
+}
+
+.hero-stat-num {
+  font-size: 1.45rem;
+  font-weight: 900;
+  color: #a3d060;
+  line-height: 1.1;
+}
+
+.hero-stat-label {
+  font-size: 0.74rem;
+  color: #d5e4d8;
+  margin-top: 4px;
+  font-weight: 600;
+}
+
+/* ==========================================================================
+   Section Scaffolding
+   ========================================================================== */
+.section {
+  padding: 76px 0;
+}
+
+.section-alt {
+  background-color: var(--bg-surface-alt);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.section-header {
+  max-width: 780px;
+  margin: 0 auto 48px;
+  text-align: center;
+}
+
+.section-badge {
+  display: inline-block;
+  padding: 5px 14px;
+  border-radius: 999px;
+  background-color: var(--badge-bg);
+  color: var(--badge-text);
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 12px;
+}
+
+.section-title {
+  font-size: clamp(1.65rem, 2.8vw, 2.35rem);
+  font-weight: 800;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin-bottom: 14px;
+}
+
+.section-desc {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+}
+
+/* ==========================================================================
+   Services & Turnkey Solutions (5 Core Areas)
+   ========================================================================== */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 24px;
+}
+
+.service-card {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--brand-green);
+}
+
+.service-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  background-color: var(--brand-green-soft);
+  color: var(--brand-green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  margin-bottom: 18px;
+}
+
+.service-card h3 {
+  font-size: 1.22rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+  color: var(--text-primary);
+}
+
+.service-card p {
+  font-size: 0.93rem;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+  line-height: 1.65;
+}
+
+.service-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 18px;
+}
+
+.service-tag {
+  font-size: 0.74rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 6px;
+  background-color: var(--bg-surface-alt);
+  color: var(--text-secondary);
+  border: 1px solid var(--border-color);
+}
+
+/* ==========================================================================
+   Special Offer Catalog (Akciová ponuka CGM)
+   ========================================================================== */
+.promo-banner-strip {
+  background: linear-gradient(90deg, #102114 0%, #1d3a22 100%);
+  color: #ffffff;
+  border-radius: 14px;
+  padding: 20px 26px;
+  margin-bottom: 30px;
+  border-left: 6px solid #a3d060;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.promo-banner-strip strong {
+  color: #a3d060;
+  font-size: 1.05rem;
+  display: block;
+}
+
+.promo-filter-bar {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.filter-btn {
+  padding: 9px 18px;
+  border-radius: 999px;
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-surface);
+  color: var(--text-secondary);
+  font-size: 0.86rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background-color: #a3d060;
+  color: #0b140d;
+  border-color: #a3d060;
+}
+
+.catalog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(285px, 1fr));
+  gap: 24px;
+}
+
+.product-card {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--brand-green);
+}
+
+.product-img-wrap {
+  background-color: #ffffff;
+  padding: 20px;
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.product-img-wrap img {
+  max-height: 185px;
+  width: auto;
+  object-fit: contain;
+}
+
+.product-Voltage-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background-color: #0f1d13;
+  color: #a3d060;
+  font-size: 0.73rem;
+  font-weight: 800;
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+.product-gift-badge {
+  position: absolute;
+  bottom: 10px;
+  right: 12px;
+  background-color: #fef3c7;
+  color: #92400e;
+  border: 1px solid #f59e0b;
+  font-size: 0.72rem;
+  font-weight: 800;
+  padding: 3px 9px;
+  border-radius: 6px;
+}
+
+.product-body {
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.product-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+}
+
+.product-sub {
+  font-size: 0.84rem;
+  color: var(--text-muted);
+  margin-bottom: 14px;
+}
+
+.product-specs {
+  list-style: none;
+  margin-bottom: 18px;
+  font-size: 0.84rem;
+  color: var(--text-secondary);
+  border-top: 1px solid var(--border-color);
+  padding-top: 12px;
+}
+
+.product-specs li {
+  display: flex;
+  justify-content: space-between;
+  padding: 4px 0;
+  border-bottom: 1px dashed var(--border-color);
+  gap: 8px;
+}
+
+.product-specs li strong {
+  color: var(--text-primary);
+  text-align: right;
+}
+
+.product-price-box {
+  margin-top: auto;
+  background-color: var(--bg-surface-alt);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  padding: 12px 14px;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.price-excl {
+  font-size: 1.32rem;
+  font-weight: 900;
+  color: var(--brand-green);
+}
+
+.price-incl {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+/* ==========================================================================
+   Interactive kVA / kW Configurator & Rental Calculator
+   ========================================================================== */
+.calc-wrapper {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 32px;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-strong);
+  border-radius: 20px;
+  padding: 36px;
+  box-shadow: var(--shadow-md);
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.86rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 11px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--border-strong);
+  background-color: var(--input-bg);
+  color: var(--text-primary);
+  font-size: 0.94rem;
+  font-family: inherit;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: #a3d060;
+  box-shadow: 0 0 0 3px rgba(163, 208, 96, 0.25);
+}
+
+.calc-result-panel {
+  background: linear-gradient(145deg, #0d1911 0%, #162b1c 100%);
+  color: #ffffff;
+  border-radius: 16px;
+  padding: 28px;
+  border: 1px solid rgba(163, 208, 96, 0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.calc-kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  margin: 18px 0;
+}
+
+.calc-kpi-box {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(163, 208, 96, 0.28);
+  border-radius: 12px;
+  padding: 14px;
+}
+
+.calc-kpi-label {
+  font-size: 0.74rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #b5c9ba;
+}
+
+.calc-kpi-val {
+  font-size: 1.45rem;
+  font-weight: 900;
+  color: #a3d060;
+  margin-top: 4px;
+}
+
+.calc-recommendation-box {
+  background: rgba(163, 208, 96, 0.14);
+  border-left: 4px solid #a3d060;
+  padding: 14px 16px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+  color: #e6f4ea;
+}
+
+/* ==========================================================================
+   Represented Brands (ELCOS, CGM, HIMOINSA, GTEC)
+   ========================================================================== */
+.brands-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.brand-card {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 24px;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.brand-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--brand-green);
+}
+
+.brand-logo-box {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  height: 84px;
+  padding: 12px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.brand-logo-box img {
+  max-height: 56px;
+  width: auto;
+  object-fit: contain;
+}
+
+.brand-origin {
+  display: inline-block;
+  font-size: 0.73rem;
+  font-weight: 700;
+  color: var(--brand-green);
+  background-color: var(--brand-green-soft);
+  padding: 3px 10px;
+  border-radius: 999px;
+  margin-bottom: 8px;
+}
+
+.brand-card h3 {
+  font-size: 1.12rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.brand-card p {
+  font-size: 0.87rem;
+  color: var(--text-secondary);
+}
+
+/* ==========================================================================
+   About Us, 4 Pillars & ISO 9001 / Certificates
+   ========================================================================== */
+.story-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 36px;
+  align-items: start;
+  margin-bottom: 48px;
+}
+
+.story-quote-card {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-left: 5px solid #a3d060;
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: var(--shadow-sm);
+}
+
+.story-quote-card h3 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.story-quote-card p {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  margin-bottom: 14px;
+}
+
+.pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.pillar-card {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+  padding: 20px;
+}
+
+.pillar-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  background-color: #a3d060;
+  color: #0b140d;
+  font-weight: 900;
+  font-size: 0.85rem;
+  margin-bottom: 10px;
+}
+
+.pillar-card h4 {
+  font-size: 1rem;
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+
+.pillar-card p {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.certs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.cert-card {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+  padding: 18px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cert-card img {
+  height: 170px;
+  width: auto;
+  object-fit: contain;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  margin-bottom: 12px;
+  background: #fff;
+}
+
+.cert-card h4 {
+  font-size: 0.94rem;
+  font-weight: 800;
+  margin-bottom: 4px;
+}
+
+.cert-card span {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* ==========================================================================
+   Contact & Company Registry Section
+   ========================================================================== */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.05fr;
+  gap: 36px;
+}
+
+.contact-info-card,
+.contact-form-card {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: 18px;
+  padding: 32px;
+  box-shadow: var(--shadow-sm);
+}
+
+.contact-list {
+  list-style: none;
+  margin: 20px 0;
+}
+
+.contact-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border-color);
+  font-size: 0.93rem;
+}
+
+.Registry-box {
+  background-color: var(--bg-surface-alt);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 16px;
+  font-size: 0.83rem;
+  color: var(--text-secondary);
+  margin-top: 18px;
+}
+
+.form-status {
+  margin-top: 14px;
+  padding: 12px 16px;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  display: none;
+}
+
+.form-status.success {
+  display: block;
+  background-color: var(--badge-bg);
+  color: var(--badge-text);
+  border: 1px solid #a3d060;
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+.site-footer {
+  background-color: #08100a;
+  color: #b7c9bc;
+  padding: 48px 0 28px;
+  border-top: 3px solid #a3d060;
+  font-size: 0.88rem;
+}
+
+.footer-bottom {
+  margin-top: 28px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* ==========================================================================
+   Responsive Design
+   ========================================================================== */
+@media (max-width: 1080px) {
+  .hero-grid,
+  .calc-wrapper,
+  .story-grid,
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--bg-surface);
+    flex-direction: column;
+    padding: 16px;
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: var(--shadow-md);
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .mobile-menu-btn {
+    display: inline-flex;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-stats-bar,
+  .pillars-grid,
+  .hero-hotline-strip,
+  .calc-kpi-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .calc-wrapper,
+  .contact-info-card,
+  .contact-form-card {
+    padding: 20px;
+  }
+}
