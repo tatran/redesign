@@ -1,0 +1,45 @@
+Betreff: Vorschlag für Ihren neuen Webauftritt | Alexandru Bialis Photography (DE / EN / HU / CS)
+An: office@bialisphotography.at
+
+Sehr geehrter Herr Alexandru Bialis,
+
+über 30 Jahre Meistererfahrung in der Fotografie – von der analogen Dunkelkammer bis zu modernen Großprojekten wie der Bauder GmbH, einfühlsamen Hochzeitsreportagen und edlen, handgebundenen Leder-Fotoalben: Ihre Arbeiten aus Purbach am Neusiedler See haben ein außergewöhnlich hohes handwerkliches Niveau.
+
+Bei einer genauen Durchsicht Ihres aktuellen Webauftritts unter bialisphotography.at sind mir jedoch einige technische und strategische Punkte aufgefallen, die derzeit wertvolle Kundenanfragen und internationale Reichweite verschenken:
+
+1. Passwortgeschützte Preisseite (/preise/):
+Besucher, die über Google oder Empfehlungen nach einer ersten Preis- und Paket-Orientierung suchen, stoßen auf ein Passwort-Formular oder brechen vorzeitig ab, anstatt eine strukturierte Preisschätzung zu erhalten.
+
+2. Fehlende Mehrsprachigkeit im Dreiländereck:
+Ihr Studio in Purbach liegt im Einzugsgebiet Neusiedler See / Wien und in unmittelbarer Nähe zu Sopron (Ungarn, ca. 25 Min.) sowie Bratislava (Slowakei/Tschechien, ca. 40 Min.). Für internationale Paare, die am Neusiedler See heiraten, sowie grenzüberschreitende Industrie- und Gewerbekunden fehlen englische, ungarische und tschechische Sprachversionen.
+
+3. Hohe Ladezeiten & Ballast durch WordPress/Elementor:
+Schwere Plugins und Script-Pakete verlangsamen den mobilen Seitenaufbau spürbar und wirken sich negativ auf die Google Core Web Vitals aus.
+
+4. Fehlender interaktiver Shooting-Konfigurator & Dark Mode:
+Hochwertige Fotografie entfaltet auf dunklen Bildschirmen eine ganz andere Farbtiefe und Brillanz. Ein eleganter Umschalter zwischen Redaktions-Hell und Obsidian-Dunkel sowie ein interaktiver Rechner fehlen bisher.
+
+Um Ihnen die Möglichkeiten direkt greifbar zu machen, habe ich bereits einen vollständigen, interaktiven Redesign-Prototyp für Sie ausgearbeitet:
+
+-> Neuen Webauftritt online ansehen: https://livingpixelstudios.com/redesign/bialisphotography/
+
+Was der neue Prototyp bietet:
+- 4 vollständige Sprachen (Deutsch, Englisch, Ungarisch, Tschechisch) auf Knopfdruck ohne Neuladen
+- Eleganter Hell- & Dunkelmodus (Light/Dark Mode) mit warmen Gold-Akzenten
+- Interaktiver Shooting-Konfigurator mit transparenter Budget-Berechnung (Hochzeit, Porträt, Industrie, Album) und 1-Klick-Übernahme ins Anfrageformular
+- Schnelle, native Portfolio-Galerie mit Kategoriefilter und Vollbild-Lightbox
+- Interaktive Anfahrtskarte nach Purbach (Feuerwehrgasse 12/13) mit 1-Klick Google Maps Routenplaner
+- 100% DSGVO-konform, rechtssicheres Impressum (inkl. WKO-Angaben und Kleinunternehmerregelung § 6 UStG)
+- Blitzschnelle Ladezeiten (ohne schwere WordPress-Plugins)
+
+Mein Angebot an Sie:
+Gerne führe ich Sie in einem kurzen, 15-minütigen Online-Termin (per Bildschirmübertragung) oder Telefonat unverbindlich durch alle Funktionen und erstelle Ihnen ein transparentes Fixpreis-Angebot für die schlüsselfertige Übernahme auf Ihre Domain bialisphotography.at.
+
+Wann würde es Ihnen diese oder nächste Woche für ein kurzes Gespräch am besten passen?
+
+Mit freundlichen Grüßen aus dem Burgenland / Wien,
+
+Ing. Luboš Kostroš
+LivingPixel Studios – Moderne Webauftritte & Konfiguratoren
+E-Mail: info@livingpixelstudios.com
+Web: https://livingpixelstudios.com/
