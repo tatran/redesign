@@ -1075,6 +1075,11 @@ h1, h2, h3, h4, .font-serif {
   min-height: 420px;
 }
 
+.custom-map-pin {
+  background: transparent !important;
+  border: none !important;
+}
+
 /* CONTACT SECTION */
 .contact-section {
   background-color: var(--bg-elevated);

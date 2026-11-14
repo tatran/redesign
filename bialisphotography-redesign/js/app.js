@@ -544,19 +544,39 @@
     `);
   }
 
+  const TILE_URLS = {
+    light: 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}',
+    dark: 'https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}',
+    osm: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png'
+  };
+
   function updateMapTiles() {
     if (!mapInstance || typeof L === 'undefined') return;
-    if (mapTileLayer) mapInstance.removeLayer(mapTileLayer);
+    if (mapTileLayer) {
+      mapInstance.removeLayer(mapTileLayer);
+      mapTileLayer = null;
+    }
 
     const isDark = currentTheme === 'dark';
-    const tileUrl = isDark
-      ? 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png'
-      : 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png';
+    const tileUrl = isDark ? TILE_URLS.dark : TILE_URLS.light;
 
     mapTileLayer = L.tileLayer(tileUrl, {
-      maxZoom: 19,
-      attribution: '&copy; <a href="https://carto.com/">CARTO</a> &copy; OpenStreetMap'
+      maxZoom: 18,
+      attribution: '&copy; Esri, HERE, Garmin, OpenStreetMap contributors'
     }).addTo(mapInstance);
+
+    let tileErrors = 0;
+    mapTileLayer.on('tileerror', () => {
+      tileErrors++;
+      if (tileErrors === 3) {
+        // Fallback cleanly to OpenStreetMap standard if Esri times out
+        if (mapTileLayer) mapInstance.removeLayer(mapTileLayer);
+        mapTileLayer = L.tileLayer(TILE_URLS.osm, {
+          maxZoom: 19,
+          attribution: '&copy; OpenStreetMap contributors'
+        }).addTo(mapInstance);
+      }
+    });
   }
 
   // --- CONTACT FORM HANDLER ---
