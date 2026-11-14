@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="vrbaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1b4931"/>
+      <stop offset="100%" stop-color="#52b788"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="url(#vrbaGrad)"/>
+  <!-- Stylized Willow / Plant Sprout Leaf Motif -->
+  <path d="M32 10 C32 26 20 34 16 48 C24 48 30 42 32 34 C34 42 40 48 48 48 C44 34 32 26 32 10 Z" fill="#ffffff" opacity="0.95"/>
+  <path d="M32 24 C32 38 27 45 23 54 C29 53 32 48 32 44 C32 48 35 53 41 54 C37 45 32 38 32 24 Z" fill="#b7e4c7"/>
+</svg>

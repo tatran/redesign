@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="sk" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VRBA | Okrasná škôlka & Výroba okrasných rastlín Šamorín</title>
+  <meta name="description" content="Tradičná slovenská okrasná škôlka v Šamoríne-Kráľoviankach. Produkcia viac ako 1 500 taxónov drevín, ihličnanov, trvaliek a tráv na ploche 17 ha. Aklimatizované rastliny pre realizácie, záhradné centrá a mestá." />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="alternate icon" href="images/favicon.png" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Top Notification Bar -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="top-bar-badge" data-i18n="statusBadge">
+        Otvorené Po–Pia 7:30–16:00 · Kráľovianky 28, Šamorín
+      </div>
+      <div class="top-bar-contact">
+        <a href="mailto:vrba@vrbazahrady.sk">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          vrba@vrbazahrady.sk
+        </a>
+        <a href="#trasa">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          Šamorín-Kráľovianky
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Header & Navigation -->
+  <header class="header">
+    <div class="container navbar">
+      <a href="#uvod" class="brand-logo" aria-label="VRBA Okrasná škôlka">
+        <img src="images/logo.png" alt="VRBA - Okrasná škôlka & Výroba okrasných rastlín" width="160" height="48" />
+      </a>
+
+      <!-- Navigation Links -->
+      <nav>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#uvod" class="nav-link active" data-i18n="navHome">Úvod</a></li>
+          <li><a href="#o-nas" class="nav-link" data-i18n="navAbout">O škôlke</a></li>
+          <li><a href="#sortiment" class="nav-link" data-i18n="navPlants">Sortiment</a></li>
+          <li><a href="#cennik" class="nav-link" data-i18n="navB2B">B2B & Cenník</a></li>
+          <li><a href="#kalkulacka" class="nav-link" data-i18n="navCalculator">Kalkulačka</a></li>
+          <li><a href="#galeria" class="nav-link" data-i18n="navGallery">Galéria</a></li>
+          <li><a href="#faq" class="nav-link" data-i18n="navFaq">FAQ</a></li>
+          <li><a href="#kontakt" class="nav-link" data-i18n="navContact">Kontakt</a></li>
+        </ul>
+      </nav>
+
+      <!-- Controls: Language Selector, Dark Mode Toggle, CTA -->
+      <div class="header-actions">
+        <!-- Language Switcher Dropdown (SK, DE, EN, HU) -->
+        <div class="lang-dropdown">
+          <button class="lang-btn" id="langBtn" aria-label="Vybrať jazyk / Select Language">
+            <span id="langCurrentLabel">🇸🇰 SK</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="lang-menu" id="langMenu">
+            <button class="lang-item active" data-lang="sk"><span>🇸🇰</span> Slovenčina</button>
+            <button class="lang-item" data-lang="de"><span>🇩🇪</span> Deutsch</button>
+            <button class="lang-item" data-lang="en"><span>🇬🇧</span> English</button>
+            <button class="lang-item" data-lang="hu"><span>🇭🇺</span> Magyar</button>
+          </div>
+        </div>
+
+        <!-- Light / Dark Theme Switcher -->
+        <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Prepnúť režim (Svetlý/Tmavý)">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
+
+        <!-- Primary CTA Button -->
+        <a href="#cennik" class="btn btn-primary" data-i18n="btnPriceList">Získať cenník 2026</a>
+
+        <!-- Mobile Drawer Toggle -->
+        <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==========================================================================
+         HERO SECTION
+         ========================================================================== -->
+    <section class="hero" id="uvod">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <span class="hero-badge">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            <span data-i18n="heroBadge">Tradičná okrasná škôlka · 17 ha produkcie</span>
+          </span>
+          <h1 class="hero-title">
+            <span data-i18n="heroTitle">Slovenské okrasné rastliny pestované s láskou a 20-ročnou tradíciou</span>
+          </h1>
+          <p class="hero-subtitle" data-i18n="heroSubtitle">
+            Produkujeme viac ako 1 500 taxónov drevín, ihličnanov, trvaliek a okrasných tráv aklimatizovaných na stredoeurópske podnebie. Dodávame realizátorom záhrad, záhradným centrám a mestám.
+          </p>
+          <div class="hero-cta-group">
+            <a href="#sortiment" class="btn btn-primary" data-i18n="btnCatalog">Preskúmať online katalóg</a>
+            <a href="#cennik" class="btn btn-outline" data-i18n="btnRequestPricing">Požiadať o B2B cenník</a>
+          </div>
+
+          <!-- Hero Metrics -->
+          <div class="hero-stats-grid">
+            <div class="stat-item">
+              <h3 data-i18n="heroStat1Val">17 ha</h3>
+              <p data-i18n="heroStat1Lbl">Produkčná plocha</p>
+            </div>
+            <div class="stat-item">
+              <h3 data-i18n="heroStat2Val">1 500+</h3>
+              <p data-i18n="heroStat2Lbl">Kultivarov a taxónov</p>
+            </div>
+            <div class="stat-item">
+              <h3 data-i18n="heroStat3Val">12 000 m²</h3>
+              <p data-i18n="heroStat3Lbl">Kontajnerovne so závlahou</p>
+            </div>
+            <div class="stat-item">
+              <h3 data-i18n="heroStat4Val">20+ rokov</h3>
+              <p data-i18n="heroStat4Lbl">Skúseností na trhu</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-media">
+          <div class="hero-image-card">
+            <img src="images/home_left.jpg" alt="Okrasná škôlka VRBA Šamorín Kráľovianky" width="600" height="480" />
+            <div class="hero-floating-badge">
+              <div class="badge-icon">🌿</div>
+              <div class="badge-text">
+                <h4 data-i18n="feat1Title">100% Aklimatizované rastliny</h4>
+                <p data-i18n="statusBadge">Kráľovianky 28, Šamorín · Otvorené</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         KEY ADVANTAGES (4-COLUMN GRID)
+         ========================================================================== -->
+    <section class="section-alt">
+      <div class="container">
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon-wrap">🌱</div>
+            <h3 data-i18n="feat1Title">100% Aklimatizované rastliny</h3>
+            <p data-i18n="feat1Desc">Všetky rastliny pestujeme výhradne v našich klimatických podmienkach na Žitnom ostrove. Žiadny mrazový šok ako pri dovozoch z juhu.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon-wrap">🪴</div>
+            <h3 data-i18n="feat2Title">Kompletné pestovateľské štádiá</h3>
+            <p data-i18n="feat2Desc">Od mladého materiálu v K9 sadbovačoch na ďalšie pestovanie cez kontajnery 1L–10L až po vzrastlé solitéry so zemným balom.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon-wrap">💧</div>
+            <h3 data-i18n="feat3Title">Riadená závlaha a substráty</h3>
+            <p data-i18n="feat3Desc">Rastliny pestujeme v špičkových substrátoch s pozvoľna sa uvoľňujúcimi živinami a automatickou kvapkovou závlahou.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon-wrap">🤝</div>
+            <h3 data-i18n="feat4Title">Partner pre profesionálov</h3>
+            <p data-i18n="feat4Desc">Spoľahlivé veľkoobchodné kapacity pre plošné výsadby diaľnic, developerských parkov aj exkluzívnych súkromných záhrad.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         ABOUT US / HISTORY & INFRASTRUCTURE
+         ========================================================================== -->
+    <section id="o-nas">
+      <div class="container about-grid">
+        <div class="about-content">
+          <span class="section-tag" data-i18n="aboutTag">Náš príbeh a zázemie</span>
+          <h2 data-i18n="aboutTitle">Od návrhov záhrad k poprednej okrasnej škôlke</h2>
+          <p data-i18n="aboutP1">
+            Pestovaniu okrasných rastlín sa venujeme vyše 20 rokov. Naša cesta začala realizáciami záhrad na kľúč – od návrhu, závlahových systémov, jazierok až po samotné výsadby. Počas tejto praxe sme dôkladne spoznali, ako sa jednotlivé taxóny správajú v rôznych pôdach, ako reagujú na rez, letné horúčavy či silné mrazy.
+          </p>
+          <p data-i18n="aboutP2">
+            Aby sme zaistili maximálnu kvalitu a odolnosť výsadieb, začali sme budovať vlastnú škôlku v Šamoríne-Kráľoviankach. Dopyt od ostatných realizátorov a záhradných centier rástol tak rýchlo, že pestovanie rastlín nás zamestnalo na 100 % a realizácie sme prenechali našim partnerom.
+          </p>
+          <p data-i18n="aboutP3">
+            Dnes hospodárime na ploche 17 hektárov, z čoho 12 000 m² tvoria moderné kontajnerovne a 3 000 m² fóliovníky (polovica z nich vykurovaná pre rezkovačky, vrúbľovanie a očkovanie).
+          </p>
+          
+          <div class="about-badges">
+            <div class="about-badge-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span data-i18n="aboutBadge1">Vykurované fóliovníky 1 500 m²</span>
+            </div>
+            <div class="about-badge-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span data-i18n="aboutBadge2">Vlastné množenie a vrúbľovanie</span>
+            </div>
+            <div class="about-badge-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span data-i18n="aboutBadge3">Solitéry s balom až do 4 metrov</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-media-collage">
+          <div class="about-main-img">
+            <img src="images/Vrba-001.jpg" alt="Kontajnerovňa okrasnej škôlky VRBA" width="600" height="440" />
+          </div>
+          <div class="about-sub-img">
+            <img src="images/Vrba-033.jpg" alt="Okrasné trávy v produkcii" width="240" height="170" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         INTERACTIVE PLANT EXPLORER & CATALOG
+         ========================================================================== -->
+    <section class="section-alt" id="sortiment">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag" data-i18n="catalogTag">Sortiment okrasnej škôlky</span>
+          <h2 class="section-title" data-i18n="catalogTitle">Interaktívny katalóg drevín, trvaliek a tráv</h2>
+          <p class="section-subtitle" data-i18n="catalogSubtitle">
+            Vyhľadajte si konkrétny druh alebo filtrujte podľa kategórie a nárokov na stanovište. V databáze máme vyše 1 500 taxónov.
+          </p>
+        </div>
+
+        <!-- Search & Attribute Filter Controls -->
+        <div class="catalog-controls">
+          <div class="search-box-wrap">
+            <span class="search-icon">🔍</span>
+            <input type="text" id="catalogSearch" class="catalog-search-input" data-i18n-placeholder="searchPlaceholder" placeholder="Hľadať podľa latinského alebo slovenského názvu (napr. Abies, Acer, Lavandula, Salvia)..." />
+          </div>
+
+          <div class="filter-chips-row">
+            <button class="filter-chip active" data-filter="all" data-i18n="filterAll">Všetko (1 500+)</button>
+            <button class="filter-chip" data-filter="woody" data-i18n="filterWoody">Dreviny & Ihličnany (448)</button>
+            <button class="filter-chip" data-filter="perennial" data-i18n="filterPerennial">Trvalky (1 000+)</button>
+            <button class="filter-chip" data-filter="grass" data-i18n="filterGrass">Okrasné trávy (100+)</button>
+            <button class="filter-chip" data-filter="sun" data-i18n="filterSun">Plné slnko</button>
+            <button class="filter-chip" data-filter="shade" data-i18n="filterShade">Polotieň / Tieň</button>
+            <button class="filter-chip" data-filter="hardy" data-i18n="filterHardy">Mrazuvzdorné</button>
+            <button class="filter-chip" data-filter="featured" data-i18n="filterFeatured">Vybrané kultivary</button>
+          </div>
+        </div>
+
+        <!-- Catalog Status Bar -->
+        <div class="catalog-status-bar">
+          <span id="catalogCount">Zobrazuje sa 16 z 1 569 taxónov</span>
+          <span>🚚 B2B paletová preprava priamo na stavbu</span>
+        </div>
+
+        <!-- Dynamic Plant Cards Grid -->
+        <div class="plants-grid" id="plantsGrid">
+          <!-- Dynamically populated by app.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         B2B & WHOLESALE PRICE LIST ACCESS
+         ========================================================================== -->
+    <section id="cennik">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag" data-i18n="b2bTag">Veľkoobchodný prístup</span>
+          <h2 class="section-title" data-i18n="b2bTitle">B2B Cenník 2026 pre realizátorov a záhradné centrá</h2>
+          <p class="section-subtitle" data-i18n="b2bSubtitle">
+            Náš cenník je chránený heslom, aby sme chránili veľkoobchodné marže našich odberateľov. Prístupové heslo vám radi zašleme obratom po overení IČO alebo záhradníckej živnosti.
+          </p>
+        </div>
+
+        <div class="b2b-columns-grid">
+          <div class="b2b-col-card">
+            <h3 data-i18n="b2bCol1Title">Pre realizátorov záhrad</h3>
+            <p data-i18n="b2bCol1Desc">Množstevné zľavy, možnosť rezervácie celých ucelených projektov a príprava rastlín na konkrétny termín výsadby priamo na paletách.</p>
+          </div>
+          <div class="b2b-col-card">
+            <h3 data-i18n="b2bCol2Title">Pre záhradné centrá</h3>
+            <p data-i18n="b2bCol2Desc">Pravidelné týždenné závozy, perfektne zakorenený tovar v prezentačných kontajneroch s etiketou a vysokou trvanlivosťou na predajni.</p>
+          </div>
+          <div class="b2b-col-card">
+            <h3 data-i18n="b2bCol3Title">Pre mestá a developerov</h3>
+            <p data-i18n="b2bCol3Desc">Certifikovaný materiál na líniové a krajinné výsadby, vysoká ujatosť vďaka lokálnemu pestovaniu bez stresu z dlhej dopravy.</p>
+          </div>
+        </div>
+
+        <!-- Password Unlock Simulation -->
+        <div class="password-gate-card">
+          <div style="font-size: 2.2rem; margin-bottom: 8px;">🔐</div>
+          <h3 data-i18n="pwdBoxTitle">Máte už pridelené heslo?</h3>
+          <div class="password-input-group">
+            <input type="password" id="b2bPasswordInput" data-i18n-placeholder="pwdBoxInput" placeholder="Zadajte prístupové heslo..." />
+            <button class="btn btn-primary" id="b2bUnlockBtn" data-i18n="pwdBoxBtn">Otvoriť cenník</button>
+          </div>
+          <p class="password-note" data-i18n="pwdBoxNoPwd">Ešte nemáte heslo? Vyplňte formulár nižšie a odošleme vám ho do 2 hodín.</p>
+
+          <div class="price-list-unlocked" id="b2bUnlockedBox">
+            <h4 style="color: var(--brand-primary); margin-bottom: 8px;" data-i18n="pwdSuccessMsg">Heslo overené! Cenník pre sezónu 2026 bol sprístupnený.</h4>
+            <p style="font-size: 0.94rem; margin-bottom: 14px;">Máte k dispozícii kompletný sortiment s veľkoobchodnými B2B cenami.</p>
+            <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+              <a href="#kalkulacka" class="btn btn-primary">Prejsť na kalkuláciu objednávky</a>
+              <a href="#kontakt" class="btn btn-outline">Objednať cez e-mail</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         INTERACTIVE QUOTE & VOLUME CALCULATOR
+         ========================================================================== -->
+    <section class="section-alt" id="kalkulacka">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag" data-i18n="calcTag">Interaktívna kalkulačka</span>
+          <h2 class="section-title" data-i18n="calcTitle">Nezáväzný dopytový kalkulátor rastlín</h2>
+          <p class="section-subtitle" data-i18n="calcSubtitle">
+            Zostavte si orientačnú špecifikáciu rastlín pre váš projekt a odošlite ju nášmu obchodnému tímu na presnú cenovú ponuku s dopravou.
+          </p>
+        </div>
+
+        <div class="calc-wrapper">
+          <div class="calc-grid">
+            <div>
+              <h3 class="calc-step-title" data-i18n="calcStep1">1. Vyberte kategórie a predpokladané množstvá</h3>
+              <div class="calc-item">
+                <label data-i18n="calcK9Lbl">Mladý materiál v K9 sadbovačoch (kusy):</label>
+                <input type="number" id="calcK9" min="0" value="0" step="50" />
+              </div>
+              <div class="calc-item">
+                <label data-i18n="calcContSmallLbl">Kontajnerované dreviny & trvalky 1L–3L (kusy):</label>
+                <input type="number" id="calcContSmall" min="0" value="40" step="10" />
+              </div>
+              <div class="calc-item">
+                <label data-i18n="calcContBigLbl">Väčšie kríky a dreviny v kontajneroch 5L–10L (kusy):</label>
+                <input type="number" id="calcContBig" min="0" value="15" step="5" />
+              </div>
+              <div class="calc-item">
+                <label data-i18n="calcSoliterLbl">Vzrastlé solitéry a stromy so zemným balom (kusy):</label>
+                <input type="number" id="calcSoliter" min="0" value="4" step="1" />
+              </div>
+            </div>
+
+            <div>
+              <h3 class="calc-step-title" data-i18n="calcStep2">2. Špecifikácia odberu a doručenia</h3>
+              <div class="calc-item">
+                <label data-i18n="calcPickupLbl">Spôsob prevzatia:</label>
+                <select id="calcPickup">
+                  <option value="pickup" data-i18n="calcPickupOption1">Osobný odber v Šamoríne-Kráľoviankach (vlastná doprava)</option>
+                  <option value="delivery" data-i18n="calcPickupOption2">Zabezpečiť dopravu na stavbu / do záhradného centra</option>
+                </select>
+              </div>
+              <div class="calc-item">
+                <label data-i18n="calcDestLbl">Miesto dodania (mesto / PSČ):</label>
+                <input type="text" id="calcDest" placeholder="Bratislava / Wien / Győr / Trnava..." />
+              </div>
+
+              <!-- Live Summary Box -->
+              <div class="calc-summary-card">
+                <div>
+                  <div style="font-size: 0.88rem; color: var(--text-muted);" data-i18n="calcTotalEst">Odhadovaný celkový objem:</div>
+                  <div class="calc-total-number"><span id="calcTotalCount">59</span> <span style="font-size: 1rem; font-weight: normal;" data-i18n="calcPieces">kusov rastlín</span></div>
+                </div>
+                <div style="text-align: right;">
+                  <div style="font-size: 0.88rem; color: var(--text-muted);">Prepravná kapacita:</div>
+                  <div style="font-weight: 700; color: var(--brand-accent);" id="calcPalletEst">~2 paletové jednotky</div>
+                </div>
+              </div>
+
+              <div style="margin-top: 24px;">
+                <button class="btn btn-primary" id="calcSubmitBtn" style="width: 100%;" data-i18n="btnSendCalculation">
+                  Odoslať dopyt na nacenenie
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         PHOTO GALLERY
+         ========================================================================== -->
+    <section id="galeria">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag" data-i18n="galleryTag">Fotogaléria</span>
+          <h2 class="section-title" data-i18n="galleryTitle">Nahliadnite do našej 17 ha okrasnej škôlky</h2>
+          <p class="section-subtitle" data-i18n="gallerySubtitle">
+            Autentické zábery našich kontajnerovní, fóliovníkov a zdravých porastov priamo v Šamoríne-Kráľoviankach.
+          </p>
+        </div>
+
+        <div class="gallery-filter-nav">
+          <button class="filter-chip active gal-tab-btn" data-gal-filter="all" data-i18n="galTabAll">Všetky zábery</button>
+          <button class="filter-chip gal-tab-btn" data-gal-filter="nursery" data-i18n="galTabNursery">Škôlka & Fóliovníky</button>
+          <button class="filter-chip gal-tab-btn" data-gal-filter="conifers" data-i18n="galTabConifers">Ihličnany & Dreviny</button>
+          <button class="filter-chip gal-tab-btn" data-gal-filter="perennials" data-i18n="galTabPerennials">Trvalky & Trávy</button>
+        </div>
+
+        <div class="gallery-grid">
+          <div class="gallery-item" data-gal-cat="nursery" data-img-src="images/Vrba-001.jpg">
+            <img src="images/Vrba-001.jpg" alt="Kontajnerovňa ihličnanov" loading="lazy" />
+            <div class="gallery-overlay"><span class="gallery-caption">Kontajnerovňa ihličnanov 12 000 m²</span></div>
+          </div>
+          <div class="gallery-item" data-gal-cat="conifers" data-img-src="images/Vrba-010.jpg">
+            <img src="images/Vrba-010.jpg" alt="Abies koreana a solitérne ihličnany" loading="lazy" />
+            <div class="gallery-overlay"><span class="gallery-caption">Abies koreana a zakrslé ihličnany</span></div>
+          </div>
+          <div class="gallery-item" data-gal-cat="conifers" data-img-src="images/Vrba-009.jpg">
+            <img src="images/Vrba-009.jpg" alt="Acer palmatum a solitérne stromy" loading="lazy" />
+            <div class="gallery-overlay"><span class="gallery-caption">Acer palmatum & solitéry</span></div>
+          </div>
+          <div class="gallery-item" data-gal-cat="nursery" data-img-src="images/Vrba-023.jpg">
+            <img src="images/Vrba-023.jpg" alt="Fóliovníkové hospodárstvo 3 000 m²" loading="lazy" />
+            <div class="gallery-overlay"><span class="gallery-caption">Fóliovníky a pestovateľské plochy</span></div>
+          </div>
+          <div class="gallery-item" data-gal-cat="perennials" data-img-src="images/Vrba-025.jpg">
+            <img src="images/Vrba-025.jpg" alt="Pestovanie aromatických trvaliek a levandule" loading="lazy" />
+            <div class="gallery-overlay"><span class="gallery-caption">Pestovanie kvitnúcich trvaliek</span></div>
+          </div>
+          <div class="gallery-item" data-gal-cat="perennials" data-img-src="images/Vrba-033.jpg">
+            <img src="images/Vrba-033.jpg" alt="Miscanthus sinensis a okrasné trávy" loading="lazy" />
+            <div class="gallery-overlay"><span class="gallery-caption">Okrasné trávy v plnom vzraste</span></div>
+          </div>
+          <div class="gallery-item" data-gal-cat="conifers" data-img-src="images/Vrba-011.jpg">
+            <img src="images/Vrba-011.jpg" alt="Thuja occidentalis Smaragd porasty" loading="lazy" />
+            <div class="gallery-overlay"><span class="gallery-caption">Thuja occidentalis 'Smaragd'</span></div>
+          </div>
+          <div class="gallery-item" data-gal-cat="perennials" data-img-src="images/Vrba-038.jpg">
+            <img src="images/Vrba-038.jpg" alt="Pennisetum alopecuroides Hameln" loading="lazy" />
+            <div class="gallery-overlay"><span class="gallery-caption">Pennisetum 'Hameln' sadbovače</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         TESTIMONIALS SECTION
+         ========================================================================== -->
+    <section class="section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag" data-i18n="testiTag">Skúsenosti partnerov</span>
+          <h2 class="section-title" data-i18n="testiTitle">Čo hovoria záhradníci a architekti</h2>
+        </div>
+
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <div class="testi-stars">★★★★★</div>
+            <p data-i18n="testi1Text">S okrasnou škôlkou VRBA spolupracujeme už ôsmy rok. Rastliny pestované v Šamoríne majú bezkonkurenčnú ujatosť na stavbách v Bratislave aj Trnave. Žiadne vymŕzanie ani úhyn prvú zimu.</p>
+            <div class="testi-author-info">
+              <h4 data-i18n="testi1Author">Ing. Martin Kováč</h4>
+              <p data-i18n="testi1Role">Záhradný architekt, Bratislava</p>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testi-stars">★★★★★</div>
+            <p data-i18n="testi2Text">Die Qualität der Koniferen und Gräser ist hervorragend. Durch die Nähe zur österreichischen Grenze (nur 35 Min. von Kittsee) holen wir große Pflanzenpartien direkt ab. Zuverlässig und fachlich top!</p>
+            <div class="testi-author-info">
+              <h4 data-i18n="testi2Author">DI Stefan Leitner</h4>
+              <p data-i18n="testi2Role">Landschaftsbau Leitner, Burgenland / Wien</p>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testi-stars">★★★★★</div>
+            <p data-i18n="testi3Text">A növények kondíciója kifogástalan, a földlabdás szoliterek gyökérzete erős és dús. Győr és Mosonmagyaróvár környéki projektjeinkhez rendszeresen innen rendeljük a törzses fákat és díszfüveket.</p>
+            <div class="testi-author-info">
+              <h4 data-i18n="testi3Author">Horváth Zoltán</h4>
+              <p data-i18n="testi3Role">Díszkertész & kivitelező, Győr</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         FAQ SECTION
+         ========================================================================== -->
+    <section id="faq">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag" data-i18n="faqTag">Odpovede na vaše otázky</span>
+          <h2 class="section-title" data-i18n="faqTitle">Často kladené otázky (FAQ)</h2>
+        </div>
+
+        <div class="faq-accordion">
+          <div class="faq-item active">
+            <button class="faq-question">
+              <span data-i18n="faq1Q">Predávate rastliny aj maloodberateľom, alebo len veľkoobchodne?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p data-i18n="faq1A">Naším hlavným zameraním je veľkoobchod pre realizátorov, záhradné centrá, mestá a obce. V areáli v Kráľoviankach však radi privítame aj náročnejších súkromných pestovateľov, ktorí hľadajú kvalitné aklimatizované rastliny.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span data-i18n="faq2Q">Prečo sú rastliny pestované na Slovensku lepšie ako importy?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p data-i18n="faq2A">Rastliny z Talianska alebo juhozápadnej Európy sú zvyknuté na miernu zimu a vysokú vlhkosť. Po výsadbe v kontinentálnej strednej Európe často trpia mrazovým šokom a suchom. Naše rastliny sú od semienka a odrezku pestované na Žitnom ostrove a bez problémov zvládajú -20 °C aj letné suchá.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span data-i18n="faq3Q">Ako získam heslo k veľkoobchodnému cenníku?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p data-i18n="faq3A">Stačí vyplniť kontaktný formulár alebo poslať e-mail na vrba@vrbazahrady.sk s uvedením vášho IČO alebo zamerania vašej firmy. Heslo vám odošleme zvyčajne do niekoľkých hodín.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span data-i18n="faq4Q">Viete zabezpečiť dopravu priamo na miesto výsadby?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p data-i18n="faq4A">Áno, pri väčších zákazkách zabezpečujeme paletovú prepravu alebo rozvoz priamo na stavbu v rámci celého Slovenska, Rakúska a Maďarska.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         VISIT & ROUTE DIRECTIONS
+         ========================================================================== -->
+    <section class="section-alt" id="trasa">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag" data-i18n="visitTag">Navštívte nás</span>
+          <h2 class="section-title" data-i18n="visitTitle">Kde nás nájdete & Ako sa k nám dostanete</h2>
+        </div>
+
+        <div class="visit-grid">
+          <div class="visit-info-card">
+            <h3 data-i18n="visitAddressTitle">Adresa škôlky</h3>
+            <p data-i18n="visitAddressVal">VRBA, s.r.o., Kráľovianky 28, 931 01 Šamorín, Slovensko</p>
+
+            <h3 data-i18n="visitHoursTitle">Otváracia doba</h3>
+            <p style="white-space: pre-line;" data-i18n="visitHoursVal">Pondelok – Piatok: 7:30 – 16:00&#10;Sobota – Nedeľa: Zatvorené (po dohode)</p>
+
+            <h3 data-i18n="visitRouteTitle">Navigácia z hlavných smerov</h3>
+            <p data-i18n="visitRouteText">Z Bratislavy: Po diaľnici R7 výjazd Šamorín-Sever, pokračujte smer Dunajská Streda (cesta 63). Cca 2 km za Šamorínom odbočte doľava na Veľká Paka. Vojdete priamo do obce Kráľovianky, na konci po pravej strane je areál s fóliovníkmi č. 28.</p>
+
+            <div class="dist-badges-grid">
+              <div class="dist-badge">🚗 <span data-i18n="distBratislava">Bratislava: 22 km (20 min)</span></div>
+              <div class="dist-badge">🚗 <span data-i18n="distDS">Dunajská Streda: 24 km (20 min)</span></div>
+              <div class="dist-badge">🚗 <span data-i18n="distVienna">Viedeň / Kittsee: 45 km (35 min)</span></div>
+              <div class="dist-badge">🚗 <span data-i18n="distGyor">Győr (HU): 52 km (45 min)</span></div>
+            </div>
+          </div>
+
+          <div class="map-container">
+            <!-- Google Maps Embed for Šamorín Kráľovianky -->
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2668.742886369062!2d17.332305!3d48.043512!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476c8c4df969c3a3%3A0x6b77bf70fa7da1d6!2sKr%C3%A1%C4%BEovianky%2028%2C%20931%2001%20%C5%A0amor%C3%ADn!5e0!3m2!1ssk!2ssk!4v1700000000000!5m2!1ssk!2ssk" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade" 
+              title="VRBA s.r.o. Mapa Kráľovianky Šamorín">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         CONTACT FORM
+         ========================================================================== -->
+    <section id="kontakt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag" data-i18n="contactTag">Dopyt a kontakt</span>
+          <h2 class="section-title" data-i18n="contactTitle">Spojte sa s naším tímom</h2>
+          <p class="section-subtitle" data-i18n="contactSubtitle">
+            Potrebujete naceniť projekt, overiť dostupnosť kultivarov alebo navštíviť škôlku? Napíšte nám.
+          </p>
+        </div>
+
+        <div class="contact-wrapper">
+          <div class="toast-msg" id="contactToast"></div>
+
+          <form id="contactForm">
+            <div class="form-grid">
+              <div>
+                <label class="form-label" data-i18n="formName">Meno a priezvisko *</label>
+                <input type="text" class="form-control" required placeholder="Ing. Ján Novák" />
+              </div>
+              <div>
+                <label class="form-label" data-i18n="formCompany">Názov firmy / IČO (voliteľné)</label>
+                <input type="text" class="form-control" placeholder="Záhrady s.r.o. / SK12345678" />
+              </div>
+              <div>
+                <label class="form-label" data-i18n="formEmail">Váš e-mail *</label>
+                <input type="email" class="form-control" required placeholder="novak@zahradnictvo.sk" />
+              </div>
+              <div>
+                <label class="form-label" data-i18n="formPhone">Telefónne číslo</label>
+                <input type="tel" class="form-control" placeholder="+421 900 000 000" />
+              </div>
+              <div class="form-group-full">
+                <label class="form-label" data-i18n="formSubject">Predmet správy</label>
+                <select class="form-control" id="contactSubject">
+                  <option value="opt1" data-i18n="formSubjectOpt1">Žiadosť o B2B cenník 2026</option>
+                  <option value="opt2" data-i18n="formSubjectOpt2">Nacenenie výsadbového projektu</option>
+                  <option value="opt3" data-i18n="formSubjectOpt3">Overenie skladovej dostupnosti</option>
+                  <option value="opt4" data-i18n="formSubjectOpt4">Iná otázka / Návšteva škôlky</option>
+                </select>
+              </div>
+              <div class="form-group-full">
+                <label class="form-label" data-i18n="formMessage">Vaša správa alebo zoznam hľadaných rastlín...</label>
+                <textarea class="form-control" id="contactMessage" required></textarea>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%; padding: 14px;" data-i18n="btnSendMsg">
+              Odoslať správu
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="images/logo.png" alt="VRBA Okrasná škôlka" width="150" height="44" />
+          <p data-i18n="footerDesc">
+            Tradičná slovenská okrasná škôlka v Šamoríne-Kráľoviankach. Výroba a pestovanie aklimatizovaných drevín, ihličnanov, trvaliek a tráv na ploche 17 ha.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-i18n="navPlants">Sortiment</h4>
+          <ul class="footer-links">
+            <li><a href="#sortiment" data-i18n="filterWoody">Dreviny & Ihličnany</a></li>
+            <li><a href="#sortiment" data-i18n="filterPerennial">Trvalky</a></li>
+            <li><a href="#sortiment" data-i18n="filterGrass">Okrasné trávy</a></li>
+            <li><a href="#sortiment">K9 sadbovače pre ďalšie pestovanie</a></li>
+            <li><a href="#sortiment">Vzrastlé solitéry so zemným balom</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-i18n="navAbout">Spoločnosť</h4>
+          <ul class="footer-links">
+            <li><a href="#o-nas" data-i18n="navAbout">O škôlke & História</a></li>
+            <li><a href="#cennik" data-i18n="navB2B">B2B Cenník 2026</a></li>
+            <li><a href="#kalkulacka" data-i18n="navCalculator">Kalkulačka dopytu</a></li>
+            <li><a href="#galeria" data-i18n="navGallery">Fotogaléria</a></li>
+            <li><a href="#trasa" data-i18n="visitRouteTitle">Ako sa k nám dostať</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-i18n="footerCompanyInfo">Fakturačné údaje</h4>
+          <p style="color: var(--text-secondary); line-height: 1.6; font-size: 0.9rem;">
+            <strong>VRBA, s.r.o.</strong><br />
+            Kráľovianky 28<br />
+            931 01 Šamorín, Slovensko<br />
+            IČO: 35861479<br />
+            IČ DPH: SK2020203053<br />
+            E-mail: <a href="mailto:vrba@vrbazahrady.sk" style="color: var(--brand-primary); font-weight: 600;">vrba@vrbazahrady.sk</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © 2026 VRBA, s.r.o. · <span data-i18n="footerRights">Všetky práva vyhradené.</span>
+        </div>
+        <div data-i18n="footerLegal">
+          VRBA, s.r.o. · IČO: 35861479 · IČ DPH: SK2020203053 · Zapísaná v OR SR Trnava
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       MODAL: PLANT DETAIL
+       ========================================================================== -->
+  <div class="modal-overlay" id="plantModal">
+    <div class="modal-card">
+      <button class="modal-close-btn" id="modalCloseBtn" aria-label="Zatvoriť">✕</button>
+      <div class="modal-body">
+        <div class="modal-header-block">
+          <h2 id="modalLatin">Abies koreana</h2>
+          <h3 id="modalCommon">Jedľa kórejská</h3>
+        </div>
+        <div class="modal-img-wrap">
+          <img id="modalImg" src="images/Vrba-010.jpg" alt="" />
+        </div>
+        <p id="modalDesc" style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 20px;"></p>
+        
+        <h4 style="font-size: 1.05rem; font-weight: 700; margin-bottom: 8px;" data-i18n="plantAttributes">Vlastnosti a požiadavky kultivaru</h4>
+        <table class="modal-specs-table">
+          <tr>
+            <td data-i18n="attrSun">Svetelné nároky</td>
+            <td id="modalSun">Plné slnko (6+ hodín)</td>
+          </tr>
+          <tr>
+            <td data-i18n="attrSoil">Pôdny substrát</td>
+            <td id="modalSoil">Priepustná, mierne kyslá až neutrálna</td>
+          </tr>
+          <tr>
+            <td data-i18n="attrHardiness">Mrazuvzdornosť</td>
+            <td id="modalHardy">Vysoká mrazuvzdornosť (do -25 °C)</td>
+          </tr>
+          <tr>
+            <td data-i18n="attrSizes">Dostupné kontajnery a baly</td>
+            <td id="modalSizes">Kontajner 2L, Kontajner 5L, Solitér bal</td>
+          </tr>
+        </table>
+
+        <div style="display: flex; gap: 12px; margin-top: 24px;">
+          <button class="btn btn-primary" id="modalInquireBtn" style="flex: 1;" data-i18n="btnInquirePlant">Dopytovať množstvo</button>
+          <button class="btn btn-outline" onclick="window.closePlantModal()" data-i18n="modalClose">Zatvoriť</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MODAL: LIGHTBOX
+       ========================================================================== -->
+  <div class="lightbox-modal" id="lightboxModal">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Zatvoriť">✕</button>
+    <div class="lightbox-img-wrap">
+      <img id="lightboxImg" src="" alt="Náhľad záberu škôlky" />
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/plants-data.js"></script>
+  <script src="js/translations.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

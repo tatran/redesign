@@ -1,0 +1,38 @@
+Predmet: Návrh modernej viacjazyčnej online prezentácie & B2B portálu | VRBA, s.r.o. (SK / DE / EN / HU · Svetlý + Tmavý režim)
+Komu: vrba@vrbazahrady.sk
+
+Vážený pán konateľ, vážený tím okrasnej škôlky VRBA, s.r.o.,
+
+viac ako 20 rokov poctivej pestovateľskej tradície, 17 hektárov produkčnej plochy v Šamoríne-Kráľoviankach, 12 000 m² kontajnerovní, 3 000 m² fóliovníkov a vyše 1 500 taxónov 100% aklimatizovaných na stredoeurópske klimatické podmienky predstavuje mimoriadny úspech a vysokú odbornú hodnotu pre slovenský aj stredoeurópsky trh.
+
+Pri analýze Vášho existujúceho webového sídla na vrbazahrady.sk som si všimol viacero konkrétnych technických a obchodných bariér, ktoré Vám v súčasnosti zbytočne uberajú dopyty od realizátorov a záhradných centier – obzvlášť z priľahlého Rakúska a Maďarska:
+
+1. 1 500+ rastlín v holom texte bez filtra a fotiek: Na podstránkach Dreviny a Trvalky je obrovské množstvo vzácnych taxónov, no zákazník v nich nemá možnosť okamžite vyhľadávať, filtrovať podľa svetla/pôdy/mrazuvzdornosti ani vidieť vizuálne náhľady.
+2. Absencia jazykových mutácií v pohraničnom regióne: Areál Kráľovianky leží iba 35 minút od Rakúska (Kittsee, Neusiedl, Viedeň) a 45 minút od Maďarska (Győr). Web je iba v slovenčine, čo odrádza zahraničných B2B odberateľov s vysokou kúpnou silou.
+3. Prísne heslovaný cenník bez interaktívnej kalkulácie: Chrániť veľkoobchodné ceny je správne, avšak chýba rýchly overovací formulár a orientačný kalkulátor paletových odberov pre projektantov.
+4. Staršia WordPress/Avada architektúra: Dlhšie načítavanie na mobilných zariadeniach a absencia moderného tmavého režimu pre záhradníkov priamo v teréne na stavbách.
+
+Aby bol návrh riešenia okamžite uchopiteľný, pripravil som pre Vás kompletný, funkčný interaktívny prototyp nového webu:
+
+👉 Vyskúšať hotový interaktívny prototyp online:
+https://livingpixelstudios.com/redesign/vrbazahrady/
+
+Čo pripravený redesign prototyp ponúka:
+- 4 plnohodnotné jazyky (SK / DE / EN / HU) prepínateľné 1 kliknutím
+- Svetlý a prémiový tmavý režim (Dark mode) šetrný k očiam a batérii
+- Bleskový vyhľadávač a filter pre 1 500+ taxónov s okamžitou odozvou a detailmi kultivarov
+- B2B partnerský portál a interaktívna kalkulačka dopytu s odhadom paletových jednotiek a logistiky
+- Autentická fotogaléria 17 ha škôlky s lightboxom
+- Responzívny navigačný modul s trasami zo smerov Bratislava (R7), Rakúsko a Győr
+
+Návrh nezáväzného ďalšieho kroku:
+Rád Vám tento prototyp bezplatne a nezáväzne predvediem v krátkom 15-minútovom videohovore cez obrazovku (alebo priamo telefonicky), ukážem jednoduchú správu katalógu a zodpoviem akékoľvek otázky. V prípade záujmu vieme celé riešenie nasadiť na Vašu existujúcu doménu vrbazahrady.sk bez výpadku prevádzky.
+
+Ktorý deň a čas v priebehu tohto alebo budúceho týždňa by Vám vyhovoval na krátky rozhovor?
+
+S úctou a pozdravom,
+
+Ing. Luboš Kostroš
+LivingPixel Studios – Špecialista na moderné webové prezentácie & interaktívne katalógy
+E-mail: info@livingpixelstudios.com
+Web: https://livingpixelstudios.com/
