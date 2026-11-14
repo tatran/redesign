@@ -1,0 +1,37 @@
+Predmet: Návrh modernej viacjazyčnej online prezentácie & B2B katalógu | ARKTIS s.r.o. (SK / DE / EN / HU · Svetlý + Tmavý režim)
+Komu: arktis@arktis.sk
+
+Vážení páni konatelia, vážený odborný tím spoločnosti ARKTIS s.r.o.,
+
+Vaše 66-ročné kumulované odborné skúsenosti v oblasti chladenia, elektrotechniky, merania a regulácie (inžinier elektrotechnik s 20 r. praxou, chladiarenský mechanik so 16 r. praxou z chladiarenskej rodiny a mechanik MaR s 30 r. praxou) spolu s filozofiou „aby zákazník u nás nakúpil správne“ predstavujú na slovenskom aj prihraničnom trhu výnimočnú pridanú hodnotu.
+
+Pri analýze Vášho súčasného webového sídla na arktis.sk som si však všimol viacero technických obmedzení z roku 2013, ktoré dnes sťažujú prácu servisným technikom v teréne:
+
+1. Rozbalovacie menu z roku 2013 (jQuery UI) nefunguje na mobiloch: Celý Váš bohatý sortiment 16 kategórií (Bitzer, Copeland, Danfoss, Embraco Aspera, Güntner...) je na podstránke Produkty skrytý v hoverovom strome šírky 295 px bez možnosti fulltextového vyhľadávania.
+2. Stock fotografie s vodoznakom iStockphoto: Na podstránkach sa stále zobrazujú ilustračné fotky s vodoznakom fotobanky namiesto dôrazu na Vaše reálne technológie, kompresorové jednotky a manometre.
+3. Pevná šírka 1004 px, nezabezpečené HTTP a zastaraný WordPress 4.7: Stránka nie je prispôsobená pre smartfóny technikov priamo v strojovniach pri chladiacom boxe a chýba jej interaktívny dopytový formulár aj funkčná mapa.
+4. Absencia jazykových mutácií (DE / EN / HU): Viacjazyčná prezentácia posilňuje pozíciu pri rokovaniach so zahraničnými dodávateľmi aj montážnymi firmami v regióne.
+
+Aby bol návrh modernizácie okamžite uchopiteľný, pripravil som pre Vás kompletný, funkčný interaktívny prototyp nového webu:
+
+👉 Vyskúšať hotový interaktívny prototyp online:
+https://livingpixelstudios.com/redesign/arktis/
+
+Čo pripravený redesign prototyp pre ARKTIS s.r.o. ponúka:
+- Bleskový vyhľadávač v 16 kategóriách a značkách (kompresory, jednotky, výparníky, ventily, rozvádzače, Cu potrubia, chladivá R134a–R600a, Antifrogen, oleje a náradie)
+- Interaktívny kalkulátor chladiaceho výkonu (Q₀) a dimenzovania potrubia s 1-klikovým odoslaním parametrov Vášmu tímu
+- Vyhľadávač v archíve návodov pre 35+ radov regulátorov (Carel, Dixell, Elreha, Tecnologic, Hansa) + dopyt na náplne autoklimatizácií do r. 2008
+- 4 plnohodnotné jazyky (SK / DE / EN / HU) s odbornou chladiarenskou terminológiou
+- Svetlý a prémiový tmavý režim (Dark mode) vhodný do tmavých chladiarenských strojovni
+
+Návrh nezáväzného ďalšieho kroku:
+Rád Vám tento prototyp bezplatne a nezáväzne predvediem (telefonicky, cez krátky 15-minútový videohovor alebo osobne u Vás na Staviteľskej 3 v Bratislave). V prípade záujmu vieme nové riešenie nasadiť na Vašu doménu arktis.sk bez výpadku prevádzky.
+
+Ktorý deň v priebehu tohto alebo budúceho týždňa by Vám vyhovoval na krátky rozhovor?
+
+S úctou a pozdravom,
+
+Ing. Luboš Kostroš
+LivingPixel Studios – Špecialista na moderné B2B webové prezentácie & interaktívne katalógy
+E-mail: info@livingpixelstudios.com
+Web: https://livingpixelstudios.com/
