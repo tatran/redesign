@@ -142,8 +142,8 @@ button { cursor: pointer; }
 .stats-section { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 17px; margin-top: 33px; }
 .stat-card { display: flex; flex-direction: column; position: relative; border: 1px solid var(--border-subtle); border-top: 3px solid var(--brand-orange); border-radius: var(--radius-md); padding: 16px 31px 16px 16px; background: var(--bg-surface); box-shadow: var(--shadow-sm); }
 .stat-card:hover { border-color: var(--brand-orange); }
-.stat-val { color: var(--brand-ink); font-size: clamp(.93rem, 1.35vw, 1.15rem); line-height: 1.25; font-weight: 850; }
-.stat-lbl { color: var(--text-secondary); font-size: .8rem; margin-top: 4px; }
+.stat-val { color: var(--brand-ink); font-size: clamp(.93rem, 1.35vw, 1.15rem); line-height: 1.25; font-weight: 850; hyphens: auto; overflow-wrap: anywhere; }
+.stat-lbl { color: var(--text-secondary); font-size: .8rem; margin-top: 4px; overflow-wrap: anywhere; }
 .stat-arrow { position: absolute; top: 13px; right: 13px; font-weight: 800; }
 
 .section { padding: 70px 0; }
