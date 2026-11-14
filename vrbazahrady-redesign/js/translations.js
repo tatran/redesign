@@ -5,23 +5,24 @@
 
 window.VRBA_TRANSLATIONS = {
   sk: {
-    // Navigation
+    // Navigation (Concise, single-line labels)
     navHome: "Úvod",
     navAbout: "O škôlke",
-    navPlants: "Sortiment & Katalóg",
-    navB2B: "B2B & Cenník",
+    navPlants: "Sortiment",
+    navB2B: "B2B Cenník",
     navCalculator: "Kalkulačka",
     navGallery: "Galéria",
-    navFaq: "Časté otázky",
+    navFaq: "FAQ",
     navContact: "Kontakt",
     btnPriceList: "Získať cenník 2026",
+    topBarNotice: "Tradičná okrasná škôlka · 17 ha produkcie aklimatizovaných rastlín",
     statusBadge: "Otvorené Po–Pia 7:30–16:00 · Kráľovianky 28, Šamorín",
 
     // Hero Section
-    heroBadge: "Tradičná okrasná škôlka · 17 ha produkcie",
-    heroTitle: "Slovenské okrasné rastliny pestované s láskou a 20-ročnou tradíciou",
-    heroSubtitle: "Produkujeme viac ako 1 500 taxónov drevín, ihličnanov, trvaliek a okrasných tráv aklimatizovaných na stredoeurópske podnebie. Dodávame realizátorom záhrad, záhradným centrám a mestám.",
-    btnCatalog: "Preskúmať online katalóg",
+    heroBadge: "Slovenská okrasná škôlka · 17 ha vlastnej produkcie",
+    heroTitle: "Aklimatizované okrasné rastliny pestované s láskou a 20-ročnou tradíciou",
+    heroSubtitle: "Produkujeme viac ako 1 500 taxónov drevín, ihličnanov, trvaliek a okrasných tráv odolných voči mrazom a suchu. Spoľahlivý partner pre realizátorov záhrad, záhradné centrá a mestá.",
+    btnCatalog: "Preskúmať katalóg rastlín",
     btnRequestPricing: "Požiadať o B2B cenník",
     heroStat1Val: "17 ha",
     heroStat1Lbl: "Produkčná plocha",
@@ -196,18 +197,19 @@ window.VRBA_TRANSLATIONS = {
   de: {
     // Navigation
     navHome: "Startseite",
-    navAbout: "Über die Baumschule",
-    navPlants: "Sortiment & Katalog",
-    navB2B: "B2B & Preisliste",
+    navAbout: "Über uns",
+    navPlants: "Sortiment",
+    navB2B: "B2B-Preise",
     navCalculator: "Kalkulator",
     navGallery: "Galerie",
-    navFaq: "Häufige Fragen",
+    navFaq: "FAQ",
     navContact: "Kontakt",
     btnPriceList: "B2B-Preisliste 2026",
+    topBarNotice: "Traditionelle Zierbaumschule · 17 ha Anbaufläche für klimafeste Pflanzen",
     statusBadge: "Geöffnet Mo–Fr 7:30–16:00 · Kráľovianky 28, Šamorín",
 
     // Hero Section
-    heroBadge: "Traditionelle Baumschule · 17 ha Anbaufläche",
+    heroBadge: "Slowakische Baumschule · 17 ha Eigenproduktion",
     heroTitle: "Klimafeste Ziergehölze & Stauden mit 20 Jahren Anbauerfahrung",
     heroSubtitle: "Wir kultivieren über 1.500 Taxa an Gehölzen, Koniferen, Stauden und Ziergräsern – 100% akklimatisiert an mitteleuropäische Witterungsbedingungen. Belieferung von GaLaBau, Gartencentern und Kommunen.",
     btnCatalog: "Online-Katalog erkunden",
@@ -385,18 +387,19 @@ window.VRBA_TRANSLATIONS = {
   en: {
     // Navigation
     navHome: "Home",
-    navAbout: "About Nursery",
-    navPlants: "Plants & Catalog",
-    navB2B: "B2B & Pricing",
+    navAbout: "About Us",
+    navPlants: "Plant Catalog",
+    navB2B: "B2B Pricing",
     navCalculator: "Quote Builder",
     navGallery: "Gallery",
     navFaq: "FAQ",
     navContact: "Contact",
     btnPriceList: "Get 2026 Price List",
+    topBarNotice: "Specialized Ornamental Nursery · 17 Hectares of Hardy Acclimatized Stock",
     statusBadge: "Open Mon–Fri 7:30–16:00 · Kráľovianky 28, Šamorín",
 
     // Hero Section
-    heroBadge: "Specialized Plant Nursery · 17 Hectares Production",
+    heroBadge: "Slovak Ornamental Nursery · 17 Ha Production",
     heroTitle: "Premium Acclimatized Ornamental Plants Grown with Care for 20+ Years",
     heroSubtitle: "Cultivating over 1,500 taxons of woody plants, conifers, perennials and ornamental grasses fully hardy to Central European conditions. Serving landscapers, garden centers and developers.",
     btnCatalog: "Explore Plant Catalog",
@@ -574,18 +577,19 @@ window.VRBA_TRANSLATIONS = {
   hu: {
     // Navigation
     navHome: "Főoldal",
-    navAbout: "A faiskoláról",
-    navPlants: "Választék & Katalógus",
-    navB2B: "B2B & Árlista",
-    navCalculator: "Árkalkulátor",
+    navAbout: "Rólunk",
+    navPlants: "Választék",
+    navB2B: "B2B Árlista",
+    navCalculator: "Kalkulátor",
     navGallery: "Galéria",
-    navFaq: "Gyakori kérdések",
+    navFaq: "FAQ",
     navContact: "Kapcsolat",
     btnPriceList: "2026-os B2B árlista",
+    topBarNotice: "Hagyományos díszfaiskola · 17 hektáros saját termelés a Csallóközben",
     statusBadge: "Nyitva H–P 7:30–16:00 · Királyfia 28, Somorja",
 
     // Hero Section
-    heroBadge: "Hagyományos díszfaiskola · 17 hektáros termelés",
+    heroBadge: "Szlovákiai díszfaiskola · 17 ha saját termelés",
     heroTitle: "Kiváló minőségű, akklimatizált dísznövények 20 éves szakértelemmel",
     heroSubtitle: "Több mint 1 500 fás szárú, fenyőféle, évelő és díszfű taxont termesztünk a Csallóközben, amelyek tökéletesen alkalmazkodtak a közép-európai éghajlathoz. Kertépítők, árudák és önkormányzatok megbízható partnere.",
     btnCatalog: "Online katalógus böngészése",

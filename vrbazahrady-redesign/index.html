@@ -14,8 +14,11 @@
   <!-- Top Notification Bar -->
   <div class="top-bar">
     <div class="container">
-      <div class="top-bar-badge" data-i18n="statusBadge">
-        Otvorené Po–Pia 7:30–16:00 · Kráľovianky 28, Šamorín
+      <div class="top-bar-left">
+        <span style="font-size: 1rem;">🌱</span>
+        <span class="top-bar-notice" data-i18n="topBarNotice">Tradičná okrasná škôlka · 17 ha produkcie aklimatizovaných rastlín</span>
+        <span style="opacity: 0.5;">|</span>
+        <span data-i18n="statusBadge">Otvorené Po–Pia 7:30–16:00 · Kráľovianky 28, Šamorín</span>
       </div>
       <div class="top-bar-contact">
         <a href="mailto:vrba@vrbazahrady.sk">
@@ -33,17 +36,17 @@
   <!-- Main Header & Navigation -->
   <header class="header">
     <div class="container navbar">
-      <a href="#uvod" class="brand-logo" aria-label="VRBA Okrasná škôlka">
-        <img src="images/logo.png" alt="VRBA - Okrasná škôlka & Výroba okrasných rastlín" width="160" height="48" />
+      <!-- Brand Logo (Acts as Home link) -->
+      <a href="#uvod" class="brand-logo" aria-label="VRBA Okrasná škôlka Domov">
+        <img src="images/logo.png" alt="VRBA - Okrasná škôlka & Výroba okrasných rastlín" class="logo-img" />
       </a>
 
-      <!-- Navigation Links -->
-      <nav>
+      <!-- Centered Main Navigation with Non-wrapping Labels -->
+      <nav class="main-nav">
         <ul class="nav-links" id="navLinks">
-          <li><a href="#uvod" class="nav-link active" data-i18n="navHome">Úvod</a></li>
           <li><a href="#o-nas" class="nav-link" data-i18n="navAbout">O škôlke</a></li>
           <li><a href="#sortiment" class="nav-link" data-i18n="navPlants">Sortiment</a></li>
-          <li><a href="#cennik" class="nav-link" data-i18n="navB2B">B2B & Cenník</a></li>
+          <li><a href="#cennik" class="nav-link" data-i18n="navB2B">B2B Cenník</a></li>
           <li><a href="#kalkulacka" class="nav-link" data-i18n="navCalculator">Kalkulačka</a></li>
           <li><a href="#galeria" class="nav-link" data-i18n="navGallery">Galéria</a></li>
           <li><a href="#faq" class="nav-link" data-i18n="navFaq">FAQ</a></li>
@@ -51,7 +54,7 @@
         </ul>
       </nav>
 
-      <!-- Controls: Language Selector, Dark Mode Toggle, CTA -->
+      <!-- Controls: Language Selector, Dark Mode Toggle, CTA Button -->
       <div class="header-actions">
         <!-- Language Switcher Dropdown (SK, DE, EN, HU) -->
         <div class="lang-dropdown">
@@ -69,11 +72,11 @@
 
         <!-- Light / Dark Theme Switcher -->
         <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Prepnúť režim (Svetlý/Tmavý)">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
         </button>
 
         <!-- Primary CTA Button -->
-        <a href="#cennik" class="btn btn-primary" data-i18n="btnPriceList">Získať cenník 2026</a>
+        <a href="#cennik" class="btn btn-primary nav-cta-btn" data-i18n="btnPriceList">Získať cenník 2026</a>
 
         <!-- Mobile Drawer Toggle -->
         <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Menu">
@@ -92,16 +95,16 @@
         <div class="hero-content">
           <span class="hero-badge">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-            <span data-i18n="heroBadge">Tradičná okrasná škôlka · 17 ha produkcie</span>
+            <span data-i18n="heroBadge">Slovenská okrasná škôlka · 17 ha vlastnej produkcie</span>
           </span>
           <h1 class="hero-title">
-            <span data-i18n="heroTitle">Slovenské okrasné rastliny pestované s láskou a 20-ročnou tradíciou</span>
+            <span data-i18n="heroTitle">Aklimatizované okrasné rastliny pestované s láskou a 20-ročnou tradíciou</span>
           </h1>
           <p class="hero-subtitle" data-i18n="heroSubtitle">
-            Produkujeme viac ako 1 500 taxónov drevín, ihličnanov, trvaliek a okrasných tráv aklimatizovaných na stredoeurópske podnebie. Dodávame realizátorom záhrad, záhradným centrám a mestám.
+            Produkujeme viac ako 1 500 taxónov drevín, ihličnanov, trvaliek a okrasných tráv odolných voči mrazom a suchu. Spoľahlivý partner pre realizátorov záhrad, záhradné centrá a mestá.
           </p>
           <div class="hero-cta-group">
-            <a href="#sortiment" class="btn btn-primary" data-i18n="btnCatalog">Preskúmať online katalóg</a>
+            <a href="#sortiment" class="btn btn-primary" data-i18n="btnCatalog">Preskúmať katalóg rastlín</a>
             <a href="#cennik" class="btn btn-outline" data-i18n="btnRequestPricing">Požiadať o B2B cenník</a>
           </div>
 
@@ -128,7 +131,7 @@
 
         <div class="hero-media">
           <div class="hero-image-card">
-            <img src="images/home_left.jpg" alt="Okrasná škôlka VRBA Šamorín Kráľovianky" width="600" height="480" />
+            <img src="images/home_left.jpg" alt="Okrasná škôlka VRBA Šamorín Kráľovianky" width="600" height="470" />
             <div class="hero-floating-badge">
               <div class="badge-icon">🌿</div>
               <div class="badge-text">
