@@ -1,0 +1,28 @@
+Predmet: Návrh novej trojjazyčnej webstránky pre FEROLL GRASS s.r.o. (SK / EN / HU) + živá ukážka
+Príjemca: František Gyurcsi – FEROLL GRASS s.r.o. <gyufe@azet.sk>
+
+Vážený pán František Gyurcsi, vážený tím FEROLL GRASS s.r.o.,
+
+Vaša vlastná produkcia rolovaných trávnikov v Reci od roku 2013 a desiatky čistých realizácií záhrad, ktoré zdieľate na Facebooku (Feroll Grass sro) a Instagrame (@ferollgrass), sú najlepšou vizitkou poctivej práce.
+
+Pri vyhľadávaní Vašej spoločnosti sme si však všimli, že doména www.ferollgrass.sk je momentálne nedostupná (nefunguje DNS záznam ani webhosting), zatiaľ čo Facebook a Instagram dnes neprihláseným návštevníkom okamžite zablokujú obrazovku prihlasovacím oknom. Zákazníci z okresov Senec, Bratislava, Galanta či Dunajská Streda tak prichádzajú o možnosť rýchlo si pozrieť Vaše realizácie, vypočítať výmeru a priamo Vás kontaktovať.
+
+Preto sme pre Vás vopred pripravili kompletný, funkčný interaktívny prototyp novej webstránky:
+
+👉 Živá ukážka nového webu:
+https://livingpixelstudios.com/redesign/ferollgrass-redesign/
+
+ČO VŠETKO NOVÝ NÁVRH PRE FEROLL GRASS OBSAHUJE:
+1. 3 plnohodnotné jazyky (SK / EN / HU): Okamžité prepínanie medzi slovenčinou, angličtinou a maďarčinou (Gyepszőnyeg termesztés, értékesítés és fektetés – Réte) pre oslovenie celého regiónu.
+2. Interaktívnu kalkulačku roliek, hmotnosti a paliet: Automatický výpočet počtu roliek (vrátane 5 % rezervy na orez), počtu EUR paliet, celkovej tonáže pre Vašu dopravu do 3,5 t a prenos do dopytového formulára na 1 klik.
+3. Autentickú fotogalériu z Vašej produkcie v Reci a realizácií (@ferollgrass): Zber čerstvých roliek na poli, pokládka so skrytými obrubníkmi, automatická závlaha a novostavby.
+4. Svetlý a tmavý režim (Light + Dark Mode): Moderný dizajn vo farbách Vášho loga FEROLL GRASS, bleskové načítanie v mobile a priame prepojenie na +421 910 466 999 a gyufe@azet.sk.
+
+Ak sa Vám pripravený návrh páči, radi Vám pomôžeme s opätovným sprevádzkovaním domény ferollgrass.sk a nasadením celej stránky na kľúč v priebehu niekoľkých dní. Stačí odpovedať na tento e-mail alebo zavolať a prejdeme si prípadné úpravy podľa Vašich predstáv.
+
+S úctou a pozdravom,
+
+Ing. Ľuboš Kostroš
+LivingPixel Studios
+E-mail: info@livingpixelstudios.com
+Web: https://livingpixelstudios.com

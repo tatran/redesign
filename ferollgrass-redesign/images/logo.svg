@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 68" fill="none">
+  <!-- Emblem Circle -->
+  <circle cx="34" cy="34" r="31" fill="#ffffff" stroke="#234d20" stroke-width="2.5"/>
+  <path d="M4 35 H13 V50 H55 V35 H64 A31 31 0 0 1 58.5 53 H9.5 A31 31 0 0 1 4 35 Z" fill="#234d20"/>
+  <text x="34" y="30" text-anchor="middle" font-family="'Segoe UI', Inter, Arial, sans-serif" font-weight="800" font-size="11.5" letter-spacing="0.3" fill="#162114">FERO<tspan fill="#7cb32f">LL</tspan></text>
+  <text x="34" y="45" text-anchor="middle" font-family="'Segoe UI', Inter, Arial, sans-serif" font-weight="500" font-size="9.5" letter-spacing="0.8" fill="#162114">GRASS</text>
+  <!-- Wordmark -->
+  <text x="78" y="33" font-family="'Segoe UI', Inter, Arial, sans-serif" font-weight="800" font-size="23" letter-spacing="0.6" fill="currentColor">FERO<tspan fill="#7cb32f">LL</tspan> GRASS</text>
+  <text x="79" y="51" font-family="'Segoe UI', Inter, Arial, sans-serif" font-weight="600" font-size="10.5" letter-spacing="1.8" fill="#5c7457">TRÁVNIKOVÉ KOBERCE · RECA</text>
+</svg>

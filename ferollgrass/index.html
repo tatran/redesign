@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="sk" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FEROLL GRASS s.r.o. | Produkcia, predaj a pokládka rolovanej trávy · Reca (Senec)</title>
+  <meta name="description" content="FEROLL GRASS s.r.o. – vlastná produkcia a predaj čerstvej rolovanej trávy (trávnych kobercov) v Reci pri Senci. Kompletná úprava terénu, pokládka na kľúč, závlahy a doprava." />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ==========================================================================
+       TOP INFORMATION BAR
+       ========================================================================== -->
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <div class="top-bar-left">
+        <span class="top-bar-badge">
+          <span>🌿</span>
+          <span data-i18n="topBarBadge">Čerstvý zrez na objednávku</span>
+        </span>
+        <span data-i18n="topBarNotice">Vlastná produkcia trávnych kobercov · Reca (okres Senec)</span>
+      </div>
+      <div class="top-bar-right">
+        <a href="tel:+421910466999" aria-label="Zavolať František Gyurcsi">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          +421 910 466 999 (Gyurcsi)
+        </a>
+        <a href="mailto:gyufe@azet.sk">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          gyufe@azet.sk
+        </a>
+        <span data-i18n="topBarLocation">Reca 54, 925 26 Reca</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       STICKY HEADER & NAVIGATION
+       ========================================================================== -->
+  <header class="header">
+    <div class="container navbar">
+      <a href="#uvod" class="brand-logo" aria-label="FEROLL GRASS s.r.o. Domov">
+        <img src="images/logo-avatar.jpg" alt="FEROLL GRASS s.r.o. Logo" class="brand-emblem" width="48" height="48" />
+        <div class="brand-text-wrap">
+          <span class="brand-title">FERO<span class="ll-accent">LL</span> GRASS</span>
+          <span class="brand-subtitle" data-i18n="brandSubtitle">Rolované trávniky · Reca</span>
+        </div>
+      </a>
+
+      <nav aria-label="Hlavná navigácia">
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#sluzby" class="nav-link" data-i18n="navServices">Služby</a></li>
+          <li><a href="#parametre" class="nav-link" data-i18n="navSpecs">O trávniku</a></li>
+          <li><a href="#postup" class="nav-link" data-i18n="navProcess">Postup</a></li>
+          <li><a href="#kalkulacka" class="nav-link" data-i18n="navCalculator">Kalkulačka m²</a></li>
+          <li><a href="#galeria" class="nav-link" data-i18n="navGallery">Realizácie</a></li>
+          <li><a href="#faq" class="nav-link" data-i18n="navFaq">Časté otázky</a></li>
+          <li><a href="#kontakt" class="nav-link" data-i18n="navContact">Kontakt</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-controls">
+        <!-- Language Switcher (SK / EN / HU) -->
+        <div class="lang-switcher" role="group" aria-label="Language switcher">
+          <button type="button" class="lang-btn active" data-lang="sk">🇸🇰 SK</button>
+          <button type="button" class="lang-btn" data-lang="en">🇬🇧 EN</button>
+          <button type="button" class="lang-btn" data-lang="hu">🇭🇺 HU</button>
+        </div>
+
+        <!-- Dark / Light Mode Toggle -->
+        <button type="button" class="theme-toggle" id="themeToggle" aria-label="Prepnúť svetlý a tmavý režim">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
+
+        <a href="#kontakt" class="btn btn-primary btn-sm nav-cta-btn" data-i18n="navCta">Cenová ponuka</a>
+
+        <button type="button" class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==========================================================================
+         HERO SECTION
+         ========================================================================== -->
+    <section class="hero" id="uvod">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span>🌱</span>
+            <span data-i18n="heroBadge">Vlastné trávnikové polia od roku 2013 · Reca pri Senci</span>
+          </div>
+
+          <h1 class="hero-title" data-i18n="heroTitle">
+            Dokonalý hustý trávnik za jediný deň priamo od pestovateľa
+          </h1>
+
+          <p class="hero-subtitle" data-i18n="heroSubtitle">
+            Pestujeme, režeme a odborne ukladáme prvotriedne predpestované trávnikové koberce aklimatizované na slnečné a teplé podmienky juhozápadného Slovenska. Od odburinenia a frézovania pôdy až po prvé zavlaženie.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#kalkulacka" class="btn btn-primary" data-i18n="heroBtnCalc">Vypočítať počet roliek</a>
+            <a href="#galeria" class="btn btn-outline" data-i18n="heroBtnGallery">Pozrieť realizácie</a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat-card">
+              <h3 data-i18n="stat1Val">12+ rokov</h3>
+              <p data-i18n="stat1Lbl">Skúseností od r. 2013</p>
+            </div>
+            <div class="stat-card">
+              <h3 data-i18n="stat2Val">24 hod.</h3>
+              <p data-i18n="stat2Lbl">Od zrezania po pokládku</p>
+            </div>
+            <div class="stat-card">
+              <h3 data-i18n="stat3Val">100 %</h3>
+              <p data-i18n="stat3Lbl">Hustý bezburinový drn</p>
+            </div>
+            <div class="stat-card">
+              <h3 data-i18n="stat4Val">do 3,5 t</h3>
+              <p data-i18n="stat4Lbl">Vlastná doprava roliek</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-img-frame">
+            <img src="images/hero-turf-farm.jpg" alt="FEROLL GRASS s.r.o. – zber čerstvých trávnych roliek na plantáži v Reci" width="640" height="560" />
+            <div class="hero-float-card">
+              <div class="hero-float-left">
+                <div class="hero-float-icon">🚜</div>
+                <div class="hero-float-text">
+                  <h4 data-i18n="heroFloatTitle">Čerstvý ranný zber v Reci</h4>
+                  <p data-i18n="heroFloatSub">Odber priamo z poľa alebo dovoz s pokládkou na kľúč</p>
+                </div>
+              </div>
+              <span class="hero-float-tag" data-i18n="heroFloatTag">IČO: 47 126 337</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SERVICES SECTION (6 CORE SPECIALIZATIONS)
+         ========================================================================== -->
+    <section class="section-alt" id="sluzby">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow" data-i18n="servicesEyebrow">Komplexné služby pod jednou strechou</span>
+          <h2 class="section-title" data-i18n="servicesTitle">Od prípravy pôdy až po smaragdovo zelený koberec</h2>
+          <p class="section-desc" data-i18n="servicesDesc">
+            Zabezpečujeme celý proces – či už hľadáte len čerstvo narezané trávne rolky na svojpomocnú pokládku, alebo kompletnú realizáciu záhrady na kľúč.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <!-- Service 1 -->
+          <article class="service-card">
+            <div class="service-icon">🟩</div>
+            <h3 data-i18n="srv1Title">Produkcia a predaj rolovanej trávy</h3>
+            <p data-i18n="srv1Desc">
+              Predpestovaný, 14–18 mesiacov ošetrovaný športovo-okrasný trávny koberec s hustým koreňovým systémom. Zrezávaný špeciálnym strojom tesne pred odberom v Reci.
+            </p>
+            <div class="service-tags">
+              <span class="service-tag" data-i18n="srv1Tag1">Osobný odber Reca</span>
+              <span class="service-tag" data-i18n="srv1Tag2">Veľkoobchod &amp; B2B</span>
+            </div>
+          </article>
+
+          <!-- Service 2 (Soil Accent matching @ferollgrass bio 🟫🟫) -->
+          <article class="service-card soil-accent">
+            <div class="service-icon">🟫</div>
+            <h3 data-i18n="srv2Title">Úprava a príprava terénu</h3>
+            <p data-i18n="srv2Desc">
+              Kompletné odburinenie, hĺbkové frézovanie zakladačom trávnikov, odstránenie kameňov, dovoz kvalitného substrátu, laserové vyrovnanie a zvalcovanie lôžka.
+            </p>
+            <div class="service-tags">
+              <span class="service-tag" data-i18n="srv2Tag1">Frézovanie pôdy</span>
+              <span class="service-tag" data-i18n="srv2Tag2">Nivelácia a valcovanie</span>
+            </div>
+          </article>
+
+          <!-- Service 3 -->
+          <article class="service-card">
+            <div class="service-icon">🏡</div>
+            <h3 data-i18n="srv3Title">Odborná pokládka trávnika</h3>
+            <p data-i18n="srv3Desc">
+              Precízne ukladanie trávnych roliek na väzbu bez medzier, tvarové orezanie okolo obrubníkov, chodníkov a záhonov, aplikácia štartovacieho hnojiva a zavlaženie.
+            </p>
+            <div class="service-tags">
+              <span class="service-tag" data-i18n="srv3Tag1">Pokládka za 1 deň</span>
+              <span class="service-tag" data-i18n="srv3Tag2">Štartovacie hnojenie</span>
+            </div>
+          </article>
+
+          <!-- Service 4 -->
+          <article class="service-card">
+            <div class="service-icon">💧</div>
+            <h3 data-i18n="srv4Title">Automatické závlahové systémy</h3>
+            <p data-i18n="srv4Desc">
+              Návrh a inštalácia podzemných výsuvných postrekovačov a kvapkovej závlahy pre rovnomerné zavlažovanie novozaloženého trávnika bez námahy.
+            </p>
+            <div class="service-tags">
+              <span class="service-tag" data-i18n="srv4Tag1">Výsuvné postrekovače</span>
+              <span class="service-tag" data-i18n="srv4Tag2">Úspora vody</span>
+            </div>
+          </article>
+
+          <!-- Service 5 -->
+          <article class="service-card">
+            <div class="service-icon">🌱</div>
+            <h3 data-i18n="srv5Title">Jarná a celoročná údržba</h3>
+            <p data-i18n="srv5Desc">
+              Profesionálna jarná regenerácia po zime: vertikutácia (prevzdušnenie), vyčesanie trávnej plsti, pieskovanie, dosev a aplikácia sezónnych hnojív.
+            </p>
+            <div class="service-tags">
+              <span class="service-tag" data-i18n="srv5Tag1">Vertikutácia</span>
+              <span class="service-tag" data-i18n="srv5Tag2">Regenerácia drnu</span>
+            </div>
+          </article>
+
+          <!-- Service 6 -->
+          <article class="service-card soil-accent">
+            <div class="service-icon">🚚</div>
+            <h3 data-i18n="srv6Title">Nákladná doprava do 3,5 t</h3>
+            <p data-i18n="srv6Desc">
+              Rýchla preprava čerstvo narezaných trávnych roliek na paletách a sypkých záhradných materiálov priamo na váš pozemok v okresoch Senec, Bratislava, Galanta a Dunajská Streda.
+            </p>
+            <div class="service-tags">
+              <span class="service-tag" data-i18n="srv6Tag1">Doprava na stavbu</span>
+              <span class="service-tag" data-i18n="srv6Tag2">Čerstvosť zaručená</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         TECHNICAL SPECIFICATIONS OF CULTIVATED TURF
+         ========================================================================== -->
+    <section class="section" id="parametre">
+      <div class="container specs-wrapper">
+        <div class="specs-image-box">
+          <img src="images/project-02.jpg" alt="Detail čerstvo položeného rolovaného trávnika FEROLL GRASS s obrubníkom" width="600" height="440" />
+          <span class="specs-badge-overlay" data-i18n="specsBadge">Vlastná plantáž · Reca, okres Senec</span>
+        </div>
+
+        <div class="specs-content">
+          <span class="section-eyebrow" data-i18n="specsEyebrow">Technické parametre trávneho koberca</span>
+          <h2 class="section-title" data-i18n="specsTitle">Prečo si vybrať rolovaný trávnik FEROLL GRASS?</h2>
+          <p class="section-desc" data-i18n="specsDesc">
+            Oproti klasickému výsevu, kde čakáte mesiace a bojujete s burinou či vymývaním semien dažďom, náš predpestovaný trávnik prináša okamžitý vizuálny aj funkčný efekt.
+          </p>
+
+          <div class="specs-cards-grid">
+            <div class="spec-box">
+              <div class="spec-label" data-i18n="spec1Label">Plocha 1 rolky</div>
+              <div class="spec-value" data-i18n="spec1Value">1,0 m² (40 × 250 cm)</div>
+              <div class="spec-note" data-i18n="spec1Note">Jednoduchá manipulácia a presné ukladanie</div>
+            </div>
+            <div class="spec-box">
+              <div class="spec-label" data-i18n="spec2Label">Hrúbka a hmotnosť</div>
+              <div class="spec-value" data-i18n="spec2Value">2,0–2,5 cm · cca 18–22 kg</div>
+              <div class="spec-note" data-i18n="spec2Note">Podľa aktuálnej vlhkosti koreňového balu</div>
+            </div>
+            <div class="spec-box">
+              <div class="spec-label" data-i18n="spec3Label">Druhové zloženie</div>
+              <div class="spec-value" data-i18n="spec3Value">Lipnica lúčna + Mätonoh + Kostrava</div>
+              <div class="spec-note" data-i18n="spec3Note">Športovo-rekreačná zmes odolná záťaži</div>
+            </div>
+            <div class="spec-box">
+              <div class="spec-label" data-i18n="spec4Label">Plná zaťažiteľnosť</div>
+              <div class="spec-value" data-i18n="spec4Value">Za 14 – 21 dní</div>
+              <div class="spec-note" data-i18n="spec4Note">Okamžitý zelený vzhľad už v deň pokládky</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         INSTALLATION PROCESS (4 STEPS)
+         ========================================================================== -->
+    <section class="section-alt" id="postup">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow" data-i18n="processEyebrow">Overený technologický postup</span>
+          <h2 class="section-title" data-i18n="processTitle">Ako prebieha realizácia trávnika v 4 krokoch</h2>
+          <p class="section-desc" data-i18n="processDesc">
+            Dodržiavame prísnu agrotechnickú postupnosť, aby sa trávnikový koberec zakorenil rýchlo a rovnomerne.
+          </p>
+        </div>
+
+        <div class="process-grid">
+          <div class="process-step">
+            <div class="step-number">1</div>
+            <h3 data-i18n="step1Title">Obhliadka a príprava lôžka</h3>
+            <p data-i18n="step1Desc">
+              Zameranie plochy, odstránenie starej mačiny, frézovanie pôdy, zapracovanie kremičitého piesku/substrátu a dôkladné uvalcovanie.
+            </p>
+          </div>
+          <div class="process-step">
+            <div class="step-number">2</div>
+            <h3 data-i18n="step2Title">Ranné zrezanie v Reci</h3>
+            <p data-i18n="step2Desc">
+              Trávnik režeme na našej plantáži v Reci v deň pokládky, aby korene nestratili vitalitu a vlhkosť počas prepravy.
+            </p>
+          </div>
+          <div class="process-step">
+            <div class="step-number">3</div>
+            <h3 data-i18n="step3Title">Pokládka roliek na väzbu</h3>
+            <p data-i18n="step3Desc">
+              Ukladanie tesne k sebe v tehlovom (šachovnicovom) vzore, presné obrezanie okrajov pri dlažbe a zavlažovacích hlaviciach.
+            </p>
+          </div>
+          <div class="process-step">
+            <div class="step-number">4</div>
+            <h3 data-i18n="step4Title">Zavalcovanie a prvé poliatie</h3>
+            <p data-i18n="step4Desc">
+              Pritlačenie korienkov k podložiu valcom, aplikácia štartovacieho hnojiva a výdatná zálievka s inštruktážou pre majiteľa.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         INTERACTIVE TURF ROLL & LOGISTICS CALCULATOR
+         ========================================================================== -->
+    <section class="section" id="kalkulacka">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow" data-i18n="calcEyebrow">Interaktívny prepočet projektu</span>
+          <h2 class="section-title" data-i18n="calcTitle">Kalkulačka trávnych roliek, paliet a prípravy terénu</h2>
+          <p class="section-desc" data-i18n="calcDesc">
+            Zvoľte rozlohu vašej záhrady, mieru prípravy terénu a doplnkové služby. Výpočet jedným klikom prenesiete do nezáväzného dopytu.
+          </p>
+        </div>
+
+        <div class="calc-card">
+          <div class="calc-controls">
+            <div class="calc-group">
+              <div class="calc-label-row">
+                <label for="calcAreaSlider" class="calc-label" data-i18n="calcAreaLabel">Rozloha trávnika (vrátane odporúčaného 5 % orezu):</label>
+                <span class="calc-area-badge" id="calcAreaDisplay">250 m²</span>
+              </div>
+              <input type="range" id="calcAreaSlider" class="range-slider" min="30" max="1500" step="10" value="250" />
+            </div>
+
+            <div class="calc-group">
+              <div class="calc-label-row">
+                <span class="calc-label" data-i18n="calcModeLabel">Rozsah prác:</span>
+              </div>
+              <div class="calc-options-grid">
+                <button type="button" class="calc-option-btn" data-mode="rolls" data-i18n="calcMode1">Len odber roliek</button>
+                <button type="button" class="calc-option-btn" data-mode="laying" data-i18n="calcMode2">Rolky + Pokládka</button>
+                <button type="button" class="calc-option-btn active" data-mode="turnkey" data-i18n="calcMode3">Komplet s prípravou terénu</button>
+              </div>
+            </div>
+
+            <div class="calc-group" style="margin-bottom: 0;">
+              <div class="calc-label-row">
+                <span class="calc-label" data-i18n="calcExtrasLabel">Doplnkové služby a logistika:</span>
+              </div>
+              <div class="calc-checkbox-list">
+                <label class="calc-check-item">
+                  <input type="checkbox" id="extraEdging" checked />
+                  <span data-i18n="calcExtra1">Inštalácia neviditeľných obrubníkov a lemovania</span>
+                </label>
+                <label class="calc-check-item">
+                  <input type="checkbox" id="extraFertilizer" checked />
+                  <span data-i18n="calcExtra2">Štartovacie hnojivo + prípravok na zakorenenie</span>
+                </label>
+                <label class="calc-check-item">
+                  <input type="checkbox" id="extraDelivery" checked />
+                  <span data-i18n="calcExtra3">Doprava dodávkou do 3,5 t (Senec, BA, GA, DS a okolie)</span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="calc-results-panel">
+            <div>
+              <div class="calc-results-title" data-i18n="calcResHeader">Orientačný rozpis vášho projektu</div>
+              <div class="calc-metrics-grid">
+                <div class="calc-metric-item">
+                  <div class="calc-metric-val" id="resRollsVal">263 ks</div>
+                  <div class="calc-metric-lbl" data-i18n="calcResRollsLbl">Počet roliek (s 5 % rezervou)</div>
+                </div>
+                <div class="calc-metric-item">
+                  <div class="calc-metric-val" id="resWeightVal">5,3 t</div>
+                  <div class="calc-metric-lbl" data-i18n="calcResWeightLbl">Odhadovaná hmotnosť</div>
+                </div>
+                <div class="calc-metric-item">
+                  <div class="calc-metric-val" id="resPalletsVal">6 EUR</div>
+                  <div class="calc-metric-lbl" data-i18n="calcResPalletsLbl">Počet EUR paliet</div>
+                </div>
+                <div class="calc-metric-item">
+                  <div class="calc-metric-val" id="resTimeVal">2 – 3 dni</div>
+                  <div class="calc-metric-lbl" data-i18n="calcResTimeLbl">Čas pokládky</div>
+                </div>
+              </div>
+              <p class="calc-summary-note" data-i18n="calcResNote">
+                Presnú cenovú ponuku na m² a dopravu vám vypracuje konateľ František Gyurcsi podľa aktuálnej sezóny a stavu podložia.
+              </p>
+            </div>
+
+            <button type="button" class="calc-transfer-btn" id="calcTransferBtn" data-i18n="calcTransferBtn">
+              Preniesť špecifikáciu do dopytu →
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         AUTHENTIC PORTFOLIO GALLERY (FB & IG @ferollgrass)
+         ========================================================================== -->
+    <section class="section-alt" id="galeria">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow" data-i18n="galleryEyebrow">Reálne ukážky našej práce (@ferollgrass)</span>
+          <h2 class="section-title" data-i18n="galleryTitle">Fotogaléria z našej plantáže a realizácií u klientov</h2>
+          <p class="section-desc" data-i18n="galleryDesc">
+            Autentické zábery zo zberu trávnych kobercov v Reci a pokládok v rodinných domoch v okolí Senca a Bratislavy.
+          </p>
+        </div>
+
+        <div class="gallery-filters">
+          <button type="button" class="filter-btn active" data-filter="all" data-i18n="filterAll">Všetky zábery</button>
+          <button type="button" class="filter-btn" data-filter="farm" data-i18n="filterFarm">Produkcia &amp; Zber</button>
+          <button type="button" class="filter-btn" data-filter="laying" data-i18n="filterLaying">Pokládka &amp; Obrubníky</button>
+          <button type="button" class="filter-btn" data-filter="irrigation" data-i18n="filterIrrigation">Hotové záhrady &amp; Závlaha</button>
+        </div>
+
+        <div class="gallery-grid">
+          <!-- Photo 1: Turf farm harvest -->
+          <div class="gallery-card" data-category="farm">
+            <img src="images/hero-turf-farm.jpg" alt="Zber čerstvých trávnych roliek v Reci" loading="lazy" />
+            <div class="gallery-overlay">
+              <span class="gallery-tag" data-i18n="gal1Tag">Produkcia Reca</span>
+              <h4 data-i18n="gal1Title">Zber čerstvých trávnych roliek na našom poli</h4>
+              <p data-i18n="gal1Desc">Čerstvo narezané rolky pripravené na paletách na okamžitú expedíciu.</p>
+            </div>
+          </div>
+
+          <!-- Photo 2: Turf laying with invisible edging -->
+          <div class="gallery-card" data-category="laying">
+            <img src="images/project-02.jpg" alt="Pokládka rolovaného trávnika s neviditeľným obrubníkom" loading="lazy" />
+            <div class="gallery-overlay">
+              <span class="gallery-tag" data-i18n="gal2Tag">Pokládka &amp; Obrubníky</span>
+              <h4 data-i18n="gal2Title">Pokládka rolovaného trávnika pri rodinnom dome</h4>
+              <p data-i18n="gal2Desc">Precízne osadenie neviditeľného obrubníka a hustý trávny koberec.</p>
+            </div>
+          </div>
+
+          <!-- Photo 3: Stone patio & fence -->
+          <div class="gallery-card" data-category="laying">
+            <img src="images/project-03.jpg" alt="Rolovaný trávnik pri zámkovej dlažbe" loading="lazy" />
+            <div class="gallery-overlay">
+              <span class="gallery-tag" data-i18n="gal3Tag">Hotová záhrada</span>
+              <h4 data-i18n="gal3Title">Smaragdový trávnik pri zámkovej dlažbe a oplotení</h4>
+              <p data-i18n="gal3Desc">Čisté línie okolo terasy a betónového plotu.</p>
+            </div>
+          </div>
+
+          <!-- Photo 4: Sprinklers watering new turf -->
+          <div class="gallery-card" data-category="irrigation">
+            <img src="images/project-05.jpg" alt="Zavlažovanie čerstvo položeného trávnika" loading="lazy" />
+            <div class="gallery-overlay">
+              <span class="gallery-tag" data-i18n="gal4Tag">Závlaha v akcii</span>
+              <h4 data-i18n="gal4Title">Intenzívne zavlažovanie čerstvo položeného trávnika</h4>
+              <p data-i18n="gal4Desc">Rovnomerná zálievka výsuvnými postrekovačmi pre rýchle zakorenenie.</p>
+            </div>
+          </div>
+
+          <!-- Photo 5: Modern residential build -->
+          <div class="gallery-card" data-category="laying">
+            <img src="images/project-01.jpg" alt="Zatrávnenie záhrady pri modernej novostavbe" loading="lazy" />
+            <div class="gallery-overlay">
+              <span class="gallery-tag" data-i18n="gal5Tag">Novostavby</span>
+              <h4 data-i18n="gal5Title">Kompletné zatrávnenie záhrady pri modernej novostavbe</h4>
+              <p data-i18n="gal5Desc">Príprava svahu a pokládka trávnych roliek na kľúč.</p>
+            </div>
+          </div>
+
+          <!-- Photo 6: Gazebo & irrigation -->
+          <div class="gallery-card" data-category="irrigation">
+            <img src="images/project-07.jpg" alt="Trávnik pri drevenom altánku so závlahou" loading="lazy" />
+            <div class="gallery-overlay">
+              <span class="gallery-tag" data-i18n="gal6Tag">Rodinná záhrada</span>
+              <h4 data-i18n="gal6Title">Zelený koberec pri drevenom altánku a terase</h4>
+              <p data-i18n="gal6Desc">Okamžite pochôdzny a estetický trávnik za 1 deň.</p>
+            </div>
+          </div>
+
+          <!-- Photo 7: Courtyard with tulips -->
+          <div class="gallery-card" data-category="irrigation">
+            <img src="images/project-04.jpg" alt="Zatrávnenie dvoru so záhonmi" loading="lazy" />
+            <div class="gallery-overlay">
+              <span class="gallery-tag" data-i18n="gal7Tag">Detail pokládky</span>
+              <h4 data-i18n="gal7Title">Zatrávnenie dvoru so záhonmi a kvitnúcimi cibuľovinami</h4>
+              <p data-i18n="gal7Desc">Presné napojenie trávnika na chodníky a okrasnú výsadbu.</p>
+            </div>
+          </div>
+
+          <!-- Photo 8: Backyard lawn -->
+          <div class="gallery-card" data-category="laying">
+            <img src="images/project-08.jpg" alt="Vyrovnanie terénu a pokládka koberca v záhrade" loading="lazy" />
+            <div class="gallery-overlay">
+              <span class="gallery-tag" data-i18n="gal8Tag">Kompletná realizácia</span>
+              <h4 data-i18n="gal8Title">Vyrovnanie terénu a pokládka koberca v záhrade</h4>
+              <p data-i18n="gal8Desc">Hustý bezburinový drn pozdĺž vyvýšených kvetináčov.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         FAQ SECTION
+         ========================================================================== -->
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow" data-i18n="faqEyebrow">Praktické rady od pestovateľa</span>
+          <h2 class="section-title" data-i18n="faqTitle">Často kladené otázky o rolovaných trávnikoch</h2>
+          <p class="section-desc" data-i18n="faqDesc">
+            Všetko, čo potrebujete vedieť pred objednávkou a pokládkou trávneho koberca.
+          </p>
+        </div>
+
+        <div class="faq-list">
+          <div class="faq-item open">
+            <button type="button" class="faq-question">
+              <span data-i18n="faq1Q">Ako rýchlo po zrezaní je potrebné trávnik položiť?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer" style="max-height: 200px;">
+              <div class="faq-answer-inner" data-i18n="faq1A">
+                Rolovaný trávnik je živý organizmus. Ideálne je položiť ho a výdatne poliať do 24 hodín od zrezania (v horúcich letných dňoch do 12 hodín). Preto v FEROLL GRASS režeme trávnik v Reci vždy čerstvo ráno v deň plánovanej pokládky alebo odberu.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question">
+              <span data-i18n="faq2Q">Kedy môžem po novom trávniku prvýkrát chodiť a kosiť ho?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner" data-i18n="faq2A">
+                Ľahká chôdza je možná okamžite, avšak počas prvých 10–14 dní, kým je pôda pod kobercom silne premáčaná, odporúčame obmedziť záťaž. Prvé kosenie sa vykonáva približne po 7–10 dňoch, keď steblá narastú na výšku 8–10 cm (skracujeme maximálne o tretinu). Plná zaťažiteľnosť nastáva po 2 až 3 týždňoch.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question">
+              <span data-i18n="faq3Q">Predávate rolovaný trávnik aj bez pokládky (na osobný odber)?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner" data-i18n="faq3A">
+                Áno! Čerstvo narezané trávne rolky si môžete objednať na osobný odber priamo u nás v Reci (okres Senec), prípadne vám ich privezieme našou nákladnou dopravou do 3,5 t. Radi vám poradíme so správnou prípravou podložia.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question">
+              <span data-i18n="faq4Q">V ktorých mesiacoch sa dá rolovaný trávnik pokladať?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner" data-i18n="faq4A">
+                Sezóna pokládky trvá od skorej jari (marec/apríl) až do neskorej jesene (november), pokiaľ pôda nie je zamrznutá. Na rozdiel od výsevu je pokládka s automatickou závlahou bezproblémová aj počas letných mesiacov.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         CONTACT & QUOTE REQUEST SECTION
+         ========================================================================== -->
+    <section class="section-alt" id="kontakt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow" data-i18n="contactEyebrow">Spojte sa s nami priamo</span>
+          <h2 class="section-title" data-i18n="contactTitle">Nezáväzná konzultácia a cenová ponuka</h2>
+          <p class="section-desc" data-i18n="contactDesc">
+            Zavolajte nám alebo nám pošlite rozmery vášho pozemku. Konateľ František Gyurcsi vám osobne poradí a pripraví ponuku na mieru.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-info-card">
+            <h3 style="font-size: 1.35rem; font-weight: 800;" data-i18n="contactInfoHeading">Kontaktné a fakturačné údaje</h3>
+
+            <div class="contact-list">
+              <div class="contact-item">
+                <div class="contact-item-icon">📞</div>
+                <div>
+                  <h4 data-i18n="contactPhone1Lbl">Priamy kontakt – realizácie a objednávky (Gyurcsi)</h4>
+                  <a href="tel:+421910466999">+421 910 466 999</a>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-item-icon">☎️</div>
+                <div>
+                  <h4 data-i18n="contactPhone2Lbl">Firemná linka / Kancelária</h4>
+                  <a href="tel:+421905820319">+421 905 820 319</a>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-item-icon">✉️</div>
+                <div>
+                  <h4 data-i18n="contactEmailLbl">E-mailová adresa</h4>
+                  <a href="mailto:gyufe@azet.sk">gyufe@azet.sk</a>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-item-icon">📍</div>
+                <div>
+                  <h4 data-i18n="contactAddrLbl">Sídlo a produkcia</h4>
+                  <p data-i18n="contactAddrVal">Reca 54 (prevádzka Reca 587), 925 26 Reca, okres Senec</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="registry-box">
+              <div><strong>Obchodné meno:</strong> FEROLL GRASS s. r. o.</div>
+              <div><strong>Konateľ:</strong> František Gyurcsi</div>
+              <div><strong>IČO:</strong> 47 126 337</div>
+              <div><strong>DIČ:</strong> 2023760508</div>
+              <div><strong>IČ DPH:</strong> SK2023760508</div>
+              <div><strong>Registrácia:</strong> OR MS Bratislava III, vl. 88726/B</div>
+            </div>
+          </div>
+
+          <div class="contact-form-card">
+            <h3 style="font-size: 1.35rem; font-weight: 800; margin-bottom: 20px;" data-i18n="formHeading">Rýchly dopytový formulár</h3>
+            <form id="quoteForm">
+              <div class="form-grid">
+                <div class="form-group">
+                  <label for="inquiryName" data-i18n="formNameLbl">Meno a priezvisko *</label>
+                  <input type="text" id="inquiryName" class="form-control" required data-i18n-placeholder="formNamePh" placeholder="Napr. Ján Kováč" />
+                </div>
+                <div class="form-group">
+                  <label for="inquiryPhone" data-i18n="formPhoneLbl">Telefónne číslo *</label>
+                  <input type="tel" id="inquiryPhone" class="form-control" required data-i18n-placeholder="formPhonePh" placeholder="+421 9XX XXX XXX" />
+                </div>
+                <div class="form-group">
+                  <label for="inquiryEmail" data-i18n="formEmailLbl">E-mail</label>
+                  <input type="email" id="inquiryEmail" class="form-control" data-i18n-placeholder="formEmailPh" placeholder="vas@email.sk" />
+                </div>
+                <div class="form-group">
+                  <label for="inquiryLocation" data-i18n="formLocationLbl">Obec / Mesto realizácie *</label>
+                  <input type="text" id="inquiryLocation" class="form-control" required data-i18n-placeholder="formLocationPh" placeholder="Napr. Senec, Bernolákovo, Pezinok..." />
+                </div>
+                <div class="form-group full">
+                  <label for="inquiryMessage" data-i18n="formMessageLbl">Špecifikácia plochy a požadovaných prác *</label>
+                  <textarea id="inquiryMessage" rows="4" class="form-control" required data-i18n-placeholder="formMessagePh" placeholder="Uveďte približnú výmeru v m², či máte záujem len o trávne rolky alebo aj o úpravu terénu a pokládku..."></textarea>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary" style="width: 100%;" data-i18n="formSubmitBtn">
+                Odoslať nezáväzný dopyt
+              </button>
+              <div class="form-status" id="formStatus" data-i18n="formSuccessMsg">
+                Ďakujeme! Váš dopyt bol pripravený v e-mailovom klientovi pre gyufe@azet.sk. Ozveme sa vám čo najskôr.
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       LIGHTBOX MODAL
+       ========================================================================== -->
+  <div class="lightbox" id="lightboxModal" role="dialog" aria-modal="true" aria-label="Náhľad fotografie">
+    <div class="lightbox-content">
+      <button type="button" class="lightbox-close" id="lightboxClose" aria-label="Zavrieť">&times;</button>
+      <img src="" alt="" id="lightboxImg" />
+      <div class="lightbox-caption">
+        <strong id="lightboxTitle"></strong>
+        <span style="font-size: 0.82rem; color: var(--text-muted);">FEROLL GRASS s.r.o. · Reca</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 14px;">
+            <img src="images/logo-avatar.jpg" alt="FEROLL GRASS Logo" width="42" height="42" style="border-radius: 50%; border: 2px solid #7cb32f;" />
+            <span style="font-size: 1.2rem; font-weight: 800; color: #ffffff;">FERO<span style="color: #8bc339;">LL</span> GRASS s.r.o.</span>
+          </div>
+          <p style="font-size: 0.88rem; line-height: 1.65;" data-i18n="footerTagline">
+            Slovenský pestovateľ a realizátor rolovaných trávnikov so sídlom v Reci (okres Senec). Poctivá práca od prípravy terénu až po hustý zelený koberec.
+          </p>
+          <div class="social-pills">
+            <a href="https://www.facebook.com/FerollGrass" target="_blank" rel="noopener" class="social-pill">Facebook</a>
+            <a href="https://www.instagram.com/ferollgrass/" target="_blank" rel="noopener" class="social-pill">Instagram @ferollgrass</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 data-i18n="footerNavTitle">Navigácia</h4>
+          <div class="footer-links">
+            <a href="#sluzby" data-i18n="navServices">Služby</a>
+            <a href="#parametre" data-i18n="navSpecs">O trávniku</a>
+            <a href="#postup" data-i18n="navProcess">Postup</a>
+            <a href="#kalkulacka" data-i18n="navCalculator">Kalkulačka m²</a>
+            <a href="#galeria" data-i18n="navGallery">Realizácie</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 data-i18n="footerServicesTitle">Naše služby</h4>
+          <div class="footer-links">
+            <a href="#sluzby" data-i18n="srv1Title">Produkcia a predaj rolovanej trávy</a>
+            <a href="#sluzby" data-i18n="srv2Title">Úprava a príprava terénu</a>
+            <a href="#sluzby" data-i18n="srv3Title">Odborná pokládka trávnika</a>
+            <a href="#sluzby" data-i18n="srv4Title">Automatické závlahové systémy</a>
+            <a href="#sluzby" data-i18n="srv5Title">Jarná a celoročná údržba</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 data-i18n="footerRegionTitle">Pôsobnosť</h4>
+          <p style="font-size: 0.88rem; line-height: 1.6; margin-bottom: 12px;" data-i18n="footerRegionText">
+            Reca, Senec, Bratislava a okolie, Pezinok, Šamorín, Galanta, Sládkovičovo, Dunajská Streda, Trnava.
+          </p>
+          <p style="font-size: 0.85rem; color: #a5d664; font-weight: 700;">
+            📞 +421 910 466 999 · ✉️ gyufe@azet.sk
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span data-i18n="footerRights">© 2013–2026 FEROLL GRASS s. r. o. Všetky práva vyhradené.</span>
+        <span>IČO: 47 126 337 · DIČ: 2023760508 · IČ DPH: SK2023760508</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/translations.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
