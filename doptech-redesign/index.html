@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="sk" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DOPTECH, s.r.o. | Nákladná doprava s hydraulickou rukou (do 25,6 m / 15 t) · Kráľová pri Senci</title>
+  <meta name="description" content="DOPTECH, s.r.o. — Špecializovaná cestná nákladná doprava, nadrozmerné prepravy a manipulácia s hydraulickou rukou (VOLVO FH 16 HMF 5020, VOLVO FM 9 Palfinger PK 42502 s dosahom 25,6 m, DAF XF 105, DAF CF 85)." />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Top Emergency Dispatch & Motto Bar -->
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <div class="topbar-left">
+        <span data-i18n="topbar_motto">„NAŠA PRÁCA NÁS BAVÍ“ · Cestná nákladná doprava a práce s hydraulickou rukou od roku 2013</span>
+      </div>
+      <div class="topbar-right">
+        <span>📍 <span data-i18n="topbar_location">Kráľová pri Senci 1516 (okres Senec)</span></span>
+        <span>📞 <a href="tel:+421911108191">+421 911 108 191</a> · <a href="tel:+421222200929">+421 2/222 009 29</a></span>
+        <span>✉️ <a href="mailto:latinak@doptech.sk">latinak@doptech.sk</a></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sticky Navigation Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#" class="brand-link" aria-label="DOPTECH, s.r.o. Domov">
+        <div class="brand-logo-wrap">
+          <img src="images/logo-doptech.jpg" alt="DOPTECH s.r.o. logo" class="brand-logo" width="128" height="58" />
+        </div>
+        <div class="brand-text-group">
+          <span class="brand-name">DOPTECH, s.r.o.</span>
+          <span class="brand-tagline">HYDRAULICKÉ RUKY &amp; NADROZMERY</span>
+        </div>
+      </a>
+
+      <nav aria-label="Hlavná navigácia">
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#services" data-i18n="nav_services">Služby</a></li>
+          <li><a href="#fleet" data-i18n="nav_fleet">Naša technika</a></li>
+          <li><a href="#calculator" data-i18n="nav_calculator">Kalkulátor &amp; Cenník</a></li>
+          <li><a href="#projects" data-i18n="nav_projects">Naša práca (2013–2025)</a></li>
+          <li><a href="#about" data-i18n="nav_about">O nás &amp; CMR</a></li>
+          <li><a href="#contact" data-i18n="nav_contact">Kontakt</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-controls">
+        <!-- Quad-Lingual Switcher (SK / DE / EN / HU) -->
+        <div class="lang-switcher" role="group" aria-label="Výber jazyka">
+          <button type="button" class="lang-btn active" data-lang="sk" title="Slovenčina">SK</button>
+          <button type="button" class="lang-btn" data-lang="de" title="Deutsch">DE</button>
+          <button type="button" class="lang-btn" data-lang="en" title="English">EN</button>
+          <button type="button" class="lang-btn" data-lang="hu" title="Magyar">HU</button>
+        </div>
+
+        <!-- Light / Dark Theme Switcher -->
+        <button type="button" class="theme-btn" id="theme-toggle-btn" aria-label="Prepnúť svetlý a tmavý režim">
+          <span id="theme-icon">🌙</span>
+          <span data-i18n="theme_toggle_label">Režim</span>
+        </button>
+
+        <a href="#contact" class="btn btn-primary btn-sm" data-i18n="nav_cta">Objednať dopravu</a>
+
+        <button type="button" class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="eyebrow-badge">
+            <span>🏗️</span>
+            <span data-i18n="hero_badge">Špecializovaná doprava s hydraulickými rukami · SR &amp; Stredná Európa</span>
+          </div>
+          <h1 class="hero-title" data-i18n="hero_title">
+            Ťažká nákladná doprava a výšková manipulácia s hydraulickou rukou až do 25,6 m
+          </h1>
+          <p class="hero-subtitle" data-i18n="hero_subtitle">
+            Od roku 2013 spoľahlivo prepravujeme a vykladáme lešenie, debnenie (PERI, DOKA), stavebné kontajnery, pracovné plošiny, krovy a nadrozmerné náklady. Vodič sa Vám ozve do niekoľkých minút od objednávky.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#calculator" class="btn btn-primary" data-i18n="hero_cta_primary">Spočítať cenu &amp; vybrať vozidlo</a>
+            <a href="#fleet" class="btn btn-outline" data-i18n="hero_cta_secondary">Preskúmať autopark (4 súpravy)</a>
+          </div>
+
+          <div class="dispatch-strip">
+            <div>
+              <div class="dispatch-strip-label" data-i18n="hero_dispatch_label">Priamy dispečing (Miroslav Latinák):</div>
+              <a href="tel:+421911108191" class="dispatch-phone">📞 +421 911 108 191</a>
+            </div>
+            <div style="border-left: 1px solid var(--border-color); padding-left: 14px;">
+              <div class="dispatch-strip-label">E-mail &amp; pevná linka:</div>
+              <a href="mailto:latinak@doptech.sk" style="font-weight: 700; font-size: 0.92rem;">latinak@doptech.sk</a> · <span style="font-size: 0.88rem;">02/222 009 29</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-photo-frame">
+            <img src="images/nbs-bratislava-25m.jpg" alt="VOLVO FH 16 s hydraulickou rukou HMF 5020 pri vykládke na Národnú banku Slovenska v Bratislave (25 m)" />
+            <div class="hero-photo-caption">
+              <div>
+                <strong>VOLVO FH 16 750 · HR HMF 5020-K4 &amp; Palfinger PK 42502</strong>
+                <span>Výšková vykládka lešenia a žalúzií na terasu NBS Bratislava (cca 25 m)</span>
+              </div>
+              <span class="range-badge" style="background:#ea580c; color:#fff;">MAX 15 t / 25,6 m</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Key Metrics Bar -->
+      <div class="stats-section">
+        <div class="stat-card">
+          <div class="stat-val" data-i18n="stat_1_val">25,6 m</div>
+          <div class="stat-lbl" data-i18n="stat_1_lbl">Maximálny dosah HR (Palfinger PK 42502) pre vykládky na strechy</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-val" data-i18n="stat_2_val">15 000 kg</div>
+          <div class="stat-lbl" data-i18n="stat_2_lbl">Max. zdvih hydraulickej ruky HMF 5020-K4 (na 2,0 m)</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-val" data-i18n="stat_3_val">25 000 kg</div>
+          <div class="stat-lbl" data-i18n="stat_3_lbl">Maximálna nosnosť súpravy auto + príves (13,6 m ložnej dĺžky)</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-val" data-i18n="stat_4_val">100+ klientov</div>
+          <div class="stat-lbl" data-i18n="stat_4_lbl">Overený partner pre PERI, STRABAG, DOKA, NBS, Nemocnicu Bory a ŽSR</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Services Section -->
+  <section class="section" id="services">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow" data-i18n="services_eyebrow">Komplexné dopravné a žeriavnické služby</span>
+        <h2 class="section-title" data-i18n="services_title">Preprava a presná manipulácia bez potreby autožeriavu</h2>
+        <p class="section-subtitle" data-i18n="services_subtitle">
+          Spojením ťažkého nákladného vozidla a výkonnej hydraulickej ruky šetríte náklady na samostatný žeriav aj čas na stavbe.
+        </p>
+      </div>
+
+      <div class="services-grid">
+        <article class="service-card">
+          <div class="service-icon">🏗️</div>
+          <h3 data-i18n="srv_1_title">Práce s hydraulickou rukou (HR)</h3>
+          <p data-i18n="srv_1_desc">
+            Nakládka, vykládka a montážne osádzanie bremien s dosahom až 25,6 m (Palfinger PK 42502) a nosnosťou až 15 t (HMF 5020-K4). Vykládka štrku, lešenia a žalúzií priamo na strechy a terasy budov.
+          </p>
+        </article>
+
+        <article class="service-card">
+          <div class="service-icon">🧱</div>
+          <h3 data-i18n="srv_2_title">Lešenie, debnenie a stavebný materiál</h3>
+          <p data-i18n="srv_2_desc">
+            Od roku 2014 víťaz dopravného tendra PERI. Každodenná logistika debnenia, lešenia, oceľových konštrukcií, reziva, krovov a betónových zvodidiel (6,5 t) po celom Slovensku a v okolitých štátoch.
+          </p>
+        </article>
+
+        <article class="service-card">
+          <div class="service-icon">📦</div>
+          <h3 data-i18n="srv_3_title">Kontajnery, bunkoviská a nadrozmery</h3>
+          <p data-i18n="srv_3_desc">
+            Prevoz a osádzanie obytných, skladových a technologických kontajnerov, záhradných domčekov, 40 000 l nádrží, montovaných hál a nadrozmerných nákladov s kompletnou asistenciou.
+          </p>
+        </article>
+
+        <article class="service-card">
+          <div class="service-icon">🚜</div>
+          <h3 data-i18n="srv_4_title">Preprava strojov a pracovných plošín</h3>
+          <p data-i18n="srv_4_desc">
+            Bezpečné naloženie a prevoz pracovných plošín (do 6,5 t), vysokozdvižných vozíkov (VZV), výrobných strojov, sústruhov, príslušenstva k žeriavom a vyprosťovanie techniky.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Fleet & Crane Load Charts Section -->
+  <section class="section section-alt" id="fleet">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow" data-i18n="fleet_eyebrow">Naša technika · Špecifikácie &amp; záťažové diagramy</span>
+        <h2 class="section-title" data-i18n="fleet_title">Vlastný vozový park VOLVO a DAF s hydraulickými rukami</h2>
+        <p class="section-subtitle" data-i18n="fleet_subtitle">
+          Vyberte si vhodnú súpravu podľa dĺžky ložnej plochy, užitočnej hmotnosti alebo požadovaného vyloženia hydraulickej ruky.
+        </p>
+      </div>
+
+      <div class="fleet-grid" id="fleet-grid">
+        <!-- Populated dynamically by js/app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive 2025 Price & Crane Load Calculator -->
+  <section class="section" id="calculator">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow" data-i18n="calc_eyebrow">Oficiálny Cenník 2025 &amp; Interaktívny konfigurátor</span>
+        <h2 class="section-title" data-i18n="calc_title">Kalkulátor prepravy, vyloženia HR a okamžitý odhad ceny</h2>
+        <p class="section-subtitle" data-i18n="calc_subtitle">
+          Zadajte parametre Vášho nákladu, požadované vyloženie hydraulickej ruky a trasu. Systém okamžite overí vhodnosť súpravy podľa záťažového diagramu a vypočíta orientačnú cenu bez DPH.
+        </p>
+      </div>
+
+      <div class="calculator-layout">
+        <!-- Left Input Panel -->
+        <div class="calc-panel">
+          <div class="calc-step-heading" data-i18n="calc_step1_title">1. Výber vozidla a konfigurácie</div>
+
+          <div class="form-group">
+            <label for="calc-vehicle-select" data-i18n="calc_vehicle_lbl">Zvoľte vozidlo / súpravu:</label>
+            <select id="calc-vehicle-select" class="form-control"></select>
+          </div>
+
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label for="calc-mode-select" data-i18n="calc_mode_lbl">Režim prepravy:</label>
+              <select id="calc-mode-select" class="form-control">
+                <option value="solo" data-i18n="calc_mode_solo">Sólo auto / ťahač s návesom (1,60 € / km)</option>
+                <option value="combo" selected data-i18n="calc_mode_combo">Súprava auto + príves (1,80 € / km · vyššia nosnosť)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="calc-distance-input" data-i18n="calc_distance_lbl">Celková vzdialenosť (vrátane príjazdu/návratu v km):</label>
+              <input type="number" id="calc-distance-input" class="form-control" value="80" min="1" max="3000" step="5" />
+            </div>
+          </div>
+
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label for="calc-crane-hours-input" data-i18n="calc_crane_hours_lbl">Predpokladaný čas práce s hydraulickou rukou (hod.):</label>
+              <input type="number" id="calc-crane-hours-input" class="form-control" value="2" min="0" max="48" step="0.5" />
+            </div>
+
+            <div class="form-group">
+              <label for="calc-wait-hours-input" data-i18n="calc_wait_hours_lbl">Nakládka / vykládka / čakanie bez použitia HR (30 € / hod.):</label>
+              <input type="number" id="calc-wait-hours-input" class="form-control" value="0" min="0" max="48" step="0.5" />
+            </div>
+          </div>
+
+          <div class="calc-step-heading" style="margin-top: 22px;" data-i18n="calc_step2_title">2. Kontrola zdvihu hydraulickej ruky (Load Check)</div>
+
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label for="calc-radius-range" data-i18n="calc_radius_lbl">Požadované vyloženie (vzdialenosť od osi HR v metroch):</label>
+              <div class="range-row">
+                <input type="range" id="calc-radius-range" min="2" max="25.6" step="0.2" value="7.8" />
+                <span class="range-badge" id="calc-radius-badge">7.8 m</span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="calc-weight-input" data-i18n="calc_weight_lbl">Hmotnosť zdvíhaného bremena (kg):</label>
+              <input type="number" id="calc-weight-input" class="form-control" value="3200" min="50" max="16000" step="100" />
+            </div>
+          </div>
+
+          <div id="calc-load-status" class="load-status-box load-status-ok"></div>
+        </div>
+
+        <!-- Right Summary & Official 2025 Price List Panel -->
+        <div class="calc-summary-panel">
+          <h3 style="font-size: 1.22rem; font-weight: 850; margin-bottom: 14px;" data-i18n="calc_res_title">Orientačná kalkulácia (Cenník 2025)</h3>
+
+          <div class="calc-result-row">
+            <span data-i18n="calc_res_transport">Jazda (kilometrovné):</span>
+            <strong id="res-transport-val">144.00 €</strong>
+          </div>
+          <div class="calc-result-row">
+            <span data-i18n="calc_res_crane">Práca s hydraulickou rukou:</span>
+            <strong id="res-crane-val">100.00 €</strong>
+          </div>
+          <div class="calc-result-row">
+            <span data-i18n="calc_res_waiting">Manipulácia / čakanie bez HR:</span>
+            <strong id="res-waiting-val">0.00 €</strong>
+          </div>
+
+          <div class="calc-total-box">
+            <span style="font-weight: 700;" data-i18n="calc_res_total">Celkom odhad (bez DPH):</span>
+            <span class="calc-total-val" id="res-total-val">244.00 €</span>
+          </div>
+
+          <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 18px;" data-i18n="calc_res_note">
+            * Ceny sú uvedené bez DPH podľa oficiálneho cenníka DOPTECH 2025 (vyhotovil Miroslav Latinák). Konečnú cenu dohodnete priamo pri telefonickom potvrdení.
+          </p>
+
+          <button type="button" class="btn btn-primary" style="width: 100%;" id="calc-transfer-btn" data-i18n="calc_transfer_btn">
+            Preniesť kalkuláciu do objednávky dopravy ↓
+          </button>
+
+          <!-- Original 2025 Rate Card Thumbnail Trigger -->
+          <div class="pricelist-preview-card" id="open-pricelist-modal" role="button" tabindex="0">
+            <img src="images/cennik-2025.jpg" alt="Cenník DOPTECH 2025" loading="lazy" />
+            <div>
+              <strong style="display:block; font-size:0.95rem;" data-i18n="calc_pricelist_card_title">Originálny Cenník DOPTECH 2025</strong>
+              <span style="font-size:0.82rem; color:var(--text-secondary);" data-i18n="calc_pricelist_card_sub">Kliknutím zobrazíte plný originálny prehľad sadzieb a nosností</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- How Booking Works (3 Steps from "Objednaj si dopravu") -->
+      <div class="steps-grid">
+        <div class="step-card">
+          <h3 data-i18n="how_1_title">1. Objednáte si vozidlo a dohodnete cenu</h3>
+          <p data-i18n="how_1_desc">Zavoláte na +421 911 108 191 alebo odošlete dopyt s parametrami nákladu. Okamžite potvrdíme dostupnosť a férovú cenu.</p>
+        </div>
+        <div class="step-card">
+          <h3 data-i18n="how_2_title">2. Do pár minút sa Vám ozve priamo šofér</h3>
+          <p data-i18n="how_2_desc">Poradíme Vám s výberom optimálneho vozidla a spôsobom uviazania či vykládky. V priebehu niekoľkých minút Vás kontaktuje vodič pridelenej súpravy.</p>
+        </div>
+        <div class="step-card">
+          <h3 data-i18n="how_3_title">3. Bezpečná preprava a presná vykládka HR</h3>
+          <p data-i18n="how_3_desc">Náš tím profesionálov s dlhoročnou praxou náklad bezpečne naloží, prepraví v rámci SR alebo EÚ a vyloží presne na miesto určenia.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project Chronicle & Gallery (2013–2025) -->
+  <section class="section section-alt" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow" data-i18n="proj_eyebrow">Naša práca nás baví · Chronológia a fotogaléria 2013 – 2025</span>
+        <h2 class="section-title" data-i18n="proj_title">Stovky zrealizovaných stavieb po celom Slovensku a v zahraničí</h2>
+        <p class="section-subtitle" data-i18n="proj_subtitle">
+          Od prvého prevozu oplotenia v roku 2013 cez víťazstvo v tendri PERI (2014) až po výškové vykládky na NBS Bratislava, Nemocnicu Bory a diaľnice D1/D4R7.
+        </p>
+      </div>
+
+      <div class="filter-bar" role="group" aria-label="Filter projektov">
+        <button type="button" class="filter-btn active" data-filter="all" data-i18n="filter_all">Všetky realizácie</button>
+        <button type="button" class="filter-btn" data-filter="rooftop" data-i18n="filter_rooftop">Výškové vykládky &amp; žeriav (HR)</button>
+        <button type="button" class="filter-btn" data-filter="scaffolding" data-i18n="filter_scaffolding">Lešenie &amp; debnenie (PERI/DOKA)</button>
+        <button type="button" class="filter-btn" data-filter="oversize" data-i18n="filter_oversize">Kontajnery &amp; nadrozmery</button>
+        <button type="button" class="filter-btn" data-filter="machinery" data-i18n="filter_machinery">Plošiny &amp; ťažké stroje</button>
+        <button type="button" class="filter-btn" data-filter="infrastructure" data-i18n="filter_infrastructure">Mosty, diaľnice &amp; podujatia</button>
+      </div>
+
+      <div class="projects-grid" id="projects-grid">
+        <!-- Populated dynamically by js/app.js -->
+      </div>
+
+      <div class="timeline-box">
+        <h3 style="font-size: 1.25rem; font-weight: 850;" data-i18n="timeline_heading">Kľúčové míľniky našej spoločnosti (2013 – 2025)</h3>
+        <div class="timeline-grid" id="timeline-grid">
+          <!-- Populated dynamically by js/app.js -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Us & International CMR Terms -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow" data-i18n="about_eyebrow">O spoločnosti &amp; medzinárodné garancie</span>
+        <h2 class="section-title" data-i18n="about_title">DOPTECH, s.r.o. — Spoľahlivosť, prax a dôslednosť od roku 2013</h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="quote-box">
+          <blockquote data-i18n="about_lead">
+            „Naša spoločnosť DOPTECH, s.r.o. vykonáva svoju činnosť v oblasti cestnej dopravy od roku 2013. Naše služby poskytujeme už viac ako 100 klientom v rámci Slovenskej republiky a v poslednom čase aj v rámci okolitých štátov. Budeme radi, keď si sami vyskúšate našu profesionalitu a dôslednosť.“
+          </blockquote>
+          <div class="quote-author" data-i18n="about_author">— Miroslav Latinák, konateľ spoločnosti DOPTECH, s.r.o.</div>
+          <p style="font-size: 0.94rem; color: var(--text-secondary);" data-i18n="about_p1">
+            Zárukou kvality je náš tím profesionálov, ktorí sú odborníkmi v oblasti dopravy a manipulácie s ťažkou technikou. Organizačný model spoločnosti vychádza z dlhoročnej praxe zakladateľa a z neustáleho zvyšovania kvalifikácie našich vodičov a operátorov hydraulických rúk.
+          </p>
+        </div>
+
+        <div class="cmr-card">
+          <h3 style="font-size: 1.2rem; font-weight: 850; margin-bottom: 10px;" data-i18n="cmr_title">Všeobecné obchodné podmienky &amp; Dohovor CMR</h3>
+          <p style="font-size: 0.92rem; color: var(--text-secondary);" data-i18n="cmr_desc">
+            Všetky naše vnútroštátne a medzinárodné prepravy sa riadia prísnymi štandardmi a Dohovorom o prepravnej zmluve v medzinárodnej cestnej doprave nákladov (CMR – 7 kapitol podľa ČESMAD Slovakia):
+          </p>
+          <ul class="cmr-list">
+            <li data-i18n="cmr_b1">Jasne definované povinnosti zmluvného dopravcu pri prevzatí, uložení a zabezpečení zásielky.</li>
+            <li data-i18n="cmr_b2">Odborná nakládka a vykládka hydraulickou rukou na základe dohody s príkazcom v objednávke.</li>
+            <li data-i18n="cmr_b3">Plná platnosť Dohovoru CMR pri cezhraničných prepravách do Rakúska (AT), Česka (CZ) a Maďarska (HU).</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact & Direct Booking Section -->
+  <section class="section section-alt" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow" data-i18n="contact_eyebrow">Kontakt &amp; Rýchla objednávka dopravy</span>
+        <h2 class="section-title" data-i18n="contact_title">Potrebujete kamión s hydraulickou rukou? Ozvite sa nám</h2>
+        <p class="section-subtitle" data-i18n="contact_subtitle">
+          Zavolajte priamo konateľovi a dispečerovi Miroslavovi Latinákovi alebo odošlite nezáväzný dopyt s parametrami Vášho nákladu.
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info-card">
+          <div class="contact-item">
+            <div class="contact-item-label" data-i18n="contact_hq_lbl">Sídlo spoločnosti a prevádzka:</div>
+            <div class="contact-item-val">DOPTECH, s.r.o.<br />Kráľová pri Senci 1516, 900 50 Kráľová pri Senci, Slovensko</div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-item-label" data-i18n="contact_phones_lbl">Nonstop dispečing &amp; kancelária:</div>
+            <div class="contact-item-val">
+              📱 <a href="tel:+421911108191">+421 911 108 191</a> (Miroslav Latinák)<br />
+              ☎️ <a href="tel:+421222200929">+421 2 / 222 009 29</a>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-item-label" data-i18n="contact_email_lbl">E-mailový kontakt:</div>
+            <div class="contact-item-val">✉️ <a href="mailto:latinak@doptech.sk">latinak@doptech.sk</a></div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-item-label" data-i18n="contact_reg_lbl">Fakturačné a registrové údaje:</div>
+            <div class="contact-item-val" style="font-size: 0.92rem;">
+              IČO: 47 592 877 · DIČ: 2023969409 · IČ DPH: SK2023969409
+            </div>
+          </div>
+
+          <iframe
+            class="map-embed"
+            title="Mapa sídla DOPTECH, s.r.o. Kráľová pri Senci"
+            loading="lazy"
+            src="https://www.openstreetmap.org/export/embed.html?bbox=17.415%2C48.185%2C17.465%2C48.215&amp;layer=mapnik&amp;marker=48.2005%2C17.4412">
+          </iframe>
+        </div>
+
+        <div class="contact-form-card">
+          <h3 style="font-size: 1.25rem; font-weight: 850; margin-bottom: 18px;" data-i18n="form_title">Nezáväzná objednávka dopravy / Dopyt na cenu</h3>
+          <form id="dispatch-booking-form">
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label for="form-name-input" data-i18n="form_name">Meno a priezvisko / Spoločnosť *</label>
+                <input type="text" id="form-name-input" class="form-control" required placeholder="napr. Ing. Peter Novák / Stavba s.r.o." />
+              </div>
+              <div class="form-group">
+                <label for="form-phone-input" data-i18n="form_phone">Telefónne číslo (šofér sa Vám ozve) *</label>
+                <input type="tel" id="form-phone-input" class="form-control" required placeholder="+421 9XX XXX XXX" />
+              </div>
+            </div>
+
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label for="form-email-input" data-i18n="form_email">E-mailová adresa *</label>
+                <input type="email" id="form-email-input" class="form-control" required placeholder="vas@email.sk" />
+              </div>
+              <div class="form-group">
+                <label for="form-vehicle-select" data-i18n="form_vehicle">Preferované vozidlo / súprava</label>
+                <select id="form-vehicle-select" class="form-control"></select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="form-route-input" data-i18n="form_route">Miesto nakládky → Miesto vykládky</label>
+              <input type="text" id="form-route-input" class="form-control" placeholder="napr. Senec (PERI) → Bratislava Staré Mesto" />
+            </div>
+
+            <div class="form-group">
+              <label for="form-cargo-textarea" data-i18n="form_cargo">Popis nákladu, hmotnosť, rozmery a vyloženie HR *</label>
+              <textarea id="form-cargo-textarea" class="form-control" rows="5" required placeholder="Uveďte druh nákladu (kontajner, lešenie, krov, stroj), hmotnosť bremena a do akej vzdialenosti/výšky je potrebná vykládka hydraulickou rukou..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%;" data-i18n="form_submit">
+              Odoslať dopyt na dispečing
+            </button>
+
+            <div id="form-feedback" class="load-status-box load-status-ok" style="display: none; margin-top: 14px;"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal for Original 2025 Price List -->
+  <div class="modal-backdrop" id="pricelist-modal" role="dialog" aria-modal="true" aria-label="Cenník DOPTECH 2025">
+    <div class="modal-content">
+      <button type="button" class="modal-close" id="close-pricelist-modal">✕ Zavrieť</button>
+      <h3 style="margin-bottom: 12px;">CENNÍK DOPTECH 2025 (Miroslav Latinák)</h3>
+      <img src="images/cennik-2025.jpg" alt="Cenník DOPTECH 2025 plné rozlíšenie" />
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div style="max-width: 540px;">
+          <strong style="color: #ffffff; font-size: 1.15rem;">DOPTECH, s.r.o. · Kráľová pri Senci 1516</strong>
+          <p style="font-size: 0.88rem; margin-top: 6px;" data-i18n="footer_desc">
+            Špecializovaná cestná nákladná doprava, nadrozmerné prepravy a manipulácia s hydraulickými rukami (VOLVO &amp; DAF). Prioritou našej spoločnosti sú spoľahlivosť a kvalita našich služieb.
+          </p>
+        </div>
+        <div>
+          <a href="tel:+421911108191" class="btn btn-primary btn-sm">📞 +421 911 108 191</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2013 – 2026 DOPTECH, s.r.o. (IČO: 47 592 877). <span data-i18n="footer_rights">Všetky práva vyhradené.</span></span>
+        <span>SK / DE / EN / HU · Light &amp; Dark Dispatch Portal</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/fleet-data.js"></script>
+  <script src="js/translations.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

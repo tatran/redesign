@@ -1,0 +1,36 @@
+Predmet: Návrh modernej viacjazyčnej online prezentácie & kalkulátora prepravy s HR | DOPTECH, s.r.o. (SK / DE / EN / HU · Svetlý + Tmavý režim)
+Komu: latinak@doptech.sk
+
+Vážený pán Latinák, vážený tím spoločnosti DOPTECH, s.r.o.,
+
+Vaša práca od roku 2013 – od víťazstva v dopravnom tendri pre PERI v roku 2014 cez stovky zrealizovaných stavieb (Nemocnica Bory, Národná banka Slovenska – výškové vykládky do 25 m, Bratislavský hrad, SNG, Mlynské Nivy, Most Komárno, D1/D4R7, Festival Pohoda) až po najnovšie rozšírenie vozového parku o ťahač VOLVO FH 16 s hydraulickou rukou HMF 5020-K4 (zdvih 15 t) – je skvelou vizitkou poctivej slovenskej dopravnej firmy, ktorú práca naozaj baví.
+
+Pri návšteve Vášho súčasného webu na doptech.sk som si však všimol niekoľko technických obmedzení, ktoré stavbyvedúcim a objednávateľom sťažujú rýchlu orientáciu na mobiloch:
+
+1. Cenník 2025 je vložený len ako jeden naskenovaný obrázok: Zákazník na stavbe si na mobile ťažko približuje tabuľku nosností hydraulických rúk (Palfinger PK 42502, HMF 5020-K4, MKG 195 HP) a nemôže si okamžite prepočítať orientačnú cenu jazdy a práce s HR.
+2. Úvodná stránka načítava vyše 180 fotografií naraz (roky 2013 – 2025): Dlhé nekategorizované rolovanie bez filtrov spomaľuje načítanie na mobilných dátach a skrýva Vaše najnovšie vlajkové realizácie (napr. VOLVO FH 16 či vykládky na NBS Bratislava) úplne naspodku stránky.
+3. Na podstránke „Objednaj si dopravu“ chýba interaktívny formulár: Stavbyvedúci nemôže jedným klikom odoslať dopyt s parametrami bremena, vyložením HR a trasou.
+4. Nezabezpečený protokol HTTP a len slovenská verzia: Keďže čoraz častejšie jazdíte aj v rámci okolitých štátov (Rakúsko, Česko, Maďarsko), štvorjazyčná prezentácia (SK / DE / EN / HU) výrazne zvyšuje dôveryhodnosť u zahraničných stavieb a špedícií.
+
+Aby som Vám neponúkal len teoretické nápady, pripravil som pre Vás rovno hotový, funkčný interaktívny prototyp nového webu:
+
+👉 Otvoriť živý interaktívny prototyp DOPTECH, s.r.o. online:
+https://livingpixelstudios.com/redesign/doptech/
+
+Čo pripravený redesign prototyp pre DOPTECH, s.r.o. prináša:
+- Interaktívny Cenník 2025 & Kalkulátor zdvihu HR (Load Check): Klient si navolí vzdialenosť v km, hodiny práce s HR, hmotnosť bremena a vyloženie (2 m až 25,6 m). Systém okamžite overí, či bremeno zvládne Palfinger PK 42502, HMF 5020-K4 alebo MKG 195 HP, vypočíta orientačnú cenu a prenesie údaje do objednávky.
+- Prehľadné karty všetkých 4 súprav VOLVO & DAF: Jasne štruktúrované rozmery ložných plôch (6,5 m / 6,8 m / 13,6 m), nosnosti (7 t až 25 t) a interaktívne záťažové diagramy pre VOLVO FH 16 + HMF 5020, VOLVO FM 9 + Palfinger 42502, DAF XF 105 + MKG 195 a DAF CF 85.
+- Filtrovaná galéria stavieb (2013 – 2025) & míľniky firmy: Okamžité filtrovanie Vašich najlepších referencií podľa zamerania (Výškové vykládky do 25 m, Lešenie & debnenie PERI/DOKA, Kontajnery & nadrozmery, Pracovné plošiny, Mosty & diaľnice).
+- 4 jazyky (SK / DE / EN / HU) + Svetlý a Tmavý režim (Dark Mode): Profesionálny preklad dopravnej a žeriavnickej terminológie vrátane Dohovoru CMR a pohodlné prepínanie denného a nočného dispečerského režimu.
+
+Návrh nezáväzného ďalšieho kroku:
+Rád Vám tento prototyp bezplatne a nezáväzne predstavím telefonicky alebo osobne v Kráľovej pri Senci. Ak sa Vám návrh bude páčiť, vieme ho kedykoľvek nasadiť priamo na Vašu doménu doptech.sk vrátane SSL zabezpečenia (HTTPS).
+
+Kedy by Vám vyhovoval krátky 10-minútový telefonát?
+
+S úctou a prianím mnohých šťastných kilometrov,
+
+Ing. Luboš Kostroš
+LivingPixel Studios – Moderné viacjazyčné B2B webové prezentácie & interaktívne konfigurátory
+E-mail: info@livingpixelstudios.com
+Web: https://livingpixelstudios.com/
