@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="sk" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ARKTIS s.r.o. | Veľkoobchod chladenie a klimatizácia Bratislava</title>
+  <meta name="description" content="ARKTIS s.r.o. – Špecializovaný veľkoobchod chladiarenských a klimatizačných komponentov, náhradných dielov, chladív a náradia v Bratislave (Staviteľská 3) s 66-ročnou kumulovanou praxou tímu." />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ==========================================================================
+       TOP NOTIFICATION BAR
+       ========================================================================== -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="top-bar-left">
+        <span class="top-bar-badge">❄️ <span data-i18n="topBarBadge">B2B Veľkoobchod &amp; Poradenstvo</span></span>
+        <span data-i18n="topBarNotice">Komponenty, náhradné diely, chladivá a náradie pre servisných technikov a montážne firmy</span>
+      </div>
+      <div class="top-bar-contact">
+        <a href="tel:+421244452844">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          +421 2 4445 2844
+        </a>
+        <a href="mailto:arktis@arktis.sk">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          arktis@arktis.sk
+        </a>
+        <a href="#kontakt">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          Staviteľská 3, Bratislava
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       STICKY HEADER & NAVIGATION
+       ========================================================================== -->
+  <header class="header">
+    <div class="container navbar">
+      <a href="#uvod" class="brand-logo" aria-label="ARKTIS s.r.o. Domov">
+        <img src="images/logo_arktis.png" alt="ARKTIS veľkoobchod chladenie a klimatizácia" width="167" height="36" />
+        <span class="brand-tagline" data-i18n="brandTagline">Veľkoobchod chladenie a klimatizácia</span>
+      </a>
+
+      <nav class="main-nav" id="mainNav" aria-label="Hlavná navigácia">
+        <ul class="nav-links">
+          <li><a href="#o-nas" class="nav-link" data-i18n="navAbout">O nás</a></li>
+          <li><a href="#produkty" class="nav-link" data-i18n="navProducts">Produkty</a></li>
+          <li><a href="#kalkulacka" class="nav-link" data-i18n="navCalculator">Kalkulačka výkonu</a></li>
+          <li><a href="#podpora" class="nav-link" data-i18n="navSupport">Podpora (66 r. praxe)</a></li>
+          <li><a href="#navody" class="nav-link" data-i18n="navManuals">Archív návodov</a></li>
+          <li><a href="#partneri" class="nav-link" data-i18n="navPartners">Partneri</a></li>
+          <li><a href="#kontakt" class="nav-link" data-i18n="navContact">Kontakt</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <!-- Quad-Lingual Language Switcher (SK, DE, EN, HU) -->
+        <div class="lang-dropdown">
+          <button type="button" class="lang-btn" id="langBtn" aria-label="Prepnúť jazyk / Select Language">
+            <span id="langCurrentLabel">🇸🇰 SK</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="lang-menu" id="langMenu">
+            <button type="button" class="lang-item active" data-lang="sk"><span>🇸🇰</span> Slovenčina</button>
+            <button type="button" class="lang-item" data-lang="de"><span>🇩🇪</span> Deutsch</button>
+            <button type="button" class="lang-item" data-lang="en"><span>🇬🇧</span> English</button>
+            <button type="button" class="lang-item" data-lang="hu"><span>🇭🇺</span> Magyar</button>
+          </div>
+        </div>
+
+        <!-- Light / Dark Theme Toggle -->
+        <button type="button" class="theme-toggle-btn" id="themeToggleBtn" aria-label="Prepnúť svetlý a tmavý režim">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
+
+        <a href="#kontakt" class="btn btn-primary btn-sm nav-cta-btn" data-i18n="btnQuickInquiry">Dopyt na diel</a>
+
+        <button type="button" class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==========================================================================
+         HERO SECTION
+         ========================================================================== -->
+    <section class="hero" id="uvod">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+            <span data-i18n="heroBadge">Špecializovaný B2B veľkoobchod v Bratislave · Staviteľská 3</span>
+          </div>
+          <h1 class="hero-title" data-i18n="heroTitle">
+            Profesionálne komponenty pre chladenie a klimatizáciu s okamžitým poradenstvom
+          </h1>
+          <p class="hero-subtitle" data-i18n="heroSubtitle">
+            Dodávame kompresory, kondenzačné jednotky, výparníky, automatiku, medené potrubia, chladivá a servisné náradie. Naším najvyšším cieľom je, aby ste u nás nakúpili správne hneď na prvýkrát.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#produkty" class="btn btn-primary" data-i18n="btnExploreCatalog">Preskúmať katalóg produktov</a>
+            <a href="#podpora" class="btn btn-outline" data-i18n="btnConsultExpert">Konzultovať s inžinierom</a>
+          </div>
+
+          <div class="hero-stats-grid">
+            <div class="stat-item">
+              <h3 data-i18n="stat1Val">66 rokov</h3>
+              <p data-i18n="stat1Lbl">Spoločnej praxe tímu</p>
+            </div>
+            <div class="stat-item">
+              <h3 data-i18n="stat2Val">16 sekcií</h3>
+              <p data-i18n="stat2Lbl">Kompletného sortimentu</p>
+            </div>
+            <div class="stat-item">
+              <h3 data-i18n="stat3Val">50+ modelov</h3>
+              <p data-i18n="stat3Lbl">Archívnych návodov Carel/Dixell</p>
+            </div>
+            <div class="stat-item">
+              <h3 data-i18n="stat4Val">100 % B2B</h3>
+              <p data-i18n="stat4Lbl">Klub bezplatného poradenstva</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-media">
+          <div class="hero-media-stack">
+            <img src="images/teaser_podpora2.jpg" alt="ARKTIS Kompresorové a kondenzačné jednotky Copeland Scroll" class="hero-main-img" width="1004" height="338" />
+            <div class="hero-sub-images">
+              <img src="images/teaser_produkty1.jpg" alt="Meranie tlaku a chladiarenské manometre" width="500" height="169" />
+              <img src="images/teaser_podpora.jpg" alt="Ventilátory a výmenníky tepla" width="500" height="169" />
+            </div>
+            <div class="hero-floating-card">
+              <div class="floating-icon">🛠️</div>
+              <div class="floating-text">
+                <h4 data-i18n="heroFloatingTitle">Odborno-poradenská činnosť priamo pri pulte</h4>
+                <p data-i18n="heroFloatingSub">Výpočty tepelných záťaží, návrhy technológií a výber dielov z explozívnych výkresov</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         ABOUT US & FREE ADVISORY CLUB (4 PILLARS)
+         ========================================================================== -->
+    <section class="section-alt" id="o-nas">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow" data-i18n="aboutEyebrow">O SPOLOČNOSTI ARKTIS s.r.o.</span>
+          <h2 class="section-title" data-i18n="aboutTitle">Aby zákazník u nás nakúpil správne</h2>
+          <p class="section-desc" data-i18n="aboutDesc">
+            Spoločnosť ARKTIS je špecializovaná na veľkoobchodný predaj a dodávku komponentov, náhradných dielov, montážneho a servisného materiálu a náradia pre živnostníkov a firmy v oblasti chladenia a klimatizácie.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <article class="feature-card">
+            <div class="feature-icon">⚙️</div>
+            <h3 data-i18n="pillar1Title">Komponenty &amp; Agregáty</h3>
+            <p data-i18n="pillar1Desc">
+              Hermetické, polohermetické a skrutkové kompresory (Bitzer, Copeland, Danfoss, Embraco Aspera, Tecumseh, Frascold, GEA Bock), kondenzačné jednotky, výparníky a kondenzátory.
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon">🎛️</div>
+            <h3 data-i18n="pillar2Title">Náhradné diely &amp; Automatika</h3>
+            <p data-i18n="pillar2Desc">
+              Expanzné, magnetické a uzatváracie ventily, presostaty, termostaty, chladiarenské rozvádzače 230V/400V, elektronické regulátory a identifikácia dielov z explozívnych výkresov.
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon">🧪</div>
+            <h3 data-i18n="pillar3Title">Montážny materiál, Cu &amp; Chladivá</h3>
+            <p data-i18n="pillar3Desc">
+              Chladiarenské Cu trubky (tyče, zvitky, predizolované), fitinky, strieborné spájky, kaučukové izolácie, chladivá (R134a, R404A, R407C, R410A, R422D, R507, R600a), Antifrogen a oleje.
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon">🤝</div>
+            <h3 data-i18n="pillar4Title">Klub bezplatného poradenstva</h3>
+            <p data-i18n="pillar4Desc">
+              Každý náš zákazník sa kúpou tovaru stáva nepísaným členom klubu pre bezplatné poradenstvo a odbornú konzultáciu priamo pri objednávaní.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         INTERACTIVE PRODUCT CATALOG (16 CATEGORIES)
+         ========================================================================== -->
+    <section class="section" id="produkty">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow" data-i18n="catEyebrow">INTERAKTÍVNY SORTIMENT (16 KATEGÓRIÍ)</span>
+          <h2 class="section-title" data-i18n="catTitle">Kompletný katalóg chladiarenských a HVAC komponentov</h2>
+          <p class="section-desc" data-i18n="catDesc">
+            Vyhľadávajte podľa názvu dielu, výrobcu (Bitzer, Danfoss, Copeland, Güntner, Carel, Dixell...) alebo filtrujte podľa technologickej skupiny.
+          </p>
+        </div>
+
+        <div class="catalog-toolbar">
+          <div class="search-box">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            <input type="search" id="catalogSearchInput" class="search-input" data-i18n-placeholder="searchPlaceholder" placeholder="Hľadať diel alebo značku (napr. Bitzer, Scroll, R404A, kapilárka, presostat, Antifrogen)..." />
+          </div>
+
+          <div class="filter-pills">
+            <button type="button" class="filter-pill active" data-cat-filter="all" data-i18n="filterAll">Všetko (16)</button>
+            <button type="button" class="filter-pill" data-cat-filter="machinery" data-i18n="filterMachinery">Kompresory &amp; Jednotky</button>
+            <button type="button" class="filter-pill" data-cat-filter="exchangers" data-i18n="filterExchangers">Výmenníky &amp; Ventilátory</button>
+            <button type="button" class="filter-pill" data-cat-filter="controls" data-i18n="filterControls">Ventily &amp; Regulácia</button>
+            <button type="button" class="filter-pill" data-cat-filter="piping" data-i18n="filterPiping">Potrubie, Chladivá &amp; Oleje</button>
+            <button type="button" class="filter-pill" data-cat-filter="hvac-tools" data-i18n="filterHvacTools">Klimatizácia, Boxy &amp; Náradie</button>
+          </div>
+        </div>
+
+        <div class="catalog-grid" id="catalogGrid">
+          <!-- Dynamically populated by js/app.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         COOLING CAPACITY & REFRIGERANT LINE SIZING CALCULATOR
+         ========================================================================== -->
+    <section class="section-alt" id="kalkulacka">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow" data-i18n="calcEyebrow">POMÔCKA PRE TECHNIKOV &amp; PROJEKTANTOV</span>
+          <h2 class="section-title" data-i18n="calcTitle">Orientačný kalkulátor chladiaceho výkonu a dimenzovania</h2>
+          <p class="section-desc" data-i18n="calcDesc">
+            Vypočítajte si orientačnú tepelnú záťaž chladiarne, mraziarne alebo skladu vína a jedným kliknutím odošlite parametre nášmu inžinierovi na presný návrh zostavy.
+          </p>
+        </div>
+
+        <div class="calc-wrapper">
+          <div class="calc-inputs">
+            <div class="calc-form-group">
+              <label for="calcAppType" data-i18n="calcLabelApp">Typ chladiarenskej aplikácie</label>
+              <select id="calcAppType" class="calc-select">
+                <option value="chiller" data-i18n="calcApp1">Chladiaci box (+2 °C až +6 °C) — potraviny, gastro</option>
+                <option value="freezer" data-i18n="calcApp2">Mraziarenský box (-18 °C až -22 °C) — hlboké mrazenie</option>
+                <option value="wine" data-i18n="calcApp3">Skladovanie vína / nápojov (+10 °C až +14 °C)</option>
+                <option value="blast" data-i18n="calcApp4">Šokový zmrazovač / priemyselné chladenie (-30 °C)</option>
+              </select>
+            </div>
+
+            <div class="calc-form-group">
+              <label for="calcVolumeRange">
+                <span data-i18n="calcLabelVol">Objem chladeného priestoru (m³)</span>
+                <strong id="calcVolumeVal" style="color: var(--accent-primary);">25 m³</strong>
+              </label>
+              <input type="range" id="calcVolumeRange" class="calc-range" min="5" max="250" step="5" value="25" />
+            </div>
+
+            <div class="calc-form-group">
+              <label for="calcInsulation" data-i18n="calcLabelIns">Hrúbka PU izolácie a okolitá teplota</label>
+              <select id="calcInsulation" class="calc-select">
+                <option value="1.0" data-i18n="calcIns1">PU panely 80 mm · Štandardné okolie (+25 °C)</option>
+                <option value="0.88" data-i18n="calcIns2">PU panely 100–120 mm · Vysoká izolácia (+32 °C)</option>
+                <option value="1.25" data-i18n="calcIns3">Staršia murivová/panelová stavba · Vyššie straty</option>
+              </select>
+            </div>
+
+            <div class="calc-form-group">
+              <label for="calcRefrigerant" data-i18n="calcLabelRef">Preferované chladivo / náplň</label>
+              <select id="calcRefrigerant" class="calc-select">
+                <option value="R404A" data-i18n="calcRef1">R404A / R507 / R448A / R449A (stredné a nízke teploty)</option>
+                <option value="R134a" data-i18n="calcRef2">R134a / R513A (vyššie a stredné teploty)</option>
+                <option value="R407C" data-i18n="calcRef3">R407C / R410A (klimatizácia a chladenie kvapalín)</option>
+                <option value="Antifrogen" data-i18n="calcRef4">R600a / R290 / Antifrogen okruh</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="calc-results">
+            <div>
+              <div class="calc-res-header">
+                <span class="calc-res-badge" data-i18n="calcResBadge">Odhadovaný požadovaný chladiaci výkon (Q₀)</span>
+                <div class="calc-kw-output" id="calcKwOutput">1.97 kW</div>
+              </div>
+
+              <div class="calc-specs-list">
+                <div class="calc-spec-row">
+                  <span data-i18n="calcSpecComp">Odporúčaný typ kompresora:</span>
+                  <strong id="calcOutComp">Hermetický piestový (Embraco Aspera / Danfoss)</strong>
+                </div>
+                <div class="calc-spec-row">
+                  <span data-i18n="calcSpecPipe">Orientačné Cu potrubie (sanie / kvapalina):</span>
+                  <strong id="calcOutPipe">Cu Ø 12–16 mm sanie · Ø 10 mm kvapalina</strong>
+                </div>
+                <div class="calc-spec-row">
+                  <span data-i18n="calcSpecCtrl">Regulácia a rozvádzač:</span>
+                  <strong id="calcOutCtrl">Rozvádzač 230V + Dixell XR60C / Carel IR32</strong>
+                </div>
+                <div class="calc-spec-row">
+                  <span data-i18n="calcSpecValve">Expanzný prvok a sušič:</span>
+                  <strong id="calcOutValve">TEV Danfoss/Alco + Filterdehydrátor + Priezorník</strong>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <button type="button" id="calcSendBtn" class="btn btn-primary" style="width: 100%; margin-bottom: 12px;" data-i18n="calcBtnSend">
+                Odoslať parametre na presný výpočet do ARKTIS →
+              </button>
+              <p style="font-size: 0.76rem; color: #9fb3c8; line-height: 1.45;" data-i18n="calcDisclaimer">
+                * Kalkulácia slúži na rýchlu orientáciu. Presný výpočet tepelných záťaží, dimenzovanie potrubia pre správny návrat oleja a návrh kompletnej zostavy Vám vypracujeme pri objednávke.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         TECHNICAL SUPPORT & 66 YEARS OF EXPERIENCE
+         ========================================================================== -->
+    <section class="section" id="podpora">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow" data-i18n="supEyebrow">TECHNICKÁ PODPORA &amp; KONZULTÁCIE</span>
+          <h2 class="section-title" data-i18n="supTitle">66 rokov praxe v chladení, meraní a regulácii</h2>
+          <p class="section-desc" data-i18n="supDesc">
+            Ak by na riešenie Vášho problému nestačili naše vedomosti, okamžite ho konzultujeme priamo s technikmi výrobcov a dodávateľov.
+          </p>
+        </div>
+
+        <div class="support-grid">
+          <div>
+            <div class="expert-cards">
+              <div class="expert-card">
+                <div class="expert-info">
+                  <h4 data-i18n="exp1Title">Inžinier elektrotechnik</h4>
+                  <p data-i18n="exp1Sub">Návrhy elektrických rozvádzačov 230V/400V, dimenzovanie káblov, frekvenčné meniče a diagnostika</p>
+                </div>
+                <div class="expert-years" data-i18n="exp1Years">20 rokov praxe</div>
+              </div>
+
+              <div class="expert-card">
+                <div class="expert-info">
+                  <h4 data-i18n="exp2Title">Chladiarenský mechanik</h4>
+                  <p data-i18n="exp2Sub">Z chladiarenskej rodiny (otec chladiar) — výpočty výkonov, potrubné trasy, spájkovanie, oleje a čistenie okruhov</p>
+                </div>
+                <div class="expert-years" data-i18n="exp2Years">16 rokov praxe</div>
+              </div>
+
+              <div class="expert-card">
+                <div class="expert-info">
+                  <h4 data-i18n="exp3Title">Mechanik merania a regulácie (MaR)</h4>
+                  <p data-i18n="exp3Sub">Programovanie elektronických regulátorov Carel, Dixell, Tecnologic, tlakové prevodníky a snímače</p>
+                </div>
+                <div class="expert-years" data-i18n="exp3Years">30 rokov praxe</div>
+              </div>
+            </div>
+
+            <div style="border-radius: 16px; overflow: hidden; border: 1px solid var(--border-color); box-shadow: var(--shadow-sm);">
+              <img src="images/teaser_produkty1.jpg" alt="Meranie a regulácia tlaku ARKTIS" width="600" height="220" style="width: 100%; height: 210px; object-fit: cover;" />
+            </div>
+          </div>
+
+          <div class="services-checklist">
+            <h3 data-i18n="supListTitle">15 oblastí, v ktorých Vám vieme odborne pomôcť:</h3>
+            <div class="checklist-grid" id="supportChecklistGrid">
+              <!-- Populated by js/app.js -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         LEGACY CONTROLLER MANUALS ARCHIVE (CAREL, DIXELL, ELREHA, TECNOLOGIC, HANSA)
+         ========================================================================== -->
+    <section class="section-alt" id="navody">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow" data-i18n="manEyebrow">ARCHÍV NÁVODOV &amp; SCHÉM ZAPOJENIA</span>
+          <h2 class="section-title" data-i18n="manTitle">Návody na staršie aj súčasné regulátory (Carel, Dixell, Elreha, Tecnologic, Hansa)</h2>
+          <p class="section-desc" data-i18n="manDesc">
+            Poskytujeme návody na komponenty a regulátory, ktoré sa už nevyrábajú, ale v praxi sa stále vyskytujú na funkčných zariadeniach. Návody zasielame na vyžiadanie telefonicky alebo e-mailom.
+          </p>
+        </div>
+
+        <div class="manuals-box">
+          <div class="manuals-header-bar">
+            <div class="search-box">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+              <input type="search" id="manualSearchInput" class="search-input" data-i18n-placeholder="manSearchPlaceholder" placeholder="Hľadať kód regulátora (napr. IR32, XR60C, TAR 1370, THP48, HERG)..." />
+            </div>
+
+            <div class="filter-pills">
+              <button type="button" class="filter-pill active" data-manual-brand="all">All (35)</button>
+              <button type="button" class="filter-pill" data-manual-brand="Carel">Carel</button>
+              <button type="button" class="filter-pill" data-manual-brand="Dixell">Dixell</button>
+              <button type="button" class="filter-pill" data-manual-brand="Tecnologic">Tecnologic</button>
+              <button type="button" class="filter-pill" data-manual-brand="Elreha">Elreha</button>
+              <button type="button" class="filter-pill" data-manual-brand="HANSA">Hansa</button>
+            </div>
+          </div>
+
+          <div class="manuals-grid" id="manualsGrid">
+            <!-- Populated by js/app.js -->
+          </div>
+
+          <div class="auto-ac-banner">
+            <div style="max-width: 760px;">
+              <h4 style="font-size: 1rem; font-weight: 800; color: var(--text-primary); margin-bottom: 4px;" data-i18n="autoAcTitle">
+                🚗 Databáza náplní do autoklimatizácií (modely do r. 2008)
+              </h4>
+              <p style="font-size: 0.88rem; color: var(--text-secondary);" data-i18n="autoAcDesc">
+                Aj keď nepredávame náhradné diely na autoklimatizácie, na vyžiadanie Vám bezplatne poskytneme presnú informáciu o množstve chladiva a oleja v konkrétnom modeli vozidla.
+              </p>
+            </div>
+            <button type="button" id="autoAcRequestBtn" class="btn btn-outline btn-sm" data-i18n="autoAcBtn">
+              Vyžiadať tabuľku náplne vozidla
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         OFFICIAL PARTNERS SECTION
+         ========================================================================== -->
+    <section class="section" id="partneri">
+      <div class="container">
+        <div class="section-header" style="margin-bottom: 32px;">
+          <span class="section-eyebrow" data-i18n="partEyebrow">OVERENÍ ODBORNÍ PARTNERI</span>
+          <h2 class="section-title" data-i18n="partTitle">Spolupracujeme s lídrami v odbore chladenia</h2>
+        </div>
+
+        <div class="partners-grid">
+          <a href="http://www.ekotez.cz/" target="_blank" rel="noopener" class="partner-card" title="EKOTEZ">
+            <img src="images/logo_ekotez.png" alt="EKOTEZ" />
+            <span>ekotez.cz</span>
+          </a>
+          <a href="http://www.dstech.sk/" target="_blank" rel="noopener" class="partner-card" title="DSTECH s.r.o.">
+            <img src="images/logo_dstech.png" alt="DSTECH" />
+            <span>dstech.sk</span>
+          </a>
+          <a href="http://www.buco.sk/" target="_blank" rel="noopener" class="partner-card" title="BUČO">
+            <img src="images/logo_buco.png" alt="BUČO" />
+            <span>buco.sk</span>
+          </a>
+          <a href="http://www.kalting.sk/" target="_blank" rel="noopener" class="partner-card" title="KALTING - IP">
+            <img src="images/logo_kalting.png" alt="KALTING" />
+            <span>kalting.sk</span>
+          </a>
+          <a href="http://www.patcontrols.com/" target="_blank" rel="noopener" class="partner-card" title="PATCONTROLS">
+            <img src="images/logo_patcontrols.png" alt="PATCONTROLS" />
+            <span>patcontrols.com</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         CONTACT & WAREHOUSE LOCATION (STAVITEĽSKÁ 3, BRATISLAVA)
+         ========================================================================== -->
+    <section class="section-alt" id="kontakt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow" data-i18n="conEyebrow">KONTAKT &amp; ODBEROVÉ MIESTO BRATISLAVA</span>
+          <h2 class="section-title" data-i18n="conTitle">Spojte sa s technickým tímom ARKTIS</h2>
+          <p class="section-desc" data-i18n="conDesc">
+            Sídlime v priemyselnej zóne na Staviteľskej 3 v Bratislave (výborná dostupnosť pre dodávky a servisné vozidlá z D1 a Račianskej).
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-info-card">
+            <img src="images/kontakt.jpg" alt="ARKTIS s.r.o. prevádzka Staviteľská 3 Bratislava" class="hq-photo" width="1004" height="338" />
+            <div class="contact-details-body">
+              <div class="contact-list">
+                <div class="contact-row">
+                  <div class="contact-row-icon">📍</div>
+                  <div>
+                    <h4 data-i18n="conAddrLabel">Adresa prevádzky a skladu</h4>
+                    <p>ARKTIS s.r.o. · Staviteľská 3, 831 04 Bratislava</p>
+                  </div>
+                </div>
+
+                <div class="contact-row">
+                  <div class="contact-row-icon">🧭</div>
+                  <div>
+                    <h4 data-i18n="conGpsLabel">GPS súradnice (vjazd do areálu)</h4>
+                    <p>48.191153, 17.165220</p>
+                  </div>
+                </div>
+
+                <div class="contact-row">
+                  <div class="contact-row-icon">📞</div>
+                  <div>
+                    <h4 data-i18n="conPhoneLabel">Telefón &amp; Fax</h4>
+                    <p><a href="tel:+421244452844">+421 2 4445 2844</a> <span style="font-weight: 500; color: var(--text-muted);">(Fax: +421 2 4445 2845)</span></p>
+                  </div>
+                </div>
+
+                <div class="contact-row">
+                  <div class="contact-row-icon">✉️</div>
+                  <div>
+                    <h4 data-i18n="conEmailLabel">E-mail pre dopyty a objednávky</h4>
+                    <p><a href="mailto:arktis@arktis.sk" style="color: var(--accent-primary);">arktis@arktis.sk</a></p>
+                  </div>
+                </div>
+
+                <div class="contact-row">
+                  <div class="contact-row-icon">🏢</div>
+                  <div>
+                    <h4 data-i18n="conIdLabel">Fakturačné údaje</h4>
+                    <p>IČO: 45432805 · DIČ: 2022979684 · IČ DPH: SK2022979684</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="map-frame-wrap">
+                <iframe
+                  title="Mapa ARKTIS s.r.o. Staviteľská 3 Bratislava"
+                  loading="lazy"
+                  src="https://www.openstreetmap.org/export/embed.html?bbox=17.1552%2C48.1861%2C17.1752%2C48.1961&amp;layer=mapnik&amp;marker=48.191153%2C17.16522">
+                </iframe>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-form-card">
+            <h3 style="font-size: 1.35rem; font-weight: 800; margin-bottom: 20px;" data-i18n="formTitle">
+              Rýchly technický dopyt / Objednávka dielu
+            </h3>
+
+            <form id="arktisContactForm">
+              <div class="form-grid-2">
+                <div class="form-group">
+                  <label for="inquiryName" data-i18n="formName">Meno a firma / živnosť *</label>
+                  <input type="text" id="inquiryName" class="form-control" required placeholder="Ján Novák — KälteServis s.r.o." />
+                </div>
+                <div class="form-group">
+                  <label for="inquiryPhone" data-i18n="formPhone">Telefónne číslo *</label>
+                  <input type="tel" id="inquiryPhone" class="form-control" required placeholder="+421 9xx xxx xxx" />
+                </div>
+              </div>
+
+              <div class="form-grid-2">
+                <div class="form-group">
+                  <label for="inquiryEmail" data-i18n="formEmail">E-mailová adresa *</label>
+                  <input type="email" id="inquiryEmail" class="form-control" required placeholder="servis@firma.sk" />
+                </div>
+                <div class="form-group">
+                  <label for="inquiryTopic" data-i18n="formTopic">Typ požiadavky</label>
+                  <select id="inquiryTopic" class="form-control">
+                    <option value="unit" data-i18n="formTopic1">Dopyt na kompresor / agregát / výmenník</option>
+                    <option value="part" data-i18n="formTopic2">Dopyt na náhradný diel / ventil / regulátor</option>
+                    <option value="calc" data-i18n="formTopic3">Výpočet tepelnej záťaže a návrh technológie</option>
+                    <option value="manual" data-i18n="formTopic4">Žiadosť o archívny návod (Carel / Dixell / Tecnologic)</option>
+                    <option value="other" data-i18n="formTopic5">Iná odborná konzultácia</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="inquiryMessage" data-i18n="formMsg">Špecifikácia dielu, štítkové údaje kompresora alebo parametre chladiarne *</label>
+                <textarea id="inquiryMessage" class="form-control" rows="6" required data-i18n-placeholder="formMsgPlaceholder" placeholder="Napr. Hľadám náhradu za kompresor Embraco Aspera NEK6210Z (R134a), prípadne návod na Dixell XR60C..."></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%; padding: 14px;" data-i18n="formSubmit">
+                Odoslať technický dopyt
+              </button>
+
+              <div class="form-feedback" id="formFeedback" data-i18n="formSuccess">
+                Ďakujeme! Váš dopyt bol pripravený pre technický tím ARKTIS (arktis@arktis.sk). Ozveme sa Vám v najkratšom možnom čase.
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <img src="images/logo_arktis.png" alt="ARKTIS s.r.o." width="150" height="32" style="margin-bottom: 14px;" />
+          <p style="font-size: 0.88rem; line-height: 1.6; max-width: 340px;" data-i18n="footerDesc">
+            Špecializovaný veľkoobchod chladiarenských a klimatizačných komponentov, náhradných dielov, chladív a náradia v Bratislave s 66-ročnou kumulovanou praxou tímu.
+          </p>
+        </div>
+
+        <div>
+          <h4 data-i18n="footerNavTitle">Navigácia</h4>
+          <ul class="footer-links">
+            <li><a href="#o-nas" data-i18n="navAbout">O nás</a></li>
+            <li><a href="#produkty" data-i18n="navProducts">Produkty</a></li>
+            <li><a href="#kalkulacka" data-i18n="navCalculator">Kalkulačka výkonu</a></li>
+            <li><a href="#podpora" data-i18n="navSupport">Podpora (66 r. praxe)</a></li>
+            <li><a href="#navody" data-i18n="navManuals">Archív návodov</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 data-i18n="footerCatTitle">Hlavný sortiment</h4>
+          <ul class="footer-links">
+            <li><a href="#produkty">Bitzer · Copeland · Danfoss</a></li>
+            <li><a href="#produkty">Embraco Aspera · Tecumseh</a></li>
+            <li><a href="#produkty">ECO Luvata · Güntner · LU-VE</a></li>
+            <li><a href="#produkty">Carel · Dixell · Tecnologic</a></li>
+            <li><a href="#produkty">Antifrogen · Cu potrubia</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 data-i18n="footerContactTitle">Kontakt Bratislava</h4>
+          <ul class="footer-links">
+            <li>ARKTIS s.r.o., Staviteľská 3, 831 04 Bratislava</li>
+            <li>GPS: 48.191153, 17.165220</li>
+            <li>Tel: <a href="tel:+421244452844">+421 2 4445 2844</a></li>
+            <li>E-mail: <a href="mailto:arktis@arktis.sk">arktis@arktis.sk</a></li>
+            <li>IČO: 45432805 · IČ DPH: SK2022979684</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>Copyright © 2013–2026 ARKTIS s.r.o. Všetky práva vyhradené.</span>
+        <img src="images/logo_arktis_footer.png" alt="ARKTIS Veľkoobchod chladenie a klimatizácia" width="115" height="32" />
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/catalog-data.js"></script>
+  <script src="js/translations.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
