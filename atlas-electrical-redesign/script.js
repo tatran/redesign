@@ -112,6 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const addSubpanel = document.getElementById('addSubpanel');
   const calcPriceDisplay = document.getElementById('calcPriceDisplay');
   const calcLockInBtn = document.getElementById('calcLockInBtn');
+  const isFrench = (htmlRoot.getAttribute('lang') || '').toLowerCase().startsWith('fr');
 
   function calculateEstimate() {
     if (!projectTypeSelect || !propertySizeSelect || !calcPriceDisplay) return;
@@ -129,7 +130,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const lowEstimate = Math.round(subtotal * 0.95 / 10) * 10;
     const highEstimate = Math.round(subtotal * 1.15 / 10) * 10;
 
-    calcPriceDisplay.textContent = `$${lowEstimate.toLocaleString()} – $${highEstimate.toLocaleString()} CAD`;
+    if (isFrench) {
+      calcPriceDisplay.textContent = `${lowEstimate.toLocaleString('fr-CA')} $ – ${highEstimate.toLocaleString('fr-CA')} $ CAD`;
+    } else {
+      calcPriceDisplay.textContent = `$${lowEstimate.toLocaleString('en-CA')} – $${highEstimate.toLocaleString('en-CA')} CAD`;
+    }
   }
 
   if (projectTypeSelect && propertySizeSelect) {
@@ -153,10 +158,14 @@ document.addEventListener('DOMContentLoaded', () => {
         contactSection.scrollIntoView({ behavior: 'smooth' });
       }
 
-      // Pre-fill message
+      // Pre-fill message based on language
       const messageField = document.getElementById('messageText');
       if (messageField) {
-        messageField.value = `I used your online cost estimator for: ${selectedServiceName}.\nEstimated range: ${priceText}.\nPlease contact me to schedule an on-site inspection.`;
+        if (isFrench) {
+          messageField.value = `J'ai utilisé votre calculateur d'estimation en ligne pour : ${selectedServiceName}.\nFourchette estimée : ${priceText}.\nMerci de me contacter pour planifier une inspection sur place.`;
+        } else {
+          messageField.value = `I used your online cost estimator for: ${selectedServiceName}.\nEstimated range: ${priceText}.\nPlease contact me to schedule an on-site inspection.`;
+        }
       }
     });
   }
@@ -200,8 +209,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (submitFormBtn) {
         submitFormBtn.disabled = true;
+        const sendingLabel = isFrench ? 'Envoi en cours...' : 'Sending Request...';
         submitFormBtn.innerHTML = `
-          <span>Sending Request...</span>
+          <span>${sendingLabel}</span>
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="spin">
             <line x1="12" y1="2" x2="12" y2="6"></line>
             <line x1="12" y1="18" x2="12" y2="22"></line>
@@ -220,16 +230,24 @@ document.addEventListener('DOMContentLoaded', () => {
         if (formStatusMsg) {
           formStatusMsg.style.display = 'block';
           formStatusMsg.className = 'form-status-msg success';
-          formStatusMsg.innerHTML = `
-            <strong>✓ Free Estimate Request Received!</strong><br>
-            Thank you! Hardeep or our dispatch team will call or email you within 2 hours to confirm details and lock in your price guarantee.
-          `;
+          if (isFrench) {
+            formStatusMsg.innerHTML = `
+              <strong>✓ Demande de devis gratuit reçue !</strong><br>
+              Merci ! Hardeep ou notre équipe de répartition vous appellera ou vous écrira dans les 2 heures pour confirmer les détails et verrouiller votre meilleur prix garanti.
+            `;
+          } else {
+            formStatusMsg.innerHTML = `
+              <strong>✓ Free Estimate Request Received!</strong><br>
+              Thank you! Hardeep or our dispatch team will call or email you within 2 hours to confirm details and lock in your price guarantee.
+            `;
+          }
         }
 
         if (submitFormBtn) {
           submitFormBtn.disabled = false;
+          const sentLabel = isFrench ? 'Demande envoyée avec succès !' : 'Request Sent Successfully!';
           submitFormBtn.innerHTML = `
-            <span>Request Sent Successfully!</span>
+            <span>${sentLabel}</span>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
           `;
         }
@@ -248,16 +266,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (heroBtn) {
         heroBtn.disabled = true;
-        heroBtn.innerHTML = `<span>Dispatching Request...</span>`;
+        heroBtn.innerHTML = `<span>${isFrench ? 'Transmission...' : 'Dispatching Request...'}</span>`;
       }
 
       setTimeout(() => {
-        alert(`Thank you, ${name}! Your inquiry has been sent to Atlas Electrical Inc. Hardeep or a certified technician will call you shortly.`);
+        if (isFrench) {
+          alert(`Merci, ${name} ! Votre demande a été transmise à Atlas Électrique Inc. Hardeep ou un technicien certifié vous appellera sous peu.`);
+        } else {
+          alert(`Thank you, ${name}! Your inquiry has been sent to Atlas Electrical Inc. Hardeep or a certified technician will call you shortly.`);
+        }
         heroQuickForm.reset();
         if (heroBtn) {
           heroBtn.disabled = false;
           heroBtn.innerHTML = `
-            <span>Request Sent!</span>
+            <span>${isFrench ? 'Demande envoyée !' : 'Request Sent!'}</span>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
           `;
         }

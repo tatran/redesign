@@ -17,10 +17,12 @@ To show you what's possible, I built a **complete, high-performance redesign con
 
 👉 **Interactive Preview Highlights:**
 1. **Instant Light & Dark Theme Switcher:** Homeowners browsing evening renovations or builders on bright Okanagan job sites can toggle themes seamlessly with one click (or let it auto-match their device).
-2. **Interactive Electrical Cost Estimator:** Allows prospective clients to estimate panel upgrades (200A), EV Level 2 chargers, basement suite wiring, or commercial fit-outs and lock in their free estimate directly with you.
-3. **Enhanced Commercial & Multi-Family Proof:** Highlights your work for high-rises, commercial retail, strata corporations, and franchise chains with strong trust badges (Technical Safety BC, 100% Bonded & Insured).
-4. **Mobile-First Tap-to-Call & Fast Dispatch:** Designed specifically for Kelowna locals needing rapid electrical help, with a sticky quick-action bar for instant calls to `(250) 899-5650`.
-5. **SEO & Speed Optimized:** Clean semantic code, ultra-fast load speed (99+ Google PageSpeed), and search optimization targeting high-value Kelowna electrical keywords.
+2. **Bilingual Canadian Support (English & French):** Seamless language switch (`EN / FR`) perfect for expanding across British Columbia, federal/provincial contracts, and bilingual commercial clients.
+3. **Interactive Electrical Cost Estimator:** Allows prospective clients to estimate panel upgrades (200A), EV Level 2 chargers, basement suite wiring, or commercial fit-outs and lock in their free estimate directly with you.
+4. **Interactive Google Map & Local HQ Integration:** Embedded responsive map right below your 440 Scarboro Rd address with 1-click directions.
+5. **Enhanced Commercial & Multi-Family Proof:** Highlights your work for high-rises, commercial retail, strata corporations, and franchise chains with strong trust badges (Technical Safety BC, 100% Bonded & Insured).
+6. **Mobile-First Tap-to-Call & Fast Dispatch:** Designed specifically for Kelowna locals needing rapid electrical help, with a sticky quick-action bar for instant calls to `(250) 899-5650`.
+7. **SEO & Speed Optimized:** Clean semantic code, ultra-fast load speed (99+ Google PageSpeed), and search optimization targeting high-value Kelowna electrical keywords.
 
 ---
 
