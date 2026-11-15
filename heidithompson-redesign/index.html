@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Heidi Thompson | Luminous Abstraction & Color Energy Fields</title>
+  <meta name="description" content="Discover original abstract paintings and luminous color energy fields by Canadian artist Heidi Thompson. European fine art training, Vipassana meditative disciplines, and museum-collected masterworks.">
+  <meta name="keywords" content="Heidi Thompson artist, Canadian abstract painter, Color Energy Fields, Vernon BC art gallery, Coldstream art studio, contemporary art collectors, Senvest Collection, Vipassana art">
+  
+  <!-- Open Graph / Meta -->
+  <meta property="og:title" content="Heidi Thompson | Contemporary Canadian Fine Art">
+  <meta property="og:description" content="Luminous abstract paintings and meditative color fields by renowned Canadian artist Heidi Thompson.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://heidithompson.ca/">
+  <meta property="og:image" content="images/peaceful-movement-white.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="alternate icon" href="favicon.svg">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- =========================================================================
+       Sticky Navigation Bar
+       ========================================================================= -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-brand" aria-label="Heidi Thompson Home">
+        <div class="nav-brand-title">
+          <span class="brand-dot"></span>
+          <span data-i18n="brandTitle">HEIDI THOMPSON</span>
+        </div>
+        <div class="nav-brand-subtitle" data-i18n="brandSubtitle">Contemporary Canadian Fine Art</div>
+      </a>
+
+      <!-- Navigation Links -->
+      <nav>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="#gallery" class="nav-link" data-i18n="navGallery">Gallery</a></li>
+          <li><a href="#visualizer" class="nav-link" data-i18n="navVisualizer">Room View</a></li>
+          <li><a href="#estimator" class="nav-link" data-i18n="navEstimator">Acquisition</a></li>
+          <li><a href="#about" class="nav-link" data-i18n="navAbout">Artist</a></li>
+          <li><a href="#reviews" class="nav-link" data-i18n="navReviews">Critical Essay</a></li>
+          <li><a href="#film" class="nav-link" data-i18n="navFilm">Caetani Film</a></li>
+          <li><a href="#contact" class="nav-link" data-i18n="navContact">Studio & Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Nav Controls: Bilingual Switcher & Theme Mode -->
+      <div class="nav-controls">
+        <div class="lang-toggle" role="group" aria-label="Language Selector">
+          <button class="lang-btn active" id="langBtnEn">EN</button>
+          <button class="lang-btn" id="langBtnFr">FR</button>
+        </div>
+
+        <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle Light/Dark Theme">
+          <span class="theme-icon" id="themeBtnIcon">🌙</span>
+          <span id="themeBtnText" data-i18n="themeDark">Dark</span>
+        </button>
+
+        <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle Navigation Menu">
+          ☰
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- =======================================================================
+         Hero Section
+         ======================================================================= -->
+    <section class="hero" id="home">
+      <div class="hero-backdrop-glow"></div>
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <blockquote class="hero-quote">
+            <span data-i18n="heroQuote">"In painting as in eloquence, the greater your strength, the quieter your manner."</span>
+            <cite data-i18n="heroQuoteAuthor">John Ruskin</cite>
+          </blockquote>
+          
+          <span class="eyebrow" data-i18n="heroEyebrow">Luminous Abstraction & Physics of Nature</span>
+          <h1 class="hero-title">
+            <span data-i18n="heroTitlePrefix">Color Energy Fields</span>
+            <strong><span class="italic" data-i18n="heroTitleSuffix">&amp; Sacred Meditations</span></strong>
+          </h1>
+          <p class="hero-lead" data-i18n="heroLead">
+            Immerse yourself in radiant, optical canvases crafted with decades of meditative discipline and European master techniques. Each piece vibrates with light, space, and quiet transcendence.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#gallery" class="btn btn-primary" data-i18n="heroCtaGallery">Explore Available Canvases</a>
+            <a href="#estimator" class="btn btn-outline" data-i18n="heroCtaCommission">Commission Inquiries</a>
+          </div>
+        </div>
+
+        <div class="hero-artwork-frame">
+          <div class="artwork-card-featured" onclick="openLightbox('peaceful-movement-white')">
+            <div class="artwork-badge" data-i18n="heroFeaturedBadge">Featured Masterwork</div>
+            <div class="artwork-img-wrapper">
+              <img src="images/peaceful-movement-white.jpg" alt="Peaceful Movement in White - Heidi Thompson" width="1200" height="900">
+            </div>
+            <div class="artwork-info-bar">
+              <div>
+                <h2 class="artwork-info-title" data-i18n="heroArtworkTitle">Peaceful Movement in White</h2>
+                <div class="artwork-info-meta" data-i18n="heroArtworkSpecs">48" × 64" • Acrylic on Canvas (2022)</div>
+              </div>
+              <div class="artwork-info-inquire" data-i18n="heroArtworkInquire">
+                View Details →
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         Provenance & Curatorial Bar
+         ======================================================================= -->
+    <section class="provenance-bar">
+      <div class="container">
+        <div class="provenance-grid">
+          <div class="provenance-item">
+            <div class="provenance-number" data-i18n="provYears">40+</div>
+            <div class="provenance-label" data-i18n="provYearsLabel">Years of Practice</div>
+          </div>
+          <div class="provenance-item">
+            <div class="provenance-number" data-i18n="provCollections">Senvest & Corporate</div>
+            <div class="provenance-label" data-i18n="provCollectionsLabel">Notable Public Collections</div>
+          </div>
+          <div class="provenance-item">
+            <div class="provenance-number" data-i18n="provExhibitions">Zurich • NYC • Montreal</div>
+            <div class="provenance-label" data-i18n="provExhibitionsLabel">International Exhibitions</div>
+          </div>
+          <div class="provenance-item">
+            <div class="provenance-number" data-i18n="provTechnique">Vipassana</div>
+            <div class="provenance-label" data-i18n="provTechniqueLabel">Meditative Optical Fields</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         Curated Gallery & Series Filter
+         ======================================================================= -->
+    <section class="section-gallery" id="gallery">
+      <div class="container text-center">
+        <span class="eyebrow" data-i18n="galleryEyebrow">Curated Portfolio</span>
+        <h2 class="section-title" data-i18n="galleryTitle">Original Canvases &amp; Installations</h2>
+        <p class="section-desc" data-i18n="galleryDesc">
+          Original acrylic masterworks spanning Heidi Thompson's iconic series. Meticulously built with hundreds of layers of pigment, sand texture, and fluid light resonance.
+        </p>
+
+        <!-- Filter Tabs -->
+        <div class="gallery-filter-tabs">
+          <button class="filter-tab active" data-filter="all" data-i18n="filterAll">All Works</button>
+          <button class="filter-tab" data-filter="color-energy" data-i18n="filterColorEnergy">Color Energy Fields</button>
+          <button class="filter-tab" data-filter="veil-paintings" data-i18n="filterVeil">Veil Paintings</button>
+          <button class="filter-tab" data-filter="patina" data-i18n="filterPatina">Colorful Patina</button>
+          <button class="filter-tab" data-filter="installations" data-i18n="filterInstallations">Architectural Installations</button>
+        </div>
+
+        <!-- Dynamic Grid Rendered via JS -->
+        <div class="gallery-grid" id="galleryGrid"></div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         Architectural Interior Visualizer (Scale & Interiors)
+         ======================================================================= -->
+    <section class="section-visualizer" id="visualizer">
+      <div class="container">
+        <div class="visualizer-container">
+          <div>
+            <span class="eyebrow" data-i18n="visEyebrow">Spatial Dimension</span>
+            <h2 class="section-title" data-i18n="visTitle">The Canvas in Architectural Interiors</h2>
+            <p class="section-desc" data-i18n="visDesc">
+              Heidi Thompson's large-format canvases are collected worldwide by architects, interior designers, and fine art patrons to infuse light and calm into contemporary spaces.
+            </p>
+
+            <div class="room-selectors">
+              <button class="room-selector-btn active" data-room="loft">
+                <div>
+                  <div class="room-btn-title" data-i18n="visRoomLoft">Minimalist Collector's Loft</div>
+                  <div class="room-btn-subtitle" data-i18n="visRoomLoftSub">Featuring 'Peaceful Movement in White' (48" × 64")</div>
+                </div>
+                <span>→</span>
+              </button>
+
+              <button class="room-selector-btn" data-room="penthouse">
+                <div>
+                  <div class="room-btn-title" data-i18n="visRoomPenthouse">High-Ceiling Penthouse</div>
+                  <div class="room-btn-subtitle" data-i18n="visRoomPenthouseSub">Featuring 'Earth Energy' (66" × 90")</div>
+                </div>
+                <span>→</span>
+              </button>
+
+              <button class="room-selector-btn" data-room="gallery">
+                <div>
+                  <div class="room-btn-title" data-i18n="visRoomGallery">Vernon Public Art Gallery Suite</div>
+                  <div class="room-btn-subtitle" data-i18n="visRoomGallerySub">Solo Museum Exhibition Curated View</div>
+                </div>
+                <span>→</span>
+              </button>
+
+              <button class="room-selector-btn" data-room="dining">
+                <div>
+                  <div class="room-btn-title" data-i18n="visRoomDining">Architectural Residence</div>
+                  <div class="room-btn-subtitle" data-i18n="visRoomDiningSub">Custom Commission in Private Residence</div>
+                </div>
+                <span>→</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="room-stage">
+            <img src="images/installation-collector-loft.jpg" alt="Interior Installation" id="roomStageImage">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         Collector Acquisition & Commission Estimator
+         ======================================================================= -->
+    <section class="section-calculator" id="estimator">
+      <div class="container">
+        <div class="text-center">
+          <span class="eyebrow" data-i18n="calcEyebrow">Acquisitions &amp; Private Commissions</span>
+          <h2 class="section-title" data-i18n="calcTitle">Art Advisory &amp; Commission Estimator</h2>
+          <p class="section-desc" data-i18n="calcDesc">
+            Receive an instant transparent estimate for original canvases, bespoke commissioned dimensions, and museum-grade worldwide crating.
+          </p>
+        </div>
+
+        <div class="calculator-card">
+          <div class="calculator-grid">
+            <!-- Left Controls -->
+            <div>
+              <div class="form-group">
+                <label class="form-label" data-i18n="calcSizeLabel">Canvas Dimensions</label>
+                <select class="form-select" id="calcSize">
+                  <option value="4200">Small Format: 36" × 48" ($4,200 USD)</option>
+                  <option value="5800" selected>Medium Format: 48" × 64" ($5,800 USD)</option>
+                  <option value="7800">Large Statement: 60" × 72" ($7,800 USD)</option>
+                  <option value="12500">Monumental Canvas: 66" × 90" ($12,500 USD)</option>
+                  <option value="16000">Architectural Triptych (3 Canvases) ($16,000 USD)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" data-i18n="calcSeriesLabel">Series / Painterly Language</label>
+                <select class="form-select" id="calcSeries">
+                  <option value="1.0" selected>Color Energy Fields (Pointillist Light Fields)</option>
+                  <option value="1.05">Veil Paintings (Translucent Glaze Layers)</option>
+                  <option value="1.1">Colorful Patina (Mineral &amp; Warm Textures)</option>
+                  <option value="1.2">Bespoke Custom Site-Specific Commission</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" data-i18n="calcFrameLabel">Museum Float Framing</label>
+                <select class="form-select" id="calcFrame">
+                  <option value="0" selected>Gallery Wrap (Clean Unframed Canvas Edges - $0)</option>
+                  <option value="650">Natural Canadian Maple Shadowbox Float (+$650)</option>
+                  <option value="780">Archival Solid American Walnut Float (+$780)</option>
+                  <option value="890">Hand-Rubbed Antiqued Champagne Gold Float (+$890)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" data-i18n="calcDeliveryLabel">White-Glove Delivery Destination</label>
+                <select class="form-select" id="calcDelivery">
+                  <option value="350">Canada (Direct Secure Art Courier - $350)</option>
+                  <option value="550" selected>United States Continental (Insured Art Freight - $550)</option>
+                  <option value="1100">Europe &amp; UK (Custom Wood Crate &amp; Customs Broker - $1,100)</option>
+                  <option value="1450">Worldwide International Delivery (Air Freight - $1,450)</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Right Summary -->
+            <div class="calc-summary-box">
+              <div>
+                <span class="eyebrow" data-i18n="calcEstimatedInvestment">Estimated Collector Investment</span>
+                <div class="calc-price-display">
+                  <div class="calc-price-label">Transparent Studio Value</div>
+                  <div class="calc-price-value" id="calcDisplayPrice">$6,350 USD</div>
+                </div>
+
+                <ul class="calc-breakdown-list">
+                  <li class="calc-breakdown-item">
+                    <span>Canvas Work:</span>
+                    <strong id="calcValCanvas">$5,800 USD</strong>
+                  </li>
+                  <li class="calc-breakdown-item">
+                    <span>Fine Art Framing:</span>
+                    <strong id="calcValFrame">Included</strong>
+                  </li>
+                  <li class="calc-breakdown-item">
+                    <span>Crated Transport:</span>
+                    <strong id="calcValShipping">$550 USD</strong>
+                  </li>
+                </ul>
+              </div>
+
+              <div>
+                <p style="font-size:0.78rem; color:var(--text-muted); margin-bottom:1.25rem; line-height:1.5;" data-i18n="calcIncludes">
+                  Includes Signed Certificate of Authenticity (COA), archival varnish, and dedicated provenance documentation.
+                </p>
+                <button class="btn btn-primary" id="calcInquireBtn" style="width:100%;" data-i18n="calcInquireBtn">
+                  Inquire About This Specification
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         Artist Biography & European Pedigree
+         ======================================================================= -->
+    <section class="section-about" id="about">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-portrait-card">
+            <img src="images/heidi-portrait.jpg" alt="Heidi Thompson in her Coldstream studio" width="800" height="1000">
+            <div style="margin-top:1rem; text-align:center;">
+              <h3 style="font-family:var(--font-serif); font-size:1.35rem;">Heidi Thompson</h3>
+              <p style="font-size:0.8rem; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.15em;">Coldstream, British Columbia</p>
+            </div>
+          </div>
+
+          <div>
+            <span class="eyebrow" data-i18n="aboutEyebrow">Heritage &amp; Practice</span>
+            <h2 class="section-title" data-i18n="aboutTitle">European Pedigree &amp; Meditative Depth</h2>
+            <p class="section-desc" style="margin-bottom:1.25rem;" data-i18n="aboutBio1">
+              Heidi Thompson was born in Vernon, BC. At 17, she moved to Europe where she earned a Swiss Diploma in Professional Photography from the University of Art and Design in Zürich (Kunstgewerbeschule). She then apprenticed with legendary German painter Oskar Koller, studied at the Akademie der Bildenden Künste Nürnberg under Ernst Weil, and continued at the Hungarian State University for Fine Art in Budapest under Kokas Ignác.
+            </p>
+            <p class="section-desc" style="margin-bottom:2rem;" data-i18n="aboutBio2">
+              Returning to Canada in 1982, Thompson completed her first 10-day Vipassana meditation course in 1983—a continuous daily discipline that became the foundational pulse of her art. Rather than depicting external scenery, her canvases operate as optical energy fields, dissolving boundaries between viewer, matter, and consciousness.
+            </p>
+
+            <div class="about-timeline">
+              <div class="timeline-step">
+                <div class="timeline-bullet"></div>
+                <div>
+                  <div class="timeline-year">1975 — 1981</div>
+                  <div class="timeline-desc" data-i18n="timeline1">European Fine Art Academies (Zürich, Nuremberg, Budapest)</div>
+                </div>
+              </div>
+
+              <div class="timeline-step">
+                <div class="timeline-bullet"></div>
+                <div>
+                  <div class="timeline-year">1983 — Present</div>
+                  <div class="timeline-desc" data-i18n="timeline2">Daily Vipassana Meditation practice shaping light fields</div>
+                </div>
+              </div>
+
+              <div class="timeline-step">
+                <div class="timeline-bullet"></div>
+                <div>
+                  <div class="timeline-year">1995</div>
+                  <div class="timeline-desc" data-i18n="timeline3">Author of award-winning 'Recapitulation: Life and Art of Sveva Caetani'</div>
+                </div>
+              </div>
+
+              <div class="timeline-step">
+                <div class="timeline-bullet"></div>
+                <div>
+                  <div class="timeline-year">Collections</div>
+                  <div class="timeline-desc" data-i18n="timeline4">Selected Collections: Senvest Collection (Montreal), Vernon Art Gallery, Zurich, NY</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         Critical Reviews (John K. Grande)
+         ======================================================================= -->
+    <section class="section-reviews" id="reviews">
+      <div class="container">
+        <div class="text-center">
+          <span class="eyebrow" data-i18n="reviewsEyebrow">Critical Acclaim</span>
+          <h2 class="section-title" data-i18n="reviewsTitle">There Is No Answer — The Physics of Nature</h2>
+        </div>
+
+        <div class="review-featured-card">
+          <p class="review-quote" data-i18n="reviewsQuote">
+            "Attuned to the artist’s role as a medium, Heidi Thompson works with the physics of nature. Neither dominating nor controlling the outcome of a composition, she deliberately flicks material with a fine fan brush, orchestrating colour, light, and surface vibration. Her work stands alongside Mark Tobey, Jackson Pollock, Mark Rothko, and Natvar Bhavsar in its soulful radiance."
+          </p>
+          <div class="review-author">
+            <div class="review-author-info">
+              <h4 data-i18n="reviewsAuthor">John K. Grande</h4>
+              <p data-i18n="reviewsAuthorTitle">Distinguished Art Critic, Author of 'Balance: Art and Nature'</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         Sveva Caetani Monograph & Film Section
+         ======================================================================= -->
+    <section class="section-film" id="film">
+      <div class="container">
+        <div class="film-grid">
+          <div>
+            <div class="film-badge-award" data-i18n="filmAward">VanCity Book of Excellence Winner</div>
+            <span class="eyebrow" data-i18n="filmEyebrow">Documentary &amp; Monograph</span>
+            <h2 class="section-title" data-i18n="filmTitle">Sveva Caetani: Recapitulation — A Journey</h2>
+            <p class="section-desc" data-i18n="filmDesc">
+              Heidi Thompson spent over a decade documenting the extraordinary life and profound metaphysical artwork of Italian-Canadian artist Sveva Caetani. Her published monograph won the VanCity Book of Excellence Award and was adapted into a celebrated documentary film.
+            </p>
+            <div style="display:flex; flex-wrap:wrap; gap:1rem; align-items:center;">
+              <a href="https://filmfreeway.com/RECAPITULATION-AJourneySvevaCaetani" target="_blank" rel="noopener noreferrer" class="btn btn-primary" data-i18n="filmTrailerBtn">
+                Watch Film Trailer →
+              </a>
+              <span style="font-size:0.8rem; color:var(--text-muted);" data-i18n="filmPasswordNote">
+                For full documentary access, please email the studio.
+              </span>
+            </div>
+          </div>
+
+          <div style="background:var(--bg-card); border:1px solid var(--border-medium); border-radius:var(--radius-md); padding:2rem; box-shadow:var(--shadow-md);">
+            <h3 style="font-family:var(--font-serif); font-size:1.4rem; margin-bottom:1rem;">Calm Focus Joy</h3>
+            <p style="font-size:0.92rem; color:var(--text-secondary); margin-bottom:1.5rem; line-height:1.6;">
+              A practical handbook by Heidi Thompson introducing children and adults to mindful breath awareness—the foundational first step of Vipassana practice that nourishes creative concentration.
+            </p>
+            <a href="mailto:htcthompson@hotmail.com?subject=Inquiry%20regarding%20Calm%20Focus%20Joy%20Book" class="btn btn-outline btn-sm">
+              Request Book Details
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         Contact & Studio Gallery Booking
+         ======================================================================= -->
+    <section class="section-contact" id="contact">
+      <div class="container">
+        <div class="contact-grid">
+          <div>
+            <span class="eyebrow" data-i18n="contactEyebrow">Direct Contact</span>
+            <h2 class="section-title" data-i18n="contactTitle">Studio Gallery Visits &amp; Acquisitions</h2>
+            <p class="section-desc" data-i18n="contactDesc">
+              Heidi Thompson welcomes private collectors, interior architects, and curators to her Coldstream studio gallery by private appointment.
+            </p>
+
+            <div class="contact-info-list">
+              <div class="contact-info-item">
+                <div class="contact-icon">📍</div>
+                <div>
+                  <div class="contact-info-title" data-i18n="contactAddressTitle">Studio Gallery Location</div>
+                  <div class="contact-info-value" data-i18n="contactAddress">9905 Coldstream Creek Road, Coldstream, BC, Canada</div>
+                </div>
+              </div>
+
+              <div class="contact-info-item">
+                <div class="contact-icon">📞</div>
+                <div>
+                  <div class="contact-info-title" data-i18n="contactPhoneTitle">Direct Telephone</div>
+                  <div class="contact-info-value">
+                    <a href="tel:12505421551" data-i18n="contactPhone">(250) 542-1551</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="contact-info-item">
+                <div class="contact-icon">✉️</div>
+                <div>
+                  <div class="contact-info-title" data-i18n="contactEmailTitle">Studio Email</div>
+                  <div class="contact-info-value">
+                    <a href="mailto:htcthompson@hotmail.com" data-i18n="contactEmail">htcthompson@hotmail.com</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Google Map Embed -->
+            <div style="margin-top:2rem; border-radius:var(--radius-md); overflow:hidden; border:1px solid var(--border-medium); box-shadow:var(--shadow-sm);">
+              <iframe
+                title="Heidi Thompson Art Studio Location"
+                width="100%"
+                height="220"
+                style="border:0; display:block;"
+                loading="lazy"
+                allowfullscreen
+                src="https://maps.google.com/maps?q=9905+Coldstream+Creek+Road,+Coldstream,+BC,+Canada&t=&z=13&ie=UTF8&iwloc=&output=embed">
+              </iframe>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="contact-form-card">
+            <form id="contactForm">
+              <div class="form-group">
+                <label class="form-label" for="formName" data-i18n="formName">Full Name</label>
+                <input class="form-input" type="text" id="formName" required placeholder="e.g. Eleanor Vance">
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="formEmail" data-i18n="formEmail">Email Address</label>
+                <input class="form-input" type="email" id="formEmail" required placeholder="e.g. eleanor@collection.com">
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="formInterest" data-i18n="formInterest">Area of Interest</label>
+                <select class="form-select" id="formInterest">
+                  <option value="original" data-i18n="formInterestOpt1">Acquire an Available Original Canvas</option>
+                  <option value="commission" data-i18n="formInterestOpt2">Commission a Bespoke Painting</option>
+                  <option value="visit" data-i18n="formInterestOpt3">Schedule a Private Studio Visit</option>
+                  <option value="curatorial" data-i18n="formInterestOpt4">Curatorial / Exhibition Inquiry</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="formMessage" data-i18n="formMessage">Message or Dimensions Requested</label>
+                <textarea class="form-textarea" id="formMessage" rows="5" required placeholder="Describe your preferred dimensions, series interest, or architectural project..."></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width:100%;" data-i18n="formSubmit">
+                Send Studio Inquiry
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================================
+       Footer
+       ========================================================================= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>HEIDI THOMPSON</h3>
+          <p>
+            Luminous Canadian fine art rooted in European academic excellence and Vipassana meditative equilibrium.
+          </p>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Navigation</div>
+          <ul class="footer-links">
+            <li><a href="#gallery" class="footer-link">Gallery Collections</a></li>
+            <li><a href="#visualizer" class="footer-link">Room Visualizer</a></li>
+            <li><a href="#estimator" class="footer-link">Acquisition Calculator</a></li>
+            <li><a href="#about" class="footer-link">Artist Heritage</a></li>
+            <li><a href="#contact" class="footer-link">Studio Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Gallery Representations</div>
+          <ul class="footer-links">
+            <li><a href="https://www.haldegalerie.com/k%C3%BCnstler-artists/heidi-thompson" target="_blank" rel="noopener noreferrer" class="footer-link">Halde Galerie (Switzerland)</a></li>
+            <li><a href="https://www.arcogallery.com/paintings-heidi-thompson/index.html" target="_blank" rel="noopener noreferrer" class="footer-link">Arco Gallery (New York)</a></li>
+            <li><a href="https://www.saatchiart.com/en-ca/heidithompson.ca" target="_blank" rel="noopener noreferrer" class="footer-link">Saatchi Art International</a></li>
+            <li><a href="https://www.singulart.com/en/artist/heidi-thompson-5013" target="_blank" rel="noopener noreferrer" class="footer-link">Singulart Paris</a></li>
+            <li><a href="https://www.riseart.com/artist/77771/heidi-thompson" target="_blank" rel="noopener noreferrer" class="footer-link">Rise Art London</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Studio &amp; Social</div>
+          <ul class="footer-links">
+            <li><a href="https://instagram.com/heidithompsonart" target="_blank" rel="noopener noreferrer" class="footer-link">Instagram (@heidithompsonart)</a></li>
+            <li><a href="https://www.facebook.com/heidithompsoncontemporaryart/" target="_blank" rel="noopener noreferrer" class="footer-link">Facebook Page</a></li>
+            <li><a href="https://ca.linkedin.com/in/heidi-thompson-b4b2706" target="_blank" rel="noopener noreferrer" class="footer-link">LinkedIn Profile</a></li>
+            <li><a href="https://www.youtube.com/channel/UCdrAheaszdeXoUERAo9-LRQ" target="_blank" rel="noopener noreferrer" class="footer-link">YouTube Studio Videos</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div data-i18n="footerRights">© 2026 Heidi Thompson. All Rights Reserved.</div>
+        <div data-i18n="footerRepresented">Represented &amp; Featured across Canadian &amp; International Galleries.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       Artwork Lightbox Modal
+       ========================================================================= -->
+  <div class="modal-backdrop" id="artworkModal" role="dialog" aria-modal="true">
+    <div class="modal-content-wrapper">
+      <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close modal">✕</button>
+      <div class="modal-image-col">
+        <img src="" alt="" id="modalImage">
+      </div>
+      <div class="modal-details-col">
+        <span class="eyebrow" id="modalSeries">Color Energy Fields</span>
+        <h2 style="font-family:var(--font-serif); font-size:2rem; margin-bottom:0.5rem;" id="modalTitle">Artwork Title</h2>
+        <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:1.5rem;" id="modalSpecs">Specs</p>
+        
+        <p style="font-size:0.95rem; color:var(--text-secondary); line-height:1.7; margin-bottom:2rem;" id="modalDesc">Description</p>
+        
+        <div style="margin-top:auto; padding-top:1.5rem; border-top:1px solid var(--border-light);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1.25rem;">
+            <span style="font-size:0.75rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--text-muted);" data-i18n="modalStatusAvailable">Available in Studio Archive</span>
+            <span style="font-family:var(--font-serif); font-size:1.6rem; color:var(--gold-primary); font-weight:600;" id="modalPrice">$0 USD</span>
+          </div>
+          <button class="btn btn-primary" id="modalInquireBtn" style="width:100%;" data-i18n="modalInquireBtn">
+            Inquire to Acquire This Canvas
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>

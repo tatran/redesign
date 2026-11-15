@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <radialGradient id="halo" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#f5e6ca" stop-opacity="0.8"/>
+      <stop offset="60%" stop-color="#b8935c" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#141416" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8ecd4"/>
+      <stop offset="50%" stop-color="#c9a468"/>
+      <stop offset="100%" stop-color="#8a6730"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="#121316"/>
+  <circle cx="32" cy="32" r="28" fill="url(#halo)"/>
+  <rect x="2" y="2" width="60" height="60" rx="12" fill="none" stroke="#c9a468" stroke-opacity="0.3" stroke-width="1"/>
+  <!-- H and T ligature monogram -->
+  <path d="M19 19v26M29 19v26M19 32h10" stroke="url(#gold)" stroke-width="2.8" stroke-linecap="round"/>
+  <path d="M35 19h15M42.5 19v26" stroke="url(#gold)" stroke-width="2.8" stroke-linecap="round"/>
+  <circle cx="42.5" cy="47.5" r="1.5" fill="#c9a468"/>
+</svg>
