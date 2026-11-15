@@ -1,0 +1,29 @@
+Subject: Custom Studio & Artist Redesign Concept for Zach Taralson — Sploosh! Studios Ltd. & Enevold (Dark + Light Prototype)
+To: splooshrecordingco@gmail.com
+
+Hi Zach,
+
+I’ve been listening to your work as Enevold — from "Save the Clock Tower" and "Space Machine" (and your feature on the RiseUp TV Tour in Gonzo Okanagan) all the way to the 30-track double album "How You Do Anything Is How You Do Everything (Pt. 1 & Pt. 2)", "Sendt Av Kjærlighet", and your brand-new November 2026 single "Ride with Me". Performing, writing, engineering, mixing, and mastering 100% of every track while running Sploosh! Studios Ltd. in Kelowna and maintaining a 5.0-star verified rating with repeat clients on SoundBetter is seriously impressive.
+
+While looking at your current site (zachtaralson.wordpress.com) alongside your Facebook page (facebook.com/enevoldmusik), I noticed a few areas where a custom studio hub could help convert more visitors into mixing/session clients and listeners:
+
+1. Layout & Default WordPress Pages: On zachtaralson.wordpress.com, your main 20+ year bio paragraph is currently wrapped inside a rounded purple button block (#571d44), and the /about/ and /hello-world/ pages still contain default WordPress placeholder text.
+2. SoundBetter Rates, Gear & Reviews Are Hidden Off-Site: Visitors on your homepage don't see your transparent pricing (Mixing $200, Mastering $70, Vocal Tuning $75, Time Alignment $75, Session Guitar/Bass $70), your Fender/Gibson/StingRay/JC-160/SansAmp rig, or your 5-star verified reviews from Gregory Conrad, Nicholas G., Jonathan C., Alex C., and Gabe Wolf.
+3. Facebook Login Wall on facebook.com/enevoldmusik: Because Facebook blocks logged-out users, having a self-hosted Enevold discography player lets fans and sync supervisors audition your music immediately.
+
+WHAT I BUILT FOR YOU (LIVE PROTOTYPE):
+👉 https://livingpixelstudios.com/redesign/zachtaralson/
+
+- Dark Control Room + Light Acoustic Studio Mode: Honors your signature #571d44 studio plum palette with a 1-click theme switcher.
+- Interactive Sploosh! Studios Quote & Bundle Calculator: Lets artists combine Mixing, Mastering, Vocal Tuning, Time Alignment, and Session Guitar/Bass across 1–15 songs with automatic multi-project discounts (up to 5 revisions included) and 1-click transfer to your booking form.
+- Playable Enevold Discography (2017–2026) & SoundBetter Reference Player: Features your "Enevold – I.C.U." reference mix plus filterable cards, album artwork, and audio previews for 12 Enevold releases.
+- 16 International Credits & 4 Languages (EN / ES / NO / FR): Filterable showcase of all 16 bands/projects across Canada, Mexico (Emet, Lev3n), Norway (Ålesund Creative DTS), and the UK (Cally Robb).
+
+If you'd like to use this for Sploosh! Studios Ltd. and Enevold, just reply to this email and I'll gladly walk you through it or send over the complete source files.
+
+Best regards,
+
+Ing. Luboš Kostroš
+LivingPixel Studios
+Email: info@livingpixelstudios.com
+Web: https://livingpixelstudios.com/
