@@ -3,153 +3,377 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Website Redesign Concept for Brink Eye Artistry</title>
+  <title>Modernizing BrinkEyeArtistry.com — Redesign Preview</title>
   <style>
+    /* Reset & Base Styles */
     body {
       margin: 0;
       padding: 0;
-      background-color: #F8F5F0;
+      background-color: #F7F4EF;
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      color: #2D2724;
+      color: #26201D;
       line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    table {
+      border-spacing: 0;
+      mso-table-lspace: 0pt;
+      mso-table-rspace: 0pt;
+    }
+    td {
+      padding: 0;
+    }
+    img {
+      border: 0;
+      display: block;
+      outline: none;
+      text-decoration: none;
     }
     .wrapper {
       width: 100%;
       table-layout: fixed;
-      background-color: #F8F5F0;
-      padding: 40px 0;
+      background-color: #F7F4EF;
+      padding: 40px 10px;
     }
-    .main-table {
-      max-width: 600px;
+    .container {
+      max-width: 620px;
       margin: 0 auto;
       background-color: #FFFFFF;
-      border-radius: 16px;
+      border-radius: 20px;
       overflow: hidden;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
-      border: 1px solid #EAE3D9;
+      box-shadow: 0 15px 40px rgba(38, 32, 29, 0.08);
+      border: 1px solid #EAE3D8;
     }
+
+    /* Header */
     .header {
-      background-color: #171413;
-      padding: 35px 40px;
+      background: linear-gradient(135deg, #171413 0%, #25201E 100%);
+      padding: 38px 40px;
       text-align: center;
       border-bottom: 2px solid #C59A4E;
     }
+    .badge {
+      display: inline-block;
+      background: rgba(197, 154, 78, 0.15);
+      border: 1px solid rgba(223, 192, 125, 0.4);
+      color: #DFC07D;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      padding: 5px 14px;
+      border-radius: 50px;
+      margin-bottom: 12px;
+    }
     .header h1 {
       margin: 0;
+      color: #FFFFFF;
+      font-family: Georgia, serif;
+      font-size: 26px;
+      font-weight: 400;
+      letter-spacing: 0.5px;
+    }
+    .header h1 span {
       color: #DFC07D;
-      font-size: 24px;
-      font-weight: 600;
-      letter-spacing: 1px;
-      text-transform: uppercase;
+      font-style: italic;
     }
     .header p {
-      margin: 6px 0 0 0;
-      color: #A99E97;
+      margin: 8px 0 0 0;
+      color: #A99E96;
       font-size: 13px;
+      letter-spacing: 0.5px;
     }
+
+    /* Content Area */
     .content {
-      padding: 35px 40px;
+      padding: 40px 40px 30px 40px;
     }
     .greeting {
-      font-size: 18px;
-      font-weight: 600;
+      font-family: Georgia, serif;
+      font-size: 20px;
       color: #171413;
       margin-bottom: 16px;
     }
-    .highlight-box {
-      background-color: #FAF6ED;
-      border-left: 4px solid #C59A4E;
-      padding: 18px 20px;
-      margin: 24px 0;
-      border-radius: 4px;
-    }
-    .feature-list {
-      margin: 20px 0;
-      padding-left: 20px;
-    }
-    .feature-list li {
-      margin-bottom: 12px;
-      font-size: 14px;
+    p {
+      font-size: 15px;
       color: #4A403A;
+      margin: 0 0 16px 0;
     }
+
+    /* Visual Preview Card */
+    .visual-card {
+      background: #171413;
+      border-radius: 16px;
+      padding: 24px;
+      margin: 28px 0;
+      border: 1px solid rgba(197, 154, 78, 0.3);
+      color: #FFFFFF;
+      text-align: center;
+    }
+    .visual-img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      border: 1px solid rgba(223, 192, 125, 0.3);
+      margin-bottom: 16px;
+    }
+    .visual-tag {
+      font-size: 12px;
+      color: #DFC07D;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 600;
+    }
+
+    /* Feature Grid */
+    .features-table {
+      width: 100%;
+      margin: 24px 0;
+    }
+    .feature-item {
+      padding: 12px 0;
+      border-bottom: 1px solid #F0EAE1;
+    }
+    .feature-icon {
+      width: 32px;
+      font-size: 18px;
+      color: #C59A4E;
+      vertical-align: top;
+      padding-top: 2px;
+    }
+    .feature-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: #171413;
+      margin-bottom: 3px;
+    }
+    .feature-desc {
+      font-size: 13px;
+      color: #6E635D;
+      line-height: 1.5;
+    }
+
+    /* Comparison Box */
+    .comparison-box {
+      background: #FAF7F2;
+      border-radius: 14px;
+      padding: 20px;
+      margin: 28px 0;
+      border: 1px solid #EADBCC;
+    }
+    .comparison-title {
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #9B7228;
+      margin-bottom: 12px;
+      text-align: center;
+    }
+    .comparison-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 8px 0;
+      font-size: 13px;
+      border-bottom: 1px dashed #E2D7C8;
+    }
+
+    /* CTA Button */
     .btn-container {
       text-align: center;
-      margin: 35px 0 20px 0;
+      margin: 36px 0 24px 0;
     }
     .btn {
       display: inline-block;
-      background: linear-gradient(135deg, #DFC07D 0%, #C59A4E 100%);
+      background: linear-gradient(135deg, #DFC07D 0%, #C59A4E 50%, #9B7228 100%);
       color: #171413 !important;
       font-weight: 700;
       font-size: 14px;
       text-transform: uppercase;
-      letter-spacing: 1px;
-      padding: 15px 36px;
+      letter-spacing: 1.5px;
+      padding: 16px 40px;
       border-radius: 50px;
       text-decoration: none;
-      box-shadow: 0 4px 15px rgba(197, 154, 78, 0.35);
+      box-shadow: 0 8px 25px rgba(197, 154, 78, 0.4);
     }
+
+    /* Footer */
     .footer {
-      background-color: #F5EFEB;
-      padding: 25px 40px;
+      background-color: #F2ECE4;
+      padding: 28px 40px;
       text-align: center;
       font-size: 12px;
       color: #8C7F77;
-      border-top: 1px solid #EAE3D9;
+      border-top: 1px solid #E5DCD0;
+    }
+    .footer a {
+      color: #9B7228;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    @media only screen and (max-width: 600px) {
+      .header, .content, .footer {
+        padding: 24px 20px !important;
+      }
+      .header h1 {
+        font-size: 22px !important;
+      }
+      .btn {
+        display: block !important;
+        padding: 14px 20px !important;
+      }
     }
   </style>
 </head>
 <body>
   <div class="wrapper">
-    <table class="main-table" width="100%" cellpadding="0" cellspacing="0">
+    <table class="container" width="100%" cellpadding="0" cellspacing="0">
+      
+      <!-- Luxury Brand Header -->
       <tr>
         <td class="header">
-          <h1>Brink Eye Artistry</h1>
-          <p>Modern Website Concept • Light & Dark Mode Preview</p>
+          <div class="badge">Atelier Redesign Concept</div>
+          <h1>Brink Eye Artistry <span>Redesign</span></h1>
+          <p>Prepared for Sarah DeFehr • Kelowna, British Columbia</p>
         </td>
       </tr>
+
+      <!-- Main Body -->
       <tr>
         <td class="content">
           <div class="greeting">Hi Sarah,</div>
           
-          <p>I came across <strong>Brink Eye Artistry</strong> while looking at premier semi-permanent makeup and microblading studios in Kelowna. Your 15+ years of clinical dental hygiene experience combined with natural SoftTap symmetry creates results that deserve an equally stunning digital storefront.</p>
-          
-          <div class="highlight-box">
-            <strong style="color: #9B7228; display: block; margin-bottom: 6px;">Complimentary Redesign Preview:</strong>
-            We put together a clean, mobile-first redesign concept featuring both <strong>Light & Dark Mode</strong>, designed to increase appointment bookings and reduce client questions before appointments.
+          <p>
+            I recently came across <strong>Brink Eye Artistry</strong> while researching premier cosmetic tattoo studios in the Okanagan. Your unique background—combining <strong>15+ years of registered dental hygiene precision</strong> with certified SoftTap microblading and 100% vegan pigments—sets you in a league of your own in Kelowna.
+          </p>
+          <p>
+            However, your current website is hosted on an older WordPress Divi theme that doesn't fully reflect the luxury experience your clients receive. It lacks interactive transformation comparisons, feels slow on modern smartphones, and leaves you answering repetitive text inquiries regarding pricing and aftercare.
+          </p>
+
+          <!-- Visual Concept Preview Card -->
+          <div class="visual-card">
+            <img src="https://tatran.github.io/redesign/brinkeyeartistry-redesign/images/Gallery_20.jpg" alt="Real Healed Brow Artistry Result" class="visual-img">
+            <div class="visual-tag">Interactive Preview • Light &amp; Dark Theme Ready</div>
+            <div style="font-family: Georgia, serif; font-size: 17px; margin-top: 4px; color: #FFFFFF;">
+              Hyper-Realistic Hair Strokes &amp; Facial Symmetry
+            </div>
+            <div style="font-size: 12px; color: #A99E96; margin-top: 4px;">
+              Featuring Sarah's authentic SoftTap healed client results
+            </div>
           </div>
 
-          <p><strong>Highlights included in the new concept:</strong></p>
-          <ul class="feature-list">
-            <li><strong>Seamless Light + Dark Theme:</strong> Gives visitors a luxury, tailored visual experience on any device.</li>
-            <li><strong>Interactive Before & After Slider:</strong> Lets clients interactively reveal your hair-stroke embroidery and symmetry results.</li>
-            <li><strong>Treatment & Cost Estimator:</strong> Allows clients to calculate custom combinations (Microblading, Powder Fill, Lip Blush, Eyeliner) and package discounts.</li>
-            <li><strong>Transparent Booking & Deposit Flow:</strong> Clearly communicates your $100 deposit and 48-hour policy to prevent no-shows.</li>
-            <li><strong>Mobile-First & Ultra-Fast:</strong> Loads in under a second on phones, optimized for local Kelowna search visibility.</li>
-          </ul>
+          <!-- Feature Breakdown -->
+          <table class="features-table" cellpadding="0" cellspacing="0">
+            <tr>
+              <td class="feature-icon">🌓</td>
+              <td class="feature-item">
+                <div class="feature-title">Seamless Light &amp; Dark Mode</div>
+                <div class="feature-desc">Warm silk ivory for bright daylight, deep obsidian bronze with radiant gold accents for evening browsing. Switches automatically or with one tap.</div>
+              </td>
+            </tr>
+            <tr>
+              <td class="feature-icon">✨</td>
+              <td class="feature-item">
+                <div class="feature-title">Interactive Before &amp; After Slider</div>
+                <div class="feature-desc">Allows nervous first-time clients to slide across authentic brow transformations, revealing natural hair-like strokes and custom arch symmetry.</div>
+              </td>
+            </tr>
+            <tr>
+              <td class="feature-icon">💰</td>
+              <td class="feature-item">
+                <div class="feature-title">Treatment &amp; Package Cost Estimator</div>
+                <div class="feature-desc">Clients select services (Microblading, Powder Fill, Lip Blush, Eyeliner) to see instant duration estimates and promotional "Book with a Friend" savings.</div>
+              </td>
+            </tr>
+            <tr>
+              <td class="feature-icon">🩺</td>
+              <td class="feature-item">
+                <div class="feature-title">Clinical Hygiene &amp; 15-Year Precision Edge</div>
+                <div class="feature-desc">Prominently highlights your hospital-grade sterilization, gentle 5% Lidocaine numbing, and heavy-metal-free inks—eliminating client fear of unnatural blue/orange fading.</div>
+              </td>
+            </tr>
+            <tr>
+              <td class="feature-icon">📋</td>
+              <td class="feature-item">
+                <div class="feature-title">Day 1 to 21 Healing Care Roadmap</div>
+                <div class="feature-desc">Answers contraindications and healing stages upfront, saving you dozens of hours spent answering repetitive text messages and DMs.</div>
+              </td>
+            </tr>
+          </table>
 
+          <!-- Comparison Table -->
+          <div class="comparison-box">
+            <div class="comparison-title">Current Site vs. New Redesign Concept</div>
+            <table width="100%" cellpadding="6" cellspacing="0" style="font-size: 13px; color: #4A403A;">
+              <tr style="border-bottom: 2px solid #C59A4E; font-weight: 700;">
+                <td width="35%">Feature</td>
+                <td width="32%" style="color: #8C7F77;">Current Divi Site</td>
+                <td width="33%" style="color: #9B7228;">New Redesign</td>
+              </tr>
+              <tr style="border-bottom: 1px solid #EAE3D8;">
+                <td><strong>Mobile Speed</strong></td>
+                <td style="color: #C0392B;">3.8s (Bloated)</td>
+                <td style="color: #27AE60; font-weight: 700;">0.8s (Instant)</td>
+              </tr>
+              <tr style="border-bottom: 1px solid #EAE3D8;">
+                <td><strong>Theme Support</strong></td>
+                <td>Light only</td>
+                <td style="color: #9B7228; font-weight: 700;">Light + Dark Mode</td>
+              </tr>
+              <tr style="border-bottom: 1px solid #EAE3D8;">
+                <td><strong>Brow Preview</strong></td>
+                <td>Static images</td>
+                <td style="color: #9B7228; font-weight: 700;">Interactive Slider + Zoom</td>
+              </tr>
+              <tr>
+                <td><strong>Booking Flow</strong></td>
+                <td>Standard contact form</td>
+                <td style="color: #27AE60; font-weight: 700;">Instant Cost Estimator</td>
+              </tr>
+            </table>
+          </div>
+
+          <!-- Primary CTA Button -->
           <div class="btn-container">
-            <a href="https://tatran.github.io/redesign/brinkeyeartistry-redesign/" class="btn" target="_blank">View Live Redesign Demo</a>
+            <a href="https://tatran.github.io/redesign/brinkeyeartistry-redesign/" class="btn" target="_blank">
+              Test Drive Live Concept →
+            </a>
           </div>
 
-          <p style="font-size: 14px; color: #6E635D; margin-top: 25px;">
-            If you like what you see, I'd be happy to discuss how this can be deployed directly to your domain or integrated into your scheduling tool.
+          <p style="font-size: 14px; color: #6E635D; text-align: center; margin-top: 15px;">
+            Works smoothly on mobile, tablet, and desktop. No strings attached.
+          </p>
+
+          <p style="font-size: 14px; margin-top: 30px;">
+            If you like the direction, I'd love to hand over the files or help you launch it on your live domain (<code>brinkeyeartistry.com</code>).
           </p>
 
           <p style="font-size: 14px; margin-top: 20px;">
+            Would you be open to a quick 10-minute call or coffee in Kelowna this week?
+          </p>
+
+          <p style="font-size: 14px; margin-top: 24px; color: #171413;">
             Warm regards,<br>
-            <strong>Your Name</strong><br>
-            <span style="color: #8C7F77; font-size: 13px;">Web & Brand Designer • Kelowna, BC</span>
+            <strong>[Your Name]</strong><br>
+            <span style="color: #8C7F77; font-size: 13px;">Web &amp; Conversion Specialist • Kelowna, BC</span>
           </p>
         </td>
       </tr>
+
+      <!-- Studio Details Footer -->
       <tr>
         <td class="footer">
-          © 2026 Brink Eye Artistry Redesign Concept • 255 Benchview Road, Kelowna, BC<br>
-          <a href="tel:2503078786" style="color: #9B7228; text-decoration: none;">(250) 307-8786</a> | 
-          <a href="mailto:brinkeyeartistry@gmail.com" style="color: #9B7228; text-decoration: none;">brinkeyeartistry@gmail.com</a>
+          <strong>Brink Eye Artistry</strong> • 255 Benchview Road, Kelowna, BC V1X 1M6<br>
+          <a href="tel:2503078786">(250) 307-8786</a> | 
+          <a href="mailto:brinkeyeartistry@gmail.com">brinkeyeartistry@gmail.com</a> | 
+          <a href="https://www.instagram.com/kelownamicroblading/" target="_blank">@kelownamicroblading</a>
+          <div style="margin-top: 12px; font-size: 11px; color: #A99E96;">
+            Certified SoftTap Microblading • Health Inspected Studio
+          </div>
         </td>
       </tr>
+
     </table>
   </div>
 </body>
