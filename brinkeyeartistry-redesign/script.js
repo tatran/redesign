@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initBeforeAfterSlider();
   initCostCalculator();
   initFaqAccordion();
+  initGalleryLightbox();
   initForms();
   initSmoothScroll();
 });
@@ -304,7 +305,62 @@ function initFaqAccordion() {
 }
 
 /* ==========================================================================
-   7. Form Submissions with Toast Confirmation
+   7. Gallery Lightbox Modal
+   ========================================================================== */
+function initGalleryLightbox() {
+  const galleryItems = document.querySelectorAll('.gallery-zoom-trigger');
+  let lightbox = document.getElementById('gallery-lightbox');
+  
+  if (!galleryItems.length) return;
+  
+  if (!lightbox) {
+    lightbox = document.createElement('div');
+    lightbox.id = 'gallery-lightbox';
+    lightbox.className = 'fixed inset-0 z-50 bg-noir-950/90 backdrop-blur-md flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-300';
+    lightbox.innerHTML = `
+      <div class="relative max-w-4xl max-h-[90vh] flex flex-col items-center">
+        <button id="close-lightbox" class="absolute -top-12 right-0 text-white hover:text-gold-400 text-2xl p-2 transition" aria-label="Close Preview">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <img id="lightbox-img" src="" alt="Microblading Result Preview" class="max-h-[75vh] w-auto rounded-2xl shadow-2xl border-2 border-gold-400/40 object-contain">
+        <p id="lightbox-caption" class="text-stone-300 text-sm mt-3 text-center font-serif tracking-wide"></p>
+      </div>
+    `;
+    document.body.appendChild(lightbox);
+    
+    const closeBtn = document.getElementById('close-lightbox');
+    const closeLightbox = () => {
+      lightbox.classList.add('opacity-0', 'pointer-events-none');
+    };
+    
+    closeBtn.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) closeLightbox();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeLightbox();
+    });
+  }
+  
+  const lightboxImg = document.getElementById('lightbox-img');
+  const lightboxCaption = document.getElementById('lightbox-caption');
+  
+  galleryItems.forEach(item => {
+    item.addEventListener('click', () => {
+      const src = item.getAttribute('data-full-img') || item.querySelector('img')?.src;
+      const caption = item.getAttribute('data-caption') || item.querySelector('img')?.alt || 'Client Transformation';
+      
+      if (lightboxImg && src) {
+        lightboxImg.src = src;
+        if (lightboxCaption) lightboxCaption.textContent = caption;
+        lightbox.classList.remove('opacity-0', 'pointer-events-none');
+      }
+    });
+  });
+}
+
+/* ==========================================================================
+   8. Form Submissions with Toast Confirmation
    ========================================================================== */
 function initForms() {
   const bookingForm = document.getElementById('appointment-form');
@@ -360,7 +416,7 @@ function initForms() {
 }
 
 /* ==========================================================================
-   8. Smooth Scroll Navigation
+   9. Smooth Scroll Navigation
    ========================================================================== */
 function initSmoothScroll() {
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
