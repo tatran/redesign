@@ -1,0 +1,36 @@
+Subject: Custom Website Redesign Prototype for Tiny Treasures Kelowna (Light + Dark Mode & BC Subsidy Calculator)
+To: tinytreasureskelowna@gmail.com
+
+Dear Mrs. Tammy, Jamal, and the Tiny Treasures Kelowna Team,
+
+Reading through the heartfelt reviews from Kelowna parents about your work at 1310 Graham Road is truly inspiring. Whether it is your 16+ years of experience in early childhood and special education (including Autism support, ASL, and occupational therapy practices), Jamal's extraordinary patience helping shy or non-English-speaking children like Eric feel at home, or the fact that local Kelowna Kindergarten and Grade 1 teachers actively recommend your readiness program—Tiny Treasures is a true gem for Okanagan families.
+
+While visiting your current Wix website (https://tinytreasureskelow.wixsite.com/tiny-treasures-kelow), I noticed a few technical glitches holding back how your program is presented online:
+
+1. Overlapping Text Bug on the Costs Page & Mobile Layout: On your current /costs page, the body paragraph overlaps right on top of the heading text, and the fixed-position Wix boxes clip on mobile phones.
+2. Email Typo & Broken "+" Links on the About Page: The sidebar contact box on /about1-c1x1t lists "tinytreasureskelowna.com" (missing @gmail.com), and the "+" buttons next to "Renovated Playroom (September 2025)" and "Parent Nights <3" point to a generic Wix placeholder link.
+3. Confusing Page URLs & Wix Free Banner Ads: Your Programs page is at /about while About is at /about1-c1x1t and Register is at /about1-c1z94, framed by third-party Wix ads.
+4. BC CCFRI & ACCB Subsidy Clarity: Parents searching for childcare in Kelowna love seeing how BC's Child Care Fee Reduction Initiative (CCFRI) and Affordable Child Care Benefit (ACCB) reduce their monthly cost before inquiring.
+
+To show you how warm, modern, and trustworthy your online presence can look, I built a complete, working interactive redesign prototype specifically for Tiny Treasures Kelowna:
+
+👉 Explore Your Live Redesign Prototype Online:
+https://livingpixelstudios.com/redesign/tinytreasureskelowna/
+
+What this new redesign offers Tiny Treasures Kelowna:
+- Warm Okanagan Sunlight (Light Mode) + Cozy Storytime (Dark Mode) toggle for parents browsing after bedtime
+- Interactive BC CCFRI & ACCB Tuition Subsidy Estimator for Infant (12–24m), Toddler (2–3y), Preschool (3–5y), and Before/After School Care
+- Interactive Child Adaptation & Care Advisor (Separation Anxiety, Autism/ASL/Special Needs, ESL Newcomers, Kindergarten Readiness, and direct integration with your Growing Together Potty Training site)
+- All 18+ authentic photos from your playroom and fenced backyard, verified parent testimonials, Bilingual (EN / FR) switch, and a mobile-friendly Tour & Registration form wired to tinytreasureskelowna@gmail.com
+
+No-Obligation Next Step:
+I would love to walk you through this prototype on a quick, no-pressure 10-minute call—or help you launch it on a clean custom domain (such as tinytreasureskelowna.ca) without Wix ads or broken links.
+
+Would you have 10 minutes this week or next to take a look together?
+
+Warm regards and thank you for the wonderful care you provide to Kelowna families,
+
+Lubos Kostros
+LivingPixel Studios – Modern Web Design & Interactive Family Portals
+Email: info@livingpixelstudios.com
+Web: https://livingpixelstudios.com/
