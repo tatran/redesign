@@ -171,6 +171,36 @@ a {
   gap: 0.6rem;
 }
 
+.lang-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.45rem 0.75rem;
+  border-radius: 9px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text-muted);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  transition: all 0.2s ease;
+  line-height: 1;
+}
+
+.lang-switch:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.lang-switch .active {
+  color: var(--primary);
+}
+
+.lang-switch .divider {
+  opacity: 0.4;
+  font-weight: 400;
+}
+
 .theme-toggle {
   width: 40px;
   height: 40px;

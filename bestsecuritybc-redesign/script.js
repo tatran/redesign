@@ -60,8 +60,13 @@
   if (contactForm && formStatus) {
     contactForm.addEventListener('submit', (e) => {
       e.preventDefault();
+      const isFr = document.documentElement.lang === 'fr';
       const name = contactForm.elements.name.value.trim();
-      formStatus.textContent = `Thank you, ${name || 'valued client'}! Your consultation request has been received. Our Kelowna team will reach out shortly.`;
+      if (isFr) {
+        formStatus.textContent = `Merci, ${name || 'cher client'} ! Votre demande de consultation a bien été reçue. Notre équipe de Kelowna vous contactera sous peu.`;
+      } else {
+        formStatus.textContent = `Thank you, ${name || 'valued client'}! Your consultation request has been received. Our Kelowna team will reach out shortly.`;
+      }
       contactForm.reset();
     });
   }
