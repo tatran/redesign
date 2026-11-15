@@ -1,0 +1,36 @@
+Subject: Custom Light + Dark Website Redesign & Interactive Roof Estimator for Orchard Roofing (orchardroofing.ca)
+To: Christopher Schmidt <sales@orchardroofing.ca>
+
+Hi Chris (and the Orchard Roofing team),
+
+While reviewing top residential roofing contractors in Kelowna and across the Okanagan Valley, Orchard Roofing immediately stood out. Between your CertainTeed ShingleMaster™ Certified Installer status (unlocking 50-year Landmark® warranties), attaching up-to-date WorkSafeBC (WCB) and liability insurance to every quote, your written 10-year workmanship guarantee, and glowing client reviews from homeowners and strata councils alike, your reputation from Vernon to Summerland is second to none.
+
+However, while auditing your current WordPress/Divi site at orchardroofing.ca, I noticed a few technical and layout issues that may be costing you high-value re-roof and conversion leads:
+
+1. Unfinished Divi Placeholder Text Live on Your FAQ Page: On orchardroofing.ca/faqs/, the first accordion item currently displays default template text to customers ("Your Title Goes Here — Your content goes here. Edit or remove this text inline or in the module Content settings.").
+2. Heavy Divi + Forminator Script Load on Mobile: Homeowners searching for emergency leak or skylight repairs on their phones wait for heavy WordPress/Divi scripts, and the hero estimate form relies on delayed AJAX rendering.
+3. No Interactive Ballpark Estimator for Re-Roofs & Conversions: Homeowners comparing asphalt re-roofs, 2/12–3/12 low-slope tar-and-gravel conversions (Polyglass® 2-ply), or cedar shake conversions can't preview a ballpark range or send structured roof specs before booking an inspection.
+4. Single Theme Only: Adding an architectural Light + Dark Mode (automatically switching between your crimson and white Orchard Apple logos) and bilingual EN/FR support elevates your brand above local competitors.
+
+To make this concrete, I built a complete, working Light + Dark Mode redesign prototype specifically for Orchard Roofing:
+
+👉 View Your Live Interactive Prototype Here:
+https://tatran.github.io/redesign/orchardroofing-redesign/
+
+What We Built Into Your New Orchard Roofing Prototype:
+- Interactive Okanagan Roof & Conversion Estimator: Visitors select their project scope (CertainTeed Landmark® Asphalt Re-Roof, Low-Slope 2/12–3/12 Tar & Gravel Conversion with Polyglass® 2-ply, Cedar Shake Conversion, or Skylight/Sunken Deck Repair), approximate roof square footage, pitch, and add-ons (skylights, rotten deck allowance, colour-matched gutters, WCB safety anchors) and transfer the exact spec into your quote form in one click.
+- Bespoke Light + Dark Theme: Engineered around your signature Orchard Crimson (#822433), Okanagan Cedar, and Charcoal Shingle Slate—automatically swapping between your crimson logo and crisp white logo.
+- Front-and-Centre Trust & Credentials: Highlights your 50-year CertainTeed ShingleMaster™ warranty, 10-year invoice workmanship guarantee, WCB & liability proof, finished installation photo promise, and all 9 verified customer reviews (Patti Rae, Erin W., JS C., Shawn G., Daryl Lucier, etc.).
+- Zero Bloat, Cleaned FAQs & Local SEO Schema: Removed the broken Divi placeholder text, added a filterable lightbox gallery of your Kelowna & Lake Country projects, and embedded RoofingContractor JSON-LD schema for Vernon to Summerland search visibility.
+
+No-Obligation Next Step:
+I'd love to hear what you think of the new layout and the interactive roof calculator. If you like it, we can deploy this fast, modern version directly onto orchardroofing.ca (or hand over the clean source code) with zero downtime.
+
+Would you be open to a quick 10-minute call or email chat this week to walk through it?
+
+Warm regards,
+
+Luboš Kostroš
+LivingPixel Studios · High-Converting Web Redesigns & Interactive Estimators
+Email: info@livingpixelstudios.com
+Live Prototype: https://tatran.github.io/redesign/orchardroofing-redesign/

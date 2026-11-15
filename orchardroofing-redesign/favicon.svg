@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <rect width="64" height="64" rx="14" fill="#181214"/>
+  <!-- Roofline pitch -->
+  <path d="M10 30L32 13L54 30" stroke="#e5c899" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Orchard Apple O Emblem -->
+  <path d="M32 25C27.5 23.2 21 24.8 21 33.5C21 42.5 26.8 49 30.2 49C31.2 49 31.6 48.5 32 48.5C32.4 48.5 32.8 49 33.8 49C37.2 49 43 42.5 43 33.5C43 24.8 36.5 23.2 32 25Z" stroke="#a62c3e" stroke-width="4.2" fill="rgba(166,44,62,0.18)"/>
+  <!-- Apple Leaf -->
+  <path d="M32 23.5C31.5 19.5 34.5 16.5 38 16.5C38.5 20 35.5 23 32 23.5Z" fill="#a62c3e"/>
+</svg>
