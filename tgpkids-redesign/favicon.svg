@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="appleGrad" x1="12" y1="14" x2="52" y2="56" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ef4444"/>
+      <stop offset="100%" stop-color="#c81e24"/>
+    </linearGradient>
+    <linearGradient id="leafGrad" x1="32" y1="4" x2="48" y2="18" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#65a30d"/>
+      <stop offset="100%" stop-color="#3d8b37"/>
+    </linearGradient>
+  </defs>
+  <!-- Stem -->
+  <path d="M31 15C31 10 34 6 37 5" stroke="#5c4033" stroke-width="3.2" stroke-linecap="round"/>
+  <!-- Leaf -->
+  <path d="M34 12C39 6 47 7 49 12C44 16 38 15 34 12Z" fill="url(#leafGrad)"/>
+  <!-- Apple Body -->
+  <path d="M32 18C24 14 12 18 11 31C10 44 20 57 28 57C30.5 57 31.2 55.8 32 55.8C32.8 55.8 33.5 57 36 57C44 57 54 44 53 31C52 18 40 14 32 18Z" fill="url(#appleGrad)"/>
+  <!-- Green Hill Base Inside Apple -->
+  <path d="M15 47C22 42 42 42 49 47C45 53 39 56.5 35.5 56.5C33.5 56.5 32.8 55.5 32 55.5C31.2 55.5 30.5 56.5 28.5 56.5C25 56.5 19 53 15 47Z" fill="#3d8b37"/>
+  <!-- Three Happy Figures / Stars -->
+  <circle cx="24" cy="31" r="3" fill="#ffffff"/>
+  <path d="M20 40C20 36.5 28 36.5 28 40" stroke="#ffffff" stroke-width="2.6" stroke-linecap="round"/>
+  <circle cx="32" cy="27" r="3.4" fill="#fde047"/>
+  <path d="M27 38C27 33.8 37 33.8 37 38" stroke="#fde047" stroke-width="2.8" stroke-linecap="round"/>
+  <circle cx="40" cy="31" r="3" fill="#ffffff"/>
+  <path d="M36 40C36 36.5 44 36.5 44 40" stroke="#ffffff" stroke-width="2.6" stroke-linecap="round"/>
+</svg>

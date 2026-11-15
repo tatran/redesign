@@ -1,0 +1,38 @@
+Subject: Custom Mobile-First Website & Parent Portal Concept for TGP Kids – The Gathering Place Childcare Center (Light + Dark Mode · Hollydell & Matt Rd)
+To: info@tgpkids.ca, manager@tgpkids.ca
+CC: careers@tgpkids.ca
+
+Dear Indy Dhial, Haley Houda, Erin Emde, and the TGP Kids Team,
+
+Your mission at The Gathering Place Childcare Center—combining Indy’s 15+ years of leadership, his prestigious ECEBC Sue Fraser Award, and your commitment to intimate 8-child classrooms where every child truly feels at home—is something Kelowna families deeply value. Your community work through the OKGN Sports & Cultural Society and your dedicated educators (Haley, Erin, Hunter, Jen, and Ashley) set you apart from large institutional daycares.
+
+While reviewing https://www.tgpkids.ca/ on mobile and desktop, I noticed a few technical bottlenecks in the current Wix layout that may be costing you tour bookings from young Kelowna parents browsing on their phones:
+
+1. Mobile Viewport Overflow & Missing Hamburger Menu: Over 75% of parents search for Kelowna childcare on smartphones. Currently, the Wix desktop header and fixed-width containers overflow horizontally on mobile screens without a collapsible mobile menu.
+2. Best Selling Points Hidden Off the Homepage: Your current homepage only shows the apple emblem, a single button, and an Instagram widget. Parents have to click through 5 separate tabs to discover that you cap classrooms at 8 children, operate two Kelowna campuses (875 Hollydell Rd & 645 Matt Rd), and are led by an ECEBC Sue Fraser Award recipient.
+3. Waitlist Friction & Copy Polish: The third-party Boom Form widget on /waitlist loads slowly and contains minor typos ("Please note that by completing this form does not guarantee...", "world around then", "grow in to") that can easily be polished.
+4. No Interactive Program Matcher or Dark Mode: Parents cannot quickly match their child’s age (18–36m Toddler, 3–5y Preschool, or School-Age Summer Care) to a preferred Kelowna campus and immediately book a tour.
+
+To make this concrete, I prepared a complete, functional interactive prototype tailored specifically for TGP Kids:
+
+👉 Explore Your Live TGP Kids Redesign Prototype:
+https://livingpixelstudios.com/redesign/tgpkids/
+
+What this new redesign concept includes for The Gathering Place:
+- Interactive Program & Campus Matcher: Parents choose their child's age group (18–36m, 3–5y, 5–12y) and preferred campus (875 Hollydell Rd or 645 Matt Rd) to view classroom details, lead manager (Haley Houda or Erin Emde), and 1-click pre-fill their tour or waitlist request.
+- Orchard Sunlight Light Mode + Cozy Storytime Dark Mode: Instant Light/Dark theme switcher with localStorage persistence.
+- Bilingual (EN / FR) Switcher: Complete English and French translation for Kelowna and Okanagan families.
+- Educator Showcase & 5 Developmental Domains: Highlights Indy Dhial (ECEBC Sue Fraser Award), Haley Houda, Erin Emde, Hunter Eskritt, Jen Stajduhar, and Ashley, alongside an interactive 5-domain philosophy explorer (Emotional, Social, Physical, Cognitive, Language) and your 7:30 AM – 5:00 PM daily rhythm.
+- Official 2026–2027 Holiday & Closure Calendar + Brightwheel Portal + OKGN Sports Opt-In: Mobile-friendly statutory holiday tables, Pro-D / Summer / Winter break schedules, prominent Brightwheel Parent Login, and a checkbox for OKGN Sports & Cultural Society youth camp updates.
+
+No-Obligation Next Step:
+I would love to walk you through this prototype on a brief 10-minute video call or hand over the clean code so it can be deployed directly onto tgpkids.ca with zero downtime.
+
+Would you have 10 minutes this week or next to take a look together?
+
+Warm regards,
+
+Ing. Luboš Kostroš
+LivingPixel Studios – Modern Web Architecture, Light/Dark UI & High-Conversion Portals
+Email: info@livingpixelstudios.com
+Web: https://livingpixelstudios.com/
