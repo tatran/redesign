@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f291a"/>
+      <stop offset="100%" stop-color="#19422a"/>
+    </linearGradient>
+    <linearGradient id="leafLeft" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3cc457"/>
+      <stop offset="100%" stop-color="#1b8736"/>
+    </linearGradient>
+    <linearGradient id="leafRight" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e34252"/>
+      <stop offset="100%" stop-color="#a81d2b"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="16" fill="url(#bgGrad)"/>
+  <!-- Outer Tree Arch -->
+  <path d="M32 9 C21 17 14 29 14 40 C14 48 21 51 28 51 L27 56 L37 56 L36 51 C43 51 50 48 50 40 C50 29 43 17 32 9 Z" fill="#f7f5ef" stroke="#1b4d2e" stroke-width="2.5"/>
+  <!-- Left Italian Green Foliage -->
+  <path d="M18 19 C13 28 13 42 21 49 C23 43 21 30 18 19 Z" fill="url(#leafLeft)"/>
+  <!-- Right Italian/Canadian Crimson Foliage -->
+  <path d="M46 19 C51 28 51 42 43 49 C41 43 43 30 46 19 Z" fill="url(#leafRight)"/>
+  <!-- Center Maple Leaf -->
+  <path d="M32 19 L34.8 26.2 L40 24.5 L37.8 30.2 L43 31.5 L36.5 36.8 L38 40 L33.2 39 L33.2 46 L30.8 46 L30.8 39 L26 40 L27.5 36.8 L21 31.5 L26.2 30.2 L24 24.5 L29.2 26.2 Z" fill="#c92839"/>
+</svg>

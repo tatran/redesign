@@ -1,0 +1,34 @@
+Subject: Custom Website Redesign & Technical Audit for Reale Landscape Inc. (Kelowna, BC) + Live Prototype
+To: Angelo & Sal Pizzoleo – Reale Landscape Inc. <realelandscape@gmail.com>
+
+Dear Angelo & Sal Pizzoleo (Fratelli Pizzoleo) and the Reale Landscape Inc. team,
+
+Your craftsmanship across Kelowna and the Okanagan Valley—from custom interlocking Verano patios and cedar pergolas to two-tier granite boulder retaining walls and lakefront staircases—truly lives up to your motto: "Where Okanagan Nature Meets Italian Elegance." Your 5-star Google reviews from clients like Dr. Harmony Mir, Kinga Gortel, and Leanna W. speak volumes about your work ethic.
+
+However, while reviewing realelandscape.com, we uncovered several technical bugs in your current WordPress/Elementor setup that are hiding your best reviews and hurting first impressions for Kelowna homeowners. Instead of just sending a list of issues, we built a complete, working Light + Dark Mode redesign prototype for you to test right now:
+
+👉 Live Interactive Prototype:
+https://livingpixelstudios.com/redesign/realelandscape-redesign/
+
+6 CRITICAL ISSUES WE FOUND ON YOUR CURRENT SITE (realelandscape.com):
+1. Broken "Real Reviews" Widget (Blank White Box): On your homepage, the Trustindex Google Reviews script fails with a network error, leaving a large empty white space right where homeowners look for social proof.
+2. Broken Google Map on Contact Page (Permission Denied): Your Contact page map throws a PLACES_GET_PLACE: PERMISSION_DENIED error and renders as a dark empty box instead of showing 755 Sparrow Rd.
+3. Overlapping Headings & Buttons: Large display headings ("ABOUT US", "OUR FEATURED PROJECTS") and buttons collide directly on top of your paragraph text, and pale peach subheadings fail contrast readability checks.
+4. Blocked HTTP Staging Fonts: Browsers block your Cormorant Garamond fonts due to mixed-content security errors pointing to an old staging server (http://alessandrop87.sg-host.com/...).
+5. Leftover Fitness Trainer Demo Page in Sitemap: Your public sitemap still indexes ?page_id=149 featuring a fake personal trainer ("Brandon Smith") and a "30% OFF fitness" offer.
+6. Duplicate Gallery Photos & 2022 Footer: Several project cards repeat the exact same photos, Facebook icons link to Instagram, and the footer copyright still reads © 2022 with no business hours listed.
+
+WHAT IS ALREADY BUILT IN YOUR NEW PROTOTYPE:
+• Light + Dark Theme Switcher: Warm Travertine & Okanagan Pine daytime theme plus a Midnight Garden dark mode that makes your patio, pergola, and fire-pit photography shine.
+• Interactive Okanagan Landscape & Hardscape Estimator: Homeowners can choose their project scope (Patio, Retaining Wall, Full Yard Build, or Irrigation), adjust square footage (150 – 3,500 sq.ft), select Kelowna site terrain (Flat, Sloped, or Steep Lakeview), add custom features (Cedar Pergola, Fire Pit, Smart Irrigation, LED Lighting), and transfer the summary into your quote form in one click.
+• Restored 5-Star Google Reviews & Deduplicated 12-Project Portfolio: Your verified Google reviews (Dr. Harmony Mir, Kinga Gortel, Leanna W., John Cook, Mike Anderson, Antonio A.) now load instantly with zero external plugin failures, paired with a filterable 12-photo lightbox gallery.
+• Authentic Italian Heritage Story & Trilingual Support (EN / FR / IT): Highlights the Fratelli Pizzoleo story from Grottaglie (Puglia) to Kelowna, complete with English, French, and Italian language switching, a working map of 755 Sparrow Rd, and direct WhatsApp (+1 250-575-8511) integration.
+
+If you like the prepared design, we can deploy this fast, zero-maintenance upgrade directly onto realelandscape.com within a few days—with zero downtime. Simply reply to this email or let us know a good time for a quick 10-minute chat.
+
+Warm regards,
+
+Ing. Ľuboš Kostroš
+LivingPixel Studios
+Email: info@livingpixelstudios.com
+Web: https://livingpixelstudios.com

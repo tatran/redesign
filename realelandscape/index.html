@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reale Landscape Inc. | Landscape Design, Hardscaping &amp; Grounds Care · Kelowna, BC</title>
+  <meta name="description" content="Reale Landscape Inc. in Kelowna, BC (755 Sparrow Rd). Inspired by generations of Italian horticultural craftsmanship—custom landscape design, rock &amp; block retaining walls, paver patios, multi-zone irrigation, and full-service grounds maintenance across the Okanagan Valley." />
+  <meta name="theme-color" content="#165b31" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ==========================================================================
+       TOP UTILITY BAR
+       ========================================================================== -->
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <div class="top-bar-left">
+        <span class="top-bar-badge">
+          <span>🍁</span>
+          <span data-i18n="topBarBadge">Kelowna &amp; Okanagan Valley, BC</span>
+        </span>
+        <span data-i18n="topBarNotice">Italian Horticultural Heritage · Custom Design, Hardscape &amp; Grounds Care</span>
+      </div>
+      <div class="top-bar-right">
+        <a href="tel:+12505758511" aria-label="Call Reale Landscape Inc.">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          (+1) 250-575-8511
+        </a>
+        <a href="mailto:realelandscape@gmail.com">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          realelandscape@gmail.com
+        </a>
+        <a href="https://www.instagram.com/reale_landscape/" target="_blank" rel="noopener noreferrer">
+          <span>📸 @reale_landscape</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       STICKY HEADER & NAVIGATION
+       ========================================================================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="container navbar">
+      <a href="#top" class="brand-logo" aria-label="Reale Landscape Inc. Home">
+        <img src="images/logo-footer.png" alt="Reale Landscape Inc. Emblem" class="brand-emblem" width="48" height="48" />
+        <div class="brand-text-wrap">
+          <span class="brand-title">Reale <span>Landscape</span> Inc.</span>
+          <span class="brand-subtitle" data-i18n="brandSubtitle">Landscape Design &amp; Maintenance</span>
+        </div>
+      </a>
+
+      <nav aria-label="Primary Navigation">
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#heritage" class="nav-link" data-i18n="navAbout">Heritage</a></li>
+          <li><a href="#services" class="nav-link" data-i18n="navServices">Services</a></li>
+          <li><a href="#estimator" class="nav-link" data-i18n="navCalculator">Estimator</a></li>
+          <li><a href="#portfolio" class="nav-link" data-i18n="navProjects">Portfolio</a></li>
+          <li><a href="#reviews" class="nav-link" data-i18n="navReviews">Reviews</a></li>
+          <li><a href="#faq" class="nav-link" data-i18n="navFaq">FAQ</a></li>
+          <li><a href="#contact" class="nav-link" data-i18n="navContact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-controls">
+        <!-- Trilingual Switcher: English / Français / Italiano -->
+        <div class="lang-switcher" role="group" aria-label="Language selector">
+          <button type="button" class="lang-btn active" data-lang="en">🇨🇦 EN</button>
+          <button type="button" class="lang-btn" data-lang="fr">🇫🇷 FR</button>
+          <button type="button" class="lang-btn" data-lang="it">🇮🇹 IT</button>
+        </div>
+
+        <!-- Light + Dark Theme Toggle -->
+        <button type="button" class="theme-toggle" id="themeToggle" aria-label="Toggle Light and Dark Theme" title="Toggle Light / Dark Theme">
+          <svg class="moon-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="sun-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        </button>
+
+        <a href="#contact" class="btn btn-primary btn-sm nav-cta-btn" data-i18n="navCta">Free Estimate</a>
+
+        <button type="button" class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open Navigation Menu" aria-expanded="false">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- ==========================================================================
+         HERO SECTION
+         ========================================================================== -->
+    <section class="hero" id="top">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="eyebrow" data-i18n="heroEyebrow">
+            🍁 Kelowna’s Premier Landscape Design &amp; Build Experts
+          </div>
+
+          <h1 class="hero-title" data-i18n="heroTitle">
+            We design, build &amp; maintain your <span class="accent-italic">outdoor living dream.</span>
+          </h1>
+
+          <p class="hero-subtitle" data-i18n="heroSubtitle">
+            Rooted in generations of Italian horticultural craftsmanship from Puglia to the Okanagan Valley. Led by Angelo &amp; Fratelli Pizzoleo, we transform sloped lakeview lots, patios, retaining walls, and residential grounds into timeless sanctuaries.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#estimator" class="btn btn-primary" data-i18n="heroBtnCalc">Calculate Project Estimate</a>
+            <a href="#portfolio" class="btn btn-outline" data-i18n="heroBtnPortfolio">Explore Kelowna Projects</a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat-card">
+              <div class="stat-value" data-i18n="stat1Val">4 Pillars</div>
+              <div class="stat-label" data-i18n="stat1Lbl">Design · Build · Stone · Care</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-value" data-i18n="stat2Val">5.0 ★</div>
+              <div class="stat-label" data-i18n="stat2Lbl">Verified Google Rating</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-value" data-i18n="stat3Val">100%</div>
+              <div class="stat-label" data-i18n="stat3Lbl">Okanagan Climate Adapted</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-value" data-i18n="stat4Val">Kelowna</div>
+              <div class="stat-label" data-i18n="stat4Lbl">755 Sparrow Rd · Full Valley</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-showcase-frame">
+            <img src="images/hero-3.jpg" alt="Reale Landscape Inc. Custom Interlocking Patio and Fire Feature in Kelowna" class="hero-main-img" id="heroMainImg" width="1024" height="768" />
+            <div class="hero-slider-controls">
+              <div class="hero-slide-caption">
+                <strong id="heroSlideTitle">Verano Interlocking Paver &amp; Fire Feature Courtyard</strong>
+                <span id="heroSlideSub">Custom Hardscape &amp; Outdoor Living · Kelowna, BC</span>
+              </div>
+              <div class="hero-thumbs" role="group" aria-label="Select featured project photo">
+                <button type="button" class="hero-thumb-btn active" aria-label="Slide 1"><img src="images/hero-3.jpg" alt="" /></button>
+                <button type="button" class="hero-thumb-btn" aria-label="Slide 2"><img src="images/hero-1.jpg" alt="" /></button>
+                <button type="button" class="hero-thumb-btn" aria-label="Slide 3"><img src="images/hero-4.jpg" alt="" /></button>
+                <button type="button" class="hero-thumb-btn" aria-label="Slide 4"><img src="images/hero-2.jpg" alt="" /></button>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-floating-card">
+            <div class="stars">★★★★★</div>
+            <p data-i18n="heroFloatQuote">5.0 ★ Verified Google Reviews in Kelowna, BC</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         ITALIAN HERITAGE & ABOUT SECTION
+         ========================================================================== -->
+    <section class="section section-alt" id="heritage">
+      <div class="container about-grid">
+        <div class="about-mosaic">
+          <div class="mosaic-card tall">
+            <img src="images/about-team.jpg" alt="Reale Landscape Inc. yard sign on a freshly mulched commercial and residential planting bed in Kelowna" loading="lazy" />
+            <div class="mosaic-caption" data-i18n="mosaicCap2">On-Site Craftsmanship Across Kelowna &amp; Okanagan Valley</div>
+          </div>
+          <div class="mosaic-card">
+            <img src="images/about-heritage.jpg" alt="Grottaglie in Puglia, Italy — Italian architectural and landscaping heritage" loading="lazy" />
+            <div class="mosaic-caption" data-i18n="mosaicCap1">Grottaglie, Puglia — Our Italian Heritage &amp; Stonework Roots</div>
+          </div>
+          <div class="mosaic-card">
+            <img src="images/project-005.jpg" alt="Natural Okanagan rock retaining wall and xeriscape plantings" loading="lazy" />
+          </div>
+        </div>
+
+        <div class="about-copy">
+          <div class="eyebrow" data-i18n="aboutEyebrow">🇮🇹 Where Okanagan Nature Meets Italian Elegance</div>
+          <h2 class="section-title" style="text-align:left;" data-i18n="aboutTitle">
+            Inspired by Generations of Italian Landscaping Tradition
+          </h2>
+          <p style="margin-bottom:14px; color:var(--text-secondary);" data-i18n="aboutLead">
+            Built on a foundation of integrity and customer satisfaction, Reale Landscape Inc. is a full-service landscape construction and grounds care company in Kelowna. We come from a land renowned for breathtaking gardens, stone terraces, and an innate appreciation for nature’s beauty.
+          </p>
+          <p style="color:var(--text-secondary);" data-i18n="aboutBody">
+            We believe an outdoor living space is an extension of your home—a sanctuary to connect with nature, create memories with loved ones, and find tranquility. Whether engineering structural rock retaining walls on a steep Okanagan hillside or installing a custom flagstone courtyard, our crew treats every property as our own.
+          </p>
+
+          <div class="heritage-quote">
+            <blockquote data-i18n="aboutQuote">
+              “With a passion for nature and a commitment to excellence, we treat every project as our own, ensuring the highest quality and reliability for your Kelowna landscape.”
+            </blockquote>
+            <cite data-i18n="aboutQuoteAuthor">Fratelli Pizzoleo — Angelo &amp; Sal Pizzoleo, Founders</cite>
+          </div>
+
+          <div class="about-pillars">
+            <div class="pillar-item">
+              <div class="pillar-icon">☀️</div>
+              <div>
+                <h4 data-i18n="pillar1Title">Okanagan Microclimate Mastery</h4>
+                <p data-i18n="pillar1Desc">Tailored to Kelowna soil conditions, dry summers, and drought-tolerant flora.</p>
+              </div>
+            </div>
+            <div class="pillar-item">
+              <div class="pillar-icon">🪨</div>
+              <div>
+                <h4 data-i18n="pillar2Title">Structural Hardscape Precision</h4>
+                <p data-i18n="pillar2Desc">Engineered Allan Block, natural boulder walls, flagstone, and paver patios.</p>
+              </div>
+            </div>
+            <div class="pillar-item">
+              <div class="pillar-icon">💧</div>
+              <div>
+                <h4 data-i18n="pillar3Title">Smart Multi-Zone Irrigation</h4>
+                <p data-i18n="pillar3Desc">Water-wise drip &amp; rotary systems, seasonal start-ups, and winter blowouts.</p>
+              </div>
+            </div>
+            <div class="pillar-item">
+              <div class="pillar-icon">✨</div>
+              <div>
+                <h4 data-i18n="pillar4Title">Meticulous &amp; Tidy Execution</h4>
+                <p data-i18n="pillar4Desc">Punctual, communicative crews who leave your yard cleaner than we found it.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SERVICES SECTION (4 CORE PILLARS)
+         ========================================================================== -->
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-header">
+          <div class="eyebrow" data-i18n="servicesEyebrow">🌿 Comprehensive Grounds &amp; Construction Solutions</div>
+          <h2 class="section-title" data-i18n="servicesTitle">Four Core Pillars of Outdoor Excellence</h2>
+          <p class="section-subtitle" data-i18n="servicesSubtitle">
+            From initial site concept and 3D planning to heavy rock work, custom carpentry, and year-round grounds maintenance.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <!-- Pillar 1: Design -->
+          <article class="service-card">
+            <div class="service-media">
+              <img src="images/service-design.jpg" alt="Landscape Architecture & Master Planning in Kelowna" loading="lazy" />
+              <span class="service-num">01</span>
+            </div>
+            <div class="service-body">
+              <span class="service-tag" data-i18n="srv1Tag">Pillar 01 · Architecture &amp; Planning</span>
+              <h3 data-i18n="srv1Title">Landscape Design</h3>
+              <p data-i18n="srv1Desc">
+                Understanding Kelowna’s unique environment is key to our design process. We evaluate local soil conditions, sun exposure, slope grading, and native flora to craft sustainable, high-value outdoor layouts.
+              </p>
+              <ul class="service-features">
+                <li data-i18n="srv1Feat1">Site grading, drainage &amp; microclimate analysis</li>
+                <li data-i18n="srv1Feat2">Custom 2D/3D master plans &amp; material palettes</li>
+                <li data-i18n="srv1Feat3">Drought-tolerant Okanagan plant &amp; tree selection</li>
+              </ul>
+              <a href="#estimator" class="service-link" data-i18n="srv1Cta">Plan Your Design →</a>
+            </div>
+          </article>
+
+          <!-- Pillar 2: Landscaping -->
+          <article class="service-card">
+            <div class="service-media">
+              <img src="images/service-landscaping.jpg" alt="Full-Scale Landscape Construction in Kelowna, BC" loading="lazy" />
+              <span class="service-num">02</span>
+            </div>
+            <div class="service-body">
+              <span class="service-tag" data-i18n="srv2Tag">Pillar 02 · Full-Scale Installation</span>
+              <h3 data-i18n="srv2Title">Landscaping &amp; Build</h3>
+              <p data-i18n="srv2Desc">
+                We combine traditional Italian construction methods with modern equipment to transform raw or dated yards into cohesive outdoor retreats—completed on schedule and within budget.
+              </p>
+              <ul class="service-features">
+                <li data-i18n="srv2Feat1">Premium sod installation, mulch beds &amp; decorative rock</li>
+                <li data-i18n="srv2Feat2">Custom cedar pergolas, privacy screens &amp; timber stairs</li>
+                <li data-i18n="srv2Feat3">Complete front &amp; backyard residential overhauls</li>
+              </ul>
+              <a href="#estimator" class="service-link" data-i18n="srv2Cta">Start Your Build →</a>
+            </div>
+          </article>
+
+          <!-- Pillar 3: Hardscape -->
+          <article class="service-card">
+            <div class="service-media">
+              <img src="images/service-hardscape.jpg" alt="Retaining Walls and Interlocking Stone Patios in Kelowna" loading="lazy" />
+              <span class="service-num">03</span>
+            </div>
+            <div class="service-body">
+              <span class="service-tag" data-i18n="srv3Tag">Pillar 03 · Stonework &amp; Masonry</span>
+              <h3 data-i18n="srv3Title">Artistic Hardscaping</h3>
+              <p data-i18n="srv3Desc">
+                We use the finest stone, brick, and modular block materials to add permanent structure and elegance to sloped or flat Kelowna properties.
+              </p>
+              <ul class="service-features">
+                <li data-i18n="srv3Feat1">Engineered rock, boulder &amp; segmental block retaining walls</li>
+                <li data-i18n="srv3Feat2">Custom interlocking paver, slate &amp; flagstone patios</li>
+                <li data-i18n="srv3Feat3">Architectural walkways, staircases &amp; gas/stone fire pits</li>
+              </ul>
+              <a href="#estimator" class="service-link" data-i18n="srv3Cta">Explore Hardscapes →</a>
+            </div>
+          </article>
+
+          <!-- Pillar 4: Maintenance & Irrigation -->
+          <article class="service-card">
+            <div class="service-media">
+              <img src="images/service-maintenance.jpg" alt="Kelowna Landscape Maintenance and Irrigation Systems" loading="lazy" />
+              <span class="service-num">04</span>
+            </div>
+            <div class="service-body">
+              <span class="service-tag" data-i18n="srv4Tag">Pillar 04 · Year-Round Stewardship</span>
+              <h3 data-i18n="srv4Title">Maintenance &amp; Irrigation</h3>
+              <p data-i18n="srv4Desc">
+                Protect your landscape investment with customized residential and commercial grounds care plus high-efficiency irrigation engineering.
+              </p>
+              <ul class="service-features">
+                <li data-i18n="srv4Feat1">Tailored multi-zone sprinkler &amp; drip irrigation systems</li>
+                <li data-i18n="srv4Feat2">Spring start-ups, backflow checks &amp; fall winterization</li>
+                <li data-i18n="srv4Feat3">Scheduled pruning, lawn care, seasonal cleanups &amp; weeding</li>
+              </ul>
+              <a href="#estimator" class="service-link" data-i18n="srv4Cta">Book Grounds Care →</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         INTERACTIVE OKANAGAN LANDSCAPE & HARDSCAPE ESTIMATOR
+         ========================================================================== -->
+    <section class="section section-alt" id="estimator">
+      <div class="container">
+        <div class="section-header">
+          <div class="eyebrow" data-i18n="calcEyebrow">🧮 Interactive Project Planner</div>
+          <h2 class="section-title" data-i18n="calcTitle">Okanagan Landscape &amp; Hardscape Estimator</h2>
+          <p class="section-subtitle" data-i18n="calcSubtitle">
+            Configure your project scope, area, and Kelowna site terrain to calculate an instant ballpark estimate, timeline, and material breakdown.
+          </p>
+        </div>
+
+        <div class="calculator-wrap">
+          <div class="calc-controls">
+            <!-- Step 1: Scope -->
+            <div class="calc-group">
+              <div class="calc-label">
+                <span data-i18n="calcStep1">1. Select Primary Project Scope</span>
+              </div>
+              <div class="scope-pills" id="scopePills">
+                <button type="button" class="choice-pill active" data-scope="patio">
+                  <strong data-i18n="scope1Name">Paver / Flagstone Patio &amp; Walkway</strong>
+                  <small data-i18n="scope1Sub">Excavation, compacted road-crush base &amp; stone laying</small>
+                </button>
+                <button type="button" class="choice-pill" data-scope="wall">
+                  <strong data-i18n="scope2Name">Retaining Wall &amp; Slope Terracing</strong>
+                  <small data-i18n="scope2Sub">Natural Okanagan rock or Allan Block with drainage</small>
+                </button>
+                <button type="button" class="choice-pill" data-scope="fullbuild">
+                  <strong data-i18n="scope3Name">Complete Yard Design &amp; Build</strong>
+                  <small data-i18n="scope3Sub">Grading, sod/turf, planting beds, rock &amp; edging</small>
+                </button>
+                <button type="button" class="choice-pill" data-scope="irrigation">
+                  <strong data-i18n="scope4Name">Irrigation &amp; Grounds Refresh</strong>
+                  <small data-i18n="scope4Sub">Multi-zone sprinklers, drip lines, mulch &amp; cleanup</small>
+                </button>
+              </div>
+            </div>
+
+            <!-- Step 2: Area Slider -->
+            <div class="calc-group">
+              <div class="calc-label">
+                <span data-i18n="calcStep2">2. Project Area / Footprint</span>
+                <span class="calc-value-pill" id="areaReadout">650 sq.ft (60 m²)</span>
+              </div>
+              <input type="range" id="areaSlider" class="range-slider" min="150" max="3500" step="50" value="650" aria-label="Project Area in Square Feet" />
+              <div class="range-Readout">
+                <span>150 sq.ft (Patio / Wall)</span>
+                <span>1,500 sq.ft (Standard Yard)</span>
+                <span>3,500 sq.ft (Estate Lot)</span>
+              </div>
+            </div>
+
+            <!-- Step 3: Terrain -->
+            <div class="calc-group">
+              <div class="calc-label">
+                <span data-i18n="calcStep3">3. Property Terrain &amp; Access (Kelowna Topography)</span>
+              </div>
+              <div class="terrain-pills" id="terrainPills">
+                <button type="button" class="choice-pill active" data-terrain="flat">
+                  <strong data-i18n="ter1Name">Flat / Easy Access</strong>
+                  <small data-i18n="ter1Sub">Standard residential lot</small>
+                </button>
+                <button type="button" class="choice-pill" data-terrain="sloped">
+                  <strong data-i18n="ter2Name">Moderate Slope</strong>
+                  <small data-i18n="ter2Sub">Terraced or split-level yard</small>
+                </button>
+                <button type="button" class="choice-pill" data-terrain="lakeview">
+                  <strong data-i18n="ter3Name">Steep / Lakeview Hillside</strong>
+                  <small data-i18n="ter3Sub">Heavy rock &amp; skid-steer grading</small>
+                </button>
+              </div>
+            </div>
+
+            <!-- Step 4: Custom Extras -->
+            <div class="calc-group" style="margin-bottom:0;">
+              <div class="calc-label">
+                <span data-i18n="calcStep4">4. Custom Enhancements &amp; Add-Ons</span>
+              </div>
+              <div class="extras-grid">
+                <label class="extra-check">
+                  <input type="checkbox" class="extra-input" data-cost="4800" data-days="2" />
+                  <span data-i18n="extPergola">Custom Cedar Pergola / Timber Feature</span>
+                </label>
+                <label class="extra-check">
+                  <input type="checkbox" class="extra-input" data-cost="2400" data-days="1" />
+                  <span data-i18n="extFirepit">Stone or Modular Fire Pit Lounge</span>
+                </label>
+                <label class="extra-check">
+                  <input type="checkbox" class="extra-input" data-cost="1850" data-days="1" />
+                  <span data-i18n="extIrrigation">Smart Wi-Fi Irrigation Zone Upgrade</span>
+                </label>
+                <label class="extra-check">
+                  <input type="checkbox" class="extra-input" data-cost="1400" data-days="0.5" />
+                  <span data-i18n="extLighting">Low-Voltage LED Landscape Lighting</span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Summary Output Card -->
+          <aside class="calc-summary" aria-live="polite">
+            <div>
+              <span class="calc-summary-badge" data-i18n="calcSumBadge">Instant Ballpark Summary · CAD $</span>
+              <h3 data-i18n="calcSumTitle">Estimated Project Investment</h3>
+              <div class="calc-price-range" id="calcPriceRange">$14,000 – $17,500</div>
+              <p class="calc-price-note" data-i18n="calcSumNote">
+                *Non-binding estimate for Kelowna / Okanagan properties. Includes excavation, base prep &amp; professional installation.
+              </p>
+
+              <div class="calc-metrics">
+                <div class="calc-metric-row">
+                  <span data-i18n="metricAreaLbl">Configured Footprint:</span>
+                  <strong id="metricAreaVal">650 sq.ft (60 m²)</strong>
+                </div>
+                <div class="calc-metric-row">
+                  <span data-i18n="metricTonLbl">Est. Aggregate / Stone Base:</span>
+                  <strong id="metricTonVal">~14 tonnes (Okanagan rock / road-crush)</strong>
+                </div>
+                <div class="calc-metric-row">
+                  <span data-i18n="metricTimeLbl">Est. On-Site Crew Duration:</span>
+                  <strong id="metricTimeVal">5 – 7 working days</strong>
+                </div>
+                <div class="calc-metric-row">
+                  <span data-i18n="metricWarrantyLbl">Workmanship Standard:</span>
+                  <strong data-i18n="metricWarrantyVal">Full Fratelli Pizzoleo Guarantee</strong>
+                </div>
+              </div>
+            </div>
+
+            <button type="button" class="btn btn-primary" id="calcTransferBtn" style="width:100%;" data-i18n="calcTransferBtn">
+              Send Configuration to Quote Form ↓
+            </button>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         PORTFOLIO GALLERY SECTION (12 UNIQUE AUTHENTIC PROJECTS, NO DUPLICATES)
+         ========================================================================== -->
+    <section class="section" id="portfolio">
+      <div class="container">
+        <div class="section-header">
+          <div class="eyebrow" data-i18n="galEyebrow">📸 Authentic Kelowna Portfolio</div>
+          <h2 class="section-title" data-i18n="galTitle">Our Featured Okanagan Projects</h2>
+          <p class="section-subtitle" data-i18n="galSubtitle">
+            Explore real transformations completed by Angelo and the Reale Landscape crew across Kelowna, West Kelowna, and Lake Country.
+          </p>
+        </div>
+
+        <div class="gallery-filters" role="group" aria-label="Filter projects by category">
+          <button type="button" class="filter-btn active" data-filter="all" data-i18n="filterAll">All Projects (12)</button>
+          <button type="button" class="filter-btn" data-filter="hardscape" data-i18n="filterHardscape">Hardscape &amp; Patios</button>
+          <button type="button" class="filter-btn" data-filter="walls" data-i18n="filterWalls">Retaining Walls &amp; Stairs</button>
+          <button type="button" class="filter-btn" data-filter="design" data-i18n="filterDesign">Design &amp; Lakeview Builds</button>
+          <button type="button" class="filter-btn" data-filter="irrigation" data-i18n="filterIrrigation">Irrigation &amp; Curb Appeal</button>
+        </div>
+
+        <div class="gallery-grid">
+          <!-- 1. Verano Patio & Fire Pit -->
+          <article class="gallery-item" data-category="hardscape design">
+            <div class="gallery-img-wrap">
+              <img src="images/project-038.jpg" alt="Verano Interlocking Paver Patio and Gas Fire Pit in Kelowna" loading="lazy" />
+              <span class="gallery-badge">Hardscape · Patio</span>
+            </div>
+            <div class="gallery-info">
+              <h3>Verano Patio &amp; Fire Feature</h3>
+              <p>Multi-piece interlocking stone courtyard with central gas fire feature and curved border edging.</p>
+            </div>
+          </article>
+
+          <!-- 2. Okanagan Lakefront Lawn & Timber Steps -->
+          <article class="gallery-item" data-category="design irrigation">
+            <div class="gallery-img-wrap">
+              <img src="images/project-016.jpg" alt="Okanagan Lakefront Lawn and Timber Staircase" loading="lazy" />
+              <span class="gallery-badge">Design &amp; Build · Lakeview</span>
+            </div>
+            <div class="gallery-info">
+              <h3>Okanagan Lakefront Sanctuary</h3>
+              <p>Custom terraced gravel-inlaid timber steps leading down to lush waterfront sod and dock access.</p>
+            </div>
+          </article>
+
+          <!-- 3. Cedar Pergola & Slate Tile Sanctuary -->
+          <article class="gallery-item" data-category="hardscape design">
+            <div class="gallery-img-wrap">
+              <img src="images/project-028.jpg" alt="Custom Cedar Pergola and Slate Patio in Kelowna" loading="lazy" />
+              <span class="gallery-badge">Carpentry &amp; Stone</span>
+            </div>
+            <div class="gallery-info">
+              <h3>Cedar Pergola &amp; Slate Courtyard</h3>
+              <p>Hand-built cedar pergola with privacy lattice over large-format textured slate patio tiles.</p>
+            </div>
+          </article>
+
+          <!-- 4. Two-Tier Natural Boulder Wall -->
+          <article class="gallery-item" data-category="walls hardscape">
+            <div class="gallery-img-wrap">
+              <img src="images/project-025.jpg" alt="Two-Tier Natural Rock Retaining Wall in Kelowna" loading="lazy" />
+              <span class="gallery-badge">Retaining Wall</span>
+            </div>
+            <div class="gallery-info">
+              <h3>Two-Tier Natural Boulder Wall</h3>
+              <p>Structural dry-stack style Okanagan granite boulder retaining tiers with columnar evergreens.</p>
+            </div>
+          </article>
+
+          <!-- 5. Valley View Cobblestone Terrace & Path -->
+          <article class="gallery-item" data-category="design hardscape">
+            <div class="gallery-img-wrap">
+              <img src="images/project-034.jpg" alt="Panoramic Valley View Cobblestone Terrace and Stepping Path" loading="lazy" />
+              <span class="gallery-badge">Lake &amp; Valley View</span>
+            </div>
+            <div class="gallery-info">
+              <h3>Panoramic Valley View Terrace</h3>
+              <p>Curved tumbled-paver patio overlooking the Kelowna valley with natural flagstone stepping stones.</p>
+            </div>
+          </article>
+
+          <!-- 6. Hillside Timber Staircase & Rip-Rap -->
+          <article class="gallery-item" data-category="walls design">
+            <div class="gallery-img-wrap">
+              <img src="images/project-030.jpg" alt="Hillside Wooden Staircase Flanked by Okanagan Boulders" loading="lazy" />
+              <span class="gallery-badge">Slope Engineering</span>
+            </div>
+            <div class="gallery-info">
+              <h3>Hillside Timber Staircase</h3>
+              <p>Steep slope access solved with heavy timber steps, crushed aggregate treads, and boulder rip-rap stabilization.</p>
+            </div>
+          </article>
+
+          <!-- 7. Front Elegance Sod & stepped Block Wall -->
+          <article class="gallery-item" data-category="irrigation walls">
+            <div class="gallery-img-wrap">
+              <img src="images/project-017.jpg" alt="Front Yard Sod Installation and Stepped Block Retaining Wall" loading="lazy" />
+              <span class="gallery-badge">Irrigation &amp; Sod</span>
+            </div>
+            <div class="gallery-info">
+              <h3>Front Yard Elegance &amp; Sod</h3>
+              <p>Lush irrigated front lawn bordered by a stepped architectural block wall and rich dark bark mulch.</p>
+            </div>
+          </article>
+
+          <!-- 8. Serene Flagstone Walkway -->
+          <article class="gallery-item" data-category="hardscape irrigation">
+            <div class="gallery-img-wrap">
+              <img src="images/project-027.jpg" alt="Natural Flagstone Entry Patio and Boxwood Hedge" loading="lazy" />
+              <span class="gallery-badge">Flagstone &amp; Planting</span>
+            </div>
+            <div class="gallery-info">
+              <h3>Serene Flagstone Entry Patio</h3>
+              <p>Irregular natural slate flagstones set in polymeric joints with river rock beds and sculpted boxwoods.</p>
+            </div>
+          </article>
+
+          <!-- 9. Backyard Fire Pit & Pea Gravel Lounge -->
+          <article class="gallery-item" data-category="hardscape design">
+            <div class="gallery-img-wrap">
+              <img src="images/project-029.jpg" alt="Circular Stone Block Fire Pit and Crushed Gravel Courtyard" loading="lazy" />
+              <span class="gallery-badge">Outdoor Living</span>
+            </div>
+            <div class="gallery-info">
+              <h3>Circular Fire Pit &amp; Gravel Lounge</h3>
+              <p>Low-maintenance crushed granite entertaining zone with a modular stone fire ring and soldier-course edging.</p>
+            </div>
+          </article>
+
+          <!-- 10. Segmental Block Wall & Integrated Steps -->
+          <article class="gallery-item" data-category="walls hardscape">
+            <div class="gallery-img-wrap">
+              <img src="images/project-026.jpg" alt="Segmental Concrete Block Retaining Wall and Staircase" loading="lazy" />
+              <span class="gallery-badge">Block Masonry</span>
+            </div>
+            <div class="gallery-info">
+              <h3>Precision Block Wall &amp; Steps</h3>
+              <p>Engineered split-face segmental retaining wall with matching bullnose corner steps and gravel drainage.</p>
+            </div>
+          </article>
+
+          <!-- 11. Custom Herringbone Paver Courtyard -->
+          <article class="gallery-item" data-category="hardscape">
+            <div class="gallery-img-wrap">
+              <img src="images/project-031.jpg" alt="Warm Earth-Tone Interlocking Paver Patio Surrounded by Cedar Hedging" loading="lazy" />
+              <span class="gallery-badge">Interlocking Pavers</span>
+            </div>
+            <div class="gallery-info">
+              <h3>Cedar-Framed Paver Courtyard</h3>
+              <p>Expansive multi-format concrete paver patio bordered by mature emerald cedar hedging and raised planters.</p>
+            </div>
+          </article>
+
+          <!-- 12. Structural Under-Deck Retaining Wall -->
+          <article class="gallery-item" data-category="walls">
+            <div class="gallery-img-wrap">
+              <img src="images/project-003.jpg" alt="Curved Retaining Wall and River Rock Drainage Channel" loading="lazy" />
+              <span class="gallery-badge">Drainage &amp; Walls</span>
+            </div>
+            <div class="gallery-info">
+              <h3>Curved Retaining Wall &amp; Drainage</h3>
+              <p>Capped structural retaining wall beneath heavy timber deck posts with angular rock erosion control.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         VERIFIED GOOGLE REVIEWS SECTION (RESTORED FROM BROKEN TRUSTINDEX WIDGET)
+         ========================================================================== -->
+    <section class="section section-alt" id="reviews">
+      <div class="container">
+        <div class="section-header">
+          <div class="reviews-header-badge">
+            <span style="color:#f59e0b; font-size:1.05rem;">★★★★★</span>
+            <strong style="font-size:0.86rem;">5.0 / 5.0 Verified Google Reviews · Kelowna, BC</strong>
+          </div>
+          <br />
+          <div class="eyebrow" data-i18n="revEyebrow">⭐ Verified Client Testimonials</div>
+          <h2 class="section-title" data-i18n="revTitle">What Kelowna Homeowners Say About Angelo &amp; Crew</h2>
+          <p class="section-subtitle" data-i18n="revSubtitle">
+            Real 5-star Google reviews from homeowners and professionals across Kelowna, BC.
+          </p>
+        </div>
+
+        <div class="reviews-grid">
+          <!-- Review 1: Dr. Harmony Mir -->
+          <article class="review-card">
+            <div>
+              <div class="review-stars">★★★★★</div>
+              <p class="review-text">
+                “Reale Landscape did an amazing job helping me with my yard. They are so diligent and hardworking. They really do what’s best for your yard and you. They know how busy I am so they don’t make recommendations that would be too much for me to upkeep. I recommend them without reservation.”
+              </p>
+            </div>
+            <div class="review-author">
+              <div class="author-avatar">HM</div>
+              <div class="author-meta">
+                <strong>Dr. Harmony Mir</strong>
+                <span>Verified Google Review · Kelowna, BC</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Review 2: Kinga Gortel -->
+          <article class="review-card">
+            <div>
+              <div class="review-stars">★★★★★</div>
+              <p class="review-text">
+                “Angelo and his team have done a beautiful, professional, and practical job of our two landscaping projects. Angelo has been excellent at communicating and offering helpful suggestions for our tricky site. His team went the extra distance to leave our property even more clean and tidy than when they arrived.”
+              </p>
+            </div>
+            <div class="review-author">
+              <div class="author-avatar">KG</div>
+              <div class="author-meta">
+                <strong>Kinga Gortel</strong>
+                <span>Verified Google Review · Repeat Client</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Review 3: Leanna W -->
+          <article class="review-card">
+            <div>
+              <div class="review-stars">★★★★★</div>
+              <p class="review-text">
+                “This was our second time working with Angelo and his crew. From start to finish they were professional, courteous, hardworking, punctual, meticulous and tidy. They take pride in their work and it shows in the quality of their finished product. Would highly recommend Angelo and his team at Reale Landscape!”
+              </p>
+            </div>
+            <div class="review-author">
+              <div class="author-avatar">LW</div>
+              <div class="author-meta">
+                <strong>Leanna W.</strong>
+                <span>Verified Google Review · 2nd Project</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Review 4: John Cook -->
+          <article class="review-card">
+            <div>
+              <div class="review-stars">★★★★★</div>
+              <p class="review-text">
+                “Angelo and his team are a great group! Very easy to work with and the pricing they offer is more than fair. Best of all, they actually stand behind the work which is rare these days. I can’t recommend these guys enough!”
+              </p>
+            </div>
+            <div class="review-author">
+              <div class="author-avatar">JC</div>
+              <div class="author-meta">
+                <strong>John Cook</strong>
+                <span>Verified Google Review · Kelowna, BC</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Review 5: Mike Anderson -->
+          <article class="review-card">
+            <div>
+              <div class="review-stars">★★★★★</div>
+              <p class="review-text">
+                “Angelo and his team did a fantastic job with our patio; they were very professional and didn’t cut any corners. We love the results and would recommend them without hesitation.”
+              </p>
+            </div>
+            <div class="review-author">
+              <div class="author-avatar">MA</div>
+              <div class="author-meta">
+                <strong>Mike Anderson</strong>
+                <span>Verified Google Review · Patio Build</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Review 6: Antonio A. -->
+          <article class="review-card">
+            <div>
+              <div class="review-stars">★★★★★</div>
+              <p class="review-text">
+                “Simply the best in town! Angelo and his crew went above and beyond to ensure we were happy with our most recent landscaping project! Keep up the excellent work and customer satisfaction!”
+              </p>
+            </div>
+            <div class="review-author">
+              <div class="author-avatar">AA</div>
+              <div class="author-meta">
+                <strong>Antonio A.</strong>
+                <span>Verified Google Review · Kelowna, BC</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         FAQ SECTION
+         ========================================================================== -->
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="section-header">
+          <div class="eyebrow" data-i18n="faqEyebrow">❓ Frequently Asked Questions</div>
+          <h2 class="section-title" data-i18n="faqTitle">Planning Your Kelowna Landscape Project</h2>
+          <p class="section-subtitle" data-i18n="faqSubtitle">
+            Answers to common questions about Okanagan soil, retaining walls, irrigation seasons, and our consultation process.
+          </p>
+        </div>
+
+        <div class="faq-list">
+          <div class="faq-item open">
+            <button type="button" class="faq-question">
+              <span data-i18n="faq1Q">How does your consultation and estimate process work in Kelowna?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer" data-i18n="faq1A">
+              We begin with an on-site walkthrough at your property in Kelowna, West Kelowna, Lake Country, or Peachland. Angelo and our team assess your slope, soil, sun exposure, and goals, then provide a transparent, itemized quote and design plan.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question">
+              <span data-i18n="faq2Q">Can you build retaining walls on steep Okanagan lakeview slopes?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer" data-i18n="faq2A">
+              Yes. Sloped properties are one of our specialties. We construct both natural Okanagan boulder walls and engineered segmental block walls (with proper geogrid reinforcement and weeping-tile drainage) to create usable, level patio and garden terraces.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question">
+              <span data-i18n="faq3Q">Do you handle both new irrigation installations and seasonal maintenance?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer" data-i18n="faq3A">
+              Absolutely. We design and install water-efficient multi-zone rotary and drip irrigation systems suited for Kelowna’s dry summers, and we also provide spring activation, zone tuning, and fall blowout winterization.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question">
+              <span data-i18n="faq4Q">What areas of the Okanagan Valley do you serve?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer" data-i18n="faq4A">
+              Our yard is headquartered at 755 Sparrow Rd in Kelowna (V1X 4E3), and we serve residential and commercial clients throughout Kelowna, West Kelowna, Lake Country, Vernon, and Peachland.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         CONTACT & INTERACTIVE MAP SECTION
+         ========================================================================== -->
+    <section class="section section-alt" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <div class="eyebrow" data-i18n="contactEyebrow">📍 Connect With Reale Landscape Inc.</div>
+          <h2 class="section-title" data-i18n="contactTitle">Request Your On-Site Consultation</h2>
+          <p class="section-subtitle" data-i18n="contactSubtitle">
+            Reach out to Angelo &amp; the Reale Landscape team by phone, WhatsApp, or the project form below. We respond within one business day.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-info-card">
+            <h3>Reale Landscape Inc.</h3>
+            <p style="font-size:0.9rem; color:var(--text-muted); margin-top:4px;">
+              “The best time to plant a tree was 20 years ago. The second best time is now.”
+            </p>
+
+            <ul class="contact-list">
+              <li>
+                <div class="contact-icon">📍</div>
+                <div>
+                  <strong data-i18n="contactAddrLbl">Kelowna Headquarters &amp; Yard</strong>
+                  <span>755 Sparrow Rd, Kelowna, BC V1X 4E3, Canada</span>
+                </div>
+              </li>
+              <li>
+                <div class="contact-icon">📞</div>
+                <div>
+                  <strong data-i18n="contactPhoneLbl">Direct Phone &amp; WhatsApp</strong>
+                  <a href="tel:+12505758511">(+1) 250-575-8511</a>
+                </div>
+              </li>
+              <li>
+                <div class="contact-icon">✉️</div>
+                <div>
+                  <strong data-i18n="contactEmailLbl">Email Inquiries</strong>
+                  <a href="mailto:realelandscape@gmail.com">realelandscape@gmail.com</a>
+                </div>
+              </li>
+              <li>
+                <div class="contact-icon">🕒</div>
+                <div>
+                  <strong data-i18n="contactHoursLbl">Seasonal Operating Hours</strong>
+                  <span data-i18n="contactHoursVal">Mon – Sat: 7:30 AM – 6:00 PM (Sunday by appointment)</span>
+                </div>
+              </li>
+            </ul>
+
+            <!-- Working Embedded Map (Replaces broken API key error on original site) -->
+            <div class="map-frame">
+              <iframe
+                title="Reale Landscape Inc. — 755 Sparrow Rd, Kelowna, BC"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=-119.415%2C49.895%2C-119.375%2C49.918&amp;layer=mapnik&amp;marker=49.9065%2C-119.3955"
+                loading="lazy">
+              </iframe>
+            </div>
+          </div>
+
+          <div class="quote-form-card">
+            <h3 style="font-size:1.75rem; margin-bottom:18px;" data-i18n="formTitle">Send Us Your Project Details</h3>
+            <form id="quoteForm">
+              <div class="form-grid">
+                <div class="form-group">
+                  <label for="quoteName" data-i18n="formNameLbl">Full Name *</label>
+                  <input type="text" id="quoteName" class="form-control" required placeholder="e.g., Sarah Jenkins" />
+                </div>
+                <div class="form-group">
+                  <label for="quotePhone" data-i18n="formPhoneLbl">Phone Number *</label>
+                  <input type="tel" id="quotePhone" class="form-control" required placeholder="(250) 555-0199" />
+                </div>
+                <div class="form-group">
+                  <label for="quoteEmail" data-i18n="formEmailLbl">Email Address *</label>
+                  <input type="email" id="quoteEmail" class="form-control" required placeholder="you@example.com" />
+                </div>
+                <div class="form-group">
+                  <label for="quoteArea" data-i18n="formAreaLbl">Property Location</label>
+                  <input type="text" id="quoteArea" class="form-control" placeholder="Lower Mission / Glenmore / West Kelowna" />
+                </div>
+                <div class="form-group full">
+                  <label for="quoteService" data-i18n="formServiceLbl">Primary Service Needed</label>
+                  <select id="quoteService" class="form-control">
+                    <option value="Complete Landscape Design & Build">Complete Landscape Design &amp; Build</option>
+                    <option value="Hardscaping & Retaining Walls">Hardscaping, Patios &amp; Retaining Walls</option>
+                    <option value="Irrigation & Grounds Maintenance">Irrigation Systems &amp; Grounds Maintenance</option>
+                    <option value="Custom Cedar Pergola / Carpentry">Custom Cedar Pergola &amp; Outdoor Living</option>
+                  </select>
+                </div>
+                <div class="form-group full">
+                  <label for="quoteMessage" data-i18n="formMsgLbl">Project Details or Estimator Summary *</label>
+                  <textarea id="quoteMessage" class="form-control" rows="5" required placeholder="Tell us about your yard, slope, desired patio or retaining wall, and preferred timeline..."></textarea>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary" style="width:100%;" data-i18n="formSubmitBtn">
+                Request Free Kelowna Consultation →
+              </button>
+              <div class="form-status" id="formStatus" data-i18n="formSuccessMsg">
+                Thank you! Your project request has been prepared for Angelo &amp; the Reale Landscape team.
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div style="display:flex; align-items:center; gap:12px; margin-bottom:14px;">
+            <img src="images/logo-footer.png" alt="Reale Landscape Inc." width="44" height="44" style="background:#fff; padding:3px; border-radius:8px;" />
+            <div>
+              <strong style="color:#fff; font-size:1.25rem; font-family:'Cormorant Garamond',serif; display:block;">Reale Landscape Inc.</strong>
+              <span style="font-size:0.74rem; color:#8bf0b0; text-transform:uppercase; letter-spacing:0.08em;">Kelowna, British Columbia</span>
+            </div>
+          </div>
+          <p style="font-size:0.88rem; line-height:1.6; margin-bottom:14px;">
+            Combining generations of Italian horticultural craftsmanship with Okanagan engineering—designing, building, and maintaining extraordinary outdoor living spaces across Kelowna.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Core Services</h4>
+          <ul class="footer-links">
+            <li><a href="#services">3D Landscape Design</a></li>
+            <li><a href="#services">Full-Scale Landscaping</a></li>
+            <li><a href="#services">Rock &amp; Block Retaining Walls</a></li>
+            <li><a href="#services">Interlocking Paver Patios</a></li>
+            <li><a href="#services">Multi-Zone Irrigation &amp; Care</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Service Areas</h4>
+          <ul class="footer-links">
+            <li><a href="#contact">Kelowna (Lower &amp; Upper Mission)</a></li>
+            <li><a href="#contact">Glenmore &amp; Dilworth Mountain</a></li>
+            <li><a href="#contact">West Kelowna &amp; Peachland</a></li>
+            <li><a href="#contact">Lake Country &amp; Oyama</a></li>
+            <li><a href="#contact">Vernon &amp; Okanagan Valley</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Direct Contact</h4>
+          <ul class="footer-links">
+            <li>📍 755 Sparrow Rd, Kelowna, BC V1X 4E3</li>
+            <li>📞 <a href="tel:+12505758511">(+1) 250-575-8511</a></li>
+            <li>✉️ <a href="mailto:realelandscape@gmail.com">realelandscape@gmail.com</a></li>
+            <li>📸 <a href="https://www.instagram.com/reale_landscape/" target="_blank" rel="noopener">Instagram: @reale_landscape</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 Reale Landscape Inc. All Rights Reserved. Crafted with Italian Heritage in Kelowna, BC.</span>
+        <span>Light + Dark Theme · EN / FR / IT</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/12505758511" target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Chat with Reale Landscape on WhatsApp">
+    <span>💬 WhatsApp Us · (250) 575-8511</span>
+  </a>
+
+  <!-- Portfolio Lightbox Modal -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-labelledby="lightboxTitle">
+    <div class="lightbox-content">
+      <button type="button" class="lightbox-close" id="lightboxClose" aria-label="Close preview">×</button>
+      <img src="" alt="" class="lightbox-img" id="lightboxImg" />
+      <div class="lightbox-caption">
+        <h3 id="lightboxTitle"></h3>
+        <p id="lightboxDesc"></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/translations.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
