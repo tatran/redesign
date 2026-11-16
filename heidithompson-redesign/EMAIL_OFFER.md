@@ -46,7 +46,7 @@ With your canvases housed in prominent collections like the Senvest Collection i
 While visiting heidithompson.ca, I noticed that while your original acrylics are museum-grade, the website is still operating on an older template platform limited to English, with an unbranded registrar favicon and no dedicated way for collectors to view works under varying lighting conditions.
 
 To show what is possible, we have crafted a fully functioning, interactive redesign prototype for your review:
-👉 [Link to Interactive Redesign Demo]
+👉 https://tatran.github.io/redesign/heidithompson-redesign/
 
 Key additions tailored specifically for your studio:
 1. Complete Bilingual Experience (English & French) — Seamlessly presenting your artist statement, John Ruskin quotes, and John K. Grande's critical essay to Quebec and European patrons.
@@ -58,9 +58,10 @@ The prototype is ready to explore on your mobile or desktop. Would you be open t
 
 Warm regards,
 
-[Your Name / Studio]
-Fine Art Web Architecture & Advisory
-[Your Phone / Portfolio Link]
+Ing. Ľuboš Kostroš
+LivingPixel Studios · Fine Art Web Architecture & Digital Growth
+Email: info@livingpixelstudios.com | Web: https://livingpixelstudios.com
+GitHub Source: https://github.com/tatran/redesign/tree/main/heidithompson-redesign
 ```
 
 ---
@@ -88,14 +89,16 @@ We also integrated:
 - Complete English and French localization for Montreal and European clients
 
 You can test the live interactive prototype here:
-👉 [Link to Interactive Redesign Demo]
+👉 https://tatran.github.io/redesign/heidithompson-redesign/
 
 I would welcome the opportunity to share how easily this could replace your current GoSiteBuilder site without any disruption to your existing heidithompson.ca domain or email.
 
 Warmly,
 
-[Your Name]
-[Your Contact Information]
+Ing. Ľuboš Kostroš
+LivingPixel Studios · Modern Web Architecture
+Email: info@livingpixelstudios.com | Web: https://livingpixelstudios.com
+Direct Studio: (250) 542-1551 (Coldstream, BC)
 ```
 
 ---
@@ -120,14 +123,15 @@ During a routine digital review of contemporary Canadian art galleries, I review
 We took the initiative to build a modern, high-speed redesign that resolves every one of these issues, complete with custom typography, bilingual switcher, and a private commission calculator.
 
 Explore the prototype here:
-👉 [Link to Interactive Redesign Demo]
+👉 https://tatran.github.io/redesign/heidithompson-redesign/
 
 If you would like the files or wish to discuss deploying this for your domain, please feel free to reply or call me directly.
 
 Best regards,
 
-[Your Name]
-[Your Contact Information]
+Ing. Ľuboš Kostroš
+LivingPixel Studios
+Email: info@livingpixelstudios.com | Web: https://livingpixelstudios.com
 ```
 
 ---
@@ -150,14 +154,16 @@ In our prototype redesign for heidithompson.ca, we created dedicated spaces for:
 - A bilingual archive honoring your European roots and Coldstream studio gallery
 
 The prototype is live for you to experience:
-👉 [Link to Interactive Redesign Demo]
+👉 https://tatran.github.io/redesign/heidithompson-redesign/
 
 It would be an honor to help your studio showcase both your visual art and literary legacy with museum-level elegance.
 
 With high regard,
 
-[Your Name]
-[Your Contact Information]
+Ing. Ľuboš Kostroš
+LivingPixel Studios
+Email: info@livingpixelstudios.com | Web: https://livingpixelstudios.com
+Direct Studio Inquiries: htcthompson@hotmail.com | (250) 542-1551
 ```
 
 ---

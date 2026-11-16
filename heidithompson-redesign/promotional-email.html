@@ -39,13 +39,13 @@
       padding: 30px 10px;
     }
     .main-card {
-      max-width: 660px;
+      max-width: 680px;
       margin: 0 auto;
       background-color: #ffffff;
       border: 1px solid #e5e0d8;
       border-radius: 8px;
       overflow: hidden;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      box-shadow: 0 6px 25px rgba(0, 0, 0, 0.06);
     }
     .header-banner {
       background-color: #121316;
@@ -64,7 +64,7 @@
     .brand-title {
       color: #ffffff;
       font-family: Georgia, serif;
-      font-size: 26px;
+      font-size: 27px;
       letter-spacing: 2px;
       font-weight: 400;
       margin-bottom: 6px;
@@ -156,6 +156,45 @@
       color: #635f5a;
       line-height: 1.5;
     }
+    /* Comparison Table */
+    .compare-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+      margin: 25px 0;
+      border: 1px solid #e5e0d8;
+      border-radius: 6px;
+      overflow: hidden;
+    }
+    .compare-table th {
+      background-color: #1a1918;
+      color: #ffffff;
+      padding: 10px 14px;
+      text-align: left;
+      font-size: 12px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+    .compare-table td {
+      padding: 11px 14px;
+      border-bottom: 1px solid #ede8e1;
+      color: #4a4744;
+    }
+    .compare-table tr:last-child td {
+      border-bottom: none;
+    }
+    .compare-table tr:nth-child(even) {
+      background-color: #faf9f6;
+    }
+    .tag-old {
+      color: #c0392b;
+      font-weight: 600;
+    }
+    .tag-new {
+      color: #9e7838;
+      font-weight: 700;
+    }
+    /* CTA Box */
     .cta-container {
       text-align: center;
       padding: 25px 0 15px;
@@ -164,32 +203,111 @@
       background-color: #9e7838;
       color: #ffffff !important;
       text-decoration: none;
-      padding: 14px 34px;
+      padding: 15px 36px;
       border-radius: 30px;
-      font-size: 13.5px;
+      font-size: 14px;
       font-weight: 600;
       letter-spacing: 1.5px;
       text-transform: uppercase;
       display: inline-block;
-      box-shadow: 0 4px 15px rgba(158, 120, 56, 0.25);
+      box-shadow: 0 4px 18px rgba(158, 120, 56, 0.3);
     }
     .cta-subtext {
       font-size: 12px;
       color: #8c8882;
       margin-top: 10px;
     }
+    /* Action & Contact Box */
+    .action-box {
+      background-color: #faf8f5;
+      border: 1px solid #e8dfd3;
+      border-radius: 8px;
+      padding: 24px;
+      margin: 30px 0 20px;
+    }
+    .action-title {
+      font-family: Georgia, serif;
+      font-size: 17px;
+      color: #1a1918;
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+    .action-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 16px;
+    }
+    .btn-secondary {
+      background-color: #1a1918;
+      color: #ffffff !important;
+      text-decoration: none;
+      padding: 10px 22px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 600;
+      display: inline-block;
+    }
+    .btn-outline {
+      background-color: transparent;
+      border: 1px solid #9e7838;
+      color: #9e7838 !important;
+      text-decoration: none;
+      padding: 9px 20px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 600;
+      display: inline-block;
+    }
+    /* Sender Signature */
     .signature-block {
       border-top: 1px solid #ece7df;
       padding-top: 25px;
-      margin-top: 30px;
+      margin-top: 25px;
     }
+    .sender-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      margin-top: 12px;
+    }
+    .sender-info {
+      font-size: 13.5px;
+      color: #55524e;
+      line-height: 1.55;
+    }
+    .sender-name {
+      font-size: 15px;
+      font-weight: 700;
+      color: #1a1918;
+    }
+    .sender-title {
+      color: #9e7838;
+      font-size: 13px;
+      font-weight: 600;
+    }
+    /* Client Footer Details */
     .footer-bar {
-      background-color: #f0ede6;
-      padding: 22px 30px;
-      text-align: center;
+      background-color: #121316;
+      padding: 26px 32px;
+      text-align: left;
       font-size: 12px;
-      color: #8c8882;
-      border-top: 1px solid #e2ddd4;
+      color: #a39f99;
+      border-top: 1px solid #272930;
+      line-height: 1.7;
+    }
+    .footer-bar a {
+      color: #c9a468;
+      text-decoration: none;
+    }
+    .footer-bar a:hover {
+      text-decoration: underline;
+    }
+    .footer-client-title {
+      color: #ffffff;
+      font-weight: 600;
+      font-size: 13px;
+      margin-bottom: 4px;
     }
   </style>
 </head>
@@ -209,11 +327,11 @@
         <div class="salutation">Dear Heidi,</div>
 
         <p>
-          I am writing to you with immense admiration for your lifelong artistic practice—from your formative years studying at the <em>Kunstgewerbeschule</em> in Zürich, apprenticing with Oskar Koller in Nuremberg, and training in Budapest, to your four decades of Vipassana meditation that breathe such meditative luminosity into canvases like <em>Peaceful Movement in White</em> and <em>Earth Energy</em>.
+          I am writing to you with immense admiration for your lifelong artistic practice—from your formative years studying at the <em>Kunstgewerbeschule</em> in Zürich, apprenticing with Oskar Koller in Nuremberg, and training at the Hungarian State University in Budapest, to your four decades of daily Vipassana meditation that breathe such meditative luminosity into canvases like <em>Peaceful Movement in White</em> and <em>Earth Energy</em>.
         </p>
 
         <p>
-          Your work speaks profoundly to serious collectors, architects, and institutions such as the Senvest Collection in Montreal. However, when exploring your current web presence at <strong>heidithompson.ca</strong>, there is a clear contrast between the museum-caliber elegance of your original canvases and the limitations of the template builder platform hosting it.
+          Your work speaks profoundly to serious collectors, architects, and institutions such as the Senvest Collection in Montreal. However, when exploring your current web presence at <strong>heidithompson.ca</strong>, there is a clear contrast between the museum-caliber elegance of your original canvases and the limitations of the template builder platform currently hosting it.
         </p>
 
         <!-- Technical & Curatorial Audit Findings -->
@@ -251,6 +369,78 @@
           <span style="display:block; margin-top:6px; font-weight:600; font-size:12px; letter-spacing:1px; text-transform:uppercase; color:#9e7838;">— John K. Grande, Art Critic &amp; Author</span>
         </div>
 
+        <!-- Before / After Comparison Table -->
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th>Feature / Experience</th>
+              <th>Current heidithompson.ca</th>
+              <th>New Interactive Prototype</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Language Support</strong></td>
+              <td class="tag-old">English only</td>
+              <td class="tag-new">Full Bilingual (English &amp; Français)</td>
+            </tr>
+            <tr>
+              <td><strong>Gallery Lighting Environment</strong></td>
+              <td class="tag-old">Single static background</td>
+              <td class="tag-new">Dual-Theme (White Gallery / Dark Museum Vault)</td>
+            </tr>
+            <tr>
+              <td><strong>Interior Spatial Scale</strong></td>
+              <td class="tag-old">No room simulation</td>
+              <td class="tag-new">Architectural Room Visualizer (Loft, Penthouse, Gallery)</td>
+            </tr>
+            <tr>
+              <td><strong>Commission &amp; Acquisition</strong></td>
+              <td class="tag-old">Static email link</td>
+              <td class="tag-new">Interactive Art Advisory &amp; Commission Estimator</td>
+            </tr>
+            <tr>
+              <td><strong>Branding &amp; Favicon</strong></td>
+              <td class="tag-old">Generic enomcentral.com logo</td>
+              <td class="tag-new">Custom Luxury SVG Monogram (HT with Gold Aura)</td>
+            </tr>
+            <tr>
+              <td><strong>Monograph &amp; Film Archive</strong></td>
+              <td class="tag-old">Basic text link</td>
+              <td class="tag-new">Curated Sveva Caetani Legacy &amp; Trailer Suite</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- Visual Concept Screenshot Showcase Card -->
+        <div style="margin: 28px 0; border: 1px solid #dcd5c9; border-radius: 8px; overflow: hidden; box-shadow: 0 8px 26px rgba(0,0,0,0.07); background-color: #121316;">
+          <div style="background-color: #1a1c22; padding: 10px 16px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #2d3039;">
+            <div style="display: flex; gap: 6px; align-items: center;">
+              <span style="display: inline-block; width: 10px; height: 10px; border-radius: 50%; background-color: #ef4444;"></span>
+              <span style="display: inline-block; width: 10px; height: 10px; border-radius: 50%; background-color: #eab308;"></span>
+              <span style="display: inline-block; width: 10px; height: 10px; border-radius: 50%; background-color: #22c55e;"></span>
+            </div>
+            <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 11.5px; color: #a19d95; letter-spacing: 0.5px;">
+              🔒 heidithompson.ca • Modern Redesign Concept
+            </div>
+            <div style="font-size: 11px; color: #c9a468; font-weight: 600;">
+              EN / FR • White / Dark
+            </div>
+          </div>
+          <a href="https://tatran.github.io/redesign/heidithompson-redesign/" target="_blank" style="display: block; text-decoration: none;">
+            <img src="https://tatran.github.io/redesign/heidithompson-redesign/images/redesign-preview.jpg" alt="Heidi Thompson Website Redesign Concept Preview — Color Energy Fields &amp; Sacred Meditations" width="680" style="width: 100%; height: auto; display: block; border: 0;" />
+          </a>
+          <div style="padding: 13px 18px; background-color: #fbfaf8; border-top: 1px solid #eae5dc; display: flex; justify-content: space-between; align-items: center; font-size: 13px;">
+            <div>
+              <strong style="color: #1a1918; font-family: Georgia, serif;">Visual Concept Preview</strong>
+              <span style="color: #7d7871; font-size: 12px; margin-left: 8px;">Hero Showcase: "Peaceful Movement in White" &amp; Bilingual Nav</span>
+            </div>
+            <a href="https://tatran.github.io/redesign/heidithompson-redesign/" target="_blank" style="color: #9e7838; font-weight: 700; text-decoration: none; font-size: 12px; text-transform: uppercase; letter-spacing: 1px;">
+              Test Drive Live &rarr;
+            </a>
+          </div>
+        </div>
+
         <p>
           To honor your work with the digital experience it deserves, we have assembled a complete, interactive, museum-grade redesign prototype. It is fully responsive, bilingual, and loaded with authentic high-resolution artwork and installation photography:
         </p>
@@ -283,32 +473,66 @@
           </div>
         </div>
 
-        <!-- Call to Action -->
+        <!-- Primary Call to Action Button -->
         <div class="cta-container">
-          <a href="https://heidithompson.ca/" class="cta-button" target="_blank">Review Redesign Prototype</a>
-          <div class="cta-subtext">No obligation • Prototype ready to test across mobile, tablet, and desktop</div>
+          <a href="https://tatran.github.io/redesign/heidithompson-redesign/" class="cta-button" target="_blank">
+            Test-Drive Live Redesign Prototype &rarr;
+          </a>
+          <div class="cta-subtext">Interactive concept • Ready on mobile, tablet &amp; desktop • No obligation</div>
         </div>
 
-        <!-- Closing Signature -->
+        <!-- Next Steps & Direct Contact Action Box -->
+        <div class="action-box">
+          <div class="action-title">🤝 Simple, Zero-Obligation Next Step</div>
+          <p style="margin-bottom: 12px; font-size: 14px;">
+            If you like the direction, we can deploy this fast, modern, and zero-maintenance experience onto <strong>heidithompson.ca</strong> with zero downtime and no disruption to your studio email.
+          </p>
+          <p style="margin-bottom: 16px; font-size: 14px; font-weight: 600; color: #9e7838;">
+            Would you be open to a quick 10-minute call or walkthrough this week?
+          </p>
+          <div class="action-buttons">
+            <a href="mailto:info@livingpixelstudios.com?subject=Heidi%20Thompson%20Website%20Redesign%20Chat" class="btn-secondary">
+              ✉️ Reply to this Email
+            </a>
+            <a href="tel:+12505421551" class="btn-outline">
+              📞 Studio Direct: (250) 542-1551
+            </a>
+          </div>
+        </div>
+
+        <!-- Closing Signature with Full Sender Contact Details -->
         <div class="signature-block">
-          <p style="margin-bottom: 8px;">
-            Would you be open to a brief 10-minute conversation this week to review the prototype together and see if this aligns with your vision for the studio?
+          <p style="margin-bottom: 6px; font-weight: 600; color: #1a1918;">
+            Warmest regards,
           </p>
-          <p style="margin-bottom: 4px; font-weight: 600; color: #1a1918;">
-            With warmest regards,
-          </p>
-          <p style="color: #6e6b66; font-size: 14px;">
-            <strong>Fine Art Digital Advisory &amp; Design Team</strong><br>
-            Bilingual Web Engineering &amp; Fine Art Archiving
-          </p>
+          <div class="sender-card">
+            <div class="sender-info">
+              <div class="sender-name">Ing. Ľuboš Kostroš</div>
+              <div class="sender-title">LivingPixel Studios · Fine Art Web Architecture &amp; Digital Growth</div>
+              <div>Direct Email: <a href="mailto:info@livingpixelstudios.com" style="color:#9e7838; text-decoration:none; font-weight:600;">info@livingpixelstudios.com</a></div>
+              <div>Studio Portfolio: <a href="https://livingpixelstudios.com" target="_blank" style="color:#9e7838; text-decoration:none;">livingpixelstudios.com</a></div>
+              <div>GitHub Project Source: <a href="https://github.com/tatran/redesign/tree/main/heidithompson-redesign" target="_blank" style="color:#77726d; text-decoration:underline;">github.com/tatran/redesign/heidithompson-redesign</a></div>
+            </div>
+          </div>
         </div>
 
       </div>
 
-      <!-- Footer Bar -->
+      <!-- Recipient Client Footer Bar with Full Studio Contact Information -->
       <div class="footer-bar">
-        Heidi Thompson Art Gallery &amp; Studio • 9905 Coldstream Creek Road, Coldstream, BC, Canada<br>
-        Direct Studio Tel: (250) 542-1551 • htcthompson@hotmail.com
+        <div class="footer-client-title">Prepared Exclusively for Heidi Thompson Contemporary Art Gallery</div>
+        <div>
+          📍 <strong>Studio Gallery:</strong> <a href="https://maps.google.com/?q=9905+Coldstream+Creek+Road,+Coldstream,+BC" target="_blank">9905 Coldstream Creek Road, Coldstream, BC V1B 1E3, Canada</a>
+        </div>
+        <div>
+          📞 <strong>Studio Phone:</strong> <a href="tel:12505421551">(250) 542-1551</a> &nbsp;|&nbsp; 
+          ✉️ <strong>Studio Email:</strong> <a href="mailto:htcthompson@hotmail.com">htcthompson@hotmail.com</a>
+        </div>
+        <div>
+          🌐 <strong>Current Website:</strong> <a href="https://heidithompson.ca/" target="_blank">heidithompson.ca</a> &nbsp;|&nbsp; 
+          📸 <strong>Instagram:</strong> <a href="https://instagram.com/heidithompsonart" target="_blank">@heidithompsonart</a> &nbsp;|&nbsp; 
+          📘 <strong>Facebook:</strong> <a href="https://www.facebook.com/heidithompsoncontemporaryart/" target="_blank">heidithompsoncontemporaryart</a>
+        </div>
       </div>
 
     </div>
