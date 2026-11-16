@@ -321,6 +321,10 @@ const translations = {
       "item5Title": "🛡️ Moderné strešné krytiny do každého počasia",
       "item5Desc": "Pálená a betónová škridla (Bramac, Tondach, Creaton), falcovaný titánzinok a hliník, bezúdržbové plastové šindle Ekoternit pre drevenice a zruby, a PVC hydroizolačné fólie Fatrafol pre ploché strechy.",
       "geoTitle": "Pôsobnosť našich strechárov a klampiarov:"
+    },
+    "floatingAd": {
+      "title": "Modernizované weby & digitálne premeny značiek",
+      "cta": "Pozrieť portfólio redizajnov ➔"
     }
   },
   "en": {
@@ -640,6 +644,10 @@ const translations = {
       "item5Title": "🛡️ Alpine-Grade Roofing Materials",
       "item5Desc": "Clay & concrete tiles (Bramac, Tondach, Creaton), standing seam titanzinc and aluminum, maintenance-free synthetic shingles (Ekoternit) for chalets, and Fatrafol PVC membranes for flat roofs.",
       "geoTitle": "Service Coverage Area:"
+    },
+    "floatingAd": {
+      "title": "Modernized websites & digital brand transformations",
+      "cta": "View redesign portfolio ➔"
     }
   },
   "de": {
@@ -959,6 +967,10 @@ const translations = {
       "item5Title": "🛡️ Hochwertige Dacheindeckungen für jedes Wetter",
       "item5Desc": "Ton- und Betondachsteine (Bramac, Tondach), Stehfalz-Titanzink, wartungsfreie Kunststoffschindeln (Ekoternit) für Blockhäuser sowie Fatrafol PVC-Folien für Flachdächer.",
       "geoTitle": "Einsatzgebiete in der Slowakei:"
+    },
+    "floatingAd": {
+      "title": "Modernisierte Webseiten & digitale Transformationen",
+      "cta": "Redesign-Portfolio ansehen ➔"
     }
   },
   "pl": {
@@ -1278,6 +1290,10 @@ const translations = {
       "item5Title": "🛡️ Nowoczesne pokrycia dachowe na każdą pogodę",
       "item5Desc": "Dachówka ceramiczna i betonowa (Bramac, Tondach, Creaton), blacha na rąbek tytan-cynk, bezobsługowe gonty syntetyczne Ekoternit do domów z bali oraz membrany PVC Fatrafol na dachy płaskie.",
       "geoTitle": "Obszar działalności w Tatrach i na Słowacji:"
+    },
+    "floatingAd": {
+      "title": "Nowoczesne strony www & cyfrowe metamorfozy marek",
+      "cta": "Zobacz portfolio projektów ➔"
     }
   },
   "hu": {
@@ -1597,6 +1613,10 @@ const translations = {
       "item5Title": "🛡️ Időjárásálló modern tetőfedő anyagok",
       "item5Desc": "Kerámia és beton tetőcserepek (Bramac, Tondach), korcolt titáncink és alumínium, karbantartásmentes Ekoternit műanyag zsindely faházakhoz és Fatrafol PVC fólia lapostetőkhöz.",
       "geoTitle": "Működési területünk a Tátra alatt és Szlovákiában:"
+    },
+    "floatingAd": {
+      "title": "Modernizált weboldalak & digitális márkaátalakítások",
+      "cta": "Redesign portfólió megtekintése ➔"
     }
   }
 };
