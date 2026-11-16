@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://www.strechymedo.com/</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://www.strechymedo.com/#sk" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.strechymedo.com/#en" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.strechymedo.com/#de" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://www.strechymedo.com/#pl" />
+    <xhtml:link rel="alternate" hreflang="hu" href="https://www.strechymedo.com/#hu" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.strechymedo.com/" />
+    <image:image>
+      <image:loc>https://www.strechymedo.com/images/project_01_levoca_1.jpg</image:loc>
+      <image:title>Nová strecha rodinného domu Levoča - Strechy Medo</image:title>
+      <image:caption>Kompletná realizácia novej strechy s pálenou škridlou a klampiarskymi prvkami</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.strechymedo.com/images/project_54_presov_titanzinok_1.jpg</image:loc>
+      <image:title>Falcovaný titánzinok a klampiarske práce Prešov</image:title>
+      <image:caption>Špičkové klampiarstvo s dvojitou stojatou drážkou z titánzinku</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.strechymedo.com/images/project_34_lopusna_dolina_1.jpg</image:loc>
+      <image:title>Drevenica Lopušná Dolina - Plastový šindeľ</image:title>
+      <image:caption>Pokládka bezúdržbového plastového šindľa pre horské chaty a zruby</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.strechymedo.com/images/project_46_ciapka_komina_1.jpg</image:loc>
+      <image:title>Umelecké klampiarstvo a výroba čiapky komína</image:title>
+      <image:caption>Ručne zhotovená čiapka komína z titánzinkového plechu na mieru</image:caption>
+    </image:image>
+  </url>
+</urlset>

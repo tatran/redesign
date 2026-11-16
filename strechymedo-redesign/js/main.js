@@ -62,6 +62,9 @@ window.setLanguage = setLanguage;
 function initLanguage(lang) {
   const dict = translations[lang] || translations.sk;
 
+  // Update HTML lang attribute
+  document.documentElement.lang = lang;
+
   // Update page title & meta
   if (dict.meta) {
     document.title = dict.meta.title;
@@ -329,3 +332,16 @@ function initContactForm() {
     }, 1200);
   });
 }
+
+/**
+ * Pre-select service option in contact form from SEO Hub or service cards
+ */
+function preselectService(val) {
+  const sel = document.getElementById('contactService');
+  if (sel) {
+    sel.value = val;
+    sel.classList.add('highlight-select');
+    setTimeout(() => sel.classList.remove('highlight-select'), 2000);
+  }
+}
+window.preselectService = preselectService;
