@@ -27,6 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initBeforeAfterSlider();
   initFaqAccordion();
   initContactForm();
+  initFloatingStudioAd();
   if (window.initCalculator) window.initCalculator();
   if (window.initGallery) window.initGallery(currentActiveLang);
 });
@@ -103,6 +104,16 @@ function initLanguage(lang) {
   // Update dropdown options active state
   document.querySelectorAll('.lang-option').forEach(opt => {
     opt.classList.toggle('active', opt.getAttribute('data-lang') === lang);
+  });
+
+  // Update topbar language buttons
+  document.querySelectorAll('.topbar-lang-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+  });
+
+  // Update mobile drawer pills
+  document.querySelectorAll('.mobile-lang-pill').forEach(btn => {
+    btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
   });
 
   // Fallback for any legacy buttons
@@ -345,3 +356,28 @@ function preselectService(val) {
   }
 }
 window.preselectService = preselectService;
+
+/**
+ * Floating Studio Ad (Living Pixel Studios)
+ */
+function initFloatingStudioAd() {
+  const ad = document.getElementById('floatingStudioAd');
+  const closeBtn = document.getElementById('floatingAdClose');
+  if (!ad || !closeBtn) return;
+
+  if (sessionStorage.getItem('lps_ad_dismissed') === '1') {
+    ad.style.display = 'none';
+    return;
+  }
+
+  closeBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    ad.style.opacity = '0';
+    ad.style.transform = 'translateY(15px)';
+    setTimeout(() => {
+      ad.style.display = 'none';
+      sessionStorage.setItem('lps_ad_dismissed', '1');
+    }, 250);
+  });
+}

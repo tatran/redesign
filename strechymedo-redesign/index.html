@@ -219,76 +219,100 @@
 <body>
 
   <!-- ==========================================================================
-       Site Header & Navigation
+       Site Header with Contacts & Language Topbar
        ========================================================================== -->
   <header class="site-header" id="mainHeader">
-    <div class="container nav-container">
-      <a href="#hero" class="brand-wrap">
-        <img src="favicon.svg" alt="Strechy Medo Logo" class="brand-logo-img">
-        <div class="brand-text-wrap">
-          <span class="brand-name">STRECHY <span>MEDO</span></span>
-          <span class="brand-sub" data-i18n="nav.brandSub">Miro Medvec • Strechy & Klampiarstvo</span>
-        </div>
-      </a>
-
-      <nav class="nav-menu" id="navMenu">
-        <a href="#services" class="nav-link" data-i18n="nav.services">Služby</a>
-        <a href="#portfolio" class="nav-link" data-i18n="nav.portfolio">Realizácie</a>
-        <a href="#calculator" class="nav-link" data-i18n="nav.calculator">Kalkulačka</a>
-        <a href="#about" class="nav-link" data-i18n="nav.about">O nás</a>
-        <a href="#testimonials" class="nav-link" data-i18n="nav.whyUs">Referencie</a>
-        <a href="#faq" class="nav-link" data-i18n="nav.faq">FAQ</a>
-        <a href="#contact" class="nav-link" data-i18n="nav.contact">Kontakt</a>
-      </nav>
-
-      <div class="nav-actions">
-        <!-- Language Dropdown to save space -->
-        <div class="lang-dropdown-wrap" id="langDropdownWrap">
-          <button class="lang-dropdown-btn" id="langDropdownBtn" type="button" aria-expanded="false" aria-label="Select Language">
-            <span class="lang-current-flag" id="langCurrentFlag">🇸🇰</span>
-            <span class="lang-current-code" id="langCurrentCode">SK</span>
-            <svg class="lang-chevron" width="12" height="12" viewBox="0 0 12 12" fill="none">
-              <path d="M2.5 4.5L6 8L9.5 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Topbar: Contacts & Language Switcher (as per design reference) -->
+    <div class="site-topbar" id="siteTopbar">
+      <div class="container topbar-container">
+        <div class="topbar-left">
+          <a href="https://www.instagram.com/strechy_medo/" target="_blank" rel="noopener noreferrer" class="topbar-ig-link" title="Instagram @strechy_medo">
+            <svg class="topbar-ig-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+              <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
             </svg>
-          </button>
-          <div class="lang-dropdown-menu" id="langDropdownMenu">
-            <button class="lang-option active" data-lang="sk" onclick="setLanguage('sk')">
-              <span class="lang-opt-flag">🇸🇰</span>
-              <span class="lang-opt-name">Slovenčina</span>
-              <span class="lang-opt-code">SK</span>
-            </button>
-            <button class="lang-option" data-lang="en" onclick="setLanguage('en')">
-              <span class="lang-opt-flag">🇬🇧</span>
-              <span class="lang-opt-name">English</span>
-              <span class="lang-opt-code">EN</span>
-            </button>
-            <button class="lang-option" data-lang="de" onclick="setLanguage('de')">
-              <span class="lang-opt-flag">🇩🇪</span>
-              <span class="lang-opt-name">Deutsch</span>
-              <span class="lang-opt-code">DE</span>
-            </button>
-            <button class="lang-option" data-lang="pl" onclick="setLanguage('pl')">
-              <span class="lang-opt-flag">🇵🇱</span>
-              <span class="lang-opt-name">Polski</span>
-              <span class="lang-opt-code">PL</span>
-            </button>
-            <button class="lang-option" data-lang="hu" onclick="setLanguage('hu')">
-              <span class="lang-opt-flag">🇭🇺</span>
-              <span class="lang-opt-name">Magyar</span>
-              <span class="lang-opt-code">HU</span>
-            </button>
+            <span>@strechy_medo</span>
+          </a>
+          <span class="topbar-separator topbar-ig-sep">|</span>
+          <span class="topbar-badge" data-i18n="topbar.badge">⚡ Bezplatná obhliadka</span>
+          <span class="topbar-announcement" data-i18n="topbar.text">Bezplatné zameranie a cenová ponuka do 24 hodín pre Poprad a celé Slovensko</span>
+        </div>
+        <div class="topbar-right">
+          <a href="tel:+421905226930" class="topbar-contact-item" title="Zavolajte nám">
+            <svg class="topbar-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+            </svg>
+            <span>+421 905 226 930</span>
+          </a>
+          <span class="topbar-separator">|</span>
+          <a href="mailto:strechymedo@gmail.com" class="topbar-contact-item topbar-email-item" title="Napíšte nám e-mail">
+            <svg class="topbar-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <rect width="20" height="16" x="2" y="4" rx="2"/>
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+            </svg>
+            <span>strechymedo@gmail.com</span>
+          </a>
+          <span class="topbar-separator">|</span>
+          <div class="topbar-languages" id="topbarLanguages" aria-label="Language selector">
+            <button type="button" class="topbar-lang-btn active" data-lang="sk" onclick="setLanguage('sk')" title="Slovenčina">SK</button>
+            <span class="topbar-slash">/</span>
+            <button type="button" class="topbar-lang-btn" data-lang="en" onclick="setLanguage('en')" title="English">EN</button>
+            <span class="topbar-slash">/</span>
+            <button type="button" class="topbar-lang-btn" data-lang="de" onclick="setLanguage('de')" title="Deutsch">DE</button>
+            <span class="topbar-slash">/</span>
+            <button type="button" class="topbar-lang-btn" data-lang="pl" onclick="setLanguage('pl')" title="Polski">PL</button>
+            <span class="topbar-slash">/</span>
+            <button type="button" class="topbar-lang-btn" data-lang="hu" onclick="setLanguage('hu')" title="Magyar">HU</button>
           </div>
         </div>
+      </div>
+    </div>
 
-        <a href="#contact" class="btn-header-quote" data-i18n="nav.freeQuote">
-          <span>Cenová ponuka</span> ➔
+    <!-- Main Navigation Bar -->
+    <div class="main-nav-bar">
+      <div class="container nav-container">
+        <a href="#hero" class="brand-wrap">
+          <img src="favicon.svg" alt="Strechy Medo Logo" class="brand-logo-img">
+          <div class="brand-text-wrap">
+            <span class="brand-name">STRECHY <span>MEDO</span></span>
+            <span class="brand-sub" data-i18n="nav.brandSub">Miro Medvec • Strechy & Klampiarstvo</span>
+          </div>
         </a>
 
-        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
+        <nav class="nav-menu" id="navMenu">
+          <a href="#services" class="nav-link" data-i18n="nav.services">Služby</a>
+          <a href="#portfolio" class="nav-link" data-i18n="nav.portfolio">Realizácie</a>
+          <a href="#calculator" class="nav-link" data-i18n="nav.calculator">Kalkulačka</a>
+          <a href="#about" class="nav-link" data-i18n="nav.about">O nás</a>
+          <a href="#testimonials" class="nav-link" data-i18n="nav.whyUs">Referencie</a>
+          <a href="#faq" class="nav-link" data-i18n="nav.faq">FAQ</a>
+          <a href="#contact" class="nav-link" data-i18n="nav.contact">Kontakt</a>
+
+          <!-- Mobile drawer language switcher -->
+          <div class="mobile-drawer-lang-wrap">
+            <span class="mobile-drawer-lang-title">Jazyk / Language:</span>
+            <div class="mobile-drawer-lang-grid">
+              <button type="button" class="mobile-lang-pill active" data-lang="sk" onclick="setLanguage('sk')">🇸🇰 SK</button>
+              <button type="button" class="mobile-lang-pill" data-lang="en" onclick="setLanguage('en')">🇬🇧 EN</button>
+              <button type="button" class="mobile-lang-pill" data-lang="de" onclick="setLanguage('de')">🇩🇪 DE</button>
+              <button type="button" class="mobile-lang-pill" data-lang="pl" onclick="setLanguage('pl')">🇵🇱 PL</button>
+              <button type="button" class="mobile-lang-pill" data-lang="hu" onclick="setLanguage('hu')">🇭🇺 HU</button>
+            </div>
+          </div>
+        </nav>
+
+        <div class="nav-actions">
+          <a href="#contact" class="btn-header-quote" data-i18n="nav.freeQuote">
+            <span>Cenová ponuka</span> ➔
+          </a>
+
+          <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
       </div>
     </div>
   </header>
@@ -1220,6 +1244,23 @@
 
   <!-- Back to top button -->
   <button class="back-to-top" id="backToTopBtn" aria-label="Back to top">↑</button>
+
+  <!-- ==========================================================================
+       Floating Ad: Living Pixel Studios Redesigns
+       ========================================================================== -->
+  <aside class="floating-studio-ad" id="floatingStudioAd" aria-label="Reklama">
+    <button type="button" class="floating-ad-close" id="floatingAdClose" aria-label="Zavrieť reklamu" title="Zavrieť">✕</button>
+    <a href="https://livingpixelstudios.com/#redesigns" target="_blank" rel="noopener noreferrer" class="floating-ad-card">
+      <div class="floating-ad-sparkle-box">
+        <span class="floating-ad-sparkle">✨</span>
+      </div>
+      <div class="floating-ad-text">
+        <span class="floating-ad-kicker">LIVING PIXEL STUDIOS</span>
+        <strong class="floating-ad-title">Modernizované weby &amp; digitálne premeny značiek</strong>
+        <span class="floating-ad-link">Pozrieť portfólio redizajnov ➔</span>
+      </div>
+    </a>
+  </aside>
 
   <!-- Scripts -->
   <script src="js/translations.js"></script>

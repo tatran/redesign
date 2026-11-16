@@ -9,6 +9,10 @@ const translations = {
       "title": "Strechy Medo | Klampiari & Strechári Poprad • Nová strecha, oprava a krytiny",
       "desc": "Hľadáte spoľahlivých strechárov a klampiarov? Strechy Medo zabezpečuje výstavbu novej strechy na kľúč, expresné opravy zatekajúcich striech, falcovaný titánzinok a strešné krytiny v Poprade, Tatrách a celej SR. Získajte bezplatnú obhliadku a kalkuláciu!"
     },
+    "topbar": {
+      "badge": "⚡ Bezplatná obhliadka",
+      "text": "Bezplatné zameranie a cenová ponuka do 24 hodín pre Poprad a celé Slovensko"
+    },
     "nav": {
       "brand": "STRECHY MEDO",
       "brandSub": "Miro Medvec • Strechy & Klampiarstvo",
@@ -323,6 +327,10 @@ const translations = {
     "meta": {
       "title": "Strechy Medo | Master Roofers & Tinsmiths Poprad • New Roof, Repair & Roofing",
       "desc": "Looking for expert roofers and tinsmiths? Strechy Medo delivers turnkey new roofs, fast leak repairs, standing seam titanzinc, and roofing materials in Poprad, the High Tatras, and all of Slovakia. Get a free quote!"
+    },
+    "topbar": {
+      "badge": "⚡ Free Inspection",
+      "text": "Free on-site inspection and quote within 24 hours for Poprad, Tatras & all Slovakia"
     },
     "nav": {
       "brand": "STRECHY MEDO",
@@ -639,6 +647,10 @@ const translations = {
       "title": "Strechy Medo | Dachdecker & Spengler Poprad • Neues Dach, Sanierung & Dacheindeckung",
       "desc": "Suchen Sie zuverlässige Dachdecker und Spengler? Strechy Medo bietet schlüsselfertige neue Dächer, schnelle Dachreparaturen bei Undichtigkeiten, Stehfalz-Titanzink und Dacheindeckungen in Poprad, der Hohen Tatra und der Slowakei. Kostenlose Beratung!"
     },
+    "topbar": {
+      "badge": "⚡ Kostenlose Besichtigung",
+      "text": "Kostenloses Aufmaß und Angebot innerhalb von 24 Stunden für Poprad & die Slowakei"
+    },
     "nav": {
       "brand": "STRECHY MEDO",
       "brandSub": "Miro Medvec • Dachdecker- & Spengler-Handwerk",
@@ -954,6 +966,10 @@ const translations = {
       "title": "Strechy Medo | Dekarze & Blacharze Poprad • Nowy dach, naprawa i pokrycia dachowe",
       "desc": "Szukasz sprawdzonych dekarzy i blacharzy? Strechy Medo realizuje nowe dachy pod klucz, szybkie naprawy przeciekających dachów, blachę na rąbek z tytan-cynku i pokrycia dachowe w Popradzie, Tatrach i na całej Słowacji. Zamów bezpłatny obmiar!"
     },
+    "topbar": {
+      "badge": "⚡ Bezpłatny pomiar",
+      "text": "Bezpłatny pomiar i wycena w 24 godziny dla Popradu, Tatr i całej Słowacji"
+    },
     "nav": {
       "brand": "STRECHY MEDO",
       "brandSub": "Miro Medvec • Dekarstwo & Blacharstwo",
@@ -1268,6 +1284,10 @@ const translations = {
     "meta": {
       "title": "Strechy Medo | Tetőfedők & Bádogosok Poprád • Új tető, tetőjavítás és tetőfedő anyagok",
       "desc": "Megbízható tetőfedőt és bádogost keres? A Strechy Medo kulcsrakész új tetők kivitelezését, gyors beázásjavítást, korcolt titáncink lemezfedést és tetőfedő anyagokat kínál Poprádon, a Magas-Tátrában és egész Szlovákiában. Kérjen ingyenes felmérést!"
+    },
+    "topbar": {
+      "badge": "⚡ Ingyenes felmérés",
+      "text": "Ingyenes helyszíni felmérés és árajánlat 24 órán belül Poprádon és Szlovákia-szerte"
     },
     "nav": {
       "brand": "STRECHY MEDO",

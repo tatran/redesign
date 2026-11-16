@@ -153,19 +153,170 @@ h1, h2, h3, h4, h5 {
   left: 0;
   width: 100%;
   z-index: 1000;
-  padding: 1.1rem 0;
+  padding: 0;
   transition: var(--transition);
-  background: rgba(10, 14, 23, 0.7);
+  background: rgba(10, 14, 23, 0.95);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 .site-header.scrolled {
-  padding: 0.8rem 0;
-  background: rgba(10, 14, 23, 0.94);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  background: rgba(10, 14, 23, 0.98);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.55);
   border-bottom-color: rgba(249, 115, 22, 0.2);
+}
+
+/* ==========================================================================
+   Contacts & Language Topbar (as per design reference)
+   ========================================================================== */
+.site-topbar {
+  background: #06090f;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  padding: 0.32rem 0;
+  font-size: 0.78rem;
+  line-height: 1.2;
+}
+
+.topbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.topbar-left {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  min-width: 0;
+}
+
+.topbar-ig-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: #cbd5e1;
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  padding: 0.15rem 0.5rem;
+  border-radius: var(--radius-full);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  white-space: nowrap;
+}
+
+.topbar-ig-link:hover {
+  color: #fff;
+  background: linear-gradient(45deg, rgba(240, 148, 51, 0.2), rgba(220, 39, 67, 0.2));
+  border-color: rgba(220, 39, 67, 0.45);
+}
+
+.topbar-ig-icon {
+  color: #f43f5e;
+  flex-shrink: 0;
+}
+
+.topbar-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.18rem 0.6rem;
+  border-radius: var(--radius-full);
+  font-size: 0.72rem;
+  font-weight: 600;
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(16, 185, 129, 0.38);
+  color: #34d399;
+  white-space: nowrap;
+}
+
+.topbar-announcement {
+  font-size: 0.78rem;
+  color: #94a3b8;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.topbar-contact-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.38rem;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: #cbd5e1;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.topbar-contact-item:hover {
+  color: #fff;
+}
+
+.topbar-icon {
+  color: var(--accent-copper);
+  flex-shrink: 0;
+}
+
+.topbar-separator {
+  color: rgba(255, 255, 255, 0.18);
+  font-size: 0.72rem;
+  user-select: none;
+}
+
+.topbar-languages {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.topbar-lang-btn {
+  background: none;
+  border: none;
+  padding: 0 0.12rem;
+  font-family: inherit;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #94a3b8;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  line-height: 1;
+}
+
+.topbar-lang-btn:hover {
+  color: #fff;
+}
+
+.topbar-lang-btn.active {
+  color: var(--accent-copper);
+  font-weight: 800;
+}
+
+.topbar-slash {
+  color: rgba(255, 255, 255, 0.2);
+  font-size: 0.72rem;
+  user-select: none;
+}
+
+/* Main Navigation Bar */
+.main-nav-bar {
+  padding: 0.85rem 0;
+  transition: padding 0.25s ease;
+}
+
+.site-header.scrolled .main-nav-bar {
+  padding: 0.6rem 0;
 }
 
 .nav-container {
@@ -439,7 +590,7 @@ h1, h2, h3, h4, h5 {
   min-height: 92vh;
   display: flex;
   align-items: center;
-  padding: 8.5rem 0 4.5rem;
+  padding: 9.8rem 0 4.5rem;
   overflow: hidden;
   background: linear-gradient(135deg, rgba(10, 14, 23, 0.96) 0%, rgba(17, 24, 39, 0.88) 60%, rgba(15, 23, 42, 0.96) 100%);
 }
@@ -2306,17 +2457,21 @@ h1, h2, h3, h4, h5 {
   }
   .nav-menu {
     position: fixed;
-    top: 70px;
+    top: 96px;
     left: 0;
     width: 100%;
-    height: calc(100vh - 70px);
+    height: calc(100vh - 96px);
     background: rgba(10, 14, 23, 0.98);
     backdrop-filter: blur(20px);
     flex-direction: column;
-    padding: 2.5rem 1.5rem;
-    gap: 1.5rem;
+    padding: 2rem 1.5rem 3rem;
+    gap: 1.25rem;
     transform: translateX(100%);
     transition: transform 0.3s ease;
+    overflow-y: auto;
+  }
+  .mobile-drawer-lang-wrap {
+    display: flex;
   }
   .nav-menu.open {
     transform: translateX(0);
@@ -2490,5 +2645,174 @@ h1, h2, h3, h4, h5 {
   .seo-geo-tag {
     font-size: 0.8rem;
     padding: 0.45rem 0.85rem;
+  }
+}
+
+/* ==========================================================================
+   Topbar Responsive Behaviors
+   ========================================================================== */
+@media (max-width: 992px) {
+  .topbar-announcement {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .topbar-badge,
+  .topbar-ig-sep {
+    display: none;
+  }
+  .topbar-email-item,
+  .topbar-separator {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .topbar-container {
+    gap: 0.4rem;
+  }
+  .topbar-ig-link span {
+    display: none;
+  }
+  .topbar-ig-link {
+    padding: 0.2rem 0.35rem;
+  }
+}
+
+/* ==========================================================================
+   Floating Studio Ad (Living Pixel Studios)
+   ========================================================================== */
+.floating-studio-ad {
+  position: fixed;
+  bottom: 82px;
+  right: 24px;
+  z-index: 995;
+  width: 320px;
+  max-width: calc(100vw - 32px);
+  background: linear-gradient(135deg, rgba(13, 18, 30, 0.95) 0%, rgba(20, 28, 45, 0.95) 100%);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(249, 115, 22, 0.38);
+  border-radius: 16px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.55), 0 0 22px rgba(249, 115, 22, 0.14);
+  padding: 0.85rem 1.05rem;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  animation: floatAdFadeIn 0.6s ease-out;
+}
+
+.floating-studio-ad:hover {
+  transform: translateY(-3px);
+  border-color: rgba(249, 115, 22, 0.65);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.65), 0 0 26px rgba(249, 115, 22, 0.25);
+}
+
+.floating-ad-close {
+  position: absolute;
+  top: 7px;
+  right: 8px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #94a3b8;
+  font-size: 11px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  z-index: 3;
+}
+
+.floating-ad-close:hover {
+  background: rgba(239, 68, 68, 0.25);
+  color: #f87171;
+  border-color: rgba(239, 68, 68, 0.4);
+}
+
+.floating-ad-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.floating-ad-sparkle-box {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, rgba(249, 115, 22, 0.25) 0%, rgba(14, 165, 233, 0.25) 100%);
+  border: 1px solid rgba(249, 115, 22, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+  flex-shrink: 0;
+  box-shadow: 0 0 12px rgba(249, 115, 22, 0.2);
+}
+
+.floating-ad-sparkle {
+  line-height: 1;
+}
+
+.floating-ad-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.18rem;
+  padding-right: 0.8rem;
+}
+
+.floating-ad-kicker {
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent-copper);
+}
+
+.floating-ad-title {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.35;
+}
+
+.floating-ad-link {
+  font-size: 0.74rem;
+  font-weight: 600;
+  color: #38bdf8;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  margin-top: 0.2rem;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.floating-ad-card:hover .floating-ad-link {
+  transform: translateX(3px);
+  color: #7dd3fc;
+}
+
+@keyframes floatAdFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 640px) {
+  .floating-studio-ad {
+    bottom: 78px;
+    right: 14px;
+    width: 290px;
+    padding: 0.75rem 0.9rem;
   }
 }
