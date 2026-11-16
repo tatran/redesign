@@ -11,7 +11,7 @@ const translations = {
     },
     "topbar": {
       "badge": "⚡ Bezplatná obhliadka",
-      "text": "Bezplatné zameranie a cenová ponuka do 24 hodín pre Poprad a celé Slovensko"
+      "text": "Zameranie a cenová ponuka do 24h"
     },
     "nav": {
       "brand": "STRECHY MEDO",
@@ -330,7 +330,7 @@ const translations = {
     },
     "topbar": {
       "badge": "⚡ Free Inspection",
-      "text": "Free on-site inspection and quote within 24 hours for Poprad, Tatras & all Slovakia"
+      "text": "On-site quote within 24h"
     },
     "nav": {
       "brand": "STRECHY MEDO",
@@ -649,7 +649,7 @@ const translations = {
     },
     "topbar": {
       "badge": "⚡ Kostenlose Besichtigung",
-      "text": "Kostenloses Aufmaß und Angebot innerhalb von 24 Stunden für Poprad & die Slowakei"
+      "text": "Vor-Ort-Angebot innerhalb von 24h"
     },
     "nav": {
       "brand": "STRECHY MEDO",
@@ -968,7 +968,7 @@ const translations = {
     },
     "topbar": {
       "badge": "⚡ Bezpłatny pomiar",
-      "text": "Bezpłatny pomiar i wycena w 24 godziny dla Popradu, Tatr i całej Słowacji"
+      "text": "Wycena i pomiar do 24h"
     },
     "nav": {
       "brand": "STRECHY MEDO",
@@ -1287,7 +1287,7 @@ const translations = {
     },
     "topbar": {
       "badge": "⚡ Ingyenes felmérés",
-      "text": "Ingyenes helyszíni felmérés és árajánlat 24 órán belül Poprádon és Szlovákia-szerte"
+      "text": "Helyszíni árajánlat 24 órán belül"
     },
     "nav": {
       "brand": "STRECHY MEDO",

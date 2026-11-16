@@ -173,16 +173,19 @@ h1, h2, h3, h4, h5 {
 .site-topbar {
   background: #06090f;
   border-bottom: 1px solid rgba(255, 255, 255, 0.07);
-  padding: 0.32rem 0;
+  padding: 0;
+  height: 38px;
   font-size: 0.78rem;
-  line-height: 1.2;
+  line-height: 38px;
+  overflow: hidden;
 }
 
 .topbar-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
+  height: 100%;
+  flex-wrap: nowrap;
 }
 
 .topbar-left {
@@ -190,6 +193,9 @@ h1, h2, h3, h4, h5 {
   align-items: center;
   gap: 0.65rem;
   min-width: 0;
+  flex: 1 1 auto;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .topbar-ig-link {
@@ -206,6 +212,7 @@ h1, h2, h3, h4, h5 {
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
   white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .topbar-ig-link:hover {
@@ -231,6 +238,7 @@ h1, h2, h3, h4, h5 {
   border: 1px solid rgba(16, 185, 129, 0.38);
   color: #34d399;
   white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .topbar-announcement {
@@ -239,6 +247,7 @@ h1, h2, h3, h4, h5 {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  flex-shrink: 1;
 }
 
 .topbar-right {
@@ -247,6 +256,8 @@ h1, h2, h3, h4, h5 {
   gap: 0.75rem;
   white-space: nowrap;
   flex-shrink: 0;
+  flex-wrap: nowrap;
+  margin-left: 1rem;
 }
 
 .topbar-contact-item {
@@ -2464,14 +2475,11 @@ h1, h2, h3, h4, h5 {
     background: rgba(10, 14, 23, 0.98);
     backdrop-filter: blur(20px);
     flex-direction: column;
-    padding: 2rem 1.5rem 3rem;
-    gap: 1.25rem;
+    padding: 2.5rem 1.5rem;
+    gap: 1.5rem;
     transform: translateX(100%);
     transition: transform 0.3s ease;
     overflow-y: auto;
-  }
-  .mobile-drawer-lang-wrap {
-    display: flex;
   }
   .nav-menu.open {
     transform: translateX(0);
@@ -2651,7 +2659,7 @@ h1, h2, h3, h4, h5 {
 /* ==========================================================================
    Topbar Responsive Behaviors
    ========================================================================== */
-@media (max-width: 992px) {
+@media (max-width: 1100px) {
   .topbar-announcement {
     display: none;
   }
