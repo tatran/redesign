@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // 2. Initialize modules
+  initTheme();
   initLanguage(currentActiveLang);
   initLanguageDropdown();
   initNavigation();
@@ -120,6 +121,11 @@ function initLanguage(lang) {
   document.querySelectorAll('.lang-btn').forEach(btn => {
     btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
   });
+
+  // Update theme button tooltips for current language
+  if (window.updateThemeIcons) {
+    window.updateThemeIcons(document.documentElement.getAttribute('data-theme') || 'dark');
+  }
 }
 
 /**
@@ -381,3 +387,64 @@ function initFloatingStudioAd() {
     }, 250);
   });
 }
+
+/**
+ * Theme Switcher (Dark / Light Mode)
+ */
+function initTheme() {
+  const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+  updateThemeIcons(currentTheme);
+
+  const desktopBtn = document.getElementById('themeToggleBtn');
+  const mobileBtn = document.getElementById('mobileThemeToggleBtn');
+
+  function toggleTheme() {
+    const active = document.documentElement.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
+    const next = active === 'light' ? 'dark' : 'light';
+    document.documentElement.setAttribute('data-theme', next);
+    try {
+      localStorage.setItem('strechymedo_theme', next);
+    } catch (e) {}
+    updateThemeIcons(next);
+  }
+
+  if (desktopBtn) desktopBtn.addEventListener('click', toggleTheme);
+  if (mobileBtn) mobileBtn.addEventListener('click', toggleTheme);
+}
+
+const themeTooltips = {
+  sk: { toLight: 'Prepnúť na svetlý režim', toDark: 'Prepnúť na tmavý režim' },
+  en: { toLight: 'Switch to light mode', toDark: 'Switch to dark mode' },
+  de: { toLight: 'Zum hellen Modus wechseln', toDark: 'Zum dunklen Modus wechseln' },
+  pl: { toLight: 'Przełącz na tryb jasny', toDark: 'Przełącz na tryb ciemny' },
+  hu: { toLight: 'Váltás világos módra', toDark: 'Váltás sötét módra' }
+};
+
+function updateThemeIcons(theme) {
+  const isLight = theme === 'light';
+  // If current theme is light, show Moon (click to switch to dark)
+  // If current theme is dark, show Sun (click to switch to light)
+  const icon = isLight ? '🌙' : '☀️';
+  const lang = window.currentActiveLang || 'sk';
+  const tips = themeTooltips[lang] || themeTooltips.sk;
+  const title = isLight ? tips.toDark : tips.toLight;
+
+  const desktopIcon = document.getElementById('themeToggleIcon');
+  const mobileIcon = document.getElementById('mobileThemeToggleIcon');
+  const desktopBtn = document.getElementById('themeToggleBtn');
+  const mobileBtn = document.getElementById('mobileThemeToggleBtn');
+
+  if (desktopIcon) desktopIcon.textContent = icon;
+  if (mobileIcon) mobileIcon.textContent = icon;
+  if (desktopBtn) {
+    desktopBtn.setAttribute('title', title);
+    desktopBtn.setAttribute('aria-label', title);
+  }
+  if (mobileBtn) {
+    mobileBtn.setAttribute('title', title);
+    mobileBtn.setAttribute('aria-label', title);
+  }
+}
+window.initTheme = initTheme;
+window.updateThemeIcons = updateThemeIcons;
+

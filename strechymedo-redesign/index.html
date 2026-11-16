@@ -207,6 +207,18 @@
 
   <!-- Main Stylesheet -->
   <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Theme Init Script (Zero FOUC) -->
+  <script>
+    (function() {
+      try {
+        const saved = localStorage.getItem('strechymedo_theme');
+        const prefersLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
+        const theme = saved || (prefersLight ? 'light' : 'dark');
+        document.documentElement.setAttribute('data-theme', theme);
+      } catch(e) {}
+    })();
+  </script>
 </head>
 <body>
 
@@ -254,6 +266,10 @@
             <span class="topbar-slash" translate="no">/</span>
             <button type="button" class="topbar-lang-btn notranslate" data-lang="hu" onclick="setLanguage('hu')" title="Magyar" translate="no">HU</button>
           </div>
+          <span class="topbar-separator">|</span>
+          <button type="button" class="theme-toggle-btn notranslate" id="themeToggleBtn" translate="no" aria-label="Prepnúť svetlý/tmavý režim" title="Prepnúť režim (Svetlý/Tmavý)">
+            <span class="theme-icon" id="themeToggleIcon">☀️</span>
+          </button>
         </div>
       </div>
     </div>
@@ -280,6 +296,10 @@
         </nav>
 
         <div class="nav-actions">
+          <button type="button" class="theme-toggle-btn mobile-theme-btn notranslate" id="mobileThemeToggleBtn" translate="no" aria-label="Prepnúť svetlý/tmavý režim" title="Prepnúť režim">
+            <span class="theme-icon" id="mobileThemeToggleIcon">☀️</span>
+          </button>
+
           <a href="#contact" class="btn-header-quote" data-i18n="nav.freeQuote">
             <span>Cenová ponuka</span> ➔
           </a>
