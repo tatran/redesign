@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Strechy Medo | Majstrovské strechy, precízne klampiarstvo a hydroizolácie pod Tatrami</title>
+  <meta name="description" content="Špecialista na šikmé a ploché strechy, titánzinkové a plechové falcované krytiny, hydroizolácie, drevenice a klampiarske práce na mieru v Poprade a na celom Slovensku.">
+  <meta name="keywords" content="strechy poprad, strechy medo, miro medvec, klampiarstvo tatry, falcovany titanzinok, plastovy sindel lopusna dolina, oprava strechy levoca, hydroizolacie fatrafol">
+  <meta property="og:title" content="Strechy Medo | Miro Medvec - Majstrovské strechy pod Tatrami">
+  <meta property="og:description" content="Poctivé remeslo, titánzinkové krytiny, hydroizolácie a drevenice. Pozrite si autentické realizácie z nášho Instagramu @strechy_medo.">
+  <meta property="og:image" content="images/project_01_levoca_1.jpg">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       Site Header & Navigation
+       ========================================================================== -->
+  <header class="site-header" id="mainHeader">
+    <div class="container nav-container">
+      <a href="#hero" class="brand-wrap">
+        <img src="favicon.svg" alt="Strechy Medo Logo" class="brand-logo-img">
+        <div class="brand-text-wrap">
+          <span class="brand-name">STRECHY <span>MEDO</span></span>
+          <span class="brand-sub" data-i18n="nav.brandSub">Miro Medvec • Strechy & Klampiarstvo</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu" id="navMenu">
+        <a href="#services" class="nav-link" data-i18n="nav.services">Služby</a>
+        <a href="#portfolio" class="nav-link" data-i18n="nav.portfolio">Realizácie</a>
+        <a href="#calculator" class="nav-link" data-i18n="nav.calculator">Kalkulačka</a>
+        <a href="#about" class="nav-link" data-i18n="nav.about">O nás</a>
+        <a href="#testimonials" class="nav-link" data-i18n="nav.whyUs">Referencie</a>
+        <a href="#faq" class="nav-link" data-i18n="nav.faq">FAQ</a>
+        <a href="#contact" class="nav-link" data-i18n="nav.contact">Kontakt</a>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Language Switcher -->
+        <div class="lang-selector">
+          <button class="lang-btn active" data-lang="sk" onclick="setLanguage('sk')">SK</button>
+          <button class="lang-btn" data-lang="en" onclick="setLanguage('en')">EN</button>
+          <button class="lang-btn" data-lang="de" onclick="setLanguage('de')">DE</button>
+          <button class="lang-btn" data-lang="pl" onclick="setLanguage('pl')">PL</button>
+          <button class="lang-btn" data-lang="hu" onclick="setLanguage('hu')">HU</button>
+        </div>
+
+        <a href="#contact" class="btn-header-quote" data-i18n="nav.freeQuote">
+          <span>Cenová ponuka</span> ➔
+        </a>
+
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       Hero Section
+       ========================================================================== -->
+  <section class="hero-section" id="hero">
+    <img src="images/project_01_levoca_1.jpg" alt="Strechy Medo Background Realizácia" class="hero-bg-cover">
+    <div class="hero-overlay"></div>
+
+    <div class="container hero-container">
+      <div class="hero-main-grid">
+        <!-- Left text column -->
+        <div class="hero-text-col">
+          <div class="hero-badge" data-i18n="hero.badge">
+            🛡️ Poctivé remeslo pod Vysokými Tatrami
+          </div>
+
+          <h1 class="hero-title">
+            <span data-i18n="hero.title">Strechy pripravené na</span><br>
+            <span class="highlight" data-i18n="hero.titleHighlight">tatranské zimy.</span>
+          </h1>
+
+          <p class="hero-subtitle" data-i18n="hero.subtitle">
+            Kompletné realizácie a rekonštrukcie striech, prémiové falcované titánzinky, plastové i asfaltové šindle, precízne klampiarske prvky a nekompromisné hydroizolácie.
+          </p>
+
+          <div class="hero-ctas">
+            <a href="#contact" class="btn-primary" data-i18n="hero.ctaQuote">
+              <span>Nezáväzná cenová ponuka</span> ➔
+            </a>
+            <a href="#portfolio" class="btn-secondary" data-i18n="hero.ctaPortfolio">
+              <span>Pozrieť realizácie</span> 📷
+            </a>
+          </div>
+        </div>
+
+        <!-- Right featured picture showcase -->
+        <div class="hero-picture-col">
+          <div class="hero-showcase-card">
+            <div class="hero-card-img-wrap" onclick="openLightbox('levoca', 0)">
+              <img src="images/project_01_levoca_1.jpg" alt="Strechy Medo - Prémiová realizácia Levoča" class="hero-main-img" id="heroMainImg">
+              
+              <!-- Floating badges over the hero picture -->
+              <div class="hero-img-badge-top">
+                <span class="badge-dot"></span>
+                <span>100% Tesnosť & Záruka</span>
+              </div>
+
+              <div class="hero-img-badge-bottom" id="heroBadgeLocation">
+                📍 Levoča • Novostavba rodinného domu
+              </div>
+
+              <div class="hero-img-overlay-hint">
+                <span>🔍 Kliknite pre celú galériu</span>
+              </div>
+            </div>
+
+            <!-- Mini Thumbnails Bar for quick picture switching -->
+            <div class="hero-thumbs-bar">
+              <button class="hero-thumb-btn active" data-img="images/project_01_levoca_1.jpg" data-loc="📍 Levoča • Pálená škridla">
+                <img src="images/project_01_levoca_1.jpg" alt="Levoča">
+                <span>Levoča</span>
+              </button>
+              <button class="hero-thumb-btn" data-img="images/project_54_presov_titanzinok_1.jpg" data-loc="📍 Prešov • Falcovaný titánzinok">
+                <img src="images/project_54_presov_titanzinok_1.jpg" alt="Prešov Titánzinok">
+                <span>Prešov</span>
+              </button>
+              <button class="hero-thumb-btn" data-img="images/project_34_lopusna_dolina_1.jpg" data-loc="📍 Lopušná Dolina • Plastový šindeľ">
+                <img src="images/project_34_lopusna_dolina_1.jpg" alt="Lopušná Dolina">
+                <span>Tatry</span>
+              </button>
+              <button class="hero-thumb-btn" data-img="images/project_05_horka_primovce_2.jpg" data-loc="📍 Hôrka Primovce • Šikmá strecha">
+                <img src="images/project_05_horka_primovce_2.jpg" alt="Hôrka">
+                <span>Hôrka</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stats row -->
+      <div class="hero-stats">
+        <div class="stat-item">
+          <div class="stat-num" data-i18n="hero.stat1Number">15+</div>
+          <div class="stat-label" data-i18n="hero.stat1Text">Rokov skúseností</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num" data-i18n="hero.stat2Number">250+</div>
+          <div class="stat-label" data-i18n="hero.stat2Text">Dokončených striech</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num" data-i18n="hero.stat3Number">100%</div>
+          <div class="stat-label" data-i18n="hero.stat3Text">Záruka tesnosti</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num" data-i18n="hero.stat4Number">0</div>
+          <div class="stat-label" data-i18n="hero.stat4Text">Skrytých poplatkov</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Trust Badges Ribbon
+       ========================================================================== -->
+  <section class="trust-badges-bar">
+    <div class="container">
+      <div class="badges-grid">
+        <div class="badge-box" data-i18n="badges.b1">🏔️ Odolnosť voči víchriciam a snehu</div>
+        <div class="badge-box" data-i18n="badges.b2">🔨 Remeselná precíznosť titánzinku</div>
+        <div class="badge-box" data-i18n="badges.b3">💧 Certifikované hydroizolácie</div>
+        <div class="badge-box" data-i18n="badges.b4">🤝 Pevná zmluvná cena</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Services Section
+       ========================================================================== -->
+  <section class="services-section" id="services">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge" data-i18n="services.sectionBadge">Naše Špecializácie</div>
+        <h2 class="section-title" data-i18n="services.sectionTitle">Kompletné strešné riešenia bez kompromisov</h2>
+        <p class="section-desc" data-i18n="services.sectionDesc">Od drevených krovov cez falcovaný plech až po moderné hydroizolácie plochých striech. Každý detail realizujeme s dôrazom na dlhovekosť.</p>
+      </div>
+
+      <div class="services-grid">
+        <!-- Service 1 -->
+        <div class="service-card">
+          <div class="service-icon-box">🏠</div>
+          <h3 class="service-title" data-i18n="services.s1Title">Šikmé strechy & Pokrývačstvo</h3>
+          <p class="service-desc" data-i18n="services.s1Desc">Montáž škridlových krytín (pálená a betónová škridla), plechových krytín a debnenia. Presná pokládka s vetracími pásmi a parozábranami.</p>
+          <ul class="service-bullets">
+            <li>Bramac, Tondach, Creaton</li>
+            <li>Kompletný krov a latovanie</li>
+            <li>Difúzne a poistné fólie</li>
+          </ul>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="service-card">
+          <div class="service-icon-box">⚡</div>
+          <h3 class="service-title" data-i18n="services.s2Title">Falcovaný plech & Titánzinok</h3>
+          <p class="service-desc" data-i18n="services.s2Desc">Špičkové klampiarske remeslo. Dvojitá stojatá drážka, titánzinkové plechy Rheinzink/VMZINC a hliník Prefa pre modernú architektúru aj horské domy.</p>
+          <ul class="service-bullets">
+            <li>Trvácnosť 80+ rokov bez údržby</li>
+            <li>Vhodné do extrémnych podmienok</li>
+            <li>Elegantný minimalistický dizajn</li>
+          </ul>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="service-card">
+          <div class="service-icon-box">🛡️</div>
+          <h3 class="service-title" data-i18n="services.s3Title">Ploché strechy & Hydroizolácie</h3>
+          <p class="service-desc" data-i18n="services.s3Desc">Profesionálna izolácia plochých striech PVC fóliami (Fatrafol, Bauder, Sika) a prémiovými SBS modifikovanými asfaltovými pásmi so zateplením.</p>
+          <ul class="service-bullets">
+            <li>Zváranie horúcim vzduchom</li>
+            <li>Hydroizolácie terás a balkónov</li>
+            <li>Základové dosky a spodná stavba</li>
+          </ul>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="service-card">
+          <div class="service-icon-box">🌲</div>
+          <h3 class="service-title" data-i18n="services.s4Title">Šindle pre drevenice & chaty</h3>
+          <p class="service-desc" data-i18n="services.s4Desc">Špeciálna montáž plastových šindľov Ekoternit / Capacco a asfaltových šindľov IKO/Katepal pre tradičné tatranské zruby a drevenice.</p>
+          <ul class="service-bullets">
+            <li>Vzhľad dreveného šindľa bez hniloby</li>
+            <li>Vysoká odolnosť voči mrazu a UV</li>
+            <li>Ideálne do horských oblastí</li>
+          </ul>
+        </div>
+
+        <!-- Service 5 -->
+        <div class="service-card">
+          <div class="service-icon-box">🔨</div>
+          <h3 class="service-title" data-i18n="services.s5Title">Zákazkové klampiarstvo & Komíny</h3>
+          <p class="service-desc" data-i18n="services.s5Desc">Vlastná klampiarska výroba detailov: lemovanie komínov, vetracie hlavice, atypické čiapky komínov, atiky, rímsy a úžľabia na milimeter presne.</p>
+          <ul class="service-bullets">
+            <li>Oplechovanie prestupov a komínov</li>
+            <li>Ručne tvarované čiapky komínov</li>
+            <li>Zákazková dielňa v regióne Poprad</li>
+          </ul>
+        </div>
+
+        <!-- Service 6 -->
+        <div class="service-card">
+          <div class="service-icon-box">💧</div>
+          <h3 class="service-title" data-i18n="services.s6Title">Odkvapy, snehové zábrany & Okná</h3>
+          <p class="service-desc" data-i18n="services.s6Desc">Kompletné odkvapové systémy z farebného hliníka, medi a titánzinku. Montáž masívnych rúrkových snehových zábran a strešných okien Velux/Roto.</p>
+          <ul class="service-bullets">
+            <li>Ochrana pred lavínovým snehom</li>
+            <li>Bezspojové a polkruhové žľaby</li>
+            <li>Strešné okná a svetlovody</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Interactive Roof Cost Calculator
+       ========================================================================== -->
+  <section class="calc-section" id="calculator">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge" data-i18n="calculator.badge">Orientačný kalkulátor nákladov</div>
+        <h2 class="section-title" data-i18n="calculator.title">Vypočítajte si orientačnú cenu novej strechy</h2>
+        <p class="section-desc" data-i18n="calculator.subtitle">Zvoľte parametre vašej stavby a získajte okamžitý nezáväzný odhad investície. Pre presnú cenovú ponuku s vami radi spravíme bezplatnú obhliadku.</p>
+      </div>
+
+      <div class="calc-wrapper">
+        <div class="calc-controls">
+          <!-- Step 1: Roof Type -->
+          <div class="calc-step-group">
+            <label class="calc-step-label" data-i18n="calculator.step1">1. Typ strechy</label>
+            <div class="calc-type-grid">
+              <div class="calc-type-card active" data-type="pitched">
+                <span class="calc-type-icon">🏠</span>
+                <span class="calc-type-text" data-i18n="calculator.roofPitched">Šikmá sedlová / pultová</span>
+              </div>
+              <div class="calc-type-card" data-type="hipped">
+                <span class="calc-type-icon">🏘️</span>
+                <span class="calc-type-text" data-i18n="calculator.roofHipped">Valbová / členitá</span>
+              </div>
+              <div class="calc-type-card" data-type="flat">
+                <span class="calc-type-icon">🏢</span>
+                <span class="calc-type-text" data-i18n="calculator.roofFlat">Plochá strecha</span>
+              </div>
+              <div class="calc-type-card" data-type="cottage">
+                <span class="calc-type-icon">🪵</span>
+                <span class="calc-type-text" data-i18n="calculator.roofCottage">Drevenica / zrub</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 2: Area Slider -->
+          <div class="calc-step-group">
+            <div class="calc-slider-header">
+              <label class="calc-step-label" data-i18n="calculator.step2">2. Rozloha strechy (m²)</label>
+              <span class="calc-area-badge" id="calcAreaValue">160 m²</span>
+            </div>
+            <div class="calc-slider-wrap">
+              <input type="range" min="50" max="450" step="5" value="160" class="range-slider" id="calcAreaSlider">
+            </div>
+          </div>
+
+          <!-- Step 3: Material -->
+          <div class="calc-step-group">
+            <label class="calc-step-label" data-i18n="calculator.step3">3. Preferovaná krytina / technológia</label>
+            <select class="calc-select" id="calcMaterialSelect">
+              <option value="tile" data-i18n="calculator.matTile">Pálená / Betónová škridla (Bramac/Tondach)</option>
+              <option value="titanzinc" data-i18n="calculator.matTitanzinc">Falcovaný titánzinok / hliník (Rheinzink/Prefa)</option>
+              <option value="shingle" data-i18n="calculator.matShingle">Plastový / Asfaltový šindeľ (Ekoternit/IKO)</option>
+              <option value="flatpvc" data-i18n="calculator.matFlatPVC">PVC hydroizolačná fólia (Fatrafol/Bauder)</option>
+              <option value="sheetmetal" data-i18n="calculator.matSheetMetal">Trapézový / škridloplech</option>
+            </select>
+          </div>
+
+          <!-- Step 4: Add-ons -->
+          <div class="calc-step-group">
+            <label class="calc-step-label" data-i18n="calculator.step4">4. Doplnkové práce a príslušenstvo</label>
+            <div class="calc-addons-grid">
+              <label class="calc-addon-label">
+                <input type="checkbox" class="calc-addon-input" data-addon="gutter" checked>
+                <span data-i18n="calculator.optGutter">Kompletný odkvapový systém (žľaby, zvody)</span>
+              </label>
+              <label class="calc-addon-label">
+                <input type="checkbox" class="calc-addon-input" data-addon="snow" checked>
+                <span data-i18n="calculator.optSnow">Systém snehových zábran do horských polôh</span>
+              </label>
+              <label class="calc-addon-label">
+                <input type="checkbox" class="calc-addon-input" data-addon="chimney">
+                <span data-i18n="calculator.optChimney">Oplechovanie komínov a umelecké čiapky</span>
+              </label>
+              <label class="calc-addon-label">
+                <input type="checkbox" class="calc-addon-input" data-addon="insulation">
+                <span data-i18n="calculator.optInsulation">Zateplenie PIR doskami / minerálnou vlnou</span>
+              </label>
+              <label class="calc-addon-label">
+                <input type="checkbox" class="calc-addon-input" data-addon="disposal">
+                <span data-i18n="calculator.optDisposal">Demontáž a ekologická likvidácia starej krytiny</span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Calculator Output -->
+        <div class="calc-result-card">
+          <div class="calc-result-header" data-i18n="calculator.resultTitle">Orientačný odhad investície:</div>
+          <div class="calc-price-display">
+            <span class="calc-price-num" id="calcPriceMin">9 800 €</span>
+            <span class="calc-price-divider">–</span>
+            <span class="calc-price-num" id="calcPriceMax">13 500 €</span>
+          </div>
+          <div class="calc-price-desc" data-i18n="calculator.priceRange">Odhad materiálu a montáže</div>
+
+          <div class="calc-summary-details" id="calcSummaryDetails">
+            160 m² • Pálená / Betónová škridla • Odkvapy, Snehové zábrany
+          </div>
+
+          <p class="calc-disclaimer" data-i18n="calculator.priceDisclaimer">
+            *Uvedená cena je orientačná vrátane štandardného montážneho materiálu a práce. Presná kalkulácia vzniká po bezplatnej obhliadke a zameraní.
+          </p>
+
+          <button class="btn-prefill" id="calcPrefillBtn" data-i18n="calculator.ctaPrefill">
+            Chcem nezáväznú cenovú ponuku s týmito parametrami ➔
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Portfolio Section (Real Instagram Photos)
+       ========================================================================== -->
+  <section class="portfolio-section" id="portfolio">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge" data-i18n="portfolio.badge">Fotogaléria zo stavieb</div>
+        <h2 class="section-title" data-i18n="portfolio.title">Skutočné realizácie z nášho Instagramu</h2>
+        <p class="section-desc" data-i18n="portfolio.subtitle">Pozrite si autentické fotografie z našich najnovších projektov v regióne Poprad, Spiš, Tatry, Levoča, Smižany a Prešov. Žiadne fotobanky, len poctivá práca.</p>
+      </div>
+
+      <!-- Filter tabs -->
+      <div class="gallery-tabs-wrap">
+        <button class="gallery-tab active" data-filter="all" data-i18n="portfolio.tabAll">Všetky projekty</button>
+        <button class="gallery-tab" data-filter="pitched" data-i18n="portfolio.tabPitched">Šikmé a škridly</button>
+        <button class="gallery-tab" data-filter="metal" data-i18n="portfolio.tabMetal">Titánzinok a falc</button>
+        <button class="gallery-tab" data-filter="shingle" data-i18n="portfolio.tabShingle">Šindle a drevenice</button>
+        <button class="gallery-tab" data-filter="tinsmith" data-i18n="portfolio.tabTinsmith">Klampiarstvo a komíny</button>
+      </div>
+
+      <!-- Gallery Grid -->
+      <div class="gallery-grid" id="galleryGrid">
+        <!-- Rendered via gallery.js -->
+      </div>
+
+      <!-- Instagram Callout Banner -->
+      <div class="ig-callout-banner">
+        <div class="ig-callout-content">
+          <img src="images/miro_medvec_avatar.jpg" alt="Miro Medvec Instagram" class="ig-avatar">
+          <div>
+            <h3 class="ig-callout-title" data-i18n="portfolio.viewOnIg">Sledujte nás na Instagrame @strechy_medo</h3>
+            <p class="ig-callout-desc" data-i18n="portfolio.igFollowers">54+ uverejnených prác a fotoreportáží z terénu</p>
+          </div>
+        </div>
+        <a href="https://www.instagram.com/strechy_medo/" target="_blank" rel="noopener noreferrer" class="btn-ig-follow">
+          <span>Otvoriť Instagram profil</span> ↗
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Interactive Before / After Comparison Slider
+       ========================================================================== -->
+  <section class="before-after-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge" data-i18n="beforeAfter.badge">Rozdiel, ktorý uvidíte aj po 30 rokoch</div>
+        <h2 class="section-title" data-i18n="beforeAfter.title">Od zatekajúcej havárie k dokonalej ochrane domova</h2>
+        <p class="section-desc" data-i18n="beforeAfter.desc">Staré zvetrané krytiny trpia mikrotrhlinami, prehnitým latovaním a nedostatočným odvetraním. Pozrite sa, ako vyzerá nová strecha od tímu Strechy Medo.</p>
+      </div>
+
+      <div class="ba-container" id="beforeAfterContainer">
+        <!-- After image (base) -->
+        <img src="images/project_01_levoca_1.jpg" alt="Po rekonštrukcii - Nová strecha" class="ba-img">
+        <div class="ba-badge-label ba-badge-after" data-i18n="beforeAfter.labelAfter">Nový prémiový strešný plášť</div>
+
+        <!-- Before image (clipped) -->
+        <div class="ba-before-wrap" id="beforeImgWrap">
+          <img src="images/project_20_poprad_velka_sindel_1.jpg" alt="Pred rekonštrukciou - Pôvodný stav" class="ba-img">
+          <div class="ba-badge-label ba-badge-before" data-i18n="beforeAfter.labelBefore">Pôvodný zvetraný stav</div>
+        </div>
+
+        <!-- Draggable Handle -->
+        <div class="ba-handle" id="beforeAfterHandle">
+          <div class="ba-handle-btn">⬌</div>
+        </div>
+      </div>
+      <p class="ba-slider-notice" data-i18n="beforeAfter.sliderNotice">Potiahnite posuvník doľava / doprava pre porovnanie</p>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       About Section & Master Craftsman Story
+       ========================================================================== -->
+  <section class="about-section" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-images-col">
+          <img src="images/project_15_smizany_1.jpg" alt="Miro Medvec - Strechy Medo práca na stavbe" class="about-main-img">
+          <div class="about-floating-card">
+            <img src="images/miro_medvec_avatar.jpg" alt="Miro Medvec" class="about-card-avatar">
+            <div>
+              <div class="about-card-title">Miro Medvec</div>
+              <div class="about-card-role">Zakladateľ & Majster klampiar</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-text-col">
+          <div class="section-badge" data-i18n="about.badge">O majstrovi a tíme</div>
+          <h2 class="section-title" data-i18n="about.title">Miro Medvec — Strechy postavené na rešpekte k remeslu</h2>
+          
+          <p class="section-desc" data-i18n="about.p1" style="margin-bottom: 1rem;">
+            Vyrastali sme v regióne pod Vysokými Tatrami, kde počasie neodpúšťa žiadne skratky. Víchrice, polmetrové snehové periny a jarné topenie preveria každé jedno úžľabie, spoj aj skrutku.
+          </p>
+          <p class="section-desc" data-i18n="about.p2">
+            Značka Strechy Medo (Miro Medvec) vznikla z vášne pre poctivé remeslo. Či už ide o historickú drevenicu v Lopušnej Doline, modernú vilu s falcovaným titánzinkom v Prešove, alebo rodinný dom v Levoči, pracujeme tak, ako by sme stavali pre vlastnú rodinu.
+          </p>
+
+          <div class="about-quote-box">
+            <p class="about-quote" data-i18n="about.quote">„Strecha nie je len krytina. Je to štít vášho domova. Preto na materiáloch a hydroizolácii nikdy nešetríme.“</p>
+            <span class="about-author" data-i18n="about.author">Miroslav Medvec, Zakladateľ & Majster klampiar</span>
+          </div>
+
+          <div class="about-features-list">
+            <div class="about-feat-item">
+              <div class="about-feat-icon">📍</div>
+              <div>
+                <h4 class="about-feat-title">Lokálny majster</h4>
+                <p class="about-feat-desc">Rýchla dostupnosť v regióne Poprad, Spiš, Tatry, Liptov a východné Slovensko.</p>
+              </div>
+            </div>
+            <div class="about-feat-item">
+              <div class="about-feat-icon">🏆</div>
+              <div>
+                <h4 class="about-feat-title">Špičkové materiály</h4>
+                <p class="about-feat-desc">Spolupracujeme výhradne s certifikovanými značkami: Rheinzink, Fatrafol, Bramac, Tondach, Ekoternit.</p>
+              </div>
+            </div>
+            <div class="about-feat-item">
+              <div class="about-feat-icon">⚙️</div>
+              <div>
+                <h4 class="about-feat-title">Vlastná klampiarska výroba</h4>
+                <p class="about-feat-desc">Atypické lemovania a čiapky komínov si vyrábame sami, na milimeter presne.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Workflow Section
+       ========================================================================== -->
+  <section class="workflow-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge" data-i18n="workflow.badge">Jednoduchý postup</div>
+        <h2 class="section-title" data-i18n="workflow.title">Ako prebieha spolupráca s nami?</h2>
+      </div>
+
+      <div class="workflow-grid">
+        <div class="workflow-card">
+          <div class="step-num">01</div>
+          <h3 class="step-title" data-i18n="workflow.step1Title">1. Bezplatná obhliadka</h3>
+          <p class="step-desc" data-i18n="workflow.step1Desc">Prídeme k vám, zameriame strechu, skontrolujeme krov a prekonzultujeme vaše predstavy a možnosti rozpočtu.</p>
+        </div>
+        <div class="workflow-card">
+          <div class="step-num">02</div>
+          <h3 class="step-title" data-i18n="workflow.step2Title">2. Presný položkový rozpočet</h3>
+          <p class="step-desc" data-i18n="workflow.step2Desc">Do 48 hodín od nás dostanete transparentnú kalkuláciu. Cena, ktorú podpíšeme v zmluve, platí bez skrytých poplatkov.</p>
+        </div>
+        <div class="workflow-card">
+          <div class="step-num">03</div>
+          <h3 class="step-title" data-i18n="workflow.step3Title">3. Rýchla a čistá montáž</h3>
+          <p class="step-desc" data-i18n="workflow.step3Desc">Zabezpečíme dovoz materiálu, bezpečnosť, precíznu pokládku a každý deň po sebe zanecháme upratané stavenisko.</p>
+        </div>
+        <div class="workflow-card">
+          <div class="step-num">04</div>
+          <h3 class="step-title" data-i18n="workflow.step4Title">4. Odovzdanie a záruka</h3>
+          <p class="step-desc" data-i18n="workflow.step4Desc">Spoločne skontrolujeme každý detail, odovzdáme záručné listy na materiál i prácu a poskytujeme dlhoročný servis.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Testimonials Section
+       ========================================================================== -->
+  <section class="testimonials-section" id="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge" data-i18n="testimonials.badge">Referencie od zákazníkov</div>
+        <h2 class="section-title" data-i18n="testimonials.title">Čo hovoria majitelia domov, ktorým sme zastrešili domov</h2>
+      </div>
+
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text" data-i18n="testimonials.t1Text">„Pán Medvec a jeho partia nám robili strechu na drevenici v Lopušnej Doline. Plastový šindeľ vyzerá úžasne, odolal tohtoročným víchriciam bez jediného zaváhania. Prístup, dochvíľnosť a poriadok na jednotku s hviezdičkou.“</p>
+          <div class="author-info">
+            <span class="author-name" data-i18n="testimonials.t1Author">Ing. Peter Kováč</span>
+            <span class="author-loc" data-i18n="testimonials.t1Loc">Lopušná Dolina, Vysoké Tatry</span>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text" data-i18n="testimonials.t2Text">„Mali sme veľký problém so zatekaním okolo komína a starých úžľabí na dome v Poprade-Veľkej. Miro prišiel, vyrobil na mieru novú čiapku komína a pretesnil celú plochu. Odvtedy ani kvapka. Odporúčam všetkými desiatimi.“</p>
+          <div class="author-info">
+            <span class="author-name" data-i18n="testimonials.t2Author">Marta Janigová</span>
+            <span class="author-loc" data-i18n="testimonials.t2Loc">Poprad - Veľká</span>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text" data-i18n="testimonials.t3Text">„Na novostavbe v Levoči sme chceli špičkové klampiarstvo a škridlu Tondach. Výsledok predčil očakávania. Detaily lemovaní a žľabov sú hotové umelecké dielo. Pevná cena bola dodržaná do posledného centu.“</p>
+          <div class="author-info">
+            <span class="author-name" data-i18n="testimonials.t3Author">Michal Rusnák</span>
+            <span class="author-loc" data-i18n="testimonials.t3Loc">Levoča</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FAQ Section
+       ========================================================================== -->
+  <section class="faq-section" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge" data-i18n="faq.badge">Odpovede na vaše otázky</div>
+        <h2 class="section-title" data-i18n="faq.title">Často kladené otázky</h2>
+      </div>
+
+      <div class="faq-wrapper">
+        <div class="faq-item active">
+          <div class="faq-question">
+            <span data-i18n="faq.q1">V akom regióne realizujete zákazky?</span>
+            <span class="faq-toggle-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            <p data-i18n="faq.a1">Našou domovskou základňou je Poprad a podtatranský región (Vysoké Tatry, Kežmarok, Spišská Nová Ves, Levoča, Stará Ľubovňa, Svit, Liptov). Pri zaujímavých alebo väčších zákazkách (titánzinkové falcované strechy, hydroizolácie) však pôsobíme po celom Slovensku.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span data-i18n="faq.q2">Koľko trvá priemerná rekonštrukcia rodinného domu?</span>
+            <span class="faq-toggle-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            <p data-i18n="faq.a2">Štandardná výmena krytiny s latovaním a klampiarstvom na bežnom rodinnom dome trvá 5 až 9 pracovných dní v závislosti od počasia a zložitosti tvaru strechy. Plochá strecha s PVC fóliou sa často zvládne za 2 až 4 dni.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span data-i18n="faq.q3">Čo je lepšie: falcovaný plech, škridla alebo plastový šindeľ?</span>
+            <span class="faq-toggle-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            <p data-i18n="faq.a3">Záleží na type stavby a sklone strechy. Pre moderné domy a nízke sklony je kráľom falcovaný titánzinok alebo hliník. Pre klasické rodinné domy so sklonom nad 22° je ideálna pálená/betónová škridla. Pre zruby a drevenice v horských polohách jednoznačne odporúčame bezúdržbový plastový šindeľ Ekoternit.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span data-i18n="faq.q4">Robíte aj havarijné opravy a pretesňovanie zatekajúcich striech?</span>
+            <span class="faq-toggle-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            <p data-i18n="faq.a4">Áno! Vykonávame diagnostiku zatekania, opravy poškodených škridiel po krupobití, pretesnenie prestupov, výmenu zhnitých častí debnenia a montáž nových komínových lemovaní.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span data-i18n="faq.q5">Poskytujete záruku na vykonané práce?</span>
+            <span class="faq-toggle-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            <p data-i18n="faq.a5">Samozrejme. Na samotnú montáž poskytujeme zmluvnú záruku 5 až 10 rokov. Výrobcovia nami dodávaných krytín (Bramac, Tondach, Rheinzink, Ekoternit) navyše poskytujú materiálovú záruku 30 až 50 rokov.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Contact & Inquiry Section
+       ========================================================================== -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge" data-i18n="contact.badge">Začnite konzultáciou</div>
+        <h2 class="section-title" data-i18n="contact.title">Získajte bezplatnú obhliadku a cenovú ponuku</h2>
+        <p class="section-desc" data-i18n="contact.subtitle">Ozvite sa nám telefonicky, cez WhatsApp, správou na Instagrame alebo vyplňte formulár nižšie. Odpovedáme obratom.</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info-col">
+          <!-- Phone -->
+          <div class="contact-card">
+            <div class="contact-icon-box">📞</div>
+            <div>
+              <div class="contact-card-label" data-i18n="contact.phoneLabel">Telefón (priamy kontakt):</div>
+              <div class="contact-card-val"><a href="tel:+421905226930">+421 905 226 930</a></div>
+            </div>
+          </div>
+
+          <!-- Email -->
+          <div class="contact-card">
+            <div class="contact-icon-box">✉️</div>
+            <div>
+              <div class="contact-card-label" data-i18n="contact.emailLabel">E-mail:</div>
+              <div class="contact-card-val"><a href="mailto:strechymedo@gmail.com">strechymedo@gmail.com</a></div>
+            </div>
+          </div>
+
+          <!-- Instagram -->
+          <div class="contact-card">
+            <div class="contact-icon-box">📷</div>
+            <div>
+              <div class="contact-card-label" data-i18n="contact.igLabel">Instagram profil:</div>
+              <div class="contact-card-val"><a href="https://www.instagram.com/strechy_medo/" target="_blank" rel="noopener noreferrer">@strechy_medo</a></div>
+            </div>
+          </div>
+
+          <!-- Location -->
+          <div class="contact-card">
+            <div class="contact-icon-box">📍</div>
+            <div>
+              <div class="contact-card-label" data-i18n="contact.locLabel">Sídlo a dielňa:</div>
+              <div class="contact-card-val" data-i18n="contact.locVal">Poprad & Spišský región, Slovensko</div>
+            </div>
+          </div>
+
+          <!-- Working hours -->
+          <div class="contact-card">
+            <div class="contact-icon-box">🕒</div>
+            <div>
+              <div class="contact-card-label" data-i18n="contact.hoursLabel">Pracovná doba:</div>
+              <div class="contact-card-val" data-i18n="contact.hoursVal">Po – So: 7:00 – 18:00 (Havarijné stavy nonstop)</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Form Wrap -->
+        <div class="contact-form-wrap">
+          <h3 class="form-title" data-i18n="contact.formTitle">Kontaktný & Popytový formulár</h3>
+
+          <div class="form-success-alert" id="formSuccessMsg">
+            <div class="form-success-title" data-i18n="contact.formSuccessTitle">Ďakujeme! Vaša správa bola úspešne odoslaná.</div>
+            <div class="form-success-desc" data-i18n="contact.formSuccessDesc">Pán Miro Medvec sa vám ozve v priebehu 24 hodín s návrhom obhliadky.</div>
+          </div>
+
+          <form id="contactForm">
+            <div class="form-grid">
+              <div class="form-group">
+                <label class="form-label" data-i18n="contact.formName">Meno a priezvisko *</label>
+                <input type="text" class="form-input" id="contactName" required placeholder="Ján Novák">
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" data-i18n="contact.formPhone">Telefónne číslo *</label>
+                <input type="tel" class="form-input" id="contactPhone" required placeholder="+421 905 ...">
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" data-i18n="contact.formEmail">Váš E-mail *</label>
+                <input type="email" class="form-input" id="contactEmail" required placeholder="jan.novak@gmail.com">
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" data-i18n="contact.formLocation">Mesto / Lokalita stavby *</label>
+                <input type="text" class="form-input" id="contactLocation" required placeholder="napr. Poprad, Levoča, Tatry">
+              </div>
+
+              <div class="form-group full-width">
+                <label class="form-label" data-i18n="contact.formService">Druh požadovanej služby</label>
+                <select class="form-select" id="contactService">
+                  <option value="" data-i18n="contact.formServicePlaceholder">-- Vyberte službu --</option>
+                  <option value="serviceOption1" data-i18n="contact.serviceOption1">Nová šikmá strecha (škridla / plech)</option>
+                  <option value="serviceOption2" data-i18n="contact.serviceOption2">Falcovaný titánzinok / hliník</option>
+                  <option value="serviceOption3" data-i18n="contact.serviceOption3">Plochá strecha & Hydroizolácia fóliou</option>
+                  <option value="serviceOption4" data-i18n="contact.serviceOption4">Drevenica / chata (plastový šindeľ)</option>
+                  <option value="serviceOption5" data-i18n="contact.serviceOption5">Klampiarstvo / Oplechovanie komína</option>
+                  <option value="serviceOption6" data-i18n="contact.serviceOption6">Rekonštrukcia / Oprava zatekania</option>
+                </select>
+              </div>
+
+              <div class="form-group full-width">
+                <label class="form-label" data-i18n="contact.formMessage">Popis projektu, približná rozloha alebo otázka...</label>
+                <textarea class="form-textarea" id="contactMessage" placeholder="Dobrý deň, potrebujem cenovú ponuku na rekonštrukciu strechy rodinného domu..."></textarea>
+              </div>
+            </div>
+
+            <button type="submit" class="btn-form-submit" data-i18n="contact.formSubmit">
+              Odoslať nezáväzný dopyt ➔
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Site Footer
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="#hero" class="brand-wrap">
+            <img src="favicon.svg" alt="Strechy Medo Logo" class="brand-logo-img">
+            <div class="brand-text-wrap">
+              <span class="brand-name">STRECHY <span>MEDO</span></span>
+              <span class="brand-sub">Miro Medvec • Strechy & Klampiarstvo</span>
+            </div>
+          </a>
+          <p class="footer-brand-tag" data-i18n="footer.tagline">
+            Prvotriedne strechy, falcované plechy a precízne hydroizolácie pre Tatry, Spiš a celé Slovensko.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-title" data-i18n="footer.quickLinks">Rýchla navigácia</h4>
+          <ul class="footer-links">
+            <li><a href="#services" data-i18n="nav.services">Služby</a></li>
+            <li><a href="#portfolio" data-i18n="nav.portfolio">Realizácie</a></li>
+            <li><a href="#calculator" data-i18n="nav.calculator">Kalkulačka</a></li>
+            <li><a href="#about" data-i18n="nav.about">O nás</a></li>
+            <li><a href="#faq" data-i18n="nav.faq">FAQ</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title" data-i18n="footer.servicesTitle">Naše služby</h4>
+          <ul class="footer-links">
+            <li><a href="#services" data-i18n="services.s1Title">Šikmé strechy & Pokrývačstvo</a></li>
+            <li><a href="#services" data-i18n="services.s2Title">Falcovaný plech & Titánzinok</a></li>
+            <li><a href="#services" data-i18n="services.s3Title">Ploché strechy & Hydroizolácie</a></li>
+            <li><a href="#services" data-i18n="services.s4Title">Šindle pre drevenice & chaty</a></li>
+            <li><a href="#services" data-i18n="services.s5Title">Zákazkové klampiarstvo & Komíny</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title" data-i18n="footer.contactTitle">Kontaktujte nás</h4>
+          <ul class="footer-links">
+            <li><a href="tel:+421905226930">📞 +421 905 226 930</a></li>
+            <li><a href="mailto:strechymedo@gmail.com">✉️ strechymedo@gmail.com</a></li>
+            <li><a href="https://www.instagram.com/strechy_medo/" target="_blank" rel="noopener noreferrer">📷 Instagram @strechy_medo</a></li>
+            <li>📍 Poprad, Vysoké Tatry, Slovensko</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © 2026 Strechy Medo (Miroslav Medvec). <span data-i18n="footer.rights">Všetky práva vyhradené.</span>
+        </div>
+        <div data-i18n="footer.designedWith">
+          Redizajn s autentickými fotografiami z Instagramu @strechy_medo.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       Lightbox Modal
+       ========================================================================== -->
+  <div class="lightbox-modal" id="lightboxModal">
+    <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
+    <div class="lightbox-content-box">
+      <div class="lightbox-header">
+        <h3 class="lightbox-title" id="lightboxTitle">Projekt</h3>
+        <button class="lightbox-close" id="lightboxClose" aria-label="Close">✕</button>
+      </div>
+
+      <div class="lightbox-stage">
+        <button class="lightbox-nav-btn lightbox-prev" id="lightboxPrev" aria-label="Previous">‹</button>
+        <img src="" alt="" class="lightbox-img" id="lightboxImage">
+        <button class="lightbox-nav-btn lightbox-next" id="lightboxNext" aria-label="Next">›</button>
+      </div>
+
+      <div class="lightbox-footer">
+        <div class="lightbox-info-row">
+          <span class="lightbox-location" id="lightboxLocation">📍 Lokalita</span>
+          <span class="lightbox-counter" id="lightboxCounter">1 / 1</span>
+        </div>
+        <p class="lightbox-desc" id="lightboxDesc">Popis projektu</p>
+        <div class="lightbox-thumbs-strip" id="lightboxThumbs"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Back to top button -->
+  <button class="back-to-top" id="backToTopBtn" aria-label="Back to top">↑</button>
+
+  <!-- Scripts -->
+  <script src="js/translations.js"></script>
+  <script src="js/gallery.js"></script>
+  <script src="js/calculator.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

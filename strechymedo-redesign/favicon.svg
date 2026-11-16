@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="roofGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f97316"/>
+      <stop offset="100%" stop-color="#c2410c"/>
+    </linearGradient>
+    <linearGradient id="metalGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+  </defs>
+  <!-- Background badge -->
+  <rect width="64" height="64" rx="16" fill="#0f172a"/>
+  <!-- Tatra Mountain peak background subtle -->
+  <polygon points="12,48 32,22 52,48" fill="#1e293b" opacity="0.6"/>
+  <!-- Standing Seam Main Roof Peak -->
+  <polygon points="32,10 56,36 49,41 32,22 15,41 8,36" fill="url(#roofGrad)"/>
+  <!-- Chimney / Tinsmith detail -->
+  <rect x="42" y="16" width="6" height="12" rx="1" fill="#94a3b8"/>
+  <rect x="40" y="14" width="10" height="3" rx="1" fill="#f97316"/>
+  <!-- Roof lower deck & seam lines -->
+  <polygon points="32,26 50,44 47,47 32,32 17,47 14,44" fill="#fdba74" opacity="0.9"/>
+  <!-- Water drop / Hydro seal -->
+  <circle cx="32" cy="46" r="3.5" fill="url(#metalGrad)"/>
+</svg>

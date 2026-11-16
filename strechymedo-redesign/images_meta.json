@@ -1,0 +1,524 @@
+[
+  {
+    "index": 1,
+    "filename": "project_01_levoca_1.jpg",
+    "width": 4032,
+    "height": 3024,
+    "caption": "Rodinný dom Levoča",
+    "group": "levoca",
+    "sizeKb": 947
+  },
+  {
+    "index": 2,
+    "filename": "project_02_levoca_2.jpg",
+    "width": 4032,
+    "height": 3024,
+    "caption": "",
+    "group": "levoca",
+    "sizeKb": 1031
+  },
+  {
+    "index": 3,
+    "filename": "project_03_levoca_3.jpg",
+    "width": 3024,
+    "height": 2268,
+    "caption": "",
+    "group": "levoca",
+    "sizeKb": 431
+  },
+  {
+    "index": 4,
+    "filename": "project_04_horka_primovce_1.jpg",
+    "width": 1950,
+    "height": 1950,
+    "caption": "Hôrka Primovce",
+    "group": "horka_primovce",
+    "sizeKb": 364
+  },
+  {
+    "index": 5,
+    "filename": "project_05_horka_primovce_2.jpg",
+    "width": 3024,
+    "height": 3024,
+    "caption": "",
+    "group": "horka_primovce",
+    "sizeKb": 1468
+  },
+  {
+    "index": 6,
+    "filename": "project_06_horka_primovce_3.jpg",
+    "width": 3024,
+    "height": 3024,
+    "caption": "",
+    "group": "horka_primovce",
+    "sizeKb": 1292
+  },
+  {
+    "index": 7,
+    "filename": "project_07_horka_primovce_4.jpg",
+    "width": 3024,
+    "height": 3024,
+    "caption": "",
+    "group": "horka_primovce",
+    "sizeKb": 1181
+  },
+  {
+    "index": 8,
+    "filename": "project_08_horka_primovce_5.jpg",
+    "width": 4032,
+    "height": 3024,
+    "caption": "",
+    "group": "horka_primovce",
+    "sizeKb": 1084
+  },
+  {
+    "index": 9,
+    "filename": "project_09_poprad_velka_sindel_1.jpg",
+    "width": 3024,
+    "height": 4032,
+    "caption": "Rodinný dom Poprad Veľká asvaltovy šindeľ",
+    "group": "poprad_velka_sindel",
+    "sizeKb": 2294
+  },
+  {
+    "index": 10,
+    "filename": "project_10_poprad_velka_sindel_2.jpg",
+    "width": 3091,
+    "height": 4096,
+    "caption": "",
+    "group": "poprad_velka_sindel",
+    "sizeKb": 1528
+  },
+  {
+    "index": 11,
+    "filename": "project_11_poprad_velka_sindel_3.jpg",
+    "width": 3091,
+    "height": 4096,
+    "caption": "",
+    "group": "poprad_velka_sindel",
+    "sizeKb": 2234
+  },
+  {
+    "index": 12,
+    "filename": "project_12_poprad_velka_sindel_4.jpg",
+    "width": 3024,
+    "height": 4032,
+    "caption": "",
+    "group": "poprad_velka_sindel",
+    "sizeKb": 2966
+  },
+  {
+    "index": 13,
+    "filename": "project_13_poprad_velka_sindel_5.jpg",
+    "width": 3024,
+    "height": 4032,
+    "caption": "",
+    "group": "poprad_velka_sindel",
+    "sizeKb": 1870
+  },
+  {
+    "index": 14,
+    "filename": "project_14_poprad_velka_sindel_6.jpg",
+    "width": 3091,
+    "height": 4096,
+    "caption": "",
+    "group": "poprad_velka_sindel",
+    "sizeKb": 1853
+  },
+  {
+    "index": 15,
+    "filename": "project_15_smizany_1.jpg",
+    "width": 3024,
+    "height": 2268,
+    "caption": "Rodinný dom Smižany",
+    "group": "smizany",
+    "sizeKb": 412
+  },
+  {
+    "index": 16,
+    "filename": "project_16_smizany_2.jpg",
+    "width": 3024,
+    "height": 2268,
+    "caption": "",
+    "group": "smizany",
+    "sizeKb": 1051
+  },
+  {
+    "index": 17,
+    "filename": "project_17_smizany_3.jpg",
+    "width": 3024,
+    "height": 2282,
+    "caption": "",
+    "group": "smizany",
+    "sizeKb": 335
+  },
+  {
+    "index": 18,
+    "filename": "project_18_smizany_4.jpg",
+    "width": 3024,
+    "height": 2282,
+    "caption": "",
+    "group": "smizany",
+    "sizeKb": 739
+  },
+  {
+    "index": 19,
+    "filename": "project_19_smizany_5.jpg",
+    "width": 3024,
+    "height": 2282,
+    "caption": "",
+    "group": "smizany",
+    "sizeKb": 578
+  },
+  {
+    "index": 20,
+    "filename": "project_20_poprad_velka_sindel_1.jpg",
+    "width": 3024,
+    "height": 2268,
+    "caption": "Rodinný dom Poprad Veľká",
+    "group": "poprad_velka_sindel",
+    "sizeKb": 405
+  },
+  {
+    "index": 21,
+    "filename": "project_21_poprad_velka_sindel_2.jpg",
+    "width": 3024,
+    "height": 2268,
+    "caption": "",
+    "group": "poprad_velka_sindel",
+    "sizeKb": 524
+  },
+  {
+    "index": 22,
+    "filename": "project_22_poprad_velka_sindel_3.jpg",
+    "width": 3024,
+    "height": 2268,
+    "caption": "",
+    "group": "poprad_velka_sindel",
+    "sizeKb": 561
+  },
+  {
+    "index": 23,
+    "filename": "project_23_poprad_velka_sindel_4.jpg",
+    "width": 3024,
+    "height": 2282,
+    "caption": "",
+    "group": "poprad_velka_sindel",
+    "sizeKb": 385
+  },
+  {
+    "index": 24,
+    "filename": "project_24_poprad_velka_sindel_5.jpg",
+    "width": 3024,
+    "height": 2268,
+    "caption": "",
+    "group": "poprad_velka_sindel",
+    "sizeKb": 508
+  },
+  {
+    "index": 25,
+    "filename": "project_25_spisske_bystre_1.jpg",
+    "width": 1440,
+    "height": 1920,
+    "caption": "Strecha Spišské Bistre",
+    "group": "spisske_bystre",
+    "sizeKb": 327
+  },
+  {
+    "index": 26,
+    "filename": "project_26_spisske_bystre_2.jpg",
+    "width": 1440,
+    "height": 1920,
+    "caption": "",
+    "group": "spisske_bystre",
+    "sizeKb": 394
+  },
+  {
+    "index": 27,
+    "filename": "project_27_spisske_bystre_3.jpg",
+    "width": 1440,
+    "height": 1920,
+    "caption": "",
+    "group": "spisske_bystre",
+    "sizeKb": 391
+  },
+  {
+    "index": 28,
+    "filename": "project_28_spisske_bystre_4.jpg",
+    "width": 1440,
+    "height": 1920,
+    "caption": "",
+    "group": "spisske_bystre",
+    "sizeKb": 405
+  },
+  {
+    "index": 29,
+    "filename": "project_29_spisske_bystre_5.jpg",
+    "width": 1440,
+    "height": 1920,
+    "caption": "",
+    "group": "spisske_bystre",
+    "sizeKb": 136
+  },
+  {
+    "index": 30,
+    "filename": "project_30_spisske_bystre_6.jpg",
+    "width": 1440,
+    "height": 1920,
+    "caption": "",
+    "group": "spisske_bystre",
+    "sizeKb": 131
+  },
+  {
+    "index": 31,
+    "filename": "project_31_spisske_bystre_7.jpg",
+    "width": 1440,
+    "height": 1920,
+    "caption": "",
+    "group": "spisske_bystre",
+    "sizeKb": 158
+  },
+  {
+    "index": 32,
+    "filename": "project_32_spisske_bystre_8.jpg",
+    "width": 1440,
+    "height": 1920,
+    "caption": "",
+    "group": "spisske_bystre",
+    "sizeKb": 406
+  },
+  {
+    "index": 33,
+    "filename": "project_33_spisske_bystre_9.jpg",
+    "width": 1440,
+    "height": 1920,
+    "caption": "",
+    "group": "spisske_bystre",
+    "sizeKb": 341
+  },
+  {
+    "index": 34,
+    "filename": "project_34_lopusna_dolina_1.jpg",
+    "width": 1440,
+    "height": 1080,
+    "caption": "Drevenica Lopušna Dolina  plastový šindeľ",
+    "group": "lopusna_dolina",
+    "sizeKb": 200
+  },
+  {
+    "index": 35,
+    "filename": "project_35_lopusna_dolina_2.jpg",
+    "width": 1440,
+    "height": 1080,
+    "caption": "",
+    "group": "lopusna_dolina",
+    "sizeKb": 286
+  },
+  {
+    "index": 36,
+    "filename": "project_36_lopusna_dolina_3.jpg",
+    "width": 1440,
+    "height": 1080,
+    "caption": "",
+    "group": "lopusna_dolina",
+    "sizeKb": 327
+  },
+  {
+    "index": 37,
+    "filename": "project_37_lopusna_dolina_4.jpg",
+    "width": 1440,
+    "height": 1086,
+    "caption": "",
+    "group": "lopusna_dolina",
+    "sizeKb": 434
+  },
+  {
+    "index": 38,
+    "filename": "project_38_lopusna_dolina_5.jpg",
+    "width": 1440,
+    "height": 1086,
+    "caption": "",
+    "group": "lopusna_dolina",
+    "sizeKb": 335
+  },
+  {
+    "index": 39,
+    "filename": "project_39_lopusna_dolina_6.jpg",
+    "width": 1440,
+    "height": 1080,
+    "caption": "",
+    "group": "lopusna_dolina",
+    "sizeKb": 290
+  },
+  {
+    "index": 40,
+    "filename": "project_40_lopusna_dolina_7.jpg",
+    "width": 1440,
+    "height": 1080,
+    "caption": "",
+    "group": "lopusna_dolina",
+    "sizeKb": 388
+  },
+  {
+    "index": 41,
+    "filename": "project_41_lopusna_dolina_8.jpg",
+    "width": 1440,
+    "height": 1080,
+    "caption": "",
+    "group": "lopusna_dolina",
+    "sizeKb": 436
+  },
+  {
+    "index": 42,
+    "filename": "project_42_svit_podskalka_1.jpg",
+    "width": 1440,
+    "height": 1080,
+    "caption": "Rodinný dom Svit Podskalka",
+    "group": "svit_podskalka",
+    "sizeKb": 122
+  },
+  {
+    "index": 43,
+    "filename": "project_43_svit_podskalka_2.jpg",
+    "width": 1440,
+    "height": 1080,
+    "caption": "",
+    "group": "svit_podskalka",
+    "sizeKb": 267
+  },
+  {
+    "index": 44,
+    "filename": "project_44_svit_podskalka_3.jpg",
+    "width": 1440,
+    "height": 1080,
+    "caption": "",
+    "group": "svit_podskalka",
+    "sizeKb": 203
+  },
+  {
+    "index": 45,
+    "filename": "project_45_svit_podskalka_4.jpg",
+    "width": 1440,
+    "height": 1086,
+    "caption": "",
+    "group": "svit_podskalka",
+    "sizeKb": 308
+  },
+  {
+    "index": 46,
+    "filename": "project_46_ciapka_komina_1.jpg",
+    "width": 1440,
+    "height": 1920,
+    "caption": "Čiapka komína",
+    "group": "ciapka_komina",
+    "sizeKb": 321
+  },
+  {
+    "index": 47,
+    "filename": "project_47_ciapka_komina_2.jpg",
+    "width": 1440,
+    "height": 1080,
+    "caption": "",
+    "group": "ciapka_komina",
+    "sizeKb": 203
+  },
+  {
+    "index": 48,
+    "filename": "project_48_norwit_poprad_1.jpg",
+    "width": 1440,
+    "height": 1920,
+    "caption": "Firma Norwit Poprad odvetrania strechy materiál titanzinok",
+    "group": "norwit_poprad",
+    "sizeKb": 344
+  },
+  {
+    "index": 49,
+    "filename": "project_49_norwit_poprad_2.jpg",
+    "width": 1440,
+    "height": 1920,
+    "caption": "",
+    "group": "norwit_poprad",
+    "sizeKb": 339
+  },
+  {
+    "index": 50,
+    "filename": "project_50_norwit_poprad_3.jpg",
+    "width": 1440,
+    "height": 1920,
+    "caption": "",
+    "group": "norwit_poprad",
+    "sizeKb": 312
+  },
+  {
+    "index": 51,
+    "filename": "project_51_norwit_poprad_4.jpg",
+    "width": 1440,
+    "height": 1920,
+    "caption": "",
+    "group": "norwit_poprad",
+    "sizeKb": 353
+  },
+  {
+    "index": 52,
+    "filename": "project_52_norwit_poprad_5.jpg",
+    "width": 1440,
+    "height": 1920,
+    "caption": "",
+    "group": "norwit_poprad",
+    "sizeKb": 312
+  },
+  {
+    "index": 53,
+    "filename": "project_53_norwit_poprad_6.jpg",
+    "width": 1440,
+    "height": 1920,
+    "caption": "",
+    "group": "norwit_poprad",
+    "sizeKb": 254
+  },
+  {
+    "index": 54,
+    "filename": "project_54_presov_titanzinok_1.jpg",
+    "width": 1440,
+    "height": 1080,
+    "caption": "Rodinný dom Prešov prace pre firmu Kuzmastrechy  Krytina titánzinok",
+    "group": "presov_titanzinok",
+    "sizeKb": 213
+  },
+  {
+    "index": 55,
+    "filename": "project_55_presov_titanzinok_2.jpg",
+    "width": 1440,
+    "height": 1080,
+    "caption": "",
+    "group": "presov_titanzinok",
+    "sizeKb": 104
+  },
+  {
+    "index": 56,
+    "filename": "project_56_presov_titanzinok_3.jpg",
+    "width": 1440,
+    "height": 1080,
+    "caption": "",
+    "group": "presov_titanzinok",
+    "sizeKb": 103
+  },
+  {
+    "index": 57,
+    "filename": "project_57_presov_titanzinok_4.jpg",
+    "width": 1440,
+    "height": 1080,
+    "caption": "",
+    "group": "presov_titanzinok",
+    "sizeKb": 74
+  },
+  {
+    "index": 58,
+    "filename": "project_58_presov_titanzinok_5.jpg",
+    "width": 1440,
+    "height": 1080,
+    "caption": "",
+    "group": "presov_titanzinok",
+    "sizeKb": 162
+  }
+]
