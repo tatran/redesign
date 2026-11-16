@@ -48,13 +48,42 @@
       </nav>
 
       <div class="nav-actions">
-        <!-- Language Switcher -->
-        <div class="lang-selector">
-          <button class="lang-btn active" data-lang="sk" onclick="setLanguage('sk')">SK</button>
-          <button class="lang-btn" data-lang="en" onclick="setLanguage('en')">EN</button>
-          <button class="lang-btn" data-lang="de" onclick="setLanguage('de')">DE</button>
-          <button class="lang-btn" data-lang="pl" onclick="setLanguage('pl')">PL</button>
-          <button class="lang-btn" data-lang="hu" onclick="setLanguage('hu')">HU</button>
+        <!-- Language Dropdown to save space -->
+        <div class="lang-dropdown-wrap" id="langDropdownWrap">
+          <button class="lang-dropdown-btn" id="langDropdownBtn" type="button" aria-expanded="false" aria-label="Select Language">
+            <span class="lang-current-flag" id="langCurrentFlag">🇸🇰</span>
+            <span class="lang-current-code" id="langCurrentCode">SK</span>
+            <svg class="lang-chevron" width="12" height="12" viewBox="0 0 12 12" fill="none">
+              <path d="M2.5 4.5L6 8L9.5 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <div class="lang-dropdown-menu" id="langDropdownMenu">
+            <button class="lang-option active" data-lang="sk" onclick="setLanguage('sk')">
+              <span class="lang-opt-flag">🇸🇰</span>
+              <span class="lang-opt-name">Slovenčina</span>
+              <span class="lang-opt-code">SK</span>
+            </button>
+            <button class="lang-option" data-lang="en" onclick="setLanguage('en')">
+              <span class="lang-opt-flag">🇬🇧</span>
+              <span class="lang-opt-name">English</span>
+              <span class="lang-opt-code">EN</span>
+            </button>
+            <button class="lang-option" data-lang="de" onclick="setLanguage('de')">
+              <span class="lang-opt-flag">🇩🇪</span>
+              <span class="lang-opt-name">Deutsch</span>
+              <span class="lang-opt-code">DE</span>
+            </button>
+            <button class="lang-option" data-lang="pl" onclick="setLanguage('pl')">
+              <span class="lang-opt-flag">🇵🇱</span>
+              <span class="lang-opt-name">Polski</span>
+              <span class="lang-opt-code">PL</span>
+            </button>
+            <button class="lang-option" data-lang="hu" onclick="setLanguage('hu')">
+              <span class="lang-opt-flag">🇭🇺</span>
+              <span class="lang-opt-name">Magyar</span>
+              <span class="lang-opt-code">HU</span>
+            </button>
+          </div>
         </div>
 
         <a href="#contact" class="btn-header-quote" data-i18n="nav.freeQuote">

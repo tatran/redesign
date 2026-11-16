@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 2. Initialize modules
   initLanguage(currentActiveLang);
+  initLanguageDropdown();
   initNavigation();
   initHeroPictureSwitcher();
   initBeforeAfterSlider();
@@ -29,6 +30,14 @@ document.addEventListener('DOMContentLoaded', () => {
   if (window.initCalculator) window.initCalculator();
   if (window.initGallery) window.initGallery(currentActiveLang);
 });
+
+const langFlags = {
+  sk: '🇸🇰',
+  en: '🇬🇧',
+  de: '🇩🇪',
+  pl: '🇵🇱',
+  hu: '🇭🇺'
+};
 
 /**
  * Language Switcher
@@ -43,6 +52,10 @@ function setLanguage(lang) {
   initLanguage(lang);
   if (window.initGallery) window.initGallery(lang);
   if (window.updateCalculation) window.updateCalculation();
+
+  // Close dropdown menu if open
+  const wrap = document.getElementById('langDropdownWrap');
+  if (wrap) wrap.classList.remove('open');
 }
 window.setLanguage = setLanguage;
 
@@ -78,9 +91,52 @@ function initLanguage(lang) {
     }
   });
 
-  // Update language switcher active buttons
+  // Update dropdown button label and flag
+  const currentFlag = document.getElementById('langCurrentFlag');
+  const currentCode = document.getElementById('langCurrentCode');
+  if (currentFlag) currentFlag.textContent = langFlags[lang] || '🌐';
+  if (currentCode) currentCode.textContent = lang.toUpperCase();
+
+  // Update dropdown options active state
+  document.querySelectorAll('.lang-option').forEach(opt => {
+    opt.classList.toggle('active', opt.getAttribute('data-lang') === lang);
+  });
+
+  // Fallback for any legacy buttons
   document.querySelectorAll('.lang-btn').forEach(btn => {
     btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+  });
+}
+
+/**
+ * Compact Language Dropdown Toggle
+ */
+function initLanguageDropdown() {
+  const wrap = document.getElementById('langDropdownWrap');
+  const btn = document.getElementById('langDropdownBtn');
+  if (!wrap || !btn) return;
+
+  btn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const isOpen = wrap.classList.toggle('open');
+    btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  });
+
+  // Close when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!wrap.contains(e.target)) {
+      wrap.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  // Close on Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && wrap.classList.contains('open')) {
+      wrap.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
+      btn.focus();
+    }
   });
 }
 
