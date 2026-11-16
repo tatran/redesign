@@ -388,7 +388,7 @@ h3 { font-size: 1.4rem; letter-spacing: -.04em; }
   border-bottom: 0;
   border-radius: 8px 8px 0 0;
 }
-.service p, .coverage__copy > p:last-child, .contact .section__heading > p:last-child, .contact__card p {
+.service p, .coverage__intro, .contact .section__heading > p:last-child, .contact__card p {
   margin-top: .75rem;
   color: var(--muted);
 }
@@ -420,16 +420,22 @@ h3 { font-size: 1.4rem; letter-spacing: -.04em; }
 
 .coverage {
   display: grid;
-  align-items: center;
-  grid-template-columns: 1.05fr 1fr;
-  gap: clamp(24px, 6vw, 92px);
+  grid-template-areas: "intro map" "list map";
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+  gap: 1.4rem clamp(24px, 4vw, 60px);
   padding: clamp(25px, 5vw, 72px);
   border: 1px solid var(--line);
   border-radius: 17px;
   background: var(--raised);
 }
-.coverage__copy p:last-child { max-width: 39ch; }
+.coverage__copy {
+  grid-area: intro;
+  align-self: end;
+}
+.coverage__intro { max-width: 39ch; }
 .coverage__list {
+  grid-area: list;
+  align-self: start;
   padding: 0;
   list-style: none;
   border-top: 1px solid var(--line);
@@ -450,6 +456,130 @@ h3 { font-size: 1.4rem; letter-spacing: -.04em; }
   transform: translateY(-2px) rotate(-45deg);
   border: 1px solid var(--accent);
   border-radius: 50% 50% 50% 1px;
+}
+
+.coverage-map {
+  grid-area: map;
+  align-self: center;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--surface);
+}
+.coverage-map__map {
+  --map-grid: light-dark(#344b5b13, #adc3d014);
+  --map-ink: light-dark(#4b5c66, #b3c4d0);
+  --map-water: light-dark(#9bb9cb, #3e617c);
+  --map-label: light-dark(#fffdfaeb, #14212def);
+  position: relative;
+  isolation: isolate;
+  aspect-ratio: 1200 / 1030;
+  overflow: hidden;
+  border-radius: 11px 11px 0 0;
+  border-bottom: 1px solid var(--line);
+  background-color: light-dark(#e9e9df, #101923);
+  background-image: linear-gradient(var(--map-grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--map-grid) 1px, transparent 1px);
+  background-size: 14% 16.31%;
+  background-position: center;
+}
+.coverage-map__map::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: var(--map-water);
+  mask: url("assets/okanagan-lakes.png") center / 100% 100% no-repeat;
+}
+.coverage-map__north, .coverage-map__lake, .coverage-map__scale {
+  position: absolute;
+  color: var(--map-ink);
+  font-size: clamp(.625rem, 1.15vw, .78rem);
+  font-weight: 800;
+  white-space: nowrap;
+}
+.coverage-map__north {
+  inset: .75rem auto auto .75rem;
+  display: grid;
+  justify-items: center;
+  gap: 2px;
+}
+.coverage-map__north::before {
+  content: "";
+  width: 10px;
+  height: 13px;
+  background: currentColor;
+  clip-path: polygon(50% 0, 100% 100%, 50% 73%, 0 100%);
+}
+.coverage-map__scale {
+  inset: auto auto .75rem .75rem;
+  width: 15.6%;
+  border-bottom: 1px solid;
+  text-align: center;
+}
+.coverage-map__lake {
+  left: 46%;
+  top: 62%;
+  transform: translate(-100%, -50%);
+  padding-right: .4rem;
+  font-style: italic;
+}
+.coverage-map__city {
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  transform: translate(0, -50%);
+  padding: .1rem .32rem .1rem .76rem;
+  border-radius: 4px;
+  background: var(--map-label);
+  color: var(--ink);
+  font-size: clamp(.65rem, 1.4vw, .88rem);
+  font-weight: 800;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+/* Marker positions match the projected Freshwater Atlas image extent. */
+.coverage-map__city--vernon { --x: 69.20%; --y: 11.56%; }
+.coverage-map__city--kelowna { --x: 56.67%; --y: 49.72%; }
+.coverage-map__city--penticton { --x: 51.18%; --y: 88.83%; }
+.coverage-map__city::before, .coverage-map__legend::before {
+  content: "";
+  width: 9px;
+  height: 9px;
+  border: 1px solid var(--surface);
+  border-radius: 50%;
+  background: var(--accent);
+}
+.coverage-map__city::before {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 0 1px var(--accent);
+}
+.coverage-map figcaption {
+  display: grid;
+  gap: .15rem;
+  padding: .6rem .75rem;
+  color: var(--muted);
+  line-height: 1.45;
+}
+.coverage-map__legend {
+  display: flex;
+  align-items: center;
+  gap: .36rem;
+  color: var(--ink);
+  font-size: .74rem;
+  font-weight: 800;
+}
+.coverage-map figcaption small { font-size: .67rem; }
+.coverage-map figcaption a { text-decoration: underline; text-underline-offset: .13em; }
+
+@media (forced-colors: active) {
+  .coverage-map__map::before, .coverage-map__north::before,
+  .coverage-map__city::before, .coverage-map__legend::before {
+    background: CanvasText;
+    forced-color-adjust: none;
+  }
 }
 
 .contact .section__heading > p:last-child { max-width: 59ch; }
@@ -511,6 +641,7 @@ h3 { font-size: 1.4rem; letter-spacing: -.04em; }
   .hero__image { aspect-ratio: 1.35; }
   .hero__image img { object-position: center 49%; }
   .services__grid, .coverage, .contact__grid { grid-template-columns: 1fr; }
+  .coverage { grid-template-areas: "intro" "map" "list"; }
   .service h3 { font-size: 1.4rem; }
   .service__icon { margin-bottom: 1rem; }
 }
