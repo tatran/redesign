@@ -1,0 +1,35 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Creative Chaos Redesign//Festival 2027//EN
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:creative-chaos-2027-06-04@creativechaoscrafts.com
+DTSTAMP:20261118T120000Z
+DTSTART:20270604T170000Z
+DTEND:20270605T030000Z
+SUMMARY:Creative Chaos Festival - Friday
+LOCATION:Kal Tire Place\, 3445 43rd Ave\, Vernon BC
+DESCRIPTION:Free admission. Friday 10am-8pm Pacific. Food bank donations welcome.
+URL:https://www.creativechaoscrafts.com/
+END:VEVENT
+BEGIN:VEVENT
+UID:creative-chaos-2027-06-05@creativechaoscrafts.com
+DTSTAMP:20261118T120000Z
+DTSTART:20270605T170000Z
+DTEND:20270606T020000Z
+SUMMARY:Creative Chaos Festival - Saturday
+LOCATION:Kal Tire Place\, 3445 43rd Ave\, Vernon BC
+DESCRIPTION:Free admission. Saturday 10am-7pm Pacific.
+URL:https://www.creativechaoscrafts.com/
+END:VEVENT
+BEGIN:VEVENT
+UID:creative-chaos-2027-06-06@creativechaoscrafts.com
+DTSTAMP:20261118T120000Z
+DTSTART:20270606T170000Z
+DTEND:20270606T230000Z
+SUMMARY:Creative Chaos Festival - Sunday
+LOCATION:Kal Tire Place\, 3445 43rd Ave\, Vernon BC
+DESCRIPTION:Free admission. Sunday 10am-4pm Pacific.
+URL:https://www.creativechaoscrafts.com/
+END:VEVENT
+END:VCALENDAR
