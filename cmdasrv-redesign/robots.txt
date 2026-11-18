@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://livingpixelstudios.com/redesign/cmdasrv-redesign/sitemap.xml
