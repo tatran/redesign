@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://livingpixelstudios.com/redesign/bluewhalecommunications-redesign/sitemap.xml
