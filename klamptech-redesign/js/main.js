@@ -151,19 +151,21 @@
     document.body.style.overflow = 'hidden';
   }
 
-  function openSingleImage(src, alt) {
+  function openSingleImage(src, alt, isLogo) {
     const lb = document.getElementById('lightbox');
     const lbImg = document.getElementById('lightbox-img');
     if (!lb || !lbImg) return;
     lbImg.src = src;
-    lbImg.alt = alt || 'KLAMPTECH s.r.o. logo';
+    lbImg.alt = alt || 'KLAMPTECH s.r.o.';
+    lb.classList.remove('logo-mode');
     lb.classList.add('single-mode', 'open');
+    if (isLogo) lb.classList.add('logo-mode');
     document.body.style.overflow = 'hidden';
   }
 
   function closeLightbox() {
     const lb = document.getElementById('lightbox');
-    if (lb) lb.classList.remove('open', 'single-mode');
+    if (lb) lb.classList.remove('open', 'single-mode', 'logo-mode');
     document.body.style.overflow = '';
   }
 
@@ -178,7 +180,9 @@
     document.querySelectorAll('[data-zoom-logo]').forEach((btn) => {
       btn.addEventListener('click', () => {
         const src = btn.getAttribute('data-zoom-logo');
-        openSingleImage(src, 'KLAMPTECH s.r.o. — Madžo a syn');
+        const isLogo = src && src.includes('logo');
+        const img = btn.querySelector('img');
+        openSingleImage(src, (img && img.alt) || 'KLAMPTECH s.r.o.', isLogo);
       });
     });
 
