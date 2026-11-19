@@ -12,12 +12,18 @@ Localized titles/descriptions, canonical URLs, reciprocal en-CA/fr-CA/x-default 
 
 Reviewed November 19, 2026:
 
-- Requested reference: https://www.facebook.com/downunderpipe/ — direct access blocked by Facebook.
+- Requested reference: https://www.facebook.com/downunderpipe/ and /about — browser access succeeded after dismissing the login overlay. Verified current email `downunderpi@gmail.com`, phone and linked website `https://www.downunderpipeinspection.com/`.
+- https://www.downunderpipeinspection.com/ — family-owned business, founding in Vernon in 1998, owner Mark Tishenko and Okanagan service audience.
+- https://www.downunderpipeinspection.com/cctv — Rovver crawler and Vivax push-camera capacities, digital reports, video documentation and locating capabilities.
+- https://www.downunderpipeinspection.com/cipp — full CIPP relining and sectional spot repairs.
+- https://www.facebook.com/photo.php?fbid=2088754188082696 — April 2, 2019 post on trenchless repair and reduced disturbance to gardens and driveways. No absolute no-dig or lifespan guarantees reproduced.
 - https://www.yellowpages.ca/bus/British-Columbia/Vernon/Down-Under-Pipe-Inspection/7930916.html — service categories and Vernon location.
 - https://www.bbb.org/ca/bc/vernon/profile/pipe-inspection/down-under-pipe-inspection-ltd-0037-1216664 — legal business name, 1998 establishment, phone and address.
 - https://business.vernonchamber.ca/list/searchalpha/d — phone and business identity.
 
-Contact action uses the published phone 250-938-1213. The previously listed business domain was inaccessible and an email was marked historical in a directory, so neither is used as a contact destination. No invented reviews, certifications, project photos or emergency availability claims. Confirm current service scope and address with the business before official launch. French translates the website and does not promise French-speaking staff.
+Contact actions use the published phone 250-938-1213 and Facebook-confirmed email. The old downunderpipe.com domain is superseded by downunderpipeinspection.com. No invented reviews, certifications, project photos or emergency availability claims. Confirm current service scope and street address with the business before official launch. French translates the website and does not promise French-speaking staff.
+
+Facebook cover, profile and historical service images were located and inspected. Browser photo-download permission was declined; the user then explicitly requested text updates only. No Facebook photographs were downloaded, embedded or added to the repository. The site links to the original Facebook photo collection.
 
 `assets/pipe-cutaway.svg`, favicon and social artwork are original illustrations for this concept. The cutaway is illustrative, not an actual inspection image. Manrope uses the bundled SIL Open Font License.
 
