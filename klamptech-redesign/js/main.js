@@ -170,7 +170,8 @@
   function initGallery() {
     document.querySelectorAll('.gallery-item').forEach((btn, idx) => {
       const img = btn.querySelector('img');
-      if (img) galleryImages.push(img.getAttribute('src'));
+      const fullSrc = btn.getAttribute('data-full') || (img && img.getAttribute('src'));
+      if (fullSrc) galleryImages.push(fullSrc);
       btn.addEventListener('click', () => openLightbox(idx));
     });
 
