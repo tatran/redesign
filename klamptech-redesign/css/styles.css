@@ -139,22 +139,44 @@ button, input, textarea, select {
   flex-shrink: 0;
 }
 
-.brand-mark {
-  width: 42px;
-  height: 42px;
-  border-radius: 11px;
-  background: #0f172a;
-  border: 1px solid var(--accent-border);
-  display: grid;
-  place-items: center;
-  overflow: hidden;
-  padding: 4px;
+.brand-logo-btn {
+  height: 46px;
+  border-radius: 9px;
+  background: #ffffff;
+  border: 1px solid var(--border-strong);
+  padding: 3px 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: zoom-in;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.14);
 }
 
-.brand-mark img {
-  width: 100%;
+.brand-logo-btn:hover {
+  transform: scale(1.04);
+  border-color: var(--accent);
+  box-shadow: 0 4px 14px rgba(220, 38, 38, 0.28);
+}
+
+.brand-logo-btn img {
   height: 100%;
+  width: auto;
+  display: block;
   object-fit: contain;
+  border-radius: 5px;
+}
+
+.lightbox.single-mode .lightbox-prev,
+.lightbox.single-mode .lightbox-next,
+.lightbox.single-mode .lightbox-counter {
+  display: none;
+}
+
+.lightbox.single-mode .lightbox-img {
+  background: #ffffff;
+  padding: 16px;
+  max-width: min(90vw, 640px);
 }
 
 .brand-text {

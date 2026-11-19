@@ -142,6 +142,7 @@
     const lbImg = document.getElementById('lightbox-img');
     const lbCounter = document.getElementById('lightbox-counter');
     if (!lb || !lbImg || !galleryImages.length) return;
+    lb.classList.remove('single-mode');
     currentImgIdx = (idx + galleryImages.length) % galleryImages.length;
     lbImg.src = galleryImages[currentImgIdx];
     lbImg.alt = `KLAMPTECH realizácia ${currentImgIdx + 1}`;
@@ -150,9 +151,19 @@
     document.body.style.overflow = 'hidden';
   }
 
+  function openSingleImage(src, alt) {
+    const lb = document.getElementById('lightbox');
+    const lbImg = document.getElementById('lightbox-img');
+    if (!lb || !lbImg) return;
+    lbImg.src = src;
+    lbImg.alt = alt || 'KLAMPTECH s.r.o. logo';
+    lb.classList.add('single-mode', 'open');
+    document.body.style.overflow = 'hidden';
+  }
+
   function closeLightbox() {
     const lb = document.getElementById('lightbox');
-    if (lb) lb.classList.remove('open');
+    if (lb) lb.classList.remove('open', 'single-mode');
     document.body.style.overflow = '';
   }
 
@@ -161,6 +172,13 @@
       const img = btn.querySelector('img');
       if (img) galleryImages.push(img.getAttribute('src'));
       btn.addEventListener('click', () => openLightbox(idx));
+    });
+
+    document.querySelectorAll('[data-zoom-logo]').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const src = btn.getAttribute('data-zoom-logo');
+        openSingleImage(src, 'KLAMPTECH s.r.o. — Madžo a syn');
+      });
     });
 
     const closeBtn = document.getElementById('lightbox-close');
@@ -180,8 +198,10 @@
     document.addEventListener('keydown', (e) => {
       if (!lb || !lb.classList.contains('open')) return;
       if (e.key === 'Escape') closeLightbox();
-      if (e.key === 'ArrowLeft') openLightbox(currentImgIdx - 1);
-      if (e.key === 'ArrowRight') openLightbox(currentImgIdx + 1);
+      if (!lb.classList.contains('single-mode')) {
+        if (e.key === 'ArrowLeft') openLightbox(currentImgIdx - 1);
+        if (e.key === 'ArrowRight') openLightbox(currentImgIdx + 1);
+      }
     });
   }
 
