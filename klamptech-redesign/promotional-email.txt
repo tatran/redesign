@@ -1,0 +1,31 @@
+Predmet: Moderný 4-jazyčný (SK/DE/EN/PL) redizajn webu pre KLAMPTECH s.r.o. — živý náhľad
+
+Dobrý deň pán Madžo a tím KLAMPTECH s.r.o.,
+
+pri prezeraní vašej aktuálnej stránky klamptech.sk ma zaujal váš silný remeselný základ — vlastná klampiarska dielňa, bezplatné zameranie a cenová kalkulácia, široký záber od falcovaných krytín po hydroizolácie Fatrafol/Sklobit/Hydrobit a členstvo v Cechu strechárov Slovenska.
+
+Aby sme ukázali, ako môže vaša online prezentácia pôsobiť ešte profesionálnejšie a prinášať viac dopytov zo Slovenska aj zo zahraničia, pripravil som pre vás kompletný, funkčný prototyp redizajnu s vašimi reálnymi fotografiami a údajmi:
+
+Živý náhľad (Slovensky): https://tatran.github.io/redesign/klamptech-redesign/?lang=sk
+Živý náhľad (Nemecky):   https://tatran.github.io/redesign/klamptech-redesign/?lang=de
+Živý náhľad (Anglicky):  https://tatran.github.io/redesign/klamptech-redesign/?lang=en
+Živý náhľad (Poľsky):    https://tatran.github.io/redesign/klamptech-redesign/?lang=pl
+
+Čo obsahuje váš nový prototyp:
+1. Plná 4-jazyčnosť (SK / DE / EN / PL) — okamžité prepínanie jedným kliknutím vrátane služieb, pilierov, kalkulačky, FAQ a GDPR.
+2. Tmavý a Svetlý režim (Dark & Light Mode) — prémiový antracitový dizajn aj čistý denný režim s uložením voľby.
+3. Interaktívny sprievodca dopytom — zákazník si vyberie typ projektu, materiál (falcovaná krytina, plechová strecha, Fatrafol, atypické prvky) a plochu v m² a jedným klikom predvyplní dopyt.
+4. Moderná fotogaléria vašich realizácií s Lightboxom a rýchlym načítaním na mobile.
+5. Kompletné Google SEO — Schema.org RoofingContractor (JSON-LD), hreflang pre 4 jazyky, sitemap.xml, robots.txt a mapa sídla v Novom Meste nad Váhom.
+
+Ak sa vám návrh páči, rád vám ho nezáväzne predstavím za 10 minút telefonicky alebo online — stačí odpovedať na tento e-mail.
+
+S pozdravom,
+
+Ing. Luboš Kostroš
+LivingPixel Studios
+E-mail: info@livingpixelstudios.com
+Web: https://livingpixelstudios.com/
+
+---
+KLAMPTECH s.r.o. · Košikárska 1928/22, 915 01 Nové Mesto nad Váhom · 0904 993 989 · michal.madzo@gmail.com

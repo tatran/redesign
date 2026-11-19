@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tatran.github.io/redesign/klamptech-redesign/sitemap.xml
