@@ -1,8 +1,8 @@
 # Down Under Pipe Inspection redesign
 
-Static English/French website with responsive layouts, locally bundled Manrope, persistent dark/light themes and a custom SVG pipe cutaway. No installation or runtime dependencies required.
+Static English/French website with responsive layouts, locally bundled Manrope, persistent dark/light themes and a custom SVG inspection-camera illustration. The revised visual system uses forest green, pale lime, larger reading text, a dedicated equipment specification panel and a full-width contact section with a map. No installation or runtime dependencies required.
 
-Rebuild from this directory with `node scripts/build.mjs`. Serve with `node scripts/serve.mjs` and open http://127.0.0.1:8196. English is `index.html`; French is `fr/index.html`.
+Rebuild from this directory with `node scripts/build.mjs`. Layout and visual copy are in `scripts/layout.mjs`; source business content is in `scripts/build.mjs` and `scripts/details.mjs`. Serve with `node scripts/serve.mjs` and open http://127.0.0.1:8196. English is `index.html`; French is `fr/index.html`.
 
 ## SEO
 
@@ -25,6 +25,8 @@ Contact actions use the published phone 250-938-1213 and Facebook-confirmed emai
 
 Facebook cover, profile and historical service images were located and inspected. Browser photo-download permission was declined; the user then explicitly requested text updates only. No Facebook photographs were downloaded, embedded or added to the repository. The site links to the original Facebook photo collection.
 
-`assets/pipe-cutaway.svg`, favicon and social artwork are original illustrations for this concept. The cutaway is illustrative, not an actual inspection image. Manrope uses the bundled SIL Open Font License.
+`assets/inspection-camera.svg`, favicon and social artwork are original illustrations for this concept. The pipe and camera illustration is conceptual, not an actual inspection image. Manrope uses the bundled SIL Open Font License.
+
+Verification: static link, anchor, metadata, structured-data and sitemap checks; browser review of desktop and phone layouts, English/French navigation, theme switching, mobile menu and FAQ expansion. No horizontal overflow observed at 1440px and 390px viewport widths. Google Maps loaded its embedded UI, but map tiles were unavailable in the preview environment; the external directions link remains available.
 
 `promo-email.md` contains English and French outreach drafts, not sent. Confirm preview hosting before sharing its URL.
