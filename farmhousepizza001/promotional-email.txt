@@ -1,0 +1,31 @@
+Subject: A Bilingual, Fast & SEO-Powered Website Redesign Concept for Farmhouse Pizza & Donair (Vernon, BC)
+
+Hello Farmhouse Pizza and Donair team,
+
+Your 6-ingredient scratch-made thin-crust dough, 100% Canadian cheese, daily Huge Slices (11 AM – 3 PM), and East Coast donairs with signature in-house sweet sauce have made Farmhouse Pizza & Donair a true Vernon favourite at Landing Plaza.
+
+While reviewing farmhousepizzaanddonair.com, I noticed a few opportunities where a faster, search-optimized website could drive more commission-free direct orders and make browsing your menu effortless on mobile. To show you what's possible, I built a complete, working redesign prototype using your real menu, prices, hours, and Farmhouse Rewards program:
+
+👉 Live Preview: https://tatran.github.io/redesign/farmhousepizza001/
+
+What's Included in Your New Redesign Prototype:
+1. Interactive Menu Explorer — Instant search, size/crust price toggles, and dietary filters (House Favourites, Vegetarian, Gluten-Free Option, Halal, Spicy) plus an Order Estimation Tray.
+2. In-House Delivery Calculator — Highlights your $7 (first 6 km) + $1/km Vernon delivery rate with neighbourhood quick-picks (Landing Plaza, Downtown Vernon, Okanagan Landing, Coldstream, BX, Lavington) to encourage direct orders over third-party apps.
+3. Full English + French Bilingual Support — 1-click EN/FR toggle welcoming French-speaking Okanagan visitors and families.
+4. Dark & Light Theme Switcher — Wood-Fired Dark Mode & Warm Artisan Light Mode with persistent user preference.
+5. Complete Local Vernon SEO — Schema.org Restaurant, OpeningHoursSpecification, FAQPage, and BreadcrumbList JSON-LD structured data, geo meta tags, hreflang, sitemap.xml, and robots.txt.
+6. Live Vernon, BC Open/Closed Indicator — Real-time status badge + 1-tap call to (250) 503-0110.
+
+It connects directly to your existing online ordering and Farmhouse Rewards links, so launching it requires zero disruption to your kitchen.
+
+Would you have 10 minutes this week for a quick, zero-obligation walkthrough? Simply reply to this email and let me know a time that works for you.
+
+Warm regards,
+
+Ing. Luboš Kostroš
+LivingPixel Studios
+Email: info@livingpixelstudios.com
+Web: https://livingpixelstudios.com/
+
+---
+Farmhouse Pizza and Donair · Landing Plaza, #110-5301 25th Ave, Vernon, BC V1T 9R1 · (250) 503-0110

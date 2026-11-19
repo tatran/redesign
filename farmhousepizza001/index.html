@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="en-CA" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Farmhouse Pizza &amp; Donair | Scratch-Made Pizza &amp; East Coast Donairs in Vernon, BC</title>
+  <meta name="description" content="Fresh thin-crust pizza made with 6-ingredient scratch dough, 100% Canadian cheese, and Vernon's favourite beef &amp; chicken donairs with signature sweet sauce. Dine-in, pickup &amp; delivery at Landing Plaza, Vernon, BC." />
+  <meta name="keywords" content="Farmhouse Pizza and Donair, Vernon BC pizza, best donair Vernon, East Coast donair Vernon, pizza delivery Vernon BC, Landing Plaza pizza, gluten free pizza Vernon, halal chicken Vernon, calzone Vernon, pizza by the slice Vernon" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta name="author" content="Farmhouse Pizza and Donair" />
+
+  <!-- Geo & Local SEO -->
+  <meta name="geo.region" content="CA-BC" />
+  <meta name="geo.placename" content="Vernon" />
+  <meta name="geo.position" content="50.2584;-119.3075" />
+  <meta name="ICBM" content="50.2584, -119.3075" />
+
+  <!-- Canonical & Bilingual Hreflang -->
+  <link rel="canonical" href="https://tatran.github.io/redesign/farmhousepizza001/" />
+  <link rel="alternate" hreflang="en-CA" href="https://tatran.github.io/redesign/farmhousepizza001/?lang=en" />
+  <link rel="alternate" hreflang="fr-CA" href="https://tatran.github.io/redesign/farmhousepizza001/?lang=fr" />
+  <link rel="alternate" hreflang="x-default" href="https://tatran.github.io/redesign/farmhousepizza001/" />
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="restaurant.restaurant" />
+  <meta property="og:site_name" content="Farmhouse Pizza and Donair" />
+  <meta property="og:title" content="Farmhouse Pizza &amp; Donair | Scratch-Made Pizza &amp; Donairs in Vernon, BC" />
+  <meta property="og:description" content="6-ingredient scratch-made thin-crust pizza, 100% Canadian cheese, and Vernon's most generous donairs with signature in-house sweet sauce. Order direct for $7 in-house delivery!" />
+  <meta property="og:url" content="https://tatran.github.io/redesign/farmhousepizza001/" />
+  <meta property="og:image" content="https://tatran.github.io/redesign/farmhousepizza001/images/farmhouse-supreme.jpg" />
+  <meta property="og:locale" content="en_CA" />
+  <meta property="og:locale:alternate" content="fr_CA" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Farmhouse Pizza &amp; Donair — Vernon, BC" />
+  <meta name="twitter:description" content="Scratch-made thin-crust pizza, 100% Canadian cheese, huge daily slices &amp; East Coast donairs at Landing Plaza, Vernon." />
+  <meta name="twitter:image" content="https://tatran.github.io/redesign/farmhousepizza001/images/farmhouse-supreme.jpg" />
+
+  <!-- Favicon & Fonts -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="apple-touch-icon" href="images/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,800;1,9..144,700&family=JetBrains+Mono:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Instant Theme Bootstrap (Prevents FOUC) -->
+  <script>
+    (function(){
+      try {
+        var t = localStorage.getItem('farmhouse_theme');
+        if (!t && window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) t = 'light';
+        if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+      } catch(e) {}
+    })();
+  </script>
+
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <!-- Rich Schema.org JSON-LD (Restaurant + Menu + FAQPage + BreadcrumbList) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Restaurant",
+        "@id": "https://www.farmhousepizzaanddonair.com/#restaurant",
+        "name": "Farmhouse Pizza and Donair",
+        "url": "https://www.farmhousepizzaanddonair.com/",
+        "logo": "https://tatran.github.io/redesign/farmhousepizza001/images/logo.png",
+        "image": [
+          "https://tatran.github.io/redesign/farmhousepizza001/images/farmhouse-supreme.jpg",
+          "https://tatran.github.io/redesign/farmhousepizza001/images/donair-featured.jpg",
+          "https://tatran.github.io/redesign/farmhousepizza001/images/calzone-wings.jpg"
+        ],
+        "description": "Handcrafted thin-crust pizzas made from 6-ingredient scratch dough, 100% Canadian cheese, fresh-cut vegetables, and generous beef, chicken & East Coast donairs with signature in-house sweet sauce in Vernon, BC.",
+        "telephone": "+1-250-503-0110",
+        "priceRange": "$$",
+        "servesCuisine": ["Pizza", "Donair", "Canadian", "Italian", "Mediterranean", "Halal"],
+        "acceptsReservations": false,
+        "hasMenu": "https://www.farmhousepizzaanddonair.com/menus",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Landing Plaza, #110-5301 25th Ave",
+          "addressLocality": "Vernon",
+          "addressRegion": "BC",
+          "postalCode": "V1T 9R1",
+          "addressCountry": "CA"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 50.2584,
+          "longitude": -119.3075
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday"],
+            "opens": "11:00",
+            "closes": "20:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "Friday",
+            "opens": "11:00",
+            "closes": "21:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Saturday", "Sunday"],
+            "opens": "15:00",
+            "closes": "20:00"
+          }
+        ],
+        "potentialAction": {
+          "@type": "OrderAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://www.farmhousepizzaanddonair.com/online-ordering",
+            "actionPlatform": [
+              "http://schema.org/DesktopWebPlatform",
+              "http://schema.org/MobileWebPlatform"
+            ]
+          },
+          "deliveryMethod": [
+            "http://purl.org/goodrelations/v1#DeliveryModeOwnFleet",
+            "http://purl.org/goodrelations/v1#DeliveryModePickUp"
+          ]
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Do you offer gluten-free, vegetarian, or halal options?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Farmhouse Pizza and Donair offers gluten-free pizza crusts, gluten-free wraps for small donairs (+$2.50), vegetarian pizzas and falafel wraps, vegan options, and Halal oven-baked chicken and rice bowls."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does in-house delivery pricing work in Vernon, BC?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "In-house delivery starts at $7.00 for the first 6 km from Landing Plaza (#110-5301 25th Ave), plus $1.00 for each additional kilometre."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "When is Pizza by the Huge Slice available?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Pizza by the huge slice is served daily from 11:00 AM to 3:00 PM for dine-in and takeout."
+            }
+          }
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://tatran.github.io/redesign/farmhousepizza001/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Menu",
+            "item": "https://tatran.github.io/redesign/farmhousepizza001/#menu"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <!-- Top Utility Bar -->
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <div class="topbar-left">
+        <a href="#location" class="topbar-item">
+          <span>📍</span>
+          <span data-i18n="topbar.address">Landing Plaza, #110-5301 25th Ave, Vernon, BC</span>
+        </a>
+        <a href="tel:+12505030110" class="topbar-item">
+          <span>📞</span>
+          <span data-i18n="topbar.phoneLabel">(250) 503-0110</span>
+        </a>
+      </div>
+      <div class="topbar-right">
+        <span class="topbar-item">🍕 <span data-i18n="topbar.slices">Huge Slices Daily 11 AM – 3 PM</span></span>
+        <span class="status-pill" id="openStatusPill">
+          <span class="status-dot"></span>
+          <span id="openStatusText" data-i18n="topbar.openNow">Open Now</span>
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sticky Header -->
+  <header class="site-header">
+    <div class="container nav-inner">
+      <a href="#top" class="brand" translate="no">
+        <img src="images/logo.png" alt="Farmhouse Pizza and Donair Logo" class="brand-logo" width="48" height="48" />
+        <div class="brand-text">
+          <span class="brand-name">Farmhouse Pizza &amp; Donair</span>
+          <span class="brand-sub" data-i18n="nav.brandSub">Vernon, BC · Scratch-Made</span>
+        </div>
+      </a>
+
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#menu" data-i18n="nav.menu">Menu</a>
+        <a href="#rewards" data-i18n="nav.specials">Slices &amp; Rewards</a>
+        <a href="#delivery" data-i18n="nav.delivery">Delivery</a>
+        <a href="#reviews" data-i18n="nav.reviews">Reviews</a>
+        <a href="#location" data-i18n="nav.location">Hours &amp; Map</a>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Bilingual Switcher -->
+        <div class="control-pill" role="group" aria-label="Language switcher" translate="no">
+          <button type="button" class="lang-btn active" data-lang-switch="en" aria-pressed="true">EN</button>
+          <button type="button" class="lang-btn" data-lang-switch="fr" aria-pressed="false">FR</button>
+        </div>
+
+        <!-- Dark / Light Theme Toggle -->
+        <button type="button" class="icon-btn" id="themeToggle" data-i18n-aria="nav.themeAria" aria-label="Toggle light and dark theme">
+          <svg id="iconSun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path>
+          </svg>
+          <svg id="iconMoon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <!-- Order Tray Button -->
+        <button type="button" class="icon-btn" id="openTrayBtn" data-i18n-aria="nav.trayAria" aria-label="Open order tray">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          <span class="tray-count" id="trayCount" data-count="0"></span>
+        </button>
+
+        <a href="https://www.farmhousepizzaanddonair.com/online-ordering" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm nav-order-desktop" data-i18n="nav.orderNow">Order Online</a>
+
+        <button type="button" class="icon-btn mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+    <div class="mobile-drawer-panel">
+      <div style="display:flex; align-items:center; justify-content:space-between;">
+        <strong style="font-family:var(--font-display); font-size:1.1rem;" translate="no">Farmhouse Pizza</strong>
+        <button type="button" class="icon-btn" id="closeMobileBtn" aria-label="Close menu">✕</button>
+      </div>
+      <div class="mobile-nav-list">
+        <a href="#menu" data-i18n="nav.menu">Menu</a>
+        <a href="#rewards" data-i18n="nav.specials">Slices &amp; Rewards</a>
+        <a href="#delivery" data-i18n="nav.delivery">Delivery</a>
+        <a href="#reviews" data-i18n="nav.reviews">Reviews</a>
+        <a href="#location" data-i18n="nav.location">Hours &amp; Map</a>
+      </div>
+      <a href="https://www.farmhousepizzaanddonair.com/online-ordering" target="_blank" rel="noopener noreferrer" class="btn btn-primary" data-i18n="hero.ctaOrder">Order Online Now</a>
+      <a href="tel:+12505030110" class="btn btn-secondary" data-i18n="hero.ctaCall">Call (250) 503-0110</a>
+    </div>
+  </div>
+
+  <main id="main">
+    <!-- Hero Section -->
+    <section class="hero" id="top">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">🔥 <span data-i18n="hero.eyebrow">Vernon's Landing Plaza Favourite · Since Day One</span></div>
+          <h1 class="hero-title" data-i18n="hero.title" data-i18n-html>Scratch-Made Pizza &amp; <em>Irresistible Donairs</em></h1>
+          <p class="hero-desc" data-i18n="hero.desc">Handcrafted thin-crust pizzas built on 6-ingredient dough made fresh from scratch, topped with fresh-cut vegetables and 100% Canadian cheese — alongside Vernon's most generous beef, chicken &amp; East Coast donairs.</p>
+          <div class="hero-ctas">
+            <a href="https://www.farmhousepizzaanddonair.com/online-ordering" target="_blank" rel="noopener noreferrer" class="btn btn-primary" data-i18n="hero.ctaOrder">Order Online Now</a>
+            <a href="#menu" class="btn btn-secondary" data-i18n="hero.ctaMenu">Explore Full Menu</a>
+            <a href="tel:+12505030110" class="btn btn-secondary" data-i18n="hero.ctaCall">Call (250) 503-0110</a>
+          </div>
+          <div class="hero-metrics">
+            <div>
+              <div class="metric-val" data-i18n="hero.metric1Val">6</div>
+              <div class="metric-lbl" data-i18n="hero.metric1Lbl">Simple Dough Ingredients</div>
+            </div>
+            <div>
+              <div class="metric-val" data-i18n="hero.metric2Val">100%</div>
+              <div class="metric-lbl" data-i18n="hero.metric2Lbl">Real Canadian Cheese</div>
+            </div>
+            <div>
+              <div class="metric-val" data-i18n="hero.metric3Val">$7</div>
+              <div class="metric-lbl" data-i18n="hero.metric3Lbl">In-House Delivery (6 km)</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-photo-frame">
+            <img src="images/farmhouse-supreme.jpg" alt="Freshly baked Farmhouse Supreme thin-crust pizza with melted 100% Canadian mozzarella cheese" width="1200" height="1020" fetchpriority="high" />
+            <div class="hero-floating-card">
+              <div>
+                <div class="floating-badge-title" data-i18n="hero.badgeTitle">Pizza by the Huge Slice</div>
+                <div class="floating-badge-sub" data-i18n="hero.badgeSub">Hot &amp; ready daily · 11:00 AM – 3:00 PM</div>
+              </div>
+              <span class="floating-pill" data-i18n="hero.badgePill">DINE-IN &amp; TAKEOUT</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Craft Pillars -->
+    <section class="pillars" aria-label="Quality standards">
+      <div class="container pillars-grid">
+        <div class="pillar-card">
+          <div class="pillar-icon">🌾</div>
+          <h2 class="pillar-title" data-i18n="pillars.p1Title">Scratch-Made Dough</h2>
+          <p class="pillar-desc" data-i18n="pillars.p1Desc">Mixed fresh in-house using six simple, honest ingredients for a crisp, flavourful thin crust.</p>
+        </div>
+        <div class="pillar-card">
+          <div class="pillar-icon">🧀</div>
+          <h2 class="pillar-title" data-i18n="pillars.p2Title">100% Canadian Cheese</h2>
+          <p class="pillar-desc" data-i18n="pillars.p2Desc">Generously layered with real Canadian mozzarella, cheddar blend, and artisan feta.</p>
+        </div>
+        <div class="pillar-card">
+          <div class="pillar-icon">🫑</div>
+          <h2 class="pillar-title" data-i18n="pillars.p3Title">Fresh-Cut Vegetables</h2>
+          <p class="pillar-desc" data-i18n="pillars.p3Desc">Prep-table fresh peppers, mushrooms, spinach, tomatoes, and red onions cut daily.</p>
+        </div>
+        <div class="pillar-card">
+          <div class="pillar-icon">🥣</div>
+          <h2 class="pillar-title" data-i18n="pillars.p4Title">In-House Sweet Sauce</h2>
+          <p class="pillar-desc" data-i18n="pillars.p4Desc">Our signature sweet donair sauce, tzatziki, dill, and creamy sriracha crafted in-house.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Signature Spotlight -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow" data-i18n="spotlight.eyebrow">House Signatures</div>
+            <h2 class="section-title" data-i18n="spotlight.title">What Vernon Craves Most</h2>
+            <p class="section-sub" data-i18n="spotlight.sub">From our loaded namesake pizza to 1 lb East Coast donairs and golden oven-baked calzones, every order is baked fresh to order.</p>
+          </div>
+        </div>
+
+        <div class="spotlight-grid">
+          <article class="spotlight-card">
+            <div class="spotlight-img-wrap">
+              <img src="images/hero-pizza.jpg" alt="The Farmhouse Supreme thin-crust pizza" loading="lazy" />
+              <span class="spotlight-tag" data-i18n="spotlight.s1Tag">Bestseller</span>
+            </div>
+            <div class="spotlight-body">
+              <h3 data-i18n="spotlight.s1Title">The Farmhouse Supreme</h3>
+              <p data-i18n="spotlight.s1Desc">Our flagship pie loaded with ham, salami, mild &amp; beef sausage, pepperoni, onions, green peppers, mushrooms, black olives, and 100% Canadian mozzarella.</p>
+              <div class="spotlight-foot">
+                <span class="price-tag" data-i18n="spotlight.s1Price">From $26.99</span>
+                <a href="#menu" data-jump-cat="pizzas" style="font-weight:700; color:var(--primary);" data-i18n="spotlight.viewInMenu">See in Menu →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="spotlight-card">
+            <div class="spotlight-img-wrap">
+              <img src="images/donair-featured.jpg" alt="Loaded East Coast Canadian beef donair wrap with sweet sauce" loading="lazy" />
+              <span class="spotlight-tag" data-i18n="spotlight.s2Tag">Vernon Favourite</span>
+            </div>
+            <div class="spotlight-body">
+              <h3 data-i18n="spotlight.s2Title">East Coast &amp; Classic Donairs</h3>
+              <p data-i18n="spotlight.s2Desc">Tender spiced beef, halal chicken, mixed meat, or lamb wrapped warm with crisp veggies and drenched in our irresistible in-house sweet sauce.</p>
+              <div class="spotlight-foot">
+                <span class="price-tag" data-i18n="spotlight.s2Price">From $11.99</span>
+                <a href="#menu" data-jump-cat="donairs" style="font-weight:700; color:var(--primary);" data-i18n="spotlight.viewInMenu">See in Menu →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="spotlight-card">
+            <div class="spotlight-img-wrap">
+              <img src="images/calzone-wings.jpg" alt="Golden oven-baked calzone, crispy wings and cheesy breadsticks" loading="lazy" />
+              <span class="spotlight-tag" data-i18n="spotlight.s3Tag">Oven-Baked</span>
+            </div>
+            <div class="spotlight-body">
+              <h3 data-i18n="spotlight.s3Title">Calzones, Wings &amp; Dry Ribs</h3>
+              <p data-i18n="spotlight.s3Desc">Golden garlic-rubbed calzones bursting with melted cheese alongside 1 lb oven-baked wings in 7 flavours and garlic-soy marinated dry ribs.</p>
+              <div class="spotlight-foot">
+                <span class="price-tag" data-i18n="spotlight.s3Price">From $12.99</span>
+                <a href="#menu" data-jump-cat="calzones" style="font-weight:700; color:var(--primary);" data-i18n="spotlight.viewInMenu">See in Menu →</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Full Interactive Menu -->
+    <section class="section" id="menu">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow" data-i18n="menu.eyebrow">Full Menu</div>
+            <h2 class="section-title" data-i18n="menu.title">Crafted Fresh to Order</h2>
+            <p class="section-sub" data-i18n="menu.sub">Browse pizzas, donairs, calzones, pasta bowls, wings, sides &amp; family deals. Build your tray below to estimate your order, then check out online or call.</p>
+          </div>
+        </div>
+
+        <div class="menu-controls">
+          <div class="menu-tabs" role="tablist" aria-label="Menu categories">
+            <button type="button" class="menu-tab active" data-menu-cat="pizzas" data-i18n="menu.catPizzas">Pizzas</button>
+            <button type="button" class="menu-tab" data-menu-cat="donairs" data-i18n="menu.catDonairs">Donairs &amp; Wraps</button>
+            <button type="button" class="menu-tab" data-menu-cat="calzones" data-i18n="menu.catCalzones">Calzones &amp; Strombolis</button>
+            <button type="button" class="menu-tab" data-menu-cat="pasta" data-i18n="menu.catPasta">Pasta &amp; Rice Bowls</button>
+            <button type="button" class="menu-tab" data-menu-cat="wings" data-i18n="menu.catWings">Wings &amp; Dry Ribs</button>
+            <button type="button" class="menu-tab" data-menu-cat="sides" data-i18n="menu.catSides">Appetizers &amp; Sides</button>
+            <button type="button" class="menu-tab" data-menu-cat="deals" data-i18n="menu.catDeals">Family Deals &amp; Kids</button>
+          </div>
+
+          <div class="menu-toolbar">
+            <div class="menu-filters" aria-label="Dietary and highlight filters">
+              <button type="button" class="filter-chip active" data-menu-filter="all" data-i18n="menu.filterAll">All</button>
+              <button type="button" class="filter-chip" data-menu-filter="fav" data-i18n="menu.filterFav">★ Favourites</button>
+              <button type="button" class="filter-chip" data-menu-filter="veg" data-i18n="menu.filterVeg">Vegetarian</button>
+              <button type="button" class="filter-chip" data-menu-filter="gf" data-i18n="menu.filterGf">Gluten-Free Option</button>
+              <button type="button" class="filter-chip" data-menu-filter="halal" data-i18n="menu.filterHalal">Halal</button>
+              <button type="button" class="filter-chip" data-menu-filter="spicy" data-i18n="menu.filterSpicy">Spicy</button>
+            </div>
+
+            <div class="menu-search">
+              <span class="menu-search-icon" aria-hidden="true">🔍</span>
+              <input type="search" id="menuSearch" data-i18n-placeholder="menu.searchPlaceholder" placeholder="Search pizzas, donairs, toppings..." aria-label="Search menu" />
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-grid" id="menuGrid" aria-live="polite"></div>
+
+        <div class="menu-note-bar">
+          <span data-i18n="menu.noteText">Gluten-free crusts (+$5.50 Med), cheese-stuffed crusts, vegan cheese &amp; halal chicken options available. Prices in CAD.</span>
+          <a href="https://www.farmhousepizzaanddonair.com/online-ordering" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" data-i18n="menu.noteCta">Official Online Ordering →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Huge Slices & Farmhouse Rewards -->
+    <section class="section section-alt" id="rewards">
+      <div class="container split-grid">
+        <div class="feature-panel">
+          <div class="eyebrow">🍕 <span data-i18n="rewards.sliceEyebrow">Weekday &amp; Lunch Rush</span></div>
+          <h2 class="section-title" style="font-size:1.85rem;" data-i18n="rewards.sliceTitle">Need a Quick Bite? Pizza by the Huge Slice</h2>
+          <p style="color:var(--text-muted);" data-i18n="rewards.sliceDesc">Stop by Landing Plaza every day between 11:00 AM and 3:00 PM for piping-hot, oversized Farmhouse slices — freshly baked on our signature scratch-made thin crust.</p>
+          <ul style="padding-left:18px; color:var(--text-muted); margin:18px 0 24px;">
+            <li data-i18n="rewards.sliceItem1">Available daily 11:00 AM – 3:00 PM</li>
+            <li data-i18n="rewards.sliceItem2">Fresh rotating specialty &amp; classic flavours</li>
+            <li data-i18n="rewards.sliceItem3">Fast dine-in &amp; takeout at Landing Plaza</li>
+          </ul>
+          <a href="#location" class="btn btn-secondary" data-i18n="rewards.sliceCta">Get Directions</a>
+        </div>
+
+        <div class="feature-panel accent-panel">
+          <div class="eyebrow">⭐ <span data-i18n="rewards.rewEyebrow">Farmhouse Rewards</span></div>
+          <h2 class="section-title" style="font-size:1.85rem;" data-i18n="rewards.rewTitle">Earn Points on Every Order</h2>
+          <p style="color:var(--text-muted);" data-i18n="rewards.rewDesc">Join Farmhouse Rewards for free and turn your pizza and donair nights into instant savings.</p>
+          <div class="rewards-steps">
+            <div class="reward-step">
+              <div class="reward-num" data-i18n="rewards.step1Val">500 pts</div>
+              <div class="reward-lbl" data-i18n="rewards.step1Lbl">Instant Sign-Up Bonus</div>
+            </div>
+            <div class="reward-step">
+              <div class="reward-num" data-i18n="rewards.step2Val">5 pts / $1</div>
+              <div class="reward-lbl" data-i18n="rewards.step2Lbl">Earned on Every Order</div>
+            </div>
+            <div class="reward-step">
+              <div class="reward-num" data-i18n="rewards.step3Val">$5 OFF</div>
+              <div class="reward-lbl" data-i18n="rewards.step3Lbl">Every 1,000 Points</div>
+            </div>
+          </div>
+          <a href="https://www.farmhousepizzaanddonair.com/loyalty" target="_blank" rel="noopener noreferrer" class="btn btn-primary" data-i18n="rewards.rewCta">Join Farmhouse Rewards</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- In-House Delivery Calculator & Partners -->
+    <section class="section" id="delivery">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">🚗 <span data-i18n="delivery.eyebrow">Fast Doorstep Service</span></div>
+            <h2 class="section-title" data-i18n="delivery.title">In-House Vernon Delivery Calculator</h2>
+            <p class="section-sub" data-i18n="delivery.sub">Skip inflated third-party markups! Order direct for our fast in-house delivery starting at just $7 for the first 6 km, plus $1 for each additional km.</p>
+          </div>
+        </div>
+
+        <div class="delivery-grid">
+          <div class="calc-card">
+            <h3 style="font-family:var(--font-display); font-size:1.4rem; margin:0 0 6px;" data-i18n="delivery.calcTitle">Estimate Your Delivery Fee</h3>
+            <p style="color:var(--text-muted); font-size:0.9rem; margin:0;" data-i18n="delivery.calcSub">Pick your Vernon neighbourhood or slide the distance from Landing Plaza (#110-5301 25th Ave):</p>
+
+            <div class="hood-chips" translate="no">
+              <button type="button" class="hood-chip active" data-hood-km="2">Landing Plaza / Bella Vista (2 km)</button>
+              <button type="button" class="hood-chip" data-hood-km="4">Downtown Vernon (4 km)</button>
+              <button type="button" class="hood-chip" data-hood-km="5">Okanagan Landing (5 km)</button>
+              <button type="button" class="hood-chip" data-hood-km="8">Coldstream (8 km)</button>
+              <button type="button" class="hood-chip" data-hood-km="10">BX / Silver Star Rd (10 km)</button>
+              <button type="button" class="hood-chip" data-hood-km="14">Lavington (14 km)</button>
+            </div>
+
+            <div class="range-wrap">
+              <div class="range-header">
+                <span data-i18n="delivery.distLabel">Distance from Landing Plaza</span>
+                <span id="deliveryKmOut" style="font-family:var(--font-mono); color:var(--primary);">4 km</span>
+              </div>
+              <input type="range" id="deliverySlider" class="range-slider" min="1" max="20" value="4" aria-label="Delivery distance in kilometres" />
+            </div>
+
+            <div class="calc-result">
+              <div>
+                <div class="calc-stat-label" data-i18n="delivery.feeLabel">Estimated Delivery Fee</div>
+                <div class="calc-stat-value" id="deliveryFeeOut">$7.00</div>
+              </div>
+              <div>
+                <div class="calc-stat-label" data-i18n="delivery.etaLabel">Estimated Arrival</div>
+                <div class="calc-stat-value" style="color:var(--text); font-size:1.35rem;" data-i18n="delivery.etaVal">30 – 45 min</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="partners-card">
+            <div>
+              <h3 style="font-family:var(--font-display); font-size:1.4rem; margin:0 0 8px;" data-i18n="delivery.partnersTitle">Also Available On</h3>
+              <p style="color:var(--text-muted); font-size:0.9rem; margin:0;" data-i18n="delivery.partnersSub">Prefer ordering through your favourite delivery app? Find Farmhouse Pizza &amp; Donair on all major Okanagan platforms:</p>
+
+              <div class="partner-list">
+                <a href="https://www.farmhousepizzaanddonair.com/online-ordering" target="_blank" rel="noopener noreferrer" class="partner-row" style="border-color:var(--primary);">
+                  <span data-i18n="delivery.orderDirect">Order Direct (Best Value)</span>
+                  <span class="item-badge fav" data-i18n="delivery.directBadge">Best Price</span>
+                </a>
+                <a href="https://www.doordash.com/" target="_blank" rel="noopener noreferrer" class="partner-row" translate="no">
+                  <span>DoorDash</span>
+                  <span>→</span>
+                </a>
+                <a href="https://www.skipthedishes.com/" target="_blank" rel="noopener noreferrer" class="partner-row" translate="no">
+                  <span>SkipTheDishes</span>
+                  <span>→</span>
+                </a>
+                <a href="https://www.ubereats.com/" target="_blank" rel="noopener noreferrer" class="partner-row" translate="no">
+                  <span>Uber Eats</span>
+                  <span>→</span>
+                </a>
+              </div>
+            </div>
+            <a href="tel:+12505030110" class="btn btn-primary" style="width:100%;" data-i18n="hero.ctaCall">Call (250) 503-0110</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Local Reviews -->
+    <section class="section section-alt" id="reviews">
+      <div class="container">
+        <div class="section-head center">
+          <div class="eyebrow" data-i18n="reviews.eyebrow">Local Love</div>
+          <h2 class="section-title" data-i18n="reviews.title">Loved Across Vernon &amp; the Okanagan</h2>
+          <p class="section-sub" data-i18n="reviews.sub">Real reasons why families, lunch regulars, and East Coast donair fans keep coming back to Landing Plaza.</p>
+        </div>
+
+        <div class="reviews-grid">
+          <article class="review-card">
+            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p class="review-quote" data-i18n="reviews.r1Quote">Hands down the best donair in Vernon. The in-house sweet sauce is unreal and the portions are huge. We also love the Farmhouse Supreme pizza — crispy thin crust every single time.</p>
+            <div>
+              <div class="review-author" data-i18n="reviews.r1Author">Jordan M.</div>
+              <div class="review-source" data-i18n="reviews.r1Source">Vernon Regular · Google Review</div>
+            </div>
+          </article>
+
+          <article class="review-card">
+            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p class="review-quote" data-i18n="reviews.r2Quote">You can actually taste the difference in their scratch-made dough and real Canadian cheese. The huge slices at lunch are unbeatable value and the staff are always genuinely welcoming.</p>
+            <div>
+              <div class="review-author" data-i18n="reviews.r2Author">Chantal B.</div>
+              <div class="review-source" data-i18n="reviews.r2Source">Okanagan Landing · Local Guide</div>
+            </div>
+          </article>
+
+          <article class="review-card">
+            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p class="review-quote" data-i18n="reviews.r3Quote">Ordered the Game Night Deal with an Extra Large Donair Pizza and dry ribs for the family — arrived piping hot via their in-house driver in 35 minutes. Our Friday night go-to!</p>
+            <div>
+              <div class="review-author" data-i18n="reviews.r3Author">Derek K.</div>
+              <div class="review-source" data-i18n="reviews.r3Source">Coldstream, BC · Verified Diner</div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="section-head center">
+          <div class="eyebrow" data-i18n="faq.eyebrow">Good to Know</div>
+          <h2 class="section-title" data-i18n="faq.title">Frequently Asked Questions</h2>
+        </div>
+
+        <div class="faq-list">
+          <div class="faq-item">
+            <button type="button" class="faq-btn" aria-expanded="false">
+              <span data-i18n="faq.q1">Do you offer gluten-free, vegetarian, or halal options?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer"><div class="faq-answer-inner" data-i18n="faq.a1">Yes! We offer Gluten-Free pizza crusts (Medium), Gluten-Free wraps for small donairs (+$2.50), plenty of vegetarian pizzas and falafel wraps, vegan options, and Halal oven-baked chicken &amp; rice bowls.</div></div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-btn" aria-expanded="false">
+              <span data-i18n="faq.q2">How does your in-house delivery pricing work?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer"><div class="faq-answer-inner" data-i18n="faq.a2">Our in-house delivery starts at $7.00 for the first 6 km from Landing Plaza (#110-5301 25th Ave), plus $1.00 for each additional kilometre. Ordering direct saves you third-party app fees!</div></div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-btn" aria-expanded="false">
+              <span data-i18n="faq.q3">When is Pizza by the Huge Slice available?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer"><div class="faq-answer-inner" data-i18n="faq.a3">We serve fresh, oversized slices daily from 11:00 AM to 3:00 PM for quick dine-in or takeout.</div></div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-btn" aria-expanded="false">
+              <span data-i18n="faq.q4">How does the Farmhouse Rewards loyalty program work?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer"><div class="faq-answer-inner" data-i18n="faq.a4">Sign up on our site to receive 500 bonus points immediately. You earn 5 points for every $1 spent on restaurant orders, and every 1,000 points redeems for a $5.00 discount.</div></div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-btn" aria-expanded="false">
+              <span data-i18n="faq.q5">What sauces do you make in-house?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer"><div class="faq-answer-inner" data-i18n="faq.a5">We craft our signature Sweet Donair Sauce, Tzatziki, Dill, and Creamy Sriracha fresh in-house — available on your donairs or as extra dipping containers.</div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Location & Hours -->
+    <section class="section section-alt" id="location">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">📍 <span data-i18n="location.eyebrow">Visit Us</span></div>
+            <h2 class="section-title" data-i18n="location.title">Landing Plaza, Vernon BC</h2>
+            <p class="section-sub" data-i18n="location.sub">Easy parking right off 25th Avenue — dine-in, quick pickup (up to 30 min), or fast doorstep delivery.</p>
+          </div>
+        </div>
+
+        <div class="location-grid">
+          <div class="hours-card">
+            <h3 style="font-family:var(--font-display); font-size:1.35rem; margin:0;" data-i18n="location.hoursTitle">Hours of Operation</h3>
+            <table class="hours-table">
+              <tbody>
+                <tr>
+                  <td data-i18n="location.monThu">Monday – Thursday</td>
+                  <td data-i18n="location.monThuTime">11:00 AM – 8:00 PM</td>
+                </tr>
+                <tr>
+                  <td data-i18n="location.fri">Friday</td>
+                  <td data-i18n="location.friTime">11:00 AM – 9:00 PM</td>
+                </tr>
+                <tr>
+                  <td data-i18n="location.satSun">Saturday &amp; Sunday</td>
+                  <td data-i18n="location.satSunTime">3:00 PM – 8:00 PM</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div style="margin-bottom:16px;">
+              <div style="font-size:0.78rem; text-transform:uppercase; letter-spacing:0.06em; color:var(--text-subtle);" data-i18n="location.addressTitle">Address</div>
+              <div style="font-weight:700;" data-i18n="location.addressVal">Landing Plaza, #110-5301 25th Ave, Vernon, BC V1T 9R1</div>
+            </div>
+
+            <div style="margin-bottom:24px;">
+              <div style="font-size:0.78rem; text-transform:uppercase; letter-spacing:0.06em; color:var(--text-subtle);" data-i18n="location.phoneTitle">Phone</div>
+              <a href="tel:+12505030110" style="font-family:var(--font-mono); font-size:1.15rem; font-weight:800; color:var(--primary);">+1 (250) 503-0110</a>
+            </div>
+
+            <div style="display:flex; gap:10px; flex-wrap:wrap;">
+              <a href="https://maps.google.com/?q=5301+25+Ave,+Vernon,+BC+V1T+9R1" target="_blank" rel="noopener noreferrer" class="btn btn-primary" data-i18n="location.directionsBtn">Open in Google Maps</a>
+              <a href="tel:+12505030110" class="btn btn-secondary" data-i18n="location.callBtn">Call to Order</a>
+            </div>
+          </div>
+
+          <div class="map-frame">
+            <iframe
+              title="Farmhouse Pizza and Donair — Landing Plaza, Vernon BC"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              src="https://www.openstreetmap.org/export/embed.html?bbox=-119.3175%2C50.2525%2C-119.2975%2C50.2640&amp;layer=mapnik&amp;marker=50.2584%2C-119.3075">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Local SEO Hub -->
+    <section class="seo-hub" aria-label="Service area">
+      <div class="container">
+        <h2 style="font-family:var(--font-display); font-size:1.25rem; margin:0 0 8px;" data-i18n="seoHub.title">Serving Vernon &amp; the North Okanagan</h2>
+        <p style="color:var(--text-muted); font-size:0.88rem; margin:0; max-width:860px;" data-i18n="seoHub.desc">Farmhouse Pizza and Donair proudly serves fresh handcrafted thin-crust pizza, East Coast beef &amp; chicken donairs, calzones, poutine, wings, and halal rice bowls across Vernon, Okanagan Landing, Bella Vista, Coldstream, BX, and Lavington, BC.</p>
+        <div class="seo-tags" translate="no">
+          <span class="seo-tag">Vernon BC Pizza</span>
+          <span class="seo-tag">East Coast Donair Vernon</span>
+          <span class="seo-tag">Landing Plaza Restaurant</span>
+          <span class="seo-tag">Scratch-Made Thin Crust</span>
+          <span class="seo-tag">100% Canadian Cheese</span>
+          <span class="seo-tag">Gluten-Free Pizza Vernon</span>
+          <span class="seo-tag">Halal Chicken &amp; Rice</span>
+          <span class="seo-tag">Pizza by the Slice Vernon</span>
+          <span class="seo-tag">Coldstream &amp; Okanagan Landing Delivery</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="#top" class="brand" style="margin-bottom:14px;" translate="no">
+            <img src="images/logo.png" alt="Farmhouse Pizza and Donair" class="brand-logo" width="44" height="44" />
+            <div class="brand-text">
+              <span class="brand-name">Farmhouse Pizza &amp; Donair</span>
+              <span class="brand-sub">Vernon, BC</span>
+            </div>
+          </a>
+          <p style="color:var(--text-muted); font-size:0.88rem; max-width:300px;" data-i18n="footer.desc">Quality ingredients, 6-ingredient scratch-made dough, 100% Canadian cheese, and friendly Vernon hospitality at Landing Plaza.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-i18n="footer.colMenu">Menu</h4>
+          <ul>
+            <li><a href="#menu" data-jump-cat="pizzas" data-i18n="menu.catPizzas">Pizzas</a></li>
+            <li><a href="#menu" data-jump-cat="donairs" data-i18n="menu.catDonairs">Donairs &amp; Wraps</a></li>
+            <li><a href="#menu" data-jump-cat="calzones" data-i18n="menu.catCalzones">Calzones &amp; Strombolis</a></li>
+            <li><a href="#menu" data-jump-cat="wings" data-i18n="menu.catWings">Wings &amp; Dry Ribs</a></li>
+            <li><a href="#menu" data-jump-cat="deals" data-i18n="menu.catDeals">Family Deals &amp; Kids</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-i18n="footer.colInfo">Quick Links</h4>
+          <ul>
+            <li><a href="#rewards" data-i18n="nav.specials">Slices &amp; Rewards</a></li>
+            <li><a href="#delivery" data-i18n="nav.delivery">Delivery</a></li>
+            <li><a href="#reviews" data-i18n="nav.reviews">Reviews</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#location" data-i18n="nav.location">Hours &amp; Map</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-i18n="footer.colOrder">Order &amp; Contact</h4>
+          <ul>
+            <li><a href="https://www.farmhousepizzaanddonair.com/online-ordering" target="_blank" rel="noopener noreferrer" data-i18n="nav.orderNow">Order Online</a></li>
+            <li><a href="https://www.farmhousepizzaanddonair.com/loyalty" target="_blank" rel="noopener noreferrer">Farmhouse Rewards</a></li>
+            <li><a href="tel:+12505030110">+1 (250) 503-0110</a></li>
+            <li><a href="https://maps.google.com/?q=5301+25+Ave,+Vernon,+BC+V1T+9R1" target="_blank" rel="noopener noreferrer">#110-5301 25th Ave, Vernon</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span data-i18n="footer.rights">© 2026 Farmhouse Pizza and Donair · Vernon, BC. All rights reserved.</span>
+        <span data-i18n="footer.credit">Modern Bilingual Redesign Concept by LivingPixel Studios</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Order Tray Slide-Over Drawer -->
+  <div class="tray-backdrop" id="trayBackdrop" aria-hidden="true">
+    <aside class="tray-panel" role="dialog" aria-label="Order estimation tray">
+      <div class="tray-head">
+        <strong style="font-family:var(--font-display); font-size:1.2rem;" data-i18n="tray.title">Your Order Tray</strong>
+        <button type="button" class="icon-btn" id="closeTrayBtn" aria-label="Close tray">✕</button>
+      </div>
+      <div class="tray-body" id="trayBody"></div>
+      <div class="tray-foot">
+        <div style="display:flex; justify-content:space-between; font-size:0.88rem; color:var(--text-muted);">
+          <span data-i18n="tray.subtotal">Estimated Subtotal</span>
+          <span id="traySubtotal" style="font-family:var(--font-mono);">$0.00</span>
+        </div>
+        <div style="display:flex; justify-content:space-between; font-size:0.88rem; color:var(--text-muted);">
+          <span data-i18n="tray.deliveryEst">Est. In-House Delivery</span>
+          <span id="trayDelivery" style="font-family:var(--font-mono);">$0.00</span>
+        </div>
+        <div class="tray-total-row">
+          <span data-i18n="tray.total">Estimated Total</span>
+          <span id="trayTotal" style="font-family:var(--font-mono); color:var(--primary);">$0.00</span>
+        </div>
+        <a href="https://www.farmhousepizzaanddonair.com/online-ordering" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="width:100%;" data-i18n="tray.checkoutBtn">Order on Official Site</a>
+        <a href="tel:+12505030110" class="btn btn-secondary" style="width:100%;" data-i18n="tray.callBtn">Call (250) 503-0110 to Place Order</a>
+        <button type="button" id="clearTrayBtn" style="background:transparent; border:0; color:var(--text-subtle); font-size:0.8rem; cursor:pointer; padding:4px;" data-i18n="tray.clearBtn">Clear Tray</button>
+      </div>
+    </aside>
+  </div>
+
+  <!-- Toast -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/translations.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
