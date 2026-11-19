@@ -1,0 +1,47 @@
+Subject: A Bilingual, Fast & SEO-Powered Website Redesign Concept for Down Under Pipe Inspection Ltd. (Vernon, BC)
+
+Hello Mark & the Down Under Pipe Inspection team,
+
+Since 1998, Down Under Pipe Inspection Ltd. has built a strong reputation in Vernon and across the Okanagan for honest diagnostics, robotic CCTV sewer inspections (50–900 mm), root cutting, locating, and trenchless CIPP pipe relining that saves homeowners' driveways and gardens.
+
+While reviewing your Facebook page (facebook.com/downunderpipe) and current online presence, I saw an opportunity to convert more local Google searches and mobile visitors into direct calls to (250) 938-1213. To show what's possible, I built a complete, working redesign prototype tailored to your real equipment and services:
+
+Live Preview (English): https://tatran.github.io/redesign/downunderpipe/
+Live Preview (French):  https://tatran.github.io/redesign/downunderpipe/?lang=fr
+
+What's Included in Your New Redesign Prototype:
+1. Interactive Pipe Diagnostic & Equipment Matcher — Residential, commercial, and municipal visitors pick their pipe size and symptom to see whether your Vivax Push Camera (50–150 mm) or Rovver Robotic Crawler (150–900 mm) fits, with 1-tap call and pre-filled inquiry email buttons.
+2. Trenchless CIPP vs. Traditional Excavation Comparison — Clearly explains how cured-in-place relining and spot patches protect driveways, trees, and landscaping.
+3. Full English + French Bilingual Support — 1-click EN/FR toggle with complete translation parity.
+4. Dark & Light Theme Switcher — Subsurface Slate Dark Mode & Blueprint Daylight Light Mode with persistent preference.
+5. Complete Local Vernon & Okanagan SEO — Schema.org Plumber/LocalBusiness, Service catalog, FAQPage, and BreadcrumbList JSON-LD structured data, geo meta tags, hreflang, sitemap.xml, and robots.txt.
+6. Embedded Vernon Office Map & 1-Tap Contact — Direct call to (250) 938-1213, email downunderpi@gmail.com, and Baker Hogg Rd directions.
+
+Would you have 10 minutes this week for a quick, zero-obligation walkthrough? Simply reply to this email and let me know a time that works for you.
+
+Warm regards,
+
+Ing. Luboš Kostroš
+LivingPixel Studios
+Email: info@livingpixelstudios.com
+Web: https://livingpixelstudios.com/
+
+---
+VERSION FRANÇAISE (Résumé)
+
+Objet : Un nouveau concept de site bilingue et optimisé SEO pour Down Under Pipe Inspection Ltd. (Vernon, C.-B.)
+
+Bonjour Mark et l'équipe de Down Under Pipe Inspection,
+
+J'ai préparé un prototype de refonte moderne pour mettre en valeur votre expertise depuis 1998 à Vernon et dans l'Okanagan : inspection par caméra CCTV (Vivax et Rovver), chemisage sans tranchée CIPP, coupe de racines et localisation souterraine.
+
+Aperçu en ligne (Français) : https://tatran.github.io/redesign/downunderpipe/?lang=fr
+
+Le prototype inclut un sélecteur interactif d'équipement, un comparatif CIPP sans tranchée, un mode Sombre/Clair, un basculement instantané EN/FR ainsi qu'une optimisation SEO locale complète (Schema.org, sitemap.xml, robots.txt).
+
+Seriez-vous disponible 10 minutes cette semaine pour une brève présentation sans engagement ?
+
+Cordialement,
+Ing. Luboš Kostroš · LivingPixel Studios · info@livingpixelstudios.com
+---
+Down Under Pipe Inspection Ltd. · 7654 Baker Hogg Rd, Vernon, BC V1B 3S3 · (250) 938-1213
