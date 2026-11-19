@@ -4,28 +4,24 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://www.strechymedo.com/</loc>
-    <lastmod>2026-11-16</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="sk" href="https://www.strechymedo.com/#sk" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.strechymedo.com/#en" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.strechymedo.com/#de" />
-    <xhtml:link rel="alternate" hreflang="pl" href="https://www.strechymedo.com/#pl" />
-    <xhtml:link rel="alternate" hreflang="hu" href="https://www.strechymedo.com/#hu" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://www.strechymedo.com/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.strechymedo.com/" />
     <image:image>
       <image:loc>https://www.strechymedo.com/images/project_01_levoca_1.jpg</image:loc>
-      <image:title>Nová strecha rodinného domu Levoča - Strechy Medo</image:title>
+      <image:title>Nová strecha rodinného domu Levoča - Strechy Medo Poprad</image:title>
       <image:caption>Kompletná realizácia novej strechy s pálenou škridlou a klampiarskymi prvkami</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://www.strechymedo.com/images/project_54_presov_titanzinok_1.jpg</image:loc>
-      <image:title>Falcovaný titánzinok a klampiarske práce Prešov</image:title>
+      <image:title>Falcovaný titánzinok a klampiarske práce Prešov a Poprad</image:title>
       <image:caption>Špičkové klampiarstvo s dvojitou stojatou drážkou z titánzinku</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://www.strechymedo.com/images/project_34_lopusna_dolina_1.jpg</image:loc>
-      <image:title>Drevenica Lopušná Dolina - Plastový šindeľ</image:title>
+      <image:title>Drevenica Lopušná Dolina - Plastový šindeľ Vysoké Tatry</image:title>
       <image:caption>Pokládka bezúdržbového plastového šindľa pre horské chaty a zruby</image:caption>
     </image:image>
     <image:image>

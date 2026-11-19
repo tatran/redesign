@@ -6,8 +6,8 @@
 const translations = {
   "sk": {
     "meta": {
-      "title": "Strechy Medo | Klampiari & Strechári Poprad • Nová strecha, oprava a krytiny",
-      "desc": "Hľadáte spoľahlivých strechárov a klampiarov? Strechy Medo zabezpečuje výstavbu novej strechy na kľúč, expresné opravy zatekajúcich striech, falcovaný titánzinok a strešné krytiny v Poprade, Tatrách a celej SR. Získajte bezplatnú obhliadku a kalkuláciu!"
+      "title": "Strechy Medo Poprad | Klampiari & Strechári • Nová strecha",
+      "desc": "Profesionálni strechári a klampiari pre Poprad a Tatry. Nové strechy na kľúč, opravy zatekania a falcovaný titánzinok. Získajte bezplatnú obhliadku do 24h!"
     },
     "topbar": {
       "badge": "⚡ Bezplatná obhliadka",
@@ -27,7 +27,7 @@ const translations = {
       "callUs": "Zavolať teraz"
     },
     "hero": {
-      "badge": "🛡️ Poctivé remeslo pod Vysokými Tatrami",
+      "badge": "🛡️ Klampiari & strechári Poprad • Vysoké Tatry",
       "title": "Strechy pripravené na",
       "titleHighlight": "tatranské zimy.",
       "subtitle": "Kompletné realizácie a rekonštrukcie striech, prémiové falcované titánzinky, plastové i asfaltové šindle, precízne klampiarske prvky a nekompromisné hydroizolácie.",
@@ -329,8 +329,8 @@ const translations = {
   },
   "en": {
     "meta": {
-      "title": "Strechy Medo | Master Roofers & Tinsmiths Poprad • New Roof, Repair & Roofing",
-      "desc": "Looking for expert roofers and tinsmiths? Strechy Medo delivers turnkey new roofs, fast leak repairs, standing seam titanzinc, and roofing materials in Poprad, the High Tatras, and all of Slovakia. Get a free quote!"
+      "title": "Strechy Medo Poprad | Roofers & Tinsmiths Slovakia",
+      "desc": "Master roofers & tinsmiths in Poprad & High Tatras. Turnkey roof construction, standing seam titanium zinc, and leak repairs. Free quote within 24h!"
     },
     "topbar": {
       "badge": "⚡ Free Inspection",
@@ -350,7 +350,7 @@ const translations = {
       "callUs": "Call Now"
     },
     "hero": {
-      "badge": "🛡️ Honest Craftsmanship Beneath the High Tatras",
+      "badge": "🛡️ Roofers & Tinsmiths Poprad • High Tatras",
       "title": "Roofs engineered for",
       "titleHighlight": "harsh alpine winters.",
       "subtitle": "Complete new installations and roof restorations, premium standing seam titanzinc, synthetic and bitumen shingles, custom chimney craft, and zero-compromise waterproofing.",
@@ -652,8 +652,8 @@ const translations = {
   },
   "de": {
     "meta": {
-      "title": "Strechy Medo | Dachdecker & Spengler Poprad • Neues Dach, Sanierung & Dacheindeckung",
-      "desc": "Suchen Sie zuverlässige Dachdecker und Spengler? Strechy Medo bietet schlüsselfertige neue Dächer, schnelle Dachreparaturen bei Undichtigkeiten, Stehfalz-Titanzink und Dacheindeckungen in Poprad, der Hohen Tatra und der Slowakei. Kostenlose Beratung!"
+      "title": "Strechy Medo Poprad | Dachdecker & Spengler Slowakei",
+      "desc": "Meisterhafte Dachdecker & Spengler in Poprad und der Hohen Tatra. Neues Dach schlüsselfertig, Titanzink-Stehfalz und Reparaturen. Kostenlose Beratung!"
     },
     "topbar": {
       "badge": "⚡ Kostenlose Besichtigung",
@@ -673,7 +673,7 @@ const translations = {
       "callUs": "Jetzt anrufen"
     },
     "hero": {
-      "badge": "🛡️ Ehrliches Handwerk am Fuße der Hohen Tatra",
+      "badge": "🛡️ Dachdecker & Spengler Poprad • Hohe Tatra",
       "title": "Dächer gerüstet für",
       "titleHighlight": "alpine Winterstürme.",
       "subtitle": "Komplette Neueindeckungen und Sanierungen, hochwertiger Stehfalz aus Titanzink, Schindeln für Holzhäuser, maßgeschneiderte Kaminverkleidungen und kompromisslose Bauwerksabdichtung.",
@@ -975,8 +975,8 @@ const translations = {
   },
   "pl": {
     "meta": {
-      "title": "Strechy Medo | Dekarze & Blacharze Poprad • Nowy dach, naprawa i pokrycia dachowe",
-      "desc": "Szukasz sprawdzonych dekarzy i blacharzy? Strechy Medo realizuje nowe dachy pod klucz, szybkie naprawy przeciekających dachów, blachę na rąbek z tytan-cynku i pokrycia dachowe w Popradzie, Tatrach i na całej Słowacji. Zamów bezpłatny obmiar!"
+      "title": "Strechy Medo Poprad | Dekarze & Blacharze Słowacja",
+      "desc": "Profesjonalni dekarze i blacharze Poprad i Tatry. Nowe dachy pod klucz, tytan-cynk na rąbek i szybkie usuwanie przecieków. Bezpłatny obmiar do 24h!"
     },
     "topbar": {
       "badge": "⚡ Bezpłatny pomiar",
@@ -996,7 +996,7 @@ const translations = {
       "callUs": "Zadzwoń teraz"
     },
     "hero": {
-      "badge": "🛡️ Rzetelne rzemiosło pod Wysokimi Tatrami",
+      "badge": "🛡️ Dekarze & Blacharze Poprad • Tatry",
       "title": "Dachy przygotowane na",
       "titleHighlight": "tatrzańskie zimy.",
       "subtitle": "Kompleksowe wykonawstwo i renowacje dachów, luksusowy rąbek stojący z tytan-cynku, gonty syntetyczne i bitumiczne, precyzyjne obróbki blacharskie i bezkompromisowe hydroizolacje.",
@@ -1298,8 +1298,8 @@ const translations = {
   },
   "hu": {
     "meta": {
-      "title": "Strechy Medo | Tetőfedők & Bádogosok Poprád • Új tető, tetőjavítás és tetőfedő anyagok",
-      "desc": "Megbízható tetőfedőt és bádogost keres? A Strechy Medo kulcsrakész új tetők kivitelezését, gyors beázásjavítást, korcolt titáncink lemezfedést és tetőfedő anyagokat kínál Poprádon, a Magas-Tátrában és egész Szlovákiában. Kérjen ingyenes felmérést!"
+      "title": "Strechy Medo Poprád | Tetőfedők & Bádogosok Tátra",
+      "desc": "Profi tetőfedő és bádogos Poprádon és a Magas-Tátrában. Kulcsrakész új tető, korcolt titáncink és gyors beázásjavítás. Ingyenes felmérés 24 órán belül!"
     },
     "topbar": {
       "badge": "⚡ Ingyenes felmérés",
@@ -1319,7 +1319,7 @@ const translations = {
       "callUs": "Hívjon most"
     },
     "hero": {
-      "badge": "🛡️ Becsületes mestermunka a Magas-Tátra lábánál",
+      "badge": "🛡️ Tetőfedők & Bádogosok Poprád • Magas-Tátra",
       "title": "Tetők, amelyek ellenállnak a",
       "titleHighlight": "tátrai teleknek.",
       "subtitle": "Komplett új tetők kivitelezése és felújítása, prémium korcolt titáncink lemez, műanyag és bitumenes zsindelyek, precíz bádogos elemek és kompromisszummentes vízszigetelés.",
