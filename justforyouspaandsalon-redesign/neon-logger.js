@@ -13,8 +13,27 @@
 const fs = require('fs');
 const path = require('path');
 
-// Extract connection string from environment
-const DATABASE_URL = process.env.DATABASE_URL || process.env.NEON_DATABASE_URL || '';
+// Extract connection string from environment, CLI argument, or neon-config.js
+let DATABASE_URL = process.env.DATABASE_URL || process.env.NEON_DATABASE_URL || '';
+
+// Check if passed via command line argument (e.g. node neon-logger.js "postgres://...")
+if (process.argv[2] && process.argv[2].startsWith('postgres')) {
+  DATABASE_URL = process.argv[2];
+}
+
+// Or read from neon-config.js if defined
+if (!DATABASE_URL) {
+  try {
+    const configPath = path.join(__dirname, 'neon-config.js');
+    if (fs.existsSync(configPath)) {
+      const configContent = fs.readFileSync(configPath, 'utf8');
+      const match = configContent.match(/DATABASE_URL:\s*["'](postgres[^"']+)["']/);
+      if (match && match[1]) {
+        DATABASE_URL = match[1];
+      }
+    }
+  } catch (e) {}
+}
 
 /**
  * Parse a postgres:// connection string into parts

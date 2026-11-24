@@ -448,24 +448,70 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 2. Dispatch to Neon DB Logging Endpoint
     let loggedToBackend = false;
-    try {
-      const backendResponse = await fetch('/api/log', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(logPayload),
-        signal: AbortSignal.timeout(4000)
-      });
+    let insertedRowId = null;
 
-      if (backendResponse.ok) {
-        const resData = await backendResponse.json();
-        loggedToBackend = true;
-        console.log('✅ Successfully recorded in Neon DB via /api/log:', resData);
+    // A. Direct Client-to-Neon HTTP Execution if window.NEON_CONFIG.DATABASE_URL is provided
+    const clientDbUrl = window.NEON_CONFIG?.DATABASE_URL || '';
+    if (clientDbUrl && clientDbUrl.startsWith('postgres')) {
+      try {
+        const parsedUrl = new URL(clientDbUrl);
+        const host = parsedUrl.hostname;
+        const password = decodeURIComponent(parsedUrl.password);
+
+        // Sanitize strings for SQL query
+        const safeDomain = domainUrl.replace(/'/g, "''");
+        const safeUserAgent = (navigator.userAgent || '').replace(/'/g, "''");
+        const safeReferrer = (referrer || '').replace(/'/g, "''");
+
+        const sql = `INSERT INTO page_access_logs (access_time, ip_address, domain_url, user_agent, referrer, language, theme, screen_resolution) VALUES ('${accessTime}', '${ipAddress}', '${safeDomain}', '${safeUserAgent}', '${safeReferrer}', '${language}', '${currentTheme}', '${logPayload.screen_resolution}') RETURNING id, access_time;`;
+
+        const neonDirectRes = await fetch(`https://${host}/sql`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${password}`,
+            'Neon-Connection-String': clientDbUrl
+          },
+          body: JSON.stringify({ query: sql }),
+          signal: AbortSignal.timeout(6000)
+        });
+
+        if (neonDirectRes.ok) {
+          const directData = await neonDirectRes.json();
+          insertedRowId = directData?.rows?.[0]?.id || directData?.[0]?.id || '✓';
+          loggedToBackend = true;
+          console.log(`✅ [Neon Direct] Successfully inserted Row #${insertedRowId} into Neon DB!`, directData);
+        } else {
+          const errTxt = await neonDirectRes.text();
+          console.warn('⚠️ Neon HTTP query rejected:', errTxt);
+        }
+      } catch (directErr) {
+        console.warn('⚠️ Direct Neon HTTP execution failed, trying proxy:', directErr.message);
       }
-    } catch (netErr) {
-      // Running statically, via file://, or before serverless backend is live
-      console.info('ℹ️ Neon DB /api/log endpoint offline or static mode. Storing access record locally & logging details.');
+    }
+
+    // B. Proxy Endpoint (/api/log) fallback
+    if (!loggedToBackend) {
+      try {
+        const proxyEndpoint = window.NEON_CONFIG?.API_ENDPOINT || '/api/log';
+        const backendResponse = await fetch(proxyEndpoint, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(logPayload),
+          signal: AbortSignal.timeout(4000)
+        });
+
+        if (backendResponse.ok) {
+          const resData = await backendResponse.json();
+          loggedToBackend = true;
+          insertedRowId = resData?.data?.result?.rows?.[0]?.id || '✓';
+          console.log('✅ Successfully recorded in Neon DB via API endpoint:', resData);
+        }
+      } catch (netErr) {
+        console.info('ℹ️ /api/log proxy is offline on static host.');
+      }
     }
 
     // 3. Fallback Local Storage Persistence
@@ -478,16 +524,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 4. Update UI Widget in Footer
     if (neonStatusWidget) {
+      const statusText = loggedToBackend 
+        ? `<span style="color:#00E599;">✅ Connected to Neon DB · Row #${insertedRowId || '2+'} inserted</span>` 
+        : (clientDbUrl ? '<span style="color:#F59E0B;">Connecting to Neon...</span>' : '<span style="color:#CBD5E1;">Ready · Add Connection String to log live rows</span>');
+
       neonStatusWidget.innerHTML = `
         <span><strong>Time:</strong> ${new Date(accessTime).toLocaleTimeString()} (${new Date(accessTime).toLocaleDateString()})</span>
         <span><strong>Client IP:</strong> ${ipAddress}</span>
         <span><strong>Domain URL:</strong> ${domainUrl}</span>
-        <span><strong>Status:</strong> ${loggedToBackend ? 'Synced to Neon DB' : 'Logged & Ready for Neon DB'}</span>
+        <span><strong>Neon Status:</strong> ${statusText}</span>
       `;
     }
 
     if (neonStatusBadge) {
-      neonStatusBadge.title = `Logged at ${accessTime} from ${ipAddress}`;
+      if (loggedToBackend) {
+        neonStatusBadge.innerHTML = '<span class="neon-dot"></span> Synced to Neon';
+        neonStatusBadge.style.color = '#00E599';
+      } else {
+        neonStatusBadge.title = 'Configure Neon connection string to stream live visits';
+      }
     }
 
     // Optional subtle developer notification
