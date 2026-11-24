@@ -1185,7 +1185,7 @@ class TravelFunTelemetry {
         const res = await fetch(`https://${host}/sql`, {
           method: 'POST',
           headers: {
-            'Content-Type': 'application/json',
+            'Content-Type': 'text/plain',
             'Neon-Connection-String': dbUrl
           },
           body: JSON.stringify({ query: sql })
@@ -1198,9 +1198,17 @@ class TravelFunTelemetry {
           this.neonStatus = { connected: true, rowId, message: `Pripojené (Riadok #${rowId})` };
           console.log(`✅ [Neon Direct] Successfully inserted Row #${rowId} into Neon DB!`);
           this.updateNeonStatusUI();
+          showToast(`Návšteva zaznamenaná v Neon DB (Riadok #${rowId})`);
+        } else {
+          const errText = await res.text();
+          this.neonStatus = { connected: false, error: true, message: `Chyba HTTP ${res.status}` };
+          console.warn('⚠️ Neon HTTP query rejected:', errText);
+          this.updateNeonStatusUI();
         }
       } catch (err) {
+        this.neonStatus = { connected: false, error: true, message: `Chyba spojenia (${err.message})` };
         console.warn('⚠️ Neon Direct HTTP execution failed:', err.message);
+        this.updateNeonStatusUI();
       }
     }
 
@@ -1209,7 +1217,7 @@ class TravelFunTelemetry {
         const proxyEp = window.NEON_CONFIG?.API_ENDPOINT || '/api/log';
         const res = await fetch(proxyEp, {
           method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
+          headers: { 'Content-Type': 'text/plain' },
           body: JSON.stringify({
             timestamp: accessTime,
             ip_address: ipAddress,
@@ -1234,8 +1242,16 @@ class TravelFunTelemetry {
   updateNeonStatusUI() {
     const el = document.getElementById('telemNeonStatus');
     if (el) {
-      el.textContent = `🟢 ${this.neonStatus.message}`;
-      el.style.color = 'var(--status-green)';
+      if (this.neonStatus.connected) {
+        el.textContent = `🟢 ${this.neonStatus.message}`;
+        el.style.color = 'var(--status-green)';
+      } else if (this.neonStatus.error) {
+        el.textContent = `⚠️ ${this.neonStatus.message}`;
+        el.style.color = 'var(--status-red)';
+      } else {
+        el.textContent = `⏳ ${this.neonStatus.message || 'Pripájanie...'}`;
+        el.style.color = 'var(--brand-orange)';
+      }
     }
   }
 
@@ -1259,7 +1275,7 @@ class TravelFunTelemetry {
       await fetch(`https://${host}/sql`, {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
+          'Content-Type': 'text/plain',
           'Neon-Connection-String': dbUrl
         },
         body: JSON.stringify({ query: sql })
