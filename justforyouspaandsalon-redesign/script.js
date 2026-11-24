@@ -470,7 +470,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const neonDirectRes = await fetch(`https://${host}/sql`, {
           method: 'POST',
           headers: {
-            'Content-Type': 'application/json',
+            'Content-Type': 'text/plain',
             'Neon-Connection-String': clientDbUrl
           },
           body: JSON.stringify({ query: sql })
