@@ -445,6 +445,9 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log('Language & Theme:', `${logPayload.language} (${logPayload.theme})`);
     console.groupEnd();
 
+    // Check if running on local file:// protocol
+    const isLocalFileProtocol = window.location.protocol === 'file:';
+
     // 2. Dispatch to Neon DB Logging Endpoint
     let loggedToBackend = false;
     let insertedRowId = null;
@@ -489,28 +492,32 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
 
-    // B. Proxy Endpoint (/api/log) fallback
+    // B. Fallback to Local Server (/api/log or http://localhost:3000/api/log if on file://)
     if (!loggedToBackend) {
       try {
-        const proxyEndpoint = window.NEON_CONFIG?.API_ENDPOINT || '/api/log';
-        const backendResponse = await fetch(proxyEndpoint, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify(logPayload)
-        });
+        const proxyEndpoints = isLocalFileProtocol 
+          ? ['http://localhost:3000/api/log'] 
+          : [window.NEON_CONFIG?.API_ENDPOINT || '/api/log', 'http://localhost:3000/api/log'];
 
-        if (backendResponse.ok) {
-          const resData = await backendResponse.json();
-          loggedToBackend = true;
-          insertedRowId = resData?.data?.result?.rows?.[0]?.id || '✓';
-          console.log('✅ Successfully recorded in Neon DB via API endpoint:', resData);
-          showToast(isFrench ? `Visite enregistrée via API (Ligne #${insertedRowId})` : `Visit logged via API (Row #${insertedRowId})`, true);
+        for (const ep of proxyEndpoints) {
+          try {
+            const backendResponse = await fetch(ep, {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(logPayload)
+            });
+
+            if (backendResponse.ok) {
+              const resData = await backendResponse.json();
+              loggedToBackend = true;
+              insertedRowId = resData?.data?.result?.rows?.[0]?.id || '✓';
+              console.log('✅ Recorded in Neon DB via local proxy:', resData);
+              showToast(isFrench ? `Visite enregistrée via serveur local (Ligne #${insertedRowId})` : `Visit logged via local server (Row #${insertedRowId})`, true);
+              break;
+            }
+          } catch (e) {}
         }
-      } catch (netErr) {
-        console.info('ℹ️ /api/log proxy is offline on static host.');
-      }
+      } catch (netErr) {}
     }
 
     // 3. Fallback Local Storage Persistence
@@ -523,19 +530,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 4. Update UI Widget in Footer
     if (neonStatusWidget) {
-      const statusText = loggedToBackend 
-        ? `<span style="color:#00E599; font-weight:700;">✅ Synced to Neon DB · Row #${insertedRowId} recorded</span>` 
-        : (errorMessage ? `<span style="color:#EF4444;">Error: ${errorMessage.slice(0, 80)}</span>` : '<span style="color:#F59E0B;">Connecting to Neon...</span>');
+      let statusHtml = '';
+      if (loggedToBackend) {
+        statusHtml = `<span style="color:#00E599; font-weight:700;">✅ Synced to Neon DB · Row #${insertedRowId} recorded</span>`;
+      } else if (isLocalFileProtocol) {
+        statusHtml = `<span style="color:#F59E0B; font-size:0.75rem;">⚠️ Browser sandbox blocks network requests on <code>file:///</code>. Run <code>node server.js</code> or open via <a href="https://livingpixelstudios.com/redesign/justforyouspaandsalon-redesign/" target="_blank" style="color:#E5B27F; text-decoration:underline;">Live Preview URL</a>.</span>`;
+      } else if (errorMessage) {
+        statusHtml = `<span style="color:#EF4444;">Error: ${errorMessage.slice(0, 80)}</span>`;
+      } else {
+        statusHtml = `<span style="color:#F59E0B;">Connecting to Neon...</span>`;
+      }
 
       neonStatusWidget.innerHTML = `
         <span><strong>Time:</strong> ${new Date(accessTime).toLocaleTimeString()} (${new Date(accessTime).toLocaleDateString()})</span>
         <span><strong>Client IP:</strong> ${ipAddress}</span>
         <span><strong>Domain URL:</strong> ${domainUrl}</span>
-        <span><strong>Neon Status:</strong> ${statusText}</span>
-        <div style="margin-top:0.6rem;">
-          <button type="button" id="manualNeonLogBtn" style="padding:0.3rem 0.8rem; border-radius:6px; background:#00E599; color:#121013; font-weight:700; font-size:0.75rem; border:none; cursor:pointer;">
+        <span><strong>Neon Status:</strong> ${statusHtml}</span>
+        <div style="margin-top:0.6rem; display:flex; gap:0.5rem; flex-wrap:wrap;">
+          <button type="button" id="manualNeonLogBtn" style="padding:0.35rem 0.8rem; border-radius:6px; background:#00E599; color:#121013; font-weight:700; font-size:0.75rem; border:none; cursor:pointer;">
             ⚡ Trigger Neon DB Log Now
           </button>
+          ${isLocalFileProtocol ? '<a href="https://livingpixelstudios.com/redesign/justforyouspaandsalon-redesign/" target="_blank" style="padding:0.35rem 0.8rem; border-radius:6px; background:var(--accent-gold); color:#FFF; font-weight:700; font-size:0.75rem; text-decoration:none;">Open Live URL &rarr;</a>' : ''}
         </div>
       `;
 
