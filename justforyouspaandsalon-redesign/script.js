@@ -469,7 +469,6 @@ document.addEventListener('DOMContentLoaded', () => {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
-            'Authorization': `Bearer ${password}`,
             'Neon-Connection-String': clientDbUrl
           },
           body: JSON.stringify({ query: sql }),

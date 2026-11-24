@@ -92,7 +92,6 @@ async function executeNeonSql(sql, params = []) {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-      'Authorization': `Bearer ${dbConfig.password}`,
       'Neon-Connection-String': DATABASE_URL
     },
     body: JSON.stringify({ query })
