@@ -1,0 +1,28 @@
+Subject: Modern Website Redesign & Interactive Package Estimator for Just For You Spa & Salon
+
+Dear Management & Team at Just For You Spa & Salon,
+
+I recently researched top-rated wellness destinations and aesthetic clinics in the North Okanagan and spent time reviewing your website at justforyouspaandsalon.ca.
+
+Serving the Vernon community for over 35 years (since 1987) is an extraordinary achievement. Your clinical standards—from certified HydraFacial MD® and Dermalogica protocols to heated zero-gravity pedicure massage chairs and couples double suites—are reflected in your stellar 5.0-star guest reviews.
+
+Out of appreciation for your decades of care, our studio crafted a complete, fully interactive modern redesign concept built specifically for Just For You:
+
+Live Prototype Link: https://livingpixelstudios.com/redesign/justforyouspaandsalon-redesign/
+Version Française: https://livingpixelstudios.com/redesign/justforyouspaandsalon-redesign/fr/
+
+Key Strategic Upgrades in This Concept:
+1. Interactive Custom Spa Package Estimator: Clients can select multiple treatments (HydraFacial, pedicure, relaxation massage), calculating time and cost in real-time with an instant booking button.
+2. Bilingual English & Canadian French (EN / FR): Welcomes French-speaking tourists, vacationers, and seasonal Okanagan residents with 100% natural localized translations.
+3. Light & Dark Themes: Provides a soothing browsing experience for evening appointment scheduling with persistent user memory.
+4. Transparent Seasonal Hours & Sanitation: Interactive winter vs. spring/summer hours switcher, coupled with dedicated trust badges highlighting your hospital-grade pipe-free pedicure sanitation.
+5. Real-Time Telemetry to Neon DB: Automatically logs timestamp, client IP, and domain URL to a serverless Neon PostgreSQL database.
+
+Would you be open to a brief 10-minute walk-through this week to review the concept together and see how it fits your 2026/2027 goals?
+
+Warmest regards,
+
+LivingPixel Studios Team
+Web Architecture & Brand Redesign Specialists
+Okanagan & British Columbia
+https://livingpixelstudios.com
