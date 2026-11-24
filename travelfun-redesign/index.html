@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html lang="sk" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TRAVELFUN — Cestovná kancelária & agentúra | Objavte svet bez starostí</title>
+  <meta name="description" content="Oficiálny moderný redizajn cestovnej kancelárie TRAVELFUN, s.r.o. Letenky do celého sveta, zájazdy, expedície na Nový Zéland a do Austrálie, firemné cesty a 24/7 asistencia.">
+  <meta name="keywords" content="travelfun, cestovna kancelaria, letenky, novy zeland, australia, safari afrika, liptovsky mikulas, dovolenky, firemne cesty">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23f97316'><path d='M2.5 19.5l19-7.5-19-7.5 2.5 7.5-2.5 7.5zm4.5-6.5l8.5-1-8.5-1v2z'/></svg>">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ==========================================
+       TOP ANNOUNCEMENT & CONTACT BAR
+       ========================================== -->
+  <aside class="top-bar" aria-label="Kontaktné a asistenčné informácie">
+    <div class="container top-bar-inner">
+      <div class="top-bar-left">
+        <a href="tel:+421948050720" class="top-bar-link">
+          <span>📞</span>
+          <span data-i18n="topbar.emergency">24/7 Asistencia na cestách: +421 948 050 720</span>
+        </a>
+        <a href="mailto:info@travelfun.sk" class="top-bar-link">
+          <span>✉️</span>
+          <span data-i18n="topbar.email">info@travelfun.sk</span>
+        </a>
+        <div class="live-badge">
+          <span class="live-dot"></span>
+          <span data-i18n="topbar.status">Otvorené • Sme online pre vás</span>
+        </div>
+      </div>
+
+      <div class="top-bar-right">
+        <!-- Language Selector -->
+        <div class="controls-group">
+          <div class="lang-selector-wrapper">
+            <select class="language-select" aria-label="Vyberte jazyk webu">
+              <option value="sk">🇸🇰 Slovenčina (SK)</option>
+              <option value="en">🇬🇧 English (EN)</option>
+              <option value="de">🇩🇪 Deutsch (DE)</option>
+              <option value="cs">🇨🇿 Čeština (CS)</option>
+              <option value="hu">🇭🇺 Magyar (HU)</option>
+            </select>
+          </div>
+
+          <!-- Dark / Light Theme Toggle Button -->
+          <button type="button" class="theme-toggle-btn" aria-label="Prepnúť farebný režim" title="Prepnúť svetlý / tmavý režim">
+            <span class="theme-icon">🌙</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ==========================================
+       SITE HEADER & MAIN NAVIGATION
+       ========================================== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#home" class="brand-logo" aria-label="TRAVELFUN domovská stránka">
+        <svg class="logo-icon-svg" viewBox="0 0 24 24">
+          <path d="M2.5 19.5l19-7.5-19-7.5 2.5 7.5-2.5 7.5zm4.5-6.5l8.5-1-8.5-1v2z"/>
+        </svg>
+        <div class="brand-text">
+          <span class="brand-title">TRAVEL<span>FUN</span></span>
+          <span class="brand-tagline">Cestovná kancelária</span>
+        </div>
+      </a>
+
+      <nav class="nav-links" id="mainNav">
+        <a href="#tours" class="nav-link" data-i18n="nav.tours">Zájazdy & Expedície</a>
+        <a href="#flights" class="nav-link" data-i18n="nav.flights">Letenky</a>
+        <a href="#services" class="nav-link" data-i18n="nav.services">Služby</a>
+        <a href="#why-us" class="nav-link" data-i18n="nav.whyus">Prečo my?</a>
+        <a href="#trip-planner" class="nav-link" data-i18n="nav.calculator">Kalkulačka cesty</a>
+        <a href="#reviews" class="nav-link" data-i18n="nav.reviews">Recenzie</a>
+        <a href="#contact" class="nav-link" data-i18n="nav.contact">Kontakt</a>
+      </nav>
+
+      <div class="header-actions">
+        <button type="button" class="btn-primary open-inquiry-modal" data-i18n="nav.cta">
+          Nezáväzný dopyt
+        </button>
+        <button type="button" class="mobile-nav-toggle" aria-label="Otvoriť navigačné menu">
+          ☰
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================
+       HERO SECTION WITH MULTI-SEARCH ENGINE
+       ========================================== -->
+  <main id="home">
+    <section class="hero-section">
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-badge-pill" data-i18n="hero.badge">
+            ✈️ Cestovná kancelária & agentúra TRAVELFUN
+          </div>
+          <h1 class="hero-title">
+            <span data-i18n="hero.title">Objavte svet s radosťou a bez starostí</span>
+          </h1>
+          <p class="hero-subtitle" data-i18n="hero.subtitle">
+            Komplexné cestovateľské riešenia od leteniek cez exotické expedície až po firemné cesty na mieru. Zabezpečíme pre vás bezpečný a nezabudnuteľný únik z reality.
+          </p>
+        </div>
+
+        <!-- Interactive Search Card -->
+        <div class="hero-search-card">
+          <div class="hero-tabs-header">
+            <button type="button" class="hero-tab-btn active" data-tab="flights">
+              <span>✈️</span>
+              <span data-i18n="hero.tab.flights">Letenky do sveta</span>
+            </button>
+            <button type="button" class="hero-tab-btn" data-tab="tours">
+              <span>🌴</span>
+              <span data-i18n="hero.tab.tours">Pobyty & Zájazdy</span>
+            </button>
+            <button type="button" class="hero-tab-btn" data-tab="expeditions">
+              <span>🧭</span>
+              <span data-i18n="hero.tab.expeditions">Poznávacie expedície</span>
+            </button>
+            <button type="button" class="hero-tab-btn" data-tab="corporate">
+              <span>💼</span>
+              <span data-i18n="hero.tab.corporate">Firemné cesty (MICE)</span>
+            </button>
+          </div>
+
+          <!-- TAB 1: FLIGHT SEARCH FORM -->
+          <form id="flightSearchForm" class="hero-search-form" data-form-tab="flights">
+            <div class="search-grid-4">
+              <div class="search-field-group">
+                <label for="searchOrigin" class="search-field-label">Odkiaľ</label>
+                <input type="text" id="searchOrigin" class="search-input" value="Viedeň (VIE)" data-i18n-placeholder="search.from" placeholder="Odkiaľ (napr. Viedeň, Bratislava)" required>
+              </div>
+
+              <div class="search-field-group">
+                <label for="searchDest" class="search-field-label">Kam</label>
+                <input type="text" id="searchDest" class="search-input" data-i18n-placeholder="search.to" placeholder="Kam (napr. Sydney, Bangkok, New York)" required>
+              </div>
+
+              <div class="search-field-group">
+                <label for="searchDeptDate" class="search-field-label" data-i18n="search.deptDate">Dátum odletu</label>
+                <input type="date" id="searchDeptDate" class="search-input" value="2026-12-15">
+              </div>
+
+              <div class="search-field-group">
+                <label for="searchRetDate" class="search-field-label" data-i18n="search.retDate">Dátum návratu</label>
+                <input type="date" id="searchRetDate" class="search-input" value="2027-01-05">
+              </div>
+            </div>
+
+            <div class="search-grid-4" style="margin-bottom: 0;">
+              <div class="search-field-group">
+                <label for="searchPassengers" class="search-field-label" data-i18n="search.passengers">Cestujúci</label>
+                <select id="searchPassengers" class="search-select">
+                  <option value="1" data-i18n="search.passengers.opt1">1 Dospelý</option>
+                  <option value="2" selected data-i18n="search.passengers.opt2">2 Dospelí</option>
+                  <option value="4" data-i18n="search.passengers.opt3">Rodina (2+2)</option>
+                  <option value="5" data-i18n="search.passengers.opt4">Skupina (5+)</option>
+                </select>
+              </div>
+
+              <div class="search-field-group">
+                <label for="searchClass" class="search-field-label" data-i18n="search.class">Trieda</label>
+                <select id="searchClass" class="search-select">
+                  <option value="economy" selected data-i18n="search.class.eco">Economy Class</option>
+                  <option value="premium" data-i18n="search.class.prem">Premium Economy</option>
+                  <option value="business" data-i18n="search.class.biz">Business Class</option>
+                </select>
+              </div>
+
+              <div class="search-field-group" style="grid-column: span 2; display: flex; justify-content: flex-end; align-items: flex-end;">
+                <button type="submit" class="btn-primary" style="width: 100%; height: 46px;">
+                  <span>🔍</span>
+                  <span data-i18n="search.btn">Vyhľadať najlepšiu ponuku</span>
+                </button>
+              </div>
+            </div>
+          </form>
+
+          <!-- TAB 2 & 3: TOURS & EXPEDITIONS FORM -->
+          <form id="tourSearchForm" class="hero-search-form hidden" data-form-tab="tours">
+            <div class="search-grid-4">
+              <div class="search-field-group">
+                <label for="tourDestSelect" class="search-field-label">Destinácia</label>
+                <select id="tourDestSelect" class="search-select">
+                  <option value="all">Všetky svetové destinácie</option>
+                  <option value="nz">Nový Zéland & Oceánia</option>
+                  <option value="australia">Austrália (Sydney, Barrier Reef)</option>
+                  <option value="srilanka">Srí Lanka & Maledivy</option>
+                  <option value="patagonia">Čile & Patagónia</option>
+                  <option value="cuba">Kuba & Karibik</option>
+                  <option value="safari">Juhoafrická republika & Namíbia</option>
+                </select>
+              </div>
+
+              <div class="search-field-group">
+                <label for="tourTypeSelect" class="search-field-label">Typ cesty</label>
+                <select id="tourTypeSelect" class="search-select">
+                  <option value="any">Všetky kategórie</option>
+                  <option value="sightseeing">Poznávacie & Expedície</option>
+                  <option value="beach">Oddychové pri mori</option>
+                  <option value="hunting">Poľovnícke a safari</option>
+                  <option value="custom">Individuálne na mieru</option>
+                </select>
+              </div>
+
+              <div class="search-field-group">
+                <label for="tourDurationSelect" class="search-field-label">Dĺžka</label>
+                <select id="tourDurationSelect" class="search-select">
+                  <option value="any">Ľubovoľná dĺžka</option>
+                  <option value="week">Do 8 dní</option>
+                  <option value="twoweeks">9 až 15 dní</option>
+                  <option value="extended">16 a viac dní</option>
+                </select>
+              </div>
+
+              <div class="search-field-group" style="display: flex; align-items: flex-end;">
+                <button type="submit" class="btn-primary" style="width: 100%; height: 46px;">
+                  <span>🌍</span>
+                  <span data-i18n="search.btn">Vyhľadať najlepšiu ponuku</span>
+                </button>
+              </div>
+            </div>
+          </form>
+
+          <!-- TAB 4: CORPORATE TRAVEL TAB -->
+          <div class="hero-search-form hidden" data-form-tab="corporate">
+            <div style="text-align: center; padding: 1rem 0;">
+              <h3 style="font-size: 1.25rem; font-weight: 800; margin-bottom: 0.5rem; color: var(--text-main);">
+                Komplexný manažment pracovných ciest a firemných výjazdov (MICE)
+              </h3>
+              <p style="color: var(--text-muted); font-size: 0.95rem; max-width: 640px; margin: 0 auto 1.5rem auto;">
+                Tvorba cestovnej politiky, zľavy na letenky pre korporátnu klientelu, správa míľových kariet a 24/7 pridelený dispečer pre vašu firmu.
+              </p>
+              <button type="button" class="btn-primary open-inquiry-modal" data-i18n="nav.cta">
+                Požiadať o firemnú ponuku
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- STATS STRIP -->
+        <div class="stats-strip">
+          <div class="stats-grid">
+            <div class="stat-item">
+              <span class="stat-number">15+</span>
+              <span class="stat-label" data-i18n="stats.exp">15+ Rokov na trhu</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">550+</span>
+              <span class="stat-label" data-i18n="stats.airlines">550+ Leteckých spoločností</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">12 500+</span>
+              <span class="stat-label" data-i18n="stats.clients">12 500+ Spokojných cestovateľov</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">24/7/365</span>
+              <span class="stat-label" data-i18n="stats.support">24/7 Osobná podpora v núdzi</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         FEATURED EXPEDITIONS & TOURS
+         ========================================== -->
+    <section id="tours" class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-tag" data-i18n="tours.sectionTag">Inšpirácia na cestovanie</span>
+          <h2 class="section-title" data-i18n="tours.title">Výberové expedície a dovolenky</h2>
+          <p class="section-subtitle" data-i18n="tours.subtitle">
+            Od úchvatného Nového Zélandu cez slnečnú Austráliu až po divočinu Patagónie a exotické ostrovy.
+          </p>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="tours-filters">
+          <button type="button" class="tours-filter-btn active" data-filter="all" data-i18n="tours.filter.all">Všetky ponuky</button>
+          <button type="button" class="tours-filter-btn" data-filter="expeditions" data-i18n="tours.filter.expeditions">Poznávacie expedície</button>
+          <button type="button" class="tours-filter-btn" data-filter="exotic" data-i18n="tours.filter.exotic">Exotika & More</button>
+          <button type="button" class="tours-filter-btn" data-filter="adventure" data-i18n="tours.filter.adventure">Lov & Safari</button>
+          <button type="button" class="tours-filter-btn" data-filter="nature" data-i18n="tours.filter.nature">Hory & Príroda</button>
+        </div>
+
+        <!-- Tours Grid -->
+        <div class="tours-grid">
+          <!-- Tour 1: New Zealand -->
+          <article class="tour-card" data-category="expeditions">
+            <div class="tour-image-wrap">
+              <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=800&q=80" alt="Nový Zéland" class="tour-img" loading="lazy">
+              <span class="tour-badge featured" data-i18n="tours.badge.featured">Bestseller</span>
+            </div>
+            <div class="tour-body">
+              <span class="tour-destination-tag">Nový Zéland & Južný Pacifik</span>
+              <h3 class="tour-card-title" data-i18n="tour1.title">Nový Zéland – Veľký okruh</h3>
+              <p class="tour-card-desc" data-i18n="tour1.desc">
+                Gejzíry Rotorua, ľadovce Južných Álp, fjord Milford Sound a filmový Hobbiton v malých skupinách.
+              </p>
+              <div class="tour-footer">
+                <div class="tour-meta-info">
+                  <span class="tour-duration" data-i18n="tour1.duration">18 dní / 15 nocí</span>
+                  <span class="tour-price" data-i18n="tour1.price">od 3 490 €</span>
+                </div>
+                <button type="button" class="btn-outline tour-inquire-btn" data-tour-title="Nový Zéland – Veľký okruh" data-tour-price="od 3 490 €" data-i18n="tours.btn.detail">
+                  Dopyt
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Tour 2: Australia -->
+          <article class="tour-card" data-category="expeditions">
+            <div class="tour-image-wrap">
+              <img src="https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?auto=format&fit=crop&w=800&q=80" alt="Austrália Sydney" class="tour-img" loading="lazy">
+              <span class="tour-badge" data-i18n="tours.badge.exclusive">Exkluzívne</span>
+            </div>
+            <div class="tour-body">
+              <span class="tour-destination-tag">Austrália & Oceánia</span>
+              <h3 class="tour-card-title" data-i18n="tour2.title">Čarovné miesta Austrálie</h3>
+              <p class="tour-card-desc" data-i18n="tour2.desc">
+                Sydney s Operou, posvätná skala Uluru, šnorchlovanie na Veľkej koralovej bariére a tropický Cairns.
+              </p>
+              <div class="tour-footer">
+                <div class="tour-meta-info">
+                  <span class="tour-duration" data-i18n="tour2.duration">16 dní / 14 nocí</span>
+                  <span class="tour-price" data-i18n="tour2.price">od 3 850 €</span>
+                </div>
+                <button type="button" class="btn-outline tour-inquire-btn" data-tour-title="Čarovné miesta Austrálie" data-tour-price="od 3 850 €" data-i18n="tours.btn.detail">
+                  Dopyt
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Tour 3: Sri Lanka -->
+          <article class="tour-card" data-category="exotic">
+            <div class="tour-image-wrap">
+              <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=800&q=80" alt="Srí Lanka čajové plantáže" class="tour-img" loading="lazy">
+              <span class="tour-badge lastminute" data-i18n="tours.badge.lastminute">Last Minute</span>
+            </div>
+            <div class="tour-body">
+              <span class="tour-destination-tag">Srí Lanka & Indický Oceán</span>
+              <h3 class="tour-card-title" data-i18n="tour3.title">Srí Lanka – Čaj, chrámy a pláže</h3>
+              <p class="tour-card-desc" data-i18n="tour3.desc">
+                Skalná pevnosť Sigiriya, safari slonov v Minneriya, čajové plantáže Ella a oddych pri oceáne.
+              </p>
+              <div class="tour-footer">
+                <div class="tour-meta-info">
+                  <span class="tour-duration" data-i18n="tour3.duration">12 dní / 10 nocí</span>
+                  <span class="tour-price" data-i18n="tour3.price">od 1 690 €</span>
+                </div>
+                <button type="button" class="btn-outline tour-inquire-btn" data-tour-title="Srí Lanka – Čaj, chrámy a pláže" data-tour-price="od 1 690 €" data-i18n="tours.btn.detail">
+                  Dopyt
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Tour 4: Chile & Patagonia -->
+          <article class="tour-card" data-category="nature">
+            <div class="tour-image-wrap">
+              <img src="https://images.unsplash.com/photo-1518457607834-6e8d80c183c5?auto=format&fit=crop&w=800&q=80" alt="Patagonia" class="tour-img" loading="lazy">
+              <span class="tour-badge" data-i18n="tours.badge.exclusive">Exkluzívne</span>
+            </div>
+            <div class="tour-body">
+              <span class="tour-destination-tag">Južná Amerika</span>
+              <h3 class="tour-card-title" data-i18n="tour4.title">Čile & Patagónia – Na konci sveta</h3>
+              <p class="tour-card-desc" data-i18n="tour4.desc">
+                Národný park Torres del Paine, ľadovec Grey, púšť Atacama a pulzujúce Santiago de Chile.
+              </p>
+              <div class="tour-footer">
+                <div class="tour-meta-info">
+                  <span class="tour-duration" data-i18n="tour4.duration">14 dní / 12 nocí</span>
+                  <span class="tour-price" data-i18n="tour4.price">od 3 250 €</span>
+                </div>
+                <button type="button" class="btn-outline tour-inquire-btn" data-tour-title="Čile & Patagónia" data-tour-price="od 3 250 €" data-i18n="tours.btn.detail">
+                  Dopyt
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Tour 5: Cuba -->
+          <article class="tour-card" data-category="exotic">
+            <div class="tour-image-wrap">
+              <img src="https://images.unsplash.com/photo-1503899036084-c55cdd92da26?auto=format&fit=crop&w=800&q=80" alt="Kuba Havana" class="tour-img" loading="lazy">
+              <span class="tour-badge featured" data-i18n="tours.badge.featured">Bestseller</span>
+            </div>
+            <div class="tour-body">
+              <span class="tour-destination-tag">Karibik</span>
+              <h3 class="tour-card-title" data-i18n="tour5.title">Kuba – Čaro koloniálnej Havany</h3>
+              <p class="tour-card-desc" data-i18n="tour5.desc">
+                Klasické americké veterány, tabakové údolie Viñales, Trinidad a all-inclusive pláže Varadera.
+              </p>
+              <div class="tour-footer">
+                <div class="tour-meta-info">
+                  <span class="tour-duration" data-i18n="tour5.duration">11 dní / 9 nocí</span>
+                  <span class="tour-price" data-i18n="tour5.price">od 1 890 €</span>
+                </div>
+                <button type="button" class="btn-outline tour-inquire-btn" data-tour-title="Kuba – Čaro koloniálnej Havany" data-tour-price="od 1 890 €" data-i18n="tours.btn.detail">
+                  Dopyt
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Tour 6: Safari -->
+          <article class="tour-card" data-category="adventure">
+            <div class="tour-image-wrap">
+              <img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=800&q=80" alt="Safari Afrika" class="tour-img" loading="lazy">
+              <span class="tour-badge" data-i18n="tours.badge.exclusive">Exkluzívne</span>
+            </div>
+            <div class="tour-body">
+              <span class="tour-destination-tag">Južná Afrika & Namíbia</span>
+              <h3 class="tour-card-title" data-i18n="tour6.title">Poľovačky a Safari v Afrike</h3>
+              <p class="tour-card-desc" data-i18n="tour6.desc">
+                Lov a foto-safari v overených revíroch Namíbie a Juhoafrickej republiky pod vedením profi sprievodcov.
+              </p>
+              <div class="tour-footer">
+                <div class="tour-meta-info">
+                  <span class="tour-duration" data-i18n="tour6.duration">9 dní / 7 nocí</span>
+                  <span class="tour-price" data-i18n="tour6.price">od 2 450 €</span>
+                </div>
+                <button type="button" class="btn-outline tour-inquire-btn" data-tour-title="Poľovačky a Safari v Afrike" data-tour-price="od 2 450 €" data-i18n="tours.btn.detail">
+                  Dopyt
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         FLIGHTS & AIRLINE EXPERTISE SECTION
+         ========================================== -->
+    <section id="flights" class="section" style="background-color: var(--bg-surface);">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-tag" data-i18n="flights.title">Letenky do celého sveta bez starostí</span>
+          <h2 class="section-title">Globálna letenková infraštruktúra</h2>
+          <p class="section-subtitle" data-i18n="flights.subtitle">
+            Porovnávame viac ako 550 leteckých spoločností. Garantujeme optimálne prestupy a nonstop asistenciu pri meškaní či zmenách.
+          </p>
+        </div>
+
+        <div class="flights-feature-box">
+          <div class="flights-grid">
+            <div class="flight-perk-card">
+              <div class="perk-icon-wrap">🌐</div>
+              <h3 class="perk-title" data-i18n="flights.f1.title">GDS & Nízkonákladovky</h3>
+              <p class="perk-desc" data-i18n="flights.f1.desc">
+                Prepojenie globálnych systémov Amadeus/Sabre s low-cost aerolinkami pre bezkonkurenčnú cenu.
+              </p>
+            </div>
+
+            <div class="flight-perk-card">
+              <div class="perk-icon-wrap">💎</div>
+              <h3 class="perk-title" data-i18n="flights.f2.title">Správa míľ a vernostných kariet</h3>
+              <p class="perk-desc" data-i18n="flights.f2.desc">
+                Plná administrácia vernostných programov Miles&More, Flying Blue, Skywards a korporátnych profilov.
+              </p>
+            </div>
+
+            <div class="flight-perk-card">
+              <div class="perk-icon-wrap">💺</div>
+              <h3 class="perk-title" data-i18n="flights.f3.title">Online Check-in & Sedadlá</h3>
+              <p class="perk-desc" data-i18n="flights.f3.desc">
+                Bezstarostné odbavenie, rezervácia sedadiel s extra miestom na nohy a špeciálnych jedál vopred.
+              </p>
+            </div>
+
+            <div class="flight-perk-card">
+              <div class="perk-icon-wrap">🚨</div>
+              <h3 class="perk-title" data-i18n="flights.f4.title">24/7 Núdzová záchranná sieť</h3>
+              <p class="perk-desc" data-i18n="flights.f4.desc">
+                Zrušený let? Štrajk? Zmena trasy? Náš dispečing vyrieši náhradné spojenie okamžite bez čakania na linkách.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         COMPREHENSIVE SERVICES PORTFOLIO
+         ========================================== -->
+    <section id="services" class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-tag" data-i18n="services.sectionTag">Komplexné portfólio</span>
+          <h2 class="section-title" data-i18n="services.title">Všetko pre vašu cestu na jednom mieste</h2>
+          <p class="section-subtitle" data-i18n="services.subtitle">
+            Nič nie je nemožné. Šetríme váš drahocenný čas a peniaze s garanciou maximálnej spoľahlivosti.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <!-- Service 1 -->
+          <div class="service-card">
+            <div class="service-icon-box">🛫</div>
+            <h3 class="service-title" data-i18n="services.s1.title">Letenky & Cestovné lístky</h3>
+            <p class="service-desc" data-i18n="services.s1.desc">
+              Kompletný servis leteniek, flexibilné tarify, skupinové rezervácie a optimalizácia letových trás.
+            </p>
+          </div>
+
+          <!-- Service 2 -->
+          <div class="service-card">
+            <div class="service-icon-box">🏨</div>
+            <h3 class="service-title" data-i18n="services.s2.title">Ubytovanie & Hotely</h3>
+            <p class="service-desc" data-i18n="services.s2.desc">
+              Overené hotely, butikové rezorty, privátne vily a lodge od 3* po 5* Deluxe po celom svete.
+            </p>
+          </div>
+
+          <!-- Service 3 -->
+          <div class="service-card">
+            <div class="service-icon-box">🚙</div>
+            <h3 class="service-title" data-i18n="services.s3.title">Prenájom vozidiel a karavanov</h3>
+            <p class="service-desc" data-i18n="services.s3.desc">
+              Autopožičovne, obytné karavany pre rodiny i legendárne motocykle Harley Davidson v USA a Austrálii.
+            </p>
+          </div>
+
+          <!-- Service 4 -->
+          <div class="service-card">
+            <div class="service-icon-box">🛂</div>
+            <h3 class="service-title" data-i18n="services.s4.title">Vízový servis & ESTA</h3>
+            <p class="service-desc" data-i18n="services.s4.desc">
+              Vybavenie turistických aj obchodných víz, elektronické autorizácie ESTA, eTA a konzulárne poradenstvo.
+            </p>
+          </div>
+
+          <!-- Service 5 -->
+          <div class="service-card">
+            <div class="service-icon-box">🛡️</div>
+            <h3 class="service-title" data-i18n="services.s5.title">Cestovné poistenie (ECP)</h3>
+            <p class="service-desc" data-i18n="services.s5.desc">
+              Oficiálny partner Európskej cestovnej poisťovne. Liečebné náklady, storno zájazdu a poistenie batožiny.
+            </p>
+          </div>
+
+          <!-- Service 6 -->
+          <div class="service-card">
+            <div class="service-icon-box">🤝</div>
+            <h3 class="service-title" data-i18n="services.s6.title">Firemné cesty & MICE</h3>
+            <p class="service-desc" data-i18n="services.s6.desc">
+              Komplexná cestovná politika pre firmy, teambuildingy, kongresy, fakturácia a 24/7 manažér pre firmu.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         WHY CHOOSE US (6 PILLARS)
+         ========================================== -->
+    <section id="why-us" class="section" style="background-color: var(--bg-surface);">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-tag" data-i18n="why.sectionTag">Naše prednosti</span>
+          <h2 class="section-title" data-i18n="why.title">Prečo cestovať práve s TRAVELFUN?</h2>
+          <p class="section-subtitle" data-i18n="why.subtitle">
+            Sme tím vášnivých cestovateľov a certifikovaných expertov. Zažite rozdiel osobného prístupu.
+          </p>
+        </div>
+
+        <div class="why-grid">
+          <div class="why-item">
+            <span class="why-num">01</span>
+            <div class="why-content">
+              <h4 data-i18n="why.w1.title">24/7 / 365 Osobná dostupnosť</h4>
+              <p data-i18n="why.w1.desc">Sme k dispozícii non-stop. V prípade meškania, straty batožiny či núdze voláte priamo nášmu tímu, nie robotom.</p>
+            </div>
+          </div>
+
+          <div class="why-item">
+            <span class="why-num">02</span>
+            <div class="why-content">
+              <h4 data-i18n="why.w2.title">Komplexné riešenie bez stresu</h4>
+              <p data-i18n="why.w2.desc">Letenky, hotely, transfery, víza, vstupy i poistenie vyriešite jediným kontaktom z pohodlia domova.</p>
+            </div>
+          </div>
+
+          <div class="why-item">
+            <span class="why-num">03</span>
+            <div class="why-content">
+              <h4 data-i18n="why.w3.title">Flexibilita a program na mieru</h4>
+              <p data-i18n="why.w3.desc">Nechceme vás viazať na nudné katalógové šablóny. Každú trasu vieme upraviť podľa vášho tempa a želaní.</p>
+            </div>
+          </div>
+
+          <div class="why-item">
+            <span class="why-num">04</span>
+            <div class="why-content">
+              <h4 data-i18n="why.w4.title">Dlhoročné praktické skúsenosti</h4>
+              <p data-i18n="why.w4.desc">Poznáme lokálne podmienky, tajné tipy a triky v cieľových destináciách. Odporučujeme len to, čo sme sami zažili.</p>
+            </div>
+          </div>
+
+          <div class="why-item">
+            <span class="why-num">05</span>
+            <div class="why-content">
+              <h4 data-i18n="why.w5.title">Optimálny pomer kvality a ceny</h4>
+              <p data-i18n="why.w5.desc">Vďaka priamym partnerstvám a GDS prístupom vyjednávame výhodnejšie ceny a pridávame hodnotné benefity.</p>
+            </div>
+          </div>
+
+          <div class="why-item">
+            <span class="why-num">06</span>
+            <div class="why-content">
+              <h4 data-i18n="why.w6.title">Overení medzinárodní partneri</h4>
+              <p data-i18n="why.w6.desc">Spolupracujeme s renomovanými lídrami: Adventure Outdoors Tongariro (NZ), Vulpes, G8M8 Australia a Európska cestovná poisťovňa.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         INTERACTIVE TRIP COST ESTIMATOR
+         ========================================== -->
+    <section id="trip-planner" class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-tag" data-i18n="calc.sectionTag">Interaktívny plánovač</span>
+          <h2 class="section-title" data-i18n="calc.title">Orientačná kalkulačka vašej vysnívanej cesty</h2>
+          <p class="section-subtitle" data-i18n="calc.subtitle">
+            Zvoľte parametre vašej cesty a okamžite získajte orientačný rozpočet s možnosťou odoslať dopyt.
+          </p>
+        </div>
+
+        <div class="calculator-card">
+          <div class="calc-grid-2">
+            <div class="calc-controls">
+              <!-- Destination -->
+              <div class="calc-field-group">
+                <label for="calcDest" class="form-label" data-i18n="calc.destLabel">Cieľová destinácia</label>
+                <select id="calcDest" class="form-select">
+                  <option value="nz" selected>Nový Zéland (Severný + Južný ostrov)</option>
+                  <option value="australia">Austrália (Sydney, Barrier Reef, Outback)</option>
+                  <option value="srilanka">Srí Lanka & Exotika</option>
+                  <option value="patagonia">Čile & Patagónia</option>
+                  <option value="cuba">Kuba (Havana & Varadero)</option>
+                  <option value="safari">Safari Afrika (Namíbia / JAR)</option>
+                  <option value="usa_east">USA Východné pobrežie (New York & Niagara)</option>
+                  <option value="europe_med">Stredomorie & Európske ostrovy</option>
+                </select>
+              </div>
+
+              <!-- Days Slider -->
+              <div class="calc-field-group">
+                <div class="calc-label-row">
+                  <span data-i18n="calc.daysLabel">Dĺžka pobytu (dni):</span>
+                  <strong id="calcDaysVal" style="color: var(--brand-orange);">14</strong>
+                </div>
+                <input type="range" id="calcDays" class="calc-range-slider" min="5" max="30" value="14" step="1">
+              </div>
+
+              <!-- Persons & Tier -->
+              <div class="form-grid-2">
+                <div class="calc-field-group">
+                  <label for="calcPersons" class="form-label" data-i18n="calc.personsLabel">Počet osôb:</label>
+                  <input type="number" id="calcPersons" class="form-input" min="1" max="20" value="2">
+                </div>
+
+                <div class="calc-field-group">
+                  <label for="calcTier" class="form-label" data-i18n="calc.tierLabel">Kategória štandardu</label>
+                  <select id="calcTier" class="form-select">
+                    <option value="comfort" selected data-i18n="calc.tier.comfort">Komfort (3-4* hotely)</option>
+                    <option value="premium" data-i18n="calc.tier.premium">Premium (4-5* rezorty)</option>
+                    <option value="luxury" data-i18n="calc.tier.luxury">Luxury Deluxe (5* VIP)</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Checkbox Options -->
+              <div class="calc-checkbox-group">
+                <label class="calc-checkbox-label">
+                  <input type="checkbox" id="calcIncludeFlight" checked>
+                  <span data-i18n="calc.flightInc">Zahrnúť letenky z Viedne/Bratislavy (+ cca 450 - 1100 €/os.)</span>
+                </label>
+                <label class="calc-checkbox-label">
+                  <input type="checkbox" id="calcIncludeInsurance" checked>
+                  <span data-i18n="calc.insureInc">Zahrnúť komplexné cestovné poistenie ECP (+ cca 45 €/os.)</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Result Box -->
+            <div class="calc-result-box">
+              <span class="calc-res-title" data-i18n="calc.resultTitle">Odhadovaný celkový rozpočet:</span>
+              <div class="calc-total-number" id="calcTotalEstimate">6 940 €</div>
+              <div class="calc-per-person">
+                <span id="calcPerPersonEstimate">3 470 €</span> <span data-i18n="calc.perPerson">na osobu</span>
+              </div>
+              <button type="button" id="calcCtaBtn" class="btn-primary" style="width: 100%;" data-i18n="calc.cta">
+                Požiadať o presnú cenovú ponuku
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         TESTIMONIALS & REVIEWS
+         ========================================== -->
+    <section id="reviews" class="section" style="background-color: var(--bg-surface);">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-tag" data-i18n="reviews.sectionTag">Spokojní klienti</span>
+          <h2 class="section-title" data-i18n="reviews.title">Čo o nás hovoria naši cestovatelia</h2>
+        </div>
+
+        <div class="reviews-grid">
+          <!-- Review 1 -->
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text" data-i18n="reviews.r1.text">
+              "Veľký okruh Novým Zélandom bol životný zážitok. Všetky transfery, ubytovania aj letenky sedeli do minúty. Neuveriteľný osobný prístup tímu Travelfun!"
+            </p>
+            <div class="review-author-wrap">
+              <div class="review-author-name" data-i18n="reviews.r1.author">Ing. Peter Kováčik, Bratislava</div>
+              <div class="review-trip-tag" data-i18n="reviews.r1.trip">Poznávací zájazd Nový Zéland</div>
+            </div>
+          </div>
+
+          <!-- Review 2 -->
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text" data-i18n="reviews.r2.text">
+              "Keď nám kvôli počasiu zrušili spoj v Dubaji, pani Lucia zo zákazníckej linky nám do 20 minút prebookovala nový let. Cestovať s Travelfun znamená mať istotu."
+            </p>
+            <div class="review-author-wrap">
+              <div class="review-author-name" data-i18n="reviews.r2.author">Martina & Juraj B., Košice</div>
+              <div class="review-trip-tag" data-i18n="reviews.r2.trip">Exotika Srí Lanka & Maledivy</div>
+            </div>
+          </div>
+
+          <!-- Review 3 -->
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text" data-i18n="reviews.r3.text">
+              "Pre našu firmu zabezpečujú kompletné služobné cesty a medzinárodné konferencie už 4 roky. Profesionálny systém, prehľadné vyúčtovania a okamžitá reakcia."
+            </p>
+            <div class="review-author-wrap">
+              <div class="review-author-name" data-i18n="reviews.r3.author">Róbert Molnár, Konateľ IT spoločnosti</div>
+              <div class="review-trip-tag" data-i18n="reviews.r3.trip">Firemné balíky & Corporate travel</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         CONTACT & INQUIRY SECTION
+         ========================================== -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-tag" data-i18n="contact.sectionTag">Sme tu pre vás</span>
+          <h2 class="section-title" data-i18n="contact.title">Začnite plánovať svoje ďalšie dobrodružstvo</h2>
+          <p class="section-subtitle" data-i18n="contact.subtitle">
+            Zastavte sa u nás na Liptove alebo nám napíšte. Odpovedáme rýchlo a s úsmevom.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Contact Info Card -->
+          <div class="contact-info-card">
+            <div class="info-item">
+              <div class="info-icon">📍</div>
+              <div class="info-text">
+                <h4 data-i18n="contact.addressTitle">Sídlo spoločnosti</h4>
+                <p data-i18n="contact.address">TRAVELFUN, s.r.o., Bodice 189, 031 01 Liptovský Mikuláš, Slovenská republika</p>
+                <p style="font-size: 0.8rem; color: var(--text-subtle); margin-top: 0.25rem;">IČO: 36006491 • DIČ: 2020430016</p>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon">📞</div>
+              <div class="info-text">
+                <h4 data-i18n="contact.phonesTitle">Telefónne linky</h4>
+                <p><a href="tel:+421948050720">+421 948 050 720</a> (Letenky & Expedície)</p>
+                <p><a href="tel:+421948220263">+421 948 220 263</a> (Dovolenky & Zájazdy)</p>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon">✉️</div>
+              <div class="info-text">
+                <h4>E-mail</h4>
+                <p><a href="mailto:info@travelfun.sk">info@travelfun.sk</a></p>
+                <p><a href="mailto:travelfun@travelfun.sk">travelfun@travelfun.sk</a></p>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon">🕒</div>
+              <div class="info-text">
+                <h4 data-i18n="contact.hoursTitle">Dostupnosť servisu</h4>
+                <p data-i18n="contact.hours">Po - Pia: 08:30 - 17:30 • Hotline: 24/7/365</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form Card -->
+          <div class="contact-form-card">
+            <form id="mainContactForm">
+              <div class="form-grid-2">
+                <div class="form-group">
+                  <label for="contactName" class="form-label" data-i18n="contact.form.name">Vaše celé meno</label>
+                  <input type="text" id="contactName" class="form-input" placeholder="Meno a priezvisko" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="contactEmail" class="form-label" data-i18n="contact.form.email">Váš e-mail</label>
+                  <input type="email" id="contactEmail" class="form-input" placeholder="meno@domena.sk" required>
+                </div>
+              </div>
+
+              <div class="form-grid-2">
+                <div class="form-group">
+                  <label for="contactPhone" class="form-label" data-i18n="contact.form.phone">Telefónne číslo</label>
+                  <input type="tel" id="contactPhone" class="form-input" placeholder="+421 9XX XXX XXX">
+                </div>
+
+                <div class="form-group">
+                  <label for="contactInterest" class="form-label" data-i18n="contact.form.interest">Typ služby</label>
+                  <select id="contactInterest" class="form-select">
+                    <option value="expedition" data-i18n="contact.form.optTours">Poznávací zájazd / Expedícia</option>
+                    <option value="flights" data-i18n="contact.form.optFlights">Samostatné letenky</option>
+                    <option value="beach" data-i18n="contact.form.optExotic">Dovolenka pri mori / Exotika</option>
+                    <option value="corporate" data-i18n="contact.form.optCorporate">Firemné cesty & MICE</option>
+                    <option value="custom" data-i18n="contact.form.optCustom">Cesta na mieru</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="contactMessage" class="form-label" data-i18n="contact.form.message">Vaša predstava o ceste (termín, počet osôb, rozpočet...)</label>
+                <textarea id="contactMessage" class="form-textarea" placeholder="Napíšte nám podrobnosti vašej vysnívanej cesty..." required></textarea>
+              </div>
+
+              <div class="form-group">
+                <label class="calc-checkbox-label" style="font-size: 0.8rem;">
+                  <input type="checkbox" required checked>
+                  <span data-i18n="contact.form.consent">Súhlasím so spracovaním osobných údajov na účely vybavenia dopytu.</span>
+                </label>
+              </div>
+
+              <button type="submit" class="btn-primary" style="width: 100%; height: 48px;" data-i18n="contact.form.submit">
+                Odoslať nezáväzný dopyt
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================
+       SITE FOOTER
+       ========================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <!-- Col 1 -->
+        <div class="footer-col">
+          <div class="brand-logo" style="margin-bottom: 1rem;">
+            <svg class="logo-icon-svg" viewBox="0 0 24 24">
+              <path d="M2.5 19.5l19-7.5-19-7.5 2.5 7.5-2.5 7.5zm4.5-6.5l8.5-1-8.5-1v2z"/>
+            </svg>
+            <div class="brand-text">
+              <span class="brand-title">TRAVEL<span>FUN</span></span>
+              <span class="brand-tagline">Cestovná kancelária</span>
+            </div>
+          </div>
+          <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 1.25rem;" data-i18n="footer.desc">
+            Autorizovaná cestovná kancelária a agentúra TRAVELFUN. Váš spoľahlivý partner pre letenky, exotické expedície a bezstarostné cestovanie už vyše 15 rokov.
+          </p>
+        </div>
+
+        <!-- Col 2 -->
+        <div class="footer-col">
+          <h4 data-i18n="footer.quickLinks">Rýchle odkazy</h4>
+          <ul class="footer-links">
+            <li><a href="#tours" data-i18n="nav.tours">Zájazdy & Expedície</a></li>
+            <li><a href="#flights" data-i18n="nav.flights">Letenky</a></li>
+            <li><a href="#services" data-i18n="nav.services">Služby</a></li>
+            <li><a href="#trip-planner" data-i18n="nav.calculator">Kalkulačka cesty</a></li>
+            <li><a href="#contact" data-i18n="nav.contact">Kontakt</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3 -->
+        <div class="footer-col">
+          <h4 data-i18n="footer.destinations">Populárne destinácie</h4>
+          <ul class="footer-links">
+            <li><a href="#tours">Nový Zéland</a></li>
+            <li><a href="#tours">Austrália</a></li>
+            <li><a href="#tours">Srí Lanka & Maledivy</a></li>
+            <li><a href="#tours">Čile & Patagónia</a></li>
+            <li><a href="#tours">Kuba & Karibik</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4 -->
+        <div class="footer-col">
+          <h4 data-i18n="footer.partner">Partnerská sieť</h4>
+          <ul class="footer-links">
+            <li><a href="https://www.europska.sk" target="_blank" rel="noopener">Európska cestovná poisťovňa (ECP)</a></li>
+            <li><a href="http://www.adventureoutdoors.co.nz" target="_blank" rel="noopener">Adventure Outdoors Tongariro NZ</a></li>
+            <li><a href="http://www.vulpes.sk" target="_blank" rel="noopener">Vulpes – Poľovníctvo vo svete</a></li>
+            <li><a href="http://www.g8m8.sk" target="_blank" rel="noopener">G8M8 – Štúdium v Austrálii</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © 2026 TRAVELFUN, s.r.o. <span data-i18n="footer.rights">Všetky práva vyhradené.</span>
+        </div>
+        <div style="display: flex; gap: 1rem; align-items: center;">
+          <span style="font-size: 0.8rem; color: var(--text-subtle);">Bodice 189, 031 01 Liptovský Mikuláš</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================
+       BOOKING / INQUIRY MODAL DIALOG
+       ========================================== -->
+  <div id="inquiryModal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3 id="modalTitle">Nezáväzný dopyt na cestu</h3>
+        <button type="button" id="modalCloseBtn" class="telem-close-btn" aria-label="Zatvoriť dialóg">×</button>
+      </div>
+      <div class="modal-body">
+        <form id="modalInquiryForm">
+          <div class="form-group">
+            <label for="modalName" class="form-label" data-i18n="contact.form.name">Vaše celé meno</label>
+            <input type="text" id="modalName" class="form-input" placeholder="Meno a priezvisko" required>
+          </div>
+
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label for="modalEmail" class="form-label" data-i18n="contact.form.email">Váš e-mail</label>
+              <input type="email" id="modalEmail" class="form-input" placeholder="vas@email.sk" required>
+            </div>
+            <div class="form-group">
+              <label for="modalPhone" class="form-label" data-i18n="contact.form.phone">Telefón</label>
+              <input type="tel" id="modalPhone" class="form-input" placeholder="+421 9XX XXX XXX">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="modalMessage" class="form-label" data-i18n="contact.form.message">Správa / Požiadavka</label>
+            <textarea id="modalMessage" class="form-textarea" required></textarea>
+          </div>
+
+          <button type="submit" class="btn-primary" style="width: 100%; height: 46px;" data-i18n="contact.form.submit">
+            Odoslať dopyt
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       TELEMETRY LIVE HUD & INSPECTOR DRAWER
+       ========================================== -->
+  <button type="button" id="telemetryHudBtn" class="telemetry-floating-btn" aria-label="Zobraziť živú telemetriu">
+    <span data-i18n="telem.hudBtn">⚡ Telemetria live</span>
+    <span class="telem-badge-count" id="telemEventCountBadge">1</span>
+  </button>
+
+  <aside id="telemetryDrawer" class="telemetry-drawer" aria-label="Live Telemetry Inspector">
+    <div class="telem-drawer-header">
+      <h3 data-i18n="telem.drawerTitle">⚡ Telemetry & Analytics</h3>
+      <button type="button" id="telemDrawerClose" class="telem-close-btn" aria-label="Zatvoriť telemetriu">×</button>
+    </div>
+
+    <div class="telem-drawer-body">
+      <!-- Session Stats Card -->
+      <div class="telem-stats-box">
+        <div class="telem-stat-row">
+          <span data-i18n="telem.session">Relácia ID:</span>
+          <span id="telemSessionId">tf_init</span>
+        </div>
+        <div class="telem-stat-row">
+          <span data-i18n="telem.eventsCount">Zaznamenaných:</span>
+          <span id="telemTotalCount">1</span>
+        </div>
+        <div class="telem-stat-row">
+          <span data-i18n="telem.activeLang">Jazyk:</span>
+          <span id="telemActiveLang">SK</span>
+        </div>
+        <div class="telem-stat-row">
+          <span data-i18n="telem.activeTheme">Téma:</span>
+          <span id="telemActiveTheme">light</span>
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="telem-action-bar">
+        <button type="button" id="telemExportBtn" class="telem-btn" data-i18n="telem.exportBtn">💾 Export JSON</button>
+        <button type="button" id="telemSimBtn" class="telem-btn" data-i18n="telem.simBtn">🎲 Test Event</button>
+        <button type="button" id="telemClearBtn" class="telem-btn" data-i18n="telem.clearBtn">🗑️ Vyčistiť</button>
+      </div>
+
+      <!-- Events List Feed -->
+      <div class="telem-event-list" id="telemEventList">
+        <!-- Populated via script.js -->
+      </div>
+    </div>
+  </aside>
+
+  <script src="script.js"></script>
+</body>
+</html>
