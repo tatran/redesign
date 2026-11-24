@@ -43,9 +43,19 @@
 - Zabezpečený vysoký kontrast (WCAG AAA/AA) pre vynikajúcu čitateľnosť na slnku aj v nočných hodinách.
 - Okamžité ukladanie voľby užívateľa do lokálneho úložiska.
 
-### 3. Vstavaná Telemetria (Live Telemetry Inspector)
-- **Architektúra:** Samostatná trieda `TravelFunTelemetry` bez externých knižníc.
-- **Sledované udalosti:**
+### 3. Vstavaná Telemetria a Priamy Real-Time Zápis do Neon PostgreSQL DB
+- **Architektúra:** Samostatná trieda `TravelFunTelemetry` prepojená priamo so Serverless HTTP API databázy **Neon PostgreSQL**.
+- **Konfigurácia (`neon-config.js`):**
+  ```javascript
+  window.NEON_CONFIG = {
+    DATABASE_URL: "postgresql://upc_telemetry_writer:VaseNoveBezpecneHeslo123%21@ep-broad-mode-ba2zewd1-pooler.c-8.eu-central-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require",
+    API_ENDPOINT: "/api/log"
+  };
+  ```
+- **Priamy zápis do tabuľky `page_access_logs`:**
+  - Pri otvorení stránky sa zistí IP adresa klienta (cez `api.ipify.org`) a vykoná sa priamy INSERT s `access_time`, `ip_address`, `domain_url`, `user_agent`, `referrer`, `language`, `theme` a `screen_resolution`.
+  - Kľúčové konverzné udalosti (vyhľadávanie leteniek, odoslanie dopytu, zmena jazyka a témy) sa taktiež v reálnom čase zapisujú do databázy.
+- **Sledované udalosti v lokálnom buferi:**
   - `page_view` (rozlíšenie, referrer, čas)
   - `language_change` (zmena jazyka z -> do)
   - `theme_toggle` (zmena témy svetlá/tmavá)
@@ -59,9 +69,9 @@
   - `time_on_page` (heartbeat každých 30 sekúnd)
 - **Live HUD Inšpektor (v pravom dolnom rohu):**
   - Tlačidlo **`⚡ Telemetria live [X]`** s počítadlom zachytených udalostí.
-  - Výsuvný bočný panel zobrazujúci ID relácie, aktívny jazyk, aktívnu tému a zoznam udalostí v reálnom čase s farebnými odznakmi podľa kategórie (`conversion`, `search`, `interaction`, `system`).
+  - Výsuvný bočný panel zobrazujúci ID relácie, aktívny jazyk, tému a **aktuálny stav Neon DB (napr. `🟢 Pripojené (Riadok #10)`)**.
+  - Zoznam udalostí v reálnom čase s farebnými odznakmi podľa kategórie (`conversion`, `search`, `interaction`, `system`).
   - Možnosť **Exportovať dáta do JSON**, **Simulovať testovaciu udalosť** a **Vyčistiť log**.
-  - Pripravené pre odosielanie cez `navigator.sendBeacon` na definovaný koncový bod backendu.
 
 ### 4. Panoramatické Pozadie na Vrchu Stránky (`image-slide-5.jpg`)
 - Vrchná Hero sekcia používa ako predvolené pozadie autentickú panoramatickú fotografiu **`images/image-slide-5.jpg`** stiahnutú priamo z originálnych podkladov TRAVELFUN.
@@ -79,14 +89,19 @@
 
 ```text
 travelfun-redesign/
+├── api/
+│   └── log.js              # Serverless API endpoint /api/log
 ├── images/
+│   ├── hero-banner.jpg     # Hlavné pozadie (uploaded coastal panorama)
 │   ├── image-slide-1.jpg   # Autentická panoramatická fotografia 1
 │   ├── image-slide-2.jpg   # Autentická panoramatická fotografia 2
 │   ├── image-slide-3.jpg   # Autentická panoramatická fotografia 3
 │   ├── image-slide-4.jpg   # Autentická panoramatická fotografia 4
-│   ├── image-slide-5.jpg   # Hlavné panoramatické pozadie hero sekcie
+│   ├── image-slide-5.jpg   # Autentická panoramatická fotografia 5
 │   └── image-slide-6.jpg   # Autentická panoramatická fotografia 6
 ├── index.html              # Kompletná sémantická štruktúra stránky s data-i18n
+├── neon-config.js          # Neon PostgreSQL connection string a konfigurácia
+├── neon-logger.js          # CLI a modul pre priamy SQL zápis do Neon DB
 ├── styles.css              # Responzívny CSS design systém, premenné pre Dark/Light a HUD
 ├── script.js               # 5-jazyčný i18n slovník, Telemetry Hub, kalkulačka, modaly
 ├── promotional-email.html  # Responzívna e-mailová prezentácia pre klienta

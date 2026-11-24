@@ -1096,8 +1096,10 @@ const i18n = {
 };
 
 // ==========================================
-// 2. TELEMETRY ENGINE
+// 2. TELEMETRY ENGINE WITH REAL-TIME NEON POSTGRESQL DB SYNC
 // ==========================================
+const NEON_DEFAULT_URL = "postgresql://upc_telemetry_writer:VaseNoveBezpecneHeslo123%21@ep-broad-mode-ba2zewd1-pooler.c-8.eu-central-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require";
+
 class TravelFunTelemetry {
   constructor() {
     this.storageKey = 'travelfun_telemetry_events';
@@ -1105,8 +1107,10 @@ class TravelFunTelemetry {
     this.session = this.initSession();
     this.events = this.loadEvents();
     this.listeners = [];
+    this.neonStatus = { connected: false, rowId: null, message: 'Pripájanie...' };
     this.initScrollTracking();
     this.initHeartbeat();
+    this.initNeonLogging();
   }
 
   initSession() {
@@ -1144,6 +1148,125 @@ class TravelFunTelemetry {
     }
   }
 
+  async initNeonLogging() {
+    const accessTime = new Date().toISOString();
+    const domainUrl = window.location.href;
+    const referrer = document.referrer || 'Direct Visit';
+    const lang = document.documentElement.lang || 'sk';
+    const theme = document.documentElement.getAttribute('data-theme') || 'light';
+    const screen = `${window.screen.width}x${window.screen.height}`;
+
+    let ipAddress = '127.0.0.1 (Client)';
+    try {
+      const ipPromise = fetch('https://api.ipify.org?format=json', { cache: 'no-store' });
+      const timeoutPromise = new Promise((_, reject) => setTimeout(() => reject(new Error('timeout')), 1500));
+      const ipResponse = await Promise.race([ipPromise, timeoutPromise]);
+      if (ipResponse && ipResponse.ok) {
+        const ipData = await ipResponse.json();
+        ipAddress = ipData.ip || ipAddress;
+      }
+    } catch (e) {}
+
+    this.session.ip = ipAddress;
+
+    const dbUrl = window.NEON_CONFIG?.DATABASE_URL || NEON_DEFAULT_URL;
+    let logged = false;
+
+    if (dbUrl && dbUrl.startsWith('postgres')) {
+      try {
+        const parsed = new URL(dbUrl);
+        const host = parsed.hostname;
+        const safeDomain = domainUrl.replace(/'/g, "''");
+        const safeUserAgent = (navigator.userAgent || '').replace(/'/g, "''");
+        const safeReferrer = (referrer || '').replace(/'/g, "''");
+
+        const sql = `INSERT INTO page_access_logs (access_time, ip_address, domain_url, user_agent, referrer, language, theme, screen_resolution) VALUES ('${accessTime}', '${ipAddress}', '${safeDomain}', '${safeUserAgent}', '${safeReferrer}', '${lang}', '${theme}', '${screen}') RETURNING id, access_time;`;
+
+        const res = await fetch(`https://${host}/sql`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Neon-Connection-String': dbUrl
+          },
+          body: JSON.stringify({ query: sql })
+        });
+
+        if (res.ok) {
+          const resData = await res.json();
+          const rowId = resData?.rows?.[0]?.id || '✓';
+          logged = true;
+          this.neonStatus = { connected: true, rowId, message: `Pripojené (Riadok #${rowId})` };
+          console.log(`✅ [Neon Direct] Successfully inserted Row #${rowId} into Neon DB!`);
+          this.updateNeonStatusUI();
+        }
+      } catch (err) {
+        console.warn('⚠️ Neon Direct HTTP execution failed:', err.message);
+      }
+    }
+
+    if (!logged) {
+      try {
+        const proxyEp = window.NEON_CONFIG?.API_ENDPOINT || '/api/log';
+        const res = await fetch(proxyEp, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            timestamp: accessTime,
+            ip_address: ipAddress,
+            domain_url: domainUrl,
+            user_agent: navigator.userAgent,
+            referrer,
+            language: lang,
+            theme,
+            screen_resolution: screen
+          })
+        });
+        if (res.ok) {
+          const resData = await res.json();
+          const rowId = resData?.data?.result?.rows?.[0]?.id || '✓';
+          this.neonStatus = { connected: true, rowId, message: `Pripojené cez proxy (Riadok #${rowId})` };
+          this.updateNeonStatusUI();
+        }
+      } catch (e) {}
+    }
+  }
+
+  updateNeonStatusUI() {
+    const el = document.getElementById('telemNeonStatus');
+    if (el) {
+      el.textContent = `🟢 ${this.neonStatus.message}`;
+      el.style.color = 'var(--status-green)';
+    }
+  }
+
+  async pushEventToNeon(event) {
+    const dbUrl = window.NEON_CONFIG?.DATABASE_URL || NEON_DEFAULT_URL;
+    if (!dbUrl || !dbUrl.startsWith('postgres')) return;
+
+    try {
+      const parsed = new URL(dbUrl);
+      const host = parsed.hostname;
+      const ipAddress = this.session.ip || '127.0.0.1';
+      const domainUrl = `https://www.travelfun.sk/#evt:${event.name}`.replace(/'/g, "''");
+      const userAgent = `TRAVELFUN-Telemetry [${event.category}] ${event.sessionId}`.replace(/'/g, "''");
+      const safeReferrer = JSON.stringify(event.data || {}).replace(/'/g, "''");
+      const lang = event.lang || 'sk';
+      const theme = event.theme || 'light';
+      const screen = `${window.screen.width}x${window.screen.height}`;
+
+      const sql = `INSERT INTO page_access_logs (access_time, ip_address, domain_url, user_agent, referrer, language, theme, screen_resolution) VALUES ('${event.timestamp}', '${ipAddress}', '${domainUrl}', '${userAgent}', '${safeReferrer}', '${lang}', '${theme}', '${screen}') RETURNING id, access_time;`;
+
+      await fetch(`https://${host}/sql`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Neon-Connection-String': dbUrl
+        },
+        body: JSON.stringify({ query: sql })
+      });
+    } catch (e) {}
+  }
+
   track(eventName, category, payload = {}) {
     const event = {
       id: 'evt_' + Math.random().toString(36).substring(2, 8),
@@ -1164,6 +1287,11 @@ class TravelFunTelemetry {
     // Optional console telemetry log in dev
     if (window.location.hostname === 'localhost' || window.location.protocol === 'file:') {
       console.info(`[TELEMETRY] [${event.category.toUpperCase()}] ${event.name}:`, event.data);
+    }
+
+    // Push key conversions / interactions to Neon DB
+    if (category === 'conversion' || category === 'search' || eventName === 'language_change' || eventName === 'theme_toggle') {
+      this.pushEventToNeon(event);
     }
 
     // Modern Beacon API Dispatch Simulation (ready for backend endpoint)
@@ -1746,6 +1874,9 @@ function initTelemetryHUD() {
     if (sessionIdEl) sessionIdEl.textContent = window.telemetry.session.id;
     if (activeLangEl) activeLangEl.textContent = document.documentElement.lang.toUpperCase();
     if (activeThemeEl) activeThemeEl.textContent = document.documentElement.getAttribute('data-theme') || 'light';
+    if (window.telemetry && window.telemetry.updateNeonStatusUI) {
+      window.telemetry.updateNeonStatusUI();
+    }
 
     if (!listEl) return;
     if (events.length === 0) {
