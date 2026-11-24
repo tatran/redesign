@@ -46,6 +46,13 @@
 
   --transition-fast: 0.18s ease;
   --transition-base: 0.25s ease;
+
+  --hero-bg-overlay: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.82) 0%,
+    rgba(248, 250, 252, 0.88) 50%,
+    rgba(248, 250, 252, 0.98) 100%
+  );
 }
 
 /* DARK THEME PALETTE */
@@ -63,6 +70,28 @@
   --text-inverse: #0f172a;
 
   --border-color: #27354f;
+  --border-focus: #fb923c;
+
+  --brand-orange: #fb923c;
+  --brand-orange-hover: #f97316;
+  --brand-orange-glow: rgba(251, 146, 60, 0.35);
+
+  --brand-cyan: #38bdf8;
+  --brand-cyan-hover: #0ea5e9;
+  --brand-cyan-glow: rgba(56, 189, 248, 0.3);
+
+  --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 4px 8px -1px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 12px 20px -3px rgba(0, 0, 0, 0.6);
+  --shadow-xl: 0 24px 32px -5px rgba(0, 0, 0, 0.7);
+
+  --hero-bg-overlay: linear-gradient(
+    180deg,
+    rgba(9, 13, 22, 0.76) 0%,
+    rgba(9, 13, 22, 0.86) 50%,
+    rgba(9, 13, 22, 0.97) 100%
+  );
+}
   --border-focus: #fb923c;
 
   --brand-orange: #fb923c;
@@ -421,9 +450,64 @@ button, input, select, textarea {
    -------------------------------------------------------------------------- */
 .hero-section {
   position: relative;
-  padding: 4.5rem 0 5.5rem 0;
-  background: radial-gradient(circle at 85% 15%, rgba(249, 115, 22, 0.08), transparent 45%),
-              radial-gradient(circle at 10% 80%, rgba(2, 132, 199, 0.08), transparent 45%);
+  padding: 5rem 0 6rem 0;
+  background-image: var(--hero-bg-overlay), url('images/image-slide-5.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  transition: background-image 0.5s ease, background-color var(--transition-base);
+}
+
+.hero-slide-nav {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: var(--bg-glass);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid var(--border-color);
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--radius-full);
+  margin-top: 1.5rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.hero-slide-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text-subtle);
+  margin-right: 0.35rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.hero-slide-dot {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1.5px solid var(--border-color);
+  background: var(--bg-surface);
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.hero-slide-dot:hover {
+  border-color: var(--brand-orange);
+  color: var(--brand-orange);
+  transform: scale(1.1);
+}
+
+.hero-slide-dot.active {
+  background: var(--brand-orange);
+  color: #ffffff;
+  border-color: var(--brand-orange);
+  box-shadow: 0 0 10px var(--brand-orange-glow);
 }
 
 .hero-content {

@@ -63,7 +63,12 @@
   - Možnosť **Exportovať dáta do JSON**, **Simulovať testovaciu udalosť** a **Vyčistiť log**.
   - Pripravené pre odosielanie cez `navigator.sendBeacon` na definovaný koncový bod backendu.
 
-### 4. Interaktívny Kalkulátor Cesty
+### 4. Panoramatické Pozadie na Vrchu Stránky (`image-slide-5.jpg`)
+- Vrchná Hero sekcia používa ako predvolené pozadie autentickú panoramatickú fotografiu **`images/image-slide-5.jpg`** stiahnutú priamo z originálnych podkladov TRAVELFUN.
+- Prepojené s dynamickým gradientom (`--hero-bg-overlay`) s plynulým stmievaním v svetlej i tmavej téme pre perfektnú čitateľnosť textu a vyhľadávacieho formulára.
+- Integrovaný prepínač panorám (1 až 6) umožňujúci návštevníkovi interaktívne prepínať medzi originálnymi snímkami, pričom každé prepnutie zaznamenáva telemetrickú udalosť `hero_slide_background_changed`.
+
+### 5. Interaktívny Kalkulátor Cesty
 - Umožňuje klientovi navoliť si obľúbenú destináciu (Nový Zéland, Austrália, Srí Lanka, Patagónia, Kuba, Safari Afrika, USA), dĺžku v dňoch (5–30 dní), počet osôb a požadovaný štandard ubytovania.
 - Okamžite kalkuluje celkovú orientačnú cenu a cenu na osobu.
 - Tlačidlo automaticky prenesie celú konfiguráciu priamo do dopytového formulára.
@@ -74,6 +79,13 @@
 
 ```text
 travelfun-redesign/
+├── images/
+│   ├── image-slide-1.jpg   # Autentická panoramatická fotografia 1
+│   ├── image-slide-2.jpg   # Autentická panoramatická fotografia 2
+│   ├── image-slide-3.jpg   # Autentická panoramatická fotografia 3
+│   ├── image-slide-4.jpg   # Autentická panoramatická fotografia 4
+│   ├── image-slide-5.jpg   # Hlavné panoramatické pozadie hero sekcie
+│   └── image-slide-6.jpg   # Autentická panoramatická fotografia 6
 ├── index.html              # Kompletná sémantická štruktúra stránky s data-i18n
 ├── styles.css              # Responzívny CSS design systém, premenné pre Dark/Light a HUD
 ├── script.js               # 5-jazyčný i18n slovník, Telemetry Hub, kalkulačka, modaly

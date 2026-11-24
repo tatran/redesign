@@ -1837,8 +1837,30 @@ function initTelemetryHUD() {
 }
 
 // ==========================================
-// 9. MOBILE MENU & HEADER SCROLL
+// 9. MOBILE MENU & HEADER SCROLL & SLIDE SWITCHER
 // ==========================================
+function initHeroSlideSwitcher() {
+  const heroSection = document.querySelector('.hero-section');
+  const slideDots = document.querySelectorAll('.hero-slide-dot');
+  if (!heroSection || slideDots.length === 0) return;
+
+  slideDots.forEach(dot => {
+    dot.addEventListener('click', () => {
+      const slideNum = dot.getAttribute('data-slide') || '5';
+      slideDots.forEach(d => d.classList.remove('active'));
+      dot.classList.add('active');
+
+      const imgPath = `images/image-slide-${slideNum}.jpg`;
+      heroSection.style.backgroundImage = `var(--hero-bg-overlay), url('${imgPath}')`;
+
+      window.telemetry.track('hero_slide_background_changed', 'interaction', {
+        selectedSlide: slideNum,
+        image: `image-slide-${slideNum}.jpg`
+      });
+    });
+  });
+}
+
 function initNavigation() {
   const header = document.querySelector('.site-header');
   const mobileToggle = document.querySelector('.mobile-nav-toggle');
@@ -1877,6 +1899,7 @@ function initNavigation() {
 document.addEventListener('DOMContentLoaded', () => {
   window.appState = new AppState();
   initNavigation();
+  initHeroSlideSwitcher();
   initSearchWidget();
   initToursFilter();
   initTripCalculator();
