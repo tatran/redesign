@@ -1850,12 +1850,12 @@ function initHeroSlideSwitcher() {
       slideDots.forEach(d => d.classList.remove('active'));
       dot.classList.add('active');
 
-      const imgPath = `images/image-slide-${slideNum}.jpg`;
+      const imgPath = slideNum === '5' ? 'images/hero-banner.jpg' : `images/image-slide-${slideNum}.jpg`;
       heroSection.style.backgroundImage = `var(--hero-bg-overlay), url('${imgPath}')`;
 
       window.telemetry.track('hero_slide_background_changed', 'interaction', {
         selectedSlide: slideNum,
-        image: `image-slide-${slideNum}.jpg`
+        image: slideNum === '5' ? 'hero-banner.jpg' : `image-slide-${slideNum}.jpg`
       });
     });
   });
