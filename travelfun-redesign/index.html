@@ -158,6 +158,8 @@
             <option value="rozne-destinacie">Rôzne destinácie (po celom svete)</option>
             <option value="novy-zeland">Nový Zéland</option>
             <option value="australia">Austrália</option>
+            <option value="indonezia">Indonézia (Alor)</option>
+            <option value="britania">Veľká Británia (Londýn & Hasting)</option>
             <option value="nepal">Nepál & Himaláje</option>
             <option value="gruzinsko">Gruzínsko & Kaukaz</option>
             <option value="kuba">Kuba & Karibik</option>
@@ -171,6 +173,7 @@
             <option value="expedicia">Expedície & Trekking</option>
             <option value="poznavačka">Poznávacie zájazdy</option>
             <option value="pobyt">Pobytové zájazdy & Pláže</option>
+            <option value="jazykove">Jazykové pobyty</option>
             <option value="cyklo">Cyklozájazdy</option>
           </select>
         </div>
@@ -239,10 +242,12 @@
           <h2>Aktuálna ponuka zájazdov & expedícií</h2>
         </div>
         <div class="tour-quick-filter" id="tourQuickFilter" style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-          <button type="button" class="tour-pill-btn active" data-filter="all">Všetky (10)</button>
+          <button type="button" class="tour-pill-btn active" data-filter="all">Všetky (12)</button>
           <button type="button" class="tour-pill-btn" data-filter="rozne-destinacie">Rôzne destinácie (7)</button>
           <button type="button" class="tour-pill-btn" data-filter="novy-zeland">Nový Zéland (2)</button>
           <button type="button" class="tour-pill-btn" data-filter="australia">Austrália (1)</button>
+          <button type="button" class="tour-pill-btn" data-filter="indonezia">Indonézia (1)</button>
+          <button type="button" class="tour-pill-btn" data-filter="britania">Veľká Británia (1)</button>
         </div>
       </div>
 
@@ -423,6 +428,42 @@
             <div class="tour-footer">
               <div class="tour-price">Na vyžiadanie <span>/ individuálne</span></div>
               <button type="button" class="tour-cta-btn open-inquiry-btn" data-tour="Lyžovačky na svetovom snehu">Viac info</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Tour 11 -->
+        <article class="tour-card" data-dest="indonezia" data-type="expedicia">
+          <div class="tour-thumb-wrap">
+            <img src="images/image-alory-10-440x330.jpg" alt="Potápanie na Alorských ostrovoch">
+            <span class="tour-dest-tag">Indonézia</span>
+          </div>
+          <div class="tour-content">
+            <h3 class="tour-title">Potápanie na Alorských ostrovoch</h3>
+            <p class="tour-desc">
+              Úchvatné putovanie medzi Alorskými ostrovmi: potápanie so žralokmi na kolmých stenách, makrosvet a pátranie po veľrybách a delfínoch v Sávskom mori.
+            </p>
+            <div class="tour-footer">
+              <div class="tour-price">Na vyžiadanie <span>/ expedícia</span></div>
+              <button type="button" class="tour-cta-btn open-inquiry-btn" data-tour="Potápanie na Alorských ostrovoch">Viac info</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Tour 12 -->
+        <article class="tour-card" data-dest="britania" data-type="jazykove">
+          <div class="tour-thumb-wrap">
+            <img src="images/image-language-1-440x330.jpg" alt="Jazykové pobyty Londýn a Hasting">
+            <span class="tour-dest-tag">Veľká Británia</span>
+          </div>
+          <div class="tour-content">
+            <h3 class="tour-title">Jazykové pobyty Londýn a Hasting</h3>
+            <p class="tour-desc">
+              Zdokonaľte sa v angličtine s renomovanou Shane Global Language Centres priamo v centre Londýna (Bond Street) alebo v prímorskom mestečku Hastings.
+            </p>
+            <div class="tour-footer">
+              <div class="tour-price">Na vyžiadanie <span>/ od 2 týždňov</span></div>
+              <button type="button" class="tour-cta-btn open-inquiry-btn" data-tour="Jazykové pobyty Londýn a Hasting">Viac info</button>
             </div>
           </div>
         </article>
@@ -807,8 +848,10 @@
   <!-- Toast Notification Box -->
   <div class="toast-notice" id="toastNotice"></div>
 
+  <!-- Tours Complete Authentic Archive Data (12 Tours) -->
+  <script src="tours-data.js?v=20261125_02"></script>
   <!-- Neon DB Telemetry Configuration & Engine -->
   <script src="neon-config.js?v=20261125_01"></script>
-  <script src="script.js?v=20261125_01"></script>
+  <script src="script.js?v=20261125_02"></script>
 </body>
 </html>

@@ -56,7 +56,7 @@ const BLOG_STORIES = {
 // ==========================================================================
 // 1b. AUTHENTIC TOUR DETAILS DICTIONARY (Midway Archive)
 // ==========================================================================
-const TOUR_DETAILS = {
+const TOUR_DETAILS = (typeof window !== 'undefined' && window.ALL_TOURS_DATA) || {
   "Nový Zéland ako na dlani": {
     dest: "Nový Zéland",
     duration: "18 dní",
@@ -330,37 +330,58 @@ class ModalManager {
   }
 
   openInquiry(tourName) {
-    const tour = TOUR_DETAILS[tourName];
-    this.modalTitle.textContent = tourName;
+    const dataSources = (typeof window !== 'undefined' && window.ALL_TOURS_DATA) || TOUR_DETAILS;
+    let tour = dataSources[tourName];
+    if (!tour) {
+      const cleanTarget = tourName.toLowerCase().replace(/[^a-z0-9]/gi, '');
+      const matchedKey = Object.keys(dataSources).find(k => k.toLowerCase().replace(/[^a-z0-9]/gi, '') === cleanTarget);
+      if (matchedKey) tour = dataSources[matchedKey];
+    }
+
+    this.modalTitle.textContent = (tour && tour.title) ? tour.title : tourName;
 
     let tourHeaderHtml = '';
-    if (tour) {
-      const paras = tour.desc.split('\n\n').map(p => {
-        if (p.startsWith('━━━━━━━━━━━━━━━━━━━━━━━━━━━━')) {
+    const rawContent = (tour && (tour.fullText || tour.desc)) || '';
+
+    if (tour && rawContent) {
+      const paras = rawContent.split('\n\n').map(p => {
+        const trimmed = p.trim();
+        if (!trimmed) return '';
+        if (trimmed.startsWith('###')) {
+          const heading = trimmed.replace(/^###\s*/, '');
+          return `<h4 style="font-size: 1.15rem; font-weight: 800; color: var(--brand-orange); margin: 1.65rem 0 0.65rem; padding-bottom: 0.35rem; border-bottom: 2px solid var(--brand-orange);">${heading}</h4>`;
+        }
+        if (trimmed.startsWith('━━━━━━━━━━━━━━━━━━━━━━━━━━━━')) {
           return '';
         }
-        if (p.startsWith('🏝️')) {
-          return `<h4 style="font-size: 1.15rem; font-weight: 800; color: var(--brand-orange); margin: 1.75rem 0 0.65rem; padding-bottom: 0.35rem; border-bottom: 2px solid var(--brand-orange); display: flex; align-items: center; gap: 0.5rem;">${p}</h4>`;
+        if (trimmed.startsWith('🏝️') || trimmed.startsWith('✈️') || trimmed.startsWith('🎿') || trimmed.startsWith('⛵') || trimmed.startsWith('🦁') || trimmed.startsWith('🏊')) {
+          return `<h4 style="font-size: 1.15rem; font-weight: 800; color: var(--brand-orange); margin: 1.65rem 0 0.65rem; padding-bottom: 0.35rem; border-bottom: 2px solid var(--brand-orange); display: flex; align-items: center; gap: 0.5rem;">${trimmed}</h4>`;
         }
-        if (p.startsWith('Svadobný') || p.startsWith('Informácie')) {
-          return `<div style="background: var(--bg-surface-alt); border-left: 3px solid var(--brand-orange); padding: 0.85rem 1rem; border-radius: 4px; margin: 0.85rem 0; font-size: 0.9rem; line-height: 1.65; color: var(--text-dark);">${p.replace(/\n/g, '<br>')}</div>`;
+        if (trimmed.startsWith('PROGRAM') || trimmed.match(/^\d+[\.\-]/) || trimmed.startsWith('Cena zahŕňa') || trimmed.startsWith('Cena nezahŕňa') || trimmed.startsWith('Svadobný') || trimmed.startsWith('Informácie')) {
+          return `<div style="background: var(--bg-surface-alt); border-left: 3px solid var(--brand-orange); padding: 0.85rem 1rem; border-radius: 4px; margin: 0.85rem 0; font-size: 0.9rem; line-height: 1.65; color: var(--text-dark);">${trimmed.replace(/\n/g, '<br>')}</div>`;
         }
-        return `<p style="margin-bottom: 0.85rem; line-height: 1.65; font-size: 0.95rem; color: var(--text-main);">${p.replace(/\n/g, '<br>')}</p>`;
-      }).join('');
+        if (trimmed.startsWith('•') || trimmed.startsWith('–') || trimmed.startsWith('*')) {
+          return `<div style="margin-bottom: 0.45rem; padding-left: 0.75rem; line-height: 1.6; font-size: 0.95rem; color: var(--text-main);">${trimmed.replace(/\n/g, '<br>')}</div>`;
+        }
+        return `<p style="margin-bottom: 0.85rem; line-height: 1.65; font-size: 0.95rem; color: var(--text-main);">${trimmed.replace(/\n/g, '<br>')}</p>`;
+      }).filter(Boolean).join('');
+
+      const imgSrc = tour.localImg || tour.img || 'images/P1010087-440x330.jpg';
+
       tourHeaderHtml = `
         <div style="margin-bottom: 1.5rem; border-bottom: 1px solid var(--border-color); padding-bottom: 1.25rem;">
           <div style="display: flex; gap: 0.75rem; align-items: center; margin-bottom: 0.75rem; flex-wrap: wrap;">
             <span style="background-color: var(--brand-orange); color: #fff; font-size: 0.75rem; font-weight: 700; padding: 0.25rem 0.6rem; border-radius: 4px; text-transform: uppercase;">
-              ${tour.dest}
+              ${tour.dest || 'Rôzne destinácie'}
             </span>
             <span style="background-color: var(--bg-surface-alt); border: 1px solid var(--border-color); color: var(--text-dark); font-size: 0.75rem; font-weight: 700; padding: 0.25rem 0.6rem; border-radius: 4px;">
-              ⏱ ${tour.duration}
+              ⏱ ${tour.duration || 'Individuálne'}
             </span>
             <span style="font-weight: 800; color: var(--brand-orange); font-size: 1.05rem; margin-left: auto;">
-              ${tour.price}
+              ${tour.price || 'Na vyžiadanie'}
             </span>
           </div>
-          <img src="${tour.img}" alt="${tourName}" style="width: 100%; max-height: 300px; object-fit: cover; border-radius: 6px; margin-bottom: 1.25rem; box-shadow: 0 3px 10px rgba(0,0,0,0.1);">
+          <img src="${imgSrc}" alt="${tourName}" style="width: 100%; max-height: 320px; object-fit: cover; border-radius: 6px; margin-bottom: 1.25rem; box-shadow: 0 3px 10px rgba(0,0,0,0.1);">
           <div class="tour-modal-desc">
             ${paras}
           </div>
