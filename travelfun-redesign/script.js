@@ -54,6 +54,82 @@ const BLOG_STORIES = {
 };
 
 // ==========================================================================
+// 1b. AUTHENTIC TOUR DETAILS DICTIONARY (Midway Archive)
+// ==========================================================================
+const TOUR_DETAILS = {
+  "Nový Zéland ako na dlani": {
+    dest: "Nový Zéland",
+    duration: "18 dní",
+    price: "3 490 €",
+    img: "images/P1010087-440x330.jpg",
+    desc: `Precestujte Severný a Južný ostrov v malej skupine. Zažite gejzíry a maorskú kultúru v Rotorua, dramatický fjord Milford Sound, ľadovce Fox a Franz Josef v Južných Alpách a adrenalínové hlavné mesto Queenstown. Ubytovanie v preverených 3-4* hoteloch a motoloch, preprava pohodlným minivanom so slovenským sprievodcom.`
+  },
+  "Nový Zéland – veľký okruh": {
+    dest: "Nový Zéland",
+    duration: "22 dní",
+    price: "4 190 €",
+    img: "images/image-NZ-10-440x330.jpg",
+    desc: `Komplexná expedícia pre náročných cestovateľov po stopách Pána prsteňov. Národné parky Tongariro, Abel Tasman so zlatými plážami, majestátny Mount Cook (Aoraki), pozorovanie veľrýb v Kaikoura a západné pobrežie plné dažďových pralesov mierneho pásma.`
+  },
+  "Čarovné miesta Austrálie": {
+    dest: "Austrália",
+    duration: "16 dní",
+    price: "3 850 €",
+    img: "images/image-AUS-1jpg-440x330.jpg",
+    desc: `Austrálsky sen od východu po červené vnútrozemie: ikonické Sydney s Operou a Harbour Bridge, posvätný monolit Uluru (Ayers Rock) a Kata Tjuta, tropický Cairns a šnorchľovanie či potápanie na Veľkom bariérovom útese.`
+  },
+  "Poľovačky v rôznych kútoch sveta": {
+    dest: "Rôzne destinácie",
+    duration: "6 dní / individuálne",
+    price: "Na vyžiadanie",
+    img: "images/image-hunting-3-440x330.jpg",
+    desc: `Keďže príroda a možnosti poľovačky v nej sú tak rozmanité, pripravili sme pre Vás poľovačky z celého sveta s individuálnym prístupom ku každému lovcovi.\n\n• Namíbia: Farma Damara (140 km od Windhoeku), murované bungalovy, poľovná zver kudu, oryx, hartebeest, springbok, zebra, sviňa bradavičnatá a gepard.\n• Juhoafrická republika (JAR): Provincie KwaZulu-Natal, Zululand a Limpopo – lov na antilopy i veľkú päťku, luxusné farmy s bazénom a plným all-inclusive servisom.\n• Nový Zéland: Trofejové jelene patriace k najväčším na svete, poľovačka na tahra a kamzíka vo vrcholoch hôr s presunmi helikoptérou.\n• Kanada (Britská Kolumbia): Rieka Driftwood a jazero Takla – lov losov, medveďov, vlkov, caribou a grizzlyho v panenskej tajge z drevených zrubov.\n• Grónsko: Kangerlussuaq – najväčšie stáda pižmoňov na svete, caribou, polárne líšky a zajace v arktickej tundre.\n• Kamčatka: Lov medveďa, losa a snežného barana v sopečnej divočine s nedotknutými riekami plnými lososov.`
+  },
+  "Víkendy vo veľkomestách": {
+    dest: "Rôzne destinácie",
+    duration: "3 - 4 dni",
+    price: "Na vyžiadanie",
+    img: "images/image-velkomesta-7-440x318.jpg",
+    desc: `Spoznajte čaro veľkomesta – pulzujúce rušné ulice, nevšedné múzeá, kultúru a gastronómiu podľa Vášho priania. Zabezpečíme letenky z Viedne, Bratislavy, Prahy či Budapešti, overené hotely v centre a program na mieru.\n\n• Paríž: Romantika na Seine, Eiffelova veža, Louvre, Montmartre a kaviarenský život.\n• Barcelona: Gaudího majstrovské diela (Sagrada Família, Park Güell), Gotická štvrť a prímorská promenáda Las Ramblas.\n• Londýn: Big Ben, Westminsterský palác, Tower Bridge, British Museum a nákupy na Oxford Street.\n• Rím: Koloseum, Forum Romanum, Vatikán a Fontána di Trevi – večné mesto plné histórie a chuti talianskej kávy.\n• Amsterdam: Romantické plavby po grachtoch, múzeum Vincenta van Gogha a cyklistická atmosféra.\n• Kodaň: Farebný prístav Nyhavn, zámok Amalienborg, socha Malej morskej panny a severský dizajn.`
+  },
+  "Poznávacie cesty Svet": {
+    dest: "Rôzne destinácie",
+    duration: "14 - 20 dní",
+    price: "Na vyžiadanie",
+    img: "images/image-svet-1-440x330.jpg",
+    desc: `Neobmedzujte sa len na Európu. Využite možnosť spoznať netradičné kultúry, hodnoty a prírodné divy s profesionálnym sprievodcom.\n\n• Južná Afrika, Namíbia, Botswana & Viktóriine vodopády: Stolová hora a Mys dobrej nádeje v Kapskom Meste, oranžové piesočné duny v Sossusvlei, safari v NP Etosha, 80 000 slonov v botswanskom NP Chobe a dychberúce Viktóriine vodopády na rieke Zambezi.\n• Južná Amerika (Peru, Bolívia, Čile): Koloniálna Lima, tajuplné obrazce na planine Nazca, biele mesto Arequipa, posvätné Cuzco a stratené mesto Inkov Machu Picchu. Plávajúce ostrovy Uros na jazere Titicaca, gigantická soľná púšť Salar de Uyuni a mesačná krajina púšte Atacama.\n• Juhovýchodná Ázia (Thajsko, Laos, Vietnam, Kambodža): Kráľovský palác v Bangkoku, plavba rýchločlnom po rieke Mekong, francúzsky šarm Hanoja a plavba v Halong Bay, historické mestečko Hoi An a veľkolepý chrámový komplex Angkor Wat v Kambodži.`
+  },
+  "Poznávacie zájazdy Európa": {
+    dest: "Rôzne destinácie",
+    duration: "Individuálne",
+    price: "Na vyžiadanie",
+    img: "images/image-europa-1-440x330.jpg",
+    desc: `Poznávanie histórie, pamiatok, umenia, jedla a ľudí v Európe so sprievodcami, ktorí Vám odovzdajú informácie a zážitky, aké v bežných bedekroch nenájdete.\n\nCestovanie v malých komfortných skupinách s dôrazom na autentické zážitky, rodinné vinárstva, historické centrá a prírodné krásy Toskánska, Provensálska, Andalúzie, Škótska, Írska či Škandinávie so skúsenými slovensky a česky hovoriacimi sprievodcami.`
+  },
+  "Plavby a prenájom jácht": {
+    dest: "Rôzne destinácie",
+    duration: "8 - 14 dní",
+    price: "Na vyžiadanie",
+    img: "images/image-plavby-1-440x330.jpg",
+    desc: `Prežite dovolenku na mori: pohľad na pobrežie a ostrovy z paluby lode ponúka úplne novú perspektívu slobody a relaxu.\n\n• Zaoceánske plavby: Luxusné plavby s plnou penziou a zábavným programom po Stredozemnom mori, nórskych fjordoch či Karibiku na lodiach spoločností MSC, Costa a Royal Caribbean.\n• Prenájom plachetníc a katamaránov: Chorvátsko, Grécko, Taliansko a Karibské ostrovy so skúseným kapitánom (skipperom). Ideálne pre rodiny alebo partiu priateľov, ktorí chcú objavovať odľahlé zátoky bez davov turistov.`
+  },
+  "Povedzte „áno“ v exotickom raji": {
+    dest: "Rôzne destinácie",
+    duration: "Balík na kľúč",
+    price: "Na vyžiadanie",
+    img: "images/image-wedding-1-440x330.jpg",
+    desc: `Zažite svoj svadobný deň alebo výročie ako z rozprávky. Pripravíme pre Vás legálne platný svadobný obrad alebo romantickú symbolickú svadbu priamo na pláži pri západe slnka.\n\n• Maurícius: Exotický ostrov s prvotriednymi hotelmi, kvetinovými altánkami pri mori a kompletným servisom vrátane úradných formalít a prekladov.\n• Seychely: Žulové balvany a tyrkysové lagúny ostrovov Praslin a La Digue pre intímnu svadbu v raji.\n• Karibik (Kuba, Dominikánska republika): Rytmy živej hudby, palmy a bezstarostná karibská atmosféra.\n\nPostaráme sa o letenky, svadobné šaty, kvetinovú výzdobu, fotografa, vizážistku, slávnostnú večeru i svadobnú cestu.`
+  },
+  "Lyžovačky na svetovom snehu": {
+    dest: "Rôzne destinácie",
+    duration: "Víkend / Týždeň",
+    price: "Na vyžiadanie",
+    img: "images/image-ski-440x330.jpg",
+    desc: `Prečo lyžovať v zahraničí? Široké zjazdovky, dokonalá úprava svahov, moderné lanovky bez čakania a celoročná garancia snehu na ľadovcoch.\n\n• Rakúsko: Kitzsteinhorn (Kaprun), Hintertux, Stubai, Sölden a Schladming – lyžovanie priamo pri hoteloch s vyhláseným rakúskym wellnessom.\n• Taliansko: Dolomiti Superski, Val Gardena a Livigno – slnečné svahy, skvelá talianska gastronómia a bezcolné nákupy.\n• Francúzsko & Švajčiarsko: Les 3 Vallées a Zermatt pod Matterhornom – najväčšie prepojené lyžiarske domény na svete.\n\nZabezpečíme ubytovanie, skipasy so zľavou, transfery aj poistenie do hôr.`
+  }
+};
+
+// ==========================================================================
 // 2. TOAST NOTIFICATION HELPER
 // ==========================================================================
 function showToast(message, duration = 3500) {
@@ -254,22 +330,56 @@ class ModalManager {
   }
 
   openInquiry(tourName) {
-    this.modalTitle.textContent = `Nezáväzný dopyt: ${tourName}`;
+    const tour = TOUR_DETAILS[tourName];
+    this.modalTitle.textContent = tourName;
+
+    let tourHeaderHtml = '';
+    if (tour) {
+      const paras = tour.desc.split('\n\n').map(p => `<p style="margin-bottom: 0.85rem; line-height: 1.65; font-size: 0.95rem; color: var(--text-main);">${p.replace(/\n/g, '<br>')}</p>`).join('');
+      tourHeaderHtml = `
+        <div style="margin-bottom: 1.5rem; border-bottom: 1px solid var(--border-color); padding-bottom: 1.25rem;">
+          <div style="display: flex; gap: 0.75rem; align-items: center; margin-bottom: 0.75rem; flex-wrap: wrap;">
+            <span style="background-color: var(--brand-orange); color: #fff; font-size: 0.75rem; font-weight: 700; padding: 0.25rem 0.6rem; border-radius: 4px; text-transform: uppercase;">
+              ${tour.dest}
+            </span>
+            <span style="background-color: var(--bg-surface-alt); border: 1px solid var(--border-color); color: var(--text-dark); font-size: 0.75rem; font-weight: 700; padding: 0.25rem 0.6rem; border-radius: 4px;">
+              ⏱ ${tour.duration}
+            </span>
+            <span style="font-weight: 800; color: var(--brand-orange); font-size: 1.1rem; margin-left: auto;">
+              ${tour.price}
+            </span>
+          </div>
+          <img src="${tour.img}" alt="${tourName}" style="width: 100%; max-height: 280px; object-fit: cover; border-radius: 6px; margin-bottom: 1rem; box-shadow: 0 3px 10px rgba(0,0,0,0.1);">
+          <div class="tour-modal-desc">
+            ${paras}
+          </div>
+        </div>
+      `;
+    }
+
     this.modalBody.innerHTML = `
+      ${tourHeaderHtml}
       <form id="modalInquiryForm" class="c-form" onsubmit="event.preventDefault();">
-        <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 0.5rem;">
-          Vyplňte Vaše kontaktné údaje pre ponuku termínov a detailov k zájazdu <strong>${tourName}</strong>:
+        <h4 style="font-size: 1.05rem; font-weight: 800; color: var(--text-dark); margin-bottom: 0.5rem;">
+          Nezáväzný dopyt na tento zájazd
+        </h4>
+        <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.75rem;">
+          Vyplňte Vaše kontaktné údaje pre ponuku termínov a detailov k zájazdu:
         </p>
         <input type="text" id="mName" placeholder="Vaše meno a priezvisko *" required>
         <input type="email" id="mEmail" placeholder="Váš e-mail *" required>
         <input type="tel" id="mPhone" placeholder="Váš telefón">
         <textarea id="mMsg" rows="3" placeholder="Poznámka / preferovaný termín / počet osôb..."></textarea>
-        <button type="submit" id="mSubmitBtn" style="background-color: var(--brand-orange); color: #fff; font-weight: 700; padding: 0.65rem 1.25rem; border-radius: 4px; cursor: pointer;">
-          Odoslať dopyt ➔
+        <button type="submit" id="mSubmitBtn" style="background-color: var(--brand-orange); color: #fff; font-weight: 700; padding: 0.65rem 1.25rem; border-radius: 4px; cursor: pointer; border: none; font-size: 0.95rem;">
+          Odoslať dopyt tímu TRAVELFUN ➔
         </button>
       </form>
     `;
     this.modal.classList.add('open');
+
+    if (window.telemetry) {
+      window.telemetry.track('tour_detail_viewed', 'tour', { tourName, dest: tour ? tour.dest : 'unknown' });
+    }
 
     const form = document.getElementById('modalInquiryForm');
     form.addEventListener('submit', () => {
@@ -299,37 +409,83 @@ function setupTourFilters() {
   const destSelect = document.getElementById('filterDest');
   const typeSelect = document.getElementById('filterType');
   const toursGrid = document.getElementById('toursGrid');
+  const pillBtns = document.querySelectorAll('.tour-pill-btn');
 
-  if (!form || !toursGrid) return;
+  if (!toursGrid) return;
 
-  form.addEventListener('submit', () => {
-    const dest = destSelect.value;
-    const type = typeSelect.value;
+  // Quick filter pills (All, Rôzne destinácie, Nový Zéland, Austrália)
+  pillBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      pillBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
 
-    const cards = toursGrid.querySelectorAll('.tour-card');
-    let visibleCount = 0;
+      const filter = btn.getAttribute('data-filter');
+      const cards = toursGrid.querySelectorAll('.tour-card');
+      let visibleCount = 0;
 
-    cards.forEach(card => {
-      const cardDest = card.getAttribute('data-dest');
-      const cardType = card.getAttribute('data-type');
+      cards.forEach(card => {
+        const cardDest = card.getAttribute('data-dest') || '';
+        const matches = (filter === 'all' || cardDest.includes(filter));
+        if (matches) {
+          card.style.display = 'flex';
+          visibleCount++;
+        } else {
+          card.style.display = 'none';
+        }
+      });
 
-      const matchesDest = (dest === 'all' || cardDest === dest);
-      const matchesType = (type === 'all' || cardType === type);
-
-      if (matchesDest && matchesType) {
-        card.style.display = 'flex';
-        visibleCount++;
-      } else {
-        card.style.display = 'none';
+      if (destSelect) {
+        destSelect.value = (filter === 'all') ? 'all' : filter;
       }
+
+      if (window.telemetry) {
+        window.telemetry.track('tours_quick_filtered', 'search', { filter, resultsCount: visibleCount });
+      }
+
+      showToast(`Zobrazených ${visibleCount} zájazdov.`);
     });
-
-    if (window.telemetry) {
-      window.telemetry.track('tours_filtered', 'search', { dest, type, resultsCount: visibleCount });
-    }
-
-    showToast(`Nájdených ${visibleCount} zájazdov.`);
   });
+
+  // Search form submit
+  if (form) {
+    form.addEventListener('submit', () => {
+      const dest = destSelect ? destSelect.value : 'all';
+      const type = typeSelect ? typeSelect.value : 'all';
+
+      const cards = toursGrid.querySelectorAll('.tour-card');
+      let visibleCount = 0;
+
+      cards.forEach(card => {
+        const cardDest = card.getAttribute('data-dest') || '';
+        const cardType = card.getAttribute('data-type') || '';
+
+        const matchesDest = (dest === 'all' || cardDest.includes(dest));
+        const matchesType = (type === 'all' || cardType === type);
+
+        if (matchesDest && matchesType) {
+          card.style.display = 'flex';
+          visibleCount++;
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      // Update active pill if matched
+      pillBtns.forEach(b => {
+        if (b.getAttribute('data-filter') === dest) {
+          b.classList.add('active');
+        } else {
+          b.classList.remove('active');
+        }
+      });
+
+      if (window.telemetry) {
+        window.telemetry.track('tours_filtered', 'search', { dest, type, resultsCount: visibleCount });
+      }
+
+      showToast(`Nájdených ${visibleCount} zájazdov.`);
+    });
+  }
 }
 
 // ==========================================================================

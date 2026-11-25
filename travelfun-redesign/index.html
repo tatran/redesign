@@ -155,12 +155,12 @@
           <label for="filterDest">Destinácia</label>
           <select id="filterDest">
             <option value="all">Všetky destinácie</option>
+            <option value="rozne-destinacie">Rôzne destinácie (po celom svete)</option>
             <option value="novy-zeland">Nový Zéland</option>
             <option value="australia">Austrália</option>
             <option value="nepal">Nepál & Himaláje</option>
             <option value="gruzinsko">Gruzínsko & Kaukaz</option>
             <option value="kuba">Kuba & Karibik</option>
-            <option value="polovacky">Poľovnícke revíry</option>
           </select>
         </div>
 
@@ -233,9 +233,17 @@
          TOURS SECTION (4-Columns Midway Layout)
          ========================================== -->
     <section id="tours" class="tours-section">
-      <div class="section-head">
-        <span class="section-tag">Vybrané ponuky</span>
-        <h2>Aktuálna ponuka zájazdov & expedícií</h2>
+      <div class="section-head" style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 1rem;">
+        <div>
+          <span class="section-tag">Kompletná ponuka zájazdov</span>
+          <h2>Aktuálna ponuka zájazdov & expedícií</h2>
+        </div>
+        <div class="tour-quick-filter" id="tourQuickFilter" style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+          <button type="button" class="tour-pill-btn active" data-filter="all">Všetky (10)</button>
+          <button type="button" class="tour-pill-btn" data-filter="rozne-destinacie">Rôzne destinácie (7)</button>
+          <button type="button" class="tour-pill-btn" data-filter="novy-zeland">Nový Zéland (2)</button>
+          <button type="button" class="tour-pill-btn" data-filter="australia">Austrália (1)</button>
+        </div>
       </div>
 
       <div class="tours-grid" id="toursGrid">
@@ -294,7 +302,7 @@
         </article>
 
         <!-- Tour 4 -->
-        <article class="tour-card" data-dest="polovacky" data-type="expedicia">
+        <article class="tour-card" data-dest="rozne-destinacie" data-type="expedicia">
           <div class="tour-thumb-wrap">
             <img src="images/image-hunting-3-440x330.jpg" alt="Poľovačky v rôznych kútoch sveta">
             <span class="tour-dest-tag">Rôzne destinácie</span>
@@ -302,11 +310,119 @@
           <div class="tour-content">
             <h3 class="tour-title">Poľovačky v rôznych kútoch sveta</h3>
             <p class="tour-desc">
-              Špecializované poľovnícke výpravy a expedície s plným servisom licencií a ubytovania.
+              Špecializované poľovnícke výpravy a expedície s plným servisom licencií a ubytovania: Namíbia, JAR, Nový Zéland, Kanada, Grónsko či Kamčatka.
             </p>
             <div class="tour-footer">
-              <div class="tour-price">Na vyžiadanie</div>
+              <div class="tour-price">Na vyžiadanie <span>/ 6 dní</span></div>
               <button type="button" class="tour-cta-btn open-inquiry-btn" data-tour="Poľovačky v rôznych kútoch sveta">Viac info</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Tour 5 -->
+        <article class="tour-card" data-dest="rozne-destinacie" data-type="pobyt">
+          <div class="tour-thumb-wrap">
+            <img src="images/image-velkomesta-7-440x318.jpg" alt="Víkendy vo veľkomestách">
+            <span class="tour-dest-tag">Rôzne destinácie</span>
+          </div>
+          <div class="tour-content">
+            <h3 class="tour-title">Víkendy vo veľkomestách</h3>
+            <p class="tour-desc">
+              Spoznajte čaro veľkomesta – pulzujúce rušné ulice, nevšedné múzeá, kultúru a gastronómiu: Paríž, Barcelona, Londýn, Rím, Amsterdam či Kodaň.
+            </p>
+            <div class="tour-footer">
+              <div class="tour-price">Na vyžiadanie <span>/ 3-4 dni</span></div>
+              <button type="button" class="tour-cta-btn open-inquiry-btn" data-tour="Víkendy vo veľkomestách">Viac info</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Tour 6 -->
+        <article class="tour-card" data-dest="rozne-destinacie" data-type="poznavačka">
+          <div class="tour-thumb-wrap">
+            <img src="images/image-svet-1-440x330.jpg" alt="Poznávacie cesty Svet">
+            <span class="tour-dest-tag">Rôzne destinácie</span>
+          </div>
+          <div class="tour-content">
+            <h3 class="tour-title">Poznávacie cesty Svet</h3>
+            <p class="tour-desc">
+              Neobmedzujte sa len na Európu. Spoznajte Kapské Mesto, Juhoafrickú republiku, Viktóriine vodopády, Peru, Bolíviu, Čile, Thajsko, Laos, Vietnam či Kambodžu.
+            </p>
+            <div class="tour-footer">
+              <div class="tour-price">Na vyžiadanie <span>/ 14-20 dní</span></div>
+              <button type="button" class="tour-cta-btn open-inquiry-btn" data-tour="Poznávacie cesty Svet">Viac info</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Tour 7 -->
+        <article class="tour-card" data-dest="rozne-destinacie" data-type="poznavačka">
+          <div class="tour-thumb-wrap">
+            <img src="images/image-europa-1-440x330.jpg" alt="Poznávacie zájazdy Európa">
+            <span class="tour-dest-tag">Rôzne destinácie</span>
+          </div>
+          <div class="tour-content">
+            <h3 class="tour-title">Poznávacie zájazdy Európa</h3>
+            <p class="tour-desc">
+              Objavte históriu, pamiatky a skryté poklady Európy so skúsenými slovensky a česky hovoriacimi licencovanými sprievodcami s dlhoročnou praxou.
+            </p>
+            <div class="tour-footer">
+              <div class="tour-price">Na vyžiadanie <span>/ individuálne</span></div>
+              <button type="button" class="tour-cta-btn open-inquiry-btn" data-tour="Poznávacie zájazdy Európa">Viac info</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Tour 8 -->
+        <article class="tour-card" data-dest="rozne-destinacie" data-type="pobyt">
+          <div class="tour-thumb-wrap">
+            <img src="images/image-plavby-1-440x330.jpg" alt="Plavby a prenájom jácht">
+            <span class="tour-dest-tag">Rôzne destinácie</span>
+          </div>
+          <div class="tour-content">
+            <h3 class="tour-title">Plavby a prenájom jácht</h3>
+            <p class="tour-desc">
+              Prežite dovolenku na mori: luxusné plavby na zaoceánskych lodiach, prenájom katamaránov a plachetníc so skúseným kapitánom po Stredomorí či Karibiku.
+            </p>
+            <div class="tour-footer">
+              <div class="tour-price">Na vyžiadanie <span>/ 8-14 dní</span></div>
+              <button type="button" class="tour-cta-btn open-inquiry-btn" data-tour="Plavby a prenájom jácht">Viac info</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Tour 9 -->
+        <article class="tour-card" data-dest="rozne-destinacie" data-type="pobyt">
+          <div class="tour-thumb-wrap">
+            <img src="images/image-wedding-1-440x330.jpg" alt="Povedzte „áno“ v exotickom raji">
+            <span class="tour-dest-tag">Rôzne destinácie</span>
+          </div>
+          <div class="tour-content">
+            <h3 class="tour-title">Povedzte „áno“ v exotickom raji</h3>
+            <p class="tour-desc">
+              Svadobný obrad alebo obnovenie manželských sľubov na bielych plážach Maurícia, Seychel či Karibiku s kompletnou právnou platnosťou a starostlivosťou.
+            </p>
+            <div class="tour-footer">
+              <div class="tour-price">Na vyžiadanie <span>/ balík</span></div>
+              <button type="button" class="tour-cta-btn open-inquiry-btn" data-tour="Povedzte „áno“ v exotickom raji">Viac info</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Tour 10 -->
+        <article class="tour-card" data-dest="rozne-destinacie" data-type="expedicia">
+          <div class="tour-thumb-wrap">
+            <img src="images/image-ski-440x330.jpg" alt="Lyžovačky na svetovom snehu">
+            <span class="tour-dest-tag">Rôzne destinácie</span>
+          </div>
+          <div class="tour-content">
+            <h3 class="tour-title">Lyžovačky na svetovom snehu</h3>
+            <p class="tour-desc">
+              Nádherné zjazdovky a ľadovce v Rakúsku, Taliansku a Švajčiarsku s celoročnou prevádzkou, špičkovým ubytovaním, wellnessom a skipasmi.
+            </p>
+            <div class="tour-footer">
+              <div class="tour-price">Na vyžiadanie <span>/ individuálne</span></div>
+              <button type="button" class="tour-cta-btn open-inquiry-btn" data-tour="Lyžovačky na svetovom snehu">Viac info</button>
             </div>
           </div>
         </article>
